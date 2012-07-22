@@ -141,10 +141,6 @@ case "$1" in
     case "$?" in
       "$GOOD_RV"|"$WARN_RV")
         do_start
-        case "$?" in
-          "$WARN_RV") log_end_msg "$FAIL_RV" ;; # Old process is still running
-          *) log_end_msg "$?"
-        esac
         ;;
       *)
         # Failed to stop
