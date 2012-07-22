@@ -1,12 +1,12 @@
 #! /bin/sh
 ### BEGIN INIT INFO
-# Provides:          virtualbox-!!SHORTNAME
+# Provides:          virtualbox-SHORTNAME
 # Required-Start:    $local_fs $remote_fs vboxdrv vboxnet
 # Required-Stop:     $local_fs $remote_fs
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: !!LONGNAME virtual machine
-# Description:       !!LONGNAME virtual machine hosted by VirtualBox
+# Short-Description: LONGNAME virtual machine
+# Description:       LONGNAME virtual machine hosted by VirtualBox
 ### END INIT INFO
 
 # Author: Brendan Kidwell <brendan@glump.net>
@@ -19,13 +19,13 @@
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
-DESC="!!LONGNAME virtual machine"
-NAME=virtualbox-!!SHORTNAME
+DESC="LONGNAME virtual machine"
+NAME=virtualbox-SHORTNAME
 SCRIPTNAME=/etc/init.d/$NAME
 
 MANAGE_CMD=VBoxManage
-VM_OWNER=!!USERNAME
-VM_NAME="!!LONGNAME" #This has to be the name exactly as it appears in your VirtualBox GUI control panel.
+VM_OWNER=USERNAME
+VM_NAME="LONGNAME" #This has to be the name exactly as it appears in your VirtualBox GUI control panel.
 
 # Read configuration variable file if it is present
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
