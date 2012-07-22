@@ -1,0 +1,307 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          vbox-headless
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start VMs in headless mode.
+# Description:       This script runs VMs for the default VirtualBox user in
+#                    headless mode. Make sure all VMs are using different RDP
+#                    ports.
+### END INIT INFO
+
+# Author: Nicolas Tessore <n.tessore@gmail.com>
+
+# source: https://forums.virtualbox.org/viewtopic.php?f=7&t=34790#p155739
+
+####
+# VirtualBox settings
+####
+
+# The user which owns the VMs
+VBOX_USER=vbox
+
+# The list of VMs to run. Leave empty to run all registered VMs.
+VBOX_LIST=""
+
+# VirtualBox executables
+VBOX_MANAGE=/usr/bin/VBoxManage
+VBOX_HEADLESS=/usr/bin/VBoxHeadless
+
+####
+# End VirtualBox settings
+####
+
+# Do NOT "set -e"
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+DESC="VirtualBox daemon"
+NAME=vbox-headless
+DAEMON=$VBOX_HEADLESS
+DAEMON_ARGS=""
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+
+# Exit if the package is not installed
+[ -x "$DAEMON" ] || exit 0
+
+# Read configuration variable file if it is present
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+# Load the VERBOSE setting and other rcS variables
+. /lib/init/vars.sh
+
+# Define LSB log_* functions.
+# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
+. /lib/lsb/init-functions
+
+
+vm_init_list()
+{
+   # get registered VMs
+   LIST_VMS=`sudo -H -u $VBOX_USER $VBOX_MANAGE --nologo list vms | cut -d ' ' -f 1 | tr -d '"'`
+   
+   # check for list of VMs
+   if [ -z "$VBOX_LIST" ]
+   then
+      # all registered VMs for user
+      VBOX_LIST=$LIST_VMS
+   else
+      # check that VMs exist
+      for VM in $VBOX_LIST
+      do
+         case $LIST_VMS in
+         "$VM")
+            continue
+            ;;
+         *)
+            log_failure_msg "ERROR: VM '$VM' is not registered!"
+            exit 1
+            ;;
+         esac
+      done
+   fi
+}
+
+# get uuid for vm
+vm_get_uuid()
+{
+   vm=$1
+   hwuuid=`sudo -H -u $VBOX_USER $VBOX_MANAGE --nologo showvminfo --machinereadable "$vm" | grep 'hardwareuuid='`
+   echo $hwuuid | cut -d '=' -f 2 | tr -d '"'
+}
+
+# control running vm
+vm_ctrl()
+{
+   sudo -H -u $VBOX_USER $VBOX_MANAGE --nologo controlvm $1 $2 > /dev/null 2>&1
+}
+
+#
+# Function that starts the daemon/service
+#
+do_start()
+{
+   vm_init_list
+   
+   # Return
+   #   0 if daemon has been started
+   #   1 if daemon was already running
+   #   2 if daemon could not be started
+   RETVAL=0
+   
+   # Start all VMs
+   for VM in $VBOX_LIST
+   do
+      VM_UUID=`vm_get_uuid $VM`
+      VM_PIDFILE="$PIDFILE.$VM_UUID"
+      VM_DAEMON="$DAEMON"
+      VM_DAEMON_ARGS="$DAEMON_ARGS --startvm $VM_UUID"
+      
+      log_action_begin_msg "Starting VM '$VM'"
+      
+      # test for running VM
+      USER=$VBOX_USER LOGNAME=$VBOX_USER start-stop-daemon \
+         --start \
+         --quiet \
+         --pidfile $VM_PIDFILE \
+         --startas $VM_DAEMON \
+         --test \
+         > /dev/null
+      
+      # VM already running
+      if [ "$?" != 0 ]
+      then
+         # report VM is running
+         log_warning_msg "VM '$VM' already running"
+         [ "$RETVAL" = 0 ] && RETVAL=1
+         continue
+      fi
+      
+      # start VM
+      USER=$VBOX_USER LOGNAME=$VBOX_USER start-stop-daemon \
+         --start \
+         --quiet \
+         --pidfile $VM_PIDFILE \
+         --make-pidfile \
+         --background \
+         --chuid $VBOX_USER \
+         --startas $VM_DAEMON \
+         -- $VM_DAEMON_ARGS
+      
+      log_action_end_msg "$?"
+      
+      # check if start failed
+      if [ "$?" != 0 ]
+      then
+         # report error
+         log_failure_msg "Error starting VM '$VM'"
+         RETVAL=2
+      fi
+   done
+   
+   if [ "$RETVAL" -lt 2 ]
+   then
+      log_daemon_msg "VirtualBox daemon started successfully"
+   else
+      log_daemon_msg "VirtualBox daemon started with errors"
+   fi
+   
+   return "$RETVAL"
+}
+
+#
+# Function that stops the daemon/service
+#
+do_stop()
+{
+   vm_init_list
+   
+   # Return
+   #   0 if daemon has been stopped
+   #   1 if daemon was already stopped
+   #   2 if daemon could not be stopped
+   #   other if a failure occurred
+   RETVAL=0
+   
+   for VM in $VBOX_LIST
+   do
+      VM_UUID=`vm_get_uuid $VM`
+      VM_PIDFILE="$PIDFILE.$VM_UUID"
+      
+      log_action_begin_msg "Stopping VM '$VM'"
+      
+      # try savestate halt
+      vm_ctrl $VM savestate
+      
+      # stop daemon
+      USER=$VBOX_USER LOGNAME=$VBOX_USER start-stop-daemon \
+         --stop \
+         --quiet \
+         --retry=TERM/30/KILL/5 \
+         --pidfile $VM_PIDFILE
+      
+      case "$?" in
+      0)
+         log_action_end_msg 0
+         ;;
+      1)
+         log_warning_msg "VM '$VM' already stopped"
+         [ "$RETVAL" = 0 ] && RETVAL=1
+         ;;
+      2)
+         log_action_end_msg 1
+         log_failure_msg "ERROR: Could not stop VM '$VM'"
+         RETVAL=2
+         continue
+         ;;
+      esac
+      
+      rm -f $VM_PIDFILE
+   done
+   
+   if [ "$RETVAL" -lt 2 ]
+   then
+      log_daemon_msg "VirtualBox daemon stopped successfully"
+   else
+      log_daemon_msg "VirtualBox daemon stopped with errors"
+   fi
+   
+   return "$RETVAL"
+}
+
+#
+# Function that sends a SIGHUP to the daemon/service
+#
+do_reload() {
+   #
+   # If the daemon can reload its configuration without
+   # restarting (for example, when it is sent a SIGHUP),
+   # then implement that here.
+   #
+   start-stop-daemon --stop --signal 1 --quiet --pidfile $PIDFILE --name $NAME
+   return 0
+}
+
+case "$1" in
+  start)
+   log_daemon_msg "Starting $DESC" "$NAME"
+   do_start
+   case "$?" in
+      0|1) log_end_msg 0 ;;
+      2) log_end_msg 1 ;;
+   esac
+   ;;
+  stop)
+   log_daemon_msg "Stopping $DESC" "$NAME"
+   do_stop
+   case "$?" in
+      0|1) log_end_msg 0 ;;
+      2) log_end_msg 1 ;;
+   esac
+   ;;
+  status)
+       status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
+       ;;
+  #reload|force-reload)
+   #
+   # If do_reload() is not implemented then leave this commented out
+   # and leave 'force-reload' as an alias for 'restart'.
+   #
+   #log_daemon_msg "Reloading $DESC" "$NAME"
+   #do_reload
+   #log_end_msg $?
+   #;;
+  restart|force-reload)
+   #
+   # If the "reload" option is implemented then remove the
+   # 'force-reload' alias
+   #
+   log_daemon_msg "Restarting $DESC" "$NAME"
+   do_stop
+   case "$?" in
+     0|1)
+      do_start
+      case "$?" in
+         0) log_end_msg 0 ;;
+         1) log_end_msg 1 ;; # Old process is still running
+         *) log_end_msg 1 ;; # Failed to start
+      esac
+      ;;
+     *)
+        # Failed to stop
+      log_end_msg 1
+      ;;
+   esac
+   ;;
+  *)
+   #echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
+   echo "Usage: $SCRIPTNAME {start|stop|status|restart|force-reload}" >&2
+   exit 3
+   ;;
+esac
+
+:
+
