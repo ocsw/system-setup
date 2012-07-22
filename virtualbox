@@ -1,0 +1,116 @@
+as root:
+
+  apt-get update
+  apt-get upgrade
+  (reboot if kernel upgraded?)
+  apt-get install dkms
+  reboot
+
+  apt-get install virtualbox virtualbox-dkms \
+  virtualbox-guest-additions-iso lsb-base
+
+  (get extpack)
+  VBoxManage extpack install \
+  Oracle_VM_VirtualBox_Extension_Pack-4.1.12-77245.vbox-extpack 
+
+  pico /etc/group  # add to vboxusers
+
+  mkdir -p /data/vm/images
+  chmod 1777 /data/vm /data/vm/images
+
+VBoxManage setproperty machinefolder ~/.VirtualBox/vm
+
+VBoxManage createvm --name blue --ostype Ubuntu_64 --register
+mv .VirtualBox/vm/blue/ /data/vm/
+ln -s /data/vm/blue .VirtualBox/vm/
+
+# entries below empty \ are defaults (at least, on this system)
+VBoxManage modifyvm blue \
+  --memory 3072 \
+  --cpus 2 \
+  --rtcuseutc on \
+  --largepages on \
+  --nictype1 virtio \
+  --mouse usbtablet \
+  --audio pulse \
+  --audiocontroller hda \
+  --vrde off \
+  \
+  --acpi on \
+  --ioapic on \
+  --pae on \
+  --hwvirtex on \
+  --nestedpaging on \
+  --vtxvpid on \
+  --boot1 floppy \
+  --boot2 dvd \
+  --boot3 disk \
+  --boot4 none \
+  --nic1 nat
+
+VBoxManage createhd --filename /data/vm/images/blue.vdi --size 50000
+
+VBoxManage storagectl blue --name satactl --add sata --hostiocache off
+
+VBoxManage storageattach blue --storagectl satactl \
+  --port 0 --device 0 --type hdd --medium /data/vm/images/blue.vdi
+
+VBoxManage storageattach blue --storagectl satactl \
+  --port 1 --device 0 --type dvddrive \
+  --medium ~/ubuntu-12.04-alternate-amd64.iso
+
+VBoxHeadless --startvm blue --vrde=off -n -m PORT -o PASSWORD &
+
+(install)
+
+VBoxManage storageattach blue --storagectl satactl \
+  --port 1 --device 0 --type dvddrive --medium \
+  /usr/share/virtualbox/VBoxGuestAdditions.iso
+
+(reboot)
+
+in guest, as root:
+
+  apt-get update
+  apt-get upgrade
+  (reboot if kernel upgraded?)
+  apt-get install dkms
+  reboot
+
+  # ??? seems to all be taken care of by the iso
+  #apt-get install virtualbox-guest-dkms virtualbox-guest-utils \
+  #  virtualbox-guest-x11
+
+  cd /media/VBOXADD*
+  sh ./VBoxLinuxAdditions.run
+  reboot
+
+VBoxManage storageattach blue --storagectl satactl \
+  --port 1 --device 0 --type dvddrive --medium none
+
+as root:
+  # SHORTNAME: no spaces
+  # LONGNAME: actual vbox name
+  sed -e 's/SHORTNAME/blue/' -e 's/LONGNAME/blue/' -e 's/USERNAME/zephyr/' \
+    < virtualbox-SHORTNAME > /etc/init.d/virtualbox-blue
+  chmod 700 /etc/init.d/virtualbox-blue
+  update-rc.d virtualbox-blue defaults 21 19  # virtualbox is 20
+
+---
+
+
+usb, ehci, device filters
+shared folders
+
+cd: host drive, passthrough?
+--vram?
+3d acc?
+2d acc? (win)
+
+--vrde on \
+--vrdeport 3389 \
+--vrdeauthtype external \
+--vrdemulticon on \
+encryption
+
+perm denied error?
