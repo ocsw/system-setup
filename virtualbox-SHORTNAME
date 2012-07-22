@@ -10,7 +10,11 @@
 ### END INIT INFO
 
 # Author: Brendan Kidwell <brendan@glump.net>
-#
+
+# https://forums.virtualbox.org/viewtopic.php?f=7&t=34790#p193078
+# http://www.glump.net/howto/virtualbox_as_a_service
+# modified by Daniel Malament
+
 # Based on /etc/init.d/skeleton from Ubuntu 8.04. Updated for Ubuntu 9.10.
 # If you are using Ubuntu <9.10, you might need to change "Default-Stop"
 # above to "S 0 1 6".
@@ -24,6 +28,8 @@ NAME=virtualbox-SHORTNAME
 SCRIPTNAME=/etc/init.d/$NAME
 
 MANAGE_CMD=VBoxManage
+HEADLESS_CMD=VBoxHeadless
+
 VM_OWNER=USERNAME
 VM_NAME="LONGNAME" #This has to be the name exactly as it appears in your VirtualBox GUI control panel.
 
@@ -52,10 +58,14 @@ do_start()
        return 1
    }
 
-   sudo -H -u $VM_OWNER $MANAGE_CMD startvm "$VM_NAME" -type vrdp >/dev/null || {
-       echo Failed to start "$VM_NAME".
-       return 2
-   }
+#   sudo -H -u $VM_OWNER $MANAGE_CMD startvm "$VM_NAME" -type vrdp >/dev/null || {
+#       echo Failed to start "$VM_NAME".
+#       return 2
+#   }
+
+   sudo -H -u $VM_OWNER screen -dmS virtualbox-SHORTNAME \
+     $HEADLESS_CMD --startvm "$VM_NAME" --vrde=off -n
+     # -m PORT -o PASSWORD
 
    echo "$VM_NAME" started or resumed.
    return 0
