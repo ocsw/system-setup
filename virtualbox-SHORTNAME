@@ -1,19 +1,22 @@
-#! /bin/sh
+#!/bin/sh
+
 ### BEGIN INIT INFO
 # Provides:          virtualbox-SHORTNAME
-# Required-Start:    $local_fs $remote_fs vboxdrv vboxnet
+# Required-Start:    $local_fs $remote_fs vboxdrv virtualbox
 # Required-Stop:     $local_fs $remote_fs
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: LONGNAME virtual machine
-# Description:       LONGNAME virtual machine hosted by VirtualBox
+# Short-Description: virtual machine "LONGNAME"
+# Description:       VirtualBox virtual machine "LONGNAME"
 ### END INIT INFO
 
-# Author: Brendan Kidwell <brendan@glump.net>
-
+# original author: Brendan Kidwell <brendan@glump.net>
+# original source:
 # https://forums.virtualbox.org/viewtopic.php?f=7&t=34790#p193078
 # http://www.glump.net/howto/virtualbox_as_a_service
-# modified by Daniel Malament
+#
+# heavily modified (rewritten, really) by:
+# Daniel Malament <daniel.j.malament@gmail.com>
 
 # Based on /etc/init.d/skeleton from Ubuntu 8.04. Updated for Ubuntu 9.10.
 # If you are using Ubuntu <9.10, you might need to change "Default-Stop"
@@ -22,19 +25,23 @@
 # Do NOT "set -e"
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
-PATH=/usr/sbin:/usr/bin:/sbin:/bin
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 DESC="VirtualBox virtual machine \"LONGNAME\""
-NAME=virtualbox-SHORTNAME
-SCRIPTNAME=/etc/init.d/$NAME
+NAME="virtualbox-SHORTNAME"
+SCRIPTNAME="/etc/init.d/$NAME"
 
-MANAGE_CMD=VBoxManage
-HEADLESS_CMD=VBoxHeadless
+MANAGE_CMD="VBoxManage"
+HEADLESS_CMD="VBoxHeadless"
 
-VM_OWNER=USERNAME
-VM_NAME="LONGNAME" #This has to be the name exactly as it appears in your VirtualBox GUI control panel.
+VM_OWNER="USERNAME"
+VM_NAME="LONGNAME"  # must match registered name in VirtualBox
+
+GOOD_RV="0"
+WARN_RV="255"
+FAIL_RV="1"
 
 # Read configuration variable file if it is present
-[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+[ -r "/etc/default/$NAME" ] && . "/etc/default/$NAME"
 
 # Load the VERBOSE setting and other rcS variables
 #[ -f /etc/default/rcS ] && . /etc/default/rcS
@@ -46,54 +53,62 @@ VM_NAME="LONGNAME" #This has to be the name exactly as it appears in your Virtua
 #
 # Function that starts the daemon/service
 #
-do_start()
-{
-   # Return
-   #   0 if daemon has been started
-   #   1 if daemon was already running
-   #   2 if daemon could not be started
+# Returns:
+#   GOOD_RV if daemon has been started
+#   WARN_RV if daemon was already running
+#   FAIL_RV if daemon could not be started
+#
+do_start() {
+  sudo -H -u "$VM_OWNER" "$MANAGE_CMD" showvminfo "$VM_NAME" | \
+       grep "^State:\s*running" > /dev/null && {
+    log_warning_msg "VM \"$VM_NAME\" is already running"
+    log_end_msg "$WARN_RV"
+    return "$WARN_RV"
+  }
 
-   sudo -H -u $VM_OWNER $MANAGE_CMD showvminfo "$VM_NAME"|grep "^State:\s*running" >/dev/null && {
-       log_warning_msg "$VM_NAME is already running"
-       return 1
-   }
+  #sudo -H -u "$VM_OWNER" "$MANAGE_CMD" startvm "$VM_NAME" -type vrdp \
+  #     >/dev/null || {
+  #  log_failure_msg "Failed to start VM \"$VM_NAME\""
+  #  log_end_msg "$FAIL_RV"
+  #  return "$FAIL_RV"
+  #}
 
-#   sudo -H -u $VM_OWNER $MANAGE_CMD startvm "$VM_NAME" -type vrdp >/dev/null || {
-#       echo Failed to start "$VM_NAME".
-#       return 2
-#   }
+  # can't check for success this way, but can't use built-in VNC otherwise
+  sudo -H -u "$VM_OWNER" screen -dmS "$NAME" \
+       "$HEADLESS_CMD" --startvm "$VM_NAME" --vrde=off -n
+       # -m PORT -o 'PASSWORD'
 
-   sudo -H -u $VM_OWNER screen -dmS virtualbox-SHORTNAME \
-     $HEADLESS_CMD --startvm "$VM_NAME" --vrde=off -n
-     # -m PORT -o PASSWORD
-
-   log_success_msg "$VM_NAME started or resumed"
-   return 0
+  log_success_msg "VM \"$VM_NAME\" started or resumed"
+  log_end_msg "$GOOD_RV"
+  return "$GOOD_RV"
 }
 
 #
 # Function that stops the daemon/service
 #
-do_stop()
-{
-   # Return
-   #   0 if daemon has been stopped
-   #   1 if daemon was already stopped
-   #   2 if daemon could not be stopped
-   #   other if a failure occurred
+# Returns:
+#   GOOD_RV if daemon has been stopped
+#   WARN_RV if daemon was already stopped
+#   FAIL_RV if daemon could not be stopped
+#   other if a failure occurred
+#
+do_stop() {
+  sudo -H -u "$VM_OWNER" "$MANAGE_CMD" showvminfo "$VM_NAME" | \
+       grep "^State:\s*running" > /dev/null || {
+    log_warning_msg "VM \"$VM_NAME\" is already stopped/suspended"
+    log_end_msg "$WARN_RV"
+    return "$WARN_RV"
+  }
 
-   sudo -H -u $VM_OWNER $MANAGE_CMD showvminfo "$VM_NAME"|grep "^State:\s*running" >/dev/null || {
-       log_warning_msg "$VM_NAME is already stopped"
-       return 1
-   }
+  sudo -H -u "$VM_OWNER" "$MANAGE_CMD" controlvm "$VM_NAME" savestate || {
+    log_failure_msg "Failed to suspend VM \"$VM_NAME\""
+    log_end_msg "$FAIL_RV"
+    return "$FAIL_RV"
+  }
 
-   sudo -H -u $VM_OWNER $MANAGE_CMD controlvm "$VM_NAME" savestate || {
-       log_failure_msg "Failed to stop $VM_NAME"
-       return 2
-   }
-
-   log_success_msg "$VM_NAME suspended"
-   return 0
+  log_success_msg "VM \"$VM_NAME\" suspended"
+  log_end_msg "$GOOD_RV"
+  return "$GOOD_RV"
 }
 
 #
@@ -101,54 +116,48 @@ do_stop()
 #
 do_status()
 {
-   sudo -H -u $VM_OWNER $MANAGE_CMD showvminfo "$VM_NAME"|grep "^State:\s*.*$"
+    sudo -H -u "$VM_OWNER" "$MANAGE_CMD" showvminfo "$VM_NAME" | \
+         grep "^State:\s*.*$"
 }
 
 case "$1" in
   start)
-   [ "$VERBOSE" != no ] && log_daemon_msg "Starting $DESC"
-   do_start
-   case "$?" in
-      0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
-      2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
-   esac
-   ;;
+    # message here so it isn't printed for reload
+    log_daemon_msg "Starting $DESC"
+    do_start
+    ;;
   stop)
-   [ "$VERBOSE" != no ] && log_daemon_msg "Stopping $DESC"
-   do_stop
-   case "$?" in
-      0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
-      2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
-   esac
-   ;;
+    # message here so it isn't printed for reload
+    log_daemon_msg "Stopping $DESC"
+    do_stop
+    ;;
   restart|force-reload)
-   #
-   # If the "reload" option is implemented then remove the
-   # 'force-reload' alias
-   #
-   log_daemon_msg "Restarting $DESC"
-   do_stop
-   case "$?" in
-     0|1)
-      do_start
-      case "$?" in
-         0) log_end_msg 0 ;;
-         1) log_end_msg 1 ;; # Old process is still running
-         *) log_end_msg 1 ;; # Failed to start
-      esac
-      ;;
-     *)
+    #
+    # If the 'reload' option is implemented then remove the
+    # 'force-reload' alias
+    #
+    log_daemon_msg "Restarting $DESC"
+    do_stop
+    case "$?" in
+      "$GOOD_RV"|"$WARN_RV")
+        do_start
+        case "$?" in
+          "$WARN_RV") log_end_msg "$FAIL_RV" ;; # Old process is still running
+          *) log_end_msg "$?"
+        esac
+        ;;
+      *)
         # Failed to stop
-      log_end_msg 1
-      ;;
-   esac
-   ;;
+        log_end_msg "$FAIL_RV"
+        ;;
+    esac
+    ;;
   status)
-   do_status
-   ;;
+    do_status
+    ;;
   *)
-   #echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
-   echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload|status}" >&2
-   exit 3
-   ;;
+    #echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
+    echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload|status}" >&2
+    exit 3
+    ;;
 esac
