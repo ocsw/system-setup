@@ -1,0 +1,20 @@
+ddclient
+fetchmail
+fetchmailconf
+smbclient
+cifs-utils
+expect
+arpwatch
+arpalert
+# don't use arping package, there's a built-in version, and the package
+# will remove NetworkManager
+dsniff
+sniffit
+sslsniff
+snort
+swatch
+bitlbee
+ircii
+epic4
+epic5
+ldap stuff

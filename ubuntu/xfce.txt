@@ -1,0 +1,54 @@
+Appearance:
+  Style: Adwaita?
+  Icons: Humanity? GNOME-Noble?
+Desktop:
+  Background: image
+  Menus: (app, window menus)
+  Icons: no home/fs/trash?
+Notifications:
+  disappear: 2 sec?
+Panel:
+  Panel 1:
+    Display:
+      monitor 1, drag to top, 25 px, 100%/auto
+    Items:
+      applications menu (no button title)
+      launchers (drag most from menu):
+        terminal, gedit, mixer, rhythmbox, k3b, pidgin, spark, skype,
+        keepnote, thunderbird, firefox, chromium
+          -> terminal: gnome-terminal -e 'env NEWTERM=yes bash -li'
+          -> spark: icon: /usr/share/pixmaps/pidgin/protocols/48/jabber.png
+      separator (transparent, expand)
+      action buttons (lock screen)
+      mixer
+      clock (no frame, custom format, "%a %b %d, %l:%M %p")
+      session menu
+  Panel 2:
+    Display:
+      monitor 1, drag to bottom, 25 px, 100%/auto
+    Items:
+      show desktop
+      separator
+      window buttons (no handle, no sort, show all ws)
+      workspace switcher (no wheel)
+Preferred Applications:
+  browser: ff
+  mail: tb
+  file: nautilus?
+  term: gnome?
+Printing: CUPS?
+Removable Drives:
+  Storage: (mount drives, mount media?)
+Screensaver:
+  Display Modes: blank only?, lock after 30min?
+Session:
+  General: save, prompt
+  Autostart: turn off backup, evolution, ubuntu one
+Window Manager:
+  Style: default?, remove shade button
+  Keyboard: ?
+  Advanced: snap to other windows, (no wrap on drag?)
+Window Manager Tweaks:
+  Accessibility: notify
+  Workspaces: no wheel?
+Workspaces: 2?
