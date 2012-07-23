@@ -1,0 +1,35 @@
+--- w.c.orig	Tue Jan 13 16:15:34 2004
++++ w.c	Fri Jun 18 12:19:12 2004
+@@ -182,7 +182,7 @@
+ 	}
+ 
+ 	(void)time(&now);
+-	if ((ut = fopen(_PATH_UTMP, "r")) == NULL)
++/*	if ((ut = fopen(_PATH_UTMP, "r")) == NULL)
+ 		err(1, "%s", _PATH_UTMP);
+ 
+ 	if (*argv)
+@@ -204,11 +204,12 @@
+ 			continue;
+ 		ep->tdev = stp->st_rdev;
+ #ifdef CPU_CONSDEV
++*/
+ 		/*
+ 		 * If this is the console device, attempt to ascertain
+ 		 * the true console device dev_t.
+ 		 */
+-		if (ep->tdev == 0) {
++/*		if (ep->tdev == 0) {
+ 			int mib[2];
+ 			size_t size;
+ 
+@@ -222,7 +223,9 @@
+ 			ep->idle = 0;
+ 	}
+ 	(void)fclose(ut);
++*/
+ 
++	nusers = 0;
+ 	if (header || wcmd == 0) {
+ 		pr_header(&now, nusers);
+ 		if (wcmd == 0)

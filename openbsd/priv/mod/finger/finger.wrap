@@ -1,0 +1,10 @@
+#!/bin/sh
+
+PATH="/bin:/usr/bin"
+export PATH
+
+if [ -x /usr/bin/finger.orig ]; then
+  exec finger.orig ${1+"$@"}
+else
+  exec finger.priv ${1+"$@"}
+fi

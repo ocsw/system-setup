@@ -1,0 +1,25 @@
+61a62,64
+> #include <sys/types.h>
+> #include <pwd.h>
+> 
+82a86
+>         struct passwd *passent;
+119a124,125
+>         passent = getpwuid(getuid());
+> 
+129a136
+>                             if (!strcmp(usr.ut_name, passent->pw_name)) {
+135a143
+>                             }
+142a151
+>                             if (!strcmp(usr.ut_name, passent->pw_name))
+155a165
+>                             if (!strcmp(usr.ut_name, passent->pw_name)) {
+161a172
+>                             }
+168a180
+>                             if (!strcmp(usr.ut_name, passent->pw_name))
+299c311
+< 	(void)fprintf(stderr, "usage: who [-mqTuH] [ file ]\n       who am i\n");
+---
+> 	(void)fprintf(stderr, "usage: who [-mqTuH] [ file ]\n       who am i\n       *** (restricted to logins of the invoking user) ***\n");

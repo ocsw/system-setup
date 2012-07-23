@@ -1,0 +1,237 @@
+Application: Firefox 14.0.1 (20120713224749)
+Operating System: Linux (x86_64-gcc3)
+
+July 23, 2012
+
+Total number of items: 77
+
+- A Better Firefox Add-on Bar 1.2 (Disabled)
+	a-better-firefox-addon-bar@jetpack
+	http://indexedout.blogspot.com
+- Abduction! 3.0.14
+	{b0e1b4a6-2c6f-4e99-94f2-8e625d7ae255}
+	https://addons.mozilla.org/en-US/firefox/addon/abduction/?src=api
+- Adblock Plus 2.1.1
+	{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+	http://adblockplus.org/en/
+- Addons Manager Hilite 1.0
+	addonsmgrhilte@cfl
+	https://addons.mozilla.org/en-US/firefox/addon/addons-manager-hilite/?src=api
+- Backgroundimage Saver 0.1.5 (Disabled, Incompatible)
+	{5973769D-30B2-4824-8791-A4854FBC41B4}
+	http://www.mobe.de/firefox/backgroundsaver
+- Bookmark Favicon Changer 1.64
+	bookmarkfaviconchanger@sonthakit
+	https://addons.mozilla.org/en-US/firefox/addon/bookmark-favicon-changer/?src=api
+- Browse Images 0.4.2
+	{62b958b4-9962-4fc2-9983-01a9a42d6f2d}
+	http://browseimages.mozdev.org/
+- CacheViewer Continued 0.8
+	{30E08C68-889E-11E0-95EF-DA7E4824019B}
+	https://addons.mozilla.org/en-US/firefox/addon/cacheviewer-continued/?src=api
+- Cleanest Addon Manager 2.0
+	cam@sdrocking.com
+	https://addons.mozilla.org/en-US/firefox/addon/cam/
+- CLEO 5.0.1
+	CLEO@guid.customsoftwareconsult.com
+	http://softwarebychuck.com/
+- Copy Urls Expert 2.0.0
+	copy-urls-expert@kashiif-gmail.com
+	http://www.kashiif.com/firefox-extensions/copy-urls-expert/
+- CopyAllUrls 0.9.2 (Disabled, Incompatible)
+	{960BE052-4847-422b-9AD6-8631D3D0A607}
+	http://plasser.net/copyallurls/
+- Download Statusbar 0.9.10
+	{D4DD63FA-01E4-46a7-B6B1-EDAB7D6AD389}
+	http://downloadstatusbarapp.com
+- DownloadHelper 4.9.9
+	{b9db16a4-6edc-47ec-a1f4-b86292ed211d}
+	http://www.downloadhelper.net
+- DownThemAll! 2.0.13
+	{DDC359D1-844A-42a7-9AA1-88A850A938A8}
+	http://downthemall.net/
+- Embedded Objects 2.9
+	firefox@red-cog.com
+	http://www.fcmartins.net/software
+- Extension List Dumper 1.15.2
+	extensionlistdumper@sogame.cat
+	http://www.sogame.cat/
+- Extension Manager Extended 2.8.1 (Disabled, Incompatible)
+	Extended@spanglerco.com
+	http://extended.spanglerco.com/
+- Extension Options Menu 2.3
+	{1feca320-6b4d-11df-a08a-0800200c9a66}
+	http://forums.mozillazine.org/viewtopic.php?f=48&t=2141579
+- Fast Video Download (with SearchMenu) 4.2.1
+	{c50ca3c4-5656-43c2-a061-13e717f73fc8}
+	http://www.applian.com/fast-video-download/
+- Favicon Picker 2 0.6.2.15
+	{446c03e0-2c35-11db-a98b-0800200c9a66}
+	https://addons.mozilla.org/en-US/firefox/addon/favicon-picker-2/?src=api
+- FavLoc 1.2 (Disabled, Incompatible)
+	{472f4ef0-a825-11da-a746-0800200c9a66}
+	http://favloc.fligtar.com
+- FEBE 7.0.3.5
+	{4BBDD651-70CF-4821-84F8-2B918CF89CA3}
+	http://softwarebychuck.com/
+- Find All 3.3
+	findall@codedawn.com
+	http://www.codedawn.com/find-all.php
+- FormFox 1.7
+	formfox@daniel.steinbrook
+	https://addons.mozilla.org/en-US/firefox/addon/formfox/?src=api
+- FoxyTunes 4.3.6 (Disabled, Incompatible)
+	{463F6CA5-EE3C-4be1-B7E6-7FEE11953374}
+	http://www.foxytunes.com/
+- Global Menu Bar integration 3.2.5
+	globalmenu@ubuntu.com
+	http://launchpad.net/globalmenu-extension
+- Google Translator for Firefox 2.1.0.2
+	translator@zoli.bod
+	http://translatorforfirefox.blogspot.com/
+- Greasemonkey 0.9.20
+	{e4a8a97b-f2ed-450b-b12d-ee082ba24781}
+	http://www.greasespot.net/
+- IdentFavIcon 0.3.4.7
+	identfavicon@david.hanak.hu
+	http://www.cs.bme.hu/~dhanak/identfavicon/
+- Image Toolbar 0.6.9
+	{A4732521-77D9-447E-A557-B279AC923F06}
+	http://www.cusser.net
+- Image Zoom 0.4.6
+	{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}
+	http://imagezoom.yellowgorilla.net/
+- ImTranslator 4.17
+	{9AA46F4F-4DC7-4c06-97AF-5035170634FE}
+	http://www.smartlinkcorp.com
+- It's All Text! 1.6.4
+	itsalltext@docwhat.gerf.org
+	http://addons.mozilla.org/firefox/4125
+- keyconfig 20110522
+	keyconfig@dorando
+	http://mozilla.dorando.at/
+- Link Widgets 1.7.0.1
+	linkwidget@clav.mozdev.org
+	http://clav.mozdev.org/
+- Live HTTP headers 0.17
+	{8f8fe09b-0bd3-4470-bc1b-8cad42b8203a}
+	http://livehttpheaders.mozdev.org/
+- Long URL Please 0.5.1
+	longurlplease@darragh.curran
+	http://www.longurlplease.com/
+- Menu Editor 1.2.7
+	{EDA7B1D7-F793-4e03-B074-E6F303317FB0}
+	http://menueditor.mozdev.org/
+- MenuManipulator 20110327
+	menumanipulator@dorando
+	http://mozilla.dorando.at/
+- Mozilla Archive Format 2.0.6
+	{7f57cf46-4467-4c2d-adfa-0cba7c507e54}
+	http://maf.mozdev.org/
+- No Color 0.2.8
+	{ae443e4d-02db-4eef-bcc2-0f1b17edb941}
+	http://hemiolapei.free.fr/extensions/index.php/no-color
+- OPIE 4.0
+	OPIE@guid.customsoftwareconsult.com
+	http://softwarebychuck.com/
+- OptimizeGoogle 0.79.1
+	optimizegoogle@optimizegoogle.com
+	http://www.optimizegoogle.com/
+- Pilfer 1.29
+	{3a7f36a0-c6ec-11dd-ad8b-0800200c9a66}
+	http://downwith.us
+- Prefsearch 0.1 (Disabled)
+	prefsearch@eric.hamiter
+	http://erichamiter.com
+- PrevNextArrows 1.3
+	{463b43d7-2a04-402a-a110-674af2076249}
+	https://addons.mozilla.org/en-US/firefox/addon/prevnextarrows/?src=api
+- QuickDrag 2.1.3.23
+	quickdrag@mozilla.ktechcomputing.com
+	http://quickdrag.com
+- Resurrect Pages 2.0.6
+	{0c8fbd76-bdeb-4c52-9b24-d587ce7b9dc3}
+	http://trac.arantius.com/wiki/Extensions/Resurrect
+- Right Links 0.3.6.3
+	{B5F5E8D3-AE31-49A1-AC42-78B7B1CC5CDC}
+	https://addons.mozilla.org/en-US/firefox/addon/right-links/?src=api
+- Save Complete 1.0.1 (Disabled, Incompatible)
+	savecomplete@perlprogrammer.com
+	http://github.com/warhammerkid/save-complete
+- Save File to 2.3.3
+	savefileto@mozdev.org
+	http://savefileto.googlecode.com/
+- Save Image in Folder 1.3.6
+	{5e594888-3e8e-47da-b2c6-b0b545112f84}
+	http://mozext.achimonline.de
+- Save Images 0.7.9
+	LDSI_plashcor@gmail.com
+	https://addons.mozilla.org/en-US/firefox/addon/save-images/?src=api
+- Save Link in Folder 1.5.7
+	{7a46f9fe-4818-4837-ae4a-39c53978ae99}
+	http://mozext.achimonline.de
+- Server Switcher 0.5.3
+	{F7D360DC-B8F8-11DA-86BD-3EC8728786A0}
+	http://hermann.czedik.net/
+- Session Manager 0.7.9
+	{1280606b-2510-4fe0-97ef-9b5a22eafe30}
+	http://sessionmanager.mozdev.org/
+- Shooter 1.2.4
+	{11b496ea-481a-11dc-8314-0800200c9a66}
+	http://www.picozu.com/pages/shooter
+- Shorten URL 0.3.8
+	ShortenURL@loucypher
+	http://shortenurl.googlecode.com/
+- Show the Image 0.7
+	showtheimage@brunwin.net
+	http://www.bath.ac.uk/~cs3nb/firefox/extensions/showtheimage
+- Siphon - Sync Add-ons 0.9.8
+	siphon@siphon.ian-halpern.com
+	http://siphon-fx.com
+- SkipScreen 0.6.4
+	SkipScreen@SkipScreen
+	http://skipscreen.com/
+- Tab Counter 1.9.3
+	tabcounter@morac
+	https://addons.mozilla.org/en-US/firefox/addon/tab-counter/?src=api
+- Tab Mix Plus 0.4.0.3
+	{dc572301-7619-498c-a57d-39143191b318}
+	http://tmp.garyr.net
+- Tab Overflow Scrollbar 4.0
+	taboverflowscrollbar@frank.lion
+	http://franklion.co.uk/
+- Tab To Window 1.2.9 (Disabled)
+	tabtowindow@sogame.cat
+	http://sogame.awardspace.com/
+- Tab Utilities 1.1.4 (Disabled)
+	tabutils@ithinc.cn
+	http://addons.mozilla.org/addon/59961
+- TabSubmit 1.0.2.4
+	{421e87b4-d3d2-49c8-b08f-b83f4dc88444}
+	http://code.kliu.org/misc/tabsubmit/
+- TinEye Reverse Image Search 1.1
+	tineye@ideeinc.com
+	http://www.tineye.com/
+- Toggle Find Bar 0.1.1
+	togglefindbar@ashphy.com
+	http://ashphy.com/
+- Ubuntu Firefox Modifications 2.1.1 (Disabled)
+	ubufox@ubuntu.com
+- UnPlug 2.050
+	unplug@compunach
+	http://unplug.dbatley.com/
+- Update Notifier 0.1.5.5 (Disabled, Incompatible)
+	{95f24680-9e31-11da-a746-0800200c9a66}
+	http://www.longfocus.com/firefox/updatenotifier
+- Uppity 1.5.8
+	{16cbd87c-eb99-4f5c-9825-83cf13ab7ff8}
+	http://trac.arantius.com/wiki/Extensions/Uppity
+- URL Shrink Easy 0.46
+	tkuse@telekawaru.com
+	http://www.telekawaru.com/
+- View Source Chart 3.05
+	{68836a21-fc7d-4ea1-a065-7efabd99d414}
+	http://zigrat.com
+- Zotero 3.0.8
+	zotero@chnm.gmu.edu
+	http://www.zotero.org

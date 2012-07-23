@@ -1,0 +1,38 @@
+60a61,63
+> #include <sys/types.h>
+> #include <pwd.h>
+> 
+115a119
+>         struct passwd *passent;
+144,145c148
+< 			hostconv(optarg);
+< 			addarg(HOST_TYPE, optarg);
+---
+>                         /* ignored for privacy */
+151c154
+< 			addarg(TTY_TYPE, ttyconv(optarg));
+---
+>                         /* ignored for privacy */
+154c157
+< 			snaptime = dateconv(optarg);
+---
+>                         /* ignored for privacy */
+167,172c170
+< #define	COMPATIBILITY
+< #ifdef	COMPATIBILITY
+< 			/* code to allow "last p5" to work */
+< 			addarg(TTY_TYPE, ttyconv(*argv));
+< #endif
+< 			addarg(USER_TYPE, *argv);
+---
+> 			;
+175a174,176
+> 	passent = getpwuid(getuid());
+> 	addarg(USER_TYPE, passent->pw_name);
+> 
+650c651,653
+< 	    " [-d [[[CC]YY]MMDD]hhmm[.SS]] [user ...]\n", __progname);
+---
+> 	    " [-d [[[CC]YY]MMDD]hhmm[.SS]] [user ...]\n"
+> 	    "       *** (t, h, d, and user options ignored for privacy) ***\n",
+> 	    __progname);

@@ -1,0 +1,85 @@
+--- who.c.orig	Tue Jun 10 18:20:54 2003
++++ who.c	Fri Jun 18 12:07:16 2004
+@@ -59,6 +59,9 @@
+ #include <err.h>
+ #include <locale.h>
+ 
++#include <sys/types.h>
++#include <pwd.h>
++
+ void  output(struct utmp *);
+ void  output_labels(void);
+ void  who_am_i(FILE *);
+@@ -80,6 +83,7 @@
+ 	struct utmp usr;
+ 	FILE *ufp;
+ 	int c;
++        struct passwd *passent;
+ 
+ 	setlocale(LC_ALL, "");
+ 
+@@ -117,6 +121,8 @@
+ 	if (show_labels)
+ 		output_labels();
+ 
++        passent = getpwuid(getuid());
++
+ 	switch (argc) {
+ 	case 0:					/* who */
+ 		ufp = file(_PATH_UTMP);
+@@ -127,6 +133,7 @@
+ 			int count = 0;
+ 	
+ 			while (fread((char *)&usr, sizeof(usr), 1, ufp) == 1) {
++                            if (!strcmp(usr.ut_name, passent->pw_name)) {
+ 				if (*usr.ut_name && *usr.ut_line) {
+ 					(void)printf("%-*.*s ", NAME_WIDTH,
+ 						UT_NAMESIZE, usr.ut_name);
+@@ -133,6 +140,7 @@
+ 					if ((++count % 8) == 0)
+ 						(void) printf("\n");
+ 				}
++                            }
+ 			}
+ 			if (count % 8)
+ 				(void) printf("\n");
+@@ -140,6 +148,7 @@
+ 		} else {
+ 			/* only entries with both name and line fields */
+ 			while (fread((char *)&usr, sizeof(usr), 1, ufp) == 1)
++                            if (!strcmp(usr.ut_name, passent->pw_name))
+ 				if (*usr.ut_name && *usr.ut_line)
+ 					output(&usr);
+ 		}
+@@ -153,6 +162,7 @@
+ 			int count = 0;
+ 
+ 			while (fread((char *)&usr, sizeof(usr), 1, ufp) == 1) {
++                            if (!strcmp(usr.ut_name, passent->pw_name)) {
+ 				if (*usr.ut_name && *usr.ut_line) {
+ 					(void)printf("%-*.*s ", NAME_WIDTH,
+ 						UT_NAMESIZE, usr.ut_name);
+@@ -159,6 +169,7 @@
+ 					if ((++count % 8) == 0)
+ 						(void) printf("\n");
+ 				}
++                            }
+ 			}
+ 			if (count % 8)
+ 				(void) printf("\n");
+@@ -166,6 +177,7 @@
+ 		} else {
+ 			/* all entries */
+ 			while (fread((char *)&usr, sizeof(usr), 1, ufp) == 1)
++                            if (!strcmp(usr.ut_name, passent->pw_name))
+ 				output(&usr);
+ 		}
+ 		break;
+@@ -296,6 +308,6 @@
+ void
+ usage(void)
+ {
+-	(void)fprintf(stderr, "usage: who [-mqTuH] [ file ]\n       who am i\n");
++	(void)fprintf(stderr, "usage: who [-mqTuH] [ file ]\n       who am i\n       *** (restricted to logins of the invoking user) ***\n");
+ 	exit(1);
+ }

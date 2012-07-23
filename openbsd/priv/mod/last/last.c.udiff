@@ -1,0 +1,71 @@
+--- last.c.orig	Tue Jan 13 16:15:03 2004
++++ last.c	Fri Jun 18 12:10:43 2004
+@@ -58,6 +58,9 @@
+ #include <unistd.h>
+ #include <utmp.h>
+ 
++#include <sys/types.h>
++#include <pwd.h>
++
+ #define	NO	0				/* false/no */
+ #define	YES	1				/* true/yes */
+ #define ATOI2(ar)	((ar)[0] - '0') * 10 + ((ar)[1] - '0'); (ar) += 2;
+@@ -113,6 +116,7 @@
+ 	extern char *optarg;
+ 	int ch;
+ 	char *p;
++        struct passwd *passent;
+ 
+ 	maxrec = -1;
+ 	snaptime = 0;
+@@ -141,17 +145,16 @@
+ 			file = optarg;
+ 			break;
+ 		case 'h':
+-			hostconv(optarg);
+-			addarg(HOST_TYPE, optarg);
++                        /* ignored for privacy */
+ 			break;
+ 		case 's':
+ 			seconds++;
+ 			break;
+ 		case 't':
+-			addarg(TTY_TYPE, ttyconv(optarg));
++                        /* ignored for privacy */
+ 			break;
+ 		case 'd':
+-			snaptime = dateconv(optarg);
++                        /* ignored for privacy */
+ 			break;
+ 		case 'T':
+ 			fulltime = 1;
+@@ -164,15 +167,13 @@
+ 	if (argc) {
+ 		setlinebuf(stdout);
+ 		for (argv += optind; *argv; ++argv) {
+-#define	COMPATIBILITY
+-#ifdef	COMPATIBILITY
+-			/* code to allow "last p5" to work */
+-			addarg(TTY_TYPE, ttyconv(*argv));
+-#endif
+-			addarg(USER_TYPE, *argv);
++			;
+ 		}
+ 	}
+ 
++	passent = getpwuid(getuid());
++	addarg(USER_TYPE, passent->pw_name);
++
+ 	checkargs();
+ 	wtmp();
+ 	exit(0);
+@@ -647,6 +648,8 @@
+ 
+ 	fprintf(stderr,
+ 	    "usage: %s [-#] [-csT] [-f file] [-t tty] [-h host]"
+-	    " [-d [[[CC]YY]MMDD]hhmm[.SS]] [user ...]\n", __progname);
++	    " [-d [[[CC]YY]MMDD]hhmm[.SS]] [user ...]\n"
++	    "       *** (t, h, d, and user options ignored for privacy) ***\n",
++	    __progname);
+ 	exit(1);
+ }

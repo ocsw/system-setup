@@ -1,0 +1,12 @@
+user_pref("app.update.lastUpdateTime.addon-background-update-timer", 1285351936);
+user_pref("app.update.lastUpdateTime.blocklist-background-update-timer", 1285352357);
+user_pref("app.update.lastUpdateTime.microsummary-generator-update-timer", 1285093436);
+user_pref("app.update.lastUpdateTime.places-maintenance-timer", 1285352351);
+user_pref("app.update.lastUpdateTime.search-engine-update-timer", 1285352404);
+user_pref("browser.sessionstore.resume_session_once", true);
+user_pref("distribution.canonical.bookmarksProcessed", true);
+user_pref("extensions.enabledItems", "langpack-en-GB@firefox-3.6.ubuntu.com:3.6,ubufox@ubuntu.com:0.9rc2,keyconfig@dorando:20080929,tabcounter@morac:1.8.5,taboverflowscrollbar@frank.lion:3.6,{0c8fbd76-bdeb-4c52-9b24-d587ce7b9dc3}:2.0.5,identfavicon@david.hanak.hu:0.3.2,{A4732521-77D9-447E-A557-B279AC923F06}:0.6.8,{D4DD63FA-01E4-46a7-B6B1-EDAB7D6AD389}:0.9.7.1,{DDC359D1-844A-42a7-9AA1-88A850A938A8}:1.1.10,{960BE052-4847-422b-9AD6-8631D3D0A607}:0.9.2,{71328583-3CA7-4809-B4BA-570A85818FBB}:0.6.3,quickdrag@mozilla.ktechcomputing.com:2.0.2.1,{B5F5E8D3-AE31-49A1-AC42-78B7B1CC5CDC}:0.3.5.3,savecomplete@perlprogrammer.com:1.0.1,{1280606b-2510-4fe0-97ef-9b5a22eafe30}:0.6.8.3,{16cbd87c-eb99-4f5c-9825-83cf13ab7ff8}:1.5.6,{68836a21-fc7d-4ea1-a065-7efabd99d414}:3.02,{ae443e4d-02db-4eef-bcc2-0f1b17edb941}:0.2.8,hidefindbar@ashphy.s268.xrea.com:0.2.3,findall@codedawn.com:3.1,{446c03e0-2c35-11db-a98b-0800200c9a67}:0.5,Extended@spanglerco.com:2.8.1,extensionlistdumper@sogame.cat:1.14.8,{b0e1b4a6-2c6f-4e99-94f2-8e625d7ae255}:3.0.5,{972ce4c6-7e08-4474-a285-3208198ce6fd}:3.6.9");
+user_pref("idle.lastDailyNotification", 1285352745);
+user_pref("intl.charsetmenu.browser.cache", "us-ascii, ISO-8859-1, UTF-8");
+user_pref("places.last_vacuum", 1285352745);
+user_pref("urlclassifier.keyupdatetime.https://sb-ssl.google.com/safebrowsing/newkey", 1287016370);

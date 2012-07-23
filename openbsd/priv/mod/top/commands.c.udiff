@@ -1,0 +1,10 @@
+--- commands.c.orig	Sat Oct 25 19:38:21 2003
++++ commands.c	Fri Jun 18 12:15:16 2004
+@@ -99,6 +99,7 @@
+ 		    "s       - change number of seconds to delay between updates\n"
+ 		    "S       - toggle the display of system processes\n"
+ 		    "u       - display processes for only one user (+ selects all users)\n"
++                    "          *** (ignored for privacy) ***\n"
+ 		    "\n\n", stdout);
+ 	}
+ }

@@ -1,0 +1,11 @@
+add
+wtmp:*:46:
+to /etc/group
+
+chgrp wtmp /var/log/wtmp*
+
+add root:wtmp (and 640) to the entry in /etc/newsyslog.conf
+
+edit the entry for wtmp in /etc/mtree/special
+
+last.priv must be setgid wtmp

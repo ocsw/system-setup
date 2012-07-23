@@ -1,0 +1,220 @@
+install:
+  note ql toolbar icon (default)
+  use existing profile:
+    %appdata%\Thunderbird\profiles.ini (change as nec.; close tb first):
+      [General]
+      StartWithLastProfile=1
+           
+      [Profile0]
+      Name=main
+      IsRelative=0
+      Path=D:\thunderbird\main
+      Default=1
+    delete created default profile
+    in existing profile, check refs to profile path (most should be fixed automatically on open):
+      compreg.dat
+      extensions.ini
+      panacea.dat
+      prefs.js
+      XPC.mfl
+      xpti.dat
+    also desktop path, docs, etc. in prefs.js
+  updates (tb, add-ons)
+
+main config:
+  general:
+    no alert (?)
+    no sound
+    (no messaging menu)
+  display:
+    (tags)
+  composition:
+    keywords (see about:config)
+  security:
+    scams:
+      no check (?)
+    av:
+      allow check
+    passwords:
+      master password
+  advanced:
+    general:
+      startup check
+      no performance data
+    reading:
+      show in new window
+      don't show only display name
+    network:
+      (cache size)
+      (auto compact?  20MB?)
+    update:
+      all / ask
+  lightning: see add-on configs
+
+about:config:
+  browser.download.manager.retention 0
+  mailnews.customHeaders;Sender: Reply-To: Delivered-To ???
+  mail.compose.attachment_reminder_keywords;.doc,.docx,.pdf,.xls,xlsx,.ppt,.pptx.,rtf,.pps,enclose,enclosed,enclosing,CV,cover letter,resume,attachment,attachments,attach,attached,attaching,file,files,pic,pics,photo,photos,photograph,photographs,here is,here's,here are,here it is,here they are
+account config:
+  accounts:
+    composition:
+      no html
+    junk:
+      address books
+  local folders:
+    junk:
+      address books
+
+add-on configs:
+  account colors:
+    (colors)
+    folder pane:
+      none
+    compose window:
+      color from identity
+      color from menu
+      color subject font
+  addons manager hilite:
+    don't always restore
+    show list
+  attachment extractor:
+    general:
+      save path
+      (keep?)
+    after extraction:
+      don't notify
+    auto-extract:
+      (turn on?)
+      general:
+        wait for all
+        save path
+        (keep?)
+      after extraction:
+        clear tag (?)
+  compact header:
+    two lines
+  correct identity:
+    detection:
+      (words)
+  extension list dumper:
+    add ID, total, date
+  folderpane tools:
+    (startup)
+    (order)
+  keyconfig:
+    disable:
+      ctrl-Q (quit)
+      A (archive) (?)
+      Shift-C (mark all read)
+      C (mark read by date)
+    change:
+      Shift-F5 -> Ctrl-T (Ctrl-Q?) (get new /all)
+      Shift-H ->H (compactheader toggle)
+  (image zoom:)
+    general:
+      toggle fit/reset
+  lightning:
+    views:
+      start on Monday
+      (all days in workweek (no highlight)?)
+      show 24 hours
+      show 5 weeks
+  (mail tweak (only):)
+    compact from folder properties
+    config menu [directories]
+    deletion behavior: nothing
+    file picker guard
+    insert menu
+    message header cleanup
+    status icons
+  menumanipulator:
+    tools menu:
+      move 'extension options' below 'add-ons'
+      move 'options' above 'add-ons' (windows)
+      (move 'preferences' to tools menu, above 'add-ons' (linux)?)
+      (no longer necessary:)
+       menumanipulator.chrome://messenger/content/messenger.xul;New('menuitem','menuitem1214764706731'); Move("id('addonsManager')",-1,["id('devToolsSeparator')",-1]); Set('label','Downloads'); Set('oncommand','toOpenWindowByType("Download:Manager", "chrome://mozapps/content/downloads/downloads.xul");'); Set('key','downloads'); Set('acceltext','Ctrl+J');
+  mnenhy:
+    mnenhy:
+      no headers
+      no junk
+    storage:
+      no user prefs (?)
+    (see ui for columns)
+  morefunctionsforaddressbook:
+    misc:
+      not just ascii
+      american format
+    (column names???)
+  no message pane sorting by mouse:
+    desc (?)
+  nostalgy:
+    completion:
+      tab completion
+    keys:
+      save: V / Shift-V (?)
+  remove duplicate messages (alternate):
+    message comparison:
+      don't skip special folders
+  withattach:
+    no warning label
+    don't scan
+    keywords:
+      (not really necessary, but can copy keywords from builtin (see about:config); can also use regexes for compactness, e.g. attach.*,files?,pics?,photo(graph)?s?)
+
+theme: adwaita (linux) (?)
+
+ui:
+  main window:
+    top row, right: (update notifier), throbber
+    toolbar:
+      icons and text
+      buttons:
+        get mail, write (withAttach), addr book, sep,
+        reply (wA), reply all (wA), forward, sep,
+        tag, AE extract, sep,
+        back, forward, flexsp, view, quick filter, search
+    header pane: no icons
+    (folders: All Folders view)
+    today pane w/events (?)
+    vert divider (folders): under R of reply, Ev of Events and Tasks
+    horiz divider: 12 messages (at 1280x800)
+    vert divider (today): default (same as folders?)
+    global cols (default width):
+      thread, star, attach, from, subject, junk, date, size
+    cols for drafts, templates, sent, outbox (default width):
+      thread, star, attach, subject, recipient, junk, date, size
+       
+  message window:
+    top row, right: throbber
+    toolbar:
+      icons and text
+      buttons:
+        get mail, write (wA), addr book, sep,
+        reply (wA), reply all (wA), forward, sep,
+        tag, AE extract, sep, back, forward
+    header pane: star
+       
+  compose window:
+    toolbar:
+      icons and text
+      buttons:
+        send, sep, contacts, sep,
+        spell, quote, attach, withAttach, sep,
+        security, save, priority
+    horiz divider: max up (3.5 addresses)
+    attach divider: default (_N of Normal)
+       
+  address book:
+    toolbar:
+      icons and text
+      buttons:
+        new contact, new list, sep, properties, write,
+        flexsp, search
+    vert divider: under p of Pro_p_erties, H of Help
+    horiz divider: 21 entries (at 1280x800)
+    cols (adjust width?):
+      name, email, additional email, mobile, AIM,
+      home phone, work phone, other phone, misc
+
+userChrome.css additions

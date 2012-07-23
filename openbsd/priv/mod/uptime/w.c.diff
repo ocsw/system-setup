@@ -1,0 +1,14 @@
+185c185
+< 	if ((ut = fopen(_PATH_UTMP, "r")) == NULL)
+---
+> /*	if ((ut = fopen(_PATH_UTMP, "r")) == NULL)
+206a207
+> */
+211c212
+< 		if (ep->tdev == 0) {
+---
+> /*		if (ep->tdev == 0) {
+224a226
+> */
+225a228
+> 	nusers = 0;

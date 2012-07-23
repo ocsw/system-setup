@@ -1,0 +1,261 @@
+install:
+  note ql toolbar icon (default)
+  use  existing profile:
+    %appdata%\Mozilla\Firefox\profiles.ini (change as nec.; close ff first):
+      [General]
+      StartWithLastProfile=1
+           
+      [Profile0]
+      Name=main
+      IsRelative=0
+      Path=D:\firefox\main
+      Default=1
+    delete created default profile
+    in existing profile, check refs to profile path (most should be fixed automatically on open):
+      compreg.dat
+      extensions.cache
+      extensions.ini
+      extensions.rdf
+      febeUserDefinedBuData.json
+      pluginreg.dat
+      prefs.js
+      XPC.mfl
+      xpti.dat
+      XUL.mfl
+    also desktop path, docs, etc. in prefs.js
+  updates (ff, add-ons)
+  Flash & Shockwave
+  Facebook Photo Uploader
+
+UI:
+  toolbars:
+    menu, nav, bookmarks, add-on
+    tabs not on top
+  customize:
+    menu (rt align): counter, activity
+    nav: b/f, up, reload, stop, dlh, session mgr, addr, search,
+         abp, gm
+    add-on: remove (search), abp
+
+settings:
+  General:
+    show from last time
+    do load tabs
+    home page
+    ask where to save
+  Content:
+    js -> adv: none
+    (font?)
+  Privacy:
+    (no tracking?)
+    custom history:
+      no search/form
+  Security:
+    no passwords
+  Advanced:
+    General:
+      use autoscrolling?
+      check default
+      (submit crash reports, perf data?)
+    Update:
+      (ff: check only)
+
+about:config settings (don't show warning):
+  no text zoom with wheel (only on laptop?):
+    mousewheel.withcontrolkey.action;0
+    mousewheel.withcontrolkey.sysnumlines;true
+  no history movement with wheel:
+    mousewheel.withshiftkey.action;0
+    mousewheel.withshiftkey.sysnumlines;true
+    mousewheel.horizscroll.withaltkey.action;0
+    mousewheel.horizscroll.withaltkey.numlines;1
+    mousewheel.horizscroll.withaltkey.sysnumlines;true
+  browser.tabs.selectOwnerOnClose;true ?
+  ---
+  browser.display.background_color (#C0C0C0???)
+  browser.anchorcolor (#0000FF???)
+  browser.visited_color (#800080???)
+  browser.tabs.insertRelatedAfterCurrent;false ???
+  browser.tabs.loadFolderAndReplace;false ???
+
+add-on settings:
+  addons manager hilite:
+    don't always restore
+    show list
+  bookmark favicon changer:
+    compact menu
+  browse images:
+    main:
+      auto back
+      next, prev: not
+    advanced:
+      no custom bg
+    browse menu:
+      below open all in current, add:
+      open all in new tab
+      open every in separate
+      save images
+  copy urls expert:
+    (formats)
+  downloadhelper:
+    general:
+      appearance:
+        no animation
+        no context menu
+      behavior:
+        disable cookie
+    capture:
+      network:
+        (force above 1024K?)
+      galleries:
+        enable?
+    services:
+      download:
+        dl mode: normal?
+        storage directory
+  download statusbar:
+    general:
+      size so far
+      no history
+      auto continue
+      clear on close
+      auto clear * / 0 ?
+    appearance:
+      (custom style?  incl. notif size 7, height 31, speed colors)
+      buttons: only mini/full
+  downthemall:
+    general:
+      close when complete
+    interface:
+      context: no oneclick
+      tools: dta, dta manager
+    privacy:
+      remove canceled
+    advanced:
+      adv dl:
+        don't set file time
+  extension list dumper:
+    add ID, total, date
+  fast video download:
+    download folder
+    disable searchmenu
+  febe:
+    what:
+      no themes?
+      add prefs
+      (add userchrome?)
+    where:
+      directory
+    how:
+      no sounds
+      don't save results page
+  find all:
+    show highlight all button
+  image toolbar:
+    customise:
+      no text labels
+      use small icons
+  image zoom:
+    general:
+      toggle fit/reset
+  imtranslator:
+    translator:
+      autodetect
+      russian translit
+    settings:
+      no toolbar button
+  it's all text:
+    editor
+  keyconfig:
+    Alt-G / Home / BrowserHome();
+    Alt-Z / Undo Close Tab / undoCloseTab();
+    Ctrl-` / New Home / BrowserOpenTab(); BrowserHome();
+    disable Ctrl-Q (quit)
+  long url please:
+    leave href
+  menu editor:
+    File:
+      move 'save frame in archive as' above 'save tabs in archive as'
+    Tools:
+      turn on 'customize menus'
+      move 'extension options' below 'add-ons'
+      move 'options' above add-ons (windows)
+      (move 'preferences' to tools menu, above add-ons (linux)?)
+  (menumanipulator)
+  mozilla archive format:
+    main:
+      use browser's naming strategy?
+    interface:
+      add page context
+  no color:
+    show in view menu
+  optimize google:
+    all:
+      show links to other sites
+    web:
+      don't remove ads
+      position counter
+      waybackmachine
+      bookmark/save links
+  save file to:
+    main:
+      clear recent on close
+    page/link/image/file: directories
+  session manager:
+    general:
+      startup and shutdown:
+        show from last time
+      saving and restoring:
+        (don't replace existing windows?)
+      display:
+        newest to oldest
+  shorten url:
+    bit.ly
+    no separate for mp3s
+  siphon:
+    (installer)
+    settings:
+      account
+      no recommendations
+  (stumbleupon)
+  tab counter:
+    (font color)
+  tab mix plus:
+    links:
+      js/pop: all in tabs
+    events:
+      new tabs:
+        blank page
+        new next to current
+        other next to current
+        not only if related
+      tab opening:
+        open tabs for groups of bookmarks
+      tab closing:
+        (do not close window?)
+      tab features:
+        (disable animation?)
+    display:
+      tab bar:
+        (close tab button?)
+      tab:
+        no highlight unread
+        no highlight unloaded
+        no progress meter
+    mouse:
+      mouse clicking:
+        ctrl/shift on tab: does nothing
+        alt on tab: selects for merging
+    menu:
+      tab context:
+        no close other
+        (etc.?)
+      (main context?)
+      tools:
+        no tmp options, no session
+  url shrink easy:
+    providers: default bit.ly
+  zotero:
+    general:
+      z icon
+    (etc.)

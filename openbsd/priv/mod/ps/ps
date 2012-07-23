@@ -1,0 +1,10 @@
+#!/bin/sh
+
+PATH="/bin"
+export PATH
+
+if [ -x /bin/ps.orig ]; then
+  exec ps.orig ${1+"$@"}
+else
+  exec ps.priv ${1+"$@"}
+fi

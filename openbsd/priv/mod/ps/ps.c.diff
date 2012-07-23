@@ -1,0 +1,48 @@
+138c138
+< 			all = 1;
+---
+>                         /* ignored for privacy */
+191,192c191
+< 			pid = atol(optarg);
+< 			xflg = 1;
+---
+>                         /* ignored for privacy */
+201,219c200
+< 			if ((optarg = ttyname(STDIN_FILENO)) == NULL)
+< 				errx(1, "stdin: not a terminal");
+< 			/* FALLTHROUGH */
+< 		case 't': {
+< 			struct stat sb;
+< 			char *ttypath, pathbuf[MAXPATHLEN];
+< 
+< 			if (strcmp(optarg, "co") == 0)
+< 				ttypath = _PATH_CONSOLE;
+< 			else if (*optarg != '/')
+< 				(void)snprintf(ttypath = pathbuf,
+< 				    sizeof(pathbuf), "%s%s", _PATH_TTY, optarg);
+< 			else
+< 				ttypath = optarg;
+< 			if (stat(ttypath, &sb) == -1)
+< 				err(1, "%s", ttypath);
+< 			if (!S_ISCHR(sb.st_mode))
+< 				errx(1, "%s: not a terminal", ttypath);
+< 			ttydev = sb.st_rdev;
+---
+> 			/* ignored for privacy */
+221c202,204
+< 		}
+---
+> 		case 't':
+> 			/* ignored for privacy */
+> 			break;
+223,228c206
+< 			pwd = getpwnam(optarg);
+< 			if (pwd == NULL)
+< 				errx(1, "%s: no such user", optarg);
+< 			uid = pwd->pw_uid;
+< 			endpwent();
+< 			Uflag = xflg = 1;
+---
+> 			/* ignored for privacy */
+489a468
+> 	(void)fprintf(stderr, "       *** (a, p, T, t, and U options ignored for privacy) ***\n");

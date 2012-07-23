@@ -1,0 +1,5 @@
+in ports, remove -n from configure args, and say yes to HASSECURITY (leave 
+rest alone)
+
+chgrp kmem /usr/local/sbin/lsof
+chmod g+s /usr/local/sbin/lsof
