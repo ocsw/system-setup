@@ -1,0 +1,190 @@
+#!/bin/sh
+
+# to use, create a wrapper (/etc/init.d/virtualbox-[SHORTNAME])
+# which sets DESC, NAME, SCRIPTNAME, VM_OWNER, and VM_NAME,
+# defines start_vm(), then sources this script
+
+# original author: Brendan Kidwell <brendan@glump.net>
+# original source:
+# https://forums.virtualbox.org/viewtopic.php?f=7&t=34790#p193078
+# http://www.glump.net/howto/virtualbox_as_a_service
+# Based on /etc/init.d/skeleton from Ubuntu 8.04. Updated for Ubuntu 9.10.
+
+# rewritten by Daniel Malament <daniel.j.malament@gmail.com>
+
+# Do NOT "set -e"
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"
+
+MANAGE_CMD="VBoxManage"
+HEADLESS_CMD="VBoxHeadless"
+
+GOOD_RV="0"
+WARN_RV="255"  # some systems have a separate "[warning]" message
+FAIL_RV="1"
+
+# Read configuration variable file if it is present
+[ -r "/etc/default/$NAME" ] && . "/etc/default/$NAME"
+
+# Load the VERBOSE setting and other rcS variables
+#[ -f /etc/default/rcS ] && . /etc/default/rcS
+
+# Define LSB log_* functions.
+# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
+. /lib/lsb/init-functions
+
+#
+# start/restore the VM
+#
+# $1 = current status of the VM
+#
+do_start() {
+  case "$2" in
+    "saving")
+      log_failure_msg "VM \"$VM_NAME\" is in the process of being suspended"
+      log_end_msg "$FAIL_RV"
+      return "$FAIL_RV"
+      ;;
+    "restoring")
+      log_warning_msg "VM \"$VM_NAME\" is already being restored"
+      log_end_msg "$WARN_RV"
+      return "$WARN_RV"
+      ;;
+    "running")
+      log_warning_msg "VM \"$VM_NAME\" is already running"
+      log_end_msg "$WARN_RV"
+      return "$WARN_RV"
+      ;;
+    "saved")
+      action="restore"
+      act_past="restored"
+      ;;
+    *)
+      action="start"
+      act_past="started"
+      ;;
+  esac
+
+  start_vm || {
+    log_failure_msg "Failed to $action VM \"$VM_NAME\""
+    log_end_msg "$FAIL_RV"
+    return "$FAIL_RV"
+  }
+
+  log_success_msg "VM \"$VM_NAME\" $act_past"
+  log_end_msg "$GOOD_RV"
+  return "$GOOD_RV"
+}
+
+#
+# suspend the VM to disk
+#
+do_stop() {
+  case "$(get_status)" in
+    "restoring")
+      log_failure_msg "VM \"$VM_NAME\" is in the process of being restored"
+      log_end_msg "$FAIL_RV"
+      return "$FAIL_RV"
+      ;;
+    "saving")
+      log_warning_msg "VM \"$VM_NAME\" is already being suspended"
+      log_end_msg "$WARN_RV"
+      return "$WARN_RV"
+      ;;
+    "saved")
+      log_warning_msg "VM \"$VM_NAME\" is already suspended"
+      log_end_msg "$WARN_RV"
+      return "$WARN_RV"
+      ;;
+    "powered off")
+      log_warning_msg "VM \"$VM_NAME\" is already stopped"
+      log_end_msg "$WARN_RV"
+      return "$WARN_RV"
+      ;;
+  esac
+
+  sudo -H -u "$VM_OWNER" "$MANAGE_CMD" controlvm "$VM_NAME" savestate || {
+    log_failure_msg "Failed to suspend VM \"$VM_NAME\""
+    log_end_msg "$FAIL_RV"
+    return "$FAIL_RV"
+  }
+
+  log_success_msg "VM \"$VM_NAME\" suspended"
+  log_end_msg "$GOOD_RV"
+  return "$GOOD_RV"
+}
+
+#
+# display "State" field from showvminfo
+#
+do_status()
+{
+    sudo -H -u "$VM_OWNER" "$MANAGE_CMD" showvminfo "$VM_NAME" | \
+         grep "^State:\s*.*$"
+}
+
+#
+# get just the actual state from showvminfo
+#
+get_status()
+{
+    sudo -H -u "$VM_OWNER" "$MANAGE_CMD" showvminfo "$VM_NAME" | \
+         sed -n '/^State:/ {
+                   s/^State: *\([^(]*\).*$/\1/
+                   s/ $//
+                   p
+                 }'
+}
+
+#
+# do something
+#
+case "$1" in
+  start)
+    # message here so it isn't printed for reload
+    curr_status=$(get_status)
+    case "$curr_status" in
+      saved)
+        log_daemon_msg "Restoring $DESC"
+        do_start "$curr_status"
+        ;;
+      *)
+        log_daemon_msg "Starting $DESC"
+        do_start "$curr_status"
+        ;;
+    esac
+    ;;
+  stop)
+    # message here so it isn't printed for reload
+    log_daemon_msg "Suspending $DESC to disk"
+    do_stop
+    ;;
+  restart|force-reload)
+    #
+    # If the 'reload' option is implemented then remove the
+    # 'force-reload' alias
+    #
+    log_daemon_msg "Suspending and restoring $DESC"
+    do_stop
+    case "$?" in
+      "$GOOD_RV"|"$WARN_RV")
+        do_start
+        ;;
+      *)
+        # Failed to stop
+	RV="$?"  # save for script exit
+        log_end_msg "$FAIL_RV"
+	exit "$RV"
+        ;;
+    esac
+    ;;
+  status)
+    get_status
+    ;;
+  *)
+    #echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
+    echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload|status}" >&2
+    exit 3
+    ;;
+esac
