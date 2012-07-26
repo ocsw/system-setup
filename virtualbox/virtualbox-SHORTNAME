@@ -37,7 +37,7 @@ VM_OWNER="USERNAME"
 VM_NAME="LONGNAME"  # must match registered name in VirtualBox
 
 GOOD_RV="0"
-WARN_RV="255"
+WARN_RV="255"  # some systems have a separate "[warning]" message
 FAIL_RV="1"
 
 # Read configuration variable file if it is present
@@ -51,24 +51,40 @@ FAIL_RV="1"
 . /lib/lsb/init-functions
 
 #
-# Function that starts the daemon/service
+# start/restore the VM
 #
-# Returns:
-#   GOOD_RV if daemon has been started
-#   WARN_RV if daemon was already running
-#   FAIL_RV if daemon could not be started
+# $1 = current status of the VM
 #
 do_start() {
-  sudo -H -u "$VM_OWNER" "$MANAGE_CMD" showvminfo "$VM_NAME" | \
-       grep "^State:\s*running" > /dev/null && {
-    log_warning_msg "VM \"$VM_NAME\" is already running"
-    log_end_msg "$WARN_RV"
-    return "$WARN_RV"
-  }
+  case "$2" in
+    "saving")
+      log_failure_msg "VM \"$VM_NAME\" is in the process of being suspended"
+      log_end_msg "$FAIL_RV"
+      return "$FAIL_RV"
+      ;;
+    "restoring")
+      log_warning_msg "VM \"$VM_NAME\" is already being restored"
+      log_end_msg "$WARN_RV"
+      return "$WARN_RV"
+      ;;
+    "running")
+      log_warning_msg "VM \"$VM_NAME\" is already running"
+      log_end_msg "$WARN_RV"
+      return "$WARN_RV"
+      ;;
+    "saved")
+      action="restore"
+      act_past="restored"
+      ;;
+    *)
+      action="start"
+      act_past="started"
+      ;;
+  esac
 
   #sudo -H -u "$VM_OWNER" "$MANAGE_CMD" startvm "$VM_NAME" -type vrdp \
   #     >/dev/null || {
-  #  log_failure_msg "Failed to start VM \"$VM_NAME\""
+  #  log_failure_msg "Failed to $action VM \"$VM_NAME\""
   #  log_end_msg "$FAIL_RV"
   #  return "$FAIL_RV"
   #}
@@ -78,27 +94,37 @@ do_start() {
        "$HEADLESS_CMD" --startvm "$VM_NAME" --vrde=off -n
        # -m PORT -o 'PASSWORD'
 
-  log_success_msg "VM \"$VM_NAME\" started or resumed"
+  log_success_msg "VM \"$VM_NAME\" $act_past"
   log_end_msg "$GOOD_RV"
   return "$GOOD_RV"
 }
 
 #
-# Function that stops the daemon/service
-#
-# Returns:
-#   GOOD_RV if daemon has been stopped
-#   WARN_RV if daemon was already stopped
-#   FAIL_RV if daemon could not be stopped
-#   other if a failure occurred
+# suspend the VM to disk
 #
 do_stop() {
-  sudo -H -u "$VM_OWNER" "$MANAGE_CMD" showvminfo "$VM_NAME" | \
-       grep "^State:\s*running" > /dev/null || {
-    log_warning_msg "VM \"$VM_NAME\" is already stopped/suspended"
-    log_end_msg "$WARN_RV"
-    return "$WARN_RV"
-  }
+  case "$(get_status)" in
+    "restoring")
+      log_failure_msg "VM \"$VM_NAME\" is in the process of being restored"
+      log_end_msg "$FAIL_RV"
+      return "$FAIL_RV"
+      ;;
+    "saving")
+      log_warning_msg "VM \"$VM_NAME\" is already being suspended"
+      log_end_msg "$WARN_RV"
+      return "$WARN_RV"
+      ;;
+    "saved")
+      log_warning_msg "VM \"$VM_NAME\" is already suspended"
+      log_end_msg "$WARN_RV"
+      return "$WARN_RV"
+      ;;
+    "powered off")
+      log_warning_msg "VM \"$VM_NAME\" is already stopped"
+      log_end_msg "$WARN_RV"
+      return "$WARN_RV"
+      ;;
+  esac
 
   sudo -H -u "$VM_OWNER" "$MANAGE_CMD" controlvm "$VM_NAME" savestate || {
     log_failure_msg "Failed to suspend VM \"$VM_NAME\""
@@ -112,7 +138,7 @@ do_stop() {
 }
 
 #
-# Display "State" field from showinfo action
+# display "State" field from showvminfo
 #
 do_status()
 {
@@ -120,15 +146,40 @@ do_status()
          grep "^State:\s*.*$"
 }
 
+#
+# get just the actual state from showvminfo
+#
+get_status()
+{
+    sudo -H -u "$VM_OWNER" "$MANAGE_CMD" showvminfo "$VM_NAME" | \
+         sed -n '/^State:/ {
+                   s/^State: *\([^(]*\).*$/\1/
+                   s/ $//
+                   p
+                 }'
+}
+
+#
+# do something
+#
 case "$1" in
   start)
     # message here so it isn't printed for reload
-    log_daemon_msg "Starting $DESC"
-    do_start
+    curr_status=$(get_status)
+    case "$curr_status" in
+      saved)
+        log_daemon_msg "Restoring $DESC"
+        do_start "$curr_status"
+        ;;
+      *)
+        log_daemon_msg "Starting $DESC"
+        do_start "$curr_status"
+        ;;
+    esac
     ;;
   stop)
     # message here so it isn't printed for reload
-    log_daemon_msg "Stopping $DESC"
+    log_daemon_msg "Suspending $DESC to disk"
     do_stop
     ;;
   restart|force-reload)
@@ -136,7 +187,7 @@ case "$1" in
     # If the 'reload' option is implemented then remove the
     # 'force-reload' alias
     #
-    log_daemon_msg "Restarting $DESC"
+    log_daemon_msg "Suspending and restoring $DESC"
     do_stop
     case "$?" in
       "$GOOD_RV"|"$WARN_RV")
@@ -144,12 +195,14 @@ case "$1" in
         ;;
       *)
         # Failed to stop
+	RV="$?"  # save for script exit
         log_end_msg "$FAIL_RV"
+	exit "$RV"
         ;;
     esac
     ;;
   status)
-    do_status
+    get_status
     ;;
   *)
     #echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
