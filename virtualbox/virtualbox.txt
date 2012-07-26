@@ -16,7 +16,12 @@ as root:
   pico /etc/group  # add to vboxusers
 
   mkdir -p /data/vm/images
+  chown root:root /data/vm/images
   chmod 1777 /data/vm /data/vm/images
+
+  cp virtualbox-vm /etc/init.d
+  chown root:root /etc/init.d/virtualbox-vm
+  chmod 755 /etc/init.d/virtualbox-vm
 
 VBoxManage setproperty machinefolder ~/.VirtualBox/vm
 
@@ -89,11 +94,12 @@ VBoxManage storageattach blue --storagectl satactl \
   --port 1 --device 0 --type dvddrive --medium none
 
 as root:
-  # SHORTNAME: no spaces
+  # SHORTNAME: abbreviation, spaces might cause problems (can use hostname)
   # LONGNAME: actual vbox name
   sed -e 's/SHORTNAME/blue/' -e 's/LONGNAME/blue/' -e 's/USERNAME/zephyr/' \
     < virtualbox-SHORTNAME > /etc/init.d/virtualbox-blue
-  chmod 700 /etc/init.d/virtualbox-blue
+  chown root:root /etc/init.d/virtualbox-blue
+  chmod 700 /etc/init.d/virtualbox-blue  # could contain password
   update-rc.d virtualbox-blue defaults 21 19  # virtualbox is 20
 
 ---
