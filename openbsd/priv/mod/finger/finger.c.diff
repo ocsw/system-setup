@@ -1,0 +1,10 @@
+125c125,127
+< 			    "usage: %s [-hlMmops] [login ...]\n", __progname);
+---
+> 			    "usage: %s [-hlMmops] [login ...]\n"
+> 			    "       *** (local usernames ignored for privacy) ***\n",
+> 			     __progname);
+214c216
+< 			dolocal = 1;
+---
+> /*			dolocal = 1;*/

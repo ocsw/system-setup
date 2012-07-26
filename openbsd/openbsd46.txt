@@ -1,0 +1,200 @@
+Basic Installation:
+  terminal
+  keyboard layout
+  network (myname, hostname.if, hosts, mygate, resolv.conf, 
+           (dhclient.conf, dhclient.leases, resolv.conf.tail))
+  manual network
+  passwd
+  sshd
+  ntpd
+  X win sysctl
+  serial console
+  user, ssh to root
+  TZ
+  fdisk
+  disklabel
+  newfs
+  mount
+  install files
+  generate initial host.random
+  copy in network files, fstab, host.random, etc.
+  dev
+  installboot
+  populate /usr/local/
+  reboot
+
+Packages/Ports (but check for updates! - and note no_x11s; also umask):
+  bash, tcsh, (zsh)
+  bzip2, (rpm), unzip, zip
+  mmv, tree (patch & build from ports if nec.), rsync, (unison)
+  emacs (note +t perms), jed, joe, most, nano, pico, vim
+  (elm), mutt (not devel, not comp (?)), (alpine (+ conf, esp. w/qmail)), 
+    procmail
+  autoconf, automake, bison, gmake, libtool, m4, metaauto (+ autoscan, 
+    ifnames?), [pkgconfig] [NOTE: check vars in /etc shell dots]
+  curl, wget (+ poss. config and/or user .wgetrc)
+  (aide), gnupg [(+ page locking?)], lsof, stunnel (+ cert., + alias, 
+    ftpusers, reorg. pw/grp), (swatch), (nmap), tcpshow, ntop, (arping, 
+    arpwatch, courtney, dsniff, [ethereal], fping, nessus, queso, smbsniff, 
+    [sniffit], snort, ssldump, sslsniffer)
+  (pfstat{,d}, pftop)
+  (ddclient)
+  pstree
+  gettext, libiconv, recode
+  freetype and docs, t1lib
+  gd (req. xbase), jpeg, libungif, netpbm, png (+ /u/l/include links?), tiff
+  libmcrypt, mcrypt, mhash
+  db4, gdbm
+  libxml, libxslt, sablotron
+  c-client, gmp, libslang, mm, pdflib, popt
+  openldap-client/server
+  cyrus-sasl
+  (cdrtools)
+  (ipcalc)
+  (hexcurse)
+  (mrtg (+ alias, ftpusers, reorg pw/group))
+  (expect (req. tcl [+ man.conf]))
+  (samba)
+  (mtools)
+  (analog)
+  (aspell, ispell (+ select dict))
+  (redhat, freebsd libs (+ sysctls))
+  (grepmail)
+  (fetchmail, popclient)
+  (pidgin)
+  (ircii, epic4, bitchx)
+  (slrn, tin)
+  (wm, esp. afterstep)
+  (firefox, galeon, flash, opera, realplayer)
+  (xv, xanim, xloadimage)
+  (xpdf, gv)
+  ([xtattr], xwit)
+  (x2x, x2vnc, tightvnc)
+
+Network:
+  verify myname (FQDN (?)), mygate, hostname.if
+  resolv.conf (incl. lookup, (search), nameservers) (& .tail)
+  (dhclient.conf)
+  hosts [incl. ::1 after 127, FQDNs first]
+  inetd.conf (down to (ftp)/(telnet)/(rpc.statd)/(identd (-elvoh))), and 
+    kill -HUP (also perms?) (if nothing left, disable in rc.conf.local)
+
+Filesystems:
+  fstab (incl. cdrom)
+  (additional filesystems - dirs, NFS mounts in fstab, exports in exports)
+  (NFS: exports; rc.conf.local: nfsd yes, lockd yes, (-tun8); (inetd.conf: 
+    rpc.statd))
+  (make /cdrom)
+  make /data
+  move/link /home, /var/mail, /var/www
+  perms for above
+
+Files:
+  copy/unpack source archives
+  copy/unpack packages and ports (+ poss. delete unneeded packages for space)
+    (+ fix pkg db ownership)
+  patched packages
+
+Misc. Config (/etc):
+  rc.conf.local - general, (perms?)
+  ttys - (C5 off), (secure settings)
+  wsconsctl.conf - bell, (screen_off/vblank/kbdact/msact/outact)
+  motd - incl. perms, second and last lines blank, warning
+  check /etc/shells
+  passwd - root and daemon gecos (to &), root shell, order
+  group - order
+  mail aliases - all dummy accounts, incl. _stunnel, _mrtg, _openldap,
+    (s|/dev/null|mailsink|, mailsink)<-mostly for qmail, uncomment RFC 
+    names, set manager/dumper to root, root and webmaster (also in 
+    commented groups), (dns), anonymous(<-mostly for php) - and run 
+    newaliases
+    {can check for dummy accounts with:
+       for i in `awk -F ':' '{print $1}' /etc/passwd`; do
+         if ! grep "^$i" /etc/mail/aliases >/dev/null; then echo $i; fi
+       done
+    }
+  skel - lower perms on files and dir, remove umask, PATHs, and mail
+  csh.login, profile, zprofile - umask, path/PATH, BLOCKSIZE, PAGER, 
+    pico/nano, EDITOR, VISUAL, AUTOCONF/MAKE_VERSION, (NNTPSERVER), 
+    mail/MAIL, mesg, (etc.) (and perms) (see files)
+  (sysctls - incl. forwarding, (kbdreset, apmwarn/halt, ddb.panic, led, 
+    vsync, allowaperture, swapencrypt, nfs.iothreads, emul) - and perms)
+  (quotas - incl. fstab, edquota, quotaon, rc.conf.local (, reboot))
+  (locate.rc)
+
+Misc. Services / Daemons:
+  ssh/sshd conf, incl. perms
+  (ddclient, incl. conf, rc.local, cron, perms, ch/mtree)
+  (ntp conf, incl. perms)
+  (sendmail - relay {see src/sendmail} (incl. auth perms, ch/mtree), 
+    /etc/mail/service.switch ["hosts files dns"], cf, cron)
+  (cron tabs - incl. d/w/m days/timings if nec., (sendmail))
+  (stunnel conf)
+  (syslog.conf)
+  (printcap - port, banner, filter; rc.conf.local - lpd)
+  (ppp conf)
+  (Sparc netboot: ethers, hosts, rarpd, bootparams, bootparamd, /tftpboot, 
+    tftpd, NFS)
+
+Major Servers/SW:
+  BIND
+  sendmail (& see above) / postfix / qmail
+  popd
+  spam filters
+  apache, mod_ssl, php
+  mysql/pgsql/pma/ppa
+  stunnels
+  (samba)
+  perl modules
+  perms on server config, data, log files
+  rotation of server log files
+
+Security:
+  log perms, incl. in newsyslog, and incl. [d/w/m.out], adduser
+  kernel and boot perms (and flags?)
+  / dot perms
+  (pf.conf, incl. perms)
+  (sudoers, incl. perms)
+  (securelevel)
+  (ftpchroot, ftpusers (incl. _stunnel, _mrtg, _openldap))
+  (fbtab)
+  changelist - incl. add root shell dots, (pwd.db/spwd.db MD5s (+)?), 
+    ddclient (+), sendmail auth (+), rndc.conf (see list) - and perms
+    {note: incl. files even if not installed (yet)}
+  mtree - incl. data, /var/mail, /etc/{z}profile, root dots, changelist, 
+    ddclient, sendmail localhost/auth, (pwd.db?), rndc/named stuff (see 
+    diff) - [and perms]
+  (systrace)
+  (privacy mods, incl. lsof, utmp/wtmp perms/ownership)
+  (if not using, disable:
+    printing - lpr, rc.conf.local: lpd
+    ppp - (ppp), pppctl, (pppd), pppoe, pppstats, (spppcontrol)
+    slip - (sliplogin), slstats
+    uucp - rmail, [uucp, uustat, uux, uulog, uuname, uupick, uusched, 
+      uuto,] uucpd, [uuchk, uucico, uuconv, uuxqt]
+    serial - tip, cu)
+  (other util, config perms - see modperms)
+
+Users (incl. root):
+  add admin/non-root user(s), add (1/more) to wheel group - and create 
+    mail spools (and .qmail files)
+  shell dots - incl. bash/tcsh files (7 total) (note root hard links to /),
+    [user .login (savehist, ignoreeof)]
+  muttrc (incl. realname, alternates)
+  (elmrc - copy (must be set IN THE FILE!), fullname, pager, userlevel, 
+    (editor))
+  lynxrc - (bookmark file), (email), user mode, cookies, (verbose images),
+    ((start url))  {or set cookies in /etc/lynx.cfg?}
+  (.*history links)
+  (ssh keys - (root), user - generate and/or authorized)
+  (.xsession (incl. xhost, WM), WM config)
+  (browser, etc. config)
+  homedirs and files - perms/ownership (incl. for files above)
+
+Additional Config:
+  clock
+  patches
+  (kernel config)
+  (preload locate DB (run /etc/weekly from /))
+  (X link, XF86Config, xdm in rc.conf.local/ttys, allowaperture)
+  (scripts)

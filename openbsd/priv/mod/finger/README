@@ -1,0 +1,5 @@
+chmod o-rwx /var/run/utmp
+
+change the perms for utmp creation in /etc/rc
+
+finger.priv must be *** NOT *** be setgid utmp

@@ -1,0 +1,22 @@
+--- finger.c.orig	Mon Mar 15 18:36:37 2004
++++ finger.c	Fri Jun 18 12:05:02 2004
+@@ -122,7 +122,9 @@
+ 		case '?':
+ 		default:
+ 			(void)fprintf(stderr,
+-			    "usage: %s [-hlMmops] [login ...]\n", __progname);
++			    "usage: %s [-hlMmops] [login ...]\n"
++			    "       *** (local usernames ignored for privacy) ***\n",
++			     __progname);
+ 			exit(1);
+ 		}
+ 	argc -= optind;
+@@ -211,7 +213,7 @@
+ 	/* pull out all network requests */
+ 	for (i = 0, dolocal = 0, nettail = &nethead; i < argc; i++) {
+ 		if (!strchr(argv[i], '@')) {
+-			dolocal = 1;
++/*			dolocal = 1;*/
+ 			continue;
+ 		}
+ 		pn = palloc();

@@ -1,0 +1,98 @@
+--------
+install:
+--------
+
+/etc/apt/sources.list:
+  see ubuntu-sources.list; replace RELEASE with precise, quantal, etc.
+
+apt-get update
+apt-get install `cat ubuntu-pkg-common`
+apt-get install `cat ubuntu-pkg-desktop`  # if relevant
+apt-get install `cat ubuntu-pkg-server`  # if relevant
+
+see also ubuntu-opt-*, ubuntu-pkg-q
+
+some of the above will prompt for settings/questions:
+  postfix (config; see below)
+  ntop (password)
+  acroread (make default)
+  hddtemp
+
+for desktop:
+  keepnote:
+    d/l .deb
+    apt-get install python python-gtk2 python-glade2 libgtk2.0-dev \
+      libsqlite3-0 python-gtkspell python-gksu2 python-eggtrayicon \
+      aspell aspell-en
+    dpkg -i keepnote*.deb
+    apt-get -f install
+    (rm keepnote*.deb)
+
+  google earth:
+    as non-root user:
+      make-googleearth-package --download --cleanup
+    dpkg -i googleearth*.deb
+    apt-get -f install
+    (rm googleearth*.deb)
+
+apt-get upgrade
+apt-get autoremove
+
+
+-------
+common:
+-------
+
+check clock
+accounts
+network (fqdn, ip/nm/gw*, dns*, /etc/hosts, dhcp)
+  * for desktop, use NetworkManager; for server, /etc/network/interfaces:
+	auto eth0
+	iface eth0 inet static
+		address 192.168.1.5
+		netmask 255.255.255.0
+		network 192.168.1.0
+		broadcast 192.168.1.255
+		gateway 192.168.1.1
+		# dns-* options are implemented by the resolvconf package, if installed
+		dns-nameservers 192.168.1.1 71.250.0.12 71.242.0.12
+		dns-search lan
+firewall
+vpn
+automatic updates
+filesystems
+move/symlink /data/{home,mail,mysql,www}
+(reorder /etc/password, shadow, group?)
+postfix config
+git config --global user.name foo
+git config --global user.email bar
+
+-------
+server:
+-------
+
+configure apache, mysql, php
+update apparmor for moved services
+(startup)
+
+
+--------
+desktop:
+--------
+
+xfce: see xfce.txt
+monitors
+printing
+ff, tb
+pidgin, spark, skype
+vnc/x11vnc
+keepnote:
+  no spell check (* doesn't stay set?)
+  d/t same month - add month name (?)
+  editor insert date - %m/%d/%Y (?)
+  * problem with autosave?
+
+Terminal: Monospace 10
+gconftool-2 -s /apps/gnome-terminal/profiles/Default/cursor_blink_mode \
+      -t string off   (?)
+

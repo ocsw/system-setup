@@ -1,0 +1,10 @@
+#!/bin/sh
+
+PATH="/bin:/usr/bin"
+export PATH
+
+if [ -x /usr/bin/last.orig ]; then
+  exec last.orig ${1+"$@"}
+else
+  exec last.priv ${1+"$@"}
+fi

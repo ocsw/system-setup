@@ -1,0 +1,10 @@
+#!/bin/sh
+
+PATH="/bin:/usr/bin"
+export PATH
+
+if [ -x /usr/bin/who.orig ]; then
+  exec who.orig ${1+"$@"}
+else
+  exec who.priv ${1+"$@"}
+fi

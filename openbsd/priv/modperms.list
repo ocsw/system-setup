@@ -1,0 +1,194 @@
+# hack and recompile these (see mods):
+# /bin/ps
+# /usr/bin/finger
+# /usr/bin/who
+# /usr/bin/last
+# /usr/bin/top
+# /usr/bin/uptime
+# /usr/local/sbin/lsof
+
+# it would be nice to hack and recompile this one:
+# /usr/bin/ipcs
+
+# these are utilities some people might [semi-]legitimately want:
+# (from below; see also the hacked ones, above)
+# /sbin/ldconfig
+# /sbin/rtquery
+# /usr/bin/fstat
+# /usr/bin/netstat
+# /usr/bin/rpcinfo
+# /usr/bin/rup
+# /usr/bin/rusers
+# /usr/bin/rwall
+# /usr/bin/ssh-keyscan
+# /usr/bin/users
+# /usr/bin/w
+# #/usr/sbin/ab
+# /usr/sbin/extattrctl
+# /usr/sbin/getextattr
+# /usr/sbin/pstat
+# /usr/sbin/setextattr
+# /usr/sbin/spray
+# /usr/sbin/tcpdump
+# /usr/sbin/trpt
+# #/usr/sbin/trsp
+# /usr/local/bin/nmap
+
+# dev entries are all 644 or 666 originally
+/dev/apm
+/dev/apmctl
+/dev/audio*
+/dev/audioctl*
+/dev/bktr*
+/dev/joy*
+/dev/mixer*
+/dev/music*
+/dev/pctr
+/dev/radio*
+/dev/rmidi*
+/dev/sequencer*
+/dev/sound*
+/dev/tuner*
+
+# everything else originally had 5 other-perms except where noted
+
+/bin/df
+/bin/rmail
+
+/sbin/ancontrol
+/sbin/atactl
+/sbin/badsect
+/sbin/brconfig
+/sbin/ccdconfig
+/sbin/dmesg
+/sbin/ifconfig
+/sbin/iopctl
+/sbin/ipsecadm
+/sbin/ldconfig
+/sbin/lmccontrol
+/sbin/modload
+/sbin/modunload
+/sbin/mount
+/sbin/pfctl
+/sbin/pflogd
+/sbin/raidctl
+/sbin/route
+/sbin/rtquery
+/sbin/swapctl
+/sbin/sysctl
+#/sbin/tbrconfig
+/sbin/wicontrol
+/sbin/wsconsctl
+
+#/usr/bin/altqstat
+/usr/bin/audioctl
+/usr/bin/cdio
+/usr/bin/cu
+/usr/bin/fstat
+/usr/bin/lastcomm
+/usr/bin/logger
+/usr/bin/lpq
+/usr/bin/lpr
+/usr/bin/lprm
+/usr/bin/mixerctl
+/usr/bin/modstat
+/usr/bin/netstat
+/usr/bin/nfsstat
+/usr/bin/pctr
+/usr/bin/radioctl
+/usr/bin/rpcinfo
+/usr/bin/rup
+/usr/bin/ruptime
+/usr/bin/rusers
+/usr/bin/rwall
+/usr/bin/rwho
+/usr/bin/showmount
+/usr/bin/ssh-keyscan
+/usr/bin/systat
+/usr/bin/tip
+/usr/bin/usbhidctl
+/usr/bin/users
+/usr/bin/vmstat
+/usr/bin/w
+/usr/bin/wall
+
+#/usr/sbin/ab
+/usr/sbin/ac
+/usr/sbin/accton
+#/usr/sbin/altqd
+/usr/sbin/amd
+/usr/sbin/amq
+/usr/sbin/apachectl
+/usr/sbin/apm
+/usr/sbin/apmd
+/usr/sbin/arp
+/usr/sbin/authpf
+/usr/sbin/bad144
+/usr/sbin/config
+/usr/sbin/edquota
+/usr/sbin/extattrctl
+/usr/sbin/getencstat
+/usr/sbin/getextattr
+#/usr/sbin/ifmcstat
+/usr/sbin/iostat
+/usr/sbin/kgmon
+/usr/sbin/lpc
+/usr/sbin/lpd
+/usr/sbin/mailstats
+/usr/sbin/memconfig
+#/usr/sbin/ndc
+/usr/sbin/ndp
+/usr/sbin/pac
+# ppp originally 4554
+/usr/sbin/ppp
+/usr/sbin/pppctl
+# pppd originally 4550
+/usr/sbin/pppd
+/usr/sbin/pppoe
+/usr/sbin/pppstats
+/usr/sbin/praliases
+/usr/sbin/pstat
+/usr/sbin/quotaoff
+/usr/sbin/rdate
+/usr/sbin/rdconfig
+/usr/sbin/rndc
+/usr/sbin/sa
+/usr/sbin/sesd
+/usr/sbin/setencstat
+/usr/sbin/setextattr
+/usr/sbin/setobjstat
+/usr/sbin/sliplogin
+/usr/sbin/slstats
+/usr/sbin/spppcontrol
+/usr/sbin/spray
+/usr/sbin/tcpdchk
+/usr/sbin/tcpdmatch
+/usr/sbin/tcpdump
+/usr/sbin/timedc
+/usr/sbin/trpt
+#/usr/sbin/trsp
+/usr/sbin/usbdevs
+/usr/sbin/vnconfig
+/usr/sbin/wsconscfg
+/usr/sbin/wsfontload
+
+/usr/libexec/rpc.sprayd
+/usr/libexec/uucpd
+
+/usr/local/bin/nmap
+#/usr/local/bin/nsupdate
+
+#/usr/local/sbin/ab
+#/usr/local/sbin/apachectl
+/usr/local/sbin/ntp-wait
+/usr/local/sbin/ntpd
+/usr/local/sbin/ntpdate
+/usr/local/sbin/ntpdc
+/usr/local/sbin/ntpq
+#/usr/local/sbin/ntptime
+#/usr/local/sbin/ntptimeset
+/usr/local/sbin/ntptrace
+#/usr/local/sbin/rndc
+/usr/local/sbin/tickadj
+
+/usr/local/qmailanalog/bin/*

@@ -1,0 +1,68 @@
+--- ps.c.orig	Wed Feb 25 14:17:25 2004
++++ ps.c	Fri Jun 18 12:33:44 2004
+@@ -135,7 +135,7 @@
+ 	    "acCeghjkLlM:mN:O:o:p:rSTt:U:uvW:wx")) != -1)
+ 		switch((char)ch) {
+ 		case 'a':
+-			all = 1;
++                        /* ignored for privacy */
+ 			break;
+ 		case 'c':
+ 			commandonly = 1;
+@@ -188,8 +188,7 @@
+ 			fmt = 1;
+ 			break;
+ 		case 'p':
+-			pid = atol(optarg);
+-			xflg = 1;
++                        /* ignored for privacy */
+ 			break;
+ 		case 'r':
+ 			sortby = SORTCPU;
+@@ -198,34 +197,13 @@
+ 			sumrusage = 1;
+ 			break;
+ 		case 'T':
+-			if ((optarg = ttyname(STDIN_FILENO)) == NULL)
+-				errx(1, "stdin: not a terminal");
+-			/* FALLTHROUGH */
+-		case 't': {
+-			struct stat sb;
+-			char *ttypath, pathbuf[MAXPATHLEN];
+-
+-			if (strcmp(optarg, "co") == 0)
+-				ttypath = _PATH_CONSOLE;
+-			else if (*optarg != '/')
+-				(void)snprintf(ttypath = pathbuf,
+-				    sizeof(pathbuf), "%s%s", _PATH_TTY, optarg);
+-			else
+-				ttypath = optarg;
+-			if (stat(ttypath, &sb) == -1)
+-				err(1, "%s", ttypath);
+-			if (!S_ISCHR(sb.st_mode))
+-				errx(1, "%s: not a terminal", ttypath);
+-			ttydev = sb.st_rdev;
++			/* ignored for privacy */
+ 			break;
+-		}
++		case 't':
++			/* ignored for privacy */
++			break;
+ 		case 'U':
+-			pwd = getpwnam(optarg);
+-			if (pwd == NULL)
+-				errx(1, "%s: no such user", optarg);
+-			uid = pwd->pw_uid;
+-			endpwent();
+-			Uflag = xflg = 1;
++			/* ignored for privacy */
+ 			break;
+ 		case 'u':
+ 			parsefmt(ufmt);
+@@ -487,5 +465,6 @@
+ 	(void)fprintf(stderr,
+ 	    "%-*s[-t tty] [-U username] [-W swap]\n", strlen(__progname) + 8, "");
+ 	(void)fprintf(stderr, "       %s [-L]\n", __progname);
++	(void)fprintf(stderr, "       *** (a, p, T, t, and U options ignored for privacy) ***\n");
+ 	exit(1);
+ }

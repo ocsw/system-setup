@@ -1,0 +1,123 @@
+Application: Thunderbird 13.0.1 (20120615181619)
+Operating System: Linux (x86_64-gcc3)
+
+July 23, 2012
+
+Total number of items: 39
+
+- Account Colors 6.0
+	accountcolors@DW-dev
+	https://addons.mozilla.org/thunderbird/addon/account-colors/
+- Adblock Plus 2.1.1
+	{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+	http://adblockplus.org/en/
+- Addons Manager Hilite 1.0
+	addonsmgrhilte@cfl
+	https://addons.mozilla.org/en-US/firefox/addon/addons-manager-hilite/?src=api
+- Attachment Sizes 0.0.9 (Disabled, Incompatible)
+	{90ceaf60-169c-40fb-b224-7204488f061d}
+	http://fux.zuhage.de/attachment_sizes/
+- AttachmentExtractor 1.3.5.1
+	{35834d20-efdb-4f78-ab77-9635fb4e56c4}
+	http://www.eviljeff.com/?page=moz-extensions
+- BlunderDelay 0.5.3
+	blunderdelay@bananabread.net
+	http://blunderdelay.mozdev.org/
+- BorderColors 0.6 (Disabled, Incompatible)
+	{CE135039-AEA3-46bb-BCB6-28F720A8612D}
+	http://addresscontext.mozdev.org/bordercolors
+- Calendar Tweaks 3.1
+	calendartweaks@DW-dev
+	https://addons.mozilla.org/thunderbird/addon/calendar-tweaks/
+- Cleanest Addon Manager 2.0
+	cam@sdrocking.com
+	https://addons.mozilla.org/en-US/firefox/addon/cam/
+- CompactHeader 2.0.6
+	{58D4392A-842E-11DE-B51A-C7B855D89593}
+	http://compactheader.mozdev.org/
+- Correct Identity 1.3.5
+	{47ef7cc0-2201-11da-8cd6-0800200c9a66}
+	https://addons.mozilla.org/en-US/thunderbird/addon/correct-identity/?src=api
+- Deselect on Delete 1.0
+	deselectondelete@squib.org
+	https://bitbucket.org/squib/deselect-on-delete/
+- EDS Contact Integration 0.3.9
+	edsintegration@mozilla.com
+- Expression Search 0.3 (Disabled, Incompatible)
+	expressionsearch@mozilla.org
+	https://addons.mozilla.org/en-US/thunderbird/addon/59457
+- Expression Search / Google Mail UI 0.8.3
+	{03EF8A6E-C972-488f-92FA-98ABC2C9F8B9}
+	http://code.google.com/p/expression-search/
+- Extension List Dumper 1.15.2
+	extensionlistdumper@sogame.cat
+	http://www.sogame.cat/
+- Extension Options Menu 2.3
+	{1feca320-6b4d-11df-a08a-0800200c9a66}
+	http://forums.mozillazine.org/viewtopic.php?f=48&t=2141579
+- Find In Numbers 1.8
+	findinnumbers@mozilla.org
+	http://www.ehsanakhgari.org/mozilla/extensions/firefox/find-in-numbers
+- Fit images 1.0
+	fitimages@vano
+	https://addons.mozilla.org/en-US/thunderbird/addon/fit-images/?src=api
+- Folderpane Tools 0.6.1
+	{b243fe83-b8a7-47de-855d-21d865243d5d}
+	http://xsidebar.mozdev.org/modifiedmailnews.html#folderpanetools
+- FoxyTunes 4.3.5.1 (Disabled, Incompatible)
+	{463F6CA5-EE3C-4be1-B7E6-7FEE11953374}
+	http://www.foxytunes.com/
+- Gather the Senders ! 1.2.2
+	gatherauthors@fabien-tools.net
+	http://code.google.com/p/gather-the-sender/
+- Global Menu Bar integration 3.2.3
+	globalmenu@ubuntu.com
+	http://launchpad.net/globalmenu-extension
+- Image Zoom 0.4.6 (Disabled, Incompatible)
+	{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}
+	http://imagezoom.yellowgorilla.net/
+- keyconfig 20110522
+	keyconfig@dorando
+	http://mozilla.dorando.at/
+- Lightning 1.5.2
+	{e2fda1a4-762b-4020-b5ad-a41df1933103}
+	http://www.mozilla.org/projects/calendar/releases/lightning1.5.2.html
+- Mail Tweak 1.0pre10 (Disabled, Incompatible)
+	mail-tweak@rod.whiteley
+	http://journal.mozdev.org/mailtweak.html
+- MenuManipulator 20110327
+	menumanipulator@dorando
+	http://mozilla.dorando.at/
+- Messaging Menu and Unity Launcher integration 0.9.3
+	messagingmenu@mozilla.com
+	http://mozillalabs.com/messaging/messaging-menu/
+- Mnenhy 0.8.5
+	{bf591015-b599-4125-9428-3cb746ddca31}
+	http://mnenhy.mozdev.org/
+- MoreFunctionsForAddressBook 0.6.7.4
+	{3e17310d-82e8-4a43-bd2f-7c3055bfe589}
+	https://nic-nac-project.org/~kaosmos/index-en.html
+- No Message Pane Sorting by Mouse 1.2
+	nomessagepanesort@janek.org
+	http://nompsort.sourceforge.net/
+- Nostalgy 0.2.30
+	nostalgy@alain.frisch
+	http://alain.frisch.fr/soft_mozilla.html
+- Provider for Google Calendar 0.13
+	{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}
+	https://addons.mozilla.org/thunderbird/addon/4631
+- Remove Duplicate Messages (Alternate) 0.3.7
+	{a300a000-5e21-4ee0-a115-9ec8f4eaa92b}
+	http://removedupes.mozdev.org/
+- ThunderBirthDay 0.8.0
+	{4C9FE6FE-2C83-11DC-90B4-DC8456D89593}
+	http://ingomueller.net/mozilla/thunderbirthday
+- Toggle Word Wrap 1.8
+	{cafe3945-058e-47e3-87f8-75bc120b9638}
+	https://addons.mozilla.org/addon/toggle-word-wrap/
+- Update Notifier 0.1.5.5 (Disabled, Incompatible)
+	{95f24680-9e31-11da-a746-0800200c9a66}
+	http://www.longfocus.com/firefox/updatenotifier
+- withAttach 3.0.0
+	withattach@sogame.cat
+	http://sogame.awardspace.com/

@@ -1,0 +1,87 @@
+ssh - (ports), (remove?) host key files
+bind - conf, zones, rndc keys
+qmail - alias, control, (queue), spools, .qmails
+apache - conf: webmaster/servername/etc., IP, vhosts
+         htdocs, logs, v* (+ may need to move files from htdocs to vhost)
+postgres - pg_hba
+mysql - skip-show-database (if nec)
+pma - urls, ( .htaccess by IP -
+    Order Allow,Deny
+    Allow from IP )
+
+(root, admin - .lynxrc (email address))
+/root - incl. delete test .ssh
+~admin
+
+/etc:
+ ssl certs, stunnel.conf
+ aliases, tcp.smtp (+ cdbs)
+ csh.login, profile, zprofile
+ fstab
+ hostname.if, hosts (incl. lh), resolv.conf (incl. 127), myname, mygate
+ master.passwd, (passwd), dbs, group - incl. root, admin passwords, wheel
+ inetd.conf
+ motd
+ pf.conf
+ newsyslog.conf
+ (ntp.conf)
+ (printcap)
+ rc.conf, rc.local, rc.shutdown
+ sudoers
+ sysctl.conf
+ isakmpd
+ samba conf
+ ddclient
+ /etc/mail - auth, localhost.cf, (other cf)
+ (TZ)
+
+/var:
+ db/dhclient.leases
+ db/ntp.drift
+ db/ddclient/
+
+/usr/share/sendmail/cf/ ?
+
+last minute:
+ DISCONNECT
+ cron/at (+ ownership)
+ mail queue
+ mail spools
+ homedirs - but merge ~admin (keep old .qmail, .ssh, non-dots)
+ apache - htdocs, logs, v* (+ may need to move files from htdocs to vhost)
+ quotas
+ logs - + start pflog over
+ postgres, mysql - dump DBs
+ tmp dirs
+ (SpamAssassin:)
+   - stop running spamassassin/spamd (ie: you don't want it to be running
+     during the upgrade)
+   - run "sa-learn --rebuild", this will sync your journal.  if you skip
+     this step, any data from the journal will be lost when the DB is
+     upgraded.
+
+swap:
+ [WRITE DOWN BIOS NUMBERS]
+ boot from bsd.rd (or cd/floppy)
+ swap files (careful with mount point perms)
+ installboot
+
+after swap:
+ passwd dbs
+ aliases, tcp.smtp dbs
+ SSL cert
+ reload DBs
+ DB passwords, incl pma
+ mods
+ RECONNECT
+ packages
+ (X - x*.tgz, packages, X link, XF86Config, rc.conf/ttys, sysctl.conf, 
+   ldconfig -m, root + user PATHs)
+ (SpamAssassin:)
+   - run "sa-learn --sync", which will cause the db format to be upgraded.
+     if you want to see what is going on, you can add the "-D" option.
+   - test the new database by running some sample mails through
+     SpamAssassin, and/or at least running "sa-learn --dump" to make sure
+     the data looks valid.
+   - start running spamassassin/spamd again
+ locate db (run /etc/weekly from /)
