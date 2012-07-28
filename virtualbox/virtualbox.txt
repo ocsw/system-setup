@@ -51,7 +51,12 @@ VBoxManage modifyvm blue \
   --boot2 dvd \
   --boot3 disk \
   --boot4 none \
-  --nic1 nat
+  --nic1 nat \
+  --usb on \
+  --usbehci on
+
+vboxmanage usbfilter add 0 --target blue --name HL-1440 \
+  --vendorid 04F9 --productid 000D
 
 VBoxManage createhd --filename /data/vm/images/blue.vdi --size 50000
 
@@ -119,4 +124,5 @@ cd: host drive, passthrough?
 --vrdemulticon on \
 encryption
 
-perm denied error?
+perm denied error:
+https://bugs.launchpad.net/ubuntu/+source/virtualbox/+bug/1014487
