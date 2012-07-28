@@ -21,7 +21,7 @@ MANAGE_CMD="VBoxManage"
 HEADLESS_CMD="VBoxHeadless"
 
 GOOD_RV="0"
-WARN_RV="255"  # some systems have a separate "[warning]" message
+WARN_RV="255"  # some systems have (e.g.) a separate "[warning]" message
 FAIL_RV="1"
 
 # Read configuration variable file if it is present
@@ -37,12 +37,10 @@ FAIL_RV="1"
 #
 # start/restore the VM
 #
-# $1 = current status of the VM
-#
 do_start() {
-  case "$2" in
+  case "$(get_status)" in
     "saving")
-      log_failure_msg "VM \"$VM_NAME\" is in the process of being suspended"
+      log_failure_msg "Error: VM \"$VM_NAME\" is in the process of being suspended"
       log_end_msg "$FAIL_RV"
       return "$FAIL_RV"
       ;;
@@ -72,7 +70,7 @@ do_start() {
     return "$FAIL_RV"
   }
 
-  log_success_msg "VM \"$VM_NAME\" $act_past"
+  log_success_msg "VM \"$VM_NAME\" has been $act_past"
   log_end_msg "$GOOD_RV"
   return "$GOOD_RV"
 }
@@ -83,7 +81,7 @@ do_start() {
 do_stop() {
   case "$(get_status)" in
     "restoring")
-      log_failure_msg "VM \"$VM_NAME\" is in the process of being restored"
+      log_failure_msg "Error: VM \"$VM_NAME\" is in the process of being restored"
       log_end_msg "$FAIL_RV"
       return "$FAIL_RV"
       ;;
@@ -93,12 +91,12 @@ do_stop() {
       return "$WARN_RV"
       ;;
     "saved")
-      log_warning_msg "VM \"$VM_NAME\" is already suspended"
+      log_warning_msg "VM \"$VM_NAME\" has already been suspended"
       log_end_msg "$WARN_RV"
       return "$WARN_RV"
       ;;
     "powered off")
-      log_warning_msg "VM \"$VM_NAME\" is already stopped"
+      log_warning_msg "VM \"$VM_NAME\" has already been halted"
       log_end_msg "$WARN_RV"
       return "$WARN_RV"
       ;;
@@ -110,7 +108,7 @@ do_stop() {
     return "$FAIL_RV"
   }
 
-  log_success_msg "VM \"$VM_NAME\" suspended"
+  log_success_msg "VM \"$VM_NAME\" has been suspended"
   log_end_msg "$GOOD_RV"
   return "$GOOD_RV"
 }
@@ -143,17 +141,8 @@ get_status()
 case "$1" in
   start)
     # message here so it isn't printed for reload
-    curr_status=$(get_status)
-    case "$curr_status" in
-      saved)
-        log_daemon_msg "Restoring $DESC"
-        do_start "$curr_status"
-        ;;
-      *)
-        log_daemon_msg "Starting $DESC"
-        do_start "$curr_status"
-        ;;
-    esac
+    log_daemon_msg "Starting/restoring $DESC"
+    do_start "$curr_status"
     ;;
   stop)
     # message here so it isn't printed for reload
@@ -180,11 +169,14 @@ case "$1" in
     esac
     ;;
   status)
+    do_status
+    ;;
+  status-short)
     get_status
     ;;
   *)
     #echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
-    echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload|status}" >&2
+    echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload|status|status-short}" >&2
     exit 3
     ;;
 esac
