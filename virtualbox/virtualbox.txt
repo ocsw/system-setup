@@ -16,7 +16,12 @@ as root:
   pico /etc/group  # add to vboxusers
 
   mkdir -p /data/vm/images
+  chown root:root /data/vm/images
   chmod 1777 /data/vm /data/vm/images
+
+  cp virtualbox-vm /etc/init.d
+  chown root:root /etc/init.d/virtualbox-vm
+  chmod 755 /etc/init.d/virtualbox-vm
 
 VBoxManage setproperty machinefolder ~/.VirtualBox/vm
 
@@ -46,7 +51,12 @@ VBoxManage modifyvm blue \
   --boot2 dvd \
   --boot3 disk \
   --boot4 none \
-  --nic1 nat
+  --nic1 nat \
+  --usb on \
+  --usbehci on
+
+vboxmanage usbfilter add 0 --target blue --name HL-1440 \
+  --vendorid 04F9 --productid 000D
 
 VBoxManage createhd --filename /data/vm/images/blue.vdi --size 50000
 
@@ -89,11 +99,12 @@ VBoxManage storageattach blue --storagectl satactl \
   --port 1 --device 0 --type dvddrive --medium none
 
 as root:
-  # SHORTNAME: no spaces
+  # SHORTNAME: abbreviation, spaces might cause problems (can use hostname)
   # LONGNAME: actual vbox name
   sed -e 's/SHORTNAME/blue/' -e 's/LONGNAME/blue/' -e 's/USERNAME/zephyr/' \
     < virtualbox-SHORTNAME > /etc/init.d/virtualbox-blue
-  chmod 700 /etc/init.d/virtualbox-blue
+  chown root:root /etc/init.d/virtualbox-blue
+  chmod 700 /etc/init.d/virtualbox-blue  # could contain password
   update-rc.d virtualbox-blue defaults 21 19  # virtualbox is 20
 
 ---
@@ -113,4 +124,5 @@ cd: host drive, passthrough?
 --vrdemulticon on \
 encryption
 
-perm denied error?
+perm denied error:
+https://bugs.launchpad.net/ubuntu/+source/virtualbox/+bug/1014487
