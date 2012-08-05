@@ -59,6 +59,7 @@ wireshark-doc
 wmctrl
 x11vnc
 xaos
+xclip
 xdotool
 xfce4
 xfce4-goodies
@@ -69,5 +70,6 @@ xloadimage
 xpdf
 xscreensaver
 xscreensaver-gl
+xsel
 xtightvncviewer
 xwit
