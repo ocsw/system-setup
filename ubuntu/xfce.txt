@@ -16,8 +16,10 @@ Panel:
       launchers (drag most from menu):
         terminal, gedit, mixer, rhythmbox, k3b, pidgin, spark, skype,
         keepnote, thunderbird, firefox, chromium
-          -> terminal: gnome-terminal -e 'env NEWTERM=yes bash -li'
-          -> spark: icon: /usr/share/pixmaps/pidgin/protocols/48/jabber.png
+          -> terminal command:
+               gnome-terminal -e 'env NEWTERM=yes LIGHTBG=yes bash -li'
+          -> spark icon:
+               /usr/share/pixmaps/pidgin/protocols/48/jabber.png
       separator (transparent, expand)
       action buttons (lock screen)
       mixer
