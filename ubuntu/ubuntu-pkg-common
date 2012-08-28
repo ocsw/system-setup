@@ -3,6 +3,7 @@ autoconf
 autoconf-doc
 automake
 bash-doc
+bashdb
 binutils
 binutils-doc
 bison
