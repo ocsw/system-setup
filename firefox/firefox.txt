@@ -197,6 +197,8 @@ add-on settings:
       position counter
       waybackmachine
       bookmark/save links
+  right links:
+    disable long left-click?
   save file to:
     main:
       clear recent on close
