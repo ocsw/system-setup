@@ -15,6 +15,7 @@ cpp-doc
 csh
 curl
 dash
+dialog
 dkms
 duplicity
 emacs
