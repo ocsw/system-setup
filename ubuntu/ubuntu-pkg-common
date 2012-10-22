@@ -40,7 +40,9 @@ gettext-doc
 gif2png
 git-all
 git-annex
+git-doc
 git-flow
+gitk
 glibc-doc
 gnupg
 graphicsmagick
@@ -111,6 +113,7 @@ vim-scripts
 vpnc
 wget
 whois
+xz-utils
 zip
 zsh
 zsh-doc
