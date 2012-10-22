@@ -3,3 +3,5 @@ awstats
 analog
 samba
 gitolite
+postgresql
+postgresql-doc
