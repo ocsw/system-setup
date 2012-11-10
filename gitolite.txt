@@ -60,5 +60,5 @@ other client accounts:
   upload/send to management account
 
 management:
-  add keys to gitolite-admin/keydir
+  add keys to gitolite-admin/keydir, config file
   add, commit, push
