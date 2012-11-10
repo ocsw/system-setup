@@ -4,3 +4,6 @@ analog
 samba
 ipvsadm
 keepalived
+gitolite
+postgresql
+postgresql-doc
