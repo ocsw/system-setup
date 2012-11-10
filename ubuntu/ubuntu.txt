@@ -64,8 +64,9 @@ filesystems
 move/symlink /data/{home,mail,mysql,www}
 (reorder /etc/password, shadow, group?)
 postfix config
-git config --global user.name foo
-git config --global user.email bar
+git config --global color.ui true
+git config --global user.name "foo bar"
+git config --global user.email foo@bar.com
 
 -------
 server:
