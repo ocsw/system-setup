@@ -62,14 +62,20 @@ settings:
 
 about:config settings (don't show warning):
   no text zoom with wheel (only on laptop?):
-    mousewheel.withcontrolkey.action;0
-    mousewheel.withcontrolkey.sysnumlines;true
+    ff <17.0:
+      mousewheel.withcontrolkey.action;0
+      mousewheel.withcontrolkey.sysnumlines;true
+    ff 17.0+:
+      mousewheel.with_control.action;1
   no history movement with wheel:
-    mousewheel.withshiftkey.action;0
-    mousewheel.withshiftkey.sysnumlines;true
-    mousewheel.horizscroll.withaltkey.action;0
-    mousewheel.horizscroll.withaltkey.numlines;1
-    mousewheel.horizscroll.withaltkey.sysnumlines;true
+    ff <17.0:
+      mousewheel.withshiftkey.action;0
+      mousewheel.withshiftkey.sysnumlines;true
+      mousewheel.horizscroll.withaltkey.action;0
+      mousewheel.horizscroll.withaltkey.numlines;1
+      mousewheel.horizscroll.withaltkey.sysnumlines;true
+    ff 17.0+:
+      mousewheel.with_shift.action;1
   browser.tabs.selectOwnerOnClose;true ?
   ---
   browser.display.background_color (#C0C0C0???)
