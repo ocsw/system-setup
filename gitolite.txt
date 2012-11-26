@@ -1,0 +1,64 @@
+[on ubuntu, but mostly relevant elsewhere]
+
+server:
+  install gitolite package (NOTE: this is v2)
+  create git account (probably with --disabled-password / usermod -L)
+  
+initial management account (elsewhere):
+  if git hasn't been configured already:
+    git config --global color.ui true
+    git config --global user.name "Daniel Malament"
+    git config --global user.email daniel.j.malament@gmail.com
+
+  generate key and upload to server (name USERNAME.pub)
+
+  ~/.ssh/config:
+    Host git
+        HostName git.bluetiger.net
+        Port 22
+        User git
+        IdentityFile ~/.ssh/git_bt_rsa
+  or
+    Host git.bluetiger.net
+        IdentityFile ~/.ssh/git_bt_rsa
+
+  *ssh-agent
+
+server:
+  gl-setup KEYFILE
+
+  edit rc file
+    if using gitweb, REPO_UMASK=0027
+    *if gitweb and @all, GL_ALL_INCLUDES_SPECIAL=1
+
+  move any existing repos to ~/repositories
+  *chown/chmod
+  rerun gl-setup (or just push gitolite-admin?)
+
+management:
+  git clone git@git:gitolite-admin
+  cd gitolite-admin
+  nano conf/gitolite.conf
+    ex:
+      repo gitolite-admin
+        RW+ = zephyr
+        -   = gitweb daemon
+        # dammit, ubuntu has v2
+        #option deny-rules = 1
+        config gitolite-options.deny-repo = 1
+
+      repo testing
+        RW+ = @all
+
+      repo @all
+        RW+ = zephyr
+        R   = gitweb daemon
+  add, commit, push
+
+other client accounts:
+  create keys, etc., as under "initial management account"
+  upload/send to management account
+
+management:
+  add keys to gitolite-admin/keydir, config file
+  add, commit, push

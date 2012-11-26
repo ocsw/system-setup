@@ -64,6 +64,7 @@ lftp
 libtool
 libtool-doc
 lsof
+lvm2
 lynx
 m4
 mailutils
