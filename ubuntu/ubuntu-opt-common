@@ -9,6 +9,8 @@ arpalert
 # don't use arping package, there's a built-in version, and the package
 # will remove NetworkManager
 dsniff
+fwknop-client
+fwknop-server
 sniffit
 sslsniff
 snort
