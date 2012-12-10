@@ -1,5 +1,3 @@
-gitosis
-gitweb
 git-daemon-run
 git-daemon-sysvinit
 
