@@ -87,6 +87,7 @@ normalize-audio
 ntop
 openntpd
 openssh-server
+openvpn
 pep8
 postgresql-client
 postfix
