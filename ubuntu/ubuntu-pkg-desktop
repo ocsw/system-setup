@@ -36,6 +36,7 @@ leafpad
 libmysql-java
 libpg-java
 libreoffice
+libxfce4ui-utils
 mplayer2
 openclipart
 openclipart-libreoffice
@@ -64,8 +65,9 @@ xaos
 xclip
 xdotool
 xfce4
+xfce4-appfinder
 xfce4-goodies
-xfce4-utils
+xfce4-session
 xfprint4
 xjed
 xloadimage

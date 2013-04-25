@@ -21,14 +21,18 @@ some of the above will prompt for settings/questions:
 for desktop:
   keepnote:
     d/l .deb
-    apt-get install python python-gtk2 python-glade2 libgtk2.0-dev \
-      libsqlite3-0 python-gtkspell python-gksu2 python-eggtrayicon \
-      aspell aspell-en
+    apt-get install python python-gtk2 python-glade2 \
+      python-central libgtk2.0-dev libsqlite3-0 python-gtkspell \
+      python-eggtrayicon aspell aspell-en
+      # also python-gksu2, but it doesn't exist anymore?
     dpkg -i keepnote*.deb
     apt-get -f install
     (rm keepnote*.deb)
 
   google earth:
+    apt-get install libfreeimage3 lsb-core ia32-libs-gtk \
+      msttcorefonts ia32-libs-multiarch libopenjpeg2 pax alien \
+      lib32z1 cabextract
     as non-root user:
       make-googleearth-package --download --cleanup
     dpkg -i googleearth*.deb
@@ -67,6 +71,8 @@ postfix config
 git config --global color.ui true
 git config --global user.name "foo bar"
 git config --global user.email foo@bar.com
+aeolus backups
+
 
 -------
 server:
@@ -96,4 +102,3 @@ keepnote:
 Terminal: Monospace 10
 gconftool-2 -s /apps/gnome-terminal/profiles/Default/cursor_blink_mode \
       -t string off   (?)
-

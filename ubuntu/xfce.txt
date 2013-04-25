@@ -5,8 +5,6 @@ Desktop:
   Background: image
   Menus: (app, window menus)
   Icons: no home/fs/trash?
-Notifications:
-  disappear: 2 sec?
 Panel:
   Panel 1:
     Display:
@@ -21,31 +19,27 @@ Panel:
           -> spark icon:
                /usr/share/pixmaps/pidgin/protocols/48/jabber.png
       separator (transparent, expand)
-      action buttons (lock screen)
+      action buttons (appearance = buttons, only lock screen)
       mixer
       clock (no frame, custom format, "%a %b %d, %l:%M %p")
-      session menu
+      action buttons (appearance = session menu)
   Panel 2:
     Display:
       monitor 1, drag to bottom, 25 px, 100%/auto
     Items:
       show desktop
       separator
-      window buttons (no handle, no sort, show all ws)
+      window buttons (no handle, no sort, no wheel?, show all ws)
+      separator (transparent, expand)
       workspace switcher (no wheel)
 Preferred Applications:
   browser: ff
   mail: tb
   file: nautilus?
   term: gnome?
-Printing: CUPS?
-Removable Drives:
-  Storage: (mount drives, mount media?)
 Screensaver:
   Display Modes: blank only?, lock after 30min?
-Session:
-  General: save, prompt
-  Autostart: turn off backup, evolution, ubuntu one
+  Advanced: no grab desktop?, enable power management?
 Window Manager:
   Style: default?, remove shade button
   Keyboard: ?
@@ -54,3 +48,11 @@ Window Manager Tweaks:
   Accessibility: notify
   Workspaces: no wheel?
 Workspaces: 2?
+Removable Drives:
+  Storage: (mount drives, mount media?)
+Session:
+  General: save, prompt
+  Autostart: turn off backup, evolution, ubuntu one
+Notifications:
+  disappear: 2 sec?
+Printing: CUPS?

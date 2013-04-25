@@ -30,7 +30,6 @@ install:
 UI:
   toolbars:
     menu, nav, bookmarks, add-on
-    tabs not on top
   customize:
     menu (rt align): counter, activity
     nav: b/f, up, reload, stop, dlh, session mgr, addr, search,
@@ -77,6 +76,7 @@ about:config settings (don't show warning):
     ff 17.0+:
       mousewheel.with_shift.action;1
   browser.tabs.selectOwnerOnClose;true ?
+  (browser.tabs.onTop;false ?)
   ---
   browser.display.background_color (#C0C0C0???)
   browser.anchorcolor (#0000FF???)

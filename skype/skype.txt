@@ -1,0 +1,23 @@
+config:
+  general:
+    (away time: 15 minutes?)
+    (save files to?)
+  privacy:
+    allow chats from anybody (?)
+    don't allow to see number of contacts
+  notifications:
+    contact came online: no sound, no popup
+    contact went offline: no sound, no popup
+    contact added: no sound
+    first message: no sound
+    message received: no sound, no popup (?)
+    message sent: no sound
+    file request: no sound
+    file complete: no sound
+    file failed: no sound
+  chat:
+    start -> open (?)
+  video devices:
+    (enable auto-exposure?)
+  advanced:
+    no watermark

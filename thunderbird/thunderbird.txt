@@ -4,7 +4,7 @@ install:
     %appdata%\Thunderbird\profiles.ini (change as nec.; close tb first):
       [General]
       StartWithLastProfile=1
-           
+      
       [Profile0]
       Name=main
       IsRelative=0
@@ -54,7 +54,8 @@ main config:
 about:config:
   browser.download.manager.retention 0
   mailnews.customHeaders;Sender: Reply-To: Delivered-To ???
-  mail.compose.attachment_reminder_keywords;.doc,.docx,.pdf,.xls,xlsx,.ppt,.pptx.,rtf,.pps,enclose,enclosed,enclosing,CV,cover letter,resume,attachment,attachments,attach,attached,attaching,file,files,pic,pics,photo,photos,photograph,photographs,here is,here's,here are,here it is,here they are
+  mail.compose.attachment_reminder_keywords;.doc,.docx,.pdf,.xls,xlsx,.ppt,.pptx,.rtf,.pps,enclose,enclosed,enclosing,CV,cover letter,resume,attachment,attachments,attach,attached,attaching,file,files,pic,pics,photo,photos,photograph,photographs,here is,here's,here are,here it is,here they are
+
 account config:
   accounts:
     composition:
@@ -64,6 +65,9 @@ account config:
   local folders:
     junk:
       address books
+  sync (for IMAP):
+    advanced -> check all
+    [also subscribe to all from folder pane]
 
 add-on configs:
   account colors:
@@ -71,9 +75,9 @@ add-on configs:
     folder pane:
       none
     compose window:
+      color subject font
       color from identity
       color from menu
-      color subject font
   addons manager hilite:
     don't always restore
     show list
@@ -101,6 +105,9 @@ add-on configs:
   folderpane tools:
     (startup)
     (order)
+  (image zoom:)
+    general:
+      toggle fit/reset
   keyconfig:
     disable:
       ctrl-Q (quit)
@@ -109,10 +116,7 @@ add-on configs:
       C (mark read by date)
     change:
       Shift-F5 -> Ctrl-T (Ctrl-Q?) (get new /all)
-      Shift-H ->H (compactheader toggle)
-  (image zoom:)
-    general:
-      toggle fit/reset
+      Shift-H -> H (compactheader toggle)
   lightning:
     views:
       start on Monday
@@ -184,7 +188,7 @@ ui:
       thread, star, attach, from, subject, junk, date, size
     cols for drafts, templates, sent, outbox (default width):
       thread, star, attach, subject, recipient, junk, date, size
-       
+
   message window:
     top row, right: throbber
     toolbar:
@@ -193,8 +197,8 @@ ui:
         get mail, write (wA), addr book, sep,
         reply (wA), reply all (wA), forward, sep,
         tag, AE extract, sep, back, forward
-    header pane: star
-       
+    header pane: star, (ABP?)
+
   compose window:
     toolbar:
       icons and text
@@ -204,7 +208,7 @@ ui:
         security, save, priority
     horiz divider: max up (3.5 addresses)
     attach divider: default (_N of Normal)
-       
+
   address book:
     toolbar:
       icons and text

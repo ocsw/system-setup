@@ -1,0 +1,37 @@
+preferences:
+  interface:
+    no tabs
+  conversation:
+    no animation
+  sounds:
+    mute sounds
+  status:
+    (15 minutes?)
+
+plugins:
+  album (?)
+  hotkeys (?):
+    toggle list: ctrl+shift+a
+  last seen (?)
+  (libnotify?):
+    no signons
+  message notification:
+    (chat windows?)
+    insert count
+  (message split?)
+  (nicksaid?)
+  OTR:
+    config:
+      no auto
+      (don't log?)
+  (timelog?)
+  (voice/video settings?)
+
+accounts:
+  (for Google Apps):
+    XMPP
+    foo@bar.com -> username=foo, domain=bar.com
+    connect server: talk.google.com
+    (file transfer proxy?)
+
+set icon

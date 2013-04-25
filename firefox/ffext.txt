@@ -1,0 +1,31 @@
+*m https://addons.mozilla.org/en-US/firefox/addon/extension-options-menu/
+https://addons.mozilla.org/en-US/firefox/addon/its-all-text/?src=search
+->https://addons.mozilla.org/en-US/firefox/addon/its-all-text/reviews/337255/
+https://addons.mozilla.org/en-US/firefox/addon/siphon-add-on-synchronizer/?src=search
+
+http://franklion.co.uk/TOS3.html
+https://addons.mozilla.org/en-US/firefox/addon/tabsubmit/
+https://addons.mozilla.org/en-US/firefox/addon/toggle-find-bar/?src=search
+[c] https://addons.mozilla.org/en-US/firefox/addon/copy-urls-expert/?src=search
+https://addons.mozilla.org/en-US/firefox/addon/a-better-firefox-add-on-bar/?src=search
+https://addons.mozilla.org/en-US/firefox/addon/cacheviewer-continued/?src=search
+c https://addons.mozilla.org/en-us/firefox/addon/addons-manager-hilite/
+https://addons.mozilla.org/en-US/firefox/addon/cam/?src=search
+c *m https://addons.mozilla.org/en-US/firefox/addon/mozilla-archive-format/
+c https://addons.mozilla.org/en-US/firefox/addon/bookmark-favicon-changer/?src=search
+https://addons.mozilla.org/en-US/firefox/addon/favicon-picker-2/?src=search
+c https://addons.mozilla.org/en-US/firefox/addon/imtranslator/?src=search
+i https://addons.mozilla.org/en-US/firefox/addon/google-translator-for-firefox/?src=search
+r gtranslate
+live http headers
+greasemonkey + scripts
+c (tab counter)
+
+d tab to window (?)
+*c tab mix plus
+
+*tab favicon problem
+
+*auto-update add-ons?
+
+check langs
