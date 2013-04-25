@@ -12,7 +12,7 @@ plugins:
   album (?)
   hotkeys (?):
     toggle list: ctrl+shift+a
-  last seen (?)
+  (last seen?)
   (libnotify?):
     no signons
   message notification:
