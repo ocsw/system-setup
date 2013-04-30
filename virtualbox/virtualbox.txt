@@ -25,12 +25,14 @@ as root:
 
 VBoxManage setproperty machinefolder ~/.VirtualBox/vm
 
-VBoxManage createvm --name blue --ostype Ubuntu_64 --register
-mv .VirtualBox/vm/blue/ /data/vm/
-ln -s /data/vm/blue .VirtualBox/vm/
+VBoxManage createvm --name VMNAME --ostype Ubuntu_64 --register
+# or e.g. --ostype FreeBSD_64
+
+mv .VirtualBox/vm/VMNAME/ /data/vm/
+ln -s /data/vm/VMNAME .VirtualBox/vm/
 
 # entries below empty \ are defaults (at least, on this system)
-VBoxManage modifyvm blue \
+VBoxManage modifyvm VMNAME \
   --memory 3072 \
   --cpus 2 \
   --rtcuseutc on \
@@ -55,31 +57,35 @@ VBoxManage modifyvm blue \
   --usb on \
   --usbehci on
 
-vboxmanage usbfilter add 0 --target blue --name HL-1440 \
+# for FreeBSD, --nictype1 82540EM
+# for server, --nic1 bridged --bridgeadapter1 eth0
+
+VBoxManage usbfilter add 0 --target VMNAME --name HL-1440 \
   --vendorid 04F9 --productid 000D
 
-VBoxManage createhd --filename /data/vm/images/blue.vdi --size 50000
+VBoxManage createhd --filename /data/vm/images/VMNAME.vdi --size 50000
 
-VBoxManage storagectl blue --name satactl --add sata --hostiocache off
+VBoxManage storagectl VMNAME --name satactl --add sata --hostiocache off
 
-VBoxManage storageattach blue --storagectl satactl \
-  --port 0 --device 0 --type hdd --medium /data/vm/images/blue.vdi
+VBoxManage storageattach VMNAME --storagectl satactl \
+  --port 0 --device 0 --type hdd --medium /data/vm/images/VMNAME.vdi
 
-VBoxManage storageattach blue --storagectl satactl \
+VBoxManage storageattach VMNAME --storagectl satactl \
   --port 1 --device 0 --type dvddrive \
   --medium ~/ubuntu-12.04-alternate-amd64.iso
 
-VBoxHeadless --startvm blue --vrde=off -n -m PORT -o PASSWORD &
+VBoxHeadless --startvm VMNAME --vrde=off -n -m PORT -o PASSWORD &
 
-(install)
+(do install)
 
-VBoxManage storageattach blue --storagectl satactl \
+# for Ubuntu guest
+VBoxManage storageattach VMNAME --storagectl satactl \
   --port 1 --device 0 --type dvddrive --medium \
   /usr/share/virtualbox/VBoxGuestAdditions.iso
 
-(reboot)
+(reboot guest)
 
-in guest, as root:
+in guest, as root (for Ubuntu):
 
   apt-get update
   apt-get upgrade
@@ -95,17 +101,22 @@ in guest, as root:
   sh ./VBoxLinuxAdditions.run
   reboot
 
-VBoxManage storageattach blue --storagectl satactl \
+# for FreeBSD guest, see
+# https://wiki.freebsd.org/VirtualBox
+# or
+# http://www.freebsd.org/doc/en/books/handbook/virtualization-guest.html
+
+VBoxManage storageattach VMNAME --storagectl satactl \
   --port 1 --device 0 --type dvddrive --medium none
 
 as root:
   # SHORTNAME: abbreviation, spaces might cause problems (can use hostname)
   # LONGNAME: actual vbox name
-  sed -e 's/SHORTNAME/blue/' -e 's/LONGNAME/blue/' -e 's/USERNAME/zephyr/' \
-    < virtualbox-SHORTNAME > /etc/init.d/virtualbox-blue
-  chown root:root /etc/init.d/virtualbox-blue
-  chmod 700 /etc/init.d/virtualbox-blue  # could contain password
-  update-rc.d virtualbox-blue defaults 21 19  # virtualbox is 20
+  sed -e 's/SHORTNAME/VMNAME/' -e 's/LONGNAME/VMNAME/' -e 's/USERNAME/zephyr/' \
+    < virtualbox-SHORTNAME > /etc/init.d/virtualbox-VMNAME
+  chown root:root /etc/init.d/virtualbox-VMNAME
+  chmod 700 /etc/init.d/virtualbox-VMNAME  # could contain password
+  update-rc.d virtualbox-VMNAME defaults 21 19  # virtualbox is 20
 
 ---
 

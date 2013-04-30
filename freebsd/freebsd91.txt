@@ -1,0 +1,126 @@
+DVD Install:
+  install
+  keyboard layout
+  hostname
+  components
+  partitioning
+  extraction
+  passwd
+  network
+  TZ
+  services
+  crash dumps
+  users
+  menu
+  shell
+  reboot
+
+Packages/Ports:
+  pkg_add -r bash sudo bzip2 unzip zip mmv tree rsync most nano mutt
+  pkg_add -r autoconf automake bison gmake libtool m4
+  pkg_add -r curl wget lsof nmap pstree ipcalc subversion git
+  # vim, ntop want X libs, ruby, etc.
+
+  # PHP libs:
+  #gettext, libiconv, recode
+  #freetype and docs, t1lib
+  #gd (req. xbase), jpeg, libungif, netpbm, png (+ /u/l/include links?), tiff
+  #libmcrypt, mcrypt, mhash
+  #db4, gdbm
+  #libxml, libxslt, sablotron
+  #c-client, gmp, libslang, mm, pdflib, popt
+  #openldap-client/server
+  #cyrus-sasl
+
+  # for Core:
+  cd /usr/ports/java/openjdk6
+  make install  # includes python 2.7
+  cd /usr/ports/www/tomcat6
+  make install
+  cd /usr/ports/www/apache22-worker-mpm
+  make install
+  cd /usr/ports/www/mod_jk-apache2
+  make install
+
+Network:
+  verify hostname, ifconfig_*, defaultrouter
+  verify/add to resolv.conf
+
+Filesystems:
+  fstab (incl. cdrom)
+  (additional filesystems - dirs, NFS mounts in fstab, exports in exports)
+  (NFS: exports; rc.conf.local: nfsd yes, lockd yes, (-tun8); (inetd.conf: 
+    rpc.statd))
+  (make /cdrom)
+  make /data
+  move/link /usr/home, /home, /var/mail, /usr/local/www/apache22/data
+  perms for above
+
+Misc. Config (/etc):
+  motd - incl. perms, second and last lines blank, warning
+  check /etc/shells
+  passwd - root gecos (to &), root shell
+  mail aliases - root, (webmaster), anonymous(<-mostly for php) - and run 
+    newaliases
+  skel - lower perms on dir (files??)
+  csh.login, profile, zprofile - umask, path/PATH, BLOCKSIZE, PAGER, 
+    pico/nano, EDITOR, VISUAL, AUTOCONF/MAKE_VERSION, (NNTPSERVER), 
+    mail/MAIL, mesg, (etc.) (and perms) (see files)
+  (sysctls - incl. forwarding, (kbdreset, apmwarn/halt, ddb.panic, led, 
+    vsync, allowaperture, swapencrypt, nfs.iothreads, emul) - and perms)
+  (quotas - incl. fstab, edquota, quotaon, rc.conf.local (, reboot))
+  (locate.rc)
+
+Misc. Services / Daemons:
+  ssh/sshd conf, incl. perms
+  (ddclient, incl. conf, rc.local, cron, perms, ch/mtree)
+  (ntp conf, incl. perms)
+  (sendmail - relay {see src/sendmail} (incl. auth perms, ch/mtree), 
+    /etc/mail/service.switch ["hosts files dns"], cf, cron)
+  (cron tabs - incl. d/w/m days/timings if nec., (sendmail))
+  (syslog.conf)
+  (printcap - port, banner, filter; rc.conf.local - lpd)
+  (Sparc netboot: ethers, hosts, rarpd, bootparams, bootparamd, /tftpboot, 
+    tftpd, NFS)
+
+Major Servers/SW:
+  BIND
+  sendmail (& see above) / postfix / qmail
+  apache, mod_ssl, php
+  mysql/pgsql/pma/ppa
+  perms on server config, data, log files
+  rotation of server log files
+
+Security:
+  log perms, incl. in newsyslog, and incl. [d/w/m.out], adduser
+  kernel and boot perms (and flags?)
+  / dot perms
+  (pf.conf, incl. perms)
+  (sudoers, incl. perms)
+  (securelevel)
+  (ftpchroot, ftpusers (incl. _stunnel, _mrtg, _openldap))
+  mtree - incl. data, /var/mail, /etc/{z}profile, root dots, changelist, 
+    ddclient, sendmail localhost/auth, (pwd.db?), rndc/named stuff (see 
+    diff) - [and perms]
+
+Users (incl. root):
+  add admin/non-root user(s), add (1/more) to wheel group - and create 
+    mail spools (and .qmail files)
+  shell dots - (note root hard links to /), [user .login (savehist, ignoreeof)]
+  muttrc (incl. realname, alternates)
+  (elmrc - copy (must be set IN THE FILE!), fullname, pager, userlevel, 
+    (editor))
+  lynxrc - (bookmark file), (email), user mode, cookies, (verbose images),
+    ((start url))  {or set cookies in /etc/lynx.cfg?}
+  (ssh keys - (root), user - generate and/or authorized)
+  (.xsession (incl. xhost, WM), WM config)
+  (browser, etc. config)
+  homedirs and files - perms/ownership (incl. for files above)
+
+Additional Config:
+  clock
+  patches
+  (kernel config)
+  (preload locate DB (run /etc/weekly from /))
+  (X link, XF86Config, xdm in rc.conf.local/ttys, allowaperture)
+  (scripts)
