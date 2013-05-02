@@ -106,6 +106,7 @@ Security:
 Users (incl. root):
   add admin/non-root user(s), add (1/more) to wheel group - and create 
     mail spools (and .qmail files)
+  unix-common/account-setup.txt
   shell dots - (note root hard links to /), [user .login (savehist, ignoreeof)]
   muttrc (incl. realname, alternates)
   (elmrc - copy (must be set IN THE FILE!), fullname, pager, userlevel, 
@@ -124,3 +125,4 @@ Additional Config:
   (preload locate DB (run /etc/weekly from /))
   (X link, XF86Config, xdm in rc.conf.local/ttys, allowaperture)
   (scripts)
+  backups

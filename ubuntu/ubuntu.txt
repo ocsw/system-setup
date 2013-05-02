@@ -2,6 +2,9 @@
 install:
 --------
 
+may want to start by installing git and following 
+unix-common/account-setup.txt to be able to pull repos
+
 /etc/apt/sources.list:
   see ubuntu-sources.list; replace RELEASE with precise, quantal, etc.
 
@@ -48,7 +51,7 @@ common:
 -------
 
 check clock
-accounts
+accounts, incl. wheel, unix-common/account-setup.txt, dotfiles
 network (fqdn, ip/nm/gw*, dns*, /etc/hosts, dhcp)
   * for desktop, use NetworkManager; for server, /etc/network/interfaces:
 	auto eth0
