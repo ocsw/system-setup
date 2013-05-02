@@ -188,14 +188,14 @@ add-on settings:
       move 'options' above add-ons (windows)
       (move 'preferences' to tools menu, above add-ons (linux)?)
   (menumanipulator)
-  mozilla archive format:
+  (mozilla archive format:)
     main:
       use browser's naming strategy?
     interface:
       add page context
   no color:
     show in view menu
-  optimize google:
+  (optimize google:)
     all:
       show links to other sites
     web:
