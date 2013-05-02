@@ -1,0 +1,14 @@
+### first install git
+
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+touch ~/.ssh/config
+chmod 600 ~/.ssh/config
+### remember to add a passphrase!
+ssh-keygen ~/.ssh/git_bt_rsa
+### now add .pub to gitolite, including config file
+cat >> ~/.ssh/config <<-EOF
+	Host git.bluetiger.net
+	    IdentityFile ~/.ssh/git_bt_rsa
+	EOF
+ssh git@git.bluetiger.net
