@@ -54,6 +54,7 @@ iftop
 imagemagick
 imagemagick-doc
 ipcalc
+ipset
 ispell
 jed
 jed-extra
@@ -100,6 +101,7 @@ recode
 resolvconf
 rsync
 screen
+smartmontools
 sox
 speex
 ssldump
