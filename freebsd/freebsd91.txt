@@ -43,7 +43,7 @@ Packages/Ports:
   make install
 
 Network:
-  verify hostname, ifconfig_*, defaultrouter
+  in rc.conf, verify hostname, ifconfig_*, defaultrouter
   verify/add to resolv.conf
 
 Filesystems:
