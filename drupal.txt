@@ -1,0 +1,55 @@
+install:
+  enable mod_rewrite
+  either of:
+    AllowOverride All
+    add rewrites to apache config
+
+  create database
+
+  cd /root
+  wget http://ftp.drupal.org/files/projects/drupal-7.22.tar.gz
+  tar xvzf drupal-7.22.tar.gz
+  mv drupal-7.22 SITEROOT
+  chown -R root:root SITEROOT
+  cd SITEROOT/sites/default
+  cp default.settings.php settings.php
+  chmod 777 .
+  chmod 666 settings.php
+
+  load site, go through installer
+  
+  chmod 755 .
+  chmod 644 settings.php
+
+  crontab:
+    45 * * * * wget -O - -q -t 1 URLWITHKEY
+
+modules:
+  apt-get install drush
+  cd SITEROOT
+  drush dl module_filter admin_menu devel fpa features strongarm
+  drush dl ctools views
+  #drush dl panels entity rules
+
+  disable in control panel:
+    toolbar
+    overlay
+    dashboard
+
+  enable in control panel:
+    module filter
+    admin menu
+    admin menu toolbar style
+    devel
+    devel generate
+    fast perms admin
+    features
+    strongarm
+    chaos tools
+    views
+    views ui
+    #page manager
+    #panels, entities, rules
+
+config:
+  turn on clean URLs
