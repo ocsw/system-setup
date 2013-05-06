@@ -28,7 +28,7 @@ modules:
   apt-get install drush
   cd SITEROOT
   drush dl module_filter admin_menu devel fpa features strongarm
-  drush dl ctools views
+  drush dl ctools views node_clone
   #drush dl panels entity rules
 
   disable in control panel:
@@ -48,6 +48,7 @@ modules:
     chaos tools
     views
     views ui
+    node clone
     #page manager
     #panels, entities, rules
 
