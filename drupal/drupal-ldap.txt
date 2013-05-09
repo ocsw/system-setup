@@ -1,0 +1,72 @@
+modules:
+  cd SITEROOT
+
+  # filters are broken in 2.0-beta5
+  #drush dl ldap
+  drush dl ldap-7.x-1.x-dev
+
+  drush en ldap_authentication ldap_authorization \
+           ldap_authorization_drupal_role ldap_servers
+  # doesn't exist in 1.x
+  #drush en ldap_user
+
+config (including):
+  settings:
+    encrypt stored passwords
+  server:
+    connection:
+      machine name
+      name
+      enable
+      type
+      server
+      port
+    binding:
+      service account (default)
+      DN/password
+    ldap to drupal:
+      base DNs
+      authname
+      email
+    ldap groups (2.x):
+      attribute exists
+      attribute in user entry
+  user (only 2.x):
+    manual:
+      reject (default)
+    to drupal:
+      enable
+      create/sync on auth
+      create/sync on create
+      don't assoc on conflict
+      don't affect ldap-associated accounts
+      no action/email orphans
+  authentication:
+    logon:
+      mixed (default)
+      enabled
+    account creation (1.x):
+      conflict: disallow and log
+      creation: create automatically
+    email:
+      show disabled field (default)
+      update and email (default)
+    password (2.x):
+      display disabled (default)
+  authorization:
+    basics:
+      server
+      enable
+      only apply to ldap (default)
+    ldap to drupal (2.x):
+      mappings
+      only grant matching (default)
+    strategy / mapping (1.x):
+      strategy
+      mappings
+      use filtering
+    more:
+      on logon
+      don't revoke (?)
+      don't regrant (?)
+      don't create

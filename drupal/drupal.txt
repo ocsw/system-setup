@@ -27,32 +27,26 @@ install:
 modules:
   apt-get install drush
   cd SITEROOT
-  drush dl module_filter admin_menu devel fpa features strongarm
-  drush dl ctools views node_clone entityreference
-  #drush dl panels entity rules
 
-  disable in control panel:
-    toolbar
-    overlay
-    dashboard
+  drush dis toolbar overlay dashboard
 
-  enable in control panel:
-    module filter
-    admin menu
-    admin menu toolbar style
-    devel
-    devel generate
-    fast perms admin
-    features
-    strongarm
-    chaos tools
-    views
-    views ui
-    node clone
-    entity
-    entity reference
-    #page manager
-    #panels, entities, rules
+  drush dl module_filter admin_menu devel fpa features strongarm advanced_help
+  drush dl ctools views node_clone entityreference content_access
+
+  drush en module_filter admin_menu admin_menu_toolbar devel devel_generate \
+           fpa features strongarm advanced_help ctools views views_ui \
+           clone entity entityreference content_access
+
+  #panels
+  #rules
+  #eva
+  #draggableviews
+  #views_slideshow
+  #views_bulk_operations
+  #views_accordion
+  #globalredirect
 
 config:
   turn on clean URLs
+  perms for anon users
+  disable visitor account creation
