@@ -177,6 +177,7 @@ add-on settings:
     Alt-Z / Undo Close Tab / undoCloseTab();
     Ctrl-` / New Home / BrowserOpenTab(); BrowserHome();
     disable Ctrl-Q (quit)
+    Linux: disable Ctrl-Shift-O except Bookmarks Library
   long url please:
     leave href
   menu editor:
