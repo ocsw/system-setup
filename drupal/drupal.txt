@@ -46,8 +46,12 @@ modules:
   #views_bulk_operations
   #views_accordion
   #globalredirect
+  #term_merge
+  #uniqueness
+  #unique_field
 
 config:
   turn on clean URLs
   perms for anon users
   disable visitor account creation
+  #uniqueness (search), title, description, message

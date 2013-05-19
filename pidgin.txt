@@ -1,6 +1,8 @@
 preferences:
   interface:
     no tabs
+  browser:
+    (may have to set manually)
   conversation:
     no animation
   sounds:
