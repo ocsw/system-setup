@@ -1,0 +1,5 @@
+config:
+  views:
+    default: list, (don't soft folders first?), (show hidden?)
+  list columns:
+    (add/reorder owder, group, perms?)
