@@ -31,19 +31,18 @@ modules:
   drush dis toolbar overlay dashboard
 
   drush dl module_filter admin_menu devel fpa features strongarm \
-           advanced_help ctools views node_clone entityreference rules \
-           content_access
+           advanced_help ctools views views_bulk_operations node_clone \
+           entityreference rules content_access
 
   drush en module_filter admin_menu admin_menu_toolbar devel devel_generate \
            fpa features strongarm advanced_help ctools views views_ui \
-           clone entity entityreference entity_token rules rules_admin \
-           content_access
+           views_bulk_operations clone entity entityreference entity_token \
+           rules rules_admin content_access
 
   #panels
   #eva
   #draggableviews
   #views_slideshow
-  #views_bulk_operations
   #views_accordion
   #globalredirect
   #term_merge
