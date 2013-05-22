@@ -14,6 +14,7 @@ freemind-plugins-help
 freemind-plugins-script
 freemind-plugins-svg
 fyre
+geany
 gedit
 gphoto2
 gimp
@@ -37,6 +38,7 @@ libmysql-java
 libpg-java
 libreoffice
 libxfce4ui-utils
+meld
 mplayer2
 msttcorefonts
 openclipart
