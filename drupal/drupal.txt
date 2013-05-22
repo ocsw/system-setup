@@ -48,6 +48,12 @@ modules:
   #term_merge
   #uniqueness
   #unique_field
+  #page_theme
+  #content_theme
+
+  #skinr -> skinr, skinr_ui
+  #fusion
+  #acquia_prosper -> color, fluid, turn off blocks on big views
 
 config:
   turn on clean URLs
