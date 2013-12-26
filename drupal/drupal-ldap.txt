@@ -1,17 +1,18 @@
 modules:
-  cd SITEROOT
+  cd "${SITEROOT}"
 
   # filters are broken in 2.0-beta5
-  #drush dl ldap
-  drush dl ldap-7.x-1.x-dev
+  #drush -y dl ldap
+  drush -y dl ldap-7.x-1.x-dev
 
-  drush en ldap_authentication ldap_authorization \
-           ldap_authorization_drupal_role ldap_servers
+  drush -y en ldap_authentication ldap_authorization \
+              ldap_authorization_drupal_role ldap_servers
   # doesn't exist in 1.x
-  #drush en ldap_user
+  #drush -y en ldap_user
 
 config (including):
   settings:
+    force https
     encrypt stored passwords
   server:
     connection:
@@ -26,8 +27,11 @@ config (including):
       DN/password
     ldap to drupal:
       base DNs
-      authname
-      email
+        e.g:
+        OU=Departments,OU=TalkPoint,DC=ad,DC=talkpoint,DC=com
+        CN=Users,DC=ad,DC=talkpoint,DC=com
+      authname, e.g. sAMAccountName
+      email attribute, e.g. mail
     ldap groups (2.x):
       attribute exists
       attribute in user entry
@@ -62,11 +66,14 @@ config (including):
       mappings
       only grant matching (default)
     strategy / mapping (1.x):
-      strategy
+      strategy (e.g. II.A., OU)
       mappings
-      use filtering
+        e.g.:
+        Engineering|engineer
+        Departments|employee
+      use filtering (default)
     more:
-      on logon
+      on logon (default)
       don't revoke (?)
       don't regrant (?)
       don't create

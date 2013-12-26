@@ -4,14 +4,24 @@ install:
     AllowOverride All
     add rewrites to apache config
 
+  consider https redirect, e.g.:
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^/?drupal/(.*) https://%{HTTP_HOST}/drupal/$1 [R,L]
+
   create database
 
+  SITEROOT="FILL THIS IN"
+  export SITEROOT
   cd /root
   wget http://ftp.drupal.org/files/projects/drupal-7.22.tar.gz
   tar xvzf drupal-7.22.tar.gz
-  mv drupal-7.22 SITEROOT
-  chown -R root:root SITEROOT
-  cd SITEROOT/sites/default
+  mv drupal-7.22/{*,.[a-z]*} "${SITEROOT}"
+  rmdir drupal-7.22
+  chown -R root:root "${SITEROOT}"
+  mkdir "${SITEROOT}/sites/all/modules/custom"
+  #chown www-data:www-data "${SITEROOT}/sites/all/modules/custom"
+  cd "${SITEROOT}/sites/default"
   cp default.settings.php settings.php
   chmod 777 .
   chmod 666 settings.php
@@ -22,41 +32,177 @@ install:
   chmod 644 settings.php
 
   crontab:
-    45 * * * * wget -O - -q -t 1 URLWITHKEY
+    45 * * * * wget -O - -q -t 1 --no-check-certificate URLWITHKEY
 
 modules:
   apt-get install drush
-  cd SITEROOT
+  cd "${SITEROOT}"
 
-  drush dis toolbar overlay dashboard
+  drush -y dis toolbar overlay dashboard
 
-  drush dl module_filter admin_menu devel fpa features strongarm \
-           advanced_help ctools views views_bulk_operations node_clone \
-           entityreference rules content_access
+  drush -y dl module_filter admin_menu devel fpa strongarm diff features \
+              advanced_help ctools views views_bulk_operations node_clone \
+              entity rules nodetype_access context date content_type_extras \
+              readonlymode
 
-  drush en module_filter admin_menu admin_menu_toolbar devel devel_generate \
-           fpa features strongarm advanced_help ctools views views_ui \
-           views_bulk_operations clone entity entityreference entity_token \
-           rules rules_admin content_access
+  drush -y en module_filter admin_menu admin_menu_toolbar devel \
+              devel_generate fpa strongarm diff features advanced_help \
+              ctools views views_ui views_bulk_operations clone entity \
+              entity_token rules rules_admin nodetype_access \
+              context date_api date date_all_day date_repeat \
+              date_repeat_field date_popup date_context date_views \
+              date_tools content_type_extras readonlymode
+
+  # the content_access module has issues with views
+  # (see https://drupal.org/node/2020453#comment-7755337);
+  # using nodetype_access instead for now
+  #drush -y dl content_access
+  #drush -y en content_access
+
+  # drush complains that there is no recommended release, so specify dev
+  drush -y dl skinr fusion acquia_prosper-7.x-1.x-dev
+  drush -y en skinr skinr_ui fusion_core acquia_prosper
+
+  drush -y dl page_theme
+  drush -y en page_theme
+
+  drush -y dl nice_menus
+  drush -y en nice_menus
+
+  drush -y dl menu_attributes
+  drush -y en menu_attributes
+
+  drush -y dl uniqueness unique_field
+  drush -y en uniqueness unique_field
+
+  drush -y dl token auto_entitylabel
+  drush -y en token auto_entitylabel
+
+  drush -y dl select_or_other
+  drush -y en select_or_other
+
+  drush -y dl computed_field
+  drush -y en computed_field
+
+  # use dev version for patches (?)
+  drush -y dl field_ipaddress-7.x-1.x-dev
+  drush -y en field_ipaddress
+
+  # use dev version for patches (?)
+  # [can use eva and embedded views instead of field_collection_table]
+  drush -y dl field_collection-7.x-1.x-dev field_collection_table
+  drush -y en field_collection field_collection_table
+
+  drush -y dl relation relation_add
+  drush -y en relation_endpoint relation relation_ui relation_dummy_field \
+              relation_add
+
+  drush -y dl eva
+  drush -y en eva
+
+  drush -y dl field_group
+  drush -y en field_group
+
+  # only enable while debugging or on dev sites
+  # you will also need the browser plugin(s):
+  # https://addons.mozilla.org/en-US/firefox/addon/firebug/
+  # https://addons.mozilla.org/en-US/firefox/addon/drupal-for-firebug/
+  # https://chrome.google.com/webstore/detail/drupal-for-chrome/imlijcpfmhmifofiihbofoamohkdbblc
+  drush -y dl drupalforfirebug
+  drush -y en drupalforfirebug drupalforfirebug_preprocess
+
+  #---
+
+  #subform
+  #page_manager
+
+  #restws -> restws, restws_basic_auth
+  #services, services_basic_auth
+
+  #replicate, replicate_field_collection
+
+  #---
+
+  #arrange_fields
+
+  #conditional_fields
+
+  #field_slideshow
+  #field_collection_list
+  #field_collection_tabs
+  #field_collection_deploy
 
   #panels
-  #eva
   #draggableviews
   #views_slideshow
   #views_accordion
   #globalredirect
   #term_merge
-  #uniqueness
-  #unique_field
-  #page_theme
   #content_theme
 
-  #skinr -> skinr, skinr_ui
-  #fusion
-  #acquia_prosper -> color, fluid, turn off blocks on big views
+  #pathauto
+
+  #relation_unique
+  #better_exposed_filters
+  #(entityreference)
+
+patches:
+  field_collection:
+      cd /root
+      wget https://drupal.org/files/field_collection-add-label-field-1617792-17.patch
+      cd -
+      cd "${SITEROOT}/sites/all/modules/field_collection"
+      patch -p1 < /root/field_collection-add-label-field-1617792-15.patch
+      cd -
+
+  field_ipaddress:
+      cd /root
+      wget https://drupal.org/files/field_ipaddress_field_widget_form.patch
+      wget https://drupal.org/files/field_ipaddress_field_parents-3.patch
+      cd -
+      cd "${SITEROOT}/sites/all/modules/field_ipaddress"
+      patch -p0 < /root/field_ipaddress_field_widget_form.patch
+      patch -p1 < /root/field_ipaddress_field_parents-3.patch
+      cd -
 
 config:
+  status report:
+    rebuild perms
+    apply db updates
+    run cron
+    check for updates
   turn on clean URLs
   perms for anon users
   disable visitor account creation
-  #uniqueness (search), title, description, message
+  blocks: system help -> sidebar first, above login (?)
+          user menu -> sidebar first, bottom (?)
+
+  relation add: turn off block, check perms
+
+  acquia prosper: set default, color, fluid, [turn off blocks on big views]???
+
+  uniqueness:
+      (search)
+      title: "Similar titles"
+      description: "Are you duplicating an existing entry?"
+      message: "Success! No similar titles found."
+
+  nice menus: (number), speed
+               block: menu, style: down, region
+
+  content types -> defaults
+      submission: turn on save and new, save and edit
+      extra: form buttons on node edit form
+
+perms:
+  find "${SITEROOT}" -nouser -print0 | xargs -0 chown root
+  find "${SITEROOT}" -nogroup -print0 | xargs -0 chgrp root
+
+problems:
+  node clone duplicates _refs_ to relations, field collections
+  (node clone doesn't properly clone date fields?)
+  empty field collections still display labels [workaround: use view, eva]
+  features: error messages (incl. relation_endpoint overrides???), sub-FCs?,
+            menus, page theme, blocks, taxonomy IDs (-> perms),
+            role IDs (-> e.g. rules), etc.
+            data: vocab terms, users
