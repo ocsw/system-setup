@@ -1,0 +1,112 @@
+GENERAL:
+--------
+
+view description
+
+title:
+  page title
+
+format:
+  table
+  settings:
+    show empty text
+
+fields:
+  (relationship), (label), links
+  add:
+    bulk ops: modify
+    [exclude multi-valued relations, long texts]
+  arrange
+
+filters:
+  expose, label, expose op, allow multiple, (relationship)
+  dropdown, hierarchy
+  [exclude long texts, (unnecessary fields)]
+  arrange
+
+sort:
+  expose, (relationship), (label)
+  add:
+    post date
+    updated date
+    updated/commented date
+    last comment time
+    comment count
+  [exclude multi-valued fields (unless you want duplicates), long texts]
+  arrange
+
+page:
+  path
+  (add path to page theme list)
+  menu: normal, title, main
+  access: role
+
+header:
+  global summary, even if none
+
+pager:
+  50
+
+relationships:
+  name, target
+
+exposed form:
+  style settings:
+    reset button
+
+
+CHANGES FOR EMBEDDING:
+----------------------
+
+create on all content, no sort, no page, no block
+create EVA Field
+fix field display order, teaser visibility
+(add hidden relation add field for editing)
+
+fields:
+  no bulk ops
+  all via rel
+  for relations in FCs, multiple: unordered list (depending on theme?)
+
+filter:
+  none
+
+sort:
+  (via rel) title, asc, not exposed
+  no date stuff
+
+entity content:
+  entity type
+  bundles
+  no title
+
+header:
+  text area, even if no result, e.g. <strong>Ports:</strong>
+
+pager:
+  no pager, display all
+
+context:
+  default content ID, validate incl. access
+
+relationships:
+  require
+
+
+CHANGES FOR OVERALL VIEWS:
+--------------------------
+
+create on all content, no sort
+
+fields:
+  no bulk ops
+  add type
+  for main column: one row per value
+
+filter:
+  type: unexposed, with relevant types
+  type: exposed, with relevant types, limit to selected
+
+sort:
+  start with main field for view, title, type
+  no date stuff

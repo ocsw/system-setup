@@ -1,0 +1,56 @@
+general:
+  vocabularies and terms
+  content types
+  relation types
+  type views
+  embedded views for relations, FCs
+  overall views
+  relation view
+  (vocabulary views?)
+  menus
+  rules
+    new/updated/deleted:
+      content
+      vocabulary
+      term
+      relation
+      comment
+  users, perms, roles (incl. order)
+  themes
+
+content types:
+  note reqs, uniques, rels, rel/embedded, FCs, FCs/embedded, hidden,
+       hidden computed
+  auto_entitylabel example:
+    <?php print(long2ip($entity->field_ip[$language][0]['start']) . '-' .
+                $entity->field_tcp_port[$language]['0']['value']); ?>
+  add to:
+    relations
+    field collections (autolabel code)
+    views
+    embedded views
+    overall views
+    menus
+    rules
+    perms
+
+perms example, with private content types:
+  [groups = employee, engineer; documenter is separate (used as extra flag)]
+  comment:
+    admin -> documenter
+    view, post, skip, edit own -> groups
+  filter:
+    use filtered html -> groups
+  node:
+    view published content -> groups
+    (types): create, edit/delete own/any -> specific groups, documenter
+  relation:
+    view, create, edit, delete: specific groups, documenter
+    [note: no per-type granularity;
+     even without these, can add/edit/delete using relation add field,
+     and see in nodes or with a view if allowed]
+  relation add:
+    endpoint autocomplete -> all (?)
+  search:
+    use: all
+    use advanced: users
