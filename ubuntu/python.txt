@@ -1,0 +1,44 @@
+# as root:
+
+umask 022
+
+cd /root
+apt-get remove python-setuptools
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+python2 ez_setup.py
+python3 ez_setup.py
+rm ez_setup.py
+cd -
+
+# from a source directory
+python2 ./setup.py alias --global-config pypi register sdist bdist upload
+python3 ./setup.py alias --global-config pypi register sdist bdist upload
+
+easy_install-2.7 pip
+easy_install-3.3 pip
+
+pip-2.7 install setuptools-git
+pip-3.3 install setuptools-git
+
+pip-2.7 install virtualenv
+pip-2.7 install virtualenvwrapper
+pip-2.7 install wheel
+pip-3.3 install virtualenv
+pip-3.3 install virtualenvwrapper
+pip-3.3 install wheel
+
+pip-2.7 install pep8
+pip-3.3 install pep8
+
+apt-get remove python-mysql.connector
+pip-2.7 install mysql-connector-python
+pip-3.3 install mysql-connector-python
+
+apt-get remove python-psycopg2 python-psycopg2-doc python-psycopg2-dbg
+apt-get remove python3-psycopg2 python3-psycopg2-dbg
+apt-get install libpq-dev
+pip-2.7 install psycopg2
+pip-3.3 install psycopg2
+
+pip-2.7 install phpserialize
+pip-3.3 install phpserialize
