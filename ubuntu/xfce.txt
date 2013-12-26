@@ -12,8 +12,9 @@ Panel:
     Items:
       applications menu (no button title)
       launchers (drag most from menu):
-        terminal, gedit, mixer, rhythmbox, k3b, pidgin, spark, skype,
-        keepnote, thunderbird, firefox, chromium
+        terminal, bluefish, gedit, mixer, rhythmbox, k3b, pidgin, spark,
+        skype, keepnote, thunderbird, firefox, chromium, remmina, ipython,
+        ipython3
           -> terminal command:
                gnome-terminal -e 'env NEWTERM=yes LIGHTBG=yes bash -li'
           -> spark icon:
@@ -53,6 +54,7 @@ Removable Drives:
 Session:
   General: save, prompt
   Autostart: turn off backup, evolution, ubuntu one
+             gnome-keyring-daemon --start --components=secrets,pkcs11,ssh
 Notifications:
   disappear: 2 sec?
 Printing: CUPS?

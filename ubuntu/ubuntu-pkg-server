@@ -4,6 +4,7 @@ php5
 php5-curl
 php5-gd
 php5-gmp
+php5-json
 php5-mcrypt
 php5-mysql
 php5-pgsql

@@ -1,6 +1,7 @@
 acroread
 audacity
 azureus
+bluefish
 chromium-browser
 cups
 dia
@@ -32,6 +33,8 @@ graphviz
 graphviz-doc
 gv
 inkscape
+ipython-qtconsole
+ipython3-qtconsole
 k3b
 leafpad
 libmysql-java

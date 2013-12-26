@@ -9,11 +9,14 @@ unix-common/account-setup.txt to be able to pull repos
   see ubuntu-sources.list; replace RELEASE with precise, quantal, etc.
 
 apt-get update
+(may need, e.g.:
+  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 16126D3A3E5C1192
+and rerun)
 apt-get install `cat ubuntu-pkg-common`
 apt-get install `cat ubuntu-pkg-desktop`  # if relevant
 apt-get install `cat ubuntu-pkg-server`  # if relevant
 
-see also ubuntu-opt-*, ubuntu-pkg-q
+see also ubuntu-opt-*, ubuntu-pkg-q, python.txt
 
 some of the above will prompt for settings/questions:
   postfix (config; see below)
@@ -43,6 +46,7 @@ for desktop:
     (rm googleearth*.deb)
 
 apt-get upgrade
+apt-get install linux-generic linux-headers-generic linux-image-generic
 apt-get autoremove
 
 
@@ -50,8 +54,8 @@ apt-get autoremove
 common:
 -------
 
-check clock
-accounts, incl. wheel, unix-common/account-setup.txt, dotfiles
+clock, ntpd
+accounts, incl. sudo, unix-common/account-setup.txt, dotfiles, perms
 network (fqdn, ip/nm/gw*, dns*, /etc/hosts, dhcp)
   * for desktop, use NetworkManager; for server, /etc/network/interfaces:
 	auto eth0
@@ -65,12 +69,26 @@ network (fqdn, ip/nm/gw*, dns*, /etc/hosts, dhcp)
 		dns-nameservers 192.168.1.1 71.250.0.12 71.242.0.12
 		dns-search lan
 firewall
+  add scripts to /root/bin
+  add ~/bin/ to path (e.g. in /etc/login.defs)
+  cp /root/bin/iptablesrestore.sh /etc/network/if-pre-up.d/iptablesrestore
+  chmod 700 /etc/network/if-pre-up.d/iptablesrestore
+  add rules and run /root/bin/iptablessave.sh
+fwknop
 vpn
 automatic updates
+  /etc/apt/apt.conf.d/50unattended-upgrades:  
+    Unattended-Upgrade::Allowed-Origins {
+            "${distro_id}:${distro_codename}-security";
+    };
+    Unattended-Upgrade::Mail "root";
+  /etc/apt/apt.conf.d/20auto-upgrades:
+    APT::Periodic::Unattended-Upgrade "1";
 filesystems
 move/symlink /data/{home,mail,mysql,www}
 (reorder /etc/password, shadow, group?)
-postfix config
+postfix config, aliases
+(update apparmor for home?)
 git config --global color.ui true
 git config --global user.name "foo bar"
 git config --global user.email foo@bar.com
@@ -81,7 +99,50 @@ aeolus backups
 server:
 -------
 
-configure apache, mysql, php
+apache:
+  cd /etc/apache2/mods-enabled
+  ln -s ../mods-available/ssl.* .
+  ln -s ../mods-available/rewrite.load .
+  cd ../conf.d
+  sed -i.orig \
+      -e 's/ServerTokens OS/#ServerTokens OS/' \
+      -e 's/#ServerTokens Full/ServerTokens Prod/' \
+      -e 's/#ServerSignature Off/ServerSignature Off/' \
+      -e 's/ServerSignature On/#ServerSignature On/'
+  cd ../sites-available
+  sed -i.orig 's|/var/www|/data/www|g' default
+  sed -i.orig 's|/var/www|/data/www|g' default-ssl
+  service apache2 restart
+  cd ..
+  mkdir ssl
+  chmod 700 ssl
+  cd ssl
+  openssl genrsa -out server.key 2048
+  openssl req -new -key server.key -out server.csr
+  openssl x509 -req -days 3650 -in server.csr -signkey server.key \
+          -out server.crt
+  chmod go-rwx server.{key,csr,crt}
+  cd ../sites-available
+  # configure sites, incl. logs, certs, ciphers
+  cd ../sites-enabled
+  ln -s ../sites-available/{SITES} .
+mysql
+  use mysql;
+  drop database test;
+  delete from user where user='';
+  delete from db where db like 'test%';
+  flush privileges;
+  ---
+  may need to change bind-address
+  memory tuning
+  replication
+php
+  expose_php off
+  date.timezone
+  may need to increase/set memory_limit, max_execution_time, etc.
+  error_log?
+  file_uploads off?
+  allow_url_fopen off?
 update apparmor for moved services
 (startup)
 
@@ -91,6 +152,9 @@ desktop:
 --------
 
 xfce: see xfce.txt
+consider:
+  echo "export LIBOVERLAY_SCROLLBAR=0" > \
+    /etc/X11/Xsession.d/99disable-overlay-scrollbars
 monitors
 printing
 ff, tb
