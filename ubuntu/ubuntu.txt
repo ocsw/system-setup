@@ -77,7 +77,7 @@ firewall
 fwknop
 vpn
 automatic updates
-  /etc/apt/apt.conf.d/50unattended-upgrades:  
+  /etc/apt/apt.conf.d/50unattended-upgrades:
     Unattended-Upgrade::Allowed-Origins {
             "${distro_id}:${distro_codename}-security";
     };
