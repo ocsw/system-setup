@@ -92,6 +92,7 @@ postfix config, aliases
 git config --global color.ui true
 git config --global user.name "foo bar"
 git config --global user.email foo@bar.com
+git config --global push.default simple
 aeolus backups
 
 
