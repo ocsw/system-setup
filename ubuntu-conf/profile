@@ -1,0 +1,39 @@
+if [ -d /etc/profile.d ]; then
+  for i in /etc/profile.d/*.sh; do
+    if [ -r $i ]; then
+      . $i
+    fi
+  done
+  unset i
+fi
+
+umask 077
+
+PATH="$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games"
+export PATH
+
+BLOCKSIZE=1k
+export BLOCKSIZE
+
+PAGER=more
+export PAGER
+
+# aliases should be set in user dotfiles, but this will at least work in 
+# login shells
+alias pico='pico -z'
+alias nano='nano -z'
+EDITOR='nano -z'
+VISUAL='nano -z'
+export EDITOR
+export VISUAL
+
+#AUTOCONF_VERSION=2.62
+#AUTOMAKE_VERSION=1.9
+#export AUTOCONF_VERSION
+#export AUTOMAKE_VERSION
+
+if [ -n "$PS1" ]; then
+  MAIL="/var/mail/$USER"  # includes notification in most shells
+  export MAIL
+  [ -t 0 ] && mesg n
+fi
