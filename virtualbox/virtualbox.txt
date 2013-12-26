@@ -9,10 +9,9 @@ as root:
   apt-get install virtualbox virtualbox-dkms \
   virtualbox-guest-additions-iso lsb-base
 
-  (get extpack)
+  wget http://download.virtualbox.org/virtualbox/4.2.10/Oracle_VM_VirtualBox_Extension_Pack-4.2.10-84104.vbox-extpack
   VBoxManage extpack install \
-  Oracle_VM_VirtualBox_Extension_Pack-4.1.12-77245.vbox-extpack 
-
+    Oracle_VM_VirtualBox_Extension_Pack-4.2.10-84104.vbox-extpack
   pico /etc/group  # add to vboxusers
 
   mkdir -p /data/vm/images
@@ -25,14 +24,14 @@ as root:
 
 VBoxManage setproperty machinefolder ~/.VirtualBox/vm
 
-VBoxManage createvm --name VMNAME --ostype Ubuntu_64 --register
+VBoxManage createvm --name "${VMNAME}" --ostype Ubuntu_64 --register
 # or e.g. --ostype FreeBSD_64
 
-mv .VirtualBox/vm/VMNAME/ /data/vm/
-ln -s /data/vm/VMNAME .VirtualBox/vm/
+mv ".VirtualBox/vm/${VMNAME}/" /data/vm/
+ln -s "/data/vm/${VMNAME}" .VirtualBox/vm/
 
 # entries below empty \ are defaults (at least, on this system)
-VBoxManage modifyvm VMNAME \
+VBoxManage modifyvm "${VMNAME}" \
   --memory 3072 \
   --cpus 2 \
   --rtcuseutc on \
@@ -57,29 +56,52 @@ VBoxManage modifyvm VMNAME \
   --usb on \
   --usbehci on
 
-# for FreeBSD, --nictype1 82540EM
-# for server, --nic1 bridged --bridgeadapter1 eth0
+# for FreeBSD:
+VBoxManage modifyvm "${VMNAME}" --nictype1 82540EM
 
-VBoxManage usbfilter add 0 --target VMNAME --name HL-1440 \
+# for a server:
+VBoxManage modifyvm "${VMNAME}" --nic1 bridged --bridgeadapter1 eth0
+
+# if not compiled with VNC:
+VBoxManage modifyvm "${VMNAME}" \
+  --vrde on \
+  --vrdeport 3389 \
+  --vrdeauthtype external \
+  --vrdemulticon on
+
+VBoxManage usbfilter add 0 --target "${VMNAME}" --name HL-1440 \
   --vendorid 04F9 --productid 000D
 
-VBoxManage createhd --filename /data/vm/images/VMNAME.vdi --size 50000
+VBoxManage storagectl "${VMNAME}" --name satactl --add sata --hostiocache off
 
-VBoxManage storagectl VMNAME --name satactl --add sata --hostiocache off
+# for file storage:
+VBoxManage createhd --filename "/data/vm/images/${VMNAME}.vdi" --size 50000
+VBoxManage storageattach "${VMNAME}" --storagectl satactl \
+  --port 0 --device 0 --type hdd --medium "/data/vm/images/${VMNAME}.vdi"
 
-VBoxManage storageattach VMNAME --storagectl satactl \
-  --port 0 --device 0 --type hdd --medium /data/vm/images/VMNAME.vdi
+# for raw device storage:
+as root:
+  VBoxManage internalcommands createrawvmdk \
+    -filename "/data/vm/${VMNAME}/${VMNAME}.vmdk" \
+    -rawdisk "/dev/mapper/$(hostname)-${VMNAME}vm"
+  chown "${VMUSER}:${VMUSER}" "/data/vm/${VMNAME}/${VMNAME}.vmdk"
+  chown "${VMUSER}" "/dev/mapper/$(hostname)-${VMNAME}vm"
+VBoxManage storageattach "${VMNAME}" --storagectl satactl \
+  --port 0 --device 0 --type hdd --medium "/data/vm/${VMNAME}/${VMNAME}.vmdk"
 
-VBoxManage storageattach VMNAME --storagectl satactl \
+VBoxManage storageattach "${VMNAME}" --storagectl satactl \
   --port 1 --device 0 --type dvddrive \
-  --medium ~/ubuntu-12.04-alternate-amd64.iso
+  --medium ~/ubuntu-13.04-server-amd64.iso
 
-VBoxHeadless --startvm VMNAME --vrde=off -n -m PORT -o PASSWORD &
+# if compiled with VNC:
+VBoxHeadless --startvm "${VMNAME}" --vrde=off -n -m PORT -o PASSWORD &
+# otherwise:
+VBoxHeadless --startvm "${VMNAME}" &
 
 (do install)
 
 # for Ubuntu guest
-VBoxManage storageattach VMNAME --storagectl satactl \
+VBoxManage storageattach "${VMNAME}" --storagectl satactl \
   --port 1 --device 0 --type dvddrive --medium \
   /usr/share/virtualbox/VBoxGuestAdditions.iso
 
@@ -106,17 +128,19 @@ in guest, as root (for Ubuntu):
 # or
 # http://www.freebsd.org/doc/en/books/handbook/virtualization-guest.html
 
-VBoxManage storageattach VMNAME --storagectl satactl \
+VBoxManage storageattach "${VMNAME}" --storagectl satactl \
   --port 1 --device 0 --type dvddrive --medium none
 
 as root:
   # SHORTNAME: abbreviation, spaces might cause problems (can use hostname)
   # LONGNAME: actual vbox name
-  sed -e 's/SHORTNAME/VMNAME/' -e 's/LONGNAME/VMNAME/' -e 's/USERNAME/zephyr/' \
-    < virtualbox-SHORTNAME > /etc/init.d/virtualbox-VMNAME
-  chown root:root /etc/init.d/virtualbox-VMNAME
-  chmod 700 /etc/init.d/virtualbox-VMNAME  # could contain password
-  update-rc.d virtualbox-VMNAME defaults 21 19  # virtualbox is 20
+  sed -e "s/SHORTNAME/${VMNAME}/" \
+      -e "s/LONGNAME/${VMNAME}/" \
+      -e "s/USERNAME/${VMUSER}/" \
+    < virtualbox-SHORTNAME > "/etc/init.d/virtualbox-${VMNAME}"
+  chown root:root "/etc/init.d/virtualbox-${VMNAME}"
+  chmod 700 "/etc/init.d/virtualbox-${VMNAME}"  # could contain password
+  update-rc.d "virtualbox-${VMNAME}" defaults 21 19  # virtualbox is 20
 
 ---
 

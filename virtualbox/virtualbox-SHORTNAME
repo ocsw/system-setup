@@ -22,15 +22,19 @@ VM_NAME="LONGNAME"  # must match registered name in VirtualBox
 
 # command to start this VM
 start_vm () {
-  #sudo -H -u "$VM_OWNER" "$MANAGE_CMD" startvm "$VM_NAME" -type vrdp \
-  #     > /dev/null
-
+  # if VirtualBox was compiled with VNC support:
+  #
   # to use the built-in VNC, we have to use VBoxHeadless;
   # because it doesn't exit, we can't properly check for success this way,
   # so we might as well save the output with screen
-  sudo -H -u "$VM_OWNER" screen -dmS "$NAME" \
-       "$HEADLESS_CMD" --startvm "$VM_NAME" --vrde=off -n
-       # -m PORT -o 'PASSWORD'
+  #sudo -H -u "$VM_OWNER" screen -dmS "$NAME" \
+  #     "$HEADLESS_CMD" --startvm "$VM_NAME" --vrde=off -n
+  #     # -m PORT -o 'PASSWORD'
+
+  # otherwise:
+  sudo -H -u "$VM_OWNER" "$MANAGE_CMD" startvm "$VM_NAME" -type vrdp \
+       > /dev/null
+
 }
 
 . /etc/init.d/virtualbox-vm
