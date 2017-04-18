@@ -1,14 +1,7 @@
 # --- setup ---
 
 # stop if shell is non-interactive
-#
-# unnecessary for non-login shells (bash won't read .bashrc if non-interactive)
-# but we also source this file from .bash_profile, so allow for 
-# non-interactive login shells
-#
-# note: Cygwin apparently makes all login shells interactive, even things like
-# 'bash -lc ls' (?!)
-#
+# (note: bash 4 reads .bashrc even if non-interactive)
 [[ -z "$PS1" ]] && return
 
 # what OS are we on?
@@ -383,6 +376,4 @@ gc() {
 
 # --- machine-specific settings, overrides, aliases, etc. ---
 
-if [[ -e ~/.bashrc.local ]]; then
-  . ~/.bashrc.local
-fi
+[[ -e ~/.bashrc.local ]] && . ~/.bashrc.local
