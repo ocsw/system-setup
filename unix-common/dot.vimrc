@@ -138,3 +138,12 @@ let g:CommandTFileScanner='watchman'
 "set pastetoggle=<leader>p
 "set cursorline
 
+
+" *************
+" *** local ***
+" *************
+
+let s:vimrc_local = $HOME . "/.vimrc.local"
+if filereadable(s:vimrc_local)
+  execute "source " . s:vimrc_local
+endif
