@@ -10,7 +10,7 @@
 # http://www.glump.net/howto/virtualbox_as_a_service
 # Based on /etc/init.d/skeleton from Ubuntu 8.04. Updated for Ubuntu 9.10.
 
-# rewritten by Daniel Malament <daniel.j.malament@gmail.com>
+# rewritten by Danielle Malament <danielle.malament@gmail.com>
 
 # Do NOT "set -e"
 

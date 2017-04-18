@@ -7,8 +7,8 @@ server:
 initial management account (elsewhere):
   if git hasn't been configured already:
     git config --global color.ui true
-    git config --global user.name "Daniel Malament"
-    git config --global user.email daniel.j.malament@gmail.com
+    git config --global user.name "Danielle Malament"
+    git config --global user.email danielle.malament@gmail.com
 
   generate key and upload to server (name USERNAME.pub)
 

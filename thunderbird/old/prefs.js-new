@@ -8,7 +8,7 @@ user_pref("ldap_2.servers.ISPrime.filename", "abook-1.mab");
 user_pref("mail.account.account1.server", "server1");
 user_pref("mail.accountmanager.accounts", "account1");
 user_pref("mail.accountmanager.defaultaccount", "account1");
-user_pref("mail.server.server1.directory", "/home/danielm/.thunderbird/main/Mail/smart mailboxes");
+user_pref("mail.server.server1.directory", "/home/danielle/.thunderbird/main/Mail/smart mailboxes");
 user_pref("mail.server.server1.directory-rel", "[ProfD]Mail/smart mailboxes");
 user_pref("mail.server.server1.hidden", true);
 user_pref("mail.server.server1.hostname", "smart mailboxes");
