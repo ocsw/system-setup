@@ -13,6 +13,11 @@ cat >> ~/.ssh/config <<-EOF
 	EOF
 ssh git@git.bluetiger.net
 
+### for each personal repo:
+cd $REPO
+git config user.name "Danielle Malament"
+git config user.email danielle.malament@gmail.com
+
 ### vim
 mkdir ~/.vim
 cd ~/.vim
