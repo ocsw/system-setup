@@ -1,0 +1,168 @@
+System:
+  General:
+    Default browser
+  Desktop:
+    Wallpaper
+    Screen saver
+  Dock:
+    On left
+    Min to app
+    Autohide
+  Security:
+    Filevault on
+  Displays:
+    Night shift at night
+  Energy saver:
+    Change time?
+  Keyboard:
+    Control strip - no Siri
+    Caps lock to esc
+    Text - remove omw
+    (Shortcuts)
+  Track pad:
+    Scroll dir
+  *Printers
+  Touch ID
+  Siri off
+  Date & time:
+    Show date
+
+WiFi
+
+Dropbox
+
+Logitech control center
+
+Android file transfer
+
+uBar:
+  General:
+    Display
+  No window grouping
+  App order: manual
+  App inclusions: order (see bottom)
+  App exclusions
+
+Hammerspoon:
+  Launch at login
+  No dock
+  No crash data
+  Accessibility
+  *Lock screen binary
+  *Config file
+  Exclude from ubar
+
+Moom:
+  General:
+    Start on launch
+  Custom:
+    Add
+    Arrange windows
+    Trigger on 1 / 2 displays
+    Don't ignore obstructed
+    Save snapshot
+    Hotkey
+  Updates:
+    Auto check
+  Accessibility
+  License
+  Exclude from ubar
+
+Witch:
+  Actions:
+    Cycle windows
+    Sort by app act, window act
+    List down
+    No apps w/o windows
+    Key for reverse
+    Second block: remove or no menu
+  Advanced:
+    Show on display w/mouse
+    Spring load?
+    No release to dismiss?
+    Do not list: ubar
+
+ClipMenu:
+  Launch on login
+
+Firefox:
+  Default
+  Bunny
+  No logins
+  Keys
+  Wheel and keys
+
+Flash
+
+Outlook:
+  Mark as read after 0 secs
+  Sig
+  Rules
+  Work hours
+
+Adium:
+  Accounts
+  Message font: l.g. 12
+  Sound set: none
+  Quit confirm always
+  Multiple window confirm
+  Group order
+
+Franz
+
+Textual
+
+Bluefish
+
+Atom
+
+Omnigraffle
+
+Monodraw
+
+*XnViewMP
+
+iTerm2:
+  Colors
+
+Homebrew
+Tree
+Wget
+
+Git key, ssh config
+
+Dotfiles
+
+Recompiled mosh client
+
+Dock order (all keep in dock):
+  Finder
+  Dashboard
+  System Preferences
+  Moom
+  Cisco AnyConnect
+  Adium
+  Franz
+  Textual
+  Outlook
+  Safari
+  Chrome
+  Firefox
+  iTerm2
+  Atom
+  Bluefish
+  IntelliJ
+  XnviewMP
+  Omnigraffle
+
+uBar App Order:
+  Cisco AnyConnect
+  Finder
+  Adium
+  Franz
+  Textual
+  Outlook
+  Firefox
+  iTerm2
+  Atom
+  Bluefish
