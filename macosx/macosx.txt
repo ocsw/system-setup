@@ -16,12 +16,12 @@ System:
     Change time?
   Keyboard:
     Control strip - no Siri
-    Caps lock to esc
+    Caps lock to cmd
     Text - remove omw
     (Shortcuts)
   Track pad:
     Scroll dir
-  *Printers
+  Printers
   Touch ID
   Siri off
   Date & time:
@@ -48,8 +48,10 @@ Hammerspoon:
   No dock
   No crash data
   Accessibility
-  *Lock screen binary
-  *Config file
+  Lock screen binary:
+    https://www.isi.edu/~calvin/mac-lockscreen.htm
+    clang -framework Foundation main.m -o lockscreen
+  Config file
   Exclude from ubar
 
 Moom:
@@ -75,6 +77,7 @@ Witch:
     List down
     No apps w/o windows
     Key for reverse
+    Show in menu
     Second block: remove or no menu
   Advanced:
     Show on display w/mouse
@@ -95,22 +98,35 @@ Firefox:
 Flash
 
 Outlook:
-  Mark as read after 0 secs
-  Sig
+  Reading:
+    Mark as read after 0 secs
+  Sig:
+    (Open html file in browser, copy all, paste)
+    Use for new, replies
   Rules
-  Work hours
+  Calendar:
+    Work hours
 
 Adium:
   Accounts
-  Message font: l.g. 12
-  Sound set: none
-  Quit confirm always
-  Multiple window confirm
-  Group order
+  General:
+    Check for updates
+  Messages
+    Font: l.g. 12
+  Events:
+    Sound set: none
+  Advanced:
+    Confirmations:
+      Quit confirm always
+      Multiple window confirm
+  Group order in buddy list
 
 Franz
 
-Textual
+Textual:
+  Account (General, Identity)
+  Reconnect on disconnect?
+  Disable general event messages for each channel
 
 Bluefish
 
@@ -119,8 +135,6 @@ Atom
 Omnigraffle
 
 Monodraw
-
-*XnViewMP
 
 iTerm2:
   Colors
@@ -145,14 +159,12 @@ Dock order (all keep in dock):
   Franz
   Textual
   Outlook
-  Safari
   Chrome
   Firefox
   iTerm2
   Atom
   Bluefish
   IntelliJ
-  XnviewMP
   Omnigraffle
 
 uBar App Order:
@@ -166,3 +178,5 @@ uBar App Order:
   iTerm2
   Atom
   Bluefish
+
+Moom window placement
