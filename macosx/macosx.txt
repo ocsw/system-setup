@@ -156,8 +156,8 @@ Dock order (all keep in dock):
   Moom
   Cisco AnyConnect
   Adium
-  Franz
   Textual
+  Franz
   Outlook
   Chrome
   Firefox
@@ -171,8 +171,8 @@ uBar App Order:
   Cisco AnyConnect
   Finder
   Adium
-  Franz
   Textual
+  Franz
   Outlook
   Firefox
   iTerm2
