@@ -1,0 +1,39 @@
+  *cut
+  *copy
+  *paste
+  *undo
+  *redo
+  *select all
+
+    close tab
+    undo close tab
+    reload
+    full reload
+    new tab
+    history
+    bookmark
+    bookmark all
+    save
+    source
+    info
+    print
+    url
+    downloads
+    find
+    find again
+    zoom reset
+  (zoom in x2)
+  (zoom out)
+    new window
+    new private window
+    show bookmarks
+    show all bookmarks
+    home
+    back
+    forward
+
+    remove quit
+ctrl-`
+ctrl-g
+
+    wheel/mod
