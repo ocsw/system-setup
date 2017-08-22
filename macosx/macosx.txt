@@ -62,7 +62,7 @@ Moom:
     Arrange windows
     Trigger on 1 / 2 displays
     Don't ignore obstructed
-    Save snapshot
+    Save snapshots
     Hotkey
   Updates:
     Auto check
@@ -128,6 +128,8 @@ Textual:
   Reconnect on disconnect?
   Disable general event messages for each channel
 
+Workplace Chat
+
 Bluefish
 
 Atom
@@ -156,8 +158,9 @@ Dock order (all keep in dock):
   Moom
   Cisco AnyConnect
   Adium
-  Franz
   Textual
+  Franz
+  Workplace Chat
   Outlook
   Chrome
   Firefox
@@ -171,8 +174,9 @@ uBar App Order:
   Cisco AnyConnect
   Finder
   Adium
-  Franz
   Textual
+  Franz
+  Workplace Chat
   Outlook
   Firefox
   iTerm2
