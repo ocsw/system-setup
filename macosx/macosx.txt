@@ -87,6 +87,11 @@ Witch:
 
 ClipMenu:
   Launch on login
+  Snippets
+
+Itsycal
+  Launch at login
+  Outline icon
 
 Firefox:
   Default
