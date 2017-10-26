@@ -131,7 +131,9 @@ Franz
 Textual:
   Account (General, Identity)
   Reconnect on disconnect?
-  Disable general event messages for each channel
+  Preferences:
+    Style:
+      No general event messages
 
 Workplace Chat
 
