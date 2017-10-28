@@ -23,6 +23,11 @@ System:
     Scroll dir
   Printers
   Touch ID
+  Sharing:
+    Computer Name
+    Local Hostname
+    no dynamic global hostname
+    -> sudo scutil --set HostName name
   Siri off
   Date & time:
     Show date
