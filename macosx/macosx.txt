@@ -23,6 +23,11 @@ System:
     Scroll dir
   Printers
   Touch ID
+  Sharing:
+    Computer Name
+    Local Hostname
+    no dynamic global hostname
+    -> sudo scutil --set HostName name
   Siri off
   Date & time:
     Show date
@@ -62,7 +67,7 @@ Moom:
     Arrange windows
     Trigger on 1 / 2 displays
     Don't ignore obstructed
-    Save snapshot
+    Save snapshots
     Hotkey
   Updates:
     Auto check
@@ -87,6 +92,11 @@ Witch:
 
 ClipMenu:
   Launch on login
+  Snippets
+
+Itsycal
+  Launch at login
+  Outline icon
 
 Firefox:
   Default
@@ -126,7 +136,11 @@ Franz
 Textual:
   Account (General, Identity)
   Reconnect on disconnect?
-  Disable general event messages for each channel
+  Preferences:
+    Style:
+      No general event messages
+
+Workplace Chat
 
 Bluefish
 
@@ -158,6 +172,7 @@ Dock order (all keep in dock):
   Adium
   Textual
   Franz
+  Workplace Chat
   Outlook
   Chrome
   Firefox
@@ -173,6 +188,7 @@ uBar App Order:
   Adium
   Textual
   Franz
+  Workplace Chat
   Outlook
   Firefox
   iTerm2
