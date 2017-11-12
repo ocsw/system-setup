@@ -94,9 +94,21 @@ ClipMenu:
   Launch on login
   Snippets
 
-Itsycal
+Itsycal:
   Launch at login
   Outline icon
+
+Yubiswitch:
+  No unlock on sleep
+  Auto off
+  Preferences:
+    Hotkey (shift-cmd-Y)
+    ProductID
+      ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idProduct
+    (VendorID)
+      ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idVendor
+    Switch off after 5 sec
+    Start on login
 
 Firefox:
   Default
