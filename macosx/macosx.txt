@@ -163,6 +163,8 @@ Dotfiles
 
 Recompiled mosh client
 
+(iTunes, Office, Steam, Zoom)
+
 Dock order (all keep in dock):
   Finder
   Dashboard
