@@ -1,6 +1,8 @@
 System:
   General:
     Default browser
+    Ask to keep changes?
+    No close windows?
   Desktop:
     Wallpaper
     Screen saver
@@ -11,30 +13,40 @@ System:
   Security:
     Filevault on
   Displays:
+    Arrangement
     Night shift at night
   Energy saver:
     Change time?
   Keyboard:
-    Control strip - no Siri
+    Control strip - no Siri, add lock, screenshot (L of media)
     Caps lock to cmd
     Text - remove omw
+    Turn off corrections?
     (Shortcuts)
   Track pad:
     Scroll dir
   Printers
-  Touch ID
+  App store:
+    Auto check, dl, app/system install
   Sharing:
     Computer Name
     Local Hostname
     no dynamic global hostname
     -> sudo scutil --set HostName name
+  Touch ID
+  Users
+    Icon
+    Verify startup items
   Siri off
   Date & time:
     Show date
+  (lock all)
 
 WiFi
 
 Dropbox
+Box
+Google backups
 
 Logitech control center
 
