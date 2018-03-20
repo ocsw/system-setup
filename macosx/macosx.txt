@@ -74,6 +74,7 @@ Hammerspoon:
 Moom:
   General:
     Start on launch
+    Don't show prefs on launch
   Custom:
     Add
     Arrange windows
@@ -176,6 +177,7 @@ Monodraw
 
 iTerm2:
   Colors
+  Scroll in interactive
 
 Homebrew
 Tree
