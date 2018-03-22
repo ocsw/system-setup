@@ -7,6 +7,7 @@ No passwords
 Ask where to save
 
 Extensions:
+  Password Alert
   OneNote Web Clipper
   Awesome Screenshot
     no shortcuts
