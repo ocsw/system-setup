@@ -40,7 +40,7 @@ System:
   Siri off
   Date & time:
     Show date
-  (lock all)
+  (lock all except network)
 
 WiFi
 
