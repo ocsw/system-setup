@@ -129,6 +129,9 @@ Firefox:
   No logins
   Keys
   Wheel and keys
+(see directory)
+
+Chrome (see file)
 
 Flash
 

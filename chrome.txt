@@ -1,0 +1,22 @@
+Sync (no passwords or cards)
+Bookmarks bar on
+Default browser
+Continue where you left off
+No services except dangerous sites
+No passwords
+Ask where to save
+
+Extensions:
+  Password Alert
+  OneNote Web Clipper
+  Awesome Screenshot
+    no shortcuts
+  HTTPS Everywhere
+    no counter
+  Adblock Plus
+    (whitelist)
+  Tidy Sidebar
+    no memo, wiki, links
+    show tooltip
+  Go to Tab
+(from L to R)
