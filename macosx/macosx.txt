@@ -56,6 +56,7 @@ uBar:
   General:
     Display
   No window grouping
+  (Theme)
   App order: manual
   App inclusions: order (see bottom)
   App exclusions
@@ -75,6 +76,9 @@ Moom:
   General:
     Start on launch
     Don't show prefs on launch
+    Run as menu bar app
+  Mouse:
+    Don't bring to front
   Custom:
     Add
     Arrange windows
@@ -90,21 +94,30 @@ Moom:
 
 Witch:
   Actions:
-    Cycle windows
-    Sort by app act, window act
-    List down
-    No apps w/o windows
-    Key for reverse
-    Show in menu
-    Second block: remove or no menu
+    1:
+      Cycle windows
+      Sort by app act, window act
+      List down
+      No apps w/o windows
+      Key for reverse
+      Show in menu bar
+    2:
+      Minimize frontmost
+      Not in menu bar
+    3:
+      Deminimize frontmost
+      Not in menu bar
+  Appearance:
+    No app names in vertical lists
   Advanced:
     Show on display w/mouse
     Spring load?
     No release to dismiss?
     Do not list: ubar
 
-ClipMenu:
+Clipy:
   Launch on login
+  Snippet shortcut
   Snippets
 
 Itsycal:
@@ -198,13 +211,16 @@ Dock order (all keep in dock):
   Finder
   Dashboard
   System Preferences
-  Moom
-  Cisco AnyConnect
+  (Moom)
+  Cisco AnyConnect / FortiClient / etc.
+  Spotify / etc.
   Adium
   Textual
   Franz
   Workplace Chat
+  Slack
   Outlook
+  OneNote
   Chrome
   Firefox
   iTerm2
@@ -214,14 +230,17 @@ Dock order (all keep in dock):
   Omnigraffle
 
 uBar App Order:
-  Cisco AnyConnect
+  Cisco AnyConnect / FortiClient / etc.
   Finder
+  Spotify / etc.
   Adium
   Textual
   Franz
   Workplace Chat
+  Slack
   Outlook
-  Firefox
+  OneNote
+  Firefox / Chrome
   iTerm2
   Atom
   Bluefish
