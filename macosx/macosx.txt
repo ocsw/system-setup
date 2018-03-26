@@ -70,7 +70,7 @@ Hammerspoon:
     https://www.isi.edu/~calvin/mac-lockscreen.htm
     clang -framework Foundation main.m -o lockscreen
   Config file
-  Exclude from ubar
+  (Exclude from ubar)
 
 Moom:
   General:
@@ -90,7 +90,7 @@ Moom:
     Auto check
   Accessibility
   License
-  Exclude from ubar
+  (Exclude from ubar)
 
 Witch:
   Actions:
@@ -200,6 +200,8 @@ Tree
 Wget
 
 Git key, ssh config
+
+unix-common setup
 
 Dotfiles
 
