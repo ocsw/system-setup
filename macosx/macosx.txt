@@ -183,6 +183,8 @@ Textual:
 
 Workplace Chat
 
+Slack
+
 Bluefish
 
 Atom
@@ -191,8 +193,19 @@ Omnigraffle
 
 Monodraw
 
+OneNote
+
 iTerm2:
-  Colors
+  General:
+    Bury tmux session?
+  Profiles:
+    Colors:
+      Preset (Tango Dark/Light)
+    Terminal:
+      Unlimited scrollback?
+      Silence bell?
+    Session:
+      Prompt before closing?
   Scroll in interactive
 
 Homebrew
@@ -207,7 +220,7 @@ Dotfiles
 
 Recompiled mosh client
 
-(iTunes, Office, Steam, Zoom)
+(VPN, Spotify, iTunes, Office, Steam)
 
 Dock order (all keep in dock):
   Finder
