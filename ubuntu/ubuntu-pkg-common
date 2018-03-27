@@ -1,5 +1,9 @@
+ack
+ag
 aptitude
+archey
 athena-jot
+atop
 autoconf
 autoconf-doc
 automake
@@ -22,6 +26,7 @@ duplicity
 emacs
 ethtool
 ffmpeg
+flake8
 flex
 fortune-mod
 fortunes
@@ -51,10 +56,13 @@ grepmail
 hexcurse
 hexedit
 hexdiff
+htop
 iftop
 imagemagick
 imagemagick-doc
 ipcalc
+ipv6calc
+iperf
 ipset
 ipython
 ipython-doc
@@ -85,6 +93,7 @@ mdadm
 mmv
 mosh
 most
+mtr
 mutt
 mysql-client
 nano
@@ -97,6 +106,7 @@ ntop
 openntpd
 openssh-server
 openvpn
+parallel
 pep8
 postgresql-client
 postfix
@@ -132,8 +142,10 @@ python-xattr
 rdiff-backup
 recode
 resolvconf
+ripgrep
 rsync
 screen
+screenfetch
 smartmontools
 sox
 speex
@@ -144,6 +156,8 @@ ssldump
 subversion
 sysstat
 tcsh
+tig
+tmux
 traceroute
 tree
 unison
