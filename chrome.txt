@@ -12,6 +12,7 @@ Settings:
 
 Extensions:
   Password Alert
+  Image Picker
   OneNote Web Clipper
   Awesome Screenshot
     no shortcuts
