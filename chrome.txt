@@ -1,10 +1,14 @@
-Sync (no passwords or cards)
-Bookmarks bar on
-Default browser
-Continue where you left off
-No services except dangerous sites
-No passwords
-Ask where to save
+Chrome menu:
+  Warn before quitting
+
+Settings:
+  Sync (no passwords or cards)
+  Bookmarks bar on
+  Default browser
+  Continue where you left off
+  No services except dangerous sites
+  No passwords
+  Ask where to save
 
 Extensions:
   Password Alert
