@@ -1,0 +1,20 @@
+&nbsp;
+<div style="border-top: 1px solid #E5E5E5; background: #F8F8F8; padding: 10px">
+  <table style="border-collapse: collapse">
+    <tr>
+      <td valign="top">
+        <img src="http://stuff.dan.cx/images/facebook/logo_100.png" width="50" height="50" alt="Facebook" title="Facebook" />
+      </td>
+      <td style="font-family: Calibri, Tahoma, sans-serif; font-size: 13px; color: #AAA; line-height: 1.4; padding-left: 10px;">
+        <span style="color: #284685">
+          <strong>Danielle Zephyr Malament &mdash;</strong>
+          Production Engineer
+          <br />
+        </span>
+        e: <a href="mailto:zephyr@fb.com" style="color: #777; border-bottom: 1px solid #DDD; text-decoration: none">zephyr@fb.com</a> &nbsp;&nbsp;
+        fb: <a href="https://facebook.com/dani.zeph" style="color: #777; border-bottom: 1px solid #DDD; text-decoration: none">https://facebook.com/dani.zeph</a> &nbsp;&nbsp;<br />
+        770 Broadway, 8th Floor, New York, NY 10003
+      </td>
+    </tr>
+  </table>
+</div>

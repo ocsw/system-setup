@@ -56,6 +56,7 @@ uBar:
   General:
     Display
   No window grouping
+  (Theme)
   App order: manual
   App inclusions: order (see bottom)
   App exclusions
@@ -69,12 +70,15 @@ Hammerspoon:
     https://www.isi.edu/~calvin/mac-lockscreen.htm
     clang -framework Foundation main.m -o lockscreen
   Config file
-  Exclude from ubar
+  (Exclude from ubar)
 
 Moom:
   General:
     Start on launch
     Don't show prefs on launch
+    Run as menu bar app
+  Mouse:
+    Don't bring to front
   Custom:
     Add
     Arrange windows
@@ -86,25 +90,34 @@ Moom:
     Auto check
   Accessibility
   License
-  Exclude from ubar
+  (Exclude from ubar)
 
 Witch:
   Actions:
-    Cycle windows
-    Sort by app act, window act
-    List down
-    No apps w/o windows
-    Key for reverse
-    Show in menu
-    Second block: remove or no menu
+    1:
+      Cycle windows
+      Sort by app act, window act
+      List down
+      No apps w/o windows
+      Key for reverse
+      Show in menu bar
+    2:
+      Minimize frontmost
+      Not in menu bar
+    3:
+      Deminimize frontmost
+      Not in menu bar
+  Appearance:
+    No app names in vertical lists
   Advanced:
     Show on display w/mouse
     Spring load?
     No release to dismiss?
     Do not list: ubar
 
-ClipMenu:
+Clipy:
   Launch on login
+  Snippet shortcut
   Snippets
 
 Itsycal:
@@ -170,6 +183,8 @@ Textual:
 
 Workplace Chat
 
+Slack
+
 Bluefish
 
 Atom
@@ -178,8 +193,19 @@ Omnigraffle
 
 Monodraw
 
+OneNote
+
 iTerm2:
-  Colors
+  General:
+    Bury tmux session?
+  Profiles:
+    Colors:
+      Preset (Tango Dark/Light)
+    Terminal:
+      Unlimited scrollback?
+      Silence bell?
+    Session:
+      Prompt before closing?
   Scroll in interactive
 
 Homebrew
@@ -188,23 +214,28 @@ Wget
 
 Git key, ssh config
 
+unix-common setup
+
 Dotfiles
 
 Recompiled mosh client
 
-(iTunes, Office, Steam, Zoom)
+(VPN, Spotify, iTunes, Office, Steam)
 
 Dock order (all keep in dock):
   Finder
   Dashboard
   System Preferences
-  Moom
-  Cisco AnyConnect
+  (Moom)
+  Cisco AnyConnect / FortiClient / etc.
+  Spotify / etc.
   Adium
   Textual
   Franz
   Workplace Chat
+  Slack
   Outlook
+  OneNote
   Chrome
   Firefox
   iTerm2
@@ -214,14 +245,17 @@ Dock order (all keep in dock):
   Omnigraffle
 
 uBar App Order:
-  Cisco AnyConnect
+  Cisco AnyConnect / FortiClient / etc.
   Finder
+  Spotify / etc.
   Adium
   Textual
   Franz
   Workplace Chat
+  Slack
   Outlook
-  Firefox
+  OneNote
+  Firefox / Chrome
   iTerm2
   Atom
   Bluefish
