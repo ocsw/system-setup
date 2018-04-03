@@ -48,6 +48,7 @@ openvpn
 p7zip
 parallel
 pep8
+pstree
 pv
 pwgen
 python_libs
