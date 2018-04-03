@@ -1,3 +1,7 @@
+FileVault, incl. save recovery key (pic?)
+
+Updates
+
 System:
   General:
     Default browser
@@ -5,13 +9,16 @@ System:
     No close windows?
   Desktop:
     Wallpaper
-    Screen saver
+    Screen saver - shell, 20m
+    Hot corner for screen saver? (UR)
   Dock:
     On left
     Min to app
     Autohide
   Security:
+    Require password immediately?
     Filevault on
+    Firewall on
   Displays:
     Arrangement
     Night shift at night
@@ -28,38 +35,59 @@ System:
   Printers
   App store:
     Auto check, dl, app/system install
+  Bluetooth:
+    Show in menu bar?
   Sharing:
     Computer Name
     Local Hostname
-    no dynamic global hostname
+    No dynamic global hostname
     -> sudo scutil --set HostName name
   Touch ID
   Users
+    Login Options:
+      Display login as name and password?
+    Disable Guest User
     Icon
     Verify startup items
   Siri off
   Date & time:
     Show date
-  (lock all except network)
+  (lock all)
+
+Finder:
+  General:
+    New -> Downloads (or homedir?)
+    Don't open in tabs
+  Sidebar:
+    Show homedir, hard disks
+
+Keychain Access:
+  Show in menu bar
 
 WiFi
+VPN
+Avira?
+f.lux?
+
+Logitech control center
+  Vertical scroll speed -> 3?
+Android file transfer
 
 Dropbox
 Box
 Google backups
 
-Logitech control center
-
-Android file transfer
-
 uBar:
   General:
     Display
-  No window grouping
+    No left/right grouping (if ultrawide)
+    No window grouping
   (Theme)
-  App order: manual
-  App inclusions: order (see bottom)
-  App exclusions
+  Apps:
+    App order: manual
+    App inclusions: order (see bottom)
+    App exclusions
+  License
 
 Hammerspoon:
   Launch at login
@@ -114,6 +142,8 @@ Witch:
     Spring load?
     No release to dismiss?
     Do not list: ubar
+  About:
+    License
 
 Clipy:
   Launch on login
@@ -123,6 +153,16 @@ Clipy:
 Itsycal:
   Launch at login
   Outline icon
+
+AppCleaner
+  SmartDelete on?
+Suspicious Package
+NameChanger
+  no history, auto update
+HoudahSpot (incl. license)
+Disk Inventory X
+DaisyDisk (incl. license)
+Wireshark
 
 Yubiswitch:
   No unlock on sleep
@@ -172,8 +212,6 @@ Adium:
       Multiple window confirm
   Group order in buddy list
 
-Franz
-
 Textual:
   Account (General, Identity)
   Reconnect on disconnect?
@@ -181,19 +219,40 @@ Textual:
     Style:
       No general event messages
 
+Franz
 Workplace Chat
-
 Slack
+Skype
 
+Spotify
+Amazon Music
+  no launch on startup
+iTunes
+Kindle
+  no dictionary
+etc.
+
+MacVim
 Bluefish
-
-Atom
+Sublime
+PyCharm
+Atom, atom-ide-ui, (teletype)
 
 Omnigraffle
-
 Monodraw
 
-OneNote
+OneNote, clipper, add to share menu
+Office
+Keynote
+  General
+    Author
+  Auto-Correction
+    no spelling corrections
+    no Link style?
+    no smart quotes?
+
+Sequel Pro
+  auto-update
 
 iTerm2:
   General:
@@ -201,6 +260,8 @@ iTerm2:
   Profiles:
     Colors:
       Preset (Tango Dark/Light)
+    Text:
+      Font? (default is 12pt Monaco)
     Terminal:
       Unlimited scrollback?
       Silence bell?
@@ -208,19 +269,60 @@ iTerm2:
       Prompt before closing?
   Scroll in interactive
 
-Homebrew
-Tree
-Wget
+XCode
 
-Git key, ssh config
+Homebrew - see unix-common/packages.txt
+  bash-completion
+  export GIT_PS1_SHOWDIRTYSTATE=1
+  export GIT_PS1_SHOWSTASHSTATE=1
+  export GIT_PS1_SHOWUNTRACKEDFILES=1
+  export GIT_PS1_SHOWUPSTREAM=verbose # or auto to omit counts
+  export GIT_PS1_SHOWCOLORHINTS=1
+  export PROMPT_COMMAND='__git_ps1 "\h:\w" "\\\$ "'
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+  fi
+add hostname to 127 in hosts?
+rest of unix-common
+SSH:
+    Host *
+        UseKeychain yes
+        AddKeysToAgent yes
+        IdentityFile ~/.ssh/id_rsa
+        IdentityFile ~/.ssh/id_ed25519
+    (and ssh-add -K absolute_path)
+dotfiles
 
-unix-common setup
-
-Dotfiles
+add /usr/local/sbin to path???
 
 Recompiled mosh client
 
-(VPN, Spotify, iTunes, Office, Steam)
+Python
+
+sudo easy_install pip
+sudo pip install virtualenv
+sudo pip install virtualenvwrapper
+
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+Hide battery status in menu bar
+Hide date and time in menu bar
+more chrome
+gbackup settings
+cal alerts - mult - growl?
+lastpass
+authy
+atom, atom-ide-ui, teletype, hydrogen, scroll-through-time
+istat incl. lic
+spectacle
+trash autoempty?
+extensions
+telegram
+signal?
+mindnode
+macvim config
+amphetamine
+
+(Steam)
 
 Dock order (all keep in dock):
   Finder
@@ -239,8 +341,8 @@ Dock order (all keep in dock):
   Chrome
   Firefox
   iTerm2
-  Atom
-  Bluefish
+  Atom / Sublime / PyCharm / etc.
+  Bluefish / MacVim / etc.
   IntelliJ
   Omnigraffle
 
@@ -257,7 +359,7 @@ uBar App Order:
   OneNote
   Firefox / Chrome
   iTerm2
-  Atom
-  Bluefish
+  Atom / Sublime / PyCharm / etc.
+  Bluefish / MacVim / etc.
 
 Moom window placement
