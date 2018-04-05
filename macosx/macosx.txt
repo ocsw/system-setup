@@ -29,7 +29,10 @@ System:
     Caps lock to cmd
     Text - remove omw
     Turn off corrections?
-    (Shortcuts)
+    Shortcuts:
+      App Shortcuts:
+        Lock Screen -> ctrl-opt-cmd-L [10.13]
+      (other shortcuts)
   Track pad:
     Scroll dir
   Printers
@@ -94,7 +97,7 @@ Hammerspoon:
   No dock
   No crash data
   Accessibility
-  Lock screen binary:
+  Lock screen binary: [not necessary in 10.13]
     https://www.isi.edu/~calvin/mac-lockscreen.htm
     clang -framework Foundation lockscreen.m -o lockscreen
   Config file
