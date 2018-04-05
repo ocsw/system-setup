@@ -62,7 +62,7 @@ Finder:
     Show homedir, hard disks
 
 Keychain Access:
-  Show in menu bar
+  Show in menu bar [not in 10.13]
 
 WiFi
 VPN
@@ -96,7 +96,7 @@ Hammerspoon:
   Accessibility
   Lock screen binary:
     https://www.isi.edu/~calvin/mac-lockscreen.htm
-    clang -framework Foundation main.m -o lockscreen
+    clang -framework Foundation lockscreen.m -o lockscreen
   Config file
   (Exclude from ubar)
 
@@ -235,8 +235,9 @@ etc.
 MacVim
 Bluefish
 Sublime
+VSCode
 PyCharm
-Atom, atom-ide-ui, (teletype)
+Atom
 
 Omnigraffle
 Monodraw
@@ -311,7 +312,8 @@ gbackup settings
 cal alerts - mult - growl?
 lastpass
 authy
-atom, atom-ide-ui, teletype, hydrogen, scroll-through-time
+atom
+vscode
 istat incl. lic
 spectacle
 trash autoempty?
@@ -341,7 +343,7 @@ Dock order (all keep in dock):
   Chrome
   Firefox
   iTerm2
-  Atom / Sublime / PyCharm / etc.
+  Atom / Sublime / VSCode / PyCharm / etc.
   Bluefish / MacVim / etc.
   IntelliJ
   Omnigraffle
@@ -359,7 +361,7 @@ uBar App Order:
   OneNote
   Firefox / Chrome
   iTerm2
-  Atom / Sublime / PyCharm / etc.
+  Atom / Sublime / VSCode / PyCharm / etc.
   Bluefish / MacVim / etc.
 
 Moom window placement
