@@ -1,0 +1,123 @@
+syntax highlighting
+intellisense
+view definition
+jump to definition, incl. separate tab
+tab completion incl. symbols, files, syntax, modules
+beautify
+async linting
+autopep8
+outline of file defs
+debugging
+rename symbol
+runner
+build
+
+Python, bash, Java, C/C++, Go
+config files e.g. vim
+
+markdown preview
+
+git:
+    show branches
+    compare versions
+    git diff
+    git status incl. in tree
+    git log
+    stage incl in pieces
+    commit - incl. full window for message?
+    push/pull - incl. numbers, ?auto
+    gutter
+    blame
+    pull request
+    show branch in status line
+    merge conflicts
+
+folding?  incl. auto?
+
+bidi/rtl
+encodings incl auto
+
+minimap:
+    hover expand
+    current line
+    selection
+    search
+    git gutter
+    bookmarks
+    linter
+    giant titles?
+    autohide?
+
+long line highlighting
+tab/space handling
+    set shiftwidth=4    " spaces per indent
+    set tabstop=4       " spaces per tab when displaying
+    set softtabstop=4   " spaces per tab when inserting
+    set expandtab       " substitute spaces for tabs
+    set smarttab        " tab inserts indents instead of tabs at begining of line
+    pastetoggle
+Vim mode
+word count
+drag and drop text
+multi cursor
+find and replace incl.
+    regex
+    see all, highlight all
+    ignore case, smart case
+    across project
+rectangle selection
+exploringly replace
+highlight matching delimiters
+show indent levels
+indent/dedent multiple lines
+comment/uncomment multiple lines
+infinite undo
+backups
+show trailing spaces
+current line highlight
+highlight selected?
+line wrap
+autoindent
+statusline:
+    filename, encoding, line ending, file type, unsaved, readonly
+    show line, column, max line, percentage
+bookmarks and/or last position
+toolbar
+tabs expose?
+remote edit
+gist
+change case
+sort, reverse, unique, shuffle
+
+MRU tabs
+split pane
+split diff
+sync scroll
+tree incl. copy/move/delete
+autohide tree?
+open files list
+tree icons
+tree status indicators/highlighting
+recent list
+open in new tab
+multiple projects?
+pane selector
+fuzzy search
+window title?
+prompt for big file
+zen mode?
+diff files
+maximize pane
+busy indicator
+spotify, etc.?
+
+terminal?
+open here
+
+package sync
+setting sync
+
+colors, fonts, styles, etc.
+keybindings - see, set
+
+codestream, pairing, etc.
