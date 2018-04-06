@@ -1,8 +1,8 @@
-syntax highlighting
+syntax highlighting incl TODO
 intellisense
 view definition
 jump to definition, incl. separate tab
-tab completion incl. symbols, files, syntax, modules
+tab completion incl. symbols, files, syntax, modules, across project
 beautify
 async linting
 autopep8
@@ -10,6 +10,7 @@ outline of file defs
 debugging
 rename symbol
 runner
+repl?
 build
 
 Python, bash, Java, C/C++, Go
@@ -31,6 +32,7 @@ git:
     pull request
     show branch in status line
     merge conflicts
+    flow
 
 folding?  incl. auto?
 
@@ -85,15 +87,16 @@ bookmarks and/or last position
 toolbar
 tabs expose?
 remote edit
-gist
+gist?
 change case
 sort, reverse, unique, shuffle
+display tab chars
 
 MRU tabs
-split pane
+split pane - vertical and horizontal
 split diff
 sync scroll
-tree incl. copy/move/delete
+tree incl. copy/move/delete/open in finder
 autohide tree?
 open files list
 tree icons
@@ -109,6 +112,8 @@ zen mode?
 diff files
 maximize pane
 busy indicator
+changed -> reopen
+
 spotify, etc.?
 
 terminal?
