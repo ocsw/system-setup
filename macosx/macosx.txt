@@ -297,12 +297,11 @@ SSH:
     (and ssh-add -K absolute_path)
 dotfiles
 
-add /usr/local/sbin to path???
+add /usr/local/sbin to path?
 
 Recompiled mosh client
 
 Python
-
 sudo easy_install pip
 sudo pip install virtualenv
 sudo pip install virtualenvwrapper
