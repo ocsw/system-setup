@@ -97,7 +97,7 @@ Hammerspoon:
   No dock
   No crash data
   Accessibility
-  Lock screen binary: [not necessary in 10.13]
+  Lock screen binary: [not necessary (or working) in 10.13]
     https://www.isi.edu/~calvin/mac-lockscreen.htm
     clang -framework Foundation lockscreen.m -o lockscreen
   Config file
@@ -312,7 +312,7 @@ Hide battery status in menu bar
 Hide date and time in menu bar
 more chrome
 gbackup settings
-cal alerts - mult - growl?
+infinite history
 lastpass
 authy
 atom
