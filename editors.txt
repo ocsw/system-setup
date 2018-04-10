@@ -33,6 +33,7 @@ git:
     show branch in status line
     merge conflicts
     flow
+    github
 
 folding?  incl. auto?
 
@@ -49,6 +50,7 @@ minimap:
     linter
     giant titles?
     autohide?
+    syntax highlighting
 
 long line highlighting
 tab/space handling
@@ -79,6 +81,7 @@ show trailing spaces
 current line highlight
 highlight selected?
 line wrap
+reflow
 autoindent
 statusline:
     filename, encoding, line ending, file type, unsaved, readonly
@@ -100,8 +103,8 @@ tree incl. copy/move/delete/open in finder
 autohide tree?
 open files list
 tree icons
-tree status indicators/highlighting
-recent list
+tree status indicators/highlighting incl open, modified, git - and incl dirs
+recent list & reopen
 open in new tab
 multiple projects?
 pane selector
@@ -113,6 +116,7 @@ diff files
 maximize pane
 busy indicator
 changed -> reopen
+back/forward mouse buttons
 
 spotify, etc.?
 
