@@ -27,6 +27,7 @@ Extensions:
     no counter
   Adblock Plus
     (whitelist)
+    no number in icon
   CaretTab
     no seconds
     (links)
