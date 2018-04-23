@@ -7,6 +7,7 @@ autoconf
 automake
 autopep8
 bashdb
+bash-completion
 bison
 bzip2
 cpp
@@ -51,6 +52,8 @@ pep8
 pstree
 pv
 pwgen
+pyenv
+pyenv-virtualenv
 python_libs
 python2
 python3

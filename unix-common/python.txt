@@ -1,0 +1,51 @@
+
+#
+# Mac
+#
+brew update
+brew install pyenv
+brew install pyenv-virtualenv
+xcode-select --install
+#
+# Other
+#
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+git clone https://github.com/pyenv/pyenv-virtualenv.git \
+    ~/.pyenv/plugins-virtualenv
+
+source ~/.bash_profile  # see dotfiles repo
+
+# after installing python2 and 3; or, substitute other versions
+CFLAGS="-O2" pyenv install $(python2 --version 2>&1 | sed 's/^.* //')
+CFLAGS="-O2" pyenv install $(python3 --version 2>&1 | sed 's/^.* //')
+
+# this doesn't work properly on Mac; use venvs and manual symlinks instead
+#pyenv deactivate
+#pip3 install virtualenv
+#curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
+
+# consider removing these from the main system:
+#flake8
+#autopep8
+
+pyver="3.6.5"  # or whatever
+pyinst flake8 "$pyver"  # see dot.bashrc.d/python.post
+pyinst tox "$pyver"
+pyinst pytest "pyver"
+pyinst coverage "pyver"
+cd ~/bin
+ln -s "../.pyenv/versions/flake8-${pyver}/bin/pycodestyle" .
+ln -s "../.pyenv/versions/flake8-${pyver}/bin/pyflakes" .
+ln -s "../.pyenv/versions/tox-${pyver}/bin/tox-quickstart" .
+ln -s "../.pyenv/versions/pytest-${pyver}/bin/py.test" .
+ln -s "../.pyenv/versions/coverage-${pyver}/bin/coverage-3.6" .
+ln -s "../.pyenv/versions/coverage-${pyver}/bin/coverage3" .
+cd
+pyenv activate "flake8-$pyver"
+pip3 install flake8-import-order
+pip3 install autopep8
+pyenv activate "pytest-$pyver"
+pip3 install pytest-cov
+pyenv deactivate
+
+prompt display
