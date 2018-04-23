@@ -19,6 +19,8 @@ System:
     Require password immediately?
     Filevault on
     Firewall on
+    Privacy:
+      System services: don't show icon?
   Displays:
     Arrangement
     Night shift at night
@@ -40,6 +42,9 @@ System:
     Auto check, dl, app/system install
   Bluetooth:
     Show in menu bar?
+  Extensions:
+    Today:
+      only iStat Menus, Calculator (in that order)
   Sharing:
     Computer Name
     Local Hostname
@@ -157,6 +162,67 @@ Itsycal:
   Launch at login
   Outline icon
 
+iStat Menus:
+  Intel Power Gadget
+  Global:
+    License
+  Notifications:
+  Weather: off
+  CPU:
+    Active: label, cores
+    App usage format: 100%
+    Processes: 10?
+    Hide HT cores
+  Memory:
+    Active: label, bar graph (don't show breakdowns)
+    Processes: 10
+    App format: size
+    Hide inactive memory
+  Disks:
+    Active: label, disk space, ?act num (show label), ?act graph (show bg)
+    Activity mode: detailed (per disk)
+    Processes: 10
+  Network:
+    Active: net label, arrow label, bandwidth num
+    Processes: 10
+    Decimals (KB): 1?
+    Combine bandwidth
+  Sensors:
+    Active: label, ?single num
+    Degrees: F
+    Sensors: CPU proximity (show units), ?CPU frequency (show units)
+  Battery:
+    Active: horiz b/w graph, time
+    Bluetooth:
+    Airpods:
+    Batteries: internal, mouse, headphones
+  Time:
+    Menu bar: clock icon (or EE hh:mm a)
+    World Clocks: ZZZ __RELATIVE_OFFSET__ EE HH:mm
+    Dropdown: no calendar
+    World clocks:
+      no Moon
+      no Current Location?
+  Combined: off
+
+Amphetamine:
+  Don't show message
+  Don't show in Dock
+  General:
+    Default: 3 hours
+    Launch at login
+    Don't show in Dock
+  (Triggers)
+  Battery:
+    Ask if below 10%
+    Ignore when connected
+  Hotkeys:
+    Start/End: ctrl-opt-cmd-A
+    If active, end
+  Appearance:
+    Icon: Eye? Tea Kettle? Pill 2?
+    Lower opacity?
+
 AppCleaner
   SmartDelete on?
 Suspicious Package
@@ -226,6 +292,8 @@ Franz
 Workplace Chat
 Slack
 Skype
+Telegram?
+Signal?
 
 Spotify
 Amazon Music
@@ -244,6 +312,7 @@ Atom
 
 Omnigraffle
 Monodraw
+MindNode?
 
 OneNote, clipper, add to share menu
 Office
@@ -273,7 +342,8 @@ iTerm2:
       Prompt before closing?
   Scroll in interactive
 
-XCode
+XCode incl. command-line tools
+  xcode-select --install after OS upgrade
 
 Homebrew - see unix-common/packages.txt
   bash-completion
@@ -298,33 +368,40 @@ SSH:
 dotfiles
 
 add /usr/local/sbin to path?
-
+symlink /bin/bash?
+symlink python?
+#
 Recompiled mosh client
-
+#
 Python
 sudo easy_install pip
 sudo pip install virtualenv
 sudo pip install virtualenvwrapper
-
+#
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 Hide battery status in menu bar
 Hide date and time in menu bar
 more chrome
 gbackup settings
-infinite history
 lastpass
 authy
 atom
 vscode
 istat incl. lic
+  add to Today in system extensions (first)
 spectacle
 trash autoempty?
-extensions
-telegram
-signal?
-mindnode
 macvim config
-amphetamine
+mosh
+moom placement
+Franz
+bury tmux
+menu bar order
+more
+ctrl-d
+pushbullet
+bash history, scrollback
+umask
 
 (Steam)
 
