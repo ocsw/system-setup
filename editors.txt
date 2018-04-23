@@ -62,7 +62,8 @@ tab/space handling
     pastetoggle
 Vim mode
 word count
-drag and drop text
+drag and drop text?
+swap line up/down
 multi cursor
 find and replace incl.
     regex
