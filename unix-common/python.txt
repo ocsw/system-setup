@@ -31,15 +31,19 @@ CFLAGS="-O2" pyenv install $(python3 --version 2>&1 | sed 's/^.* //')
 pyver="3.6.5"  # or whatever
 pyinst flake8 "$pyver"  # see dot.bashrc.d/python.post
 pyinst tox "$pyver"
-pyinst pytest "pyver"
-pyinst coverage "pyver"
+pyinst pytest "$pyver"
+pyinst nose "$pyver"
+pyinst coverage "$pyver"
 cd ~/bin
 ln -s "../.pyenv/versions/flake8-${pyver}/bin/pycodestyle" .
 ln -s "../.pyenv/versions/flake8-${pyver}/bin/pyflakes" .
 ln -s "../.pyenv/versions/tox-${pyver}/bin/tox-quickstart" .
 ln -s "../.pyenv/versions/pytest-${pyver}/bin/py.test" .
+ln -s ../.pyenv/versions/nose-3.6.5/bin/nosetests .
+ln -s ../.pyenv/versions/nose-3.6.5/bin/nosetests-3.4 .
 ln -s "../.pyenv/versions/coverage-${pyver}/bin/coverage-3.6" .
 ln -s "../.pyenv/versions/coverage-${pyver}/bin/coverage3" .
+rm nose
 cd
 pyenv activate "flake8-$pyver"
 pip3 install flake8-import-order
