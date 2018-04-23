@@ -13,6 +13,13 @@ Settings:
 Extensions:
   Password Alert
   Image Picker
+  (Pushbullet)
+    account
+    no notification count
+    no auto-open
+    no notifications
+    enable instant pushing?
+    (password)
   OneNote Web Clipper
   Awesome Screenshot
     no shortcuts
@@ -20,6 +27,10 @@ Extensions:
     no counter
   Adblock Plus
     (whitelist)
+    no number in icon
+  CaretTab
+    no seconds
+    (links)
   Tidy Sidebar
     no memo, wiki, links
     show tooltip
