@@ -28,28 +28,38 @@ CFLAGS="-O2" pyenv install $(python3 --version 2>&1 | sed 's/^.* //')
 #flake8
 #autopep8
 
-pyver="3.6.5"  # or whatever
-pyinst flake8 "$pyver"  # see dot.bashrc.d/python.post
-pyinst tox "$pyver"
-pyinst pytest "$pyver"
-pyinst nose "$pyver"
-pyinst coverage "$pyver"
-cd ~/bin
-ln -s "../.pyenv/versions/flake8-${pyver}/bin/pycodestyle" .
-ln -s "../.pyenv/versions/flake8-${pyver}/bin/pyflakes" .
-ln -s "../.pyenv/versions/tox-${pyver}/bin/tox-quickstart" .
-ln -s "../.pyenv/versions/pytest-${pyver}/bin/py.test" .
-ln -s ../.pyenv/versions/nose-3.6.5/bin/nosetests .
-ln -s ../.pyenv/versions/nose-3.6.5/bin/nosetests-3.4 .
-ln -s "../.pyenv/versions/coverage-${pyver}/bin/coverage-3.6" .
-ln -s "../.pyenv/versions/coverage-${pyver}/bin/coverage3" .
-rm nose
-cd
-pyenv activate "flake8-$pyver"
+py3ver="3.6.5"  # or whatever
+py2ver="2.7.14"  # or whatever
+#
+pyinst flake8 "$py3ver"  # see dot.bashrc.d/python.post
+pyinst tox "$py3ver"
+pyinst pytest "$py3ver"
+pyinst nose "$py3ver"
+pyinst coverage "$py3ver"
+pyinst sphinx "$py2ver"
+#
+pyenv activate "flake8-$py3ver"
 pip3 install flake8-import-order
 pip3 install autopep8
-pyenv activate "pytest-$pyver"
+pyenv activate "pytest-$py3ver"
 pip3 install pytest-cov
+pyenv activate "sphinx-$py2ver"
+pip2 install sphinx-autobuild
+pip2 install recommonmark
 pyenv deactivate
+#
+cd ~/bin
+ln -s "../.pyenv/versions/flake8-${py3ver}/bin/pycodestyle" .
+ln -s "../.pyenv/versions/flake8-${py3ver}/bin/pyflakes" .
+ln -s "../.pyenv/versions/tox-${py3ver}/bin/tox-quickstart" .
+ln -s "../.pyenv/versions/pytest-${py3ver}/bin/py.test" .
+ln -s "../.pyenv/versions/nose-${py3ver}/bin/nosetests" .
+ln -s "../.pyenv/versions/nose-${py3ver}/bin/nosetests-3.4" .
+ln -s "../.pyenv/versions/coverage-${py3ver}/bin/coverage-3.6" .
+ln -s "../.pyenv/versions/coverage-${py3ver}/bin/coverage3" .
+# more from sphinx?
+ln -s "../.pyenv/versions/sphinx-${py2ver}/bin/sphinx-{apidoc,autogen,build,quickstart,autobuild} .
+rm nose
+cd
 
 prompt display
