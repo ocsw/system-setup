@@ -25,40 +25,40 @@ CFLAGS="-O2" pyenv install $(python3 --version 2>&1 | sed 's/^.* //')
 #curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
 
 # consider removing these from the main system:
-#flake8
 #autopep8
+#flake8
 
 py3ver="3.6.5"  # or whatever
 py2ver="2.7.14"  # or whatever
 #
-pyinst flake8 "$py3ver"  # see dot.bashrc.d/python.post
-pyinst tox "$py3ver"
-pyinst pytest "$py3ver"
-pyinst nose "$py3ver"
+# see dot.bashrc.d/python.post for pyinst
 pyinst coverage "$py3ver"
+pyinst flake8 "$py3ver"
+pyinst nose "$py3ver"
+pyinst pytest "$py3ver"
 pyinst sphinx "$py2ver"
+pyinst tox "$py3ver"
 #
 pyenv activate "flake8-$py3ver"
-pip3 install flake8-import-order
-pip3 install autopep8
+pip3 install autopep8 flake8-import-order
 pyenv activate "pytest-$py3ver"
-pip3 install pytest-cov pytest-asyncio pytest-mock pytest-catchlog
+pip3 install pytest-asyncio pytest-catchlog pytest-cov pytest-mock
 pyenv activate "sphinx-$py2ver"
-pip2 install sphinx-autobuild zope.interface sphinxcontrib-zopeext
-pip2 install repoze.sphinx.autointerface recommonmark
+pip2 install recommonmark repoze.sphinx.autointerface sphinx-autobuild
+pip2 install sphinxcontrib-zopeext zope.interface
 pyenv deactivate
 #
 cd ~/bin
-ln -s "../.pyenv/versions/flake8-${py3ver}/bin/pycodestyle" .
-ln -s "../.pyenv/versions/flake8-${py3ver}/bin/pyflakes" .
-ln -s "../.pyenv/versions/tox-${py3ver}/bin/tox-quickstart" .
-ln -s "../.pyenv/versions/pytest-${py3ver}/bin/py.test" .
-ln -s "../.pyenv/versions/nose-${py3ver}/bin/nosetests" .
-ln -s "../.pyenv/versions/nose-${py3ver}/bin/nosetests-3.4" .
 ln -s "../.pyenv/versions/coverage-${py3ver}/bin/coverage-3.6" .
 ln -s "../.pyenv/versions/coverage-${py3ver}/bin/coverage3" .
+ln -s "../.pyenv/versions/flake8-${py3ver}/bin/pycodestyle" .
+ln -s "../.pyenv/versions/flake8-${py3ver}/bin/pyflakes" .
+ln -s "../.pyenv/versions/nose-${py3ver}/bin/nosetests" .
+ln -s "../.pyenv/versions/nose-${py3ver}/bin/nosetests-3.4" .
+ln -s "../.pyenv/versions/pytest-${py3ver}/bin/py.test" .
 # more from sphinx?
-ln -s "../.pyenv/versions/sphinx-${py2ver}/bin/sphinx-{apidoc,autogen,build,quickstart,autobuild} .
+ln -s "../.pyenv/versions/sphinx-${py2ver}/bin/sphinx-{apidoc,autobuild,autogen,build,quickstart} .
+ln -s "../.pyenv/versions/tox-${py3ver}/bin/tox-quickstart" .
 rm nose sphinx
 cd
 
