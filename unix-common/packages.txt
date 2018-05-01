@@ -11,6 +11,7 @@ bash-completion
 bison
 bzip2
 cpp
+ctags
 curl
 emacs
 flake8
