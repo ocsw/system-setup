@@ -42,10 +42,10 @@ pyenv activate "flake8-$py3ver"
 pip3 install flake8-import-order
 pip3 install autopep8
 pyenv activate "pytest-$py3ver"
-pip3 install pytest-cov pytest-asyncio pytest-mock
+pip3 install pytest-cov pytest-asyncio pytest-mock pytest-catchlog
 pyenv activate "sphinx-$py2ver"
 pip2 install sphinx-autobuild zope.interface sphinxcontrib-zopeext
-pip2 install recommonmark
+pip2 install repoze.sphinx.autointerface recommonmark
 pyenv deactivate
 #
 cd ~/bin
