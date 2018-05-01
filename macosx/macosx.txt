@@ -32,6 +32,9 @@ System:
     Text - remove omw
     Turn off corrections?
     Shortcuts:
+      Mission Control:
+        Show Desktop -> ^F11 (because of VSCode)
+        Show Dashboard -> ^F12 (because of VSCode)
       App Shortcuts:
         Lock Screen -> ctrl-opt-cmd-L [10.13]
       (other shortcuts)
@@ -305,10 +308,11 @@ etc.
 
 MacVim
 Bluefish
-Sublime
 VSCode
-PyCharm
 Atom
+Sublime
+PyCharm
+IntelliJ
 
 Omnigraffle
 Monodraw
