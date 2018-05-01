@@ -42,9 +42,9 @@ pyenv activate "flake8-$py3ver"
 pip3 install flake8-import-order
 pip3 install autopep8
 pyenv activate "pytest-$py3ver"
-pip3 install pytest-cov
+pip3 install pytest-cov pytest-asyncio pytest-mock
 pyenv activate "sphinx-$py2ver"
-pip2 install sphinx-autobuild
+pip2 install sphinx-autobuild zope.interface sphinxcontrib-zopeext
 pip2 install recommonmark
 pyenv deactivate
 #
@@ -59,7 +59,7 @@ ln -s "../.pyenv/versions/coverage-${py3ver}/bin/coverage-3.6" .
 ln -s "../.pyenv/versions/coverage-${py3ver}/bin/coverage3" .
 # more from sphinx?
 ln -s "../.pyenv/versions/sphinx-${py2ver}/bin/sphinx-{apidoc,autogen,build,quickstart,autobuild} .
-rm nose
+rm nose sphinx
 cd
 
 prompt display
