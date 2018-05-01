@@ -415,36 +415,38 @@ Dock order (all keep in dock):
   System Preferences
   (Moom)
   Cisco AnyConnect / FortiClient / etc.
-  Spotify / etc.
-  Adium
-  Textual
-  Franz
-  Workplace Chat
-  Slack
+  (Kindle)
+  Amazon Music, Spotify, etc.
+  (Skype), Adium, Textual, Franz, Workplace Chat, Slack
   Outlook
   OneNote
-  Chrome
-  Firefox
+  Chrome, Firefox
+  VSCode / Atom / Sublime / PyCharm / IntelliJ / etc.
+  (TextEdit) / Bluefish / MacVim / etc.
   iTerm2
-  Atom / Sublime / VSCode / PyCharm / etc.
-  Bluefish / MacVim / etc.
-  IntelliJ
   Omnigraffle
+  Keynote
+  (Steam)
 
 uBar App Order:
   Cisco AnyConnect / FortiClient / etc.
   Finder
-  Spotify / etc.
-  Adium
-  Textual
-  Franz
-  Workplace Chat
-  Slack
+  Kindle
+  Amazon Music, Spotify, etc.
+  Skype, Adium, Textual, Franz, Workplace Chat, Slack
   Outlook
   OneNote
-  Firefox / Chrome
+  Chrome, Firefox
+  VSCode, Atom, Sublime, PyCharm, IntelliJ, XCode, etc.
+  TextEdit, Bluefish, MacVim, etc.
   iTerm2
-  Atom / Sublime / VSCode / PyCharm / etc.
-  Bluefish / MacVim / etc.
+  Docker
+  Wireshark
+  Omnigraffle
+  Keynote
+  Preview
+  Calculator
+  Steam
+  ESET / etc.
 
 Moom window placement
