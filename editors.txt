@@ -118,6 +118,7 @@ maximize pane
 busy indicator
 changed -> reopen
 back/forward mouse buttons
+dirty file notification
 
 spotify, etc.?
 
