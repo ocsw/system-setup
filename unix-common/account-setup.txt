@@ -17,6 +17,8 @@ ssh git@git.bluetiger.net
 git config --global user.name "Danielle Zephyr Malament"
 git config --global user.email EMAIL  # work or personal, depending
 git config --global core.pager less
+git config --global core.excludesfile ~/.gitignore_global
+echo ".vscode" >> ~/.gitignore_global  # for GUI systems
 
 ### global hg (~/.hgrc)
 [ui]
