@@ -377,22 +377,18 @@ symlink python?
 #
 Recompiled mosh client
 #
-Python
-sudo easy_install pip
-sudo pip install virtualenv
-sudo pip install virtualenvwrapper
+Python incl 2->3 symlinks?
 #
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 Hide battery status in menu bar
-Hide date and time in menu bar
 more chrome
 gbackup settings
 lastpass
 authy
-atom
 vscode
 istat incl. lic
   add to Today in system extensions (first)
+  mouse battery
 spectacle
 trash autoempty?
 macvim config
@@ -400,9 +396,8 @@ mosh
 moom placement
 Franz
 bury tmux
-menu bar order
+menu bar order incl airplay
 more
-ctrl-d
 pushbullet
 bash history, scrollback
 umask
