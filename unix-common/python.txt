@@ -63,6 +63,11 @@ ln -s "../.pyenv/versions/tox-${py3ver}/bin/tox-quickstart" .
 rm nose sphinx
 cd
 
+cat >> ~/.flake8 <<EOF
+[flake8]
+import-order-style = edited
+EOF
+
 # I haven't figured out how to make new virtualenvs have new pip;
 # pyenv global 3.6.5; pyenv deactivate; pip install --upgrade pip
 # will update the base image, but that apparently won't affect the new ones.
