@@ -51,6 +51,7 @@ pyenv deactivate
 cd ~/bin
 ln -s "../.pyenv/versions/coverage-${py3ver}/bin/coverage-3.6" .
 ln -s "../.pyenv/versions/coverage-${py3ver}/bin/coverage3" .
+ln -s "../.pyenv/versions/flake8-${py3ver}/bin/autopep8" .
 ln -s "../.pyenv/versions/flake8-${py3ver}/bin/pycodestyle" .
 ln -s "../.pyenv/versions/flake8-${py3ver}/bin/pyflakes" .
 ln -s "../.pyenv/versions/nose-${py3ver}/bin/nosetests" .
