@@ -362,7 +362,7 @@ iTerm2:
   Scroll in interactive
 
 XCode incl. command-line tools
-  xcode-select --install after OS upgrade
+  'xcode-select --install' after OS upgrade
 
 Homebrew - see unix-common/packages.txt
   bash-completion
