@@ -24,8 +24,9 @@ System:
   Displays:
     Arrangement
     Night shift at night
-  Energy saver:
+  Energy Saver:
     Change time?
+    No battery in menu bar (after iStat Menus, see below)
   Keyboard:
     Control strip - no Siri, add lock, screenshot (L of media)
     Caps lock to cmd
@@ -38,10 +39,10 @@ System:
       App Shortcuts:
         Lock Screen -> ctrl-opt-cmd-L [10.13]
       (other shortcuts)
-  Track pad:
+  Trackpad:
     Scroll dir
   Printers
-  App store:
+  App Store:
     Auto check, dl, app/system install
   Bluetooth:
     Show in menu bar?
@@ -61,7 +62,7 @@ System:
     Icon
     Verify startup items
   Siri off
-  Date & time:
+  Date & Time:
     Show date
   (lock all)
 
@@ -217,11 +218,20 @@ iStat Menus:
   Time:
     Menu bar: clock icon (or EE hh:mm a)
     World Clocks: ZZZ __RELATIVE_OFFSET__ EE HH:mm
+    Hotkey: ctrl-opt-cmd-T
     Dropdown: no calendar
     World clocks:
-      no Moon
+      UTC
+      no Moon?
       no Current Location?
+      Other locations
   Combined: off
+System Preferences:
+  Energy Saver:
+    No battery in menu bar
+  Extensions:
+    Today:
+      On, first
 
 Amphetamine:
   Don't show message
@@ -386,24 +396,18 @@ SSH:
     (and ssh-add -K absolute_path)
 dotfiles
 
-add /usr/local/sbin to path?
-symlink /bin/bash?
+aeolus env bash
 symlink python?
-#
+Python incl 2->3 symlinks?
 Recompiled mosh client
 #
-Python incl 2->3 symlinks?
-#
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
-Hide battery status in menu bar
 more chrome
 gbackup settings
 lastpass
 authy
 vscode
-istat incl. lic
-  add to Today in system extensions (first)
-  mouse battery
+istat
 trash autoempty?
 macvim config
 mosh
