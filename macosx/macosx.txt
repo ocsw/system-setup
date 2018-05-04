@@ -138,13 +138,16 @@ Witch:
       Sort by app act, window act
       List down
       No apps w/o windows
+      Keyboard: opt-tab, shift-opt-tab (or cmd-tab, shift-cmd-tab?)
       Key for reverse
       Show in menu bar
     2:
       Minimize frontmost
+      Keyboard: opt-Z
       Not in menu bar
     3:
       Deminimize frontmost
+      Keyboard: shift-opt-Z
       Not in menu bar
   Appearance:
     No app names in vertical lists
@@ -155,6 +158,18 @@ Witch:
     Do not list: ubar
   About:
     License
+
+Spectacle:
+  Launch at login
+  No key for L/R/T/B, UL/LL/UR/LR, N3/P3
+  Center: ctrl-opt-cmd-C
+  Fullscreen: ctrl-opt-cmd-F
+  Next Display: ctrl-opt-cmd-right
+  Previous Display: ctrl-opt-cmd-left
+  Make Larger: ctrl-opt-cmd-up
+  Make Smaller: ctrl-opt-cmd-down
+  Undo: ctrl-opt-cmd-Z
+  Redo: shift-opt-cmd-Z
 
 Clipy:
   Launch on login
@@ -389,7 +404,6 @@ vscode
 istat incl. lic
   add to Today in system extensions (first)
   mouse battery
-spectacle
 trash autoempty?
 macvim config
 mosh
