@@ -375,18 +375,6 @@ XCode incl. command-line tools
   'xcode-select --install' after OS upgrade
 
 Homebrew - see unix-common/packages.txt
-  bash-completion
-  export GIT_PS1_SHOWDIRTYSTATE=1
-  export GIT_PS1_SHOWSTASHSTATE=1
-  export GIT_PS1_SHOWUNTRACKEDFILES=1
-  export GIT_PS1_SHOWUPSTREAM=verbose # or auto to omit counts
-  export GIT_PS1_SHOWCOLORHINTS=1
-  export PROMPT_COMMAND='__git_ps1 "\h:\w" "\\\$ "'
-  if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-  fi
-add hostname to 127 in hosts?
-rest of unix-common
 SSH:
     Host *
         UseKeychain yes
@@ -394,14 +382,25 @@ SSH:
         IdentityFile ~/.ssh/id_rsa
         IdentityFile ~/.ssh/id_ed25519
     (and ssh-add -K absolute_path)
+rest of unix-common
 dotfiles
 
+  export GIT_PS1_SHOWDIRTYSTATE=1
+  export GIT_PS1_SHOWSTASHSTATE=1
+  export GIT_PS1_SHOWUNTRACKEDFILES=1
+  export GIT_PS1_SHOWUPSTREAM=verbose # or auto to omit counts
+  export GIT_PS1_SHOWCOLORHINTS=1
+  export PROMPT_COMMAND='__git_ps1 "\h:\w" "\\\$ "'
+add hostname to 127 in hosts?
 aeolus env bash
 symlink python?
 Python incl 2->3 symlinks?
 Recompiled mosh client
-#
+bash history, scrollback
+umask
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+more
+#
 more chrome
 gbackup settings
 lastpass
@@ -410,15 +409,11 @@ vscode
 istat
 trash autoempty?
 macvim config
-mosh
 moom placement
 Franz
 bury tmux
 menu bar order incl airplay
-more
 pushbullet
-bash history, scrollback
-umask
 
 (Steam)
 
