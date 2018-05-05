@@ -1,17 +1,15 @@
-### first install git
+### first install git/hg, vim
 
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 touch ~/.ssh/config
 chmod 600 ~/.ssh/config
 ### remember to add a passphrase!
-ssh-keygen -f ~/.ssh/git_bt_rsa
-### now add .pub to gitolite, including config file
+ssh-keygen -a 100 -t ed25519 -f ~/.ssh/github_ed25519
 cat >> ~/.ssh/config <<-EOF
-	Host git.bluetiger.net
-	    IdentityFile ~/.ssh/git_bt_rsa
+	Host github.com
+		IdentityFile ~/.ssh/github_ed25519
 	EOF
-ssh git@git.bluetiger.net
 
 ### global git
 git config --global user.name "Danielle Zephyr Malament"
@@ -50,7 +48,5 @@ git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/tpope/vim-surround.git
 cd ~
 
-
-# bash
-# python
-# etc.
+### python
+# see python.txt
