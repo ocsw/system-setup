@@ -77,5 +77,3 @@ for i in `pyenv versions | grep '/envs/' | sed 's/^..//' | sed 's/ (.*//'`; do
     echo "*** $i ***"; pyenv activate $i; pip install --upgrade pip
 done
 pyenv deactivate
-
-prompt display

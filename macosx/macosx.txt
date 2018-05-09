@@ -385,14 +385,13 @@ SSH:
 rest of unix-common
 dotfiles
 
-export PROMPT_COMMAND='__git_ps1 "\h:\w" "\\\$ "'
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 add hostname to 127 in hosts?
 ipython3
 recompiled mosh client
 umask incl root
 more
 root pw, dots
+extra space in status
 #
 more chrome
 gbackup settings
