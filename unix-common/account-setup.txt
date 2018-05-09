@@ -1,4 +1,5 @@
 ### first install git/hg, vim
+### if __git_ps1 isn't included, install it
 
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
