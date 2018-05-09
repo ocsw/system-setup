@@ -385,21 +385,14 @@ SSH:
 rest of unix-common
 dotfiles
 
-  export GIT_PS1_SHOWDIRTYSTATE=1
-  export GIT_PS1_SHOWSTASHSTATE=1
-  export GIT_PS1_SHOWUNTRACKEDFILES=1
-  export GIT_PS1_SHOWUPSTREAM=verbose # or auto to omit counts
-  export GIT_PS1_SHOWCOLORHINTS=1
-  export PROMPT_COMMAND='__git_ps1 "\h:\w" "\\\$ "'
+export PROMPT_COMMAND='__git_ps1 "\h:\w" "\\\$ "'
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 add hostname to 127 in hosts?
-aeolus env bash
-symlink python?
-Python incl 2->3 symlinks?
-Recompiled mosh client
-bash history, scrollback
-umask
-sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+ipython3
+recompiled mosh client
+umask incl root
 more
+root pw, dots
 #
 more chrome
 gbackup settings
