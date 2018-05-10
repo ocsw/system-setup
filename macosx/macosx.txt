@@ -392,8 +392,13 @@ recompiled mosh client
 umask incl root, brew
 more
 root pw, dots
-move in_path?  more modularity?
+move errorcode_prompt?  bug in ec_p
+rename all 4+ prompt funcs?
+more modularization?
 check old locals
+ls -G
+venv wrappers
+-O2, $ver
 #
 more chrome
 gbackup settings
