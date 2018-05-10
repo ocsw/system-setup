@@ -317,10 +317,12 @@ Textual:
       No general event messages
 
 Franz
-Workplace Chat
-Slack
-Skype
-Telegram?
+  Messenger, Workplace Chat, Hangouts, Telegram, Slack, Skype, Steam, Pushbullet
+  No background, no menu bar
+Workplace Chat (in Franz?)
+Slack (in Franz?)
+Skype (in Franz?)
+Telegram? (in Franz?)
 Signal?
 
 Spotify
@@ -386,12 +388,12 @@ rest of unix-common
 dotfiles
 
 add hostname to 127 in hosts?
-ipython3
 recompiled mosh client
-umask incl root
+umask incl root, brew
 more
 root pw, dots
-extra space in status
+move in_path?  more modularity?
+check old locals
 #
 more chrome
 gbackup settings
