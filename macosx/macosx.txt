@@ -195,7 +195,7 @@ iStat Menus:
     CPU Usage Above: 50% for 10 sec (default)
     Memory Pressure Above: 80% (default)
     'Macintosh HD' Used Percentage Above: 90% (default)
-    Internet Status Changed
+    Internet Status Changed? [can't seem to trigger it]
   Weather: off
   CPU:
     Active: label, cores
@@ -222,10 +222,10 @@ iStat Menus:
     Degrees: F
     Sensors: CPU proximity (show units), ?CPU frequency (show units)
   Battery:
-    Active: horiz color graph, time
-    Bluetooth:
-    Airpods:
-    Batteries: internal, mouse, headphones
+    Active: horizontal color batt, time
+    Bluetooth: symbol, vertical graph
+    Airpods: symbol, vertical graph
+    Batteries: internal, mouse [others?]
   Time:
     Menu bar: clock icon (or EE hh:mm a)
     World Clocks: ZZZ __RELATIVE_OFFSET__ EE HH:mm
@@ -403,20 +403,12 @@ recompiled mosh client
 umask incl root, brew
 more
 root pw, dots
-move errorcode_prompt?  :-1
-rename all 4+ prompt funcs?
-more modularization?
-check old locals
-ls -G
-venv wrappers
--O2, $ver
 #
 more chrome
 gbackup settings
 lastpass
 authy
 vscode
-istat - net alerts, bluetooth batteries, temp alerts
 trash autoempty?
 macvim config
 moom placement
