@@ -77,3 +77,14 @@ for i in `pyenv versions | grep '/envs/' | sed 's/^..//' | sed 's/ (.*//'`; do
     echo "*** $i ***"; pyenv activate $i; pip install --upgrade pip
 done
 pyenv deactivate
+
+# Tox seems to look directly in virtualenvs' bin directories, and requires a
+# minor-versioned python binary (e.g. python3.6), which the above doesn't seem
+# to provide (at least for python3), so:
+for i in ~/.pyenv/versions/*/lib/python*.*; do
+    major=$(printf "%s\n" "$i" | sed 's/^.*\([0-9]\)\.[0-9]$/\1/')
+    majorminor=$(printf "%s\n" "$i" | sed 's/^.*\([0-9]\.[0-9]\)$/\1/')
+    cd $i/../../bin
+    ln -s "python$major" "python$majorminor"
+done
+cd
