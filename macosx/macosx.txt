@@ -191,7 +191,7 @@ iStat Menus:
     Battery Time Remaining: 10 minutes (default)
     Low Battery: 10% (default)
     Bluetooth Battery: 5% (default)
-    Any Temperature Above: 175F for 10 sec
+    Any Temperature Above: 200F for 10 sec
     CPU Usage Above: 50% for 10 sec (default)
     Memory Pressure Above: 80% (default)
     'Macintosh HD' Used Percentage Above: 90% (default)
@@ -403,7 +403,7 @@ recompiled mosh client
 umask incl root, brew
 more
 root pw, dots
-move errorcode_prompt?  bug in ec_p
+move errorcode_prompt?  :-1
 rename all 4+ prompt funcs?
 more modularization?
 check old locals
@@ -416,7 +416,7 @@ gbackup settings
 lastpass
 authy
 vscode
-istat - net alerts, bluetooth batteries
+istat - net alerts, bluetooth batteries, temp alerts
 trash autoempty?
 macvim config
 moom placement
