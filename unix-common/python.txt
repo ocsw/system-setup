@@ -15,9 +15,8 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git \
 
 source ~/.bash_profile  # see dotfiles repo
 
-# after installing python2 and 3; or, substitute other versions
-CFLAGS="-O2" pyenv install $(python2 --version 2>&1 | sed 's/^.* //')
-CFLAGS="-O2" pyenv install $(python3 --version 2>&1 | sed 's/^.* //')
+pybase 3
+pybase 2
 
 # this doesn't work properly on Mac; use venvs and manual symlinks instead
 #pyenv deactivate
@@ -28,8 +27,8 @@ CFLAGS="-O2" pyenv install $(python3 --version 2>&1 | sed 's/^.* //')
 #autopep8
 #flake8
 
-py3ver="3.6.5"  # or whatever
-py2ver="2.7.14"  # or whatever
+py3ver=$(py3latest_local)
+py2ver=$(py2latest_local)
 #
 # see dot.bashrc.d/python.post for pyinst
 pyinst coverage "$py3ver"
