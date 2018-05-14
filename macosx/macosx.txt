@@ -191,11 +191,11 @@ iStat Menus:
     Battery Time Remaining: 10 minutes (default)
     Low Battery: 10% (default)
     Bluetooth Battery: 5% (default)
-    Any Temperature Above: 200F for 10 sec
+    Any Temperature Above: 80C for 30 sec
     CPU Usage Above: 50% for 10 sec (default)
     Memory Pressure Above: 80% (default)
     'Macintosh HD' Used Percentage Above: 90% (default)
-    Internet Status Changed? [can't seem to trigger it]
+    Internet Status Changed?
   Weather: off
   CPU:
     Active: label, cores
@@ -219,7 +219,7 @@ iStat Menus:
     Show BSD names?
   Sensors:
     Active: label, ?single num
-    Degrees: F
+    Degrees: C
     Sensors: CPU proximity (show units), ?CPU frequency (show units)
   Battery:
     Active: horizontal color batt, time
@@ -388,6 +388,7 @@ XCode incl. command-line tools
   'xcode-select --install' after OS upgrade
 
 Homebrew - see unix-common/packages.txt
+add /usr/local/bin/bash to /etc/shells, change shell?
 SSH:
     Host *
         UseKeychain yes
@@ -395,8 +396,8 @@ SSH:
         IdentityFile ~/.ssh/id_rsa
         IdentityFile ~/.ssh/id_ed25519
     (and ssh-add -K absolute_path)
-rest of unix-common
 dotfiles
+rest of unix-common
 
 add hostname to 127 in hosts?
 recompiled mosh client
@@ -404,6 +405,7 @@ umask incl root, brew
 more
 root pw, dots
 #
+istat internet, temp notif
 more chrome
 gbackup settings
 lastpass
