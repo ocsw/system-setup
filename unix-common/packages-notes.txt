@@ -1,0 +1,2 @@
+- bash-completion and coreutils are necessary for Mac, but possibly not for
+  other Unixes
