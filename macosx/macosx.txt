@@ -88,6 +88,10 @@ Android file transfer
 Dropbox
 Box
 Google backups
+  Folders:
+    ~?
+    Desktop, Documents, Downloads, Pictures, .to_back_up
+  Remove everywhere?
 
 uBar:
   General:
@@ -397,6 +401,7 @@ SSH:
         IdentityFile ~/.ssh/id_ed25519
     (and ssh-add -K absolute_path)
 dotfiles
+add .to_back_up to Google Backup
 rest of unix-common
 
 add hostname to 127 in hosts?
@@ -407,7 +412,6 @@ root pw, dots
 #
 istat internet, temp notif
 more chrome
-gbackup settings
 lastpass
 authy
 vscode
