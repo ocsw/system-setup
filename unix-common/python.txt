@@ -61,8 +61,6 @@ pyln "pytest-${py3ver}" py.test
 # more from sphinx?
 pyln "sphinx-${py2ver}" sphinx-{apidoc,autobuild,autogen,build,quickstart}
 pyln "tox-${py3ver}" tox-quickstart
-rm ~/bin/{nose,sphinx}  # don't actually exist
-cd
 
 cat >> ~/.flake8 <<EOF
 [flake8]
@@ -79,7 +77,7 @@ for i in `pyenv versions | grep '/envs/' | sed 's/^..//' | sed 's/ (.*//'`; do
 done
 pyenv deactivate
 
-# Tox seems to look directly in virtualenvs' bin directories, and requires a
+# tox seems to look directly in virtualenvs' bin directories, and requires a
 # minor-versioned python binary (e.g. python3.6), which the above doesn't seem
 # to provide (at least for python3), so:
 for i in ~/.pyenv/versions/*/lib/python*.*; do
