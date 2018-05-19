@@ -49,19 +49,19 @@ pip2 install recommonmark repoze.sphinx.autointerface sphinx-autobuild
 pip2 install sphinxcontrib-zopeext zope.interface
 pyenv deactivate
 #
-cd ~/bin
-ln -s "../.pyenv/versions/coverage-${py3ver}/bin/coverage-3.6" .
-ln -s "../.pyenv/versions/coverage-${py3ver}/bin/coverage3" .
-ln -s "../.pyenv/versions/flake8-${py3ver}/bin/autopep8" .
-ln -s "../.pyenv/versions/flake8-${py3ver}/bin/pycodestyle" .
-ln -s "../.pyenv/versions/flake8-${py3ver}/bin/pyflakes" .
-ln -s "../.pyenv/versions/nose-${py3ver}/bin/nosetests" .
-ln -s "../.pyenv/versions/nose-${py3ver}/bin/nosetests-3.4" .
-ln -s "../.pyenv/versions/pytest-${py3ver}/bin/py.test" .
+# pyln defaults to ~/bin
+pyln "coverage-${py3ver}" coverage-3.6
+pyln "coverage-${py3ver}" coverage3
+pyln "flake8-${py3ver}" autopep8
+pyln "flake8-${py3ver}" pycodestyle
+pyln "flake8-${py3ver}" pyflakes
+pyln "nose-${py3ver}" nosetests
+pyln "nose-${py3ver}" nosetests-3.4
+pyln "pytest-${py3ver}" py.test
 # more from sphinx?
-ln -s "../.pyenv/versions/sphinx-${py2ver}/bin/sphinx-{apidoc,autobuild,autogen,build,quickstart} .
-ln -s "../.pyenv/versions/tox-${py3ver}/bin/tox-quickstart" .
-rm nose sphinx
+pyln "sphinx-${py2ver}" sphinx-{apidoc,autobuild,autogen,build,quickstart}
+pyln "tox-${py3ver}" tox-quickstart
+rm ~/bin/{nose,sphinx}  # don't actually exist
 cd
 
 cat >> ~/.flake8 <<EOF
