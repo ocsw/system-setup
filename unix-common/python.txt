@@ -66,24 +66,3 @@ cat >> ~/.flake8 <<EOF
 [flake8]
 import-order-style = edited
 EOF
-
-# I haven't figured out how to make new virtualenvs have new pip;
-# pyenv global 3.6.5; pyenv deactivate; pip install --upgrade pip
-# will update the base image, but that apparently won't affect the new ones.
-# I thought the problem might be with ensurepip, but that doesn't seem to be it
-# either.  For the moment, to upgrade all of them:
-for i in `pyenv versions | grep '/envs/' | sed 's/^..//' | sed 's/ (.*//'`; do
-    echo "*** $i ***"; pyenv activate $i; pip install --upgrade pip
-done
-pyenv deactivate
-
-# tox seems to look directly in virtualenvs' bin directories, and requires a
-# minor-versioned python binary (e.g. python3.6), which the above doesn't seem
-# to provide (at least for python3), so:
-for i in ~/.pyenv/versions/*/lib/python*.*; do
-    major=$(printf "%s\n" "$i" | sed 's/^.*\([0-9]\)\.[0-9]$/\1/')
-    majorminor=$(printf "%s\n" "$i" | sed 's/^.*\([0-9]\.[0-9]\)$/\1/')
-    cd $i/../../bin
-    ln -s "python$major" "python$majorminor"
-done
-cd
