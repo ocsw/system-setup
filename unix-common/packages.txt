@@ -65,6 +65,7 @@ rsync
 ruby
 screen
 screenfetch
+shellcheck
 tcpdump
 tcsh
 tig
