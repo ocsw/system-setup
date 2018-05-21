@@ -15,7 +15,7 @@ cat >> ~/.ssh/config <<-EOF
 ### global git
 git config --global user.name "Danielle Zephyr Malament"
 git config --global user.email EMAIL  # work or personal, depending
-git config --global core.pager less
+git config --global core.pager "less -F"
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.st status
@@ -28,7 +28,7 @@ echo ".vscode" >> ~/.gitignore_global  # for GUI systems
 username = Danielle Zephyr Malament <EMAIL>  # work or personal, depending
 
 [pager]
-pager = less
+pager = less -F
 
 ### for each personal repo:
 cd $REPO
