@@ -2,7 +2,7 @@
 install:
 --------
 
-may want to start by installing git and following 
+may want to start by installing git and following
 unix-common/account-setup.txt to be able to pull repos
 
 /etc/apt/sources.list:
@@ -58,16 +58,16 @@ clock, ntpd
 accounts, incl. sudo, unix-common/account-setup.txt, dotfiles, perms
 network (fqdn, ip/nm/gw*, dns*, /etc/hosts, dhcp)
   * for desktop, use NetworkManager; for server, /etc/network/interfaces:
-	auto eth0
-	iface eth0 inet static
-		address 192.168.1.5
-		netmask 255.255.255.0
-		network 192.168.1.0
-		broadcast 192.168.1.255
-		gateway 192.168.1.1
-		# dns-* options are implemented by the resolvconf package, if installed
-		dns-nameservers 192.168.1.1 71.250.0.12 71.242.0.12
-		dns-search lan
+    auto eth0
+    iface eth0 inet static
+        address 192.168.1.5
+        netmask 255.255.255.0
+        network 192.168.1.0
+        broadcast 192.168.1.255
+        gateway 192.168.1.1
+        # dns-* options are implemented by the resolvconf package, if installed
+        dns-nameservers 192.168.1.1 71.250.0.12 71.242.0.12
+        dns-search lan
 firewall
   add scripts to /root/bin
   add ~/bin/ to path (e.g. in /etc/login.defs)

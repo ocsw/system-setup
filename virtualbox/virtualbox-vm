@@ -162,9 +162,9 @@ case "$1" in
         ;;
       *)
         # Failed to stop
-	RV="$?"  # save for script exit
+        RV="$?"  # save for script exit
         log_end_msg "$FAIL_RV"
-	exit "$RV"
+        exit "$RV"
         ;;
     esac
     ;;
