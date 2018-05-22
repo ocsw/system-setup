@@ -63,6 +63,6 @@ pyln "sphinx-${py2ver}" sphinx-{apidoc,autobuild,autogen,build,quickstart}
 pyln "tox-${py3ver}" tox-quickstart
 
 cat >> ~/.flake8 <<-EOF
-	[flake8]
-	import-order-style = edited
-	EOF
+[flake8]
+import-order-style = edited
+EOF
