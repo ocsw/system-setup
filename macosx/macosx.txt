@@ -392,6 +392,12 @@ XCode incl. command-line tools
   'xcode-select --install' after OS upgrade
 
 Homebrew - see unix-common/packages.txt
+  /usr/bin/ruby -e "$(curl-fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+  for i in $(cat packages.txt | sed 's/ *#.*$//' | grep -v '^$'); do
+    brew install "$i"
+  done
+  brew upgrade
 add /usr/local/bin/bash to /etc/shells, change shell?
 SSH:
     Host *
