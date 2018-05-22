@@ -18,7 +18,7 @@ export BLOCKSIZE
 PAGER=more
 export PAGER
 
-# aliases should be set in user dotfiles, but this will at least work in 
+# aliases should be set in user dotfiles, but this will at least work in
 # login shells
 alias pico='pico -z'
 alias nano='nano -z'
