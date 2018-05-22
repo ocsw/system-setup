@@ -13,7 +13,7 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git \
     ~/.pyenv/plugins-virtualenv
 
-echo ".python_version" >> ~/.gitignore_global
+echo ".python-version" >> ~/.gitignore_global
 
 source ~/.bash_profile  # see dotfiles repo
 
