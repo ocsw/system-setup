@@ -34,6 +34,7 @@ ipython-notebook
 ipython3
 ipython3-notebook
 jot
+jq
 ksh
 lftp
 lsof
