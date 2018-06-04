@@ -1,0 +1,23 @@
+{
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.scrollBeyondLastLine": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "explorer.autoReveal": false,
+    "highlight-bad-chars.additionalUnicodeChars": ["\u0009"],
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/Users/zephyr/bin/flake8",
+    "python.linting.pylintEnabled": false,
+    "python.pythonPath": "/Users/zephyr/.pyenv/versions/3.6.5/bin/python",
+    "shellcheck.exclude": ["SC1117"],
+    "shellcheck.run": "onSave",
+    "window.restoreWindows": "all",
+    "gitlens.advanced.messages": {
+        "suppressResultsExplorerNotice": true,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.statusBar.reduceFlicker": true,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.historyExplorer.enabled": true,
+}
