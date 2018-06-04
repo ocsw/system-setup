@@ -11,10 +11,17 @@ cat >> foo <<EOF
 Host github.com
     IdentityFile ~/.ssh/github_ed25519
 EOF
+# add SSH key to GitHub
+# generate GPG key with same email as below
+# add GPG key to GitHub
+#gpg --list-keys  # copy key ID  # might not be necessary? see below
 
 ### global git
 git config --global user.name "Danielle Zephyr Malament"
 git config --global user.email EMAIL  # work or personal, depending
+# might not be necessary if the emails match?
+#git config --global user.signingkey KEY_ID
+git config --global commit.gpgsign true
 git config --global core.pager "less -F"
 git config --global alias.co checkout
 git config --global alias.br branch
