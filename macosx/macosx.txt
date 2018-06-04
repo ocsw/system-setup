@@ -265,6 +265,7 @@ Amphetamine:
   Appearance:
     Icon: Eye? Tea Kettle? Pill 2?
     Lower opacity?
+  (Exclude from ubar)
 
 AppCleaner
   SmartDelete on?
