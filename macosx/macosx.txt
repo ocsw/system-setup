@@ -389,6 +389,8 @@ iTerm2:
       Prompt before closing?
   Scroll in interactive
 
+GPG Suite
+
 XCode incl. command-line tools
   'xcode-select --install' after OS upgrade
 
@@ -410,25 +412,23 @@ SSH:
 dotfiles
 add .to_back_up to Google Backup
 rest of unix-common
-GPG Suite
 
 add hostname to 127 in hosts?
 recompiled mosh client
 umask incl root, brew
-more
 root pw, dots
 #
-istat internet, temp notif
-more chrome
+trash autoempty?
+menu bar order incl airplay
+istat temp notif
 lastpass
 authy
-vscode
-trash autoempty?
-macvim config
+more chrome
 moom placement
 Franz
 bury tmux
-menu bar order incl airplay
+vscode
+macvim config
 pushbullet
 
 (Steam)
