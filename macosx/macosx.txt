@@ -267,6 +267,20 @@ Amphetamine:
     Lower opacity?
   (Exclude from ubar)
 
+Annotate:
+  General:
+    Launch at login
+    Show screen at launch?
+    Show icon only in menu bar
+    Allow multiple windows
+  Services?
+  Actions:
+    Upload?
+    Copy
+    Save
+    Drag
+    (others?)
+
 AppCleaner
   SmartDelete on?
 Suspicious Package
