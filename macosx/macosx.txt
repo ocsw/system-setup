@@ -65,6 +65,7 @@ System:
   Date & Time:
     Show date
   (lock all)
+  View -> Organize Alphabetically
 
 Finder:
   General:
