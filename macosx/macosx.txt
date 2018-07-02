@@ -177,6 +177,18 @@ Spectacle:
   Undo: ctrl-opt-cmd-Z
   Redo: shift-opt-cmd-Z
 
+BetterTouchTool:
+  Advanced:
+    General:
+      Launch on startup
+      No crash logs?
+    Sync?
+    Window Snapping:
+      Disable?
+    Moving & Resizing:
+      Move -> ctrl-opt
+      Resize -> ctrl-opt-cmd
+
 Clipy:
   Launch on login
   Snippet shortcut
