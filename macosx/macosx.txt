@@ -416,7 +416,11 @@ iTerm2:
       Prompt before closing?
   Scroll in interactive
 
-GPG Suite
+GPG Suite:
+  System Preferences:
+    GPG Suite:
+      Settings:
+        Remember for (e.g.) 43200 seconds [1 month]
 
 XCode incl. command-line tools
   'xcode-select --install' after OS upgrade
