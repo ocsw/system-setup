@@ -13,6 +13,9 @@ Settings:
 Extensions:
   Password Alert
   Image Picker
+  Pinboard Plus
+    Private by default
+    Wrap in blockquote?
   (Pushbullet)
     account
     no notification count
@@ -28,11 +31,12 @@ Extensions:
   Adblock Plus
     (whitelist)
     no number in icon
-  CaretTab
+  (CaretTab)
     no seconds
     (links)
   Tidy Sidebar
     no memo, wiki, links
     show tooltip
   Go to Tab
+  Tabby Cat
 (from L to R)
