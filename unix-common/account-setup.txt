@@ -7,7 +7,7 @@ touch ~/.ssh/config
 chmod 600 ~/.ssh/config
 ### remember to add a passphrase!
 ssh-keygen -a 100 -t ed25519 -f ~/.ssh/github_ed25519
-cat >> foo <<EOF
+cat >> ~/.ssh/config <<EOF
 Host github.com
     IdentityFile ~/.ssh/github_ed25519
 EOF

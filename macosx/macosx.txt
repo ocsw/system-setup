@@ -12,7 +12,7 @@ System:
     Screen saver - shell, 20m
     Hot corner for screen saver? (UR)
   Dock:
-    On left
+    On left (or right, depending on monitor setup)
     Min to app
     Autohide
   Security:
@@ -97,7 +97,7 @@ Google backups
 uBar:
   General:
     Display
-    No left/right grouping (if ultrawide)
+    No left/right pinning (if ultrawide)
     No window grouping
   (Theme)
   Apps:
