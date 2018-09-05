@@ -59,7 +59,9 @@ pyln "nose-${py3ver}" nosetests
 pyln "nose-${py3ver}" nosetests-3.4
 pyln "pytest-${py3ver}" py.test
 # more from sphinx?
-pyln "sphinx-${py2ver}" sphinx-{apidoc,autobuild,autogen,build,quickstart}
+for i in apidoc autobuild autogen build quickstart; do
+    pyln "sphinx-${py2ver}" "sphinx-$i"
+done
 pyln "tox-${py3ver}" tox-quickstart
 
 cat >> ~/.flake8 <<EOF
