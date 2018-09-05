@@ -5,9 +5,9 @@ Updates
 System:
   General:
     Default browser
-    Ask to keep changes?
+    Ask to keep changes
     No close windows?
-  Desktop:
+  Desktop & Screen Saver:
     Wallpaper
     Screen saver - shell, 20m
     Hot corner for screen saver? (UR)
@@ -15,38 +15,101 @@ System:
     On left (or right, depending on monitor setup)
     Min to app
     Autohide
-  Security:
-    Require password immediately?
+  Security & Privacy:
+    General:
+      Require password immediately (?)
     Filevault on
-    Firewall on
+    Firewall:
+      On
+      Don't block all
+      No built-in
+      No downloaded
+      No stealth mode
+      (Deny incoming as programs request it)
     Privacy:
-      System services: don't show icon?
+      Location Services:
+        Enable
+        All apps off
+        System Services: don't show icon
+      Accessibility:
+        BetterTouchTool, Moom, Spectacle, uBar, Witch
+      No analytics
+    Lock
   Displays:
     Arrangement
-    Night shift at night
+    No menu bar (?)
+    Display:
+      Auto brightness
+      True Tone
+    Night shift: Sunset to Sunrise
   Energy Saver:
-    Change time?
+    Change times? (defaults: 2 min battery, 10 min power)
     No battery in menu bar (after iStat Menus, see below)
+    Lock
   Keyboard:
-    Control strip - no Siri, add lock, screenshot (L of media)
-    Caps lock to cmd
-    Text - remove omw
-    Turn off corrections?
+    Keyboard:
+      (default repeat: 7/8, delay: 3/6)
+      Control Strip:
+        small: no Siri, add lock on left (?)
+        big: no Siri?, lock, screenshot (left of media)
+      Caps lock: cmd (?) esc? none?
+    Text:
+      Remove omw
+      No correct/capitalize/period
+      No smart quotes?
     Shortcuts:
       Mission Control:
         Show Desktop -> ^F11 (because of VSCode)
         Show Dashboard -> ^F12 (because of VSCode)
+      Accessibility: Zoom on (?)
       App Shortcuts:
         Lock Screen -> ctrl-opt-cmd-L [10.13]
       (other shortcuts)
+    Input Sources:
+      No menu bar
   Trackpad:
-    Scroll dir
-  Printers
+    Point & Click:
+      Look up with 3 fingers
+      Secondary with 2
+      Tap to click (?)
+      Click: Medium
+      Tracking Speed: 4/10 (5?)
+      Force Click
+    Scroll & Zoom:
+      Scroll dir: Natural off
+      Pinch
+      Double-tap
+      Rotate
+    More Gestures: all on (?)
+  Printers & Scanners:
+    (devices)
+    Lock
+  Startup Disk: lock
+  iCloud:
+    (Account Details)
+    iCloud Drive:
+      Documents:
+        Only System Preferences (?)
+    Photos:
+      No Library
+    No Mail
+    No Safari
+    No Siri?
+    No Keychain (?)
+    No Back to My Mac (?)
   App Store:
     Auto check, dl, app/system install
+    Lock
+  Network:
+    WiFi networks
+    Wired first if available
+    Lock
   Bluetooth:
-    Show in menu bar?
+    (devices)
   Extensions:
+    Share Menu:
+      OneNote on
+      others off?
     Today:
       only iStat Menus, Calculator (in that order)
   Sharing:
@@ -54,17 +117,34 @@ System:
     Local Hostname
     No dynamic global hostname
     -> sudo scutil --set HostName name
-  Touch ID
-  Users
+  Touch ID: fingers
+  Users & Groups:
+    Current:
+      Password:
+        Icon
+      Login Items: verify
+    Disable Guest User
     Login Options:
       Display login as name and password?
-    Disable Guest User
-    Icon
-    Verify startup items
-  Siri off
+    Lock
+  Siri:
+    Off?
+    Listen?
+    No menu bar (?)
+    Suggestions: all off (?)
   Date & Time:
-    Show date
-  (lock all)
+    Time Zone
+    Clock:
+      Show date and time
+      Show day, date (if no Itsycal / iStat Menus)
+    Lock
+  Time Machine: lock
+  Accessibility:
+    Zoom: (?)
+      Use shortcuts
+      Use gesture with opt
+      Options:
+        Flash on notification
   View -> Organize Alphabetically
 
 Finder:
@@ -72,38 +152,55 @@ Finder:
     New -> Downloads (or homedir?)
     Don't open in tabs
   Sidebar:
-    Show homedir, hard disks
+    Show all but Movies (?), Music (?), Pictures (?)
+  cmd-shift-. for dotfiles
 
 Keychain Access:
   Show in menu bar [not in 10.13]
 
-WiFi
-VPN
+WiFi (if not already done)
+VPNs:
+  PIA:
+    No autoconnect
+  FortiClient
+  etc.
 Avira?
 f.lux?
 
-Logitech control center
+Logitech control center:
   Vertical scroll speed -> 3?
 Android file transfer
 
-Dropbox
+Dropbox: account
 Box
-Google backups
-  Folders:
-    ~?
-    Desktop, Documents, Downloads, Pictures, .to_back_up
-  Remove everywhere?
+Google Backup and Sync:
+  Computer:
+    Folders:
+      ~?
+      Desktop, Documents, Downloads, Pictures, .to_back_up
+    Remove everywhere (?)
+    USB/SD: no
+  Sync Drive (all) (?)
+SpiderOne:
+  Account
+  Folders
 
 uBar:
+  -> System -> Security -> Privacy -> allow
   General:
-    Display
-    No left/right pinning (if ultrawide)
+    Pinning: all if not ultrawide, else bottom only
+    Display: Main (?)
     No window grouping
   (Theme)
+  Areas:
+    No clock (?)
   Apps:
     App order: manual
     App inclusions: order (see bottom)
     App exclusions
+  Shortcuts:
+    No hiding
+    Activity: right option
   License
 
 Hammerspoon:
@@ -118,19 +215,23 @@ Hammerspoon:
   (Exclude from ubar)
 
 Moom:
+  -> System -> Security -> Privacy -> allow
   General:
-    Start on launch
+    Launch on login
     Don't show prefs on launch
     Run as menu bar app
   Mouse:
+    (default delay: 0.1 sec)
     Don't bring to front
   Custom:
-    Add
-    Arrange windows
-    Trigger on 1 / 2 displays
-    Don't ignore obstructed
-    Save snapshots
-    Hotkey
+    Menu Separator
+    Remove others? (or just hotkeys?)
+    Add two:
+      Arrange windows
+      Trigger on 1 / 2 displays
+      Don't ignore obstructed
+      Save snapshot
+      Hotkey (ctrl-opt-cmd-1 / 2)
   Updates:
     Auto check
   Accessibility
@@ -138,11 +239,12 @@ Moom:
   (Exclude from ubar)
 
 Witch:
+  -> System -> Security -> Privacy -> allow
   Actions:
     1:
       Cycle windows
       Sort by app act, window act
-      List down
+      Orientation: down
       No apps w/o windows
       Keyboard: opt-tab, shift-opt-tab (or cmd-tab, shift-cmd-tab?)
       Key for reverse
@@ -158,7 +260,7 @@ Witch:
   Appearance:
     No app names in vertical lists
   Advanced:
-    Show on display w/mouse
+    Show on display w/mouse (or frontmost?)
     Spring load?
     No release to dismiss?
     Do not list: ubar
@@ -166,6 +268,7 @@ Witch:
     License
 
 Spectacle:
+  -> System -> Security -> Privacy -> allow
   Launch at login
   No key for L/R/T/B, UL/LL/UR/LR, N3/P3
   Center: ctrl-opt-cmd-C
@@ -178,54 +281,63 @@ Spectacle:
   Redo: shift-opt-cmd-Z
 
 BetterTouchTool:
+  -> System -> Security -> Privacy -> allow
   Advanced:
     General:
       Launch on startup
-      No crash logs?
+      No crash logs (?)
     Sync?
     Window Snapping:
-      Disable?
+      Disable (?)
     Moving & Resizing:
       Move -> ctrl-opt
       Resize -> ctrl-opt-cmd
+      Bring to front
+  License
 
 Clipy:
   Launch on login
   Snippet shortcut
   Snippets
 
-Itsycal:
-  Launch at login
-  Outline icon
+Itsycal (or see iStat Menus):
+  General:
+    Launch at login
+  Appearance:
+    Outline icon
+    Month?
+    Day?
 
 iStat Menus:
   Intel Power Gadget
   Global:
     License
-  Notifications (all alerts):
+  Notifications (all alerts; do rest first):
     No weather
     Daylight Saving Change: 2
     Battery Time Remaining: 10 minutes (default)
     Low Battery: 10% (default)
     Bluetooth Battery: 5% (default)
     Any Temperature Above: 80C for 30 sec
-    CPU Usage Above: 50% for 10 sec (default)
-    Memory Pressure Above: 80% (default)
+    CPU Usage Above: 50% for 10 sec (default) (banner (?))
+    Memory Pressure Above: 80% for 10 sec (default)
     'Macintosh HD' Used Percentage Above: 90% (default)
     Internet Status Changed?
   Weather: off
   CPU:
-    Active: label, cores
+    Active: label, cores (and GPU stuff?)
     App usage format: 100%
-    Processes: 10?
+    Processes: 10 (?)
     Hide HT cores
   Memory:
     Active: label, bar graph (pressure, or if memory, don't show breakdowns)
-    Processes: 10
+    Processes: 10 (?)
     App format: size
-    Don't hide inactive memory?
+    Don't hide inactive memory (?)
   Disks:
-    Active: label, disk space, ?act num (show label), ?act graph (show bg)
+    Active:
+      label, disk space, ?activity num (show label),
+      ?activity graph (show bg)
     Activity mode: detailed (per disk)
     Processes: 10
   Network:
@@ -233,26 +345,27 @@ iStat Menus:
     Processes: 10
     Decimals (KB): 1? 2?
     Combine bandwidth
-    Show BSD names?
+    Show BSD names
   Sensors:
     Active: label, ?single num
     Degrees: C
-    Sensors: CPU proximity (show units), ?CPU frequency (show units)
+    Sensors: CPU PECI (show units), ?CPU frequency (show units)
   Battery:
     Active: horizontal color batt, time
     Bluetooth: symbol, vertical graph
     Airpods: symbol, vertical graph
     Batteries: internal, mouse [others?]
   Time:
-    Menu bar: clock icon (or EE hh:mm a)
-    World Clocks: ZZZ __RELATIVE_OFFSET__ EE HH:mm
+    Menu bar: outline date icon (or clock icon, or EE hh:mm a)
+    World Clocks: ZZZ __RELATIVE_OFFSET__ EE HH:mm (default 06:05 AM)
     Hotkey: ctrl-opt-cmd-T
-    Dropdown: no calendar
+    Dropdown: no calendar (if Itsycal)
     World clocks:
       UTC
       no Moon?
       no Current Location?
       Other locations
+    Open dropdown -> hide request box
   Combined: off
 System Preferences:
   Energy Saver:
@@ -261,7 +374,7 @@ System Preferences:
     Today:
       iStat on, first
 
-Amphetamine:
+Amphetamine (App Store):
   Don't show message
   Don't show in Dock
   General:
@@ -276,16 +389,16 @@ Amphetamine:
     Start/End: ctrl-opt-cmd-A
     If active, end
   Appearance:
-    Icon: Eye? Tea Kettle? Pill 2?
+    Icon: Eye (or Tea Kettle? Pill 2?)
     Lower opacity?
   (Exclude from ubar)
 
-Annotate:
+Annotate (App Store):
   General:
     Launch at login
-    Show screen at launch?
+    No screen at launch (?)
     Show icon only in menu bar
-    Allow multiple windows
+    Allow multiple windows (?)
   Services?
   Actions:
     Upload?
@@ -294,13 +407,15 @@ Annotate:
     Drag
     (others?)
 
-AppCleaner
-  SmartDelete on?
+AppCleaner:
+  SmartDelete: on (?)
+  Updates: check automatically
 Suspicious Package
-NameChanger
-  no history, auto update
+NameChanger:
+  No history
+  Auto update
 HoudahSpot (incl. license)
-Disk Inventory X
+Disk Inventory X ("not optimized"?)
 DaisyDisk (incl. license)
 Wireshark
 
@@ -317,9 +432,12 @@ Yubiswitch:
     Start on login
 
 Firefox:
-  Default
-  Bunny
-  No logins
+  General:
+    Restore
+    (Default check)
+  Home: Google / blank
+  Privacy: no autofill?
+  (Bunny)
   Keys
   Wheel and keys
 (see directory)
@@ -359,20 +477,20 @@ Textual:
     Style:
       No general event messages
 
-Franz
+Franz:
   Messenger, Workplace Chat, Hangouts, Telegram, Slack, Skype, Steam, Pushbullet
   No background, no menu bar
 Workplace Chat (in Franz?)
-Slack (in Franz?)
+Slack (App Store; in Franz?)
 Skype (in Franz?)
 Telegram? (in Franz?)
 Signal?
 
 Spotify
-Amazon Music
+Amazon Music:
   no launch on startup
 iTunes
-Kindle
+Kindle:
   no dictionary
 etc.
 
@@ -388,17 +506,19 @@ Omnigraffle
 Monodraw
 MindNode?
 
-OneNote, clipper, add to share menu
+OneNote (App Store), clipper, add to share menu
+** hide, no sp
+** printing
 Office
-Keynote
-  General
+Keynote:
+  General:
     Author
-  Auto-Correction
+  Auto-Correction:
     no spelling corrections
     no Link style?
     no smart quotes?
 
-Sequel Pro
+Sequel Pro:
   auto-update
 
 iTerm2:
@@ -452,7 +572,7 @@ root pw, dots
 trash autoempty?
 menu bar order incl airplay
 istat temp notif
-lastpass
+lastpass incl disk
 authy
 more chrome
 moom placement
@@ -461,12 +581,18 @@ bury tmux
 vscode
 macvim config
 pushbullet
+config pia, spiderone, docker
+u l sbin
+backup git x2, ssh config?
+separate keychain pw?
 
-(Steam)
+Steam:
+  Install games
 
 Dock order (all keep in dock):
   Finder
-  Dashboard
+  Siri?
+  Dashboard?
   System Preferences
   (Moom)
   Cisco AnyConnect / FortiClient / etc.

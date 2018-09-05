@@ -8,35 +8,42 @@ Settings:
   Continue where you left off
   No services except dangerous sites
   No passwords
+  No Auto Sign-in
   Ask where to save
+  No hardware acceleration
 
 Extensions:
   Password Alert
+  Play the GIF:
+    No auto start
   Image Picker
-  Pinboard Plus
+  Pinboard Plus:
+    Account
     Private by default
-    Wrap in blockquote?
-  (Pushbullet)
-    account
-    no notification count
-    no auto-open
-    no notifications
-    enable instant pushing?
-    (password)
+    Wrap in blockquote (?)
+  (Pushbullet:)
+    Account
+    No notification count
+    No auto-open
+    No notifications
+    Enable instant pushing?
+    (Password)
   OneNote Web Clipper
-  Awesome Screenshot
-    no shortcuts
-  HTTPS Everywhere
-    no counter
-  Adblock Plus
-    (whitelist)
-    no number in icon
-  (CaretTab)
-    no seconds
-    (links)
-  Tidy Sidebar
-    no memo, wiki, links
-    show tooltip
+  Awesome Screenshot:
+    No shortcuts
+  HTTPS Everywhere:
+    No counter
+  Adblock Plus:
+    (Whitelist)
+    No number in icon
+  (CaretTab:)
+    No seconds
+    (Links)
+  Tidy Sidebar:
+    No memo, wiki, links
+    Show tooltip
   Go to Tab
   Tabby Cat
+  Downloader for Instagram:
+    Hide
 (from L to R)
