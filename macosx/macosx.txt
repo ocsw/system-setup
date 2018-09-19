@@ -162,6 +162,7 @@ WiFi (if not already done)
 VPNs:
   PIA:
     No autoconnect
+    (Exclude nwjs from uBar)
   FortiClient
   etc.
 Avira?
@@ -212,7 +213,7 @@ Hammerspoon:
     https://www.isi.edu/~calvin/mac-lockscreen.htm
     clang -framework Foundation lockscreen.m -o lockscreen
   Config file
-  (Exclude from ubar)
+  (Exclude from uBar)
 
 Moom:
   -> System -> Security -> Privacy -> allow
@@ -236,7 +237,7 @@ Moom:
     Auto check
   Accessibility
   License
-  (Exclude from ubar)
+  (Exclude from uBar)
 
 Witch:
   -> System -> Security -> Privacy -> allow
@@ -263,7 +264,7 @@ Witch:
     Show on display w/mouse (or frontmost?)
     Spring load?
     No release to dismiss?
-    Do not list: ubar
+    Do not list: uBar
   About:
     License
 
@@ -391,7 +392,7 @@ Amphetamine (App Store):
   Appearance:
     Icon: Eye (or Tea Kettle? Pill 2?)
     Lower opacity?
-  (Exclude from ubar)
+  (Exclude from uBar)
 
 Annotate (App Store):
   General:
