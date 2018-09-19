@@ -37,8 +37,13 @@ Extensions:
     (Whitelist)
     No number in icon
   (CaretTab:)
-    No seconds
+    Color:
+      Theme (purple on white)
+    Time:
+      No seconds
     (Links)
+    Extras:
+      No search box?
   Tidy Sidebar:
     No memo, wiki, links
     Show tooltip
