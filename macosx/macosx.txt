@@ -194,6 +194,9 @@ uBar:
     No window grouping
   (Theme)
   Areas:
+    No spaces
+    No battery
+    No separators?
     No clock (?)
   Apps:
     App order: manual
