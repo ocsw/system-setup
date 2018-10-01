@@ -387,11 +387,11 @@ Amphetamine (App Store):
   General:
     Default: 3 hours
     Launch at login
-    Don't show in Dock
-  (Triggers)
+    Hide in Dock
   Battery:
     Ask if below 10%
     Ignore when connected
+  (Triggers)
   Hotkeys:
     Start/End: ctrl-opt-cmd-A
     If active, end
