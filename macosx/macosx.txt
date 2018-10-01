@@ -286,6 +286,9 @@ Spectacle:
 
 BetterTouchTool:
   -> System -> Security -> Privacy -> allow
+  Basic:
+    Touch Bar:
+      No icon
   Advanced:
     General:
       Launch on startup
