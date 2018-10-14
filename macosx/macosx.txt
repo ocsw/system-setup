@@ -13,8 +13,10 @@ System:
     Hot corner for screen saver? (UR)
   Dock:
     On left (or right, depending on monitor setup)
+    Prefer tabs: always (?)
     Min to app
     Autohide
+    No recent
   Security & Privacy:
     General:
       Require password immediately (?)
@@ -29,15 +31,16 @@ System:
     Privacy:
       Location Services:
         Enable
-        All apps off
+        All apps off (except Flux)
         System Services: don't show icon
       Accessibility:
-        BetterTouchTool, Moom, Spectacle, uBar, Witch
+        BetterTouchTool, Clipy, Dropbox, Google Software Update, Hammerspoon,
+        Moom, Spectacle, uBar, Witch
       No analytics
     Lock
   Displays:
     Arrangement
-    No menu bar (?)
+    No mirroring in menu bar (?)
     Display:
       Auto brightness
       True Tone
@@ -97,8 +100,12 @@ System:
     No Siri?
     No Keychain (?)
     No Back to My Mac (?)
-  App Store:
+    No News
+    No Stocks
+    No Home
+  App Store / Software Update:
     Auto check, dl, app/system install
+    No OS updates
     Lock
   Network:
     WiFi networks
