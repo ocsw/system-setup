@@ -407,7 +407,7 @@ Amphetamine (App Store):
     Lower opacity?
   (Exclude from uBar)
 
-Annotate (App Store):
+Annotate (App Store) (skip on 10.14+?)
   General:
     Launch at login
     No screen at launch (?)
@@ -420,6 +420,8 @@ Annotate (App Store):
     Save
     Drag
     (others?)
+  Shortcuts:
+    Crosshair overlaps with 10.14+
 
 AppCleaner:
   SmartDelete: on (?)
