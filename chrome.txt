@@ -3,20 +3,22 @@ Chrome menu:
 
 Settings:
   Sync (no passwords or cards)
+  No passwords
+  No Auto Sign-in
   Bookmarks bar on
   Default browser
   Continue where you left off
   No services except dangerous sites
-  No passwords
-  No Auto Sign-in
   Ask where to save
-  No hardware acceleration
+  No hardware acceleration (? issues on Mac)
 
 Extensions:
+  [Developer Mode on]
+  ---
   Password Alert
   Play the GIF:
     No auto start
-  Image Picker
+  (Image Picker? bhibldekjicdbnjeeecmgoogcihoalhe)
   Pinboard Plus:
     Account
     Private by default
@@ -51,4 +53,21 @@ Extensions:
   Tabby Cat
   Downloader for Instagram:
     Hide
+  (Application Launcher for Drive:)
+    Hide
+  (Google Docs Offline)
+  (Office Editing for Docs, Sheets, and Slides:)
+    Hide
+  (Stop Animations? gemmknjnneiojfjelmgappppbaneikda)
+  (Download Manager? daoidaoebhfcgccdpgjjcbdginkofmfe)
+  (Batch Image Download.Full Screen Capture?)
+  (Fatkun Batch Download Image?)
+  (Image Downloader?)
+  (zzllrr Imager Geek?)
+  (Tampermonkey?)
 (from L to R)
+
+Apps:
+  (Docs)
+  (Sheets)
+  (Slides)
