@@ -52,6 +52,7 @@ openvpn
 p7zip
 parallel
 pep8
+pssh
 pstree
 pv
 pwgen
