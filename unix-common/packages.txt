@@ -37,6 +37,7 @@ jot
 jq
 ksh
 lftp
+lolcat
 lsof
 lynx
 m4
@@ -48,6 +49,7 @@ mtr
 nano
 ncftp
 nmap
+no-more-secrets
 openvpn
 p7zip
 parallel
