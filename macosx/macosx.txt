@@ -597,6 +597,7 @@ bury tmux
 vscode
 macvim config
 pushbullet
+xnviewmp
 config pia, spiderone, docker
 u l sbin
 backup git x2, ssh config?
