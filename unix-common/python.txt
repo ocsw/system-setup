@@ -25,6 +25,10 @@ sudo installer -pkg \
 pybase 3
 pybase 2
 
+# not sure if this is enough, you might need to log out and back in for pip to
+# not try to put things in /usr/local/bin...
+source ~/.bash_profile
+
 # this doesn't work properly on Mac; use venvs and manual symlinks instead
 #pyenv deactivate
 #pip3 install virtualenv
