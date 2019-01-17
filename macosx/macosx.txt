@@ -512,10 +512,11 @@ Signal?
 
 Spotify
 Amazon Music:
-  no launch on startup
+  No launch on startup
 iTunes
 Kindle:
-  no dictionary
+  No dictionary
+  Download books
 etc.
 
 MacVim
