@@ -231,7 +231,7 @@ Hammerspoon:
   (Exclude from uBar)
 
 Moom:
-  -> System -> Security -> Privacy -> allow
+  -> System -> Security -> Privacy -> allow, Accessibility
   General:
     Launch on login
     Don't show prefs on launch
@@ -250,7 +250,6 @@ Moom:
       Hotkey (ctrl-opt-cmd-1 / 2)
   Updates:
     Auto check
-  Accessibility
   License
   (Exclude from uBar)
 
@@ -333,7 +332,7 @@ iStat Menus:
     License
   Notifications (all alerts; do rest first):
     No weather
-    Daylight Saving Change: 2
+    Daylight Saving Change: 2 days before
     Battery Time Remaining: 10 minutes (default)
     Low Battery: 10% (default)
     Bluetooth Battery: 5% (default)
@@ -370,11 +369,12 @@ iStat Menus:
     Degrees: C
     Sensors: CPU PECI (show units), ?CPU frequency (show units)
   Battery:
-    Active: horizontal color batt, time
+    Active: horizontal color batt (with icons), time
     Bluetooth: symbol, vertical graph
     Airpods: symbol, vertical graph
     Batteries: internal, mouse [others?]
   Time:
+    On
     Menu bar: outline date icon (or clock icon, or EE hh:mm a)
     World Clocks: ZZZ __RELATIVE_OFFSET__ EE HH:mm (default 06:05 AM)
     Hotkey: ctrl-opt-cmd-T
@@ -447,11 +447,13 @@ Yubiswitch:
   No unlock on sleep
   Auto off
   Preferences:
-    Hotkey (shift-cmd-Y)
+    Hotkey (ctrl-opt-cmd-Y)
     ProductID
-      ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idProduct
+      -> ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idProduct
+      0x407 for nano
     (VendorID)
-      ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idVendor
+      -> ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idVendor
+      0x1050 for nano
     Switch off after 5 sec
     Start on login
 
@@ -502,7 +504,7 @@ Textual:
       No general event messages
 
 Franz:
-  Messenger, Workplace Chat, Hangouts, Telegram, Slack, Skype, Steam, Pushbullet
+  Messenger, Workplace Chat, Hangouts, Telegram, Slack, Skype, Steam
   No background, no menu bar
 Workplace Chat (in Franz?)
 Slack (App Store; in Franz?)
@@ -516,6 +518,7 @@ Amazon Music:
 iTunes
 Kindle:
   No dictionary
+  No crash reports (?)
   Download books
 etc.
 
