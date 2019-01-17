@@ -10,7 +10,7 @@ System:
   Desktop & Screen Saver:
     Wallpaper
     Screen saver - shell, 20m
-    Hot corner for screen saver? (UR)
+    Hot corner to lock screen (UR)
   Dock:
     On left (or right, depending on monitor setup)
     Prefer tabs: always (?)
@@ -33,9 +33,12 @@ System:
         Enable
         All apps off (except Flux)
         System Services: don't show icon
-      Accessibility:
-        BetterTouchTool, Clipy, Dropbox, Google Software Update, Hammerspoon,
-        Moom, Spectacle, uBar, Witch
+      Contacts: all off
+      Calendars: all off
+      Camera: Chrome, Logitech, Skype
+      Microphone: Chrome, Logitech, (Onde Audio Recorder), Skype
+      Accessibility: all on
+      Automation: all on (?)
       No analytics
     Lock
   Displays:
@@ -48,11 +51,11 @@ System:
   Energy Saver:
     Change times? (defaults: 2 min battery, 10 min power)
     No battery in menu bar (after iStat Menus, see below)
-    Lock
+    Lock (not available on 10.14+?)
   Keyboard:
     Keyboard:
       (default repeat: 7/8, delay: 3/6)
-      Control Strip:
+      Touch Bar / Control Strip:
         small: no Siri, add lock on left (?)
         big: no Siri?, lock, screenshot (left of media)
       Caps lock: cmd (?) esc? none?
@@ -74,7 +77,7 @@ System:
     Point & Click:
       Look up with 3 fingers
       Secondary with 2
-      Tap to click (?)
+      Tap to click?
       Click: Medium
       Tracking Speed: 4/10 (5?)
       Force Click
@@ -86,7 +89,7 @@ System:
     More Gestures: all on (?)
   Printers & Scanners:
     (devices)
-    Lock
+    Lock (not available on 10.14+?)
   Startup Disk: lock
   iCloud:
     (Account Details)
@@ -97,7 +100,7 @@ System:
       No Library
     No Mail
     No Safari
-    No Siri?
+    No Siri (?)
     No Keychain (?)
     No Back to My Mac (?)
     No News
@@ -106,14 +109,16 @@ System:
   App Store / Software Update:
     Auto check, dl, app/system install
     No OS updates
-    Lock
+    Lock (not available on 10.14+?)
   Network:
     WiFi networks
     Wired first if available
-    Lock
+    Lock (not available on 10.14+?)
   Bluetooth:
     (devices)
   Extensions:
+    Finder Extensions:
+      Dropbox, Google
     Share Menu:
       OneNote on
       others off?
@@ -134,6 +139,7 @@ System:
     Login Options:
       Display login as name and password?
     Lock
+  Parental Controls: Lock
   Siri:
     Off?
     Listen?
@@ -145,7 +151,7 @@ System:
       Show date and time
       Show day, date (if no Itsycal / iStat Menus)
     Lock
-  Time Machine: lock
+  Time Machine: lock (not available on 10.14+?)
   Accessibility:
     Zoom: (?)
       Use shortcuts
@@ -159,7 +165,7 @@ Finder:
     New -> Downloads (or homedir?)
     Don't open in tabs
   Sidebar:
-    Show all but Movies (?), Music (?), Pictures (?)
+    Show all
   cmd-shift-. for dotfiles
 
 Keychain Access:
@@ -180,7 +186,6 @@ Logitech control center:
 Android file transfer
 
 Dropbox: account
-Box
 Google Backup and Sync:
   Computer:
     Folders:
@@ -203,7 +208,7 @@ uBar:
   Areas:
     No spaces
     No battery
-    No separators?
+    No separators (?)
     No clock (?)
   Apps:
     App order: manual
@@ -392,11 +397,14 @@ Amphetamine (App Store):
   Don't show message
   Don't show in Dock
   General:
-    Default: 3 hours
+    Quick-Start: right click
     Launch at login
     Hide in Dock
+  Sessions:
+    Default Duration: 3 hours
   Battery / Power:
-    Ask if below 10%
+    End if below 10%
+    Prompt
     Ignore when connected
   (Triggers)
   Hotkeys:
@@ -546,8 +554,8 @@ iTerm2:
     Text:
       Font? (default is 12pt Monaco)
     Terminal:
-      Unlimited scrollback?
-      Silence bell?
+      Unlimited scrollback (?)
+      Silence bell (?)
     Session:
       Prompt before closing?
   Scroll in interactive
@@ -595,8 +603,6 @@ moom placement
 Franz
 bury tmux
 vscode
-macvim config
-pushbullet
 xnviewmp
 config pia, spiderone, docker
 u l sbin
@@ -625,6 +631,7 @@ Dock order (all keep in dock):
   Omnigraffle
   Keynote
   (Steam)
+  (CrossOver)
 
 uBar App Order:
   Cisco AnyConnect / FortiClient / etc.
@@ -645,6 +652,7 @@ uBar App Order:
   Preview
   Calculator
   Steam
+  CrossOver
   ESET / etc.
 
 Moom window placement
