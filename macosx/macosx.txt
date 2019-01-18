@@ -73,6 +73,9 @@ System:
       (other shortcuts)
     Input Sources:
       No menu bar
+  Mouse:
+    No Natural scroll
+    (default tracking: 4/10, scrolling 4/8, double-click 9/11)
   Trackpad:
     Point & Click:
       Look up with 3 fingers
