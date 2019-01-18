@@ -42,12 +42,12 @@ System:
       No analytics
     Lock
   Displays:
-    Arrangement
     No mirroring in menu bar (?)
     Display:
       Auto brightness
       True Tone
-    Night shift: Sunset to Sunrise
+    Arrangement
+    Night Shift: Sunset to Sunrise
   Energy Saver:
     Change times? (defaults: 2 min battery, 10 min power)
     No battery in menu bar (after iStat Menus, see below)
