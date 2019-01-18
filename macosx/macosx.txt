@@ -82,7 +82,7 @@ System:
       Secondary with 2
       Tap to click?
       Click: Medium
-      Tracking Speed: 4/10 (5?)
+      Tracking Speed: 4/10 (default) (5?)
       Force Click
     Scroll & Zoom:
       Scroll dir: Natural off
@@ -93,7 +93,7 @@ System:
   Printers & Scanners:
     (devices)
     Lock (not available on 10.14+?)
-  Startup Disk: lock
+  Startup Disk: Lock
   iCloud:
     (Account Details)
     iCloud Drive:
@@ -152,16 +152,18 @@ System:
     Time Zone
     Clock:
       Show date and time
-      Show day, date (if no Itsycal / iStat Menus)
+      Show AM/PM (default)
+      Show day (default)
+      Show date (if no Itsycal / iStat Menus)
     Lock
-  Time Machine: lock (not available on 10.14+?)
+  Time Machine: Lock (not available on 10.14+?)
   Accessibility:
     Zoom: (?)
       Use shortcuts
       Use gesture with opt
       Options:
         Flash on notification
-  View -> Organize Alphabetically
+  View -> Organize Alphabetically, Show All
 
 Finder:
   General:
@@ -390,6 +392,8 @@ iStat Menus:
     Open dropdown -> hide request box
   Combined: off
 System Preferences:
+  Date & Time:
+    No date (if using date icon)
   Energy Saver:
     No battery in menu bar
   Extensions:
