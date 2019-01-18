@@ -2,7 +2,7 @@ FileVault, incl. save recovery key (pic?)
 
 Updates
 
-System:
+System Preferences:
   General:
     Default browser
     Ask to keep changes
@@ -204,7 +204,7 @@ SpiderOne:
   Folders
 
 uBar:
-  -> System -> Security -> Privacy -> allow
+  -> System Preferences -> Security -> Privacy -> allow
   General:
     Pinning: all if not ultrawide, else bottom only
     Display: Main (?)
@@ -236,7 +236,7 @@ Hammerspoon:
   (Exclude from uBar)
 
 Moom:
-  -> System -> Security -> Privacy -> allow, Accessibility
+  -> System Preferences -> Security -> Privacy -> allow, Accessibility
   General:
     Launch on login
     Don't show prefs on launch
@@ -259,7 +259,7 @@ Moom:
   (Exclude from uBar)
 
 Witch:
-  -> System -> Security -> Privacy -> allow
+  -> System Preferences -> Security -> Privacy -> allow
   Actions:
     1:
       Cycle windows
@@ -288,7 +288,7 @@ Witch:
     License
 
 Spectacle:
-  -> System -> Security -> Privacy -> allow
+  -> System Preferences -> Security -> Privacy -> allow
   Launch at login
   No key for L/R/T/B, UL/LL/UR/LR, N3/P3
   Center: ctrl-opt-cmd-C
@@ -301,7 +301,7 @@ Spectacle:
   Redo: shift-opt-cmd-Z
 
 BetterTouchTool:
-  -> System -> Security -> Privacy -> allow
+  -> System Preferences -> Security -> Privacy -> allow
   Basic:
     Touch Bar:
       No icon
@@ -541,10 +541,21 @@ Omnigraffle
 Monodraw
 MindNode?
 
-OneNote (App Store), clipper, add to share menu
-** hide, no sp
-** printing
+OneNote (App Store), clipper
+  General:
+    Store in OneDrive (?)
+  Spelling:
+    No auto spelling
+    No check spelling
+    No auto caps
+  Navigation Panes:
+    Hide all (just Section List?)
+  Printing:
+    Two-Sided
+  System Preferences -> add to share menu
+
 Office
+
 Keynote:
   General:
     Author
