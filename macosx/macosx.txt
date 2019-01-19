@@ -49,7 +49,9 @@ System Preferences:
     Display:
       Auto brightness
       True Tone
-    Arrangement
+    Arrangement:
+      monitors
+      main (top strip)
     Night Shift: Sunset to Sunrise
   Energy Saver:
     Change times? (defaults: 2 min battery, 10 min power)
@@ -195,6 +197,7 @@ Finder:
     Music
     Pictures
     install (drag to sidebar) (?)
+    (other data, install, etc.)
     homedir
 
 Keychain Access:
@@ -202,8 +205,10 @@ Keychain Access:
   separate keychain pw? (can't change in 10.14?)
 
 PIA:
-  No autoconnect
-  (Exclude nwjs from uBar)
+  General:
+    Launch on startup
+    Don't connect on launch
+  (Exclude io.nwjs.nwjs from uBar (?))
 FortiClient
 (other VPNs)
 
@@ -247,14 +252,21 @@ YubiSwitch:
     Start on login
 
 SpiderOakONE:
-  Account
-  Folders
+  General:
+    Launch minimized?
+    Don't show splash screen?
+  Network:
+    Allow LAN-Sync?
+  remove Hive symlink from desktop
+  Backup:
+    Folders:
+      .ssh, .to_back_up, Desktop, Documents, Downloads, install, Movies, Music,
+      Pictures, (Hive), (other data, install, etc.)
 
 Google Backup and Sync:
-  My Computer:
-    Folders:
-      ~?
-      Desktop, Documents, Downloads, Pictures, .to_back_up
+  Computer:
+    Name: change to match hostname
+    Folders: .to_back_up (+ more depending on contents / context)
     Remove everywhere (?)
     USB/SD: no
   Google Drive:
@@ -604,13 +616,38 @@ Discord? (in Franz?)
 Slack (App Store; in Franz?)
 
 Spotify
+  Music Quality:
+    HQ
+  Social:
+    Don't make new playlists public
+    Don't show recently played
+  Display:
+    Show unavailable
+    Don't show friend activity (?)
+    Don't show desktop notifications (?)
+  Autoplay: no?
+  Advanced:
+    Startup: no
+
 Amazon Music:
-  No launch on startup
-iTunes
+  Don't launch on startup (default?)
+
+iTunes:
+  Account -> Authorize
+  Downloads:
+    Auto music
+    Always check
+  Store:
+    Sync podcasts
+    Auto d/l art
+    Share details
+  Advanced:
+    Don't copy to folder?
+
 Kindle:
   No dictionary
   No crash reports (?)
-  Download books
+  (download books)
 
 MacVim
 Bluefish
@@ -705,6 +742,13 @@ Steam:
       Add
       Prefs -> lower brightness (down to 1/3)
   (install games)
+
+CrossOver:
+  Updates:
+    Check
+    Log and report
+  License
+  (install programs, e.g. Steam)
 
 Dock order (all keep in dock):
   Finder
