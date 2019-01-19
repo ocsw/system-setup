@@ -1,5 +1,8 @@
 FileVault, incl. save recovery key (pic?)
 
+# most of this has to be done separately for each user account
+# (e.g., main and presentations)
+
 Updates
 
 System Preferences:
@@ -65,11 +68,11 @@ System Preferences:
       No smart quotes?
     Shortcuts:
       Mission Control:
-        Show Desktop -> ^F11 (because of VSCode)
-        Show Dashboard -> ^F12 (because of VSCode)
+        Show Desktop: ^F11 (because of VSCode)
+        Show Dashboard: ^F12 (because of VSCode)
       Accessibility: Zoom on (?)
       App Shortcuts:
-        Lock Screen -> ctrl-opt-cmd-L [10.13+]
+        Lock Screen: ctrl-opt-cmd-L [10.13+]
       (other shortcuts)
     Input Sources:
       No menu bar
@@ -163,11 +166,11 @@ System Preferences:
       Use gesture with opt
       Options:
         Flash on notification
-  View -> Organize Alphabetically, Show All
+  View -> Organize Alphabetically (?), Show All
 
 Finder:
   General:
-    New -> Downloads (or homedir?)
+    New: Downloads (or homedir?)
     Don't open in tabs
   Sidebar:
     Show all
@@ -187,10 +190,12 @@ Avira?
 f.lux?
 
 Logitech control center:
-  Vertical scroll speed -> 3?
+  Vertical scroll speed: 3?
 Android file transfer
 
-Dropbox: account
+Dropbox
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  Account
 Google Backup and Sync:
   Computer:
     Folders:
@@ -199,12 +204,12 @@ Google Backup and Sync:
     Remove everywhere (?)
     USB/SD: no
   Sync Drive (all) (?)
-SpiderOne:
+SpiderOakOne:
   Account
   Folders
 
 uBar:
-  -> System Preferences -> Security -> Privacy -> allow
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   General:
     Pinning: all if not ultrawide, else bottom only
     Display: Main (?)
@@ -218,13 +223,18 @@ uBar:
   Apps:
     App order: manual
     App inclusions: order (see bottom)
-    App exclusions
+    App exclusions:
+      FortiClient (?)
+      (Hammerspoon)
+      (Moom)
+      (Amphetamine)
   Shortcuts:
     No hiding
     Activity: right option
   License
 
 Hammerspoon:
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   Launch at login
   No dock
   No crash data
@@ -236,7 +246,7 @@ Hammerspoon:
   (Exclude from uBar)
 
 Moom:
-  -> System Preferences -> Security -> Privacy -> allow, Accessibility
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   General:
     Launch on login
     Don't show prefs on launch
@@ -245,8 +255,9 @@ Moom:
     (default delay: 0.1 sec)
     Don't bring to front
   Custom:
-    Menu Separator
+    Remove header
     Remove others? (or just hotkeys?)
+    Menu Separator (if keeping others)
     Add two:
       Arrange windows
       Trigger on 1 / 2 displays
@@ -259,15 +270,14 @@ Moom:
   (Exclude from uBar)
 
 Witch:
-  -> System Preferences -> Security -> Privacy -> allow
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   Actions:
     1:
       Cycle windows
       Sort by app act, window act
       Orientation: down
       No apps w/o windows
-      Keyboard: opt-tab, shift-opt-tab (or cmd-tab, shift-cmd-tab?)
-      Key for reverse
+      Keyboard: cmd-tab, shift-cmd-tab (or opt-tab, shift-opt-tab?)
       Show in menu bar
     2:
       Minimize frontmost
@@ -288,7 +298,7 @@ Witch:
     License
 
 Spectacle:
-  -> System Preferences -> Security -> Privacy -> allow
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   Launch at login
   No key for L/R/T/B, UL/LL/UR/LR, N3/P3
   Center: ctrl-opt-cmd-C
@@ -301,7 +311,7 @@ Spectacle:
   Redo: shift-opt-cmd-Z
 
 BetterTouchTool:
-  -> System Preferences -> Security -> Privacy -> allow
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   Basic:
     Touch Bar:
       No icon
@@ -313,14 +323,23 @@ BetterTouchTool:
     Window Snapping:
       Disable (?)
     Moving & Resizing:
-      Move -> ctrl-opt
-      Resize -> ctrl-opt-cmd
+      Move: ctrl-opt
+      Resize: ctrl-opt-cmd
       Bring to front
   License
 
 Clipy:
-  Launch on login
-  Snippet shortcut
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  General:
+    Launch on login
+  Shortcuts:
+    Main: ctrl-cmd-V
+    History: none
+    Snippets: ctrl-cmd-B
+    Clear: none
+    Snippet shortcut
+  Updates:
+    Check
   Snippets
 
 Itsycal (or see iStat Menus):
@@ -391,14 +410,14 @@ iStat Menus:
       Other locations
     Open dropdown -> hide request box
   Combined: off
-System Preferences:
-  Date & Time:
-    No date (if using date icon)
-  Energy Saver:
-    No battery in menu bar
-  Extensions:
-    Today:
-      iStat on, first
+  -> System Preferences:
+    Date & Time:
+      No date (if using date icon)
+    Energy Saver:
+      No battery in menu bar
+    Extensions:
+      Today:
+        iStat on, first
 
 Amphetamine (App Store):
   Don't show message
@@ -468,12 +487,20 @@ Firefox:
   General:
     Restore
     (Default check)
-  Home: Google / blank
-  Privacy: no autofill?
+    Ask where to save
+  Home:
+    Homepage: Google (or blank?)
+    New Tab: blank
+  Search:
+    No suggestions (?)
+  Privacy & Security:
+    Don't ask to save l/p
+    No autofill?
+    Don't send data (?)
   (Bunny)
   Keys
   Wheel and keys
-(see directory)
+  (see directory)
 
 Chrome (see file)
 
@@ -541,7 +568,9 @@ Omnigraffle
 Monodraw
 MindNode?
 
-OneNote (App Store), clipper
+OneNote (App Store):
+  -> System Preferences -> Extensions -> Share Menu -> on
+  -> OneNote Web Clipper in Chrome (?)
   General:
     Store in OneDrive (?)
   Spelling:
@@ -552,7 +581,6 @@ OneNote (App Store), clipper
     Hide all (just Section List?)
   Printing:
     Two-Sided
-  System Preferences -> add to share menu
 
 Office
 
@@ -568,6 +596,7 @@ Sequel Pro:
   auto-update
 
 iTerm2:
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   General:
     Bury tmux session?
   Profiles:
@@ -580,10 +609,12 @@ iTerm2:
       Silence bell (?)
     Session:
       Prompt before closing?
-  Scroll in interactive
+  Advanced:
+    Mouse:
+      Scroll wheel sends arrow keys when in alternate screen mode: Yes
 
 GPG Suite:
-  System Preferences:
+  -> System Preferences:
     GPG Suite:
       Settings:
         Remember for (e.g.) 43200 seconds [1 month]
@@ -610,27 +641,6 @@ dotfiles
 add .to_back_up to Google Backup
 rest of unix-common
 
-add hostname to 127 in hosts?
-recompiled mosh client
-umask incl root, brew
-root pw, dots
-#
-trash autoempty?
-menu bar order incl airplay
-istat temp notif
-lastpass incl disk
-authy
-more chrome
-moom placement
-Franz
-bury tmux
-vscode
-xnviewmp
-config pia, spiderone, docker
-u l sbin
-backup git x2, ssh config?
-separate keychain pw?
-
 Steam:
   Install games
 
@@ -651,7 +661,7 @@ Dock order (all keep in dock):
   (TextEdit) / Bluefish / MacVim / etc.
   iTerm2
   Omnigraffle
-  Keynote
+  Keynote?
   (Steam)
   (CrossOver)
 

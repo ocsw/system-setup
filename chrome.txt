@@ -1,3 +1,6 @@
+# has to be done separately for each profile
+# (e.g, personal, work, presentations)
+
 Chrome menu:
   Warn before quitting
 
