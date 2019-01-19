@@ -260,7 +260,7 @@ SpiderOakONE:
   remove Hive symlink from desktop
   Backup:
     Folders:
-      .ssh, .to_back_up, Desktop, Documents, Downloads, install, Movies, Music,
+      .ssh, Desktop, Documents, Downloads, install, Movies, Music,
       Pictures, (Hive), (other data, install, etc.)
 
 Google Backup and Sync:
@@ -647,6 +647,7 @@ iTunes:
 Kindle:
   No dictionary
   No crash reports (?)
+  (rename and add shared libraries)
   (download books)
 
 MacVim
