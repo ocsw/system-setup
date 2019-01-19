@@ -3,7 +3,7 @@ FileVault, incl. save recovery key (pic?)
 # most of this has to be done separately for each user account
 # (e.g., main and presentations)
 
-Updates
+Updates (OS and App Store)
 
 System Preferences:
   General:
@@ -179,23 +179,35 @@ Finder:
 Keychain Access:
   Show in menu bar [not in 10.13+]
 
-WiFi (if not already done)
-VPNs:
-  PIA:
-    No autoconnect
-    (Exclude nwjs from uBar)
-  FortiClient
-  etc.
-Avira?
-f.lux?
+PIA:
+  No autoconnect
+  (Exclude nwjs from uBar)
+FortiClient
+(other VPNs)
 
+Avira?
+
+f.lux?
 Logitech control center:
   Vertical scroll speed: 3?
 Android file transfer
+YubiSwitch:
+  No unlock on sleep
+  Auto off
+  Preferences:
+    Hotkey (ctrl-opt-cmd-Y)
+    ProductID
+      -> ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idProduct
+      0x407 for nano
+    (VendorID)
+      -> ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idVendor
+      0x1050 for nano
+    Switch off after 5 sec
+    Start on login
 
-Dropbox
-  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+SpiderOakOne:
   Account
+  Folders
 Google Backup and Sync:
   Computer:
     Folders:
@@ -204,9 +216,9 @@ Google Backup and Sync:
     Remove everywhere (?)
     USB/SD: no
   Sync Drive (all) (?)
-SpiderOakOne:
+Dropbox
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   Account
-  Folders
 
 uBar:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
@@ -245,30 +257,6 @@ Hammerspoon:
   Config file
   (Exclude from uBar)
 
-Moom:
-  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
-  General:
-    Launch on login
-    Don't show prefs on launch
-    Run as menu bar app
-  Mouse:
-    (default delay: 0.1 sec)
-    Don't bring to front
-  Custom:
-    Remove header
-    Remove others? (or just hotkeys?)
-    Menu Separator (if keeping others)
-    Add two:
-      Arrange windows
-      Trigger on 1 / 2 displays
-      Don't ignore obstructed
-      Save snapshot
-      Hotkey (ctrl-opt-cmd-1 / 2)
-  Updates:
-    Auto check
-  License
-  (Exclude from uBar)
-
 Witch:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   Actions:
@@ -297,19 +285,6 @@ Witch:
   About:
     License
 
-Spectacle:
-  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
-  Launch at login
-  No key for L/R/T/B, UL/LL/UR/LR, N3/P3
-  Center: ctrl-opt-cmd-C
-  Fullscreen: ctrl-opt-cmd-F
-  Next Display: ctrl-opt-cmd-right
-  Previous Display: ctrl-opt-cmd-left
-  Make Larger: ctrl-opt-cmd-up
-  Make Smaller: ctrl-opt-cmd-down
-  Undo: ctrl-opt-cmd-Z
-  Redo: shift-opt-cmd-Z
-
 BetterTouchTool:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   Basic:
@@ -327,6 +302,81 @@ BetterTouchTool:
       Resize: ctrl-opt-cmd
       Bring to front
   License
+
+Spectacle:
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  Launch at login
+  No key for L/R/T/B, UL/LL/UR/LR, N3/P3
+  Center: ctrl-opt-cmd-C
+  Fullscreen: ctrl-opt-cmd-F
+  Next Display: ctrl-opt-cmd-right
+  Previous Display: ctrl-opt-cmd-left
+  Make Larger: ctrl-opt-cmd-up
+  Make Smaller: ctrl-opt-cmd-down
+  Undo: ctrl-opt-cmd-Z
+  Redo: shift-opt-cmd-Z
+
+Moom:
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  General:
+    Launch on login
+    Don't show prefs on launch
+    Run as menu bar app
+  Mouse:
+    (default delay: 0.1 sec)
+    Don't bring to front
+  Custom:
+    Remove header
+    Remove others? (or just hotkeys?)
+    Menu Separator (if keeping others)
+    Add two:
+      Arrange windows
+      Trigger on 1 / 2 displays
+      Don't ignore obstructed
+      Save snapshot
+      Hotkey (ctrl-opt-cmd-1 / 2)
+  Updates:
+    Auto check
+  License
+  (Exclude from uBar)
+
+Amphetamine (App Store):
+  Don't show message
+  Don't show in Dock
+  General:
+    Quick-Start: right click
+    Launch at login
+    Hide in Dock
+  Sessions:
+    Default Duration: 3 hours
+  Battery / Power:
+    End if below 10%
+    Prompt
+    Ignore when connected
+  (Triggers)
+  Hotkeys:
+    Start/End: ctrl-opt-cmd-A
+    If active, end
+  Appearance:
+    Icon: Eye (or Tea Kettle? Pill 2?)
+    Lower opacity?
+  (Exclude from uBar)
+
+Annotate (App Store) (skip on 10.14+?)
+  General:
+    Launch at login
+    No screen at launch (?)
+    Show icon only in menu bar
+    Allow multiple windows (?)
+  Services?
+  Actions:
+    Upload?
+    Copy
+    Save
+    Drag
+    (others?)
+  Shortcuts:
+    Crosshair overlaps with 10.14+
 
 Clipy:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
@@ -419,44 +469,6 @@ iStat Menus:
       Today:
         iStat on, first
 
-Amphetamine (App Store):
-  Don't show message
-  Don't show in Dock
-  General:
-    Quick-Start: right click
-    Launch at login
-    Hide in Dock
-  Sessions:
-    Default Duration: 3 hours
-  Battery / Power:
-    End if below 10%
-    Prompt
-    Ignore when connected
-  (Triggers)
-  Hotkeys:
-    Start/End: ctrl-opt-cmd-A
-    If active, end
-  Appearance:
-    Icon: Eye (or Tea Kettle? Pill 2?)
-    Lower opacity?
-  (Exclude from uBar)
-
-Annotate (App Store) (skip on 10.14+?)
-  General:
-    Launch at login
-    No screen at launch (?)
-    Show icon only in menu bar
-    Allow multiple windows (?)
-  Services?
-  Actions:
-    Upload?
-    Copy
-    Save
-    Drag
-    (others?)
-  Shortcuts:
-    Crosshair overlaps with 10.14+
-
 AppCleaner:
   SmartDelete: on (?)
   Updates: check automatically
@@ -469,19 +481,7 @@ Disk Inventory X ("not optimized"?)
 DaisyDisk (incl. license)
 Wireshark
 
-Yubiswitch:
-  No unlock on sleep
-  Auto off
-  Preferences:
-    Hotkey (ctrl-opt-cmd-Y)
-    ProductID
-      -> ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idProduct
-      0x407 for nano
-    (VendorID)
-      -> ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idVendor
-      0x1050 for nano
-    Switch off after 5 sec
-    Start on login
+Chrome (see file)
 
 Firefox:
   General:
@@ -501,8 +501,6 @@ Firefox:
   Keys
   Wheel and keys
   (see directory)
-
-Chrome (see file)
 
 Flash
 
@@ -554,15 +552,11 @@ Kindle:
   No dictionary
   No crash reports (?)
   Download books
-etc.
 
 MacVim
 Bluefish
+(Atom, Sublime, PyCharm, IntelliJ)
 VSCode
-Atom
-Sublime
-PyCharm
-IntelliJ
 
 Omnigraffle
 Monodraw
