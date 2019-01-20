@@ -1,0 +1,40 @@
+tox/flake8
+dropdown size
+venvs - automatic?
+rope
+keys, settings, snippets, languages, workspaces, extensions, themes
+fn debugging?
+path/symlink to code binary
+git autofetch
+long commit messages
+fira code
+telemetry, crashes
+reST preview
+staging
+find all?
+window size
+tabs in .sh
+no drag?
+back/forward buttons
+scm key
+center current line
+join lines
+text flow
+Trailing key
+Highlight over 80
+cmd-q?
+spectacles, opt-z
+
+git config --global core.editor "code --wait"
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+git config --global merge.tool code
+
+debugging
+snippets
+testing
+running
+intellisense params
+env?
