@@ -226,6 +226,7 @@ Logitech Control Center (w/Marathon Mouse M705):
       Tilt L/R: (default speed 4/9, default acc 4/11)
 
 Logitech Gaming Software (w/C920 webcam):
+  NOTE: requires unplugging and replugging the mouse receiver after it starts
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   General:
     Start automatically? (without this, it's still in the login list, hidden)
@@ -261,12 +262,15 @@ SpiderOakONE:
   Backup:
     Folders:
       .ssh, Desktop, Documents, Downloads, install, Movies, Music,
-      Pictures, (Hive), (other data, install, etc.)
+      Pictures, scraps, (Hive)
+      (other data, install, etc.)
 
 Google Backup and Sync:
   Computer:
     Name: change to match hostname
-    Folders: .to_back_up (+ more depending on contents / context)
+    Folders:
+      .to_back_up, Music, scraps, wip
+      (+ more depending on contents / context)
     Remove everywhere (?)
     USB/SD: no
   Google Drive:
@@ -689,7 +693,7 @@ Sequel Pro:
 iTerm2:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   General:
-    Bury tmux session?
+    Bury tmux session (?)
   Profiles:
     Colors:
       Preset (Tango Dark/Light)
@@ -699,7 +703,7 @@ iTerm2:
       Unlimited scrollback (?)
       Silence bell (?)
     Session:
-      Prompt before closing?
+      Always prompt before closing (?)
   Advanced:
     Mouse:
       Scroll wheel sends arrow keys when in alternate screen mode: Yes
@@ -714,25 +718,40 @@ XCode incl. command-line tools
   'xcode-select --install' after OS upgrade
 
 Homebrew - see unix-common/packages.txt
+  umask 022
   /usr/bin/ruby -e "$(curl-fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update
   for i in $(cat packages.txt | sed 's/ *#.*$//' | grep -v '^$'); do
     brew install "$i"
   done
   brew upgrade
-add /usr/local/bin/bash to /etc/shells, change shell?
+  umask 077
+  add /usr/local/bin/bash to /etc/shells, change shell?
 
-dotfiles, incl. dotfile and .to_back_up links
-add .to_back_up to Google Backup
+shell:
+  dotfiles, incl. dotfile and .to_back_up links
+  add .to_back_up to Google Backup
+  rest of unix-common
+  add hostname to 127 in hosts?
+
 SSH:
-    Host *
-        UseKeychain yes
-        AddKeysToAgent yes
-        IdentityFile ~/.ssh/id_rsa
-        IdentityFile ~/.ssh/id_ed25519
-    (and ssh-add -K absolute_path)
-rest of unix-common
-add hostname to 127 in hosts?
+  cat >> ~/.ssh/config <<EOF
+Host *
+    UseKeychain yes
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/id_ed25519
+EOF
+  for i in ~/.ssh/*_{rsa,ed25519}; do
+    ssh-add -K "$i"  # absolute path
+  done
+  add .ssh to SpiderOakONE
+
+# perms, in most cases:
+chmod -R go-rwx ~
+chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config \
+  ~/Library/Application\ Support/Code/User/* ~/.vim/autoload/pathogen.vim \
+  ~/bin/*
 
 Steam:
   Account

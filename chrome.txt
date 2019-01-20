@@ -1,19 +1,27 @@
 # has to be done separately for each profile
 # (e.g, personal, work, presentations)
 
-Chrome menu:
-  Warn before quitting
+Chrome menu -> Warn before quitting
 
 Settings:
-  Sync (no passwords or cards)
-  No passwords
-  No Auto Sign-in
-  Bookmarks bar on
+  Sync (no passwords or payment)
+  Passwords:
+    Don't offer
+    No Auto Sign-in
+    (clear all)
+  Chrome name and picture
+  Appearance:
+    Show bookmarks bar
   Default browser
-  Continue where you left off
-  No services except dangerous sites
-  Ask where to save
-  No hardware acceleration (? issues on Mac)
+  On startup:
+    Continue where you left off
+  Advanced:
+    Privacy and Security:
+      No services except Chrome sign-in, Safe Browsing
+    Downloads:
+      Ask where to save
+    System:
+      No hardware acceleration (? issues on Mac)
 
 Extensions:
   [Developer Mode on]
@@ -21,7 +29,7 @@ Extensions:
   Password Alert
   Play the GIF:
     No auto start
-  (Image Picker? bhibldekjicdbnjeeecmgoogcihoalhe)
+  (Image Picker?? bhibldekjicdbnjeeecmgoogcihoalhe)
   Pinboard Plus:
     Account
     Private by default
@@ -36,11 +44,13 @@ Extensions:
   OneNote Web Clipper
   Awesome Screenshot:
     No shortcuts
+    Save
   HTTPS Everywhere:
     No counter
   Adblock Plus:
     (Whitelist)
-    No number in icon
+    Advanced:
+      No number in icon
   (CaretTab:)
     Color:
       Theme (purple on white)
@@ -50,24 +60,28 @@ Extensions:
     Extras:
       No search box?
   Tidy Sidebar:
-    No memo, wiki, links
+    No Memo, Wiki, Links
     Show tooltip
   Go to Tab
   Tabby Cat
+    Hide (?)
+  (Stop Animations?? gemmknjnneiojfjelmgappppbaneikda: Hide (?))
+  LastPass
+  (Just Not Sorry??: Hide (?))
   Downloader for Instagram:
     Hide
   (Application Launcher for Drive:)
+    Disable (?) (if no Office?)
     Hide
   (Google Docs Offline)
   (Office Editing for Docs, Sheets, and Slides:)
     Hide
-  (Stop Animations? gemmknjnneiojfjelmgappppbaneikda)
-  (Download Manager? daoidaoebhfcgccdpgjjcbdginkofmfe)
-  (Batch Image Download.Full Screen Capture?)
-  (Fatkun Batch Download Image?)
-  (Image Downloader?)
-  (zzllrr Imager Geek?)
-  (Tampermonkey?)
+  (Download Manager?? daoidaoebhfcgccdpgjjcbdginkofmfe)
+  (Batch Image Download.Full Screen Capture??)
+  (Fatkun Batch Download Image??)
+  (Image Downloader??)
+  (zzllrr Imager Geek??)
+  (Tampermonkey??)
 (from L to R)
 
 Apps:
