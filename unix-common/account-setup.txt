@@ -62,3 +62,7 @@ cd ~
 
 ### python
 # see python.txt
+
+### perms
+# in most cases:
+chmod -R go-rwx ~
