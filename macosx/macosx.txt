@@ -547,6 +547,9 @@ Disk Inventory X ("not optimized"?)
 DaisyDisk (incl. license)
 Wireshark
 
+Muzzle
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+
 Chrome (see file)
 
 Firefox:
