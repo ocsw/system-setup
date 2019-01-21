@@ -617,7 +617,60 @@ Telegram? (in Franz?)
 Signal?
 Skype (in Franz?)
 Discord? (in Franz?)
-Slack (App Store; in Franz?)
+
+Slack (App Store; in Franz?):
+  (preferences are per-workspace)
+  (sign into workspaces)
+  Profile
+  Status
+  Notifications:
+    Notify:
+      Direct messages
+      Threads
+    DND (?) (10PM - 8AM?)
+    Sound & appearance:
+      Preview
+      Sound
+      Badge
+      Bounce once
+    Inactive:
+      Mobile: 2 min
+      No email
+  Language & Region:
+    TZ
+  Messages & Media:
+    Theme: clean
+    Names: display names
+    Additional:
+      Display typing
+      Display color swatches
+    Emoji Style:
+      Show jumbomoji
+      Convert typed emoticons
+    Inline Media & Links:
+      Show uploaded
+      Show from links (below 2 MB)
+      Show text previews
+  Sidebar:
+    Appearance: Everything
+    Sorting and grouping:
+      Sort: alpha
+      Don't list private separately
+      List shared separately
+    Additional:
+      Show all unreads
+      Show Quick Switcher
+    Theme: Aubergine (Aubergine Classic?)
+  Mark as Read: Start where I left off, and mark the channel read
+  Advanced:
+    Input Options:
+      Enable spellcheck
+      Don't send w/enter on ```
+    Other Options:
+      PU/etc. scroll
+      Ask to toggle status
+      No channel suggestions (?)
+      Set status when on a call
 
 Spotify
   Music Quality:
@@ -657,7 +710,10 @@ Kindle:
 MacVim
 Bluefish
 (Atom, Sublime, PyCharm, IntelliJ)
-VSCode
+VSCode:
+  (see directory)
+  ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
+    ~/bin
 
 Omnigraffle
 Monodraw

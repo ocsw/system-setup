@@ -1,0 +1,16 @@
+$ ls ~/.vscode/extensions/ | sed 's/-[^-]*$//'
+bungcip.better-toml
+coolbear.systemd-unit-file
+eamodio.gitlens
+ephoton.indent-switcher
+jpogran.puppet-vscode
+lextudio.restructuredtext
+ms-python.python
+peterjausovec.vscode-docker
+redhat.vscode-yaml
+rogalmic.bash-debug
+shan.code-settings-sync
+timonwong.shellcheck
+wengerk.highlight-bad-chars
+ybaumes.highlight-trailing-white-spaces
+yzhang.markdown-all-in-one

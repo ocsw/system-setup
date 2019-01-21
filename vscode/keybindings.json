@@ -9,5 +9,10 @@
         "command": "type",
         "args": { "text": "\t" },
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+e",
+        "command": "workbench.files.action.showActiveFileInExplorer",
+        "when": "editorTextFocus"
     }
 ]
