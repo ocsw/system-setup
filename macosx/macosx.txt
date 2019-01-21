@@ -40,7 +40,9 @@ System Preferences:
       Calendars: all off
       Camera: Chrome, Logitech Gaming Software, Skype
       Microphone: Chrome, Logitech Gaming Software, (Onde Audio Recorder), Skype
-      Accessibility: all on
+      Accessibility:
+        allow, incl. BTT, Clipy, Dropbox, Hammerspoon, iTerm,
+        Logitech Gaming Software, Moom, Muzzle, Spectacle, uBar, Witch
       Automation: all on (?)
       No analytics
     Lock
@@ -144,7 +146,7 @@ System Preferences:
       Password:
         Icon
       Login Items:
-        incl. Android File Transfer, BTT, Clipy, CrossOver, Dropbox,
+        incl. Android File Transfer, BTT, (Clipy), CrossOver, Dropbox,
         Google Backup, Logitech Gaming Software, Moom, Spectacle, SpiderOakONE,
         uBar, Witch, YubiSwitch
     Disable Guest User
@@ -838,6 +840,31 @@ CrossOver:
     Log and report
   License
   (install programs, e.g. Steam)
+
+Menu bar order (from L to R):
+  Spotlight
+  (Clipy)
+  Muzzle
+  Amphetamine
+  Moom
+  Spectacle
+  BTT
+  Witch
+  Dropbox
+  Google Backup
+  SpiderOakONE
+  FortiClient
+  PIA
+  WiFi
+  ToothFairy
+  Logitech Gaming Software
+  YubiSwitch
+  (AirPlay)
+  iStat Menus: CPU, Mem, SSD, Net, Sen, Battery(s), Time
+  (Itsycal)
+  Date & Time
+  Fast user switching
+  (Notifications)
 
 Dock order (all keep in dock):
   Finder
