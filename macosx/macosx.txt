@@ -124,7 +124,7 @@ System Preferences:
     Lock (not available on 10.14+?)
   Bluetooth:
     (devices)
-    Show in menu bar
+    Show in menu bar (if not using ToothFairy; see below)
   Extensions:
     Finder Extensions:
       Dropbox, Google
@@ -251,6 +251,16 @@ YubiSwitch:
       0x1050 for nano
     Switch off after 5 sec
     Start on login
+
+ToothFairy (App Store):
+  Add devices:
+    Icon
+    Hotkey?
+    Show battery
+    Advanced:
+      Improve sound quality (depending)
+  Launch at login
+  Hide Dock icon
 
 SpiderOakONE:
   General:
