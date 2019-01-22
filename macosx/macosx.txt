@@ -41,7 +41,7 @@ System Preferences:
       Camera: Chrome, Logitech Gaming Software, Skype
       Microphone: Chrome, Logitech Gaming Software, (Onde Audio Recorder), Skype
       Accessibility:
-        allow, incl. BTT, Clipy, Dropbox, Hammerspoon, iTerm,
+        allow, incl. Bartender, BTT, Clipy, Dropbox, Hammerspoon, iTerm,
         Logitech Gaming Software, Moom, Muzzle, Spectacle, uBar, Witch
       Automation: all on (?)
       No analytics
@@ -189,13 +189,14 @@ Finder:
   Sidebar Order:
     Google Drive
     Dropbox
-    AirDrop
+    (AirDrop)
     Recents
     Applications
     Desktop
     Documents
     Downloads
-    Movies
+    Books
+    (Movies)
     Music
     Pictures
     install (drag to sidebar) (?)
@@ -562,6 +563,13 @@ Wireshark
 Muzzle
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 
+Bartender:
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  Menu Items: (see bottom)
+  General:
+    Launch at login
+  License
+
 Chrome (see file)
 
 Firefox:
@@ -841,15 +849,15 @@ CrossOver:
   License
   (install programs, e.g. Steam)
 
-Menu bar order (from L to R):
-  Spotlight
+Menu bar order (from L to R, with Bartender settings if not default):
+  Spotlight ()
   (Clipy)
-  Muzzle
+  Muzzle ()
   Amphetamine
-  Moom
-  Spectacle
-  BTT
-  Witch
+  Moom ()
+  Spectacle ()
+  BTT ()
+  Witch ()
   Dropbox
   Google Backup
   SpiderOakONE
@@ -857,16 +865,16 @@ Menu bar order (from L to R):
   PIA
   WiFi
   ToothFairy
-  Logitech Gaming Software
-  YubiSwitch
-  (AirPlay)
+  Logitech Gaming Software ()
+  YubiSwitch ()
+  (AirPlay) ()
   iStat Menus: CPU, Mem, SSD, Net, Sen, Battery(s), Time
   (Itsycal)
   Date & Time
   Fast user switching
   (Notifications)
 
-Dock order (all keep in dock):
+Dock order (all -> keep in dock):
   Finder
   Siri?
   Launchpad (?)
