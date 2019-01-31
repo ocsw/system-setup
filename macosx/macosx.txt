@@ -252,7 +252,7 @@ Logitech Gaming Software (w/C920 webcam):
 Android File Transfer
 
 YubiSwitch:
-  No unlock on sleep
+  No enable on sleep
   Auto off
   Preferences:
     Hotkey (ctrl-opt-cmd-Y)
@@ -299,7 +299,7 @@ Google Backup and Sync:
   Google Drive:
     Sync My Drive (all) (?)
 
-Dropbox
+Dropbox:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   General:
     Start on startup
@@ -453,7 +453,7 @@ Amphetamine (App Store):
     Lower opacity?
   (Exclude from uBar)
 
-Annotate (App Store) (skip on 10.14+?)
+Annotate (App Store) (skip on 10.14+?):
   General:
     Launch at login
     No screen at launch (?)
@@ -573,7 +573,7 @@ Disk Inventory X ("not optimized"?)
 DaisyDisk (incl. license)
 Wireshark
 
-Muzzle
+Muzzle:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 
 Bartender:
@@ -708,7 +708,7 @@ Slack (App Store; in Franz?):
       No channel suggestions (?)
       Set status when on a call
 
-Spotify
+Spotify:
   Music Quality:
     HQ
   Social:
@@ -749,7 +749,7 @@ Bluefish
 VSCode:
   (see directory)
   ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
-    ~/bin
+    ~/bin/
 
 Omnigraffle
 Monodraw
@@ -809,7 +809,7 @@ GPG Suite:
 XCode incl. additional components, command-line tools
   'xcode-select --install' after OS upgrade
 
-Homebrew - see unix-common/packages.txt
+Homebrew (see unix-common/packages.txt):
   umask 022
   /usr/bin/ruby -e "$(curl-fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update
@@ -865,7 +865,7 @@ CrossOver:
 Menu bar order (from L to R, with Bartender settings if not default):
   Spotlight (Always Hide)
   (Clipy)
-  Muzzle (Hide, Show for updates)
+  Muzzle (Hide, ?Show for updates)
   Amphetamine
   Moom (Hide, Show for updates)
   Spectacle (Hide, Show for updates)
@@ -880,7 +880,7 @@ Menu bar order (from L to R, with Bartender settings if not default):
   ToothFairy
   Logitech Gaming Software (Hide, Show for updates)
   YubiSwitch (Hide, Show for updates)
-  (AirPlay) (Hide, Show for updates)
+  (AirPlay) (Hide, ?Show for updates)
   iStat Menus: CPU, Mem, SSD, Net, Sen
   iStat Menus: Battery(s), Time (both - Always Show?)
   (Itsycal)
@@ -905,7 +905,7 @@ Dock order (all -> keep in dock):
   Chrome, Firefox
   VSCode / Atom / Sublime / PyCharm / IntelliJ / etc.
   (TextEdit) / Bluefish / MacVim / etc.
-  iTerm2
+  iTerm
   Omnigraffle
   Keynote?
   (Steam)
@@ -922,7 +922,7 @@ uBar app order:
   Chrome, Firefox
   VSCode, Atom, Sublime, PyCharm, IntelliJ, XCode, etc.
   TextEdit, Bluefish, MacVim, etc.
-  iTerm2
+  iTerm
   Docker
   Wireshark
   Omnigraffle
