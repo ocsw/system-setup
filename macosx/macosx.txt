@@ -41,9 +41,19 @@ System Preferences:
       Camera: Chrome, Logitech Gaming Software, Skype
       Microphone: Chrome, Logitech Gaming Software, (Onde Audio Recorder), Skype
       Accessibility:
-        allow, incl. Bartender, BTT, Clipy, Dropbox, Hammerspoon, iTerm,
-        Logitech Gaming Software, Moom, Muzzle, Spectacle, uBar, Witch
-      Automation: all on (?)
+        allow, incl. Bartender, BTT, Clipy, Dropbox, Google Software Update (?),
+        Hammerspoon, iTerm, Logitech Gaming Software, Moom, Muzzle, Spectacle,
+        uBar, Witch
+      Automation:
+        all on (?), incl.:
+          FortiClient -> Google Chrome
+          Franz -> System Events
+          Google Software Update -> System Events
+          Installer -> System Events?
+          iTerm -> Google Chrome
+          Logitech Control Center -> System Events
+          uBar -> Finder, Spotify
+          Witch -> Slack, System Events
       No analytics
     Lock
   Displays:
@@ -53,7 +63,7 @@ System Preferences:
       True Tone
     Arrangement:
       monitors
-      main (top strip)
+      main (top strip) (NOTE: seems to mess up Moom snapshots?)
     Night Shift: Sunset to Sunrise
   Energy Saver:
     Change times? (defaults: 2 min battery, 10 min power)
@@ -65,7 +75,7 @@ System Preferences:
       Touch Bar / Control Strip:
         small: no Siri, add lock on left (?)
         big: no Siri?, lock, screenshot (left of media)
-      Caps lock: cmd (?) esc? none?
+      Caps lock: none (?) cmd? esc? (per keyboard)
     Text:
       Remove omw
       No correct/capitalize/period
@@ -116,7 +126,7 @@ System Preferences:
     No News
     No Stocks
     No Home
-  App Store / Software Update:
+  Software Update / App Store:
     Auto check, dl, app/system install
     No OS updates
     Lock (not available on 10.14+?)
@@ -306,10 +316,11 @@ uBar:
     No window grouping
   (Theme)
   Areas:
-    No spaces (?)
-    No battery
-    No separators (?)
-    No clock (?)
+    No Spaces (?)
+    No Sound
+    No Battery
+    No Separators (?)
+    No Clock (?)
   Apps:
     App order: manual
     App inclusions: order (see bottom)
@@ -318,6 +329,8 @@ uBar:
       (Hammerspoon)
       (Moom)
       (Amphetamine)
+      (esets_tray)
+      (se.razola.Glui2)
   Shortcuts:
     No hiding
     Activity: right option
@@ -793,7 +806,7 @@ GPG Suite:
       Settings:
         Remember for (e.g.) 43200 seconds [1 month]
 
-XCode incl. command-line tools
+XCode incl. additional components, command-line tools
   'xcode-select --install' after OS upgrade
 
 Homebrew - see unix-common/packages.txt
