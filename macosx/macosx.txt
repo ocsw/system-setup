@@ -665,9 +665,9 @@ Slack (App Store; in Franz?):
       Threads
     DND (?) (10PM - 8AM?)
     Sound & appearance:
-      Preview
+      Preview (depending)
       Sound
-      Badge
+      Badge (depending)
       Bounce once
     Inactive:
       Mobile: 2 min
@@ -691,7 +691,7 @@ Slack (App Store; in Franz?):
     Appearance: Everything
     Sorting and grouping:
       Sort: alpha
-      Don't list private separately
+      Don't list private separately (depending)
       List shared separately
     Additional:
       Show all unreads
@@ -705,7 +705,7 @@ Slack (App Store; in Franz?):
     Other Options:
       PU/etc. scroll
       Ask to toggle status
-      No channel suggestions (?)
+      No channel suggestions?
       Set status when on a call
 
 Spotify:
@@ -816,6 +816,7 @@ Homebrew (see unix-common/packages.txt):
   for i in $(cat packages.txt | sed 's/ *#.*$//' | grep -v '^$'); do
     brew install "$i"
   done
+  brew uninstall --force gnupg pinentry
   brew upgrade
   umask 077
   add /usr/local/bin/bash to /etc/shells, change shell?
