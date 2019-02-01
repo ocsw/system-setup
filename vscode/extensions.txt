@@ -1,16 +1,16 @@
-$ ls ~/.vscode/extensions/ | sed 's/-[^-]*$//'
-bungcip.better-toml
-coolbear.systemd-unit-file
-eamodio.gitlens
-ephoton.indent-switcher
-jpogran.puppet-vscode
-lextudio.restructuredtext
-ms-python.python
-peterjausovec.vscode-docker
-redhat.vscode-yaml
+$ ls ~/.vscode/extensions/ | sed 's/-[^-]*$//' | sort -u -t. -k2
 rogalmic.bash-debug
+bungcip.better-toml
+eamodio.gitlens
 shan.code-settings-sync
-timonwong.shellcheck
 wengerk.highlight-bad-chars
 ybaumes.highlight-trailing-white-spaces
+ephoton.indent-switcher
 yzhang.markdown-all-in-one
+jpogran.puppet-vscode
+ms-python.python
+lextudio.restructuredtext
+timonwong.shellcheck
+coolbear.systemd-unit-file
+peterjausovec.vscode-docker
+redhat.vscode-yaml
