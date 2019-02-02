@@ -46,14 +46,16 @@ System Preferences:
         uBar, Witch
       Automation:
         all on (?), incl.:
-          FortiClient -> Google Chrome
+          FortiClient -> Google Chrome, Safari
           Franz -> System Events
+          Google Backup -> System Events
           Google Software Update -> System Events
           Installer -> System Events?
           iTerm -> Google Chrome
           Logitech Control Center -> System Events
-          uBar -> Finder, Spotify
-          Witch -> Slack, System Events
+          SpiderOakONE -> System Events
+          uBar -> Finder, iTunes, Spotify
+          Witch -> Code, Slack, System Preferences, System Events
       No analytics
     Lock
   Displays:
