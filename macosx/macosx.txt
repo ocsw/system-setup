@@ -9,7 +9,7 @@ System Preferences:
   General:
     Default browser
     Ask to keep changes
-    No close windows?
+    No close windows (?) (depending)
   Desktop & Screen Saver:
     Wallpaper
     Screen saver - shell, 20m
@@ -34,7 +34,7 @@ System Preferences:
     Privacy:
       Location Services:
         Enable
-        All apps off (except Flux)
+        All apps off (except Flux if installed, iStat if Current Location)
         System Services: don't show icon
       Contacts: all off
       Calendars: all off
@@ -235,7 +235,7 @@ Logitech Control Center (w/Marathon Mouse M705):
     (default tracking multiplier: 1)
     Buttons (counting far left as 1):
       Wheel: speed: 3? (default speed 4.6/11, default acc 3/11)
-      Wheel Button: (default speed 3/10, default acc 3/11)
+      Wheel Button: Middle Click (default is Zoom, speed 3/10, acc 3/11)
       Tilt L/R: (default speed 4/9, default acc 4/11)
 
 Logitech Gaming Software (w/C920 webcam):
@@ -526,7 +526,7 @@ iStat Menus:
   Network:
     Active: net label, arrow label, (?)bandwidth num
     Processes: 10
-    Decimals (KB): 1? 2?
+    Decimals (KB): 1(?) 2?
     Combine bandwidth
     Show BSD names
   Sensors:
@@ -548,7 +548,7 @@ iStat Menus:
     World clocks:
       UTC
       No Moon?
-      No Current Location (?) (else give location access)
+      No Current Location? (else give location access)
       (other locations)
     Open dropdown -> hide request box
   Combined: off
@@ -560,6 +560,10 @@ iStat Menus:
     Extensions:
       Today:
         iStat on, first
+    Security & Privacy:
+      Privacy:
+        Location Services:
+          iStat on (if Current Location)
 
 AppCleaner:
   SmartDelete: on (?)
@@ -598,7 +602,7 @@ Firefox:
   Privacy & Security:
     Don't ask to save l/p
     No autofill?
-    Don't send data (?)
+    Don't send data to Mozilla (?)
   (Bunny)
   Keys
   Wheel and keys
@@ -813,11 +817,14 @@ Homebrew (see unix-common/packages.txt):
   umask 022
   /usr/bin/ruby -e "$(curl-fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update
+  # brew outdated
   for i in $(cat packages.txt | sed 's/ *#.*$//' | grep -v '^$'); do
     brew install "$i"
   done
   brew uninstall --force gnupg pinentry
   brew upgrade
+  # brew cleanup
+  # brew doctor
   umask 077
   add /usr/local/bin/bash to /etc/shells, change shell?
 
@@ -915,8 +922,9 @@ Dock order (all -> keep in dock):
 uBar app order:
   Cisco AnyConnect / FortiClient / etc.
   Finder
+  Android File Transfer
   Kindle
-  Amazon Music, Spotify, etc.
+  iTunes, Amazon Music, Spotify, etc.
   Skype, Adium, Textual, Franz, Workplace Chat, Slack
   Outlook
   OneNote
@@ -927,11 +935,13 @@ uBar app order:
   Docker
   Wireshark
   Omnigraffle
-  Keynote
+  Pages, Numbers, Keynote
+  XnViewMP
   Preview
   Calculator
   Steam
   CrossOver
+  (CrossOver apps)
   ESET / etc.
 
 Moom window placement
