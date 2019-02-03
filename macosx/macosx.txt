@@ -117,14 +117,17 @@ System Preferences:
     (Account Details)
     iCloud Drive:
       Documents:
+        Pages/Numbers/Keynote?
         Only System Preferences (?)
     Photos:
-      No Library
+      Don't upload
+      Allow Shared Albums
     No Mail
     No Safari
     No Siri (?)
     No Keychain (?)
     No Back to My Mac (?)
+    Allow Find My Mac (?)
     No News
     No Stocks
     No Home
@@ -294,6 +297,7 @@ SpiderOakONE:
       .ssh, Books, Desktop, Documents, Downloads, install, Movies, Music,
       Pictures, scraps, (Hive)
       (other data, install, etc.)
+      [work: only Books, Music, Pictures]
 
 Google Backup and Sync:
   Computer:
@@ -301,6 +305,7 @@ Google Backup and Sync:
     Folders:
       .to_back_up, Books, Music, scraps, wip
       (+ more depending on contents / context)
+      [work: add Desktop, Documents, Downloads, ?Pictures]
     Remove everywhere (?)
     USB/SD: no
   Google Drive:
@@ -852,7 +857,7 @@ EOF
   for i in ~/.ssh/*_{rsa,ed25519}; do
     ssh-add -K "$i"  # absolute path
   done
-  add .ssh to SpiderOakONE
+  add .ssh to SpiderOakONE (depending)
 
 # perms, in most cases:
 chmod -R go-rwx ~
