@@ -729,7 +729,8 @@ Spotify:
     Startup: no
 
 Amazon Music:
-  Don't launch on startup (default?)
+  Advanced:
+    Don't launch on startup
 
 iTunes:
   Account -> Authorize
