@@ -187,6 +187,9 @@ System Preferences:
         Flash on notification
   View -> Organize Alphabetically (?), Show All
 
+# depending
+mkdir ~/Books ~/install ~/scraps ~/wip
+
 Finder:
   General:
     New: Downloads (or homedir?)
@@ -210,7 +213,9 @@ Finder:
     Music
     Pictures
     install (drag to sidebar) (?)
+    scraps?
     (other data, install, etc.)
+    wip (?)
     homedir
 
 Keychain Access:
