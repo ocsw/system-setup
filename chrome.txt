@@ -21,7 +21,7 @@ Settings:
     Downloads:
       Ask where to save
     System:
-      No hardware acceleration (? issues on Mac)
+      No hardware acceleration? (issues on Mac)
 
 Extensions:
   [Developer Mode on]
