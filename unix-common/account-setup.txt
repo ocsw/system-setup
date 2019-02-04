@@ -10,8 +10,11 @@ ssh-keygen -a 100 -t ed25519 -f ~/.ssh/github_ed25519
 cat >> ~/.ssh/config <<EOF
 Host github.com
     IdentityFile ~/.ssh/github_ed25519
+Host *
+    AddKeysToAgent yes
+    IdentitiesOnly yes
 EOF
-# order config file from most to least specific
+# consolidate and order config file from most to least specific
 # add SSH key to GitHub
 # generate GPG key with same email as below
 # add GPG key to GitHub

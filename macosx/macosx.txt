@@ -877,11 +877,8 @@ SSH:
   cat >> ~/.ssh/config <<EOF
 Host *
     UseKeychain yes
-    AddKeysToAgent yes
-    IdentityFile ~/.ssh/id_rsa
-    IdentityFile ~/.ssh/id_ed25519
 EOF
-  # order config file from most to least specific
+  # consolidate and order config file from most to least specific
   for i in ~/.ssh/*_{rsa,ed25519}; do
     ssh-add -K "$i"  # absolute path
   done
