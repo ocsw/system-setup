@@ -879,7 +879,7 @@ Host *
     UseKeychain yes
 EOF
   # consolidate and order config file from most to least specific
-  for i in ~/.ssh/*_{rsa,ed25519}; do
+  for i in ~/.ssh/*_{dsa,ecdsa,ed25519,rsa}; do
     ssh-add -K "$i"  # absolute path
   done
   add .ssh to SpiderOakONE (depending)
