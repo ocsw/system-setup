@@ -915,10 +915,10 @@ Menu bar order (from L to R, with Bartender settings if not default):
   (Clipy)
   Muzzle (Hide, ?Show for updates)
   Amphetamine
-  Moom (Hide, Show for updates)
-  Spectacle (Hide, Show for updates)
-  BTT (Hide, Show for updates)
-  Witch (Hide, Show for updates)
+  Moom (Hide, ?Show for updates)
+  Spectacle (Hide, ?Show for updates)
+  BTT (Hide, ?Show for updates)
+  Witch (Hide, ?Show for updates)
   Dropbox
   Google Backup
   SpiderOakONE
@@ -926,8 +926,8 @@ Menu bar order (from L to R, with Bartender settings if not default):
   PIA
   WiFi
   ToothFairy
-  Logitech Gaming Software (Hide, Show for updates)
-  YubiSwitch (Hide, Show for updates)
+  Logitech Gaming Software (Hide, ?Show for updates)
+  YubiSwitch (Hide, ?Show for updates)
   (AirPlay) (Hide, ?Show for updates)
   iStat Menus: CPU, Mem, SSD, Net, Sen
   iStat Menus: Battery(s), Time (both - Always Show?)
