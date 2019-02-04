@@ -585,7 +585,7 @@ NameChanger:
   No history
   Auto update
 HoudahSpot (incl. license)
-Disk Inventory X ("not optimized"?)
+Disk Inventory X
 DaisyDisk (incl. license)
 Wireshark
 
@@ -788,16 +788,42 @@ OneNote (App Store):
 
 Office
 
+Pages:
+  General:
+    New: Blank (?)
+    Author
+  Auto-Correction:
+    No auto spelling
+    No auto caps
+    No Link style?
+    No smart quotes?
+    Replacements on (?)
+
+Numbers:
+  General:
+    New: Blank (?)
+    Author
+  Auto-Correction:
+    No auto spelling
+    No auto caps
+    No Link style?
+    No smart quotes?
+    Replacements on (?)
+
 Keynote:
   General:
     Author
+  Slideshow:
+    No exit after last
   Auto-Correction:
-    no spelling corrections
-    no Link style?
-    no smart quotes?
+    No auto spelling
+    No auto caps
+    No Link style?
+    No smart quotes?
+    Replacements on (?)
 
 Sequel Pro:
-  auto-update
+  Auto-update
 
 iTerm2:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
@@ -929,6 +955,8 @@ Dock order (all -> keep in dock):
   (TextEdit) / Bluefish / MacVim / etc.
   iTerm
   Omnigraffle
+  Pages?
+  Numbers?
   Keynote?
   (Steam)
   (CrossOver)
