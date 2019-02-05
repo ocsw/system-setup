@@ -19,7 +19,8 @@ EOF
 # add SSH key to GitHub
 
 ### GPG
-# use RSA/RSA 4096, no expiration, and the same name and email as below
+# use RSA/RSA 4096, no expiration, the same name and email as below,
+# and comment 'HOSTNAME -> GitHub'
 gpg --full-generate-key
 # not really necessary, it will be printed when the key is generated
 # gpg --list-secret-keys --keyid-format LONG  # copy the key ID

@@ -890,8 +890,8 @@ GPG, option 2 (suite):
   brew uninstall --force gnupg pinentry
   umask 077
   install GPG Suite
-  create a key (use RSA/RSA 4096, no expiration, and the same name and email as
-    for git; see account-setup.txt)
+  create a key (use RSA/RSA 4096, no expiration, the same name and email as
+    for git, and comment 'HOSTNAME -> GitHub'; see account-setup.txt)
 GPG, either way:
   sign something (e.g. 'git -s', then mash keys and hit ctrl-d);
     check 'Save in Keychain'
