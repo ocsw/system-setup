@@ -294,8 +294,8 @@ SpiderOakONE:
   remove Hive symlink from desktop
   Backup:
     Folders:
-      .ssh, Books, Desktop, Documents, Downloads, install, Movies, Music,
-      Pictures, scraps, (Hive)
+      .gnupg, (.gnupg_pre_2.1), .ssh, Books, Desktop, Documents, Downloads,
+      install, Movies, Music, Pictures, scraps, (Hive)
       (other data, install, etc.)
       [work: only Books, Music, Pictures]
 
@@ -843,12 +843,6 @@ iTerm2:
     Mouse:
       Scroll wheel sends arrow keys when in alternate screen mode: Yes
 
-GPG Suite:
-  -> System Preferences:
-    GPG Suite:
-      Settings:
-        Remember for (e.g.) 43200 seconds [1 month]
-
 XCode incl. additional components, command-line tools
   'xcode-select --install' after OS upgrade
 
@@ -860,7 +854,6 @@ Homebrew (see unix-common/packages.txt):
   for i in $(cat packages.txt | sed 's/ *#.*$//' | grep -v '^$'); do
     brew install "$i"
   done
-  brew uninstall --force gnupg pinentry
   brew upgrade
   # brew cleanup
   # brew doctor
@@ -883,6 +876,29 @@ EOF
     ssh-add -K "$i"  # absolute path
   done
   add .ssh to SpiderOakONE (depending)
+
+GPG, option 1 (brew):
+  umask 022
+  brew install gnupg pinentry-mac
+  umask 077
+  echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+  gpgconf --kill gpg-agent
+  follow directions in account-setup.txt
+  install GPG Suite, for GUI (if desired)
+GPG, option 2 (suite):
+  umask 022
+  brew uninstall --force gnupg pinentry
+  umask 077
+  install GPG Suite
+  create a key (use RSA/RSA 4096, no expiration, and the same name and email as
+    for git; see account-setup.txt)
+GPG, either way:
+  sign something (e.g. 'git -s', then mash keys and hit ctrl-d);
+    check 'Save in Keychain'
+  -> System Preferences:
+    GPG Suite:
+      Settings:
+        (Default Key)
 
 # perms, in most cases:
 chmod -R go-rwx ~
