@@ -924,6 +924,7 @@ CrossOver:
   (install programs, e.g. Steam)
 
 Menu bar order (from L to R, with Bartender settings if not default):
+  (Docker)
   Spotlight (Always Hide)
   (Clipy)
   Muzzle (Hide, ?Show for updates)
