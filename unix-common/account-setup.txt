@@ -22,7 +22,7 @@ EOF
 # use RSA/RSA 4096, no expiration, and the same name and email as below
 gpg --full-generate-key
 # not really necessary, it will be printed when the key is generated
-gpg --list-secret-keys --keyid-format LONG  # copy the key ID
+# gpg --list-secret-keys --keyid-format LONG  # copy the key ID
 gpg --armor --export KEY_ID
 # add GPG key to GitHub
 
