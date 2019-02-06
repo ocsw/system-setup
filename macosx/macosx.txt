@@ -859,6 +859,7 @@ Homebrew (see unix-common/packages.txt):
   # brew doctor
   umask 077
   add /usr/local/bin/bash to /etc/shells, change shell?
+  restart shell (fixes problem with pybase)
 
 shell:
   dotfiles, incl. dotfile and .to_back_up links
