@@ -28,10 +28,12 @@ gpg --armor --export KEY_ID
 # add GPG key to GitHub
 
 ### global git
+#
 git config --global user.name "Danielle Zephyr Malament"
-git config --global user.email EMAIL  # work or personal, depending
+git config --global user.email danielle.malament@gmail.com
 # not necessary if the default key is the one you want
 git config --global user.signingkey KEY_ID
+#
 git config --global commit.gpgsign true
 git config --global tag.forceSignAnnotated true
 git config --global core.pager "less -F"
@@ -40,6 +42,7 @@ git config --global alias.br branch
 git config --global alias.st status
 git config --global alias.tree 'log --graph --all --oneline'
 git config --global core.excludesfile ~/.gitignore_global
+#
 echo ".vscode" >> ~/.gitignore_global  # for GUI systems
 
 ### global hg (~/.hgrc)
@@ -48,11 +51,6 @@ username = Danielle Zephyr Malament <EMAIL>  # work or personal, depending
 
 [pager]
 pager = less -F
-
-### for each personal repo:
-cd $REPO
-git config user.name "Danielle Zephyr Malament"
-git config user.email danielle.malament@gmail.com
 
 ### vim
 mkdir ~/.vim
