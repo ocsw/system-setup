@@ -884,7 +884,8 @@ GPG, option 1 (brew):
   echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
   gpgconf --kill gpg-agent
   follow directions in account-setup.txt
-  install GPG Suite, for GUI (if desired)
+  install GPG Suite, for GUI (if desired) (may not automatically pick up new
+    keys?)
 GPG, option 2 (suite):
   umask 022
   brew uninstall --force gnupg pinentry
