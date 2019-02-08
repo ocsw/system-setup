@@ -895,7 +895,7 @@ GPG, option 2 (suite):
   create a key (use RSA/RSA 4096, no expiration, the same name and email as
     for git, and comment 'HOSTNAME -> GitHub'; see account-setup.txt)
 GPG, either way:
-  sign something (e.g. 'git -s', then mash keys and hit ctrl-d);
+  sign something (e.g. 'git -s -u KEY_ID', then mash keys and hit ctrl-d);
     check 'Save in Keychain'
   -> System Preferences:
     GPG Suite:
