@@ -887,6 +887,8 @@ GPG, option 1 (brew):
   follow directions in account-setup.txt
   install GPG Suite, for GUI (if desired) (may not automatically pick up new
     keys?)
+  (put our lines at the top of the conf files, with a blank before the suite
+    ones?)
 GPG, option 2 (suite):
   umask 022
   brew uninstall --force gnupg pinentry
