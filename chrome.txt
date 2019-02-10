@@ -63,13 +63,13 @@ Extensions:
     No Memo, Wiki, Links
     Show tooltip
   Go to Tab
+  Downloader for Instagram:
+    Hide (depending?)
   Tabby Cat
     Hide (?)
   (Stop Animations?? gemmknjnneiojfjelmgappppbaneikda: Hide (?))
-  LastPass
   (Just Not Sorry??: Hide (?))
-  Downloader for Instagram:
-    Hide
+  LastPass
   (Application Launcher for Drive:)
     Disable (?) (if no Office?)
     Hide
