@@ -21,6 +21,7 @@
     "shellcheck.run": "onSave",
     "sync.autoDownload": true,
     "sync.autoUpload": true,
+    "sync.gist": "2c8bd11436a82986ac40c50ac35fb63f",
     "sync.removeExtensions": false,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
