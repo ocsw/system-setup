@@ -28,6 +28,8 @@
     "window.newWindowDimensions": "inherit",
     "window.restoreWindows": "all",
     "window.title": "${rootName}${separator}${activeEditorShort}",
+    "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true,
     "workbench.statusBar.feedback.visible": false,
     "workbench.tree.horizontalScrolling": true
 }
