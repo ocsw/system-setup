@@ -822,6 +822,14 @@ Keynote:
     No smart quotes?
     Replacements on (?)
 
+XnViewMP:
+  General:
+    General:
+      Startup directory: Last (default) (?)
+  Interface:
+    Keyboard:
+      ESC quits: Never (default) (?)
+
 Sequel Pro:
   Auto-update
 
