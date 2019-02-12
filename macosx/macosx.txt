@@ -247,6 +247,8 @@ Logitech Control Center (w/Marathon Mouse M705):
       Wheel: speed: 3? (default speed 4.6/11, default acc 3/11)
       Wheel Button: Middle Click (default is Zoom, speed 3/10, acc 3/11)
       Tilt L/R: (default speed 4/9, default acc 4/11)
+      Thumb button: Desktop (?) Nothing? Mission Control?
+        (default Mission Control -> Mission Control)
 
 Logitech Gaming Software (w/C920 webcam):
   NOTE: requires unplugging and replugging the mouse receiver after it starts
