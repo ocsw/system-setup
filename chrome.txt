@@ -63,6 +63,7 @@ Extensions:
     No Memo, Wiki, Links
     Show tooltip
   Go to Tab
+  TabCopy
   Downloader for Instagram:
     Hide (depending?)
   Tabby Cat
