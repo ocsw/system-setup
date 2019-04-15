@@ -939,6 +939,7 @@ CrossOver:
 
 Menu bar order (from L to R, with Bartender settings if not default):
   (Docker)
+  Carbon Black (Always Hide)
   Spotlight (Always Hide)
   (Clipy)
   Muzzle (Hide, ?Show for updates)
