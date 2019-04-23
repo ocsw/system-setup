@@ -935,7 +935,7 @@ CrossOver:
     Check
     Log and report
   License
-  (install programs, e.g. Steam)
+  (install programs, e.g. Steam, IrfanView w/plugins (32-bit?))
 
 Menu bar order (from L to R, with Bartender settings if not default):
   (Docker)
