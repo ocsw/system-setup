@@ -38,8 +38,8 @@ source ~/.bash_profile
 #autopep8
 #flake8
 
-py3ver=$(py3latest_local)
-py2ver=$(py2latest_local)
+py3ver=$(pylatest_local 3)
+py2ver=$(pylatest_local 2)
 #
 # see dot.bashrc.d/python.post for pyinst
 pyinst coverage "$py3ver"
