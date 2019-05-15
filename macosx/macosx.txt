@@ -233,6 +233,7 @@ PIA:
     Don't connect on launch
   (Exclude io.nwjs.nwjs from uBar (?))
 FortiClient
+  (Exclude from uBar (?))
 (other VPNs)
 
 Avira?
@@ -286,6 +287,7 @@ ToothFairy (App Store):
       Improve sound quality (depending)
   Launch at login
   Hide Dock icon
+  (Exclude from uBar)
 
 SpiderOakONE:
   General:
@@ -343,6 +345,7 @@ uBar:
       (Hammerspoon)
       (Moom)
       (Amphetamine)
+      (ToothFairy)
       (esets_tray)
       (se.razola.Glui2)
   Shortcuts:
