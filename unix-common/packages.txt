@@ -54,6 +54,7 @@ openvpn
 p7zip
 parallel
 pep8
+progress
 pssh
 pstree
 pv
