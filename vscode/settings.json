@@ -38,5 +38,5 @@
     "workbench.list.horizontalScrolling": true,
     "workbench.settings.editor": "json",
     "workbench.settings.useSplitJSON": true,
-    "workbench.statusBar.feedback.visible": false,
+    "workbench.statusBar.feedback.visible": false
 }
