@@ -7,9 +7,16 @@
     "explorer.autoReveal": false,
     // change to "\n" for Unix workspaces on Windows
     "files.eol": "auto",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
     "gitlens.statusBar.enabled": false,
     "gitlens.statusBar.reduceFlicker": true,
     "highlight-bad-chars.additionalUnicodeChars": ["\u0009"],
+    "java.checkstyle.configuration": "/google_checks.xml",
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
