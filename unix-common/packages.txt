@@ -15,6 +15,7 @@ cpp
 ctags
 curl
 emacs
+fish
 flake8
 flex
 gawk
