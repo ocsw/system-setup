@@ -1,8 +1,8 @@
 $ ls ~/.vscode/extensions/ | sed 's/-[^-]*$//' | sort -u -t. -k2
 rogalmic.bash-debug
 bungcip.better-toml
-eamodio.gitlens
 shan.code-settings-sync
+eamodio.gitlens
 wengerk.highlight-bad-chars
 ybaumes.highlight-trailing-white-spaces
 ephoton.indent-switcher
