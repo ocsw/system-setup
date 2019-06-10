@@ -2,11 +2,14 @@ $ ls ~/.vscode/extensions/ | sed 's/-[^-]*$//' | sort -u -t. -k2
 rogalmic.bash-debug
 bungcip.better-toml
 shan.code-settings-sync
+codezombiech.gitignore
 eamodio.gitlens
 wengerk.highlight-bad-chars
 ybaumes.highlight-trailing-white-spaces
 ephoton.indent-switcher
+ipedrazas.kubernetes-snippets
 yzhang.markdown-all-in-one
+davidanson.vscode-markdownlint
 jpogran.puppet-vscode
 ms-python.python
 lextudio.restructuredtext
@@ -14,3 +17,11 @@ timonwong.shellcheck
 coolbear.systemd-unit-file
 peterjausovec.vscode-docker
 redhat.vscode-yaml
+
+redhat.java
+dgileadi.java-decompiler
+shengchen.vscode-checkstyle
+vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+vscjava.vscode-java-test
+vscjava.vscode-maven
