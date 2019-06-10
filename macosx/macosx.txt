@@ -997,7 +997,9 @@ Dock order (all -> keep in dock):
   Numbers?
   Keynote?
   (Steam)
+  (GOG Galaxy)
   (CrossOver)
+  (CrossOver apps)
 
 uBar app order:
   Cisco AnyConnect / FortiClient / etc.
@@ -1020,8 +1022,9 @@ uBar app order:
   Preview
   Calculator
   Steam
+  GOG Galaxy
   CrossOver
-  (CrossOver apps)
+  CrossOver apps
   ESET / etc.
 
 Moom window placement
