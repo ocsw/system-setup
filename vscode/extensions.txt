@@ -9,13 +9,13 @@ ybaumes.highlight-trailing-white-spaces
 ephoton.indent-switcher
 ipedrazas.kubernetes-snippets
 yzhang.markdown-all-in-one
-davidanson.vscode-markdownlint
 jpogran.puppet-vscode
 ms-python.python
 lextudio.restructuredtext
 timonwong.shellcheck
 coolbear.systemd-unit-file
 peterjausovec.vscode-docker
+davidanson.vscode-markdownlint
 redhat.vscode-yaml
 
 redhat.java
