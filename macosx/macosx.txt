@@ -42,8 +42,8 @@ System Preferences:
       Microphone: Chrome, Logitech Gaming Software, (Onde Audio Recorder), Skype
       Accessibility:
         allow, incl. Bartender, BTT, Clipy, Dropbox, Google Software Update (?),
-        Hammerspoon, iTerm, Logitech Gaming Software, Moom, Muzzle, Spectacle,
-        uBar, Witch
+        Hammerspoon, iTerm, Kindle, Logitech Gaming Software, Moom, Muzzle,
+        Spectacle, uBar, Witch
       Automation:
         all on (?), incl.:
           FortiClient -> Google Chrome, Safari
