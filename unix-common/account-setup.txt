@@ -50,6 +50,8 @@ git config --global alias.tree 'log --graph --all --oneline'
 git config --global alias.co checkout
 git config --global alias.ap 'add -p'
 git config --global alias.aa 'add -A'
+git config --global alias.df diff
+git config --global alias.dc 'diff --cached'
 git config --global alias.ci commit
 git config --global alias.cm 'commit -m'
 git config --global alias.amendm 'commit --amend'
