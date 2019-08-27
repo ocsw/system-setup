@@ -48,6 +48,7 @@ mosh
 most
 mtr
 nano
+ncdu
 ncftp
 nmap
 no-more-secrets
