@@ -24,6 +24,7 @@ gdb
 git
 git-flow
 gnupg
+go
 hexedit
 htop
 iftop
