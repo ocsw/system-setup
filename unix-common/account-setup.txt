@@ -50,7 +50,6 @@ git config --global tag.forceSignAnnotated true
 echo ".vscode" >> ~/.gitignore_global  # for GUI systems
 #
 # one-command aliases
-
 git config --global alias.la '!git config -l | grep ^alias | cut -c 7-'
 git config --global alias.br branch
 git config --global alias.brdel 'branch -d'
