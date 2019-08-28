@@ -39,6 +39,8 @@ git config --global user.signingkey KEY_ID
 # general config
 git config --global core.pager "less -F"
 git config --global core.excludesfile ~/.gitignore_global
+git config --global pretty.oneline-name \
+    '%C(yellow)%h%Cgreen%d %Creset%s%Cblue [%cn]'
 git config --global pull.rebase true
 git config --global rebase.autoStash true
 git config --global commit.gpgsign true
@@ -46,14 +48,20 @@ git config --global tag.forceSignAnnotated true
 echo ".vscode" >> ~/.gitignore_global  # for GUI systems
 #
 # one-command aliases
+
+git config --global alias.la '!git config -l | grep ^alias | cut -c 7-'
 git config --global alias.br branch
+git config --global alias.brdel 'branch -d'
+git config --global alias.brdelf 'branch -D'
 git config --global alias.st status
 git config --global alias.tree 'log --graph --all --oneline'
 git config --global alias.co checkout
+git config --global alias.cb 'checkout -b'
 git config --global alias.rb 'pull --rebase --autostash'
 git config --global alias.rbo 'pull --rebase --autostash origin'
 git config --global alias.rbm 'pull --rebase --autostash origin master'
 git config --global alias.rbd 'pull --rebase --autostash origin develop'
+git config --global alias.pick cherry-pick
 git config --global alias.ap 'add -p'
 git config --global alias.aa 'add -A'
 git config --global alias.df diff
