@@ -43,8 +43,6 @@ git config --global pretty.oneline-name \
     '%C(yellow)%h%Cgreen%d %Creset%s%Cblue [%cn]'
 git config --global pretty.oneline-name-nl \
     '%n%C(yellow)%h%Cgreen%d %Creset%s%Cblue [%cn]'
-git config --global pull.rebase true
-git config --global rebase.autoStash true
 git config --global commit.gpgsign true
 git config --global tag.forceSignAnnotated true
 echo ".vscode" >> ~/.gitignore_global  # for GUI systems
@@ -66,10 +64,10 @@ git config --global alias.llf 'log --pretty=oneline-name-nl --numstat'  # files
 git config --global alias.tree 'log --pretty=oneline-name --graph --all'
 git config --global alias.co checkout
 git config --global alias.cb 'checkout -b'
-git config --global alias.rb 'pull --rebase --autostash'
-git config --global alias.rbo 'pull --rebase --autostash origin'
-git config --global alias.rbm 'pull --rebase --autostash origin master'
-git config --global alias.rbd 'pull --rebase --autostash origin develop'
+git config --global alias.rb 'pull --rebase'
+git config --global alias.rbo 'pull --rebase origin'
+git config --global alias.rbm 'pull --rebase origin master'
+git config --global alias.rbd 'pull --rebase origin develop'
 git config --global alias.pick cherry-pick
 git config --global alias.ap 'add -p'
 git config --global alias.aa 'add -A'
