@@ -64,10 +64,12 @@ git config --global alias.llf 'log --pretty=oneline-name-nl --numstat'  # files
 git config --global alias.tree 'log --pretty=oneline-name --graph --all'
 git config --global alias.co checkout
 git config --global alias.cb 'checkout -b'
-git config --global alias.rb 'pull --rebase'
-git config --global alias.rbo 'pull --rebase origin'
-git config --global alias.rbm 'pull --rebase origin master'
-git config --global alias.rbd 'pull --rebase origin develop'
+git config --global alias.rb 'rebase'
+git config --global alias.rbm 'rebase master'
+git config --global alias.rbd 'rebase develop'
+git config --global alias.prb 'pull --rebase'
+git config --global alias.prbm 'pull --rebase origin master'
+git config --global alias.prbd 'pull --rebase origin develop'
 git config --global alias.pick cherry-pick
 git config --global alias.ap 'add -p'
 git config --global alias.aa 'add -A'
