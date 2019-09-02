@@ -49,9 +49,22 @@ echo ".vscode" >> ~/.gitignore_global  # for GUI systems
 #
 # one-command aliases
 git config --global alias.la '!git config -l | grep ^alias | cut -c 7-'
+# NOTE: don't use this if you need a branch name you can checkout back to!
+# (this can give you things like '(HEAD detached at origin/master)'; use
+# git-current-branch() instead in that case)
+# see also https://stackoverflow.com/questions/6245570
+git config --global alias.cur \
+    '!git branch --no-color | sed -n "/^\* /  s/^..//p"'
+# prints the current branch, or fails with no output if we're not on a
+# local branch (e.g. detached HEAD)
+# see also https://stackoverflow.com/questions/6245570
+git config --global alias.curb 'symbolic-ref --short -q HEAD'
 git config --global alias.br branch
 git config --global alias.brdel 'branch -d'
 git config --global alias.brdelf 'branch -D'
+git config --global alias.co checkout
+git config --global alias.cb 'checkout -b'
+git config --global alias.back 'switch -'
 git config --global alias.st status
 git config --global alias.l log
 git config --global alias.lg 'log --graph'
@@ -62,8 +75,6 @@ git config --global alias.lln 'log --pretty=oneline-name'
 git config --global alias.llg 'log --pretty=oneline-name --graph'
 git config --global alias.llf 'log --pretty=oneline-name-nl --numstat'  # files
 git config --global alias.tree 'log --pretty=oneline-name --graph --all'
-git config --global alias.co checkout
-git config --global alias.cb 'checkout -b'
 git config --global alias.rb 'rebase'
 git config --global alias.rbm 'rebase master'
 git config --global alias.rbd 'rebase develop'
