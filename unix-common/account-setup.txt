@@ -76,6 +76,8 @@ git config --global alias.llg 'log --pretty=oneline-name --graph'
 git config --global alias.llf 'log --pretty=oneline-name-nl --numstat'  # files
 git config --global alias.tree 'log --pretty=oneline-name --graph --all'
 git config --global alias.rb 'rebase'
+git config --global alias.rbi 'rebase -i'
+git config --global alias.rbih '!sh -c "git rebase -i HEAD~$1" sh'
 git config --global alias.rbm 'rebase master'
 git config --global alias.rbd 'rebase develop'
 git config --global alias.prb 'pull --rebase'
