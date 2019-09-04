@@ -76,6 +76,8 @@ git config --global alias.llg 'log --pretty=oneline-name --graph'
 git config --global alias.llf 'log --pretty=oneline-name-nl --numstat'  # files
 git config --global alias.tree 'log --pretty=oneline-name --graph --all'
 git config --global alias.rb 'rebase'
+git config --global alias.rba 'rebase --abort'
+git config --global alias.rbc 'rebase --continue'
 git config --global alias.rbi 'rebase -i'
 git config --global alias.rbih '!sh -c "git rebase -i HEAD~$1" sh'
 git config --global alias.rbm 'rebase master'
@@ -83,6 +85,9 @@ git config --global alias.rbd 'rebase develop'
 git config --global alias.prb 'pull --rebase'
 git config --global alias.prbm 'pull --rebase origin master'
 git config --global alias.prbd 'pull --rebase origin develop'
+git config --global alias.mg 'merge'
+git config --global alias.mga 'merge --abort'
+git config --global alias.mgc 'merge --continue'
 git config --global alias.pick cherry-pick
 git config --global alias.ap 'add -p'
 git config --global alias.aa 'add -A'
@@ -102,6 +107,14 @@ git config --global alias.apf \
     '!git commit --amend --no-edit && git push --force-with-lease'
 git config --global alias.aapf \
     '!git add -A && git commit --amend --no-edit && git push --force-with-lease'
+git config --global alias.arc \
+    '!git commit --amend --no-edit && git rebase --continue'
+git config --global alias.aarc \
+    '!git add -A && git commit --amend --no-edit && git rebase --continue'
+git config --global alias.amc \
+    '!git commit --amend --no-edit && git merge --continue'
+git config --global alias.aamc \
+    '!git add -A && git commit --amend --no-edit && git merge --continue'
 
 ### global hg (~/.hgrc)
 [ui]
