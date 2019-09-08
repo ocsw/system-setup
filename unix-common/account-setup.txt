@@ -75,6 +75,9 @@ git config --global alias.lln 'log --pretty=oneline-name'
 git config --global alias.llg 'log --pretty=oneline-name --graph'
 git config --global alias.llf 'log --pretty=oneline-name-nl --numstat'  # files
 git config --global alias.tree 'log --pretty=oneline-name --graph --all'
+git config --global alias.rl reflog
+git config --global alias.s show
+git config --global alias.g grep
 git config --global alias.rb 'rebase'
 git config --global alias.rba 'rebase --abort'
 git config --global alias.rbc 'rebase --continue'
@@ -82,6 +85,7 @@ git config --global alias.rbi 'rebase -i'
 git config --global alias.rbih '!sh -c "git rebase -i HEAD~$1" sh'
 git config --global alias.rbm 'rebase master'
 git config --global alias.rbd 'rebase develop'
+git config --global alias.pl pull
 git config --global alias.prb 'pull --rebase'
 git config --global alias.prbm 'pull --rebase origin master'
 git config --global alias.prbd 'pull --rebase origin develop'
@@ -91,12 +95,13 @@ git config --global alias.mgc 'merge --continue'
 git config --global alias.pick cherry-pick
 git config --global alias.ap 'add -p'
 git config --global alias.aa 'add -A'
-git config --global alias.df diff
+git config --global alias.d diff
 git config --global alias.dc 'diff --cached'
 git config --global alias.ci commit
 git config --global alias.cm 'commit -m'
 git config --global alias.amendm 'commit --amend'
 git config --global alias.amend 'commit --amend --no-edit'
+git config --global alias.ps push
 git config --global alias.pn 'push --set-upstream origin'
 git config --global alias.pnh 'push --set-upstream origin HEAD'
 git config --global alias.pf 'push --force-with-lease'
