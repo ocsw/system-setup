@@ -1,7 +1,15 @@
+########
+# prep #
+########
+
 ### first install git/hg, vim
 ### if __git_ps1 isn't included, install it
 
-### SSH
+
+#######
+# SSH #
+#######
+
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 touch ~/.ssh/config
@@ -18,7 +26,11 @@ EOF
 # consolidate and order config file from most to least specific
 # add SSH key to GitHub
 
-### GPG
+
+#######
+# GPG #
+#######
+
 echo "keyid-format LONG" >> ~/.gnupg/gpg.conf
 # use RSA/RSA 4096, no expiration, the same name and email as below,
 # and comment 'HOSTNAME -> GitHub'
@@ -28,8 +40,11 @@ gpg --full-generate-key
 gpg --armor --export KEY_ID
 # add GPG key to GitHub
 
-### global git
-#
+
+#######
+# Git #
+#######
+
 # identity
 git config --global user.name 'Danielle Zephyr Malament'
 git config --global user.email danielle.malament@gmail.com
@@ -118,6 +133,11 @@ git config --global alias.aapf \
 git config --global alias.arbc '!git add -A && git rebase --continue'
 git config --global alias.amgc '!git add -A && git merge --continue'
 
+
+#############
+# Mercurial #
+#############
+
 ### global hg (~/.hgrc)
 [ui]
 username = Danielle Zephyr Malament <EMAIL>  # work or personal, depending
@@ -125,7 +145,11 @@ username = Danielle Zephyr Malament <EMAIL>  # work or personal, depending
 [pager]
 pager = less -F
 
-### vim
+
+#######
+# Vim #
+#######
+
 mkdir ~/.vim
 cd ~/.vim
 git clone https://github.com/tpope/vim-pathogen.git
@@ -143,9 +167,17 @@ git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/tpope/vim-surround.git
 cd ~
 
-### python
+
+##########
+# Python #
+##########
+
 # see python.txt
 
-### perms
+
+#########
+# perms #
+#########
+
 # in most cases:
 chmod -R go-rwx ~
