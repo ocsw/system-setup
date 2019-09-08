@@ -104,6 +104,14 @@ git config --global alias.mg 'merge'
 git config --global alias.mga 'merge --abort'
 git config --global alias.mgc 'merge --continue'
 git config --global alias.pick cherry-pick
+git config --global alias.ss stash
+git config --global alias.ssl 'stash list'
+git config --global alias.sss 'stash show'
+git config --global alias.ssm 'stash push -m'
+git config --global alias.ssp 'stash pop'
+git config --global alias.ssa 'stash apply'
+git config --global alias.ssd 'stash drop'
+git config --global alias.ssc 'stash clear'
 
 #
 # workstream management (multiple commands)
