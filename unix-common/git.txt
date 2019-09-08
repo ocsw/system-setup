@@ -65,7 +65,7 @@ git config --global alias.brdel 'branch -d'
 git config --global alias.brdelf 'branch -D'
 git config --global alias.co checkout
 git config --global alias.cb 'checkout -b'
-git config --global alias.back 'switch -'
+git config --global alias.back 'checkout -'
 
 #
 # status, history, contents
