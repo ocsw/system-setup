@@ -92,6 +92,8 @@ git config --global alias.llf 'log --pretty=oneline-name-nl --numstat'  # files
 git config --global alias.tree 'log --pretty=oneline-name --graph --all'
 git config --global alias.rl reflog
 git config --global alias.s show
+git config --global alias.d diff
+git config --global alias.dc 'diff --cached'
 git config --global alias.g grep
 git config --global alias.rb 'rebase'
 git config --global alias.rba 'rebase --abort'
@@ -110,8 +112,6 @@ git config --global alias.mgc 'merge --continue'
 git config --global alias.pick cherry-pick
 git config --global alias.ap 'add -p'
 git config --global alias.aa 'add -A'
-git config --global alias.d diff
-git config --global alias.dc 'diff --cached'
 git config --global alias.ci commit
 git config --global alias.cm 'commit -m'
 git config --global alias.amendm 'commit --amend'
