@@ -31,20 +31,20 @@ gpg --armor --export KEY_ID
 ### global git
 #
 # identity
-git config --global user.name "Danielle Zephyr Malament"
+git config --global user.name 'Danielle Zephyr Malament'
 git config --global user.email danielle.malament@gmail.com
 # not necessary if the default key is the one you want
 git config --global user.signingkey KEY_ID
 #
 # general config
-git config --global core.pager "less -F"
+git config --global core.pager 'less -F'
 git config --global core.excludesfile ~/.gitignore_global
 git config --global pretty.oneline-name \
     '%C(yellow)%h%Cgreen%d %Creset%s%Cblue [%cn]'
 git config --global pretty.oneline-name-nl \
     '%n%C(yellow)%h%Cgreen%d %Creset%s%Cblue [%cn]'
 git config --global commit.gpgsign true
-git config --global tag.forceSignAnnotated true
+git config --global tag.forcesignannotated true
 echo ".vscode" >> ~/.gitignore_global  # for GUI systems
 #
 # one-command aliases
