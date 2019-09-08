@@ -107,14 +107,11 @@ git config --global alias.apf \
     '!git commit --amend --no-edit && git push --force-with-lease'
 git config --global alias.aapf \
     '!git add -A && git commit --amend --no-edit && git push --force-with-lease'
-git config --global alias.arc \
-    '!git commit --amend --no-edit && git rebase --continue'
-git config --global alias.aarc \
-    '!git add -A && git commit --amend --no-edit && git rebase --continue'
-git config --global alias.amc \
-    '!git commit --amend --no-edit && git merge --continue'
-git config --global alias.aamc \
-    '!git add -A && git commit --amend --no-edit && git merge --continue'
+# for rebase -i edits and merge conflicts
+# note: for an edit, staged changes will be automatically amended onto the
+# previous commit; for a conflict, they will become the next commit
+git config --global alias.arbc '!git add -A && git rebase --continue'
+git config --global alias.amgc '!git add -A && git merge --continue'
 
 ### global hg (~/.hgrc)
 [ui]
