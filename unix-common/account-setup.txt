@@ -45,7 +45,7 @@ gpg --armor --export KEY_ID
 # Git #
 #######
 
-# see git.txt
+# run git-config.sh
 
 
 #############
