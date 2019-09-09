@@ -45,7 +45,10 @@ git config --global tag.forcesignannotated true
 #
 # meta
 #
+git config --global alias.h help
 git config --global alias.la '!git config -l | grep ^alias | cut -c 7-'
+git config --global alias.las '!git config -l | grep ^alias | cut -c 7- | sort'
+git config --global alias.lah '!git help -a | sed -e "1,/^Command aliases\$/d"'
 
 #
 # branch management
@@ -85,6 +88,7 @@ git config --global alias.s show
 git config --global alias.d diff
 git config --global alias.dc 'diff --cached'
 git config --global alias.g grep
+git config --global alias.bl blame
 
 #
 # workstream management (single commands)
@@ -93,14 +97,16 @@ git config --global alias.pl pull
 git config --global alias.prb 'pull --rebase'
 git config --global alias.prbm 'pull --rebase origin master'
 git config --global alias.prbd 'pull --rebase origin develop'
-git config --global alias.rb 'rebase'
+git config --global alias.rb rebase
 git config --global alias.rbm 'rebase master'
 git config --global alias.rbd 'rebase develop'
 git config --global alias.rba 'rebase --abort'
 git config --global alias.rbc 'rebase --continue'
 git config --global alias.rbi 'rebase -i'
+# shellcheck disable=2016
 git config --global alias.rbih '!sh -c "git rebase -i HEAD~$1" sh'
-git config --global alias.mg 'merge'
+git config --global alias.mg merge
+git config --global alias.mgn 'merge --no-ff'
 git config --global alias.mga 'merge --abort'
 git config --global alias.mgc 'merge --continue'
 git config --global alias.pick cherry-pick
@@ -112,6 +118,9 @@ git config --global alias.ssp 'stash pop'
 git config --global alias.ssa 'stash apply'
 git config --global alias.ssd 'stash drop'
 git config --global alias.ssc 'stash clear'
+git config --global alias.rrr rerere
+git config --global alias.rrrs 'rerere status'
+git config --global alias.rrrd 'rerere diff'
 
 #
 # workstream management (multiple commands)
