@@ -2,10 +2,17 @@
 # identity #
 ############
 
-git config --global user.name 'Danielle Zephyr Malament'
-git config --global user.email danielle.malament@gmail.com
-# not necessary if the default key is the one you want
-git config --global user.signingkey KEY_ID
+# fence these so we can re-run this file without breaking anything
+if ! git config --global --get user.name > /dev/null; then
+    git config --global user.name 'Danielle Zephyr Malament'
+fi
+if ! git config --global --get user.email > /dev/null; then
+    git config --global user.email danielle.malament@gmail.com
+fi
+if ! git config --global --get user.signingkey > /dev/null; then
+    # not necessary if the default key is the one you want
+    git config --global user.signingkey KEY_ID
+fi
 
 
 ####################
