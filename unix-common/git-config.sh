@@ -52,6 +52,17 @@ git config --global tag.forcesignannotated true
 ###########
 
 #
+# clear existing
+#
+# remove the below aliases if they exist, so that when we re-add them, they
+# will be in order
+sed 's/^ *//' "${0:-git-config.sh}" | \
+    sed 's/ *#.*$//' | grep '^git config --global alias\.' | awk '{print $4}' |
+    while read -r alias; do
+        git config --global --unset "$alias"
+    done
+
+#
 # meta
 #
 git config --global alias.h help
