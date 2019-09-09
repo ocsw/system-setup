@@ -17,6 +17,9 @@
     "gitlens.statusBar.reduceFlicker": true,
     "highlight-bad-chars.additionalUnicodeChars": ["\u0009"],
     "java.checkstyle.configuration": "/google_checks.xml",
+    "markdownlint.config": {
+        "MD007": { "indent": 4 }
+    },
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
@@ -37,6 +40,5 @@
     "window.title": "${rootName}${separator}${activeEditorShort}",
     "workbench.list.horizontalScrolling": true,
     "workbench.settings.editor": "json",
-    "workbench.settings.useSplitJSON": true,
-    "workbench.statusBar.feedback.visible": false
+    "workbench.settings.useSplitJSON": true
 }
