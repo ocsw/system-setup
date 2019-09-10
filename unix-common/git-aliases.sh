@@ -163,7 +163,7 @@ git config --global alias.acpc '!git add -A && git cherry-pick --continue'
 git config --global alias.arvc '!git add -A && git revert --continue'
 
 #
-# editing (file-level changes)
+# editing (changes within a commit)
 #
 git config --global alias.ss stash
 git config --global alias.ssl 'stash list'
@@ -180,16 +180,27 @@ git config --global alias.ssc 'stash clear'
 # add -> commit -> push (single commands)
 #
 git config --global alias.ap 'add -p'
+git config --global alias.af 'add --'
 git config --global alias.aa 'add -A'
+# reset with -p or paths can't take a mode, but it only affects the index; the
+# source defaults to HEAD, so without an explicit source, it acts like
+# --mixed HEAD
+git config --global alias.unap 'reset -p'  # default is like --mixed HEAD
+git config --global alias.unaf 'reset --'  # default is like --mixed HEAD
+git config --global alias.unaa reset  # default is --mixed HEAD
 git config --global alias.ci commit
 git config --global alias.cm 'commit -m'
 git config --global alias.amendm 'commit --amend'
 git config --global alias.amend 'commit --amend --no-edit'
+git config --global alias.unci 'reset --soft HEAD~1'
+git config --global alias.unca 'reset HEAD~1'  # default is --mixed
 git config --global alias.ps push
 git config --global alias.pst 'push --tags'
 git config --global alias.pn 'push --set-upstream origin'
 git config --global alias.pnh 'push --set-upstream origin HEAD'
 git config --global alias.pf 'push --force-with-lease'
+# not sure having aliases (even limited ones) for reset is a good idea; it's a
+# dangerous command, and you should be explicit and know what you're doing...
 
 #
 # add -> commit -> push (multiple commands)
