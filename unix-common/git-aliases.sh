@@ -99,7 +99,16 @@ git config --global alias.mg merge
 git config --global alias.mgn 'merge --no-ff'
 git config --global alias.mga 'merge --abort'
 git config --global alias.mgc 'merge --continue'
-git config --global alias.pick cherry-pick
+git config --global alias.cp cherry-pick
+git config --global alias.cpe 'cherry-pick --edit'
+git config --global alias.cpn 'cherry-pick --no-commit'
+git config --global alias.cpa 'cherry-pick --abort'
+git config --global alias.cpc 'cherry-pick --continue'
+git config --global alias.rv revert
+git config --global alias.rvf 'revert --no-edit'
+git config --global alias.rvn 'revert --no-commit'
+git config --global alias.rva 'revert --abort'
+git config --global alias.rvc 'revert --continue'
 git config --global alias.ss stash
 git config --global alias.ssl 'stash list'
 git config --global alias.sss 'stash show'
@@ -120,6 +129,8 @@ git config --global alias.rrrd 'rerere diff'
 # previous commit; for a conflict, they will become the next commit
 git config --global alias.arbc '!git add -A && git rebase --continue'
 git config --global alias.amgc '!git add -A && git merge --continue'
+git config --global alias.acpc '!git add -A && git cherry-pick --continue'
+git config --global alias.arvc '!git add -A && git revert --continue'
 
 #
 # add -> commit -> push (single commands)
