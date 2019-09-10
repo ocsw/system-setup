@@ -47,6 +47,14 @@ gpg --armor --export KEY_ID
 
 # run git-config.sh
 
+# re-do these as necessary
+git config --global user.name 'Danielle Zephyr Malament'
+git config --global user.email danielle.malament@gmail.com
+# not necessary if the default key is the one you want
+git config --global user.signingkey KEY_ID
+
+# optionally, run git-check.sh
+
 
 #############
 # Mercurial #
