@@ -68,6 +68,17 @@ git config --global alias.d diff
 git config --global alias.dc 'diff --cached'
 git config --global alias.g grep
 git config --global alias.bl blame
+git config --global alias.bi bisect
+git config --global alias.bist 'bisect start'
+git config --global alias.big 'bisect good'
+git config --global alias.bib 'bisect bad'
+git config --global alias.bin 'bisect new'
+git config --global alias.bio 'bisect old'
+git config --global alias.bisk 'bisect skip'
+git config --global alias.biv 'bisect view'
+git config --global alias.bil 'bisect log'
+git config --global alias.birs 'bisect reset'
+git config --global alias.birp 'bisect replay'
 
 #
 # workstream management (single commands)
