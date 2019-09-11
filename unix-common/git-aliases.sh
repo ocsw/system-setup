@@ -29,7 +29,7 @@ git config --global alias.las '!git config -l | grep ^alias | cut -c 7- | sort'
 git config --global alias.lah '!git help -a | sed -e "1,/^Command aliases\$/d"'
 
 #
-# branch management
+# branch and tag management
 #
 # NOTE: don't use this if you need a branch name you can checkout back to!
 # (this can give you things like '(HEAD detached at origin/master)'; use
@@ -47,6 +47,15 @@ git config --global alias.brdelf 'branch -D'
 git config --global alias.co checkout
 git config --global alias.cb 'checkout -b'
 git config --global alias.back 'checkout -'
+git config --global alias.tagl 'tag -l'
+git config --global alias.tagdel 'tag -d'
+# don't use -a (annotated and unsigned); it overrides tag.forcesignannotated,
+# whereas using -m implies an annotated tag but allows it to be signed
+# (note: git 2.23 introduced tag.gpgsign, which overrides even -a, but it also
+# prevents making lightweight (non-annotated) tags)
+git config --global alias.tagm 'tag -m'
+# shellcheck disable=2016
+git config --global alias.tagnm '!sh -c "git tag \"$1\" -m \"$2\"" sh'
 
 #
 # status, history, contents
@@ -94,7 +103,7 @@ git config --global alias.rba 'rebase --abort'
 git config --global alias.rbc 'rebase --continue'
 git config --global alias.rbi 'rebase -i'
 # shellcheck disable=2016
-git config --global alias.rbih '!sh -c "git rebase -i HEAD~$1" sh'
+git config --global alias.rbih '!sh -c "git rebase -i \"HEAD~$1\"" sh'
 git config --global alias.mg merge
 git config --global alias.mgn 'merge --no-ff'
 git config --global alias.mga 'merge --abort'
