@@ -186,6 +186,7 @@ git config --global alias.cm 'commit -m'
 git config --global alias.amendm 'commit --amend'
 git config --global alias.amend 'commit --amend --no-edit'
 git config --global alias.ps push
+git config --global alias.pst 'push --tags'
 git config --global alias.pn 'push --set-upstream origin'
 git config --global alias.pnh 'push --set-upstream origin HEAD'
 git config --global alias.pf 'push --force-with-lease'
