@@ -24,9 +24,23 @@ sed 's/^ *//' "$0" | sed 's/ *#.*$//' | grep '^git config --global alias\.' | \
 # meta
 #
 git config --global alias.h help
+# (not going to make 4 each of set, get, unset, list, edit)
+git config --global alias.cf config  # local
+git config --global alias.cff 'config --file'
+git config --global alias.cfg 'config --global'
+git config --global alias.cfs 'config --system'
 git config --global alias.la '!git config -l | grep ^alias | cut -c 7-'
 git config --global alias.las '!git config -l | grep ^alias | cut -c 7- | sort'
 git config --global alias.lah '!git help -a | sed -e "1,/^Command aliases\$/d"'
+
+#
+# repo management
+#
+git config --global alias.in init
+git config --global alias.cl clone
+git config --global alias.rem remote
+# leaving out fsck and gc (rarely used, to be used carefully, and hard to
+# abbreviate)
 
 #
 # branch and tag management
@@ -47,6 +61,10 @@ git config --global alias.brdelf 'branch -D'
 git config --global alias.co checkout
 git config --global alias.cb 'checkout -b'
 git config --global alias.back 'checkout -'
+# switch is new in git 2.23
+git config --global alias.sw switch
+git config --global alias.swc 'switch -c'
+git config --global alias.swd 'switch --detach'
 git config --global alias.tagl 'tag -l'
 git config --global alias.tagdel 'tag -d'
 # don't use -a (annotated and unsigned); it overrides tag.forcesignannotated,
@@ -90,9 +108,12 @@ git config --global alias.birs 'bisect reset'
 git config --global alias.birp 'bisect replay'
 
 #
-# workstream management (single commands)
+# workstream management (stacks of commits; single commands)
 #
+git config --global alias.ft fetch
+git config --global alias.fta 'fetch --all'
 git config --global alias.pl pull
+git config --global alias.pla 'pull --all'
 git config --global alias.prb 'pull --rebase'
 git config --global alias.prbm 'pull --rebase origin master'
 git config --global alias.prbd 'pull --rebase origin develop'
@@ -118,20 +139,12 @@ git config --global alias.rvf 'revert --no-edit'
 git config --global alias.rvn 'revert --no-commit'
 git config --global alias.rva 'revert --abort'
 git config --global alias.rvc 'revert --continue'
-git config --global alias.ss stash
-git config --global alias.ssl 'stash list'
-git config --global alias.sss 'stash show'
-git config --global alias.ssm 'stash push -m'
-git config --global alias.ssp 'stash pop'
-git config --global alias.ssa 'stash apply'
-git config --global alias.ssd 'stash drop'
-git config --global alias.ssc 'stash clear'
 git config --global alias.rrr rerere
 git config --global alias.rrrs 'rerere status'
 git config --global alias.rrrd 'rerere diff'
 
 #
-# workstream management (multiple commands)
+# workstream management (stacks of commits; multiple commands)
 #
 # for rebase -i edits and merge conflicts
 # note: for an edit, staged changes will be automatically amended onto the
@@ -140,6 +153,20 @@ git config --global alias.arbc '!git add -A && git rebase --continue'
 git config --global alias.amgc '!git add -A && git merge --continue'
 git config --global alias.acpc '!git add -A && git cherry-pick --continue'
 git config --global alias.arvc '!git add -A && git revert --continue'
+
+#
+# editing (file-level changes)
+#
+git config --global alias.ss stash
+git config --global alias.ssl 'stash list'
+git config --global alias.sss 'stash show'
+git config --global alias.ssm 'stash push -m'
+git config --global alias.ssp 'stash pop'
+git config --global alias.ssa 'stash apply'
+git config --global alias.ssd 'stash drop'
+git config --global alias.ssc 'stash clear'
+# leaving out mv and rm (too short to abbreviate), and clean (dangerous and
+# rarely used)
 
 #
 # add -> commit -> push (single commands)
