@@ -5,20 +5,25 @@
 # broken out of git-config.sh so the aliases can be (re)applied separately
 
 
-###########
-# aliases #
-###########
+##########################
+# clear existing aliases #
+##########################
 
-#
-# clear existing
-#
 # remove the below aliases if they exist, so that when we re-add them, they
-# will be in order
+# will be in order; we also need to keep a fake alias in place so the alias
+# section stays where it is in the config file (relative to includes, for
+# example)
+git config --global alias.faketempalias temp
 sed 's/^ *//' "$0" | sed 's/ *#.*$//' | grep '^git config --global alias\.' | \
-    awk '{print $4}' | \
+    awk '{print $4}' | grep -v '^alias.faketempalias$' | \
     while read -r alias; do
         git config --global --unset "$alias"
     done
+
+
+###############
+# add aliases #
+###############
 
 #
 # meta
@@ -193,3 +198,10 @@ git config --global alias.apf \
     '!git commit --amend --no-edit && git push --force-with-lease'
 git config --global alias.aapf \
     '!git add -A && git commit --amend --no-edit && git push --force-with-lease'
+
+
+#######################
+# clean up fake alias #
+#######################
+
+git config --global --unset alias.faketempalias

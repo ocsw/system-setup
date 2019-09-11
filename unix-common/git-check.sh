@@ -6,5 +6,6 @@ diff \
     <(cat "$(dirname "$0")"/{git-config.sh,git-aliases.sh} | sed 's/^ *//' | sed 's/ *#.*$//' | \
         sed '/\\$/ {N;s/\\\n//;}' | sed "s@\~/@${HOME}/@" | \
         grep '^git config --global ' | grep -v ' --unset ' | \
-        sed 's/^git config --global //' | sed 's/ /=/' | tr -d "'") \
+        sed 's/^git config --global //' | sed 's/ /=/' | tr -d "'" | \
+        grep -v '^alias.faketempalias=') \
     <(git config --global --list)
