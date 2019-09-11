@@ -25,12 +25,15 @@ sed 's/^ *//' "$0" | sed 's/ *#.*$//' | grep '^git config --global alias\.' | \
 #
 git config --global alias.h help
 # (not going to make 4 each of set, get, unset, list, edit)
-git config --global alias.cf config  # local
+git config --global alias.cf config  # local, or current
 git config --global alias.cff 'config --file'
 git config --global alias.cfg 'config --global'
 git config --global alias.cfs 'config --system'
-git config --global alias.la '!git config -l | grep ^alias | cut -c 7-'
-git config --global alias.las '!git config -l | grep ^alias | cut -c 7- | sort'
+git config --global alias.cfo 'config --show-origin'
+git config --global alias.cflo 'config -l --show-origin'
+git config --global alias.la '!git config --global -l | grep ^alias | cut -c 7-'
+git config --global alias.las \
+    '!git config --global -l | grep ^alias | cut -c 7- | sort'
 git config --global alias.lah '!git help -a | sed -e "1,/^Command aliases\$/d"'
 
 #
