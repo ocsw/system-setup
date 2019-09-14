@@ -173,8 +173,29 @@ git config --global alias.ssp 'stash pop'
 git config --global alias.ssa 'stash apply'
 git config --global alias.ssd 'stash drop'
 git config --global alias.ssc 'stash clear'
-# leaving out mv and rm (too short to abbreviate), and clean (dangerous and
-# rarely used)
+# leaving out mv and rm (too short to abbreviate), clean (dangerous and rarely
+# used), and reset --hard, file-scope reset, file-scope checkout, and (new in
+# git 2.23) restore (dangerous; see note about reset, below)
+# note:
+# - reset --hard
+#     - source defaults to HEAD
+#     - destination is always the index and the working tree
+# - file-scope reset
+#     - source defaults to HEAD
+#     - destination is always the index
+# - file-scope checkout
+#     - source defaults to the index
+#     - destination is always the index and the working tree (or just the tree
+#       if the source is the index)
+# - restore (below correct as of 2.23)
+#     - source defaults to:
+#         - the index if the destination is the working tree (like fs checkout)
+#         - HEAD if the destination is the index (like fs reset)
+#         - no default if the destination is both
+#     - destination defaults to the working tree (like fs checkout with default
+#       source)
+#     - unlike checkout, it defaults to non-overlay mode (delete tracked files
+#       that are not present in the source)
 
 #
 # add -> commit -> push (single commands)
