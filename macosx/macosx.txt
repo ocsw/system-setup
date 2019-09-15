@@ -868,8 +868,8 @@ Homebrew (see unix-common/packages.txt):
     brew install "$i"
   done
   brew upgrade
-  # brew cleanup
-  # brew doctor
+  brew cleanup
+  brew doctor
   umask 077
   add /usr/local/bin/bash to /etc/shells, change shell?
   restart shell (fixes problem with pybase)
