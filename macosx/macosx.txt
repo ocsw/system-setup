@@ -298,8 +298,9 @@ SpiderOakONE:
   remove Hive symlink from desktop
   Backup:
     Folders:
-      .gnupg, (.gnupg_pre_2.1), .ssh, Books, Desktop, Documents, Downloads,
-      install, Movies, Music, Pictures, scraps, (Hive)
+      .gnupg (except *.conf), (.gnupg_pre_2.1 except *.conf), .ssh,
+      Books, Desktop, Documents, Downloads, install, Movies, Music, Pictures,
+      scraps, (Hive)
       (other data, install, etc.)
       [work: only Books, Music, Pictures]
     Files:
