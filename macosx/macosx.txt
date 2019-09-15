@@ -302,6 +302,8 @@ SpiderOakONE:
       install, Movies, Music, Pictures, scraps, (Hive)
       (other data, install, etc.)
       [work: only Books, Music, Pictures]
+    Files:
+      .to_back_up/*.local
 
 Google Backup and Sync:
   Computer:
