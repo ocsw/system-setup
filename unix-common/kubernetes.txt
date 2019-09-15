@@ -1,0 +1,28 @@
+#
+# Mac
+#
+# for GKE, gcloud's kubectl is recommended, but brew's is needed to install
+# the other brew packages
+#gcloud components install kubectl
+brew install kubernetes-cli
+brew install fzf
+brew install kubectx
+brew tap johanhaleby/kubetail && brew install kubetail
+brew install kube-ps1
+brew cask install minikube
+
+#
+# GKE update
+#
+gke-up () {
+    # get credentials for all clusters
+    # note: final sh is $0, then xargs adds $1 and $2
+    # shellcheck disable=SC2016
+    gcloud container clusters list \
+        --project=PROJECT_NAME \
+        --filter="resourceLabels[env]=production" \
+        --format="value[delimiter=' '](name,zone)" \
+    | xargs -n 2 sh -c \
+        'gcloud container clusters get-credentials $1 --region=$2 --project=PROJECT_NAME' \
+        sh
+}
