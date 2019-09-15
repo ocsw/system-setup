@@ -919,7 +919,7 @@ GPG, either way:
 
 # perms, in most cases:
 chmod -R go-rwx ~
-chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* \
+chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
   ~/Library/Application\ Support/Code/User/* ~/.vim/autoload/pathogen.vim \
   ~/bin/*
 
