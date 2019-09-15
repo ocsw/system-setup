@@ -18,6 +18,7 @@ emacs
 fish
 flake8
 flex
+fzf
 gawk
 gcc
 gdb
