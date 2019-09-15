@@ -31,7 +31,9 @@ EOF
 # GPG #
 #######
 
-echo "keyid-format LONG" >> ~/.gnupg/gpg.conf
+# see gpg-base for config file templates; apply to both (?) ~/.gnupg and
+#   ~/.gnupg_pre_2.1
+
 # use RSA/RSA 4096, no expiration, the same name and email as below,
 # and comment 'HOSTNAME -> GitHub'
 gpg --full-generate-key
@@ -63,8 +65,9 @@ git config --global user.signingkey KEY_ID
 mkdir -p ~/repos
 git clone git@github.com:ocsw/sysadmin-notes.git ~/repos  # this repo
 git clone git@github.com:ocsw/dotfiles.git ~/repos
-# follow ~/repos/dotfiles/INSTALL.sh
 # see also python.txt
+
+# follow ~/repos/dotfiles/INSTALL.sh
 
 
 #############
