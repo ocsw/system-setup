@@ -1,3 +1,8 @@
+#
+# pypvutil
+#
+mkdir -p ~/repos
+git clone git@github.com:ocsw/pypvutil.git ~/repos
 
 #
 # Mac

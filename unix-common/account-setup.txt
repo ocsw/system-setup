@@ -57,6 +57,17 @@ git config --global user.signingkey KEY_ID
 
 
 #############
+# Git repos #
+#############
+
+mkdir -p ~/repos
+git clone git@github.com:ocsw/sysadmin-notes.git ~/repos  # this repo
+git clone git@github.com:ocsw/dotfiles.git ~/repos
+# follow ~/repos/dotfiles/INSTALL.sh
+# see also python.txt
+
+
+#############
 # Mercurial #
 #############
 
