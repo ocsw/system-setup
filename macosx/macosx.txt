@@ -303,7 +303,7 @@ SpiderOakONE:
       (other data, install, etc.)
       [work: only Books, Music, Pictures]
     Files:
-      .to_back_up/*.local
+      .to_back_up/*, especially *.local, except for history files
 
 Google Backup and Sync:
   Computer:
