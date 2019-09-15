@@ -6,8 +6,8 @@ atop
 autoconf
 automake
 autopep8
-bashdb
 bash-completion
+bashdb
 bison
 bzip2
 coreutils
@@ -64,9 +64,9 @@ pv
 pwgen
 pyenv
 pyenv-virtualenv
-python_libs
 python2
 python3
+python_libs
 rdiff-backup
 ripgrep
 rsync
