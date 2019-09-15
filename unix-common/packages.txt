@@ -23,6 +23,7 @@ gcc
 gdb
 git
 git-flow
+gnu-sed
 gnupg
 go
 hexedit
