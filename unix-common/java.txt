@@ -1,8 +1,10 @@
 #
 # Mac
 #
+umask 022
 brew cask install oracle-jdk  # >= 11
 brew install maven
+umask 077
 
 #
 # Ubuntu

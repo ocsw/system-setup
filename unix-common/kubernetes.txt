@@ -1,6 +1,7 @@
 #
 # Mac
 #
+umask 022
 # for GKE, gcloud's kubectl is recommended, but brew's is needed to install
 # the other brew packages
 #gcloud components install kubectl
@@ -10,6 +11,7 @@ brew install kubectx
 brew tap johanhaleby/kubetail && brew install kubetail
 brew install kube-ps1
 brew cask install minikube
+umask 077
 
 #
 # GKE update

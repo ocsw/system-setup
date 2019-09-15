@@ -7,10 +7,12 @@ git clone git@github.com:ocsw/pypvutil.git ~/repos
 #
 # Mac
 #
+umask 022
 brew update
 brew install pyenv
 brew install pyenv-virtualenv
 xcode-select --install
+umask 077
 #
 # Other
 #
