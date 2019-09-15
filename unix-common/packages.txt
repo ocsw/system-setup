@@ -10,6 +10,7 @@ bash-completion
 bashdb
 bison
 bzip2
+cookiecutter
 coreutils
 cpp
 ctags
