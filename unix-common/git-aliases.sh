@@ -80,7 +80,7 @@ git config --global alias.tagdel 'tag -d'
 # (note: git 2.23 introduced tag.gpgsign, which overrides even -a, but it also
 # prevents making lightweight (non-annotated) tags)
 git config --global alias.tagm 'tag -m'
-# shellcheck disable=2016
+# shellcheck disable=SC2016
 git config --global alias.tagnm '!sh -c "git tag \"$1\" -m \"$2\"" sh'
 
 #
@@ -131,7 +131,7 @@ git config --global alias.rbd 'rebase develop'
 git config --global alias.rba 'rebase --abort'
 git config --global alias.rbc 'rebase --continue'
 git config --global alias.rbi 'rebase -i'
-# shellcheck disable=2016
+# shellcheck disable=SC2016
 git config --global alias.rbih '!sh -c "git rebase -i \"HEAD~$1\"" sh'
 git config --global alias.mg merge
 git config --global alias.mgn 'merge --no-ff'
