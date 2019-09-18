@@ -37,7 +37,7 @@ pybase 2
 source ~/.bash_profile
 
 # this doesn't work properly on Mac; use venvs and manual symlinks instead
-#pyenv deactivate
+#pyact
 #pip3 install virtualenv
 #curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
 
@@ -48,21 +48,21 @@ source ~/.bash_profile
 py3ver=$(pylatest_local 3)
 #
 # see dot.bashrc.d/python.post for pyinst
-pyinst coverage "$py3ver"
-pyinst flake8 "$py3ver"
-pyinst nose "$py3ver"
-pyinst pytest "$py3ver"
-pyinst sphinx "$py3ver"
-pyinst tox "$py3ver"
+pyinst coverage 3
+pyinst flake8 3
+pyinst nose 3
+pyinst pytest 3
+pyinst sphinx 3
+pyinst tox 3
 #
-pyenv activate "flake8-$py3ver"
+pyact "flake8-$py3ver"
 pip3 install autopep8 flake8-import-order
-pyenv activate "pytest-$py3ver"
+pyact "pytest-$py3ver"
 pip3 install pytest-asyncio pytest-catchlog pytest-cov pytest-mock
-pyenv activate "sphinx-$py3ver"
+pyact "sphinx-$py3ver"
 pip3 install recommonmark repoze.sphinx.autointerface sphinx-autobuild
 pip3 install sphinxcontrib-zopeext zope.interface
-pyenv deactivate
+pyact
 #
 # pyln defaults to ~/bin
 pyln "coverage-${py3ver}" \
