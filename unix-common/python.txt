@@ -46,37 +46,37 @@ source ~/.bash_profile
 #flake8
 
 py3ver=$(pylatest_local 3)
-py2ver=$(pylatest_local 2)
 #
 # see dot.bashrc.d/python.post for pyinst
 pyinst coverage "$py3ver"
 pyinst flake8 "$py3ver"
 pyinst nose "$py3ver"
 pyinst pytest "$py3ver"
-pyinst sphinx "$py2ver"
+pyinst sphinx "$py3ver"
 pyinst tox "$py3ver"
 #
 pyenv activate "flake8-$py3ver"
 pip3 install autopep8 flake8-import-order
 pyenv activate "pytest-$py3ver"
 pip3 install pytest-asyncio pytest-catchlog pytest-cov pytest-mock
-pyenv activate "sphinx-$py2ver"
-pip2 install recommonmark repoze.sphinx.autointerface sphinx-autobuild
-pip2 install sphinxcontrib-zopeext zope.interface
+pyenv activate "sphinx-$py3ver"
+pip3 install recommonmark repoze.sphinx.autointerface sphinx-autobuild
+pip3 install sphinxcontrib-zopeext zope.interface
 pyenv deactivate
 #
 # pyln defaults to ~/bin
-pyln "coverage-${py3ver}" coverage-3.6
+pyln "coverage-${py3ver}" \
+    "$(pybin_ls "coverage-${py3ver}" | grep '^coverage-3\..*$')"
 pyln "coverage-${py3ver}" coverage3
 pyln "flake8-${py3ver}" autopep8
 pyln "flake8-${py3ver}" pycodestyle
 pyln "flake8-${py3ver}" pyflakes
 pyln "nose-${py3ver}" nosetests
-pyln "nose-${py3ver}" nosetests-3.4
+pyln "nose-${py3ver}" "$(pybin_ls "nose-${py3ver}" | grep '^nosetests-3\..*$')"
 pyln "pytest-${py3ver}" py.test
 # more from sphinx?
 for i in apidoc autobuild autogen build quickstart; do
-    pyln "sphinx-${py2ver}" "sphinx-$i"
+    pyln "sphinx-${py3ver}" "sphinx-$i"
 done
 pyln "tox-${py3ver}" tox-quickstart
 
