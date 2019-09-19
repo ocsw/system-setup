@@ -38,7 +38,7 @@ source ~/.bash_profile
 
 # this doesn't work properly on Mac; use venvs and manual symlinks instead
 #pyact
-#pip3 install virtualenv
+#pip install virtualenv
 #curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
 
 # consider removing these from the main system:
@@ -55,12 +55,12 @@ pyinst sphinx 3
 pyinst tox 3
 #
 pyact "flake8-$py3ver"
-pip3 install autopep8 flake8-import-order
+pip install autopep8 flake8-import-order
 pyact "pytest-$py3ver"
-pip3 install pytest-asyncio pytest-catchlog pytest-cov pytest-mock
+pip install pytest-asyncio pytest-catchlog pytest-cov pytest-mock
 pyact "sphinx-$py3ver"
-pip3 install recommonmark repoze.sphinx.autointerface sphinx-autobuild
-pip3 install sphinxcontrib-zopeext zope.interface
+pip install recommonmark repoze.sphinx.autointerface sphinx-autobuild
+pip install sphinxcontrib-zopeext zope.interface
 pyact
 #
 # pyln defaults to ~/bin
