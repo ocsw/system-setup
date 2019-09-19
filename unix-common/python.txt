@@ -47,7 +47,6 @@ source ~/.bash_profile
 
 py3ver=$(pylatest_local 3)
 #
-# see dot.bashrc.d/python.post for pyinst
 pyinst coverage 3
 pyinst flake8 3
 pyinst nose 3
