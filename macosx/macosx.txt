@@ -218,9 +218,10 @@ Finder:
     Music
     Pictures
     install (drag to sidebar) (?)
+    repos
     scraps?
-    (other data, install, etc.)
     wip (?)
+    (other data, install, etc.)
     homedir
 
 Keychain Access:
