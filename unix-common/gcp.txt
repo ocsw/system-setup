@@ -1,3 +1,8 @@
+# shellcheck shell=sh
+
+# DON'T RUN THIS LIKE AN ACTUAL SHELL SCRIPT!
+# SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
+
 #
 # Mac
 #
@@ -15,9 +20,10 @@ gcloud beta auth login
 gcloud components install docker-credential-gcr
 gcloud auth configure-docker --quiet
 # I don't know why these aren't already there
-cd /usr/local/bin
-for i in ../Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/docker-credential-gc*; do
-    ln -s "$i" .
-done
+(
+    cd /usr/local/bin && \
+    for i in ../Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/docker-credential-gc*; do
+        ln -s "$i" .
+    done
+)
 umask 077
-cd -

@@ -193,7 +193,7 @@ System Preferences:
   View -> Organize Alphabetically (?), Show All
 
 # depending
-mkdir ~/Books ~/install ~/scraps ~/wip
+mkdir -p ~/Books ~/install ~/scraps ~/wip
 
 Finder:
   General:

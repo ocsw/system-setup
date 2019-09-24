@@ -1,7 +1,10 @@
+# shellcheck shell=sh
+
 if [ -d /etc/profile.d ]; then
   for i in /etc/profile.d/*.sh; do
-    if [ -r $i ]; then
-      . $i
+    if [ -r "$i" ]; then
+      # shellcheck disable=SC1090
+      . "$i"
     fi
   done
   unset i
@@ -12,10 +15,10 @@ umask 077
 PATH="$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games"
 export PATH
 
-BLOCKSIZE=1k
+BLOCKSIZE="1k"
 export BLOCKSIZE
 
-PAGER=more
+PAGER="more"
 export PAGER
 
 # aliases should be set in user dotfiles, but this will at least work in
@@ -27,8 +30,8 @@ VISUAL='nano -z'
 export EDITOR
 export VISUAL
 
-#AUTOCONF_VERSION=2.62
-#AUTOMAKE_VERSION=1.9
+#AUTOCONF_VERSION="2.62"
+#AUTOMAKE_VERSION="1.9"
 #export AUTOCONF_VERSION
 #export AUTOMAKE_VERSION
 

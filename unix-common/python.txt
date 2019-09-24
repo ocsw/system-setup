@@ -1,8 +1,15 @@
+# shellcheck shell=sh
+
+# DON'T RUN THIS LIKE AN ACTUAL SHELL SCRIPT!
+# SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
+
 #
 # pypvutil
 #
 mkdir -p ~/repos
-git clone git@github.com:ocsw/pypvutil.git ~/repos
+(
+    cd ~/repos && git clone git@github.com:ocsw/pypvutil.git
+)
 
 #
 # Mac
@@ -16,13 +23,14 @@ umask 077
 #
 # Other
 #
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
 git clone https://github.com/pyenv/pyenv-virtualenv.git \
     ~/.pyenv/plugins-virtualenv
 
 echo ".python-version" >> ~/.gitignore_global
 
-source ~/.bash_profile  # see dotfiles repo
+# shellcheck disable=SC1090
+. ~/.bash_profile  # see dotfiles repo
 
 # for Mojave
 sudo installer -pkg \
@@ -34,7 +42,8 @@ pybase 2
 
 # not sure if this is enough, you might need to log out and back in for pip to
 # not try to put things in /usr/local/bin...
-source ~/.bash_profile
+# shellcheck disable=SC1090
+. ~/.bash_profile
 
 # this doesn't work properly on Mac; use venvs and manual symlinks instead
 #pyact

@@ -1,3 +1,8 @@
+# shellcheck shell=sh
+
+# DON'T RUN THIS LIKE AN ACTUAL SHELL SCRIPT!
+# SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
+
 #
 # Mac
 #
@@ -16,7 +21,7 @@ umask 077
 #
 # GKE update
 #
-gke-up () {
+gke_up () {  # can use gke-up in bash
     # get credentials for all clusters
     # note: final sh is $0, then xargs adds $1 and $2
     # shellcheck disable=SC2016

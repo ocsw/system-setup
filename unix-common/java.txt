@@ -1,3 +1,8 @@
+# shellcheck shell=sh
+
+# DON'T RUN THIS LIKE AN ACTUAL SHELL SCRIPT!
+# SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
+
 #
 # Mac
 #
@@ -11,7 +16,7 @@ umask 077
 #
 # download from:
 # https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html
-mkdir /usr/lib/jdk
+mkdir -p /usr/lib/jdk
 tar xzf ~/Downloads/jdk-11.0.1_linux-x64_bin.tar.gz -C /usr/lib/jdk
 export JAVA_HOME=/usr/lib/jdk/jdk-11.0.xxx
 export PATH=$PATH:$JAVA_HOME/bin

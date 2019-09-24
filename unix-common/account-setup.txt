@@ -1,3 +1,9 @@
+# shellcheck shell=sh
+
+# DON'T RUN THIS LIKE AN ACTUAL SHELL SCRIPT!
+# SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
+
+
 ########
 # prep #
 ########
@@ -63,8 +69,11 @@ git config --global user.signingkey KEY_ID
 #############
 
 mkdir -p ~/repos
-git clone git@github.com:ocsw/sysadmin-notes.git ~/repos  # this repo
-git clone git@github.com:ocsw/dotfiles.git ~/repos
+(
+    cd ~/repos || return 1
+    git clone git@github.com:ocsw/sysadmin-notes.git  # this repo
+    git clone git@github.com:ocsw/dotfiles.git
+)
 # see also python.txt
 
 # follow ~/repos/dotfiles/INSTALL.sh
@@ -88,22 +97,24 @@ EOF
 # Vim #
 #######
 
-mkdir ~/.vim
-cd ~/.vim
-git clone https://github.com/tpope/vim-pathogen.git
-mkdir autoload
-cd autoload
-ln -s ../vim-pathogen/autoload/pathogen.vim .
-cd ..
-mkdir bundle
-cd bundle
-git clone https://github.com/nvie/vim-flake8.git
-git clone https://github.com/wincent/command-t.git
-git clone https://github.com/altercation/vim-colors-solarized.git
-git clone https://github.com/terryma/vim-multiple-cursors.git
-git clone https://github.com/scrooloose/nerdtree.git
-git clone https://github.com/tpope/vim-surround.git
-cd ~
+mkdir -p ~/.vim
+(
+    cd ~/.vim && git clone https://github.com/tpope/vim-pathogen.git
+)
+mkdir -p ~/.vim/autoload
+(
+    cd ~/.vim/autoload && ln -s ../vim-pathogen/autoload/pathogen.vim .
+)
+mkdir -p ~/.vim/bundle
+(
+    cd ~/.vim/bundle || return 1
+    git clone https://github.com/nvie/vim-flake8.git
+    git clone https://github.com/wincent/command-t.git
+    git clone https://github.com/altercation/vim-colors-solarized.git
+    git clone https://github.com/terryma/vim-multiple-cursors.git
+    git clone https://github.com/scrooloose/nerdtree.git
+    git clone https://github.com/tpope/vim-surround.git
+)
 
 
 ##########
