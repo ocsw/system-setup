@@ -6,7 +6,8 @@
     "editor.wordWrap": "wordWrapColumn",
     "explorer.autoReveal": false,
     "files.associations": {
-        "*.vimrc.local": "viml"
+        "*.vimrc.local": "viml",
+        "*.psh": "shellscript"
     },
     // change to "\n" for Unix workspaces on Windows
     "files.eol": "auto",
