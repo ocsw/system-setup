@@ -8,7 +8,7 @@
 # prep #
 ########
 
-### first install git/hg, vim
+### first install gpg, git/hg, vim
 ### if __git_ps1 isn't included, install it
 
 

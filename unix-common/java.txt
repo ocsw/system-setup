@@ -16,6 +16,7 @@ umask 077
 #
 # download from:
 # https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html
+umask 022
 mkdir -p /usr/lib/jdk
 tar xzf ~/Downloads/jdk-11.0.1_linux-x64_bin.tar.gz -C /usr/lib/jdk
 export JAVA_HOME=/usr/lib/jdk/jdk-11.0.xxx
@@ -26,3 +27,4 @@ update-alternatives --install /usr/bin/java java \
     /usr/lib/jdk/jdk-11.0.1/bin/java 1
 update-alternatives --config java
 # rest TBA
+umask 077

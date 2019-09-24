@@ -33,9 +33,11 @@ echo ".python-version" >> ~/.gitignore_global
 . ~/.bash_profile  # see dotfiles repo
 
 # for Mojave
+umask 022
 sudo installer -pkg \
     /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg \
     -target /
+umask 077
 
 pybase 3
 pybase 2
