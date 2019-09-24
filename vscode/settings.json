@@ -5,6 +5,9 @@
     "editor.scrollBeyondLastLine": false,
     "editor.wordWrap": "wordWrapColumn",
     "explorer.autoReveal": false,
+    "files.associations": {
+        "*.vimrc.local": "viml"
+    },
     // change to "\n" for Unix workspaces on Windows
     "files.eol": "auto",
     "files.exclude": {
@@ -40,5 +43,9 @@
     "window.title": "${rootName}${separator}${activeEditorShort}",
     "workbench.list.horizontalScrolling": true,
     "workbench.settings.editor": "json",
-    "workbench.settings.useSplitJSON": true
+    "workbench.settings.useSplitJSON": true,
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.quickSuggestions": false
+    }
 }
