@@ -75,11 +75,13 @@ git clone git@github.com:ocsw/dotfiles.git ~/repos
 #############
 
 ### global hg (~/.hgrc)
+cat >> ~/.hgrc <<EOF
 [ui]
 username = Danielle Zephyr Malament <EMAIL>  # work or personal, depending
 
 [pager]
 pager = less -F
+EOF
 
 
 #######
