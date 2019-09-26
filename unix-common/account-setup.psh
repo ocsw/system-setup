@@ -71,7 +71,7 @@ git config --global user.signingkey KEY_ID
 mkdir -p ~/repos
 (
     cd ~/repos || return 1
-    git clone git@github.com:ocsw/sysadmin-notes.git  # this repo
+    git clone git@github.com:ocsw/system-setup.git  # this repo
     git clone git@github.com:ocsw/dotfiles.git
 )
 # see also python.txt
