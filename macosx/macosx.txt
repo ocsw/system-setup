@@ -948,6 +948,10 @@ GOG Galaxy:
     Starting page: Library
   (install games)
 
+Epic Games Launcher:
+  Don't run on startup
+  (install games)
+
 CrossOver:
   Updates:
     Check
