@@ -790,6 +790,8 @@ OneNote (App Store):
     No auto spelling
     No check spelling
     No auto caps
+  Quick Access Toolbar:
+    Just Undo/Redo
   Navigation Panes:
     Hide all (just Section List?)
   Printing:
