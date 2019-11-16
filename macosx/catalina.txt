@@ -1,0 +1,6 @@
+sudo softwareupdate --ignore "macOS Catalina"
+
+https://github.com/fish-shell/fish-shell/issues/6270
+https://apple.stackexchange.com/questions/374025/errors-from-whatis-command-unable-to-rebuild-database-with-makewhatis
+
+https://www.audacityteam.org/macos-10-15-catalina-is-not-yet-supported-by-audacity/
