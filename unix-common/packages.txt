@@ -29,6 +29,7 @@ gnu-sed
 gnupg
 go
 hexedit
+hstr
 htop
 iftop
 ipcalc
