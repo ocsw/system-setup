@@ -305,7 +305,8 @@ SpiderOakONE:
       (other data, install, etc.)
       [work: only Books, Music, Pictures]
     Files:
-      .to_back_up/*, especially *.local, except for history files
+      .to_back_up/*, especially *.local, except for history files and
+      .hstr_favorites
 
 Google Backup and Sync:
   Computer:
