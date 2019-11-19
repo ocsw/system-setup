@@ -43,7 +43,7 @@ System Preferences:
       Accessibility:
         allow, incl. Bartender, BTT, Clipy, Dropbox, Google Software Update (?),
         Hammerspoon, iTerm, Kindle, Logitech Gaming Software, Moom, Muzzle,
-        Spectacle, uBar, Witch
+        SoundSource, Spectacle, uBar, Witch
       Automation:
         all on (?), incl.:
           FortiClient -> Google Chrome, Safari
@@ -162,8 +162,8 @@ System Preferences:
         Icon
       Login Items:
         incl. Android File Transfer, BTT, (Clipy), CrossOver, Dropbox,
-        Google Backup, Logitech Gaming Software, Moom, Spectacle, SpiderOakONE,
-        uBar, Witch, YubiSwitch
+        Google Backup, Logitech Gaming Software, Moom, SoundSource, Spectacle,
+        SpiderOakONE, uBar, Witch, YubiSwitch
     Disable Guest User
     Login Options:
       Display login as name and password? (entry boxes only, vs list of users)
@@ -278,6 +278,13 @@ YubiSwitch:
       0x1050 for nano
     Switch off after 5 sec
     Start on login
+
+SoundSource:
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  Start at login
+  Super Volume Keys
+  Show volume in menu bar
+  Hotkey (ctrl-opt-cmd-S)
 
 ToothFairy (App Store):
   Add devices:
@@ -980,6 +987,7 @@ Menu bar order (from L to R, with Bartender settings if not default):
   PIA
   WiFi
   ToothFairy
+  SoundSource
   Logitech Gaming Software (Hide, ?Show for updates)
   YubiSwitch (Hide, ?Show for updates)
   (AirPlay) (Hide, ?Show for updates)
