@@ -281,10 +281,12 @@ YubiSwitch:
 
 SoundSource:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  (^ after Super Volume Keys)
   Start at login
   Super Volume Keys
   Show volume in menu bar
   Hotkey (ctrl-opt-cmd-S)
+  License
 
 ToothFairy (App Store):
   Add devices:
@@ -986,7 +988,7 @@ CrossOver:
 
 Menu bar order (from L to R, with Bartender settings if not default):
   (Docker)
-  Carbon Black (Always Hide)
+  Carbon Black (Always Hide?)
   Spotlight (Always Hide)
   (Clipy)
   Muzzle (Hide, ?Show for updates)
