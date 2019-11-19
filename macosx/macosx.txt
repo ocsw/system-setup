@@ -43,7 +43,7 @@ System Preferences:
       Accessibility:
         allow, incl. Bartender, BTT, Clipy, Dropbox, Google Software Update (?),
         Hammerspoon, iTerm, Kindle, Logitech Gaming Software, Moom, Muzzle,
-        SoundSource, Spectacle, uBar, Witch
+        Rectangle, SoundSource, Spectacle, uBar, Witch
       Automation:
         all on (?), incl.:
           FortiClient -> Google Chrome, Safari
@@ -162,8 +162,8 @@ System Preferences:
         Icon
       Login Items:
         incl. Android File Transfer, BTT, (Clipy), CrossOver, Dropbox,
-        Google Backup, Logitech Gaming Software, Moom, SoundSource, Spectacle,
-        SpiderOakONE, uBar, Witch, YubiSwitch
+        Google Backup, Logitech Gaming Software, Moom, Rectangle, SoundSource,
+        (Spectacle), SpiderOakONE, uBar, Witch, YubiSwitch
     Disable Guest User
     Login Options:
       Display login as name and password? (entry boxes only, vs list of users)
@@ -423,7 +423,7 @@ BetterTouchTool:
       Bring to front
   License
 
-Spectacle:
+Spectacle (replaced by Rectangle):
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   Launch at login
   No key for L/R/T/B, UL/LL/UR/LR, N3/P3
@@ -435,6 +435,21 @@ Spectacle:
   Make Smaller: ctrl-opt-cmd-down
   Undo: ctrl-opt-cmd-Z
   Redo: shift-opt-cmd-Z
+
+Rectangle
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  Launch on login
+  No snap by dragging (?)
+  Check for updates
+  No key for LH/RH/TH/BH, TL/TR/BL/BR, F3/F23/C3/L23/L3
+  No key for AlmostMax/MaxH, L/R/U/D
+  Maximize: ctrl-opt-cmd-F
+  Make Smaller: ctrl-opt-cmd-down
+  Make Larger: ctrl-opt-cmd-up
+  Center: ctrl-opt-cmd-C
+  Restore: ctrl-opt-cmd-Z
+  Next Display: ctrl-opt-cmd-right
+  Previous Display: ctrl-opt-cmd-left
 
 Moom:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
@@ -977,6 +992,7 @@ Menu bar order (from L to R, with Bartender settings if not default):
   Muzzle (Hide, ?Show for updates)
   Amphetamine
   Moom (Hide, ?Show for updates)
+  Rectangle (Hide, ?Show for updates)
   Spectacle (Hide, ?Show for updates)
   BTT (Hide, ?Show for updates)
   Witch (Hide, ?Show for updates)
