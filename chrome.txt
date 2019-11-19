@@ -30,10 +30,8 @@ Extensions:
   Play the GIF:
     No auto start
   (Image Picker?? bhibldekjicdbnjeeecmgoogcihoalhe)
-  Pinboard Plus:
-    Account
-    Private by default
-    Wrap in blockquote (?)
+  Downloader for Instagram:
+    Hide (depending?)
   (Pushbullet:)
     Account
     No notification count
@@ -41,6 +39,10 @@ Extensions:
     No notifications
     Enable instant pushing?
     (Password)
+  Pinboard Plus:
+    Account
+    Private by default
+    Wrap in blockquote (?)
   OneNote Web Clipper
   Awesome Screenshot:
     No shortcuts
@@ -51,6 +53,8 @@ Extensions:
     (Whitelist)
     Advanced:
       No number in icon
+  Dark Reader
+    Hide
   (CaretTab:)
     Color:
       Theme (purple on white)
@@ -59,18 +63,16 @@ Extensions:
     (Links)
     Extras:
       No search box?
+  Tabby Cat
+    Hide (?)
   Tidy Sidebar:
     No Memo, Wiki, Links
     Show tooltip
   Go to Tab
   TabCopy
-  Downloader for Instagram:
-    Hide (depending?)
-  Tabby Cat
-    Hide (?)
+  LastPass
   (Stop Animations?? gemmknjnneiojfjelmgappppbaneikda: Hide (?))
   (Just Not Sorry??: Hide (?))
-  LastPass
   (Application Launcher for Drive:)
     Disable (?) (if no Office?)
     Hide
