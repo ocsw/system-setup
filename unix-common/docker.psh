@@ -8,6 +8,7 @@
 #
 # get from https://store.docker.com/editions/community/docker-ce-desktop-mac
 # Don't start on login (?)
+brew install dive
 
 #
 # Ubuntu
