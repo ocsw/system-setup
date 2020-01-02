@@ -6,6 +6,7 @@ atop
 autoconf
 automake
 autopep8
+base64
 bash-completion
 bashdb
 bison
