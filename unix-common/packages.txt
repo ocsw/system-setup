@@ -32,6 +32,7 @@ go
 hexedit
 hstr
 htop
+httpie
 iftop
 ipcalc
 iperf
