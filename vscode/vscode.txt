@@ -2,3 +2,5 @@ add to PATH, or symlink in ~/bin
 set up sync (token, gist ID)
 backup the token (pw manager or syncLocalSettings.json)
 right-click and hide smiley on status bar
+
+open a Go file, let it install all the tools

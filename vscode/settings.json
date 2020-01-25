@@ -19,6 +19,8 @@
     },
     "gitlens.statusBar.enabled": false,
     "gitlens.statusBar.reduceFlicker": true,
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
     "highlight-bad-chars.additionalUnicodeChars": ["\u0009"],
     "java.checkstyle.configuration": "/google_checks.xml",
     "markdownlint.config": {
@@ -29,7 +31,7 @@
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/Users/zephyr/bin/flake8",
     "python.linting.pylintEnabled": false,
-    "python.pythonPath": "/Users/zephyr/.pyenv/versions/3.7.2/bin/python",
+    "python.pythonPath": "/Users/zephyr/.pyenv/versions/3.7.4/bin/python",
     "search.collapseResults": "alwaysExpand",
     "shellcheck.exclude": ["SC1117"],
     "shellcheck.run": "onSave",
