@@ -1,0 +1,17 @@
+# shellcheck shell=sh
+
+# DON'T RUN THIS LIKE AN ACTUAL SHELL SCRIPT!
+# SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
+
+#
+# Mac
+#
+umask 022
+brew update
+brew install go
+umask 077
+
+# shellcheck disable=SC1090
+. ~/.bash_profile  # see dotfiles repo
+
+go get golang.org/x/tools/cmd/stringer
