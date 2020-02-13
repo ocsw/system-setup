@@ -316,6 +316,7 @@ SpiderOakONE:
     Files:
       .to_back_up/*, especially *.local, except for history files and
       .hstr_favorites
+      [work: skip]
 
 Google Backup and Sync:
   Computer:
