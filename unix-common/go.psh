@@ -14,4 +14,12 @@ umask 077
 # shellcheck disable=SC1090
 . ~/.bash_profile  # see dotfiles repo
 
-go get golang.org/x/tools/cmd/stringer
+# language server (for gore; IDEs should install it anyway)
+go get golang.org/x/tools/gopls  # no -u
+
+# REPLs
+go get -u github.com/motemen/gore/cmd/gore
+go get -u github.com/containous/yaegi/cmd/yaegi
+
+# code tools
+go get -u golang.org/x/tools/cmd/stringer
