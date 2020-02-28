@@ -9,7 +9,14 @@
 umask 022
 brew update
 brew install go
+brew install golangci/tap/golangci-lint
 umask 077
+#
+# Linux
+#
+# (first, Go itself)
+# check version
+curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.23.6
 
 # shellcheck disable=SC1090
 . ~/.bash_profile  # see dotfiles repo

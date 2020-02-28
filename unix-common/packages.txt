@@ -29,6 +29,7 @@ git-flow
 gnu-sed
 gnupg
 go
+golangci-lint
 hexedit
 hstr
 htop
