@@ -19,13 +19,33 @@
     },
     "gitlens.statusBar.enabled": false,
     "gitlens.statusBar.reduceFlicker": true,
+    // ignored with language server on
     "go.formatTool": "goimports",
+    "go.lintFlags": [
+        "-E", "goimports,golint,lll,scopelint,whitespace",
+        // optional; use for development but not in CI
+        //"-E", "stylecheck",
+        // no count limits
+        "--max-issues-per-linter", "0", "--max-same-issues", "0",
+        // optionally limit to current work
+        //"--new-from-rev", "HEAD~1",
+        // use only in IDEs, not CI
+        "--fast"
+    ],
+    // if set to "package", errors in one package disappear when you save in
+    // another
+    "go.lintOnSave": "workspace",
+    "go.lintTool": "golangci-lint",
+    // technically still alpha but does some things (e.g. completion) better IMO
     "go.useLanguageServer": true,
+    // not needed with golangci-lint
+    "go.vetOnSave": "off",
     "highlight-bad-chars.additionalUnicodeChars": ["\u0009"],
     "java.checkstyle.configuration": "/google_checks.xml",
     "markdownlint.config": {
         "MD007": { "indent": 4 }
     },
+    "go.useCodeSnippetsOnFunctionSuggest": false,
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
@@ -50,5 +70,6 @@
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
         "editor.quickSuggestions": false
-    }
+    },
+    "window.zoomLevel": 0
 }
