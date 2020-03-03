@@ -7,6 +7,7 @@ autoconf
 automake
 autopep8
 base64
+bash
 bash-completion
 bashdb
 bats
@@ -84,6 +85,7 @@ screenfetch
 shellcheck
 tcpdump
 tcsh
+the_silver_searcher
 tig
 tightvncserver
 tmux
