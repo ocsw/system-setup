@@ -16,7 +16,7 @@ umask 077
 #
 # (first, Go itself)
 # check version
-curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.23.6
+curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b "$(go env GOPATH)/bin" v1.23.6
 
 # shellcheck disable=SC1090
 . ~/.bash_profile  # see dotfiles repo
@@ -27,6 +27,9 @@ go get golang.org/x/tools/gopls  # no -u
 # REPLs
 go get -u github.com/motemen/gore/cmd/gore
 go get -u github.com/containous/yaegi/cmd/yaegi
+
+# formatting & linting
+go get -u golang.org/x/tools/cmd/goimports
 
 # code tools
 go get -u golang.org/x/tools/cmd/stringer
