@@ -24,6 +24,7 @@ umask 077
 #
 gke_up () {  # can use gke-up in bash
     # get credentials for all clusters
+    # (probably want to remove the production filter)
     # note: final sh is $0, then xargs adds $1 and $2
     # shellcheck disable=SC2016
     gcloud container clusters list \
