@@ -4,3 +4,5 @@ backup the token (pw manager or syncLocalSettings.json)
 right-click and hide smiley on status bar
 
 open a Go file, let it install all the tools
+(there's also 'Go: Install/Update Tools', but don't use it on
+golangci-lint)
