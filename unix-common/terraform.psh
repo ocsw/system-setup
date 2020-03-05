@@ -1,0 +1,17 @@
+# shellcheck shell=sh
+
+#
+# This is a pseudo shell script.
+#
+# DON'T RUN THIS LIKE AN ACTUAL SCRIPT!
+# SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
+
+#
+# Mac
+#
+brew install tfenv
+brew install tflint  # (?)
+
+# from each repo:
+tfenv install  # install the configured Terraform version
+terraform init  # set up terraform providers
