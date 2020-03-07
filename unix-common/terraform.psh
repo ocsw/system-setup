@@ -12,6 +12,6 @@
 brew install tfenv
 brew install tflint  # (?)
 
-# from each repo:
-tfenv install  # install the configured Terraform version
-terraform init  # set up terraform providers
+# from the root of each repo:
+# install the configured Terraform version and set up Terraform providers
+tfenv install && terraform init
