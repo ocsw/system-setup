@@ -98,3 +98,8 @@ cat >> ~/.flake8 <<EOF
 [flake8]
 import-order-style = edited
 EOF
+
+# from the root of each repo, where i=repo_name:
+pyvenv "$i" "$py3ver" . && \
+pylocal "${i}-${py3ver}" && \
+pyide_vscode "${i}-${py3ver}"
