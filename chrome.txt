@@ -23,6 +23,9 @@ Settings:
     System:
       No hardware acceleration? (issues on Mac)
 
+chrome://flags/:
+  Enable Tag Groups (may eventually be default?)
+
 Extensions:
   [Developer Mode on]
   ---
