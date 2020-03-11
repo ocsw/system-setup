@@ -22,7 +22,9 @@
     // ignored with language server on
     "go.formatTool": "goimports",
     "go.lintFlags": [
-        "-E", "goimports,golint,lll,scopelint,whitespace",
+        "-E", "golint,lll,scopelint,whitespace",
+        // optional
+        "-E", "goimports",
         // optional; use for development but not in CI
         //"-E", "stylecheck",
         // no count limits
@@ -45,7 +47,6 @@
     "markdownlint.config": {
         "MD007": { "indent": 4 }
     },
-    "go.useCodeSnippetsOnFunctionSuggest": false,
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
