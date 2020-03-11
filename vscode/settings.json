@@ -44,6 +44,9 @@
     "go.vetOnSave": "off",
     "highlight-bad-chars.additionalUnicodeChars": ["\u0009"],
     "java.checkstyle.configuration": "/google_checks.xml",
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn"
+    },
     "markdownlint.config": {
         "MD007": { "indent": 4 }
     },
@@ -65,12 +68,10 @@
     "window.newWindowDimensions": "inherit",
     "window.restoreWindows": "all",
     "window.title": "${rootName}${separator}${activeEditorShort}",
+    // include so it stays in order when zooming in/out; otherwise it will be
+    // added at the bottom
+    "window.zoomLevel": 0,
     "workbench.list.horizontalScrolling": true,
     "workbench.settings.editor": "json",
-    "workbench.settings.useSplitJSON": true,
-    "[markdown]": {
-        "editor.wordWrap": "wordWrapColumn",
-        "editor.quickSuggestions": false
-    },
-    "window.zoomLevel": 0
+    "workbench.settings.useSplitJSON": true
 }
