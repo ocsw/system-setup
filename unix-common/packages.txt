@@ -66,6 +66,7 @@ openvpn
 p7zip
 parallel
 pep8
+prettyping
 progress
 pssh
 pstree
@@ -83,6 +84,7 @@ ruby
 screen
 screenfetch
 shellcheck
+spark
 tcpdump
 tcsh
 the_silver_searcher
