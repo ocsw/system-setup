@@ -33,7 +33,9 @@
           "source.organizeImports": true
         }
     },
-    // ignored with language server on
+    // ignored with the language server on
+    "go.autocompleteUnimportedPackages": true,
+    // ignored with the language server on
     "go.formatTool": "goimports",
     "go.lintFlags": [
         "-E", "golint,lll,scopelint,whitespace",
@@ -54,8 +56,11 @@
     "go.lintTool": "golangci-lint",
     // technically still alpha but does some things (e.g. completion) better IMO
     "go.useLanguageServer": true,
-    // not needed with golangci-lint
+    // not needed with golangci-lint (ignored with the language server on?)
     "go.vetOnSave": "off",
+    "gopls": {
+        "completeUnimported": true
+    },
     "highlight-bad-chars.additionalUnicodeChars": ["\u0009"],
     "java.checkstyle.configuration": "/google_checks.xml",
     "[markdown]": {
