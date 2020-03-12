@@ -30,7 +30,7 @@
         "editor.insertSpaces": false,
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-          "source.organizeImports": true
+            "source.organizeImports": true
         }
     },
     // ignored with the language server on
@@ -61,13 +61,17 @@
     "gopls": {
         "completeUnimported": true
     },
-    "highlight-bad-chars.additionalUnicodeChars": ["\u0009"],
+    "highlight-bad-chars.additionalUnicodeChars": [
+        "\u0009"  // tab
+    ],
     "java.checkstyle.configuration": "/google_checks.xml",
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn"
     },
     "markdownlint.config": {
-        "MD007": { "indent": 4 }
+        "MD007": {
+            "indent": 4
+        }
     },
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.linting.enabled": true,
@@ -76,7 +80,9 @@
     "python.linting.pylintEnabled": false,
     "python.pythonPath": "/Users/zephyr/.pyenv/versions/3.7.4/bin/python",
     "search.collapseResults": "alwaysExpand",
-    "shellcheck.exclude": ["SC1117"],
+    "shellcheck.exclude": [
+        "SC1117"
+    ],
     "shellcheck.run": "onSave",
     "sync.autoDownload": true,
     "sync.autoUpload": true,
