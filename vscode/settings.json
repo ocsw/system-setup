@@ -19,6 +19,20 @@
     },
     "gitlens.statusBar.enabled": false,
     "gitlens.statusBar.reduceFlicker": true,
+    "[go]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 120
+    },
+    "[go.mod]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 120,
+        // same as [go] defaults
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true
+        }
+    },
     // ignored with language server on
     "go.formatTool": "goimports",
     "go.lintFlags": [
