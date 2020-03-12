@@ -516,6 +516,10 @@ Annotate (App Store) (skip on 10.14+?):
   Shortcuts:
     Crosshair overlaps with 10.14+
 
+Kap:
+  General:
+    Highlight Clicks
+
 Clipy:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
   General:
