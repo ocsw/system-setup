@@ -67,6 +67,11 @@ git config --global user.signingkey KEY_ID
 
 # optionally, run git-check.sh
 
+# GitHub CLI; see https://github.com/cli/cli#installation-and-upgrading
+#
+# Mac
+brew install github/gh/gh
+
 
 #############
 # Git repos #

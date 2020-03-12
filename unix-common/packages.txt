@@ -46,6 +46,7 @@ ipython3
 ipython3-notebook
 jot
 jq
+jsonnet
 ksh
 lftp
 lolcat
