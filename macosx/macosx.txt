@@ -553,7 +553,7 @@ iStat Menus:
     Low Battery: 10% (default)
     Bluetooth Battery: 5% (default)
     Any Temperature Above: 100C for 30 sec
-    CPU Usage Above: 50% for 10 sec (default) (banner (?))
+    CPU Usage Above: 75% for 10 sec (default time) (banner (?))
     Memory Pressure Above: 80% for 10 sec (default)
     'Macintosh HD' Used Percentage Above: 90% (default)
     Internet Status Changed?
