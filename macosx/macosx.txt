@@ -747,7 +747,7 @@ Slack (App Store; in Franz?):
     Sorting and grouping:
       Sort: alpha
       Don't list private separately (depending)
-      List shared separately
+      Don't list shared separately (depending)
     Additional:
       Show all unreads
       Show Quick Switcher
