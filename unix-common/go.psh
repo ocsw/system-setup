@@ -35,6 +35,9 @@ go get -u github.com/containous/yaegi/cmd/yaegi
 # formatting & linting
 go get -u golang.org/x/tools/cmd/goimports
 #
+# testing
+go get -u github.com/rakyll/gotest
+#
 # code tools
 go get -u golang.org/x/tools/cmd/stringer
 
