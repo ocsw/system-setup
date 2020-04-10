@@ -37,6 +37,7 @@ go get -u golang.org/x/tools/cmd/goimports
 #
 # testing
 go get -u github.com/rakyll/gotest
+go get -u gotest.tools/gotestsum
 #
 # code tools
 go get -u golang.org/x/tools/cmd/stringer
