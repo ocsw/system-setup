@@ -67,11 +67,12 @@ git config --global user.signingkey KEY_ID
 
 # optionally, run git-check.sh
 
-# GitHub CLI; see https://github.com/cli/cli#installation-and-upgrading
 #
 # Mac
+#
+# GitHub CLI; see https://github.com/cli/cli#installation-and-upgrading
 brew install github/gh/gh
-
+brew install jesseduffield/lazygit/lazygit
 
 #############
 # Git repos #
