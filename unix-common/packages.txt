@@ -18,6 +18,7 @@ coreutils
 cpp
 ctags
 curl
+diff-so-fancy
 emacs
 fish
 flake8
