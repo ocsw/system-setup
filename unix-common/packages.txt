@@ -86,6 +86,7 @@ ruby
 screen
 screenfetch
 shellcheck
+socat
 spark
 tcpdump
 tcsh
