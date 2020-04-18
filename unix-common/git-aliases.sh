@@ -4,6 +4,9 @@
 
 # broken out of git-config.sh so the aliases can be (re)applied separately
 
+# config names must be all-lowercase, and there can only be one space between
+# names and values, to match git output in git-check.sh
+
 
 ##########################
 # clear existing aliases #
@@ -101,6 +104,8 @@ git config --global alias.rl reflog
 git config --global alias.s show
 git config --global alias.d diff
 git config --global alias.dc 'diff --cached'
+git config --global alias.patch '!git --no-pager diff --no-color'
+git config --global alias.patchc '!git --no-pager diff --no-color --cached'
 git config --global alias.g grep
 git config --global alias.bl blame
 git config --global alias.bi bisect
