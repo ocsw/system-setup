@@ -13,7 +13,7 @@ redhat.java
 dgileadi.java-decompiler
 ipedrazas.kubernetes-snippets
 yzhang.markdown-all-in-one
-jpogran.puppet-vscode
+puppet.puppet-vscode
 ms-python.python
 lextudio.restructuredtext
 timonwong.shellcheck
