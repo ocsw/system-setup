@@ -104,5 +104,6 @@ wget
 whois
 xz
 yacc
+yq
 zip
 zsh
