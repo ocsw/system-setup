@@ -288,6 +288,8 @@ SoundSource:
   Hotkey (ctrl-opt-cmd-S)
   License
 
+Blue Sherpa
+
 ToothFairy (App Store):
   Add devices:
     Icon
