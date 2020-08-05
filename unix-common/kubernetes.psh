@@ -18,6 +18,7 @@ brew install kubernetes-cli
 brew install fzf
 brew install kubectx
 brew tap johanhaleby/kubetail && brew install kubetail
+brew install stern
 brew install kubectl-diag
 brew install kube-ps1
 brew cask install minikube
