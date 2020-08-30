@@ -661,6 +661,7 @@ Firefox:
   Wheel and keys
   (see directory)
 
+Java
 Flash
 
 Outlook:
