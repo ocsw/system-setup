@@ -976,14 +976,14 @@ Steam:
       Prefs -> lower brightness (down to 1/3)
   (install games)
 
+Epic Games Launcher:
+  Don't run on startup
+  (install games)
+
 GOG Galaxy:
   General:
     Don't launch at startup
     Starting page: Library
-  (install games)
-
-Epic Games Launcher:
-  Don't run on startup
   (install games)
 
 CrossOver:
@@ -1046,6 +1046,7 @@ Dock order (all -> keep in dock):
   Numbers?
   Keynote?
   (Steam)
+  (Epic)
   (GOG Galaxy)
   (CrossOver)
   (CrossOver apps)
@@ -1071,6 +1072,7 @@ uBar app order:
   Preview
   Calculator
   Steam
+  Epic
   GOG Galaxy
   CrossOver
   CrossOver apps
