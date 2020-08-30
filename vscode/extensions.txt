@@ -4,7 +4,7 @@ bungcip.better-toml
 shan.code-settings-sync
 codezombiech.gitignore
 eamodio.gitlens
-ms-vscode.go
+golang.go
 wengerk.highlight-bad-chars
 ybaumes.highlight-trailing-white-spaces
 ephoton.indent-switcher
@@ -18,7 +18,7 @@ ms-python.python
 lextudio.restructuredtext
 timonwong.shellcheck
 coolbear.systemd-unit-file
-mauve.terraform
+hashicorp.terraform
 dunstontc.viml
 shengchen.vscode-checkstyle
 ms-azuretools.vscode-docker
