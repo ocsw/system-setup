@@ -11,12 +11,18 @@
 # Mac
 #
 umask 022
-brew cask install oracle-jdk  # >= 11
+brew cask install oracle-jdk  # currently 14; installed with maven anyway
+brew tap homebrew/cask-versions
+brew cask install corretto8 # for Java SE JDK 8
+brew cask install corretto  # for Java SE JDK 11
+brew install jenv
 brew install maven
 umask 077
+jenv add /Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home/
+jenv add /Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home/
 
 #
-# Ubuntu
+# Ubuntu (old/incomplete)
 #
 # download from:
 # https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html
