@@ -41,9 +41,9 @@ System Preferences:
       Camera: Chrome, Logitech Gaming Software, Skype
       Microphone: Chrome, Logitech Gaming Software, (Onde Audio Recorder), Skype
       Accessibility:
-        allow, incl. Bartender, BTT, Clipy, Dropbox, Google Software Update (?),
-        Hammerspoon, iTerm, Kindle, Logitech Gaming Software, Moom, Muzzle,
-        Rectangle, SoundSource, Spectacle, uBar, Witch
+        allow, incl. Bartender, BetterTouchTool, Dropbox, Google Software
+        Update (?), iTerm, Kindle, Logitech Gaming Software, Moom, Muzzle,
+        Rectangle, SoundSource, uBar, Witch
       Automation:
         all on (?), incl.:
           FortiClient -> Google Chrome, Safari
@@ -161,9 +161,9 @@ System Preferences:
       Password:
         Icon
       Login Items:
-        incl. Android File Transfer, BTT, (Clipy), CrossOver, Dropbox,
+        incl. Android File Transfer, BetterTouchTool, CrossOver, Dropbox,
         Google Backup, Logitech Gaming Software, Moom, Rectangle, SoundSource,
-        (Spectacle), SpiderOakONE, uBar, Witch, YubiSwitch
+        SpiderOakONE, uBar, Witch, YubiSwitch
     Disable Guest User
     Login Options:
       Display login as name and password? (entry boxes only, vs list of users)
@@ -224,22 +224,14 @@ Finder:
     (other data, install, etc.)
     homedir
 
-Keychain Access:
-  Show in menu bar [not in 10.13+]
-  separate keychain pw? (can't change in 10.14?)
-
 PIA:
   General:
     Launch on startup
     Don't connect on launch
   (Exclude io.nwjs.nwjs from uBar (?))
 FortiClient
-  (Exclude from uBar (?))
+  (Exclude from uBar)
 (other VPNs)
-
-Avira?
-
-f.lux?
 
 Logitech Control Center (w/Marathon Mouse M705):
   (pair in Unifying Software)
@@ -358,29 +350,13 @@ uBar:
     App order: manual
     App inclusions: order (see bottom)
     App exclusions:
-      FortiClient (?)
-      (Hammerspoon)
-      (Moom)
-      (Amphetamine)
-      (ToothFairy)
-      (esets_tray)
-      (se.razola.Glui2)
+      FortiClient
+      Amphetamine
+      ToothFairy
   Shortcuts:
     No hiding
     Activity: right option
   License
-
-Hammerspoon:
-  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
-  Launch at login
-  No dock
-  No crash data
-  Accessibility
-  Lock screen binary: [not necessary (or working) in 10.13+]
-    https://www.isi.edu/~calvin/mac-lockscreen.htm
-    clang -framework Foundation lockscreen.m -o lockscreen
-  Config file
-  (Exclude from uBar)
 
 Witch:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
@@ -427,19 +403,6 @@ BetterTouchTool:
       Resize: ctrl-opt-cmd
       Bring to front
   License
-
-Spectacle (replaced by Rectangle):
-  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
-  Launch at login
-  No key for L/R/T/B, UL/LL/UR/LR, N3/P3
-  Center: ctrl-opt-cmd-C
-  Fullscreen: ctrl-opt-cmd-F
-  Next Display: ctrl-opt-cmd-right
-  Previous Display: ctrl-opt-cmd-left
-  Make Larger: ctrl-opt-cmd-up
-  Make Smaller: ctrl-opt-cmd-down
-  Undo: ctrl-opt-cmd-Z
-  Redo: shift-opt-cmd-Z
 
 Rectangle
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
@@ -502,47 +465,9 @@ Amphetamine (App Store):
     Lower opacity?
   (Exclude from uBar)
 
-Annotate (App Store) (skip on 10.14+?):
-  General:
-    Launch at login
-    No screen at launch (?)
-    Show icon only in menu bar
-    Allow multiple windows (?)
-  Services?
-  Actions:
-    Upload?
-    Copy
-    Save
-    Drag
-    (others?)
-  Shortcuts:
-    Crosshair overlaps with 10.14+
-
 Kap:
   General:
     Highlight Clicks
-
-Clipy:
-  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
-  General:
-    Launch on login
-  Shortcuts:
-    Main: ctrl-cmd-V
-    History: none
-    Snippets: ctrl-cmd-B
-    Clear: none
-    Snippet shortcut
-  Updates:
-    Check
-  Snippets
-
-Itsycal (or see iStat Menus):
-  General:
-    Launch at login
-  Appearance:
-    Outline icon
-    Month?
-    Day?
 
 iStat Menus:
   Intel Power Gadget
@@ -625,7 +550,7 @@ Suspicious Package
 NameChanger:
   No history
   Auto update
-HoudahSpot (incl. license)
+(HoudahSpot (incl. license))
 Disk Inventory X
 DaisyDisk (incl. license)
 Wireshark
@@ -661,40 +586,6 @@ Firefox:
   Wheel and keys
   (see directory)
 
-Java
-Flash
-
-Outlook:
-  Reading:
-    Mark as read after 0 secs
-  Sig:
-    (Open html file in browser, copy all, paste)
-    Use for new, replies
-  Rules
-  Calendar:
-    Work hours
-
-Adium:
-  Accounts
-  General:
-    Check for updates
-  Messages
-    Font: l.g. 12
-  Events:
-    Sound set: none
-  Advanced:
-    Confirmations:
-      Quit confirm always
-      Multiple window confirm
-  Group order in buddy list
-
-Textual:
-  Account (General, Identity)
-  Reconnect on disconnect?
-  Preferences:
-    Style:
-      No general event messages
-
 Franz:
   Account
   General:
@@ -704,9 +595,8 @@ Franz:
   Advanced:
     No spell checking?
   Services:
-    Messenger, Workplace Chat, Hangouts, Telegram, Skype, Discord, Slack, Steam
+    Messenger, Hangouts, Telegram, Skype, Discord, Slack, Steam
 
-Workplace Chat (in Franz?)
 Telegram? (in Franz?)
 Signal?
 Skype (in Franz?)
@@ -810,9 +700,9 @@ VSCode:
   ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
     ~/bin/
 
-Omnigraffle
-Monodraw
-MindNode?
+(Omnigraffle)
+(Monodraw)
+(MindNode)
 
 OneNote (App Store):
   -> System Preferences -> Extensions -> Share Menu -> on
@@ -996,15 +886,13 @@ CrossOver:
 
 Menu bar order (from L to R, with Bartender settings if not default):
   (Docker)
-  Carbon Black (Always Hide?)
+  (Carbon Black (Always Hide?))
   Spotlight (Always Hide)
-  (Clipy)
   Muzzle (Hide, ?Show for updates)
   Amphetamine
   Moom (Hide, ?Show for updates)
   Rectangle (Hide, ?Show for updates)
-  Spectacle (Hide, ?Show for updates)
-  BTT (Hide, ?Show for updates)
+  BetterTouchTool (Hide, ?Show for updates)
   Witch (Hide, ?Show for updates)
   Dropbox
   Google Backup
@@ -1031,18 +919,16 @@ Dock order (all -> keep in dock):
   Launchpad (?)
   Dashboard? (drag to dock)
   System Preferences
-  (Moom)
-  Cisco AnyConnect / FortiClient / etc.
+  FortiClient
   (Kindle)
   Amazon Music, Spotify, etc.
-  (Skype), Adium, Textual, Franz, Workplace Chat, Slack
-  Outlook
+  (Skype), Franz, Slack
   OneNote
   Chrome, Firefox
   VSCode / Atom / Sublime / PyCharm / IntelliJ / etc.
   (TextEdit) / Bluefish / MacVim / etc.
   iTerm
-  Omnigraffle
+  (Omnigraffle)
   Pages?
   Numbers?
   Keynote?
@@ -1053,13 +939,11 @@ Dock order (all -> keep in dock):
   (CrossOver apps)
 
 uBar app order:
-  Cisco AnyConnect / FortiClient / etc.
   Finder
   Android File Transfer
   Kindle
   iTunes, Amazon Music, Spotify, etc.
-  Skype, Adium, Textual, Franz, Workplace Chat, Slack
-  Outlook
+  Skype, Franz, Slack
   OneNote
   Chrome, Firefox
   VSCode, Atom, Sublime, PyCharm, IntelliJ, XCode, etc.
@@ -1067,7 +951,7 @@ uBar app order:
   iTerm
   Docker
   Wireshark
-  Omnigraffle
+  (Omnigraffle)
   Pages, Numbers, Keynote
   XnViewMP
   Preview

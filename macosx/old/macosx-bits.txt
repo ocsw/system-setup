@@ -1,0 +1,104 @@
+Keychain Access:
+  Show in menu bar [not in 10.13+]
+  separate keychain pw? (can't change in 10.14?)
+
+Avira?
+
+f.lux?
+
+Hammerspoon:
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  Launch at login
+  No dock
+  No crash data
+  Accessibility
+  Lock screen binary: [not necessary (or working) in 10.13+]
+    https://www.isi.edu/~calvin/mac-lockscreen.htm
+    clang -framework Foundation lockscreen.m -o lockscreen
+  Config file
+  (Exclude from uBar)
+
+Spectacle (replaced by Rectangle):
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  Launch at login
+  No key for L/R/T/B, UL/LL/UR/LR, N3/P3
+  Center: ctrl-opt-cmd-C
+  Fullscreen: ctrl-opt-cmd-F
+  Next Display: ctrl-opt-cmd-right
+  Previous Display: ctrl-opt-cmd-left
+  Make Larger: ctrl-opt-cmd-up
+  Make Smaller: ctrl-opt-cmd-down
+  Undo: ctrl-opt-cmd-Z
+  Redo: shift-opt-cmd-Z
+
+Annotate (App Store) (skip on 10.14+?):
+  General:
+    Launch at login
+    No screen at launch (?)
+    Show icon only in menu bar
+    Allow multiple windows (?)
+  Services?
+  Actions:
+    Upload?
+    Copy
+    Save
+    Drag
+    (others?)
+  Shortcuts:
+    Crosshair overlaps with 10.14+
+
+Clipy:
+  -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+  General:
+    Launch on login
+  Shortcuts:
+    Main: ctrl-cmd-V
+    History: none
+    Snippets: ctrl-cmd-B
+    Clear: none
+    Snippet shortcut
+  Updates:
+    Check
+  Snippets
+
+Itsycal (or see iStat Menus):
+  General:
+    Launch at login
+  Appearance:
+    Outline icon
+    Month?
+    Day?
+
+Java
+Flash
+
+Outlook:
+  Reading:
+    Mark as read after 0 secs
+  Sig:
+    (Open html file in browser, copy all, paste)
+    Use for new, replies
+  Rules
+  Calendar:
+    Work hours
+
+Adium:
+  Accounts
+  General:
+    Check for updates
+  Messages
+    Font: l.g. 12
+  Events:
+    Sound set: none
+  Advanced:
+    Confirmations:
+      Quit confirm always
+      Multiple window confirm
+  Group order in buddy list
+
+Textual:
+  Account (General, Identity)
+  Reconnect on disconnect?
+  Preferences:
+    Style:
+      No general event messages
