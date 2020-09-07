@@ -56,10 +56,6 @@ pybase 2
 #pip install virtualenv
 #curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
 
-# consider removing these from the main system:
-#autopep8
-#flake8
-
 py3ver=$(pylatest_local 3)
 #
 pyinst coverage 3

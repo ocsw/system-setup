@@ -27,6 +27,7 @@ fzf
 gawk
 gcc
 gdb
+gh
 git
 git-flow
 gnu-sed
@@ -43,6 +44,8 @@ iperf
 ipv6calc
 ipython
 ipython-notebook
+ipython2
+ipython2-notebook
 ipython3
 ipython3-notebook
 jot
@@ -68,6 +71,7 @@ openvpn
 p7zip
 parallel
 pep8
+perl
 prettyping
 progress
 pssh
@@ -77,8 +81,12 @@ pv
 pwgen
 pyenv
 pyenv-virtualenv
+python
+python-dev
 python2
+python2-dev
 python3
+python3-dev
 python_libs
 rdiff-backup
 ripgrep
@@ -89,8 +97,10 @@ screenfetch
 shellcheck
 socat
 spark
+sqlite
 tcpdump
 tcsh
+telnet
 the_silver_searcher
 tig
 tightvncserver
