@@ -16,30 +16,33 @@
 ### if __git_ps1 isn't included, install it
 
 
-#######
-# SSH #
-#######
+###############
+# SSH (start) #
+###############
 
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 touch ~/.ssh/config
 chmod 600 ~/.ssh/config
+cat >> ~/.ssh/config <<EOF
+Host *
+    AddKeysToAgent yes
+    IdentitiesOnly yes
+EOF
+
+
+##########
+# GitHub #
+##########
+
 ### remember to add a passphrase!
 ssh-keygen -a 100 -t ed25519 -f ~/.ssh/github_ed25519
 cat >> ~/.ssh/config <<EOF
 Host github.com
     IdentityFile ~/.ssh/github_ed25519
-Host *
-    AddKeysToAgent yes
-    IdentitiesOnly yes
 EOF
-# consolidate and order config file from most to least specific
+cat ~/.ssh/github_ed25519.pub
 # add SSH key to GitHub
-
-
-#######
-# GPG #
-#######
 
 # see gpg-base for config file templates; apply to both (?) ~/.gnupg and
 #   ~/.gnupg_pre_2.1
@@ -51,6 +54,14 @@ gpg --full-generate-key
 # gpg --list-secret-keys --keyid-format LONG  # copy the key ID
 gpg --armor --export KEY_ID
 # add GPG key to GitHub
+
+
+################
+# SSH (finish) #
+################
+
+# add other keys, config
+# consolidate and order config file from most to least specific
 
 
 #######
