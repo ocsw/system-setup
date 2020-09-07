@@ -11,6 +11,7 @@
 # Mac
 #
 umask 022
+brew update
 brew cask install google-cloud-sdk
 # also makes sure pycs are created with umask 022
 gcloud components install core bq gsutil  # should be default?

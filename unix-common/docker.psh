@@ -13,8 +13,11 @@
 # get from https://store.docker.com/editions/community/docker-ce-desktop-mac
 # don't start on login (?)
 # raise memory limit (e.g. 10GB)
+umask 022
+brew update
 brew install dive
 brew install jesseduffield/lazydocker/lazydocker
+umask 077
 
 #
 # Ubuntu

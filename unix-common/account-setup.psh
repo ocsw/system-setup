@@ -70,7 +70,10 @@ git config --global user.signingkey KEY_ID
 #
 # Mac
 #
+umask 022
+brew update
 brew install jesseduffield/lazygit/lazygit
+umask 077
 
 #############
 # Git repos #

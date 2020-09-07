@@ -14,6 +14,7 @@ umask 022
 # for GKE, gcloud's kubectl is recommended, but brew's is needed to install
 # the other brew packages
 #gcloud components install kubectl
+brew update
 brew install kubernetes-cli
 brew install fzf
 brew install kubectx
