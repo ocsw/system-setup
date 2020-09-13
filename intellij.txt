@@ -3,23 +3,23 @@ install from https://www.jetbrains.com/idea/
 close all projects
 
 Theme:
-    Preferences->Appearance & Behavior->Appearance
+    Preferences -> Appearance & Behavior -> Appearance
         Theme: Darcula (?)
 
-Configure->Structure for New Projects:
-    Platform Settings->SDKs, for each JDK:
+Configure -> Structure for New Projects:
+    Platform Settings -> SDKs, for each JDK:
         +JDK: /Library/Java/JavaVirtualMachines/<version>/Contents/Home
         (apply)
-    Project Settings->Project:
+    Project Settings -> Project:
         Select the default JDK and language level
 
 Error Prone:
     Preferences:
         Plugins:
             Error Prone Compiler
-        Build->Compiler->Java Compiler:
+        Build -> Compiler -> Java Compiler:
             Use compiler: Javac with error-prone
-        Build->Compiler:
+        Build -> Compiler:
             Don't use external build
 
 google-java-format:
@@ -31,7 +31,7 @@ google-java-format:
         google-java-format Settings:
             Enable
             Style: Google
-        Editor->Code Style->Java:
+        Editor -> Code Style -> Java:
             Import Scheme(s)
             Wrapping and Braces:
                 Hard wrap at: 100 (?)
@@ -41,6 +41,6 @@ Add <your-laptop-name>.local to the localhost line in /etc/hosts?
     127.0.0.1 localhost <your-laptop-name>.local
 
 Languages:
-    Preferences->Plugins:
+    Preferences -> Plugins:
         Python (JetBrains)
     Restart as required
