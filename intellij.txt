@@ -3,11 +3,11 @@ install from https://www.jetbrains.com/idea/
 close all projects
 
 Configure->Structure for New Projects:
-    Platform Settings->SDKs:
+    Platform Settings->SDKs, for each JDK:
         +JDK: /Library/Java/JavaVirtualMachines/<version>/Contents/Home
         (apply)
     Project Settings->Project:
-        Select the JDK
+        Select the default JDK and language level
 
 Error Prone:
     Preferences:
@@ -19,12 +19,24 @@ Error Prone:
             Don't use external build
 
 google-java-format:
+    Download https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml
+    Download https://raw.githubusercontent.com/spotify/spotify-checkstyle-config/master/src/main/idea/spotify-checkstyle-idea.xml
     Preferences:
         Plugins:
             google-java-format
         google-java-format Settings:
             Enable
             Style: Google
+        Editor->Code Style->Java:
+            Import Scheme(s)
+            Wrapping and Braces:
+                Hard wrap at: 100 (?)
+            Scheme: Spotify (?)
 
 Add <your-laptop-name>.local to the localhost line in /etc/hosts?
     127.0.0.1 localhost <your-laptop-name>.local
+
+Languages:
+    Preferences->Plugins:
+        Python (JetBrains)
+    Restart as required
