@@ -2,6 +2,10 @@ install from https://www.jetbrains.com/idea/
 
 close all projects
 
+Theme:
+    Preferences->Appearance & Behavior->Appearance
+        Theme: Darcula (?)
+
 Configure->Structure for New Projects:
     Platform Settings->SDKs, for each JDK:
         +JDK: /Library/Java/JavaVirtualMachines/<version>/Contents/Home
