@@ -19,8 +19,10 @@ brew cask install corretto  # for Java SE JDK 11; password required
 brew install jenv
 brew install maven
 umask 077
+jenv enable-plugin export
 jenv add /Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home/
 jenv add /Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home/
+# restart the shell to get JAVA_HOME
 
 #
 # Ubuntu (old/incomplete)
