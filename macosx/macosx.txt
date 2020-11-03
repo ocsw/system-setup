@@ -472,6 +472,14 @@ Amphetamine (App Store):
 Kap:
   General:
     Highlight Clicks
+  Plugins:
+    do-not-disturb
+    hide-clock
+    hide-desktop-icons
+    playback-speed
+    progress-bar
+    recording-name
+    reverse
 
 iStat Menus:
   Intel Power Gadget
@@ -948,6 +956,9 @@ uBar app order:
   Kindle
   iTunes, Amazon Music, Spotify, etc.
   Skype, Franz, Slack
+Telegram? (in Franz?)
+Signal?
+Discord? (in Franz?)
   OneNote
   Chrome, Firefox
   VSCode, Atom, Sublime, PyCharm, IntelliJ, XCode, etc.
