@@ -40,3 +40,17 @@ gke_up () {  # can use gke-up in bash
         'gcloud container clusters get-credentials $1 --region=$2 --project=PROJECT_NAME' \
         sh
 }
+
+#
+# GKE lists
+#
+gke_contexts () {  # can use gke-contexts in bash
+    # get all locally-configured contexts
+    grep '^- name: ' ~/.kube/config | awk '{print $3}'
+}
+gke_clusters () {  # can use gke-clusters in bash
+    # get all clusters
+    # (probably want to remove the production filter)
+    gcloud container clusters list --project=gke-xpn-1 \
+        --filter="resourceLabels[env]=production" --format="value(name)"
+}
