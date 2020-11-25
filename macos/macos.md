@@ -78,7 +78,7 @@ incl. save recovery key (pic?)
 * Energy Saver:
     * Change times? (defaults: 2 min battery, 10 min power)
     * No battery in menu bar (after iStat Menus, see below)
-    * Lock (not available on 10.14+?)
+    * Lock (not available on 10.14+ (Mojave)?)
 * Keyboard:
     * Keyboard:
         * (default repeat: 7/8, delay: 3/6)
@@ -96,7 +96,7 @@ incl. save recovery key (pic?)
             * Show Dashboard: ^F12 (because of VSCode)
         * Accessibility: Zoom on (?)
         * App Shortcuts:
-            * Lock Screen: `ctrl-opt-cmd-L` [10.13+]
+            * Lock Screen: `ctrl-opt-cmd-L` [10.13+ (High Sierra)]
         * (other shortcuts)
     * Input Sources:
         * No menu bar
@@ -119,7 +119,7 @@ incl. save recovery key (pic?)
     * More Gestures: all on (?)
 * Printers & Scanners:
     * (devices)
-    * Lock (not available on 10.14+?)
+    * Lock (not available on 10.14+ (Mojave)?)
 * Startup Disk: Lock
 * iCloud:
     * (Account Details)
@@ -142,11 +142,11 @@ incl. save recovery key (pic?)
 * Software Update / App Store:
     * Auto check, dl, app/system install
     * No OS updates
-    * Lock (not available on 10.14+?)
+    * Lock (not available on 10.14+ (Mojave)?)
 * Network:
     * WiFi networks
     * Wired first if available
-    * Lock (not available on 10.14+?)
+    * Lock (not available on 10.14+ (Mojave)?)
 * Bluetooth:
     * (devices)
     * Show in menu bar (if not using ToothFairy; see below)
@@ -192,7 +192,7 @@ incl. save recovery key (pic?)
         * Show day (default)
         * Show date (if no Itsycal / iStat Menus)
     * Lock
-* Time Machine: Lock (not available on 10.14+?)
+* Time Machine: Lock (not available on 10.14+ (Mojave)?)
 * Accessibility:
     * Zoom: (?)
         * Use shortcuts

@@ -1,6 +1,6 @@
 Keychain Access:
-  Show in menu bar [not in 10.13+]
-  separate keychain pw? (can't change in 10.14?)
+  Show in menu bar [not in 10.13+ (High Sierra)]
+  separate keychain pw? (can't change in 10.14+ (Mojave)?)
 
 Avira?
 
@@ -12,7 +12,7 @@ Hammerspoon:
   No dock
   No crash data
   Accessibility
-  Lock screen binary: [not necessary (or working) in 10.13+]
+  Lock screen binary: [not necessary (or working) in 10.13+ (High Sierra)]
     https://www.isi.edu/~calvin/mac-lockscreen.htm
     clang -framework Foundation lockscreen.m -o lockscreen
   Config file
@@ -31,7 +31,7 @@ Spectacle (replaced by Rectangle):
   Undo: ctrl-opt-cmd-Z
   Redo: shift-opt-cmd-Z
 
-Annotate (App Store) (skip on 10.14+?):
+Annotate (App Store) (skip on 10.14+ (Mojave)?):
   General:
     Launch at login
     No screen at launch (?)
@@ -45,7 +45,7 @@ Annotate (App Store) (skip on 10.14+?):
     Drag
     (others?)
   Shortcuts:
-    Crosshair overlaps with 10.14+
+    Crosshair overlaps with 10.14+ (Mojave)
 
 Clipy:
   -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
