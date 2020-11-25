@@ -118,7 +118,7 @@ incl. save recovery key (pic?)
         * Rotate
     * More Gestures: all on (?)
 * Printers & Scanners:
-    * (devices)
+    * (devices; see below)
     * Lock (not available on 10.14+ (Mojave)?)
 * Startup Disk: Lock
 * iCloud:
@@ -148,7 +148,7 @@ incl. save recovery key (pic?)
     * Wired first if available
     * Lock (not available on 10.14+ (Mojave)?)
 * Bluetooth:
-    * (devices)
+    * (devices; see below)
     * Show in menu bar (if not using ToothFairy; see below)
 * Extensions:
     * Finder Extensions:
@@ -276,8 +276,6 @@ incl. save recovery key (pic?)
         * Disable (?)
         * No Automatic Discovery (?)
 
-### Android File Transfer
-
 ### YubiSwitch
 
 * No enable on sleep
@@ -292,6 +290,22 @@ incl. save recovery key (pic?)
         * `0x1050` for nano
     * Switch off after 5 sec
     * Start on login
+
+### Bluetooth Devices
+
+e.g. headphones, controllers
+
+### ToothFairy (App Store)
+
+* Add devices:
+    * Icon
+    * Hotkey?
+    * Show battery
+    * Advanced:
+        * Improve sound quality (depending)
+* Launch at login
+* Hide Dock icon
+* (Exclude from uBar)
 
 ### SoundSource
 
@@ -309,17 +323,11 @@ incl. save recovery key (pic?)
 
 ### Blue Sherpa
 
-### ToothFairy (App Store)
+### Android File Transfer
 
-* Add devices:
-    * Icon
-    * Hotkey?
-    * Show battery
-    * Advanced:
-        * Improve sound quality (depending)
-* Launch at login
-* Hide Dock icon
-* (Exclude from uBar)
+### Printers
+
+### Scanners
 
 ## Backup and Sync
 
