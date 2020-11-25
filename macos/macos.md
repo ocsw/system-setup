@@ -909,7 +909,9 @@ brew doctor
 umask 077
 ```
 
-* add `/usr/local/bin/bash` to `/etc/shells`, change shell?
+* add `/usr/local/bin/bash` to `/etc/shells` and `chsh -s /usr/local/bin/bash`?
+    * on 10.15+ (Catalina), `chsh -s /bin/bash` if not doing the above, and add
+      `export BASH_SILENCE_DEPRECATION_WARNING=1` to `~/.bash_profile`
 * restart shell (fixes problem with `pybase`)
 
 ### General Setup
