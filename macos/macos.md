@@ -633,7 +633,7 @@ incl. save recovery key (pic?)
 
 ### Chrome
 
-(see file)
+(see `../chrome.txt`)
 
 ### Firefox
 
@@ -653,7 +653,7 @@ incl. save recovery key (pic?)
 * (Bunny)
 * Keys
 * Wheel and keys
-* (see directory)
+* (see `../firefox` directory)
 
 ## Messaging and VC
 
@@ -793,7 +793,7 @@ incl. save recovery key (pic?)
 
 ### VSCode
 
-* (see directory)
+* (see `../vscode` directory)
 * Create symlink:
 
 ```shell
@@ -914,10 +914,10 @@ umask 077
 
 ### General Setup
 
-* (see `unix-common/packages.txt`)
+* (see `../unix-common/packages.txt`)
 * dotfiles, incl. dotfile and `.to_back_up` links
 * add `.to_back_up` to Google Backup
-* rest of `unix-common`
+* rest of `../unix-common`
 * add hostname to `127.0.0.1` in `/etc/hosts`?
 
 ### SSH
@@ -954,7 +954,7 @@ echo "pinentry-program /usr/local/bin/pinentry-mac" >> \
 gpgconf --kill gpg-agent
 ```
 
-* follow directions in `account-setup.txt`
+* follow directions in `../unix-common/account-setup.psh`
 * install GPG Suite, for GUI
     * (if desired; updates may will overwrite config files)
     * (may not automatically pick up new keys?)
@@ -971,7 +971,8 @@ umask 077
 
 * install GPG Suite
 * create a key (use RSA/RSA 4096, no expiration, the same name and email as
-  for git, and comment `HOSTNAME -> GitHub`; see `account-setup.txt`)
+  for git, and comment `HOSTNAME -> GitHub`; see
+  `../unix-common/account-setup.psh`)
 
 #### Either way
 
