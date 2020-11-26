@@ -769,8 +769,10 @@ These are all alerts; do the other sections first
 
 ### Slack (App Store; in Franz?)
 
-* (preferences are per-workspace)
-* (sign into workspaces)
+(preferences are per-workspace)
+
+(sign into workspaces)
+
 * Profile
 * Status
 * Notifications:
