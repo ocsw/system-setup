@@ -575,78 +575,106 @@ e.g. headphones, controllers
 
 ### iStat Menus
 
-* Intel Power Gadget
-* Global:
-    * License
-* Notifications (all alerts; do rest first):
-    * No weather
-    * Daylight Saving Change: 2 days before
-    * Battery Time Remaining: 10 minutes (default)
-    * Low Battery: 10% (default)
-    * Bluetooth Battery: 5% (default)
-    * Any Temperature Above: 100C for 30 sec
-    * CPU Usage Above: 75% for 10 sec (default time) (banner (?))
-    * Memory Pressure Above: 80% for 10 sec (default)
-    * 'Macintosh HD' Used Percentage Above: 90% (default)
-    * Internet Status Changed?
-* Weather: off
-* CPU:
-    * Active: label, cores (and GPU stuff?)
-    * App usage format: 100%
-    * Processes: 10 (?)
-    * Hide HT cores
-* Memory:
-    * Active: label, bar graph (pressure, or if memory, don't show breakdowns)
-    * Processes: 10 (?)
-    * App format: size
-    * Don't hide inactive memory (?)
-* Disks:
-    * Active:
-        * label, disk space, (?)activity num (show label),
-        * ?activity graph (show bg)
-    * Activity mode: detailed (per disk)
-    * Processes: 10
-* Network:
-    * Active: net label, arrow label, (?)bandwidth num
-    * Processes: 10
-    * Decimals (KB): 1(?) 2?
-    * Combine bandwidth
-    * Show BSD names
-* Sensors:
-    * Active: label, ?single num
-    * Degrees: C
-    * Sensors: CPU PECI (show units), ?CPU frequency (show units)
-* Battery:
-    * Active: ?label, horizontal color batt (with icons), time
-    * Bluetooth: symbol, vertical graph
-    * Airpods: symbol, vertical graph
-    * Don't disable Bluetooth monitoring
-    * Batteries: internal, mouse [others?]
-* Time:
-    * On
-    * Menu bar: outline date icon (or clock icon, or `EE hh:mm a`)
-    * World Clocks: `ZZZ __RELATIVE_OFFSET__ EE HH:mm` (default 06:05 AM)
-    * Hotkey: `ctrl-opt-cmd-T`
-    * Dropdown: no calendar (if Itsycal)
-    * World clocks:
-        * UTC
-        * No Moon?
-        * No Current Location? (else give location access)
-        * (other locations)
-    * Open dropdown -> hide request box
-* Combined: off
-* -> System Preferences:
-    * Date & Time:
-        * No date (if using date icon)
-    * Energy Saver:
-        * No battery in menu bar
-    * Extensions:
-        * Today:
-            * iStat on, first
-    * Security & Privacy:
-        * Privacy:
-            * Location Services:
-                * iStat on (if Current Location)
+#### Intel Power Gadget
+
+#### Global (iStat)
+
+* License
+
+#### Notifications (iStat)
+
+These are all alerts; do the other sections first
+
+* No weather
+* Daylight Saving Change: 2 days before
+* Battery Time Remaining: 10 minutes (default)
+* Low Battery: 10% (default)
+* Bluetooth Battery: 5% (default)
+* Any Temperature Above: 100C for 30 sec
+* CPU Usage Above: 75% for 10 sec (default time) (banner (?))
+* Memory Pressure Above: 80% for 10 sec (default)
+* 'Macintosh HD' Used Percentage Above: 90% (default)
+* Internet Status Changed?
+
+#### Weather (iStat)
+
+* Off
+
+#### CPU (iStat)
+
+* Active: label, cores (and GPU stuff?)
+* App usage format: 100%
+* Processes: 10 (?)
+* Hide HT cores
+
+#### Memory (iStat)
+
+* Active: label, bar graph (pressure, or if memory, don't show breakdowns)
+* Processes: 10 (?)
+* App format: size
+* Don't hide inactive memory (?)
+
+#### Disks (iStat)
+
+* Active:
+    * label, disk space, (?)activity num (show label),
+    * ?activity graph (show bg)
+* Activity mode: detailed (per disk)
+* Processes: 10
+
+#### Network (iStat)
+
+* Active: net label, arrow label, (?)bandwidth num
+* Processes: 10
+* Decimals (KB): 1(?) 2?
+* Combine bandwidth
+* Show BSD names
+
+#### Sensors (iStat)
+
+* Active: label, ?single num
+* Degrees: C
+* Sensors: CPU PECI (show units), ?CPU frequency (show units)
+
+#### Battery (iStat)
+
+* Active: ?label, horizontal color batt (with icons), time
+* Bluetooth: symbol, vertical graph
+* Airpods: symbol, vertical graph
+* Don't disable Bluetooth monitoring
+* Batteries: internal, mouse [others?]
+
+#### Time (iStat)
+
+* On
+* Menu bar: outline date icon (or clock icon, or `EE hh:mm a`)
+* World Clocks: `ZZZ __RELATIVE_OFFSET__ EE HH:mm` (default 06:05 AM)
+* Hotkey: `ctrl-opt-cmd-T`
+* Dropdown: no calendar (if Itsycal)
+* World clocks:
+    * UTC
+    * No Moon?
+    * No Current Location? (else give location access)
+    * (other locations)
+* Open dropdown -> hide request box
+
+#### Combined (iStat)
+
+* Off
+
+#### -> System Preferences
+
+* Date & Time:
+    * No date (if using date icon)
+* Energy Saver:
+    * No battery in menu bar
+* Extensions:
+    * Today:
+        * iStat on, first
+* Security & Privacy:
+    * Privacy:
+        * Location Services:
+            * iStat on (if Current Location)
 
 ### Bartender
 
