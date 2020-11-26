@@ -3,10 +3,11 @@
 NOTE: has to be done separately for each profile
 (e.g, personal, work, presentations)
 
-Chrome menu -> Warn before quitting [Mac]
-
 ## Settings
 
+Chrome menu -> Warn Before Quitting [Mac] (see also below)
+
+* Account
 * Sync:
     * Manage: no passwords or payment
     * No autocomplete
@@ -20,11 +21,13 @@ Chrome menu -> Warn before quitting [Mac]
     * Payment methods:
         * Don't save
         * Don't allow checking
+        * (clear all)
 * Privacy and security:
     * Cookies:
         * No preload
 * Appearance:
     * Show bookmarks bar
+    * Show warning before quitting [Mac]
 * Default browser
 * On startup:
     * Continue where you left off
@@ -34,76 +37,104 @@ Chrome menu -> Warn before quitting [Mac]
     * System:
         * No hardware acceleration? (issues on Mac)
 
-chrome://flags/:
-    * Enable Tag Groups (may eventually be default?)
-
 ## Extensions
 
-[Developer Mode on]
+(Developer Mode on)
 
-(from L to R)
+### Main
 
-* Password Alert
-* Play the GIF:
-    * No auto start
-* (Image Picker?? bhibldekjicdbnjeeecmgoogcihoalhe)
-* Downloader for Instagram:
-    * Hide (depending?)
-* (Pushbullet:)
-    * Account
-    * No notification count
-    * No auto-open
-    * No notifications
-    * Enable instant pushing?
-    * (Password)
-* Pinboard Plus:
-    * Account
-    * Private by default
-    * Wrap in blockquote (?)
-* OneNote Web Clipper
-* Awesome Screenshot:
-    * No shortcuts
-    * Save
-* HTTPS Everywhere
-* Adblock Plus:
-    * (Whitelist)
-    * Advanced:
-        * No number in icon
-* Dark Reader
-    * Hide
-* (CaretTab:)
-    * Color:
-        * Theme (purple on white)
-    * Time:
-        * No seconds
-    * (Links)
-    * Extras:
-        * No search box?
-* Tabby Cat
-    * Hide (?)
-* Tidy Sidebar:
-    * No Memo, Wiki, Links
-    * Show tooltip
-* Go to Tab
-* TabCopy
-* LastPass
-* (Stop Animations?? gemmknjnneiojfjelmgappppbaneikda: Hide (?))
-* (Just Not Sorry??: Hide (?))
+#### Adblock Plus
+
+* (Whitelist)
+* Advanced:
+    * No number in icon
+
+#### Awesome Screenshot
+
+* No shortcuts
+* Ask where to save
+
+#### (CaretTab)
+
+* Design:
+    * Colors: purple on white
+* Time:
+    * No seconds
+* Date:
+    * On (?)
+* (Links)
+* No search box (?)
+
+#### Dark Reader
+
+#### Downloader for Instagram
+
+#### Go to Tab
+
+#### HTTPS Everywhere
+
+#### LastPass
+
+#### (Nod - Reactions for Google Meet)
+
+#### OneNote Web Clipper
+
+#### Password Alert
+
+#### Pinboard Plus
+
+* Account
+* Private by default
+* Wrap in blockquote (?)
+
+#### Play the GIF
+
+* No auto start
+
+#### Tabby Cat
+
+#### TabCopy
+
+#### Tidy Sidebar
+
+* No Memo, Wiki, Links
+* Show tooltip
+
+### Misc. Unsure / WIP
+
 * (Application Launcher for Drive:)
     * Disable (?) (if no Office?)
-    * Hide
 * (Google Docs Offline)
-* (Office Editing for Docs, Sheets, and Slides:)
-    * Hide
-* (Download Manager?? daoidaoebhfcgccdpgjjcbdginkofmfe)
+* (Office Editing for Docs, Sheets, and Slides)
+* (Tampermonkey??)
+
+### Image Downloaders (WIP)
+
+* Image Downloader Continued
+* (Image Picker?? bhibldekjicdbnjeeecmgoogcihoalhe)
 * (Batch Image Download.Full Screen Capture??)
 * (Fatkun Batch Download Image??)
-* (Image Downloader Continued??)
-* (Image Downloader?? cnpniohnfphhjihaiiggeabnkjhpaldj)
 * (Download All Images??)
 * (Bulk Image Downloader??)
 * (zzllrr Imager Geek??)
-* (Tampermonkey??)
+* (ImageCap??)
+
+### Pins
+
+From left to right:
+
+* Pinboard Plus
+* OneNote Web Clipper
+* Go to Tab
+* TabCopy
+* Tidy Sidebar
+* Awesome Screenshot?
+* (Image Downloaders)
+* Downloader for Instagram?
+* Play the GIF?
+* Dark Reader
+* Adblock Plus
+* LastPass
 
 ### Apps
 
