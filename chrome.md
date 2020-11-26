@@ -102,10 +102,6 @@ NOTE: has to be done separately for each profile
 * Private by default
 * Wrap in blockquote (?)
 
-#### Play the GIF
-
-* No auto start
-
 #### Tabby Cat
 
 #### TabCopy
@@ -146,7 +142,6 @@ From left to right:
 * Awesome Screenshot?
 * (Image Downloaders)
 * Downloader for Instagram?
-* Play the GIF?
 * Dark Reader
 * Adblock Plus
 * LastPass
