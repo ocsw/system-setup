@@ -5,37 +5,52 @@ NOTE: has to be done separately for each profile
 
 ## Settings
 
-Chrome menu -> Warn Before Quitting [Mac] (see also below)
+### Chrome menu -> Warn Before Quitting [Mac]
 
-* Account
+(see also below)
+
+### You and Google
+
+* Account / Sign In
 * Sync:
     * Manage: no passwords or payment
     * No autocomplete
     * No make better
 * Chrome name and picture
-* Autofill:
-    * Passwords:
-        * Don't offer
-        * No Auto Sign-in
-        * (clear all)
-    * Payment methods:
-        * Don't save
-        * Don't allow checking
-        * (clear all)
-* Privacy and security:
-    * Cookies:
-        * No preload
-* Appearance:
-    * Show bookmarks bar
-    * Show warning before quitting [Mac]
-* Default browser
-* On startup:
-    * Continue where you left off
-* Advanced:
-    * Downloads:
-        * Ask where to save
-    * System:
-        * No hardware acceleration? (issues on Mac)
+
+### Autofill
+
+* Passwords:
+    * Don't offer
+    * No Auto Sign-in
+    * (clear all)
+* Payment methods:
+    * Don't save
+    * Don't allow checking
+    * (clear all)
+
+### Privacy and security
+
+* Cookies:
+    * No preload
+
+### Appearance
+
+* Show bookmarks bar
+* Show warning before quitting [Mac]
+
+### Default browser
+
+### On startup
+
+* Continue where you left off
+
+### Advanced
+
+* Downloads:
+    * Ask where to save
+* System:
+    * No hardware acceleration? (issues on Mac)
 
 ## Extensions
 
