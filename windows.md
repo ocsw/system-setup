@@ -127,31 +127,20 @@ e.g. headphones, controllers
 
 ### Scanners
 
-SpiderOakONE
-
 WSL
 Jelly Bean KeyFinder
 CPU-Z
 
-Chrome
 Zoom
-Skype
-VLC
-Office
-IrfanView
-XnViewMP
-Spotify?
 
 pins/dt/start
 links to folders
 
-
-
 SpiderOakONE:
   General:
-    Launch minimized
+    Launch minimized?
     Don't show splash screen
-    Disable Hive
+    Disable Hive (depending)
   Network:
     Allow LAN-Sync?
   remove Hive symlink from desktop
@@ -169,9 +158,7 @@ XnViewMP:
       ESC quits: Never (default) (?)
   Integration
     integration
-        add to context menu(req adminP
-
-flash
+        add to context menu(req admin)
 
 Spotify:
   Music Quality:
@@ -187,21 +174,14 @@ Spotify:
   Advanced:
     Startup: no
 
-
-Uplay
-Origin
-itch client
-
 Skype
     no autostart
     no run on close
-
 
 VLC
     hotkeys
         no wheel
         allow volume
-
 
 IrfanView
     Start / Exit
@@ -213,62 +193,13 @@ IrfanView
         no Slideshow in last
         no Recent files
         no Recent folders
+IrfanView Thumbnails
+    Warning on ESC?
 
+VLC
 
-Chrome menu -> Warn before quitting [Mac]
-
-Settings:
-  Sync (no passwords or payment)
-no autocomplete, mke better
-  Passwords:
-    Don't offer
-    No Auto Sign-in
-    (clear all)
-  Chrome name and picture
-[ayment methods  dont off4rm no check
-cookirs no preload
-  Appearance:
-    Show bookmarks bar
-  Default browser
-  On startup:
-    Continue where you left off
-  Advanced:
-    Privacy and Security:
-      No services except Chrome sign-in, Safe Browsing
-    Downloads:
-      Ask where to save
-    System:
-      No hardware acceleration? (issues on Mac)
-
-Extensions:
-  [Developer Mode on]
-  ---
-  HTTPS Everywhere:
-    No counter
-  LastPass
-(from L to R)
-
-Apps:
-  (Docs)
-  (Sheets)
-  (Slides)
-
-
-
-PIA
-google backup
-dropbox
-ff?
-franz
 (telegram, signal, skype, discord)
-slack
-spotify, amazon music, itunes
-kindle
-vsc
-onenote
-steam, epic, gog
-pins/dt (incl. start?)
-(disk inventory)
+
 wsl backups?
 wsl shell stuff?
 
@@ -282,7 +213,6 @@ Control Panel
 ## Hardware
 ### Logitech Control Center (w/Marathon Mouse M705)
 ### Blue Sherpa
-### ToothFairy (App Store)
 ## Backup and Sync
 ### SpiderOakONE
 ### Google Backup and Sync
@@ -292,6 +222,7 @@ Control Panel
 ## Browsers
 ### Chrome
 ### Firefox
+### Edge
 ## Messaging and VC
 ### Franz
 ### Skype (in Franz?)
@@ -318,5 +249,25 @@ Control Panel
 ### Steam
 ### Epic Games Launcher
 ### GOG Galaxy
+origin
+uplay
+itch
 ## List Orders
 ### uBar App Order
+
+### [Wireshark][wireshark]
+### ([Telegram][telegram]? (in Franz instead?))
+### ([Signal][signal]?)
+### [Skype][skype] (in Franz instead?)
+### ([Discord][discord]? (in Franz instead?))
+### [Slack][slack] (optional App Store; in Franz instead?)
+### ([Atom][atom], [Sublime][sublime], etc.)
+### ([PyCharm][pycharm], [GoLand][goland], [IntelliJ][intellij], etc.)
+### [Sequel Pro][sequel-pro]
+## Command-line Related
+### [iTerm2][iterm2]
+### [Homebrew][homebrew]
+### General Setup
+### SSH
+### GPG
+### Permissions
