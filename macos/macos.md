@@ -90,7 +90,10 @@ See [System Preferences Setup][macos-system-prefs]
 
 NOTE: requires unplugging and replugging the mouse receiver after it starts
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Preferences -> Security &P -> Privacy:
+    * Camera: allow
+    * Microphone: allow
+    * Accessibility: allow
 * General:
     * Start automatically? (without this, it's still in the login list, hidden)
 * Analytics: off (?)
@@ -156,6 +159,8 @@ e.g. headphones, controllers
 [soundsource]: https://rogueamoeba.com/soundsource/
 
 ### [Blue Sherpa][blue-sherpa]
+
+* -> System Preferences -> Security &P -> Privacy -> Microphone: allow
 
 [blue-sherpa]: https://www.bluemic.com/en-us/products/sherpa/
 
@@ -466,7 +471,10 @@ Download from main site or [App Store][daisydisk-app-store]
 
 See [Chrome Setup][chrome-setup]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Preferences -> Security &P -> Privacy:
+    * Camera: allow
+    * Microphone: allow
+    * Accessibility: allow
 
 [chrome]: https://www.google.com/chrome/
 [chrome-extensions]: https://chrome.google.com/webstore/category/extensions
@@ -489,6 +497,9 @@ See [Firefox Setup][firefox-setup]
 
 ### [Franz][franz]
 
+* -> System Preferences -> Security &P -> Privacy:
+    * Camera: allow
+    * Microphone: allow
 * Account
 * General:
     * Don't launch on start
@@ -511,6 +522,10 @@ See [Firefox Setup][firefox-setup]
 
 ### [Skype][skype] (in Franz instead?)
 
+* -> System Preferences -> Security &P -> Privacy:
+    * Camera: allow
+    * Microphone: allow
+
 [skype]: https://www.skype.com/en/
 
 ### ([Discord][discord]? (in Franz instead?))
@@ -527,8 +542,10 @@ See [Firefox Setup][firefox-setup]
 
 (sign into workspaces)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
-
+* -> System Preferences -> Security &P -> Privacy:
+    * Camera: allow
+    * Microphone: allow
+    * Accessibility: allow
 * Profile
 * Status
 * Notifications:
