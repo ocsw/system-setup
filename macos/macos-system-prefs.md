@@ -42,14 +42,17 @@
     * Contacts: all off
     * Calendars: all off
     * Camera: Chrome, Logitech Gaming Software, Franz, Skype, Slack, Zoom
+        * (some might not be in the list even if they're installed)
     * Microphone: Blue, Chrome, Logitech Gaming Software, Franz, Skype, Slack,
       Zoom
+        * (some might not be in the list even if they're installed)
     * Accessibility:
         * allow, incl. Bartender, BetterTouchTool, Dropbox, Google Chrome,
           Google Software Update, iTerm, Kindle, Logitech Gaming Software,
           Moom, Muzzle, Rectangle, Slack, SoundSource, Steam, uBar, Witch,
           Xcode Helper
         * but probably deny Zoom
+        * (some might not be in the list even if they're installed)
     * Automation:
         * all on (?), incl.:
             * Backup and Sync from Google -> System Events
@@ -62,6 +65,7 @@
             * SpiderOak One -> System Events
             * uBar -> Finder, iTunes, Spotify, VLC
             * Witch -> Code, Slack, System Preferences, System Events
+        * (some might not be in the list even if they're installed)
     * No analytics
 * Lock
 
@@ -206,6 +210,7 @@
         * incl. Android File Transfer, BetterTouchTool, CrossOver, Dropbox,
           Google Backup, Logitech Gaming Software, Moom, Rectangle,
           SoundSource, SpiderOak One, uBar, Witch, YubiSwitch
+        * (some might not be in the list even if they're installed)
 * Disable Guest User
 * Login Options:
     * Display login as name and password? (entry boxes only, vs list of
