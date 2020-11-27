@@ -131,7 +131,7 @@ WSL
 Jelly Bean KeyFinder
 CPU-Z
 
-Zoom
+** Zoom
 
 pins/dt/start
 links to folders
@@ -196,10 +196,6 @@ IrfanView
 IrfanView Thumbnails
     Warning on ESC?
 
-VLC
-
-(telegram, signal, skype, discord)
-
 wsl backups?
 wsl shell stuff?
 
@@ -209,17 +205,17 @@ Control Panel
 ### Make Directories (depending)
 ### Finder
 ## Networking
-### PIA
+* ### PIA
 ### [FortiClient][forticlient]
 ### (other VPNs)
 ## Hardware
 ### Logitech SetPoint (w/Marathon Mouse M705)
-### [Logitech Gaming Software][ghub] (w/C920 webcam)
-### Blue Sherpa
+* ### [Logitech Gaming Software][ghub] (w/C920 webcam)
+** ### Blue Sherpa
 ## Backup and Sync
-### SpiderOak One
-### Google Backup and Sync
-### Dropbox
+* ### SpiderOak One
+* ### Google Backup and Sync
+* ### Dropbox
 ## General Utilities
 ### WinDirStat
 ### [Wireshark][wireshark]
@@ -228,23 +224,24 @@ Control Panel
 ### Firefox
 ### Edge
 ## Messaging and VC
-### Franz
+* ### Franz
 ### ([Telegram][telegram]? (in Franz instead?))
 ### ([Signal][signal]?)
-### [Skype][skype] (in Franz instead?)
+*** ### [Skype][skype] (in Franz instead?)
 ### ([Discord][discord]? (in Franz instead?))
-### [Slack][slack] (optional App Store; in Franz instead?)
+*** ### [Slack][slack] (optional App Store; in Franz instead?)
 ## Media
-### Spotify
+* ### Spotify
 optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
-### Amazon Music
-### iTunes
-### Kindle
+* ### Amazon Music
+* ### iTunes
+* ### Kindle
 ### IrfanView
-### XnViewMP
+* ### XnViewMP
+** ### VLC
 ## Documents and Productivity
 ### Office
-### OneNote (App Store)
+* ### OneNote (App Store)
 ## Text Editors
 ### Bluefish
 ### Notepad++
@@ -252,7 +249,7 @@ optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
 ### ([Atom][atom], [Sublime][sublime], etc.)
 ### ([PyCharm][pycharm]) ($/free)
 ### ([GoLand][goland]) ($)
-### ([IntelliJ][intellij]) ($/free)
+*** ### ([IntelliJ][intellij]) ($/free)
 ### (other JetBrains and/or language-specific IDEs)
 ## Command-line Related
 ### WSL (& packages)
@@ -261,12 +258,12 @@ optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
 ### GPG
 ### Permissions
 ## Gaming
-### Steam
-### Epic Games Launcher
-### GOG Galaxy
-origin
+* ### Steam
+* ### Epic Games Launcher
+* ### GOG Galaxy
+** origin
 uplay
-itch
+** itch
 ## List Orders
 ### uBar App Order
 
