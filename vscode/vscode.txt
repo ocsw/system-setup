@@ -1,3 +1,6 @@
+Download: https://code.visualstudio.com/
+Extensions: https://marketplace.visualstudio.com/VSCode
+
 add to PATH, or symlink in ~/bin
 set up sync (token, gist ID)
 backup the token (pw manager or syncLocalSettings.json)
