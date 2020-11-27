@@ -91,8 +91,6 @@ IrfanView Thumbnails
 
 Control Panel
 
-** Zoom
-
 pins/dt/start
 links to folders
 
@@ -132,6 +130,7 @@ links to folders
     * no Skype (?)
 ### ([Discord][discord]? (in Franz instead?))
 *** ### [Slack][slack] (optional App Store; in Franz instead?)
+** ### [Zoom][zoom]
 ## Media
 * ### Spotify
 optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb

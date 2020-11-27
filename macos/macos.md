@@ -601,6 +601,20 @@ See [Firefox Setup][firefox-setup]
 [slack-dl]: https://slack.com/downloads/
 [slack-app-store]: https://apps.apple.com/app/slack/id803453959
 
+### [Zoom][zoom]
+
+[Download][zoom-dl]
+
+* -> System Preferences -> Security &P -> Privacy:
+    * Camera: allow
+    * Microphone: allow
+    * Accessibility: deny
+* Share Screen:
+    * Don't silence notifications (if using Muzzle)
+
+[zoom]: https://explore.zoom.us/meetings
+[zoom-dl]: https://zoom.us/download#client_4meeting
+
 ## Media
 
 ### [Spotify][spotify]
@@ -1063,7 +1077,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * FortiClient
 * (Kindle)
 * Amazon Music, Spotify, etc.
-* (Skype), Franz, Slack
+* (Skype), (Zoom), Franz, Slack
 * OneNote
 * Chrome, Firefox
 * VSCode / Atom / Sublime / PyCharm / GoLand / IntelliJ / etc.
@@ -1087,7 +1101,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * Android File Transfer
 * Kindle
 * iTunes, Amazon Music, Spotify, etc.
-* Skype, Franz, Slack
+* Skype, Zoom, Franz, Slack
 
 Telegram? (in Franz?)
 Signal?
