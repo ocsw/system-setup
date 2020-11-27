@@ -41,24 +41,26 @@
         * System Services: don't show icon
     * Contacts: all off
     * Calendars: all off
-    * Camera: Chrome, Logitech Gaming Software, Skype
-    * Microphone: Chrome, Logitech Gaming Software, (Onde Audio Recorder),
-      Skype
+    * Camera: Chrome, Logitech Gaming Software, Franz, Skype, Slack, Zoom
+    * Microphone: Blue, Chrome, Logitech Gaming Software, Franz, Skype, Slack,
+      Zoom
     * Accessibility:
-        * allow, incl. Bartender, BetterTouchTool, Dropbox, Google Software
-          Update (?), iTerm, Kindle, Logitech Gaming Software, Moom,
-          Muzzle, Rectangle, SoundSource, uBar, Witch
+        * allow, incl. Bartender, BetterTouchTool, Dropbox, Google Chrome,
+          Google Software Update, iTerm, Kindle, Logitech Gaming Software,
+          Moom, Muzzle, Rectangle, Slack, SoundSource, Steam, uBar, Witch,
+          Xcode Helper
+        * but probably deny Zoom
     * Automation:
         * all on (?), incl.:
+            * Backup and Sync from Google -> System Events
             * FortiClient -> Google Chrome, Safari
             * Franz -> System Events
-            * Google Backup -> System Events
             * Google Software Update -> System Events
             * Installer -> System Events?
-            * iTerm -> Google Chrome
-            * Logitech Control Center -> System Events
+            * iTerm -> Google Chrome, System Events
+            * Logitech Control Center Daemon -> System Events
             * SpiderOak One -> System Events
-            * uBar -> Finder, iTunes, Spotify
+            * uBar -> Finder, iTunes, Spotify, VLC
             * Witch -> Code, Slack, System Preferences, System Events
     * No analytics
 * Lock
