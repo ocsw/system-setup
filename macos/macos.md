@@ -804,7 +804,7 @@ See [IntelliJ Setup][intellij-setup]
 
 [iterm2]: https://iterm2.com/
 
-### [XCode][xcode] (App Store)
+### [Xcode][xcode] (App Store)
 
 [Download - App Store][xcode-app-store]
 
@@ -1070,7 +1070,7 @@ Discord? (in Franz?)
 
 * OneNote
 * Chrome, Firefox
-* VSCode, Atom, Sublime, PyCharm, GoLand, IntelliJ, XCode, etc.
+* VSCode, Atom, Sublime, PyCharm, GoLand, IntelliJ, Xcode, etc.
 * TextEdit, Bluefish, MacVim, etc.
 * iTerm
 * Docker
