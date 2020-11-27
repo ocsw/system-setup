@@ -1230,6 +1230,9 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
     ~/bin/*
 ```
 
+[unix-setup]: ../unix-common/
+[unix-account-setup]: ../unix-common/account-setup.psh
+
 ## Gaming
 
 ### [Steam][steam]
@@ -1400,6 +1403,3 @@ Discord? (in Franz?)
 See [Catalina Notes][catalina-notes]
 
 [catalina-notes]: catalina.txt
-
-[unix-setup]: ../unix-common/
-[unix-account-setup]: ../unix-common/account-setup.psh
