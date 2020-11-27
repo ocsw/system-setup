@@ -782,7 +782,10 @@ These are all alerts; do the other sections first
 
 ### [DaisyDisk][daisydisk] (incl. license)
 
+Download from main site or [App Store][daisydisk-app-store]
+
 [daisydisk]: https://daisydiskapp.com/
+[daisydisk-app-store]: https://apps.apple.com/app/daisydisk/id411643860
 
 ### [Wireshark][wireshark]
 
