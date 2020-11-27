@@ -416,7 +416,7 @@ e.g. headphones, controllers
 * Network:
     * Allow LAN-Sync?
 * remove Hive symlink from desktop
-* Backup:
+* Backup (all from homedir):
     * Folders:
         * `.gnupg` (except `*.conf`), (`.gnupg_pre_2.1` except `*.conf`),
           `.ssh`
@@ -436,7 +436,7 @@ e.g. headphones, controllers
 
 * Computer:
     * Name: change to match hostname
-    * Folders:
+    * Folders (all from homedir):
         * `.to_back_up`, `Books`, `Music`, `scraps`, `wip`
         * (+ more depending on contents / context)
         * [work: add `Desktop`, `Documents`, `Downloads`, ?`Pictures`]
@@ -1162,8 +1162,8 @@ umask 077
 
 See the [Unix Setup][unix-setup] directory
 
-* dotfiles, incl. dotfile and `.to_back_up` links
-* add `.to_back_up` to Google Backup
+* dotfiles, incl. dotfile and `~/.to_back_up` links
+* add `~/.to_back_up` to Google Backup
 * rest of the [Unix Setup][unix-setup] directory
 * add hostname to `127.0.0.1` in `/etc/hosts`?
 
@@ -1184,7 +1184,7 @@ for i in ~/.ssh/*_{dsa,ecdsa,ed25519,rsa}; do
 done
 ```
 
-* add `.ssh` to SpiderOakONE (depending)
+* add `~/.ssh` to SpiderOakONE (depending)
 
 ### GPG
 
