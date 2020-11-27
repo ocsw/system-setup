@@ -796,27 +796,11 @@ See [Chrome Setup][chrome-setup]
 
 [chrome-setup]: ../chrome.md
 
-### [Firefox][firefox]
+### Firefox
 
-* General:
-    * Restore
-    * (Default check)
-    * Ask where to save
-* Home:
-    * Homepage: Google (or blank?)
-    * New Tab: blank
-* Search:
-    * No suggestions (?)
-* Privacy & Security:
-    * Don't ask to save l/p
-    * No autofill?
-    * Don't send data to Mozilla (?)
-* (Bunny)
-* Keys
-* Wheel and keys
-* (see `../firefox` directory)
+See [Firefox Setup][firefox-setup]
 
-[firefox]: https://www.mozilla.org/en-US/firefox/new/
+[firefox-setup]: ../firefox.md
 
 ## Messaging and VC
 
