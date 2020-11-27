@@ -1275,6 +1275,20 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 [gog]: https://www.gog.com/
 [gog-dl]: https://www.gog.com/galaxy
 
+### ([Origin][origin])
+
+[Download][origin-dl]
+
+[origin]: https://www.origin.com/usa/en-us/store
+[origin-dl]: https://www.origin.com/usa/en-us/store/download
+
+### [itch.io][itch-app]
+
+[Download][itch-app-dl]
+
+[itch-app]: https://itch.io/
+[itch-app-dl]: https://itch.io/app
+
 ## Windows Compatibility
 
 ### [CrossOver][crossover]
@@ -1346,6 +1360,8 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * (Steam)
 * (Epic)
 * (GOG Galaxy)
+* (Origin)
+* (itch)
 * (CrossOver)
 * (CrossOver apps)
 
@@ -1376,6 +1392,8 @@ Discord? (in Franz?)
 * Steam
 * Epic
 * GOG Galaxy
+* (Origin)
+* itch
 * CrossOver
 * CrossOver apps
 * ESET / etc.
