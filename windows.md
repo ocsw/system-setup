@@ -210,8 +210,11 @@ Control Panel
 ### Finder
 ## Networking
 ### PIA
+### [FortiClient][forticlient]
+### (other VPNs)
 ## Hardware
-### Logitech Control Center (w/Marathon Mouse M705)
+### Logitech SetPoint (w/Marathon Mouse M705)
+### [Logitech Gaming Software][ghub] (w/C920 webcam)
 ### Blue Sherpa
 ## Backup and Sync
 ### SpiderOakONE
@@ -219,16 +222,21 @@ Control Panel
 ### Dropbox
 ## General Utilities
 ### WinDirStat
+### [Wireshark][wireshark]
 ## Browsers
 ### Chrome
 ### Firefox
 ### Edge
 ## Messaging and VC
 ### Franz
-### Skype (in Franz?)
-### Slack (App Store; in Franz?)
+### ([Telegram][telegram]? (in Franz instead?))
+### ([Signal][signal]?)
+### [Skype][skype] (in Franz instead?)
+### ([Discord][discord]? (in Franz instead?))
+### [Slack][slack] (optional App Store; in Franz instead?)
 ## Media
 ### Spotify
+optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
 ### Amazon Music
 ### iTunes
 ### Kindle
@@ -237,14 +245,17 @@ Control Panel
 ## Productivity and Editing
 ### Bluefish
 ### Notepad++
+### ([Atom][atom], [Sublime][sublime], etc.)
+### ([PyCharm][pycharm], [GoLand][goland], [IntelliJ][intellij], etc.)
 ### VSCode
 ### OneNote (App Store)
 ### Office
 ## Command-line Related
-### Homebrew
+### WSL (& packages)
 ### General Setup
 ### SSH
 ### GPG
+### Permissions
 ## Gaming
 ### Steam
 ### Epic Games Launcher
@@ -255,19 +266,4 @@ itch
 ## List Orders
 ### uBar App Order
 
-### [Wireshark][wireshark]
-### ([Telegram][telegram]? (in Franz instead?))
-### ([Signal][signal]?)
-### [Skype][skype] (in Franz instead?)
-### ([Discord][discord]? (in Franz instead?))
-### [Slack][slack] (optional App Store; in Franz instead?)
-### ([Atom][atom], [Sublime][sublime], etc.)
-### ([PyCharm][pycharm], [GoLand][goland], [IntelliJ][intellij], etc.)
-### [Sequel Pro][sequel-pro]
-## Command-line Related
 ### [iTerm2][iterm2]
-### [Homebrew][homebrew]
-### General Setup
-### SSH
-### GPG
-### Permissions
