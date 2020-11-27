@@ -432,7 +432,7 @@ e.g. headphones, controllers
 [spideroak-one]: https://spideroak.com/one/
 [spideroak-one-dl]: https://spideroak.com/opendownload/
 
-### Google Backup and Sync
+### [Google Backup and Sync][google-b-s]
 
 * Computer:
     * Name: change to match hostname
@@ -444,6 +444,8 @@ e.g. headphones, controllers
     * USB/SD: no
 * Google Drive:
     * Sync My Drive (all) (?)
+
+[google-b-s]: https://www.google.com/drive/download/
 
 ### [Dropbox][dropbox]
 
