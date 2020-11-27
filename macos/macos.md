@@ -291,22 +291,26 @@ incl. save recovery key (pic?)
 
 ## Networking
 
-### PIA
+### [PIA][pia]
 
 * General:
     * Launch on startup
     * Don't connect on launch
 * (Exclude io.nwjs.nwjs from uBar (?))
 
-### FortiClient
+[pia]: https://www.privateinternetaccess.com/
+
+### [FortiClient][forticlient]
 
 * (Exclude from uBar)
+
+[forticlient]: https://www.forticlient.com/
 
 ### (other VPNs)
 
 ## Hardware
 
-### Logitech Control Center (w/Marathon Mouse M705)
+### [Logitech Control Center][lcc] (w/Marathon Mouse M705)
 
 * (pair in Unifying Software)
 * General:
@@ -318,7 +322,9 @@ incl. save recovery key (pic?)
         * Thumb button: Desktop (?) Nothing? Mission Control?
             * (default Mission Control -> Mission Control)
 
-### Logitech Gaming Software (w/C920 webcam)
+[lcc]: https://support.logi.com/hc/en-za/articles/360025297833
+
+### [Logitech Gaming Software][ghub] (w/C920 webcam)
 
 * NOTE: requires unplugging and replugging the mouse receiver after it starts
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
@@ -330,7 +336,11 @@ incl. save recovery key (pic?)
         * Disable (?)
         * No Automatic Discovery (?)
 
-### YubiSwitch
+[ghub]: https://www.logitechg.com/en-us/innovation/g-hub.html
+
+### [YubiSwitch][yubiswitch]
+
+[Download][yubiswitch-dl]
 
 * No enable on sleep
 * Auto off
@@ -345,11 +355,14 @@ incl. save recovery key (pic?)
     * Switch off after 5 sec
     * Start on login
 
+[yubiswitch]: https://github.com/pallotron/yubiswitch
+[yubiswitch-dl]: https://github.com/pallotron/yubiswitch/releases/
+
 ### Bluetooth Devices
 
 e.g. headphones, controllers
 
-### ToothFairy (App Store)
+### [ToothFairy][toothfairy] (App Store)
 
 * Add devices:
     * Icon
@@ -361,7 +374,9 @@ e.g. headphones, controllers
 * Hide Dock icon
 * (Exclude from uBar)
 
-### SoundSource
+[toothfairy]: https://c-command.com/toothfairy/
+
+### [SoundSource][soundsource]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * (^ after Super Volume Keys)
@@ -375,9 +390,15 @@ e.g. headphones, controllers
     * Show all meters (?)
 * License
 
-### Blue Sherpa
+[soundsource]: https://rogueamoeba.com/soundsource/
 
-### Android File Transfer
+### [Blue Sherpa][blue-sherpa]
+
+[blue-sherpa]: https://www.bluemic.com/en-us/products/sherpa/
+
+### [Android File Transfer][android-ft]
+
+[android-ft]: https://www.android.com/filetransfer/
 
 ### Printers
 
@@ -385,7 +406,9 @@ e.g. headphones, controllers
 
 ## Backup and Sync
 
-### SpiderOakONE
+### [SpiderOak One][spideroak-one]
+
+[Download][spideroak-one-dl]
 
 * General:
     * Launch minimized?
@@ -406,6 +429,9 @@ e.g. headphones, controllers
           `.hstr_favorites`
         * [work: skip]
 
+[spideroak-one]: https://spideroak.com/one/
+[spideroak-one-dl]: https://spideroak.com/opendownload/
+
 ### Google Backup and Sync
 
 * Computer:
@@ -419,7 +445,9 @@ e.g. headphones, controllers
 * Google Drive:
     * Sync My Drive (all) (?)
 
-### Dropbox
+### [Dropbox][dropbox]
+
+[Download][dropbox-dl]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * General:
@@ -429,9 +457,12 @@ e.g. headphones, controllers
 * Import:
     * No Photos
 
+[dropbox]: https://www.dropbox.com/
+[dropbox-dl]: https://www.dropbox.com/install
+
 ## UI Tools and Tweaks
 
-### uBar
+### [uBar][ubar]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * General:
@@ -457,7 +488,9 @@ e.g. headphones, controllers
     * Activity: right option
 * License
 
-### Witch
+[ubar]: https://brawersoftware.com/products/ubar
+
+### [Witch][witch]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * Actions:
@@ -486,7 +519,9 @@ e.g. headphones, controllers
 * About:
     * License
 
-### BetterTouchTool
+[witch]: https://manytricks.com/witch/
+
+### [BetterTouchTool][btt]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * Basic:
@@ -505,7 +540,9 @@ e.g. headphones, controllers
         * Bring to front
 * License
 
-### Rectangle
+[btt]: https://folivora.ai/
+
+### [Rectangle][rectangle]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * Launch on login
@@ -521,7 +558,9 @@ e.g. headphones, controllers
 * Next Display: `ctrl-opt-cmd-right`
 * Previous Display: `ctrl-opt-cmd-left`
 
-### Moom
+[rectangle]: https://rectangleapp.com/
+
+### [Moom][moom]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * General:
@@ -546,7 +585,9 @@ e.g. headphones, controllers
 * License
 * (Exclude from uBar)
 
-### Amphetamine (App Store)
+[moom]: https://manytricks.com/moom/
+
+### [Amphetamine][amphetamine] (App Store)
 
 * Don't show message
 * Don't show in Dock
@@ -569,13 +610,21 @@ e.g. headphones, controllers
     * Lower opacity?
 * (Exclude from uBar)
 
-### Muzzle
+[amphetamine]: https://apps.apple.com/us/app/amphetamine/id937984704
+
+### [Muzzle][muzzle]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 
-### iStat Menus
+[muzzle]: https://muzzleapp.com/
 
-#### Intel Power Gadget
+### [iStat Menus][istat]
+
+[istat]: https://bjango.com/mac/istatmenus/
+
+#### [Intel Power Gadget][intel-power-gadget]
+
+[intel-power-gadget]: https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html
 
 #### Global (iStat)
 
@@ -676,7 +725,7 @@ These are all alerts; do the other sections first
         * Location Services:
             * iStat on (if Current Location)
 
-### Bartender
+### [Bartender][bartender]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * Menu Items: (see bottom)
@@ -684,9 +733,11 @@ These are all alerts; do the other sections first
     * Launch at login
 * License
 
+[bartender]: https://www.macbartender.com/
+
 ## General Utilities
 
-### Kap
+### [Kap][kap]
 
 * General:
     * Highlight Clicks
@@ -699,25 +750,41 @@ These are all alerts; do the other sections first
     * recording-name
     * reverse
 
-### AppCleaner
+[kap]: https://getkap.co/
+
+### [AppCleaner][appcleaner]
 
 * SmartDelete: on (?)
 * Updates: check automatically
 
-### Suspicious Package
+[appcleaner]: https://freemacsoft.net/appcleaner/
 
-### NameChanger
+### [Suspicious Package][suspicious-package]
+
+[suspicious-package]: https://mothersruin.com/software/SuspiciousPackage/
+
+### [NameChanger][namechanger]
 
 * No history
 * Auto update
 
-### (HoudahSpot (incl. license))
+[namechanger]: https://mrrsoftware.com/namechanger/
 
-### Disk Inventory X
+### ([HoudahSpot][houdahspot] (incl. license))
 
-### DaisyDisk (incl. license)
+[houdahspot]: https://www.houdah.com/houdahSpot/
 
-### Wireshark
+### [Disk Inventory X][disk-inventory-x]
+
+[disk-inventory-x]: http://www.derlien.com/
+
+### [DaisyDisk][daisydisk] (incl. license)
+
+[daisydisk]: https://daisydiskapp.com/
+
+### [Wireshark][wireshark]
+
+[wireshark]: https://www.wireshark.org/
 
 ## Browsers
 
@@ -725,7 +792,7 @@ These are all alerts; do the other sections first
 
 (see `../chrome.txt`)
 
-### Firefox
+### [Firefox][firefox]
 
 * General:
     * Restore
@@ -745,9 +812,11 @@ These are all alerts; do the other sections first
 * Wheel and keys
 * (see `../firefox` directory)
 
+[firefox]: https://www.mozilla.org/en-US/firefox/new/
+
 ## Messaging and VC
 
-### Franz
+### [Franz][franz]
 
 * Account
 * General:
@@ -759,15 +828,29 @@ These are all alerts; do the other sections first
 * Services:
     * Messenger, Hangouts, Telegram, Skype, Discord, Slack, Steam
 
-### (Telegram? (in Franz?))
+[franz]: https://meetfranz.com/
 
-### (Signal?)
+### ([Telegram][telegram]? (in Franz instead?))
 
-### Skype (in Franz?)
+[telegram]: https://telegram.org/
 
-### (Discord? (in Franz?))
+### ([Signal][signal]?)
 
-### Slack (App Store; in Franz?)
+[signal]: https://signal.org/en/
+
+### [Skype][skype] (in Franz instead?)
+
+[skype]: https://www.skype.com/en/
+
+### ([Discord][discord]? (in Franz instead?))
+
+[discord]: https://discord.com/
+
+### [Slack][slack] (optional App Store; in Franz instead?)
+
+[Download - direct][slack-dl]
+
+[Download - App Store][slack-app-store]
 
 (preferences are per-workspace)
 
@@ -824,9 +907,13 @@ These are all alerts; do the other sections first
         * No channel suggestions?
         * Set status when on a call
 
+[slack]: https://slack.com/
+[slack-dl]: https://slack.com/downloads/
+[slack-app-store]: https://apps.apple.com/app/slack/id803453959
+
 ## Media
 
-### Spotify
+### [Spotify][spotify]
 
 * Music Quality:
     * HQ
@@ -841,12 +928,19 @@ These are all alerts; do the other sections first
 * Advanced:
     * Startup: no
 
-### Amazon Music
+[spotify]: https://www.spotify.com/us/
+
+### [Amazon Music][amazon-music]
+
+[Download][amazon-music-dl]
 
 * Advanced:
     * Don't launch on startup
 
-### iTunes
+[amazon-music]: https://www.amazon.com/music
+[amazon-music-dl]: https://www.amazon.com/Amazon-Music-Apps/b?ie=UTF8&node=2658409011
+
+### [iTunes][itunes]
 
 * Account -> Authorize
 * Downloads:
@@ -859,14 +953,18 @@ These are all alerts; do the other sections first
 * Advanced:
     * Don't copy to folder?
 
-### Kindle
+[itunes]: https://www.apple.com/itunes/
+
+### [Kindle][kindle]
 
 * No dictionary
 * No crash reports (?)
 * (rename and add shared libraries)
 * (download books)
 
-### XnViewMP
+[kindle]: https://www.amazon.com/kindle-dbs/fd/kcp
+
+### [XnViewMP][xnviewmp]
 
 * General:
     * General:
@@ -875,13 +973,28 @@ These are all alerts; do the other sections first
     * Keyboard:
         * ESC quits: Never (default) (?)
 
+[xnviewmp]: https://www.xnview.com/en/xnviewmp/
+
 ## Productivity and Editing
 
-### MacVim
+### [MacVim][macvim]
 
-### Bluefish
+[macvim]: https://macvim-dev.github.io/macvim/
 
-### (Atom, Sublime, PyCharm, IntelliJ, etc.)
+### [Bluefish][bluefish]
+
+[bluefish]: http://bluefish.openoffice.nl/index.html
+
+### ([Atom][atom], [Sublime][sublime], etc.)
+
+[atom]: https://atom.io/
+[sublime]: https://www.sublimetext.com/
+
+### ([PyCharm][pycharm], [GoLand][goland], [IntelliJ][intellij], etc.)
+
+[pycharm]: https://www.jetbrains.com/pycharm/
+[goland]: https://www.jetbrains.com/go/
+[intellij]: https://www.jetbrains.com/idea/
 
 ### VSCode
 
@@ -893,13 +1006,21 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
     ~/bin/
 ```
 
-### (Omnigraffle)
+### ([Omnigraffle][omnigraffle])
 
-### (Monodraw)
+[omnigraffle]: https://www.omnigroup.com/omnigraffle
 
-### (MindNode)
+### ([Monodraw][monodraw])
 
-### OneNote (App Store)
+[monodraw]: https://monodraw.helftone.com/
+
+### ([MindNode][mindnode])
+
+[mindnode]: https://mindnode.com/
+
+### [OneNote][onenote] (App Store)
+
+[Download][onenote-dl]
 
 * -> System Preferences -> Extensions -> Share Menu -> on
 * -> OneNote Web Clipper in Chrome (?)
@@ -916,21 +1037,14 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
 * Printing:
     * Two-Sided
 
-### Office
+[onenote]: https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app
+[onenote-dl]: https://www.onenote.com/download
 
-### Pages
+### [Office][ms-office]
 
-* General:
-    * New: Blank (?)
-    * Author
-* Auto-Correction:
-    * No auto spelling
-    * No auto caps
-    * No Link style?
-    * No smart quotes?
-    * Replacements on (?)
+[ms-office]: https://www.office.com/
 
-### Numbers
+### [Pages][pages]
 
 * General:
     * New: Blank (?)
@@ -942,7 +1056,23 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
     * No smart quotes?
     * Replacements on (?)
 
-### Keynote
+[pages]: https://www.apple.com/pages/
+
+### [Numbers][numbers]
+
+* General:
+    * New: Blank (?)
+    * Author
+* Auto-Correction:
+    * No auto spelling
+    * No auto caps
+    * No Link style?
+    * No smart quotes?
+    * Replacements on (?)
+
+[numbers]: https://www.apple.com/numbers/
+
+### [Keynote][keynote]
 
 * General:
     * Author
@@ -955,13 +1085,17 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
     * No smart quotes?
     * Replacements on (?)
 
-### Sequel Pro
+[keynote]: https://www.apple.com/keynote/
+
+### [Sequel Pro][sequel-pro]
 
 * Auto-update
 
+[sequel-pro]: https://www.sequelpro.com/
+
 ## Command-line Related
 
-### iTerm2
+### [iTerm2][iterm2]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * General:
@@ -980,12 +1114,19 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
     * Mouse:
         * Scroll wheel sends arrow keys when in alternate screen mode: Yes
 
-### XCode
+[iterm2]: https://iterm2.com/
+
+### [XCode][xcode] (App Store)
+
+[Download - App Store][xcode-app-store]
 
 * incl. additional components, command-line tools
 * `xcode-select --install` after OS upgrade
 
-### Homebrew
+[xcode]: https://developer.apple.com/xcode/
+[xcode-app-store]: https://apps.apple.com/us/app/xcode/id497799835
+
+### [Homebrew][homebrew]
 
 ```shell
 umask 022
@@ -1005,6 +1146,8 @@ umask 077
     * on 10.15+ (Catalina), `chsh -s /bin/bash` if not doing the above, and add
       `export BASH_SILENCE_DEPRECATION_WARNING=1` to `~/.bash_profile`
 * restart shell (fixes problem with `pybase`)
+
+[homebrew]: https://brew.sh/
 
 ### General Setup
 
@@ -1055,7 +1198,7 @@ gpgconf --kill gpg-agent
 * (put our lines at the top of the config files, with a blank before the suite
   ones?)
 
-#### Option 2 (suite)
+#### Option 2 ([GPG suite][gpg-suite])
 
 ```shell
 umask 022
@@ -1067,6 +1210,8 @@ umask 077
 * create a key (use RSA/RSA 4096, no expiration, the same name and email as
   for git, and comment `HOSTNAME -> GitHub`; see
   `../unix-common/account-setup.psh`)
+
+[gpg-suite]: https://gpgtools.org/
 
 #### Either way
 
@@ -1092,7 +1237,9 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 
 ## Gaming
 
-### Steam
+### [Steam][steam]
+
+[Download][steam-dl]
 
 * Account
 * Interface:
@@ -1103,27 +1250,42 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
         * Prefs -> lower brightness (down to 1/3)
 * (install games)
 
-### Epic Games Launcher
+[steam]: https://store.steampowered.com/
+[steam-dl]: https://store.steampowered.com/about/
+
+### [Epic Games Launcher][epic-games]
+
+[Download][epic-games-dl]
 
 * Don't run on startup
 * (install games)
 
-### GOG Galaxy
+[epic-games]: https://www.epicgames.com/store/en-US/
+[epic-games-dl]: https://www.epicgames.com/store/en-US/download
+
+### [GOG Galaxy][gog]
+
+[Download][gog-dl]
 
 * General:
     * Don't launch at startup
     * Starting page: Library
 * (install games)
 
+[gog]: https://www.gog.com/
+[gog-dl]: https://www.gog.com/galaxy
+
 ## Windows Compatibility
 
-### CrossOver
+### [CrossOver][crossover]
 
 * Updates:
     * Check
     * Log and report
 * License
 * (install programs, e.g. Steam, IrfanView w/plugins)
+
+[crossover]: https://www.codeweavers.com/crossover
 
 ## List Orders
 
@@ -1174,7 +1336,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * (Skype), Franz, Slack
 * OneNote
 * Chrome, Firefox
-* VSCode / Atom / Sublime / PyCharm / IntelliJ / etc.
+* VSCode / Atom / Sublime / PyCharm / GoLand / IntelliJ / etc.
 * (TextEdit) / Bluefish / MacVim / etc.
 * iTerm
 * (Omnigraffle)
@@ -1201,7 +1363,7 @@ Discord? (in Franz?)
 
 * OneNote
 * Chrome, Firefox
-* VSCode, Atom, Sublime, PyCharm, IntelliJ, XCode, etc.
+* VSCode, Atom, Sublime, PyCharm, GoLand, IntelliJ, XCode, etc.
 * TextEdit, Bluefish, MacVim, etc.
 * iTerm
 * Docker
