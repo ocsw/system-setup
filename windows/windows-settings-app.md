@@ -87,7 +87,7 @@
     * Don't send to Microsoft
 * Location:
     * on
-    * no 3d viewer, Skype
+    * no 3d viewer, Skype (?)
     * (check Night light)
 * Camera, Microphone:
     * Feedback Hub off

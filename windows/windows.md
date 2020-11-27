@@ -118,6 +118,9 @@ links to folders
 ### [Wireshark][wireshark]
 ## Browsers
 ### Chrome
+-> Settings App -> Apps -> Default apps:
+    * Email: Chrome
+    * Web browser: Chrome
 ### Firefox
 ### Edge
 ## Messaging and VC
@@ -125,6 +128,8 @@ links to folders
 ### ([Telegram][telegram]? (in Franz instead?))
 ### ([Signal][signal]?)
 *** ### [Skype][skype] (in Franz instead?)
+-> Settings App -> Privacy -> Location:
+    * no Skype (?)
 ### ([Discord][discord]? (in Franz instead?))
 *** ### [Slack][slack] (optional App Store; in Franz instead?)
 ## Media
