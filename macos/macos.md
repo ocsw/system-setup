@@ -88,7 +88,8 @@ See [System Preferences Setup][macos-system-prefs]
 
 ### [Logitech Gaming Software][ghub] (w/C920 webcam)
 
-* NOTE: requires unplugging and replugging the mouse receiver after it starts
+NOTE: requires unplugging and replugging the mouse receiver after it starts
+
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * General:
     * Start automatically? (without this, it's still in the login list, hidden)
@@ -465,6 +466,8 @@ Download from main site or [App Store][daisydisk-app-store]
 
 See [Chrome Setup][chrome-setup]
 
+* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+
 [chrome]: https://www.google.com/chrome/
 [chrome-extensions]: https://chrome.google.com/webstore/category/extensions
 [chrome-setup]: ../chrome.md
@@ -523,6 +526,8 @@ See [Firefox Setup][firefox-setup]
 (preferences are per-workspace)
 
 (sign into workspaces)
+
+* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 
 * Profile
 * Status
@@ -625,6 +630,7 @@ See [Firefox Setup][firefox-setup]
 
 ### [Kindle][kindle]
 
+* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * No dictionary
 * No crash reports (?)
 * (rename and add shared libraries)
@@ -810,6 +816,7 @@ See [IntelliJ Setup][intellij-setup]
 
 * incl. additional components, command-line tools
 * `xcode-select --install` after OS upgrade
+* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 
 [xcode]: https://developer.apple.com/xcode/
 [xcode-app-store]: https://apps.apple.com/us/app/xcode/id497799835
@@ -933,6 +940,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 
 [Download][steam-dl]
 
+* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * Account
 * Interface:
     * Don't run on startup
