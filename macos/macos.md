@@ -70,7 +70,7 @@ incl. save recovery key (pic?)
             * Installer -> System Events?
             * iTerm -> Google Chrome
             * Logitech Control Center -> System Events
-            * SpiderOakONE -> System Events
+            * SpiderOak One -> System Events
             * uBar -> Finder, iTunes, Spotify
             * Witch -> Code, Slack, System Preferences, System Events
     * No analytics
@@ -212,7 +212,7 @@ incl. save recovery key (pic?)
     * Login Items:
         * incl. Android File Transfer, BetterTouchTool, CrossOver, Dropbox,
           Google Backup, Logitech Gaming Software, Moom, Rectangle,
-          SoundSource, SpiderOakONE, uBar, Witch, YubiSwitch
+          SoundSource, SpiderOak One, uBar, Witch, YubiSwitch
 * Disable Guest User
 * Login Options:
     * Display login as name and password? (entry boxes only, vs list of
@@ -1185,7 +1185,7 @@ for i in ~/.ssh/*_{dsa,ecdsa,ed25519,rsa}; do
 done
 ```
 
-* add `~/.ssh` to SpiderOakONE (depending)
+* add `~/.ssh` to SpiderOak One (depending)
 
 ### GPG
 
@@ -1333,7 +1333,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * Witch (Hide, ?Show for updates)
 * Dropbox
 * Google Backup
-* SpiderOakONE
+* SpiderOak One
 * FortiClient
 * PIA
 * WiFi

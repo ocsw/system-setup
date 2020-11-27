@@ -136,7 +136,7 @@ Zoom
 pins/dt/start
 links to folders
 
-SpiderOakONE:
+SpiderOak One:
   General:
     Launch minimized?
     Don't show splash screen
@@ -217,7 +217,7 @@ Control Panel
 ### [Logitech Gaming Software][ghub] (w/C920 webcam)
 ### Blue Sherpa
 ## Backup and Sync
-### SpiderOakONE
+### SpiderOak One
 ### Google Backup and Sync
 ### Dropbox
 ## General Utilities
