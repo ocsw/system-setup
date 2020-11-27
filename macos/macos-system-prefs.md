@@ -179,7 +179,7 @@
 ## Extensions
 
 * Finder Extensions:
-    * Dropbox, Google
+    * Backup and Sync from Google, Dropbox
 * Share Menu:
     * OneNote on
     * others off?

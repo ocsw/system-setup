@@ -202,6 +202,7 @@ e.g. headphones, controllers
 
 ### [Google Backup and Sync][google-b-s]
 
+* -> System Preferences -> Extensions -> Finder Extensions: allow
 * Computer:
     * Name: change to match hostname
     * Folders (all from homedir):
@@ -219,6 +220,7 @@ e.g. headphones, controllers
 
 [Download][dropbox-dl]
 
+* -> System Preferences -> Extensions -> Finder Extensions: allow
 * -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Start on startup
