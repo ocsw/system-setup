@@ -37,7 +37,7 @@
 * Privacy:
     * Location Services:
         * Enable
-        * All apps off (except Flux if installed, iStat if Current Location)
+        * All apps off (except iStat if using Current Location)
         * System Services: don't show icon
     * Contacts: all off
     * Calendars: all off

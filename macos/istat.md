@@ -93,7 +93,8 @@ These are all alerts; do the other sections first
 ## -> System Preferences
 
 * Date & Time:
-    * No date (if using date icon)
+    * Clock:
+        * No date (if using date icon)
 * Energy Saver:
     * No battery in menu bar
 * Extensions:
@@ -102,4 +103,4 @@ These are all alerts; do the other sections first
 * Security & Privacy:
     * Privacy:
         * Location Services:
-            * iStat on (if Current Location)
+            * iStat on (if using Current Location)
