@@ -980,6 +980,19 @@ See [Firefox Setup][firefox-setup]
 
 [bluefish]: http://bluefish.openoffice.nl/index.html
 
+### VSCode
+
+See the [VSCode Setup][vscode-setup] directory
+
+* Create symlink:
+
+```shell
+ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
+    ~/bin/
+```
+
+[vscode-setup]: ../vscode/
+
 ### ([Atom][atom], [Sublime][sublime], etc.)
 
 [atom]: https://atom.io/
@@ -998,57 +1011,6 @@ See [Firefox Setup][firefox-setup]
 [intellij]: https://www.jetbrains.com/idea/
 
 ### (other JetBrains and/or language-specific IDEs)
-
-### VSCode
-
-See the [VSCode Setup][vscode-setup] directory
-
-* Create symlink:
-
-```shell
-ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
-    ~/bin/
-```
-
-[vscode-setup]: ../vscode/
-
-### ([Omnigraffle][omnigraffle]) ($)
-
-[omnigraffle]: https://www.omnigroup.com/omnigraffle
-
-### ([Monodraw][monodraw]) ($)
-
-[monodraw]: https://monodraw.helftone.com/
-
-### ([MindNode][mindnode]) (App Store)
-
-[mindnode]: https://mindnode.com/
-
-### [OneNote][onenote] (App Store)
-
-[Download][onenote-dl]
-
-* -> System Preferences -> Extensions -> Share Menu -> on
-* -> OneNote Web Clipper in Chrome (?)
-* General:
-    * Store in OneDrive (?)
-* Spelling:
-    * No auto spelling
-    * No check spelling
-    * No auto caps
-* Quick Access Toolbar:
-    * Just Undo/Redo
-* Navigation Panes:
-    * Hide all (just Section List?)
-* Printing:
-    * Two-Sided
-
-[onenote]: https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app
-[onenote-dl]: https://www.onenote.com/download
-
-### [Office][ms-office]
-
-[ms-office]: https://www.office.com/
 
 ### [Pages][pages] (App Store)
 
@@ -1092,6 +1054,44 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
     * Replacements on (?)
 
 [keynote]: https://www.apple.com/keynote/
+
+### [Office][ms-office]
+
+[ms-office]: https://www.office.com/
+
+### [OneNote][onenote] (App Store)
+
+[Download][onenote-dl]
+
+* -> System Preferences -> Extensions -> Share Menu -> on
+* -> OneNote Web Clipper in Chrome (?)
+* General:
+    * Store in OneDrive (?)
+* Spelling:
+    * No auto spelling
+    * No check spelling
+    * No auto caps
+* Quick Access Toolbar:
+    * Just Undo/Redo
+* Navigation Panes:
+    * Hide all (just Section List?)
+* Printing:
+    * Two-Sided
+
+[onenote]: https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app
+[onenote-dl]: https://www.onenote.com/download
+
+### ([Omnigraffle][omnigraffle]) ($)
+
+[omnigraffle]: https://www.omnigroup.com/omnigraffle
+
+### ([Monodraw][monodraw]) ($)
+
+[monodraw]: https://monodraw.helftone.com/
+
+### ([MindNode][mindnode]) (App Store)
+
+[mindnode]: https://mindnode.com/
 
 ### [Sequel Pro][sequel-pro]
 

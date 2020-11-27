@@ -245,14 +245,14 @@ optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
 ## Productivity and Editing
 ### Bluefish
 ### Notepad++
+### VSCode
 ### ([Atom][atom], [Sublime][sublime], etc.)
 ### ([PyCharm][pycharm]) ($/free)
 ### ([GoLand][goland]) ($)
 ### ([IntelliJ][intellij]) ($/free)
 ### (other JetBrains and/or language-specific IDEs)
-### VSCode
-### OneNote (App Store)
 ### Office
+### OneNote (App Store)
 ## Command-line Related
 ### WSL (& packages)
 ### General Setup
