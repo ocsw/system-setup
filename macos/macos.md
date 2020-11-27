@@ -797,16 +797,27 @@ Download from main site or [App Store][daisydisk-app-store]
 
 ## Browsers
 
-### Chrome
+### [Chrome][chrome]
+
+[Extensions][chrome-extensions]
 
 See [Chrome Setup][chrome-setup]
 
+[chrome]: https://www.google.com/chrome/
+[chrome-extensions]: https://chrome.google.com/webstore/category/extensions
 [chrome-setup]: ../chrome.md
 
-### Firefox
+### [Firefox][firefox]
+
+[Add-ons][firefox-add-ons]
+
+[Extensions][firefox-extensions]
 
 See [Firefox Setup][firefox-setup]
 
+[firefox]: https://www.mozilla.org/en-US/firefox/new/
+[firefox-add-ons]: https://addons.mozilla.org/en-US/firefox/
+[firefox-extensions]: https://addons.mozilla.org/en-US/firefox/extensions/
 [firefox-setup]: ../firefox.md
 
 ## Messaging and VC
@@ -1069,7 +1080,9 @@ See [Firefox Setup][firefox-setup]
 
 [bluefish]: http://bluefish.openoffice.nl/index.html
 
-### VSCode
+### [VSCode][vscode]
+
+[Extensions][vscode-extensions]
 
 See the [VSCode Setup][vscode-setup] directory
 
@@ -1080,6 +1093,8 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
     ~/bin/
 ```
 
+[vscode]: https://code.visualstudio.com/
+[vscode-extensions]: https://marketplace.visualstudio.com/VSCode
 [vscode-setup]: ../vscode/
 
 ### ([Atom][atom], [Sublime][sublime], etc.)
