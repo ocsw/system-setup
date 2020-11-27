@@ -249,7 +249,7 @@ optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
 ### ([Atom][atom], [Sublime][sublime], etc.)
 ### ([PyCharm][pycharm]) ($/free)
 ### ([GoLand][goland]) ($)
-*** ### ([IntelliJ][intellij]) ($/free)
+### ([IntelliJ][intellij]) ($/free)
 ### (other JetBrains and/or language-specific IDEs)
 ## Command-line Related
 ### WSL (& packages)

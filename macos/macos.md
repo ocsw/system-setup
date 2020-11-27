@@ -1112,7 +1112,10 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
 
 ### ([IntelliJ][intellij]) ($/free)
 
+See [IntelliJ Setup][intellij-setup]
+
 [intellij]: https://www.jetbrains.com/idea/
+[intellij-setup]: ../intellij.txt
 
 ### (other JetBrains and/or language-specific IDEs)
 
