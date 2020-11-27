@@ -90,7 +90,7 @@ See [System Preferences Setup][macos-system-prefs]
 
 NOTE: requires unplugging and replugging the mouse receiver after it starts
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Start automatically? (without this, it's still in the login list, hidden)
 * Analytics: off (?)
@@ -141,7 +141,7 @@ e.g. headphones, controllers
 
 ### [SoundSource][soundsource] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * (^ after Super Volume Keys)
 * General:
     * Start at login
@@ -214,7 +214,7 @@ e.g. headphones, controllers
 
 [Download][dropbox-dl]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Start on startup
     * Enable Finder integration
@@ -229,7 +229,7 @@ e.g. headphones, controllers
 
 ### [uBar][ubar] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Pinning: all if not ultrawide, else bottom only
     * Display: Main (?)
@@ -257,7 +257,7 @@ e.g. headphones, controllers
 
 ### [Witch][witch] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * Actions:
     * 1:
         * Cycle windows
@@ -288,7 +288,7 @@ e.g. headphones, controllers
 
 ### [BetterTouchTool][btt] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * Basic:
     * Touch Bar:
         * No icon
@@ -309,7 +309,7 @@ e.g. headphones, controllers
 
 ### [Rectangle][rectangle]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * Launch on login
 * No snap by dragging (?)
 * Check for updates
@@ -327,7 +327,7 @@ e.g. headphones, controllers
 
 ### [Moom][moom] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Launch on login
     * Don't show prefs on launch
@@ -379,7 +379,7 @@ e.g. headphones, controllers
 
 ### [Muzzle][muzzle]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 
 [muzzle]: https://muzzleapp.com/
 
@@ -392,7 +392,7 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Bartender][bartender] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * Menu Items: (see bottom)
 * General:
     * Launch at login
@@ -466,7 +466,7 @@ Download from main site or [App Store][daisydisk-app-store]
 
 See [Chrome Setup][chrome-setup]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 
 [chrome]: https://www.google.com/chrome/
 [chrome-extensions]: https://chrome.google.com/webstore/category/extensions
@@ -527,7 +527,7 @@ See [Firefox Setup][firefox-setup]
 
 (sign into workspaces)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 
 * Profile
 * Status
@@ -630,7 +630,7 @@ See [Firefox Setup][firefox-setup]
 
 ### [Kindle][kindle]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * No dictionary
 * No crash reports (?)
 * (rename and add shared libraries)
@@ -702,7 +702,7 @@ See [Firefox Setup][firefox-setup]
 
 [Download][onenote-dl]
 
-* -> System Preferences -> Extensions -> Share Menu -> on
+* -> System Preferences -> Extensions -> Share Menu: on
 * -> OneNote Web Clipper in Chrome (?)
 * General:
     * Store in OneDrive (?)
@@ -791,7 +791,7 @@ See [IntelliJ Setup][intellij-setup]
 
 ### [iTerm2][iterm2]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Bury tmux session (?)
 * Profiles:
@@ -816,7 +816,7 @@ See [IntelliJ Setup][intellij-setup]
 
 * incl. additional components, command-line tools
 * `xcode-select --install` after OS upgrade
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 
 [xcode]: https://developer.apple.com/xcode/
 [xcode-app-store]: https://apps.apple.com/us/app/xcode/id497799835
@@ -916,7 +916,7 @@ umask 077
 
 * sign something (e.g. `git -s -u KEY_ID`, then mash keys and hit `ctrl-d`);
   check 'Save in Keychain' (or click 'Always Allow', whichever appears)
-* -> System Preferences -> GPG Suite -> Settings -> (Default Key)
+* -> System Preferences -> GPG Suite -> Settings: (Default Key)
 * (or if not using GPG suite at all, optionally add `default-key KEY_ID` to
   `gpg.conf` in both (?) `~/.gnupg` and `~/.gnupg_pre_2.1`)
 
@@ -940,7 +940,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 
 [Download][steam-dl]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
 * Account
 * Interface:
     * Don't run on startup
