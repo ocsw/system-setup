@@ -970,47 +970,7 @@ See [Firefox Setup][firefox-setup]
 
 [xnviewmp]: https://www.xnview.com/en/xnviewmp/
 
-## Productivity and Editing
-
-### [MacVim][macvim]
-
-[macvim]: https://macvim-dev.github.io/macvim/
-
-### [Bluefish][bluefish]
-
-[bluefish]: http://bluefish.openoffice.nl/index.html
-
-### VSCode
-
-See the [VSCode Setup][vscode-setup] directory
-
-* Create symlink:
-
-```shell
-ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
-    ~/bin/
-```
-
-[vscode-setup]: ../vscode/
-
-### ([Atom][atom], [Sublime][sublime], etc.)
-
-[atom]: https://atom.io/
-[sublime]: https://www.sublimetext.com/
-
-### ([PyCharm][pycharm]) ($/free)
-
-[pycharm]: https://www.jetbrains.com/pycharm/
-
-### ([GoLand][goland]) ($)
-
-[goland]: https://www.jetbrains.com/go/
-
-### ([IntelliJ][intellij]) ($/free)
-
-[intellij]: https://www.jetbrains.com/idea/
-
-### (other JetBrains and/or language-specific IDEs)
+## Documents and Productivity
 
 ### [Pages][pages] (App Store)
 
@@ -1098,6 +1058,48 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
 * Auto-update
 
 [sequel-pro]: https://www.sequelpro.com/
+
+## Text Editors
+
+### [MacVim][macvim]
+
+[macvim]: https://macvim-dev.github.io/macvim/
+
+### [Bluefish][bluefish]
+
+[bluefish]: http://bluefish.openoffice.nl/index.html
+
+### VSCode
+
+See the [VSCode Setup][vscode-setup] directory
+
+* Create symlink:
+
+```shell
+ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
+    ~/bin/
+```
+
+[vscode-setup]: ../vscode/
+
+### ([Atom][atom], [Sublime][sublime], etc.)
+
+[atom]: https://atom.io/
+[sublime]: https://www.sublimetext.com/
+
+### ([PyCharm][pycharm]) ($/free)
+
+[pycharm]: https://www.jetbrains.com/pycharm/
+
+### ([GoLand][goland]) ($)
+
+[goland]: https://www.jetbrains.com/go/
+
+### ([IntelliJ][intellij]) ($/free)
+
+[intellij]: https://www.jetbrains.com/idea/
+
+### (other JetBrains and/or language-specific IDEs)
 
 ## Command-line Related
 

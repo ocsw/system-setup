@@ -242,7 +242,10 @@ optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
 ### Kindle
 ### IrfanView
 ### XnViewMP
-## Productivity and Editing
+## Documents and Productivity
+### Office
+### OneNote (App Store)
+## Text Editors
 ### Bluefish
 ### Notepad++
 ### VSCode
@@ -251,8 +254,6 @@ optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
 ### ([GoLand][goland]) ($)
 ### ([IntelliJ][intellij]) ($/free)
 ### (other JetBrains and/or language-specific IDEs)
-### Office
-### OneNote (App Store)
 ## Command-line Related
 ### WSL (& packages)
 ### General Setup
