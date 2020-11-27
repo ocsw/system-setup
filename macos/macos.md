@@ -792,7 +792,9 @@ These are all alerts; do the other sections first
 
 ### Chrome
 
-(see `../chrome.txt`)
+See [Chrome Setup][chrome-setup]
+
+[chrome-setup]: ../chrome.md
 
 ### [Firefox][firefox]
 
@@ -1000,13 +1002,16 @@ These are all alerts; do the other sections first
 
 ### VSCode
 
-* (see `../vscode` directory)
+See the [VSCode Setup][vscode-setup] directory
+
 * Create symlink:
 
 ```shell
 ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
     ~/bin/
 ```
+
+[vscode-setup]: ../vscode/
 
 ### ([Omnigraffle][omnigraffle])
 
@@ -1130,6 +1135,8 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
 
 ### [Homebrew][homebrew]
 
+Run from the [Unix Setup][unix-setup] directory:
+
 ```shell
 umask 022
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -1153,10 +1160,11 @@ umask 077
 
 ### General Setup
 
-* (see `../unix-common/packages.txt`)
+See the [Unix Setup][unix-setup] directory
+
 * dotfiles, incl. dotfile and `.to_back_up` links
 * add `.to_back_up` to Google Backup
-* rest of `../unix-common`
+* rest of the [Unix Setup][unix-setup] directory
 * add hostname to `127.0.0.1` in `/etc/hosts`?
 
 ### SSH
@@ -1193,7 +1201,7 @@ echo "pinentry-program /usr/local/bin/pinentry-mac" >> \
 gpgconf --kill gpg-agent
 ```
 
-* follow directions in `../unix-common/account-setup.psh`
+* follow directions in [Unix Account Setup][unix-account-setup]
 * install GPG Suite, for GUI
     * (if desired; updates may will overwrite config files)
     * (may not automatically pick up new keys?)
@@ -1209,9 +1217,10 @@ umask 077
 ```
 
 * install GPG Suite
-* create a key (use RSA/RSA 4096, no expiration, the same name and email as
-  for git, and comment `HOSTNAME -> GitHub`; see
-  `../unix-common/account-setup.psh`)
+* create a key
+    * use RSA/RSA 4096, no expiration, the same name and email as
+      for git, and comment `HOSTNAME -> GitHub`
+    * see [Unix Account Setup][unix-account-setup]
 
 [gpg-suite]: https://gpgtools.org/
 
@@ -1404,4 +1413,9 @@ Discord? (in Franz?)
 
 ## OS Version Notes
 
-(see also `catalina.txt`)
+See [Catalina Notes][catalina-notes]
+
+[catalina-notes]: catalina.txt
+
+[unix-setup]: ../unix-common/
+[unix-account-setup]: ../unix-common/account-setup.psh
