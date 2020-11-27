@@ -362,7 +362,7 @@ incl. save recovery key (pic?)
 
 e.g. headphones, controllers
 
-### [ToothFairy][toothfairy] (App Store)
+### [ToothFairy][toothfairy] ($) (App Store)
 
 * Add devices:
     * Icon
@@ -376,7 +376,7 @@ e.g. headphones, controllers
 
 [toothfairy]: https://c-command.com/toothfairy/
 
-### [SoundSource][soundsource]
+### [SoundSource][soundsource] ($)
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * (^ after Super Volume Keys)
@@ -464,7 +464,7 @@ e.g. headphones, controllers
 
 ## UI Tools and Tweaks
 
-### [uBar][ubar]
+### [uBar][ubar] ($)
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * General:
@@ -492,7 +492,7 @@ e.g. headphones, controllers
 
 [ubar]: https://brawersoftware.com/products/ubar
 
-### [Witch][witch]
+### [Witch][witch] ($)
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * Actions:
@@ -523,7 +523,7 @@ e.g. headphones, controllers
 
 [witch]: https://manytricks.com/witch/
 
-### [BetterTouchTool][btt]
+### [BetterTouchTool][btt] ($)
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * Basic:
@@ -562,7 +562,7 @@ e.g. headphones, controllers
 
 [rectangle]: https://rectangleapp.com/
 
-### [Moom][moom]
+### [Moom][moom] ($)
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * General:
@@ -620,7 +620,7 @@ e.g. headphones, controllers
 
 [muzzle]: https://muzzleapp.com/
 
-### [iStat Menus][istat]
+### [iStat Menus][istat] ($)
 
 [istat]: https://bjango.com/mac/istatmenus/
 
@@ -727,7 +727,7 @@ These are all alerts; do the other sections first
         * Location Services:
             * iStat on (if Current Location)
 
-### [Bartender][bartender]
+### [Bartender][bartender] ($)
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility -> allow
 * Menu Items: (see bottom)
@@ -772,7 +772,9 @@ These are all alerts; do the other sections first
 
 [namechanger]: https://mrrsoftware.com/namechanger/
 
-### ([HoudahSpot][houdahspot] (incl. license))
+### ([HoudahSpot][houdahspot] ($)
+
+* License
 
 [houdahspot]: https://www.houdah.com/houdahSpot/
 
@@ -780,9 +782,11 @@ These are all alerts; do the other sections first
 
 [disk-inventory-x]: http://www.derlien.com/
 
-### [DaisyDisk][daisydisk] (incl. license)
+### [DaisyDisk][daisydisk] ($)
 
 Download from main site or [App Store][daisydisk-app-store]
+
+* License
 
 [daisydisk]: https://daisydiskapp.com/
 [daisydisk-app-store]: https://apps.apple.com/app/daisydisk/id411643860
@@ -981,11 +985,19 @@ See [Firefox Setup][firefox-setup]
 [atom]: https://atom.io/
 [sublime]: https://www.sublimetext.com/
 
-### ([PyCharm][pycharm], [GoLand][goland], [IntelliJ][intellij], etc.)
+### ([PyCharm][pycharm]) ($/free)
 
 [pycharm]: https://www.jetbrains.com/pycharm/
+
+### ([GoLand][goland]) ($)
+
 [goland]: https://www.jetbrains.com/go/
+
+### ([IntelliJ][intellij]) ($/free)
+
 [intellij]: https://www.jetbrains.com/idea/
+
+### (other JetBrains and/or language-specific IDEs)
 
 ### VSCode
 
@@ -1000,11 +1012,11 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
 
 [vscode-setup]: ../vscode/
 
-### ([Omnigraffle][omnigraffle])
+### ([Omnigraffle][omnigraffle]) ($)
 
 [omnigraffle]: https://www.omnigroup.com/omnigraffle
 
-### ([Monodraw][monodraw])
+### ([Monodraw][monodraw]) ($)
 
 [monodraw]: https://monodraw.helftone.com/
 
@@ -1292,7 +1304,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 
 ## Windows Compatibility
 
-### [CrossOver][crossover]
+### [CrossOver][crossover] ($)
 
 * Updates:
     * Check
