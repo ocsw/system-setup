@@ -1014,7 +1014,7 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
 
 [monodraw]: https://monodraw.helftone.com/
 
-### ([MindNode][mindnode])
+### ([MindNode][mindnode]) (App Store)
 
 [mindnode]: https://mindnode.com/
 
@@ -1044,7 +1044,7 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
 
 [ms-office]: https://www.office.com/
 
-### [Pages][pages]
+### [Pages][pages] (App Store)
 
 * General:
     * New: Blank (?)
@@ -1058,7 +1058,7 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
 
 [pages]: https://www.apple.com/pages/
 
-### [Numbers][numbers]
+### [Numbers][numbers] (App Store)
 
 * General:
     * New: Blank (?)
@@ -1072,7 +1072,7 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
 
 [numbers]: https://www.apple.com/numbers/
 
-### [Keynote][keynote]
+### [Keynote][keynote] (App Store)
 
 * General:
     * Author
