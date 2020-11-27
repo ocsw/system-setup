@@ -127,15 +127,6 @@ e.g. headphones, controllers
 
 ### Scanners
 
-WSL
-Jelly Bean KeyFinder
-CPU-Z
-
-** Zoom
-
-pins/dt/start
-links to folders
-
 SpiderOak One:
   General:
     Launch minimized?
@@ -196,10 +187,12 @@ IrfanView
 IrfanView Thumbnails
     Warning on ESC?
 
-wsl backups?
-wsl shell stuff?
-
 Control Panel
+
+** Zoom
+
+pins/dt/start
+links to folders
 
 ### FileVault
 ### Make Directories (depending)
@@ -217,6 +210,8 @@ Control Panel
 * ### Google Backup and Sync
 * ### Dropbox
 ## General Utilities
+### Jelly Bean KeyFinder
+### CPU-Z
 ### WinDirStat
 ### [Wireshark][wireshark]
 ## Browsers
@@ -253,6 +248,7 @@ optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
 ### (other JetBrains and/or language-specific IDEs)
 ## Command-line Related
 ### WSL (& packages)
+#### backups?
 ### General Setup
 ### SSH
 ### GPG
