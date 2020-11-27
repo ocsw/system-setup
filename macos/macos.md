@@ -1024,7 +1024,6 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * (AirPlay) (Hide, ?Show for updates)
 * iStat Menus: CPU, Mem, SSD, Net, Sen
 * iStat Menus: Battery(s), Time (both - Always Show?)
-* (Itsycal)
 * Date & Time (Always Show?)
 * Fast user switching (Always Show?)
 * Bartender

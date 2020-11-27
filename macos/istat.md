@@ -79,7 +79,6 @@ These are all alerts; do the other sections first
 * Menu bar: outline date icon (or clock icon, or `EE hh:mm a`)
 * World Clocks: `ZZZ __RELATIVE_OFFSET__ EE HH:mm` (default 06:05 AM)
 * Hotkey: `ctrl-opt-cmd-T`
-* Dropdown: no calendar (if Itsycal)
 * World clocks:
     * UTC
     * No Moon?

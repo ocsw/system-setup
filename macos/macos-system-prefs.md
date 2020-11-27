@@ -229,7 +229,7 @@
     * Show date and time
     * Show AM/PM (default)
     * Show day (default)
-    * Show date (if no Itsycal / iStat Menus)
+    * Show date (if no iStat Menus)
 * Lock
 
 ## Time Machine
