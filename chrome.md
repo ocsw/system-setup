@@ -162,6 +162,14 @@ NOTE: has to be done separately for each profile
 [bulk-image-downloader]: https://chrome.google.com/webstore/detail/bulk-image-downloader/facoldpeadablbngjnohbmgaehknhcaj
 [download-all-images]: https://chrome.google.com/webstore/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm
 
+### Special Cases
+
+* [Chrome Remote Desktop][remote-desktop]
+* [Send from Gmail (by Google)][send-from-gmail]
+
+[remote-desktop]: https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai
+[send-from-gmail]: https://chrome.google.com/webstore/detail/send-from-gmail-by-google/pgphcomnlaojlmmcjmiddhdapjpbgeoc
+
 ### Pins
 
 From left to right:
@@ -170,6 +178,7 @@ From left to right:
 * OneNote Web Clipper
 * Go to Tab
 * TabCopy
+* (Send from Gmail)
 * Tidy Sidebar
 * Awesome Screenshot?
 * (Image Downloaders)
