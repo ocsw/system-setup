@@ -95,6 +95,7 @@ pins/dt/start
 links to folders
 
 ### FileVault
+### Control Panel
 ### Make Directories (depending)
 ### Finder
 ## Networking
