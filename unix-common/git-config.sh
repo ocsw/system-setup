@@ -83,6 +83,11 @@ git config --global pretty.oneline-name-nl \
 git config --global commit.gpgsign true
 git config --global tag.forcesignannotated true
 
+#
+# default branch
+#
+git config --global init.defaultbranch main
+
 
 ###########
 # aliases #
