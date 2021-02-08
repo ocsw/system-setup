@@ -78,15 +78,15 @@ git config --global pretty.oneline-name-nl \
     '%n%C(yellow)%h%Cgreen%d %Creset%s%Cblue [%cn]'
 
 #
+# default branch
+#
+git config --global init.defaultbranch main
+
+#
 # GPG signing
 #
 git config --global commit.gpgsign true
 git config --global tag.forcesignannotated true
-
-#
-# default branch
-#
-git config --global init.defaultbranch main
 
 
 ###########
