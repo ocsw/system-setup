@@ -83,6 +83,12 @@ git config --global pretty.oneline-name-nl \
 git config --global init.defaultbranch main
 
 #
+# Fast-forward only, for safety
+#
+git config --global pull.ff only
+git config --global merge.ff only
+
+#
 # GPG signing
 #
 git config --global commit.gpgsign true
