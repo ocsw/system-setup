@@ -25,14 +25,21 @@ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/insta
 # shellcheck disable=SC1090
 . ~/.bash_profile  # see dotfiles repo
 
+#
+# run these from a non-Go-repo directory
+#
+# seems like godoc might not be included with Go anymore as of 1.16?
+go get -u golang.org/x/tools/godoc
+#
 # language server (for gore; IDEs should install it anyway)
 go get golang.org/x/tools/gopls  # no -u
 #
 # REPLs
 go get -u github.com/motemen/gore/cmd/gore
-go get -u github.com/containous/yaegi/cmd/yaegi
+go get -u github.com/traefik/yaegi/cmd/yaegi
 #
 # formatting & linting
+go get -u golang.org/x/lint/golint
 go get -u golang.org/x/tools/cmd/goimports
 #
 # testing
