@@ -22,6 +22,7 @@ brew tap johanhaleby/kubetail && brew install kubetail
 brew install stern
 brew install kube-ps1
 brew cask install minikube
+brew tap robscott/tap && brew install robscott/tap/kube-capacity
 umask 077
 
 #
