@@ -435,6 +435,13 @@ See [iStat Menus Setup][istat-setup]
 
 [suspicious-package]: https://mothersruin.com/software/SuspiciousPackage/
 
+### [The Unarchiver][unarchiver]
+
+Download from main site or [App Store][unarchiver-app-store]
+
+[unarchiver]: https://theunarchiver.com/
+[unarchiver-app-store]: https://apps.apple.com/us/app/the-unarchiver/id425424353
+
 ### [NameChanger][namechanger]
 
 * No history
