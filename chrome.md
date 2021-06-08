@@ -86,15 +86,11 @@ NOTE: has to be done separately for each profile
 
 #### [Dark Reader][dark-reader]
 
-#### [Downloader for Instagram][downloader-for-instagram]
-
 #### [Go to Tab][goto-tab]
 
 #### [HTTPS Everywhere][https-everywhere]
 
 #### [LastPass][lastpass-free-password-ma]
-
-#### ([Nod - Reactions for Google Meet][nod-reactions-for-google])
 
 #### [OneNote Web Clipper][onenote-web-clipper]
 
