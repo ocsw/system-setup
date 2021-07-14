@@ -54,6 +54,7 @@
     // another
     "go.lintOnSave": "workspace",
     "go.lintTool": "golangci-lint",
+    "go.toolsManagement.autoUpdate": true,
     // technically still alpha but does some things (e.g. completion) better IMO
     "go.useLanguageServer": true,
     // not needed with golangci-lint (ignored with the language server on?)
@@ -68,17 +69,23 @@
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn"
     },
+    "markdown.extension.toc.updateOnSave": false,
     "markdownlint.config": {
         "MD007": {
             "indent": 4
         }
     },
     "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/Users/zephyr/bin/flake8",
     "python.linting.pylintEnabled": false,
     "python.pythonPath": "/Users/zephyr/.pyenv/versions/3.7.4/bin/python",
+    "redhat.telemetry.enabled": false,
     "search.collapseResults": "alwaysExpand",
     "shellcheck.exclude": [
         "SC1117"
@@ -96,6 +103,9 @@
     // include so it stays in order when zooming in/out; otherwise it will be
     // added at the bottom
     "window.zoomLevel": 0,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     "workbench.list.horizontalScrolling": true,
     "workbench.settings.editor": "json",
     "workbench.settings.useSplitJSON": true
