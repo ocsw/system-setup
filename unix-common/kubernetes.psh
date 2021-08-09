@@ -23,6 +23,7 @@ brew install stern
 brew install kube-ps1
 brew cask install minikube
 brew tap robscott/tap && brew install robscott/tap/kube-capacity
+brew install argoproj/tap/kubectl-argo-rollouts
 umask 077
 
 #
