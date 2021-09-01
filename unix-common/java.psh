@@ -12,10 +12,10 @@
 #
 umask 022
 brew update
-brew cask install oracle-jdk  # currently 14; installed with maven anyway
+brew install --cask oracle-jdk  # currently 14; installed with maven anyway
 brew tap homebrew/cask-versions
-brew cask install corretto8  # for Java SE JDK 8; password required
-brew cask install corretto  # for Java SE JDK 11; password required
+brew install --cask corretto8  # for Java SE JDK 8; password required
+brew install --cask corretto  # for Java SE JDK 11; password required
 brew install jenv
 brew install maven
 umask 077
