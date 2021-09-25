@@ -32,9 +32,9 @@ See [System Preferences Setup][macos-system-prefs]
     * Remove after 30 days
 * `cmd-shift-.` for dotfiles
 * Sidebar Order:
-    * `Google Drive`
-    * `Dropbox`
     * (`AirDrop`)
+    * `Dropbox`
+    * `Google Drive`
     * `Recents`
     * `Applications`
     * `Desktop`
@@ -367,12 +367,13 @@ e.g. headphones, controllers
     * Quick-Start: right click
     * Launch at login
     * Hide in Dock
-* Sessions:
+* Session Defaults:
     * Default Duration: 3 hours
-* Battery / Power:
-    * End if below 10%
-    * Prompt
-    * Ignore when connected
+    * Battery:
+        * End if below 10%
+        * Prompt
+    * Power Adapter:
+        * Ignore when connected
 * (Triggers)
 * Hotkeys:
     * Start/End: `ctrl-opt-cmd-A`
@@ -411,6 +412,7 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Kap][kap]
 
+* -> System Preferences -> Security &P -> Privacy -> Screen Recording: allow
 * General:
     * Highlight Clicks
 * Plugins:
@@ -1064,6 +1066,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * WiFi
 * ToothFairy
 * SoundSource: apps, output, input, main
+* Blue Sherpa
 * Logitech Gaming Software (Hide, ?Show for updates)
 * YubiSwitch (Hide, ?Show for updates)
 * (AirPlay) (Hide, ?Show for updates)
@@ -1086,7 +1089,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * FortiClient
 * (Kindle)
 * Amazon Music, Spotify, etc.
-* (Skype), (Zoom), Franz, Slack
+* (Skype), Zoom, Franz, Slack
 * OneNote
 * Chrome, Firefox
 * VSCode / Atom / Sublime / PyCharm / GoLand / IntelliJ / etc.
@@ -1109,7 +1112,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * Finder
 * Android File Transfer
 * Kindle
-* iTunes, Amazon Music, Spotify, etc.
+* iTunes / Apple Music, Amazon Music, Spotify, etc.
 * Skype, Zoom, Franz, Slack
 
 Telegram? (in Franz?)
@@ -1128,6 +1131,7 @@ Discord? (in Franz?)
 * XnViewMP
 * Preview
 * Calculator
+* Blue Sherpa
 * Steam
 * Epic
 * GOG Galaxy
