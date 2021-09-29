@@ -5,6 +5,7 @@
 ## General
 
 * Default browser
+* Prefer tabs: always (?) (if available; see Dock)
 * Ask to keep changes
 * No close windows (?) (depending)
 
@@ -14,13 +15,25 @@
 * Screen saver - shell, 20m
 * Hot corner to lock screen (UR)
 
-## Dock
+## Dock / Dock & Menu Bar
 
-* On left (or right, depending on monitor setup)
-* Prefer tabs: always (?)
-* Min to app
-* Autohide
-* No recent
+* Dock:
+    * On right (or left, depending on monitor setup)
+    * Prefer tabs: always (?) (if available; see General)
+    * Minimize windows into app icon
+    * Autohide Dock
+    * No recent apps
+* Menu Bar (if available):
+    * No autohide menu bar
+* Control Center (if available):
+    * Display: Don't show?
+    * Now Playing: Don't show (?)
+* Menu Bar Only (if available):
+    * Clock:
+        * Show day (default)
+        * Show date (if no iStat Menus)
+        * Show AM/PM (default)
+    * Spotlight: Don't show (?)
 
 ## Security & Privacy
 
@@ -72,28 +85,31 @@
 ## Displays
 
 * No mirroring in menu bar (?)
-* Display:
-    * Auto brightness
-    * True Tone
+* Display - set on each screen:
+    * Auto brightness (if available)
+    * True Tone (if available)
 * Arrangement:
     * monitors
     * main (top strip) (NOTE: seems to mess up Moom snapshots?)
 * Night Shift: Sunset to Sunrise
 
-## Energy Saver
+## Energy Saver / Battery
 
 * Change times? (defaults: 2 min battery, 10 min power)
 * No battery in menu bar (after setting up iStat Menus)
-* Lock (not available on 10.14+ (Mojave)?)
+* Lock subpages (if available)
 
 ## Keyboard
 
 * Keyboard:
     * (default repeat: 7/8, delay: 3/6)
+    * Don't adjust brightness (?)
     * Touch Bar / Control Strip:
         * small: no Siri, add lock on left (?)
         * big: no Siri?, lock, screenshot (left of media)
-    * Caps lock: none (?) cmd? esc? (per keyboard)
+    * Modifier Keys:
+        * Caps Lock: none (?) cmd? esc? (per keyboard)
+        * Reverse Option and Command on Windows keyboards
 * Text:
     * Remove omw
     * No correct/capitalize/period
@@ -101,7 +117,7 @@
 * Shortcuts:
     * Mission Control:
         * Show Desktop: ^F11 (because of VSCode)
-        * Show Dashboard: ^F12 (because of VSCode)
+        * Show Dashboard: ^F12 (because of VSCode; if available)
     * Accessibility: Zoom on (?)
     * App Shortcuts:
         * Lock Screen: `ctrl-opt-cmd-L` [10.13+ (High Sierra)]
@@ -133,7 +149,7 @@
 ## Printers & Scanners
 
 * (devices; see [macOS Setup][macos-setup-printers])
-* Lock (not available on 10.14+ (Mojave)?)
+* Lock (if available)
 
 [macos-setup-printers]: macos.md#printers
 
@@ -141,25 +157,25 @@
 
 * Lock
 
-## iCloud
+## iCloud / Apple ID
 
 * (Account Details)
 * iCloud Drive:
     * Documents:
         * Pages/Numbers/Keynote?
         * Only System Preferences (?)
-* Photos:
+* Photos (if options, else off):
     * Don't upload
     * Allow Shared Albums
 * No Mail
 * No Safari
-* No Siri (?)
 * No Keychain (?)
 * No Back to My Mac (?)
 * Allow Find My Mac (?)
 * No News
 * No Stocks
 * No Home
+* No Siri (?)
 
 ## Software Update / App Store
 
@@ -171,7 +187,7 @@
 
 * WiFi networks
 * Wired first if available
-* Lock (not available on 10.14+ (Mojave)?)
+* Lock (if available)
 
 ## Bluetooth
 
@@ -183,18 +199,21 @@
 ## Extensions
 
 * Finder Extensions:
-    * Backup and Sync from Google, Dropbox
+    * Google Drive, Dropbox
+* Quick Look (if available):
+    * Bartender
 * Share Menu:
     * OneNote on
-    * others off?
-* Today:
+    * others off? (except Copy Link, ?Reminders)
+* Today (if available):
     * only iStat Menus, Calculator (in that order)
 
 ## Sharing
 
 * Computer Name
-* Local Hostname
-* No dynamic global hostname
+* Edit:
+    * Local Hostname
+    * No dynamic global hostname
 * -> `sudo scutil --set HostName name`
 
 ## Touch ID
@@ -232,7 +251,7 @@
 ## Date & Time
 
 * Time Zone
-* Clock:
+* Clock (if available; see Dock & Menu Bar):
     * Show date and time
     * Show AM/PM (default)
     * Show day (default)
@@ -248,7 +267,7 @@
 * Zoom: (?)
     * Use shortcuts
     * Use gesture with opt
-    * Options:
+    * Options / Advanced:
         * Flash on notification
 
 ## View -> Organize Alphabetically (?), Show All
