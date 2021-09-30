@@ -105,7 +105,7 @@ also, see the bottom)
 
 ## Family Sharing (prev. Parental Controls)
 
-* Lock
+* Lock (if available)
 
 ## General
 
@@ -224,7 +224,7 @@ also, see the bottom)
 
 * Auto check, dl, app/system install
 * No OS updates
-* Lock (not available on 10.14+ (Mojave)?)
+* Lock (if available)
 
 ## Startup Disk
 
@@ -232,7 +232,7 @@ also, see the bottom)
 
 ## Time Machine
 
-* Lock (not available on 10.14+ (Mojave)?)
+* Lock (if available)
 
 ## Touch ID
 
