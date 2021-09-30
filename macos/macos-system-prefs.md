@@ -1,13 +1,58 @@
 # macOS System Preferences
 
-(sections are in default order; see the bottom)
+(sections are in alphabetical order (default changes between versions);
+also, see the bottom)
 
-## General
+## Accessibility
 
-* Default browser
-* Prefer tabs: always (?) (if available; see Dock)
-* Ask to keep changes
-* No close windows (?) (depending)
+* Zoom: (?)
+    * Use shortcuts
+    * Use gesture with opt
+    * Options / Advanced:
+        * Flash on notification
+
+## Apple ID (prev. iCloud)
+
+* (Account Details)
+* iCloud Drive:
+    * Documents:
+        * Pages/Numbers/Keynote?
+        * Only System Preferences (?)
+* Photos (if options, else off):
+    * Don't upload
+    * Allow Shared Albums
+* No Mail
+* No Safari
+* No Keychain (?)
+* No Back to My Mac (?)
+* Allow Find My Mac (?)
+* No News
+* No Stocks
+* No Home
+* No Siri (?)
+
+## Battery (prev. Energy Saver)
+
+* Change times? (defaults: 2 min battery, 10 min power)
+* No battery in menu bar (after setting up iStat Menus)
+* Lock subpages (if available)
+
+## Bluetooth
+
+* (devices; see [macOS Setup][macos-setup-bt-devices])
+* Show in menu bar (if not using ToothFairy)
+
+[macos-setup-bt-devices]: macos.md#bluetooth-devices
+
+## Date & Time
+
+* Time Zone
+* Clock (if available; see Dock & Menu Bar):
+    * Show date and time
+    * Show AM/PM (default)
+    * Show day (default)
+    * Show date (if no iStat Menus)
+* Lock
 
 ## Desktop & Screen Saver
 
@@ -15,7 +60,18 @@
 * Screen saver - shell, 20m
 * Hot corner to lock screen (UR)
 
-## Dock / Dock & Menu Bar
+## Displays
+
+* No mirroring in menu bar (?)
+* Display - set on each screen:
+    * Auto brightness (if available)
+    * True Tone (if available)
+* Arrangement:
+    * monitors
+    * main (top strip) (NOTE: seems to mess up Moom snapshots?)
+* Night Shift: Sunset to Sunrise
+
+## Dock & Menu Bar (prev. Dock)
 
 * Dock:
     * On right (or left, depending on monitor setup)
@@ -34,6 +90,73 @@
         * Show date (if no iStat Menus)
         * Show AM/PM (default)
     * Spotlight: Don't show (?)
+
+## Extensions
+
+* Finder Extensions:
+    * Google Drive, Dropbox
+* Quick Look (if available):
+    * Bartender
+* Share Menu:
+    * OneNote on
+    * others off? (except Copy Link, ?Reminders)
+* Today (if available):
+    * only iStat Menus, Calculator (in that order)
+
+## Family Sharing (prev. Parental Controls)
+
+* Lock
+
+## General
+
+* Default browser
+* Prefer tabs: always (?) (if available; see Dock)
+* Ask to keep changes
+* No close windows (?) (depending)
+
+## Keyboard
+
+* Keyboard:
+    * (default repeat: 7/8, delay: 3/6)
+    * Don't adjust brightness (?)
+    * Touch Bar / Control Strip:
+        * small: no Siri, add lock on left (?)
+        * big: no Siri?, lock, screenshot (left of media)
+    * Modifier Keys:
+        * Caps Lock: none (?) cmd? esc? (per keyboard)
+        * Reverse Option and Command on Windows keyboards
+* Text:
+    * Remove omw
+    * No correct/capitalize/period
+    * No smart quotes?
+* Shortcuts:
+    * Mission Control:
+        * Show Desktop: ^F11 (because of VSCode)
+        * Show Dashboard: ^F12 (because of VSCode; if available)
+    * Accessibility: Zoom on (?)
+    * App Shortcuts:
+        * Lock Screen: `ctrl-opt-cmd-L` [10.13+ (High Sierra)]
+    * (other shortcuts)
+* Input Sources:
+    * No menu bar
+
+## Mouse
+
+* No Natural scroll
+* (default tracking: 4/10, scrolling 4/8, double-click 9/11)
+
+## Network
+
+* WiFi networks
+* Wired first if available
+* Lock (if available)
+
+## Printers & Scanners
+
+* (devices; see [macOS Setup][macos-setup-printers])
+* Lock (if available)
+
+[macos-setup-printers]: macos.md#printers
 
 ## Security & Privacy
 
@@ -82,53 +205,38 @@
     * No analytics
 * Lock
 
-## Displays
+## Sharing
 
-* No mirroring in menu bar (?)
-* Display - set on each screen:
-    * Auto brightness (if available)
-    * True Tone (if available)
-* Arrangement:
-    * monitors
-    * main (top strip) (NOTE: seems to mess up Moom snapshots?)
-* Night Shift: Sunset to Sunrise
+* Computer Name
+* Edit:
+    * Local Hostname
+    * No dynamic global hostname
+* -> `sudo scutil --set HostName name`
 
-## Energy Saver / Battery
+## Siri
 
-* Change times? (defaults: 2 min battery, 10 min power)
-* No battery in menu bar (after setting up iStat Menus)
-* Lock subpages (if available)
+* Off?
+* Listen?
+* No menu bar (?)
+* Suggestions: all off (?)
 
-## Keyboard
+## Software Update (prev. App Store)
 
-* Keyboard:
-    * (default repeat: 7/8, delay: 3/6)
-    * Don't adjust brightness (?)
-    * Touch Bar / Control Strip:
-        * small: no Siri, add lock on left (?)
-        * big: no Siri?, lock, screenshot (left of media)
-    * Modifier Keys:
-        * Caps Lock: none (?) cmd? esc? (per keyboard)
-        * Reverse Option and Command on Windows keyboards
-* Text:
-    * Remove omw
-    * No correct/capitalize/period
-    * No smart quotes?
-* Shortcuts:
-    * Mission Control:
-        * Show Desktop: ^F11 (because of VSCode)
-        * Show Dashboard: ^F12 (because of VSCode; if available)
-    * Accessibility: Zoom on (?)
-    * App Shortcuts:
-        * Lock Screen: `ctrl-opt-cmd-L` [10.13+ (High Sierra)]
-    * (other shortcuts)
-* Input Sources:
-    * No menu bar
+* Auto check, dl, app/system install
+* No OS updates
+* Lock (not available on 10.14+ (Mojave)?)
 
-## Mouse
+## Startup Disk
 
-* No Natural scroll
-* (default tracking: 4/10, scrolling 4/8, double-click 9/11)
+* Lock
+
+## Time Machine
+
+* Lock (not available on 10.14+ (Mojave)?)
+
+## Touch ID
+
+* (fingers)
 
 ## Trackpad
 
@@ -146,80 +254,6 @@
     * Rotate
 * More Gestures: all on (?)
 
-## Printers & Scanners
-
-* (devices; see [macOS Setup][macos-setup-printers])
-* Lock (if available)
-
-[macos-setup-printers]: macos.md#printers
-
-## Startup Disk
-
-* Lock
-
-## iCloud / Apple ID
-
-* (Account Details)
-* iCloud Drive:
-    * Documents:
-        * Pages/Numbers/Keynote?
-        * Only System Preferences (?)
-* Photos (if options, else off):
-    * Don't upload
-    * Allow Shared Albums
-* No Mail
-* No Safari
-* No Keychain (?)
-* No Back to My Mac (?)
-* Allow Find My Mac (?)
-* No News
-* No Stocks
-* No Home
-* No Siri (?)
-
-## Software Update / App Store
-
-* Auto check, dl, app/system install
-* No OS updates
-* Lock (not available on 10.14+ (Mojave)?)
-
-## Network
-
-* WiFi networks
-* Wired first if available
-* Lock (if available)
-
-## Bluetooth
-
-* (devices; see [macOS Setup][macos-setup-bt-devices])
-* Show in menu bar (if not using ToothFairy)
-
-[macos-setup-bt-devices]: macos.md#bluetooth-devices
-
-## Extensions
-
-* Finder Extensions:
-    * Google Drive, Dropbox
-* Quick Look (if available):
-    * Bartender
-* Share Menu:
-    * OneNote on
-    * others off? (except Copy Link, ?Reminders)
-* Today (if available):
-    * only iStat Menus, Calculator (in that order)
-
-## Sharing
-
-* Computer Name
-* Edit:
-    * Local Hostname
-    * No dynamic global hostname
-* -> `sudo scutil --set HostName name`
-
-## Touch ID
-
-* (fingers)
-
 ## Users & Groups
 
 * Current:
@@ -236,38 +270,5 @@
       users)
     * Show fast user switching menu as: Icon
 * Lock
-
-## Parental Controls
-
-* Lock
-
-## Siri
-
-* Off?
-* Listen?
-* No menu bar (?)
-* Suggestions: all off (?)
-
-## Date & Time
-
-* Time Zone
-* Clock (if available; see Dock & Menu Bar):
-    * Show date and time
-    * Show AM/PM (default)
-    * Show day (default)
-    * Show date (if no iStat Menus)
-* Lock
-
-## Time Machine
-
-* Lock (not available on 10.14+ (Mojave)?)
-
-## Accessibility
-
-* Zoom: (?)
-    * Use shortcuts
-    * Use gesture with opt
-    * Options / Advanced:
-        * Flash on notification
 
 ## View -> Organize Alphabetically (?), Show All
