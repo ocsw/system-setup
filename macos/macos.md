@@ -670,6 +670,10 @@ See [Firefox Setup][firefox-setup]
 
 [itunes]: https://www.apple.com/itunes/
 
+### [Apple Music][apple-music]
+
+[apple-music]: https://www.apple.com/apple-music/
+
 ### [Kindle][kindle]
 
 * -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
