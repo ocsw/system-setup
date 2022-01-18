@@ -38,15 +38,11 @@
     // ignored with the language server on
     "go.formatTool": "goimports",
     "go.lintFlags": [
-        "-E", "exportloopref,lll,revive,whitespace",
-        // optional
-        "-E", "goimports",
-        // optional; use for development but not in CI
+        "-E", "exportloopref,goimports,lll,revive,whitespace",
         "-E", "stylecheck",
+        "-e", "ST1005: error strings should not be capitalized",
         // no count limits
         "--max-issues-per-linter", "0", "--max-same-issues", "0",
-        // optionally limit to current work
-        //"--new-from-rev", "HEAD~1",
         // use only in IDEs, not CI
         "--fast"
     ],
