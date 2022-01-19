@@ -27,27 +27,30 @@ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/insta
 
 #
 # run these from a non-Go-repo directory
+# (that might not be necessary anymore: 'go install' with a version (e.g.
+# '@latest') should bypass any go.mod and install at the user level, not the
+# repo level; it replaces the old 'go get' behavior, which has been deprecated)
 #
 # seems like godoc might not be included with Go anymore as of 1.16?
-go get -u golang.org/x/tools/godoc
+go install golang.org/x/tools/godoc@latest
 #
 # language server (for gore; IDEs should install it anyway)
-go get golang.org/x/tools/gopls  # no -u
+go install golang.org/x/tools/gopls@latest
 #
 # REPLs
-go get -u github.com/motemen/gore/cmd/gore
-go get -u github.com/traefik/yaegi/cmd/yaegi
+go install github.com/motemen/gore/cmd/gore@latest
+go install github.com/traefik/yaegi/cmd/yaegi@latest
 #
 # formatting & linting
-go get -u golang.org/x/lint/golint
-go get -u golang.org/x/tools/cmd/goimports
+go install golang.org/x/lint/golint@latest
+go install golang.org/x/tools/cmd/goimports@latest
 #
 # testing
-go get -u github.com/rakyll/gotest
-go get -u gotest.tools/gotestsum
+go install github.com/rakyll/gotest@latest
+go install gotest.tools/gotestsum@latest
 #
 # code tools
-go get -u golang.org/x/tools/cmd/stringer
+go install golang.org/x/tools/cmd/stringer@latest
 
 # from the root of each repo:
 # (see https://github.com/ocsw/dotfiles/blob/master/dot.bashrc.d/go.post.sh)
