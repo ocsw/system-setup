@@ -31,7 +31,9 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
 git clone https://github.com/pyenv/pyenv-virtualenv.git \
     ~/.pyenv/plugins-virtualenv
 
-echo ".python-version" >> ~/.gitignore_global
+if ! grep '^\.python-version$' ~/.gitignore_global > /dev/null 2>&1; then
+    echo '.python-version' >> ~/.gitignore_global
+fi
 
 # shellcheck disable=SC1090
 . ~/.bash_profile  # see dotfiles repo
@@ -57,6 +59,8 @@ pybase 2
 #curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
 
 py3ver=$(pylatest_local 3)
+#
+mkdir -p ~/bin
 #
 pyinst coverage 3
 pyinst flake8 3
