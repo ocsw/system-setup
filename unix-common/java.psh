@@ -7,6 +7,9 @@
 # SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
 #
 
+# see also dot.bash_profile.d/java.pre.sh and dot.bashrc.d/java.post.sh in
+# https://github.com/ocsw/dotfiles
+
 #
 # Mac
 #
