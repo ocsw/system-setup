@@ -15,17 +15,31 @@
 #
 umask 022
 brew update
-brew install --cask oracle-jdk  # currently 14; installed with maven anyway
+brew install --cask oracle-jdk  # latest; installed with maven anyway
 brew tap homebrew/cask-versions
 brew install --cask corretto8  # for Java SE JDK 8; password required
-brew install --cask corretto  # for Java SE JDK 11; password required
+brew install --cask corretto11  # for Java SE JDK 11; password required
+brew install --cask corretto  # for latest Java SE JDK; password required
 brew install jenv
 brew install maven
 umask 077
 jenv enable-plugin export
-jenv add /Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home/
-jenv add /Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home/
+# note: Corretto comes before any Oracle, so e.g. "1.8" gets Corretto, not
+# Oracle
+for i in /Library/Java/JavaVirtualMachines/*/Contents/Home/; do
+    jenv add "$i"
+done
 # restart the shell to get JAVA_HOME
+
+if ! grep '^\.java-version$' ~/.gitignore_global > /dev/null 2>&1; then
+    echo '.java-version' >> ~/.gitignore_global
+fi
+
+# upgrades might require removing old versions and adding new ones; if all the JDKs are in the same place, you can do this to remove all current versions:
+for i in $(jenv versions | grep -v system | tr '*' ' ' | sed 's/(.*//'); do
+    jenv remove "$i"
+done
+# then the jenv add loop above, and then update any .java-version files
 
 #
 # Ubuntu (old/incomplete)
