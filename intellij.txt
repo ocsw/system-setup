@@ -1,29 +1,31 @@
-install from https://www.jetbrains.com/idea/
+install CE/Ultimate from https://www.jetbrains.com/idea/
 
 close all projects
 
 Theme:
     Preferences -> Appearance & Behavior -> Appearance
-        Theme: Darcula (?)
+        Theme: Darcula (?) [default?]
 
-Configure -> Structure for New Projects:
+U:  File -> Project Structure
+CE: Configure -> Structure for New Projects:
     Platform Settings -> SDKs, for each JDK:
         +JDK: /Library/Java/JavaVirtualMachines/<version>/Contents/Home
         (apply)
     Project Settings -> Project:
         Select the default JDK and language level
 
-Error Prone:
+Error Prone?:
     Preferences:
         Plugins:
-            Error Prone Compiler
+            Error Prone Compiler (may need to restart)
         Build -> Compiler -> Java Compiler:
             Use compiler: Javac with error-prone
         Build -> Compiler:
-            Don't use external build
+            Don't use external build [no longer available?]
 
 google-java-format:
     Download https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml
+    Still relevant?
     Download https://raw.githubusercontent.com/spotify/spotify-checkstyle-config/master/src/main/idea/spotify-checkstyle-idea.xml
     Preferences:
         Plugins:
@@ -31,16 +33,25 @@ google-java-format:
         google-java-format Settings:
             Enable
             Style: Google
-        Editor -> Code Style -> Java:
+        Editor -> Code Style [-> Java]:
             Import Scheme(s)
             Wrapping and Braces:
                 Hard wrap at: 100 (?)
             Scheme: Spotify (?)
+    File -> New Projects Setup -> Preferences For New Projects
+        Other Settings:
+            google-java-format Settings:
+                Enable
+                Style: Google
 
 Add <your-laptop-name>.local to the localhost line in /etc/hosts?
     127.0.0.1 localhost <your-laptop-name>.local
 
+Consider raising maximum Java heap memory to e.g. -Xmx2048m
+See https://intellij-support.jetbrains.com/hc/en-us/articles/206544869
+
 Languages:
     Preferences -> Plugins:
         Python (JetBrains)
+        U: Go (JetBrains)
     Restart as required
