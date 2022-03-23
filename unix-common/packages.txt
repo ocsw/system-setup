@@ -111,6 +111,7 @@ traceroute6
 tree
 unzip
 vim
+wader/tap/fq
 watch
 wget
 whois
