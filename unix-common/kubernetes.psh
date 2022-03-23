@@ -25,6 +25,7 @@ brew install --cask minikube
 brew tap robscott/tap && brew install robscott/tap/kube-capacity
 brew install argoproj/tap/kubectl-argo-rollouts
 umask 077
+# install https://k8slens.dev/
 
 #
 # GKE update

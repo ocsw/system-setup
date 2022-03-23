@@ -22,6 +22,8 @@ umask 022
 brew update
 brew install pyenv
 brew install pyenv-virtualenv
+#?
+# brew install pipx
 xcode-select --install
 umask 077
 #
