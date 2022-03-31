@@ -24,6 +24,7 @@ brew install jenv
 brew install maven
 umask 077
 jenv enable-plugin export
+jenv enable-plugin maven
 # note: Corretto comes before any Oracle, so e.g. "1.8" gets Corretto, not
 # Oracle
 for i in /Library/Java/JavaVirtualMachines/*/Contents/Home/; do
