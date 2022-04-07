@@ -79,6 +79,12 @@
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/Users/zephyr/bin/flake8",
+    // might only go up to 1001; see
+    // https://github.com/microsoft/vscode-python/issues/2679
+    "python.linting.maxNumberOfProblems": 1000000,
+    "python.linting.mypyArgs": [],
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "/Users/zephyr/bin/mypy",
     "python.linting.pylintEnabled": false,
     "python.pythonPath": "/Users/zephyr/.pyenv/versions/3.7.4/bin/python",
     "redhat.telemetry.enabled": false,
