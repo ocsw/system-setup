@@ -6,8 +6,7 @@ Theme:
     Preferences -> Appearance & Behavior -> Appearance
         Theme: Darcula (?) [default?]
 
-U:  File -> Project Structure
-CE: Configure -> Structure for New Projects:
+File -> Project Structure
     Platform Settings -> SDKs, for each JDK:
         +JDK: /Library/Java/JavaVirtualMachines/<version>/Contents/Home
         (apply)
