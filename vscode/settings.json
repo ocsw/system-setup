@@ -76,6 +76,7 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
+    "python.defaultInterpreterPath": "$/Users/zephyr/.pyenv/versions/3.10.1/bin/python",
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/Users/zephyr/bin/flake8",
@@ -86,7 +87,6 @@
     "python.linting.mypyEnabled": true,
     "python.linting.mypyPath": "/Users/zephyr/bin/mypy",
     "python.linting.pylintEnabled": false,
-    "python.pythonPath": "/Users/zephyr/.pyenv/versions/3.7.4/bin/python",
     "redhat.telemetry.enabled": false,
     "search.collapseResults": "alwaysExpand",
     "shellcheck.exclude": [
