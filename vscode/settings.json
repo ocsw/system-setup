@@ -101,9 +101,6 @@
     "window.newWindowDimensions": "inherit",
     "window.restoreWindows": "all",
     "window.title": "${rootName}${separator}${activeEditorShort}",
-    // include so it stays in order when zooming in/out; otherwise it will be
-    // added at the bottom
-    "window.zoomLevel": 0,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
