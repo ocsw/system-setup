@@ -143,7 +143,8 @@ also, see the bottom)
 ## Mouse
 
 * No Natural scroll
-* (default tracking: 4/10, scrolling 4/8, double-click 9/11)
+* Tracking: 7/10 (depending)
+* (defaults: tracking 4/10, scrolling 4/8, double-click 9/11)
 
 ## Network
 
