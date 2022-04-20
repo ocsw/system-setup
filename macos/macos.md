@@ -132,8 +132,8 @@ e.g. headphones, controllers
 
 * Add devices:
     * Icon
-    * Hotkey?
     * Show battery
+    * Hotkey? (e.g. `ctrl-opt-cmd-H`)
     * Advanced:
         * Improve sound quality (depending)
 * Launch at login
