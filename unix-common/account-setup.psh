@@ -44,8 +44,7 @@ EOF
 cat ~/.ssh/github_ed25519.pub
 # add SSH key to GitHub
 
-# see gpg-base for config file templates; apply to both (?) ~/.gnupg and
-#   ~/.gnupg_pre_2.1
+# see gpg-base for config file templates; apply to ~/.gnupg
 
 # use RSA/RSA 4096, no expiration, the same name and email as below,
 # and comment 'HOSTNAME -> GitHub'

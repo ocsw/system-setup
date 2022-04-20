@@ -937,8 +937,6 @@ brew install gnupg pinentry-mac
 umask 077
 echo "pinentry-program /usr/local/bin/pinentry-mac" >> \
     ~/.gnupg/gpg-agent.conf
-echo "pinentry-program /usr/local/bin/pinentry-mac" >> \
-    ~/.gnupg_pre_2.1/gpg-agent.conf  # (?)
 gpgconf --kill gpg-agent
 ```
 
@@ -967,11 +965,11 @@ umask 077
 
 #### Either way
 
-* sign something (e.g. `git -s -u KEY_ID`, then mash keys and hit `ctrl-d`);
+* sign something (e.g. `gpg -s -u KEY_ID`, then mash keys and hit `ctrl-d`);
   check 'Save in Keychain' (or click 'Always Allow', whichever appears)
 * -> System Preferences -> GPG Suite -> Settings: (Default Key)
 * (or if not using GPG Suite at all, optionally add `default-key KEY_ID` to
-  `gpg.conf` in both (?) `~/.gnupg` and `~/.gnupg_pre_2.1`)
+  `gpg.conf` in `~/.gnupg`)
 
 ### Permissions
 
