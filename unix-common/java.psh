@@ -31,6 +31,7 @@ jenv enable-plugin maven
 for i in /Library/Java/JavaVirtualMachines/*/Contents/Home/; do
     jenv add "$i"
 done
+jenv global DEFAULT_VERSION
 # restart the shell to get JAVA_HOME
 
 if ! grep '^\.java-version$' ~/.gitignore_global > /dev/null 2>&1; then
