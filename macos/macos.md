@@ -200,21 +200,24 @@ e.g. headphones, controllers
 [spideroak-one]: https://spideroak.com/one/
 [spideroak-one-dl]: https://spideroak.com/opendownload/
 
-### [Google Backup and Sync][google-b-s]
+### [Google Drive][google-drive]
 
 * -> System Preferences -> Extensions -> Finder Extensions: allow
+* -> System Preferences -> Security &P -> Privacy -> Files and Folders: allow
+    * (as necessary; there should be popup requests when they're first needed)
 * Computer:
-    * Name: change to match hostname
+    * Name: change to match hostname [?]
     * Folders (all from homedir):
         * `.to_back_up`, `Books`, `Music`, `scraps`, `wip`
         * (+ more depending on contents / context)
         * [work: add `Desktop`, `Documents`, `Downloads`, ?`Pictures`]
-    * Remove everywhere (?)
-    * USB/SD: no
 * Google Drive:
-    * Sync My Drive (all) (?)
+    * Stream files (?)
+* Settings:
+    * Google Photos:
+        * Original Quality
 
-[google-b-s]: https://www.google.com/drive/download/
+[google-drive]: https://www.google.com/drive/download/
 
 ### [Dropbox][dropbox]
 
@@ -901,7 +904,7 @@ umask 077
 See the [Unix Setup][unix-setup] directory
 
 * dotfiles, incl. dotfile and `~/.to_back_up` links
-* add `~/.to_back_up` to Google Backup
+* add `~/.to_back_up` to Google Drive (backup)
 * rest of the [Unix Setup][unix-setup] directory
 * add hostname to `127.0.0.1` in `/etc/hosts`?
 
@@ -1068,7 +1071,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * BetterTouchTool (Hidden)
 * Witch (Hidden)
 * Dropbox
-* Google Backup
+* Google Drive
 * SpiderOak One
 * FortiClient / other VPNs
 * PIA

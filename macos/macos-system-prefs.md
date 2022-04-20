@@ -261,7 +261,7 @@ also, see the bottom)
         * Icon
     * Login Items:
         * incl. Android File Transfer, BetterTouchTool, CrossOver, Dropbox,
-          Google Backup, Logitech Gaming Software, Moom, Rectangle,
+          Google Drive, Logitech Gaming Software, Moom, Rectangle,
           SoundSource, SpiderOak One, uBar, Witch, YubiSwitch
         * (some might not be in the list even if they're installed)
 * Disable Guest User
