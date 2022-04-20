@@ -359,6 +359,12 @@ e.g. headphones, controllers
 
 [moom]: https://manytricks.com/moom/
 
+### [Muzzle][muzzle]
+
+* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+
+[muzzle]: https://muzzleapp.com/
+
 ### [Amphetamine][amphetamine] (App Store)
 
 * Don't show message
@@ -385,12 +391,6 @@ e.g. headphones, controllers
 
 [amphetamine]: https://apps.apple.com/us/app/amphetamine/id937984704
 
-### [Muzzle][muzzle]
-
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
-
-[muzzle]: https://muzzleapp.com/
-
 ### [iStat Menus][istat] ($)
 
 See [iStat Menus Setup][istat-setup]
@@ -400,10 +400,14 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Bartender][bartender] ($)
 
+* -> System Preferences -> Extensions -> Quick Look: allow
 * -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
-* Menu Items: (see bottom)
 * General:
     * Launch at login
+    * Spacing: Small
+* Menu Bar Layout : (see bottom)
+* Hot Keys:
+    * Show all: `ctrl-opt-cmd-M`
 * License
 
 [bartender]: https://www.macbartender.com/
@@ -1053,15 +1057,16 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 
 (from L to R, with Bartender settings if not default)
 
+* New Items
 * (Docker)
 * (Carbon Black (Always Hide?))
 * Spotlight (Always Hide)
-* Muzzle (Hide, ?Show for updates)
 * Amphetamine
-* Moom (Hide, ?Show for updates)
-* Rectangle (Hide, ?Show for updates)
-* BetterTouchTool (Hide, ?Show for updates)
-* Witch (Hide, ?Show for updates)
+* Muzzle (Hidden)
+* Moom (Hidden)
+* Rectangle (Hidden)
+* BetterTouchTool (Hidden)
+* Witch (Hidden)
 * Dropbox
 * Google Backup
 * SpiderOak One
@@ -1071,15 +1076,14 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * ToothFairy
 * SoundSource: apps, output, input, main
 * Blue Sherpa
-* Logitech Gaming Software (Hide, ?Show for updates)
-* YubiSwitch (Hide, ?Show for updates)
-* (AirPlay) (Hide, ?Show for updates)
+* Logitech Gaming Software (Hidden)
+* YubiSwitch (Hidden)
+* (AirPlay) (Hidden)
 * iStat Menus: CPU, Mem, SSD, Net, Sen
-* iStat Menus: Battery(s), Time (both - Always Show?)
-* Date & Time (Always Show?)
-* Fast user switching (Always Show?)
+* iStat Menus: Battery(s), Time
+* Fast user switching (Hidden?)
 * Bartender
-* (Notifications)
+* (Control Center, Clock)
 
 ### Dock Order
 
