@@ -1070,7 +1070,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * Dropbox
 * Google Backup
 * SpiderOak One
-* FortiClient
+* FortiClient / other VPNs
 * PIA
 * WiFi
 * ToothFairy
@@ -1094,7 +1094,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * Launchpad (?)
 * Dashboard? (drag to dock)
 * System Preferences
-* FortiClient
+* FortiClient / other VPNs
 * (Kindle)
 * Amazon Music, Spotify, etc.
 * (Skype), Zoom, Franz, Slack
