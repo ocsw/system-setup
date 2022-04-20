@@ -679,6 +679,16 @@ See [Firefox Setup][firefox-setup]
 
 ### [Apple Music][apple-music]
 
+* Account -> log in
+* General:
+    * No notifications
+* Playback
+    * Sound Check (?)
+* Files
+    * Don't copy files?
+* Advanced
+    * Automatically update artwork (?)
+
 [apple-music]: https://www.apple.com/apple-music/
 
 ### [Kindle][kindle]
