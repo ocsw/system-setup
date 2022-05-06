@@ -931,7 +931,7 @@ EOF
 
 ```shell
 for i in ~/.ssh/*_{dsa,ecdsa,ed25519,rsa}; do
-    ssh-add -K "$i"  # absolute path
+    ssh-add --apple-use-keychain "$i"  # absolute path
 done
 ```
 
