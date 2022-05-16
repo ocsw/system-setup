@@ -28,6 +28,18 @@ umask 077
 # install https://k8slens.dev/
 
 #
+# GKE-specific setup
+#
+umask 022
+gcloud components install gke-gcloud-auth-plugin
+mkdir -p ~/bin  # add ~/bin to your default PATH
+ln -s /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gke-gcloud-auth-plugin ~/bin/
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True  # add this to your shell startup
+gcloud components update
+umask 077
+gke-up  # see below
+
+#
 # GKE update
 #
 gke_up () {  # can use gke-up in bash
