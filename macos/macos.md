@@ -244,6 +244,7 @@ e.g. headphones, controllers
     * Pinning: all if not ultrawide, else bottom only
     * Display: Main (?)
     * No window grouping
+    * No download notifications (?)
 * (Theme)
 * Areas:
     * No Spaces (?)
