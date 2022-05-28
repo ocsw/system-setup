@@ -32,13 +32,13 @@ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/insta
 # repo level; it replaces the old 'go get' behavior, which has been deprecated)
 #
 # seems like godoc might not be included with Go anymore as of 1.16?
-go install golang.org/x/tools/godoc@latest
+go install golang.org/x/tools/cmd/godoc@latest
 #
 # language server (for gore; IDEs should install it anyway)
 go install golang.org/x/tools/gopls@latest
 #
 # REPLs
-go install github.com/motemen/gore/cmd/gore@latest
+go install github.com/x-motemen/gore/cmd/gore@latest
 go install github.com/traefik/yaegi/cmd/yaegi@latest
 #
 # formatting & linting
