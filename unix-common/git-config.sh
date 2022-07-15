@@ -83,16 +83,28 @@ git config --global pretty.oneline-name-nl \
 git config --global init.defaultbranch main
 
 #
-# Fast-forward only, for safety
+# fast-forward only, for safety
 #
 git config --global pull.ff only
 git config --global merge.ff only
+
+#
+# there seems to be a bug in the new implementation that breaks diff-so-fancy
+# integration; see https://github.com/so-fancy/diff-so-fancy/issues/437
+#
+git config --global add.interactive.usebuiltin false
 
 #
 # GPG signing
 #
 git config --global commit.gpgsign true
 git config --global tag.forcesignannotated true
+
+#
+# new setting in 2.37 that means you don't need extra options (or aliases) for
+# pushing a new branch
+#
+git config --global push.autosetupremote true
 
 
 ###########
