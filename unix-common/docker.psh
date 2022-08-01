@@ -14,6 +14,7 @@
 # (or brew)
 # don't start on login (?)
 # raise memory limit (e.g. 10GB)
+# install Disk Usage extension
 umask 022
 brew update
 brew install dive
