@@ -16,6 +16,7 @@ umask 022
 #gcloud components install kubectl
 brew update
 brew install kubernetes-cli
+brew install derailed/k9s/k9s
 brew install fzf
 brew install kubectx
 brew tap johanhaleby/kubetail && brew install kubetail
@@ -25,7 +26,9 @@ brew install --cask minikube
 brew tap robscott/tap && brew install robscott/tap/kube-capacity
 brew install argoproj/tap/kubectl-argo-rollouts
 umask 077
+# install Velero
 # install https://k8slens.dev/
+# install https://github.com/rikatz/kubepug
 
 #
 # GKE-specific setup
