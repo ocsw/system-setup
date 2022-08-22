@@ -27,7 +27,7 @@ brew tap robscott/tap && brew install robscott/tap/kube-capacity
 brew install argoproj/tap/kubectl-argo-rollouts
 umask 077
 # install Velero
-# install https://k8slens.dev/
+# install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
 # install https://github.com/rikatz/kubepug
 
 #
