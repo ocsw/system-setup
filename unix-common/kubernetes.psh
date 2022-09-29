@@ -29,6 +29,8 @@ umask 077
 # install Velero
 # install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
 # install https://github.com/rikatz/kubepug
+# install KCC (?)
+#    https://cloud.google.com/config-connector/docs/how-to/import-export/overview#installing-config-connector
 
 #
 # GKE-specific setup
