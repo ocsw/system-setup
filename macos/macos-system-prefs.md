@@ -136,6 +136,7 @@ also, see the bottom)
     * Accessibility: Zoom on (?)
     * App Shortcuts:
         * Lock Screen: `ctrl-opt-cmd-L` [10.13+ (High Sierra)]
+        * Sleep: `ctrl-opt-cmd-Q`
     * (other shortcuts)
 * Input Sources:
     * No menu bar
