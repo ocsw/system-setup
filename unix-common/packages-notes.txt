@@ -1,3 +1,5 @@
 - bash-completion and coreutils are necessary for Mac, but possibly not for
   other Unixes
 - don't install gnupg on Mac if using GPG Suite
+- ksh has been deprecated in favor of ksh93 for Brew (which still installs a ksh
+  binary)
