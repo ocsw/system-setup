@@ -1,0 +1,41 @@
+// Tags and options configured here will be used by the Add Tags command to add tags to struct fields. If promptForTags is true, then user will be prompted for tags and options. By default, json tags are added.
+"go.addTags": {
+    "tags": "json",
+    "options": "json=omitempty",
+    "promptForTags": false,
+    "transform": "snakecase"
+  },
+
+  // Compiles code on file save using 'go build -i' or 'go test -c -i'. Options are 'workspace', 'package', or 'off'.
+  "go.buildOnSave": "package",
+
+  // Experimental Feature: Enable/Disable entries from the context menu in the editor.
+  "go.editorContextMenuCommands": {
+    "toggleTestFile": true,
+    "addTags": true,
+    "removeTags": false,
+    "testAtCursor": true,
+    "testFile": false,
+    "testPackage": false,
+    "generateTestForFunction": true,
+    "generateTestForFile": false,
+    "generateTestForPackage": false,
+    "addImport": true,
+    "testCoverage": true,
+    "playground": true,
+    "debugTestAtCursor": true
+  },
+
+  // Feature level setting to enable/disable code lens for references and run/debug tests
+  "go.enableCodeLens": {
+    "references": false,
+    "runtest": true
+  },
+
+
+  // Use this setting to enable/disable experimental features from the language server.
+  "go.languageServerExperimentalFeatures": {
+    "format": true,
+    "diagnostics": true,
+    "documentLink": true
+  },
