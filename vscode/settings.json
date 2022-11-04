@@ -84,7 +84,7 @@
     // https://github.com/microsoft/vscode-python/issues/2679
     "python.linting.maxNumberOfProblems": 1000000,
     "python.linting.mypyArgs": [],
-    "python.linting.mypyEnabled": true,
+    "python.linting.mypyEnabled": false,
     "python.linting.mypyPath": "/Users/zephyr/bin/mypy",
     "python.linting.pylintEnabled": false,
     "redhat.telemetry.enabled": false,
@@ -106,5 +106,7 @@
     },
     "workbench.list.horizontalScrolling": true,
     "workbench.settings.editor": "json",
-    "workbench.settings.useSplitJSON": true
+    "workbench.settings.useSplitJSON": true,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Default Light+"
 }
