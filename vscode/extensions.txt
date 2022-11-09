@@ -13,7 +13,6 @@ ybaumes.highlight-trailing-white-spaces
 ephoton.indent-switcher
 kaiwood.indentation-level-movement
 visualstudioexptteam.intellicode-api-usage-examples
-ms-python.isort
 redhat.java-1.12.0-darwin
 dgileadi.java-decompiler
 ms-toolsai.jupyter
