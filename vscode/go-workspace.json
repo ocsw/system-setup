@@ -1,0 +1,31 @@
+{
+    "highlight-bad-chars.additionalUnicodeChars": [
+        ""
+    ],
+
+    // These two are mutually exclusive; I'm not sure it matters which you use
+    // in practice
+    //
+    // "gopls": {
+    //     "buildFlags": ["-tags=test_only"]
+    // },
+    "go.buildFlags": [
+        "-tags=test_only"
+    ],
+
+    // I'm not sure how essential this is, but I guess it's a good idea to have
+    // it...
+    "go.toolsEnvVars": {
+        "GOTAGS": "test_only"
+    },
+
+    "go.lintFlags": [
+        "-E", "exportloopref,goimports,lll,revive,whitespace",
+        "-E", "stylecheck",
+        // no count limits
+        "--max-issues-per-linter", "0", "--max-same-issues", "0",
+        // use only in IDEs, not CI
+        "--fast",
+        "--build-tags", "test_only"
+    ],
+}
