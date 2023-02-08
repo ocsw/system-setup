@@ -46,6 +46,7 @@ ipv6calc
 ipython
 ipython2
 ipython3
+jo
 jot
 jq
 jsonnet
