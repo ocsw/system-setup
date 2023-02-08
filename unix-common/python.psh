@@ -20,6 +20,8 @@ mkdir -p ~/repos
 #
 umask 022
 brew update
+brew install black
+brew install mypy
 brew install pyenv
 brew install pyenv-virtualenv
 #?

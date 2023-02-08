@@ -19,6 +19,7 @@ umask 022
 brew update
 brew install dive
 brew install jesseduffield/lazydocker/lazydocker
+brew install podman
 umask 077
 
 #
