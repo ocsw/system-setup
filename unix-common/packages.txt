@@ -10,7 +10,7 @@ base64
 bash
 bash-completion
 bashdb
-bats
+bats-core
 bison
 black
 broot
