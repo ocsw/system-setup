@@ -43,7 +43,7 @@ if hash diff-so-fancy > /dev/null 2>&1; then
     # use 'git --no-pager' to bypass
     git config --global core.pager 'diff-so-fancy | less --tabs=4 -FRX'
     #
-    git config --global interactive.difffilter '(echo && diff-so-fancy)'
+    git config --global interactive.difffilter 'diff-so-fancy --patch'
     #
     # git log's commit header width
     git config --global diff-so-fancy.rulerwidth 47
@@ -87,12 +87,6 @@ git config --global init.defaultbranch main
 #
 git config --global pull.ff only
 git config --global merge.ff only
-
-#
-# there seems to be a bug in the new implementation that breaks diff-so-fancy
-# integration; see https://github.com/so-fancy/diff-so-fancy/issues/437
-#
-git config --global add.interactive.usebuiltin false
 
 #
 # GPG signing
