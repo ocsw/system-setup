@@ -1,7 +1,6 @@
 $ ls ~/.vscode/extensions/ | sed 's/-[^-]*$//' | sort -u -t. -k2
 rogalmic.bash-debug
 bungcip.better-toml
-shan.code-settings-sync
 serayuzgur.crates
 webfreak.debug
 redhat.fabric8-analytics

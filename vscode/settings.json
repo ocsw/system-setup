@@ -93,20 +93,15 @@
         "SC1117"
     ],
     "shellcheck.run": "onSave",
-    "sync.autoDownload": true,
-    "sync.autoUpload": true,
-    "sync.gist": "2c8bd11436a82986ac40c50ac35fb63f",
-    "sync.removeExtensions": false,
     "telemetry.telemetryLevel": "off",
     "window.newWindowDimensions": "inherit",
     "window.restoreWindows": "all",
     "window.title": "${rootName}${separator}${activeEditorShort}",
+    "workbench.colorTheme": "Default Light+",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
     "workbench.list.horizontalScrolling": true,
     "workbench.settings.editor": "json",
-    "workbench.settings.useSplitJSON": true,
-    "window.zoomLevel": 1,
-    "workbench.colorTheme": "Default Light+"
+    "workbench.settings.useSplitJSON": true
 }
