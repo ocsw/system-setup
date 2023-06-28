@@ -26,13 +26,13 @@ brew install minikube
 brew install kind
 brew tap robscott/tap && brew install robscott/tap/kube-capacity
 brew install argoproj/tap/kubectl-argo-rollouts
+brew install kubebuilder
 umask 077
 # install Velero
 # install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
 # install https://github.com/rikatz/kubepug
-# install KCC (?)
-#    https://cloud.google.com/config-connector/docs/how-to/import-export/overview#installing-config-connector
 
+#
 #
 # GKE-specific setup
 #
@@ -42,6 +42,8 @@ mkdir -p ~/bin  # add ~/bin to your default PATH
 ln -s /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gke-gcloud-auth-plugin ~/bin/
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True  # add this to your shell startup
 gcloud components update
+# install KCC (?)
+#    https://cloud.google.com/config-connector/docs/how-to/import-export/overview#installing-config-connector
 umask 077
 gke-up  # see below
 
