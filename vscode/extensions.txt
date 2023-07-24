@@ -1,8 +1,8 @@
-$ ls ~/.vscode/extensions/ | sed 's/-[^-]*$//' | sort -u -t. -k2
+$ cat ~/.vscode/extensions/extensions.json  | jq -r '.[].identifier.id' | sort -t. -k2
 rogalmic.bash-debug
-bungcip.better-toml
 serayuzgur.crates
 webfreak.debug
+tamasfe.even-better-toml
 redhat.fabric8-analytics
 codezombiech.gitignore
 eamodio.gitlens
@@ -12,7 +12,7 @@ ybaumes.highlight-trailing-white-spaces
 ephoton.indent-switcher
 kaiwood.indentation-level-movement
 visualstudioexptteam.intellicode-api-usage-examples
-redhat.java-1.12.0-darwin
+redhat.java
 dgileadi.java-decompiler
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
@@ -24,11 +24,11 @@ esbenp.prettier-vscode
 puppet.puppet-vscode
 ms-python.python
 lextudio.restructuredtext
-rust-lang.rust-analyzer-0.3.1266-darwin
+rust-lang.rust-analyzer
 timonwong.shellcheck
 trond-snekvik.simple-rst
 coolbear.systemd-unit-file
-hashicorp.terraform-2.24.3-darwin
+hashicorp.terraform
 be5invis.toml
 dunstontc.viml
 shengchen.vscode-checkstyle
