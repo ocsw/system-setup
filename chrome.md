@@ -115,11 +115,9 @@ NOTE: has to be done separately for each profile
 [awesome-screenshot-screen]: https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj
 [carettab-new-tab-clock-an]: https://chrome.google.com/webstore/detail/carettab-new-tab-clock-an/cojpndognjdcakkimaloeealehpkljna
 [dark-reader]: https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
-[downloader-for-instagram]: https://chrome.google.com/webstore/detail/downloader-for-instagram/olkpikmlhoaojbbmmpejnimiglejmboe
 [goto-tab]: https://chrome.google.com/webstore/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi
 [https-everywhere]: https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp
 [lastpass-free-password-ma]: https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd
-[nod-reactions-for-google]: https://chrome.google.com/webstore/detail/nod-reactions-for-google/oikgofeboedgfkaacpfepbfmgdalabej
 [onenote-web-clipper]: https://chrome.google.com/webstore/detail/onenote-web-clipper/gojbdfnpnhogfdgjbigejoaolejmgdhk
 [password-alert]: https://chrome.google.com/webstore/detail/password-alert/noondiphcddnnabmjcihcjfbhfklnnep
 [pinboard-plus]: https://chrome.google.com/webstore/detail/pinboard-plus/mphdppdgoagghpmmhodmfajjlloijnbd
