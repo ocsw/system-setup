@@ -1,6 +1,6 @@
 ack
 ag
-archey
+archey4
 arping
 atop
 autoconf
@@ -54,7 +54,6 @@ ipcalc
 iperf
 ipv6calc
 ipython
-ipython2
 ipython3
 jesseduffield/lazygit/lazygit
 jo
@@ -101,8 +100,6 @@ pyenv
 pyenv-virtualenv
 python
 python-dev
-python2
-python2-dev
 python3
 python3-dev
 python_libs

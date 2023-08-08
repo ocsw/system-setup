@@ -891,12 +891,15 @@ Run from the [Unix Setup][unix-setup] directory:
 
 ```shell
 umask 022
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# on Apple Silicon (but see dotfiles)
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 # brew outdated
 for i in $(cat packages.txt | sed 's/ *#.*$//' | grep -v '^$'); do
     brew install "$i"
 done
+# run again with -q to find unavailable packages
 brew upgrade
 brew cleanup
 brew doctor
