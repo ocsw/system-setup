@@ -19,7 +19,8 @@ These are all alerts; do the other sections first
 * Battery Time Remaining: 10 minutes (default)
 * Low Battery: 10% (default)
 * Bluetooth Battery: 5% (default)
-* Any Temperature Above: 100C for 30 sec
+* Any Temperature Above: 100C for 30 sec (lower on Apple Silicon?) (banner?)
+    * Default is 75C for 10 sec
 * CPU Usage Above: 75% for 10 sec (default time) (banner (?))
 * Memory Pressure Above: 80% for 10 sec (default)
 * 'Macintosh HD' Used Percentage Above: 90% (default)
@@ -54,8 +55,8 @@ These are all alerts; do the other sections first
 ## Network
 
 * Active: net label, arrow label, (?)bandwidth num
-* Processes: 10
 * Decimals (KB): 1(?) 2?
+* Processes: 10
 * Combine bandwidth
 * Show BSD names
 
@@ -63,7 +64,7 @@ These are all alerts; do the other sections first
 
 * Active: label, ?single num
 * Degrees: C
-* Sensors: CPU PECI (show units), ?CPU frequency (show units)
+* Sensors: CPU PECI / Core Avg (show units), ?CPU frequency (show units)
 
 ## Battery
 
@@ -77,7 +78,8 @@ These are all alerts; do the other sections first
 
 * On
 * Menu bar: outline date icon (or clock icon, or `EE hh:mm a`)
-* World Clocks: `ZZZ __RELATIVE_OFFSET__ EE HH:mm` (default 06:05 AM)
+* World Clocks: `ZZZ __RELATIVE_OFFSET__ EE HH:mm`
+    * (e.g. -0400 +0 Wed 14:40; default 06:05 AM)
 * Hotkey: `ctrl-opt-cmd-T`
 * World clocks:
     * UTC
