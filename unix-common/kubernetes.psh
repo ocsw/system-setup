@@ -19,7 +19,7 @@ brew install kubernetes-cli
 brew install derailed/k9s/k9s
 brew install fzf
 brew install kubectx
-brew tap johanhaleby/kubetail && brew install kubetail
+brew tap johanhaleby/kubetail && brew install johanhaleby/kubetail/kubetail
 brew install stern
 brew install kube-ps1
 brew install minikube
@@ -37,7 +37,7 @@ umask 077
 # GKE-specific setup
 #
 umask 022
-gcloud components install gke-gcloud-auth-plugin
+echo "y" | gcloud components install gke-gcloud-auth-plugin
 mkdir -p ~/bin  # add ~/bin to your default PATH
 ln -s /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gke-gcloud-auth-plugin ~/bin/
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True  # add this to your shell startup

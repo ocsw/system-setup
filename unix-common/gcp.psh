@@ -14,16 +14,16 @@ umask 022
 brew update
 brew install --cask google-cloud-sdk
 # also makes sure pycs are created with umask 022
-gcloud components install core bq gsutil  # should be default?
+echo "y" | gcloud components install core bq gsutil  # should be default?
 gcloud config set disable_usage_reporting True
 gcloud config set account EMAIL_ADDRESS
 gcloud auth application-default login
 gcloud auth login
-gcloud components install beta
-gcloud components install alpha
+echo "y" | gcloud components install beta
+echo "y" | gcloud components install alpha
 gcloud beta auth application-default login
 gcloud beta auth login
-gcloud components install docker-credential-gcr
+echo "y" | gcloud components install docker-credential-gcr
 gcloud auth configure-docker --quiet
 # I don't know why these aren't already there
 (
