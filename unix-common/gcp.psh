@@ -25,11 +25,11 @@ gcloud beta auth application-default login
 gcloud beta auth login
 echo "y" | gcloud components install docker-credential-gcr
 gcloud auth configure-docker --quiet
-# I don't know why these aren't already there
+# add ~/bin to your default PATH
 (
-    cd /usr/local/bin && \
-    for i in ../Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/docker-credential-gc*; do
-        ln -s "$i" .
+    mkdir -p ~/bin &&
+    for i in $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/docker-credential-gc*; do
+        ln -s "$i" ~/bin
     done
 )
 umask 077

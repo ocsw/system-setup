@@ -906,7 +906,8 @@ brew doctor
 umask 077
 ```
 
-* add `/usr/local/bin/bash` to `/etc/shells` and `chsh -s /usr/local/bin/bash`?
+* add `/usr/local/bin/bash` / `/opt/homebrew/bin/bash` to `/etc/shells` and
+  `chsh -s "$(brew --prefix)/bin/bash"`?
     * on 10.15+ (Catalina), `chsh -s /bin/bash` if not doing the above, and add
       `export BASH_SILENCE_DEPRECATION_WARNING=1` to `~/.bash_profile`
 * restart shell (fixes problem with `pybase`)
@@ -949,7 +950,7 @@ done
 umask 022
 brew install gnupg pinentry-mac
 umask 077
-echo "pinentry-program /usr/local/bin/pinentry-mac" >> \
+echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> \
     ~/.gnupg/gpg-agent.conf
 gpgconf --kill gpg-agent
 ```

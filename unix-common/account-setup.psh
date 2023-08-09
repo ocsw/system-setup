@@ -15,6 +15,8 @@
 ### first install gpg, git/hg, (diff-so-fancy), vim
 ### if __git_ps1 isn't included, install it
 
+mkdir -p ~/bin
+
 
 ###############
 # SSH (start) #
