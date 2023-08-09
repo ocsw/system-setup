@@ -18,8 +18,12 @@ if ! git config --global --get user.email > /dev/null; then
     git config --global user.email danielle.malament@gmail.com
 fi
 if ! git config --global --get user.signingkey > /dev/null; then
+    # GPG signing (old)
     # not necessary if the default key is the one you want
-    git config --global user.signingkey KEY_ID
+    #git config --global user.signingkey KEY_ID
+
+    # SSH signing (new)
+    git config --global user.signingkey ~/.ssh/github_signing_ed25519.pub
 fi
 
 
@@ -89,8 +93,9 @@ git config --global pull.ff only
 git config --global merge.ff only
 
 #
-# GPG signing
+# GPG/SSH signing
 #
+git config --global gpg.format ssh
 git config --global commit.gpgsign true
 git config --global tag.forcesignannotated true
 

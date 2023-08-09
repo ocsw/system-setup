@@ -35,6 +35,9 @@ EOF
 # GitHub #
 ##########
 
+#
+# authentication
+#
 ### remember to add a passphrase!
 ssh-keygen -a 100 -t ed25519 -f ~/.ssh/github_ed25519
 cat >> ~/.ssh/config <<EOF
@@ -42,17 +45,26 @@ Host github.com
     IdentityFile ~/.ssh/github_ed25519
 EOF
 cat ~/.ssh/github_ed25519.pub
-# add SSH key to GitHub
+# add the key to your GitHub account
 
-# see gpg-base for config file templates; apply to ~/.gnupg
-
-# use RSA/RSA 4096, no expiration, the same name and email as below,
+#
+# signing - GPG way (old)
+#
+# use RSA/RSA 4096, no expiration, the same name and email as your account,
 # and comment 'HOSTNAME -> GitHub'
 gpg --full-generate-key
 # not really necessary, it will be printed when the key is generated
 # gpg --list-secret-keys --keyid-format LONG  # copy the key ID
 gpg --armor --export KEY_ID
-# add GPG key to GitHub
+# add the key to your GitHub account
+
+#
+# signing - SSH way (new)
+#
+### remember to add a passphrase!
+ssh-keygen -a 100 -t ed25519 -f ~/.ssh/github_signing_ed25519
+cat ~/.ssh/github_signing_ed25519.pub
+# add the key to your GitHub account
 
 
 ################
@@ -72,8 +84,13 @@ gpg --armor --export KEY_ID
 # re-do these as necessary
 git config --global user.name 'Danielle Zephyr Malament'
 git config --global user.email danielle.malament@gmail.com
+#
+# GPG signing (old)
 # not necessary if the default key is the one you want
-git config --global user.signingkey KEY_ID
+#git config --global user.signingkey KEY_ID
+#
+# SSH signing (new)
+git config --global user.signingkey ~/.ssh/github_signing_ed25519.pub
 
 # optionally, run git-check.sh
 
