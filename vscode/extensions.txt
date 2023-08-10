@@ -1,4 +1,12 @@
-$ cat ~/.vscode/extensions/extensions.json  | jq -r '.[].identifier.id' | sort -t. -k2
+# to get the list:
+# cat ~/.vscode/extensions/extensions.json | jq -r '.[].identifier.id' | \
+#     sort -t. -k2
+
+# to install:
+# for i in $(grep -v '^#' extensions.txt | grep -v '^$'); do
+#     code --install-extension $i
+# done
+
 rogalmic.bash-debug
 serayuzgur.crates
 webfreak.debug
