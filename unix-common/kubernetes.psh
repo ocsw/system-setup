@@ -50,6 +50,7 @@ unset ARCH
 umask 022
 echo "y" | gcloud components install gke-gcloud-auth-plugin
 mkdir -p ~/bin  # add ~/bin to your default PATH
+# I don't know why this isn't already symlinked into $(brew --prefix)/bin
 ln -s "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gke-gcloud-auth-plugin" ~/bin/
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True  # add this to your shell startup
 gcloud components update

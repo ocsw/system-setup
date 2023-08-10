@@ -24,11 +24,7 @@ gcloud beta auth application-default login
 gcloud beta auth login
 echo "y" | gcloud components install docker-credential-gcr
 gcloud auth configure-docker --quiet
-# add ~/bin to your default PATH
-(
-    mkdir -p ~/bin &&
-    for i in $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/docker-credential-gc*; do
-        ln -s "$i" ~/bin
-    done
-)
+mkdir -p ~/bin  # add ~/bin to your default PATH
+# I don't know why this isn't already symlinked into $(brew --prefix)/bin
+ln -s "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/docker-credential-gcr" ~/bin/
 umask 077
