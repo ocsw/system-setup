@@ -86,6 +86,6 @@ gke_contexts () {  # can use gke-contexts in bash
 gke_clusters () {  # can use gke-clusters in bash
     # get all clusters
     # (probably want to remove the production filter)
-    gcloud container clusters list --project=gke-xpn-1 \
+    gcloud container clusters list --project=PROJECT_NAME \
         --filter="resourceLabels[env]=production" --format="value(name)"
 }
