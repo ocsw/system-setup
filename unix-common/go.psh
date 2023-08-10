@@ -44,6 +44,9 @@ go install golang.org/x/tools/gopls@latest
 go install github.com/x-motemen/gore/cmd/gore@latest
 go install github.com/traefik/yaegi/cmd/yaegi@latest
 #
+# debugger
+go install github.com/go-delve/delve/cmd/dlv@latest
+#
 # formatting & linting
 go install golang.org/x/tools/cmd/goimports@latest
 go install golang.org/x/lint/golint@latest
@@ -62,3 +65,4 @@ go install golang.org/x/tools/cmd/stringer@latest
 # from the root of each repo:
 # (see https://github.com/ocsw/dotfiles/blob/master/dot.bashrc.d/go.post.sh)
 vscode-golang-settings
+# (also, can open in VSC to install dependencies)
