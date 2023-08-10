@@ -821,6 +821,7 @@ See the [VSCode Setup][vscode-setup] directory
 * Create symlink:
 
 ```shell
+mkdir -p ~/bin
 ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
     ~/bin/
 ```

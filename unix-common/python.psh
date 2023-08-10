@@ -50,7 +50,6 @@ sudo installer -pkg \
 umask 077
 
 pybase 3
-pybase 2
 
 # not sure if this is enough, you might need to log out and back in for pip to
 # not try to put things in /usr/local/bin...

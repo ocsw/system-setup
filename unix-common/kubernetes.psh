@@ -39,6 +39,7 @@ ARCH=$(uname -m) && \
     chmod 755 ~/bin/velero && \
     rm -r "velero-v1.11.1-darwin-${ARCH}.tar.gz" \
         "velero-v1.11.1-darwin-${ARCH}/"
+unset ARCH
 # install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
 # install https://github.com/rikatz/kubepug
 
