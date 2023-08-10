@@ -3,8 +3,8 @@ install CE/Ultimate from https://www.jetbrains.com/idea/
 close all projects
 
 Theme:
-    Preferences -> Appearance & Behavior -> Appearance
-        Theme: Darcula (?) [default?]
+    Settings -> Appearance & Behavior -> Appearance
+        Theme: Darcula?
 
 File -> Project Structure
     Platform Settings -> SDKs, for each JDK:
@@ -14,7 +14,7 @@ File -> Project Structure
         Select the default JDK and language level
 
 Error Prone?:
-    Preferences:
+    Settings:
         Plugins:
             Error Prone Compiler (may need to restart)
         Build -> Compiler -> Java Compiler:
@@ -24,7 +24,7 @@ Error Prone?:
 
 google-java-format:
     Download https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml
-    Preferences:
+    Settings:
         Plugins:
             google-java-format
         google-java-format Settings:
@@ -33,22 +33,35 @@ google-java-format:
         Editor -> Code Style [-> Java]:
             Import Scheme(s)
             Wrapping and Braces:
-                Hard wrap at: 100 (?)
+                Hard wrap at: 100 (?) (default)
             Scheme: GoogleStyle
-    File -> New Projects Setup -> Preferences For New Projects
+    File -> New Projects Setup -> Settings For New Projects
         Other Settings:
             google-java-format Settings:
                 Enable
                 Style: Google
 
-Add <your-laptop-name>.local to the localhost line in /etc/hosts?
-    127.0.0.1 localhost <your-laptop-name>.local
+Help -> Edit Custom VM Options
+add:
+--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
+--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED
+
+Add <your-machine-hostname>.local to the localhost line in /etc/hosts?
+    127.0.0.1 localhost <your-machine-hostname>.local
 
 Consider raising maximum Java heap memory to e.g. -Xmx2048m
 See https://intellij-support.jetbrains.com/hc/en-us/articles/206544869
 
 Languages:
-    Preferences -> Plugins:
+    Settings -> Plugins:
         Python (JetBrains)
         U: Go (JetBrains)
     Restart as required
