@@ -86,7 +86,9 @@ These are all alerts; do the other sections first
     * No Moon?
     * No Current Location? (else give location access)
     * (other locations)
-* Open dropdown -> hide request box
+* Open dropdown:
+    * hide request box
+    * current -> request
 
 ## Combined
 
@@ -94,15 +96,7 @@ These are all alerts; do the other sections first
 
 ## -> System Preferences
 
-* Date & Time:
-    * Clock:
-        * No date (if using date icon)
-* Energy Saver:
-    * No battery in menu bar
-* Extensions:
-    * Today:
-        * iStat on, first
-* Security & Privacy:
-    * Privacy:
-        * Location Services:
-            * iStat on (if using Current Location)
+* Control Center:
+    * Battery (Menu Bar): off
+    * Clock Options:
+        * Show date: Never (if using date icon)
