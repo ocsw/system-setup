@@ -178,6 +178,7 @@ e.g. headphones, controllers
 
 [Download][spideroak-one-dl]
 
+* Log in
 * General:
     * Launch minimized?
     * Don't show splash screen?
@@ -205,6 +206,8 @@ e.g. headphones, controllers
 * -> System Preferences -> Extensions -> Finder Extensions: allow
 * -> System Preferences -> Security &P -> Privacy -> Files and Folders: allow
     * (as necessary; there should be popup requests when they're first needed)
+* Sign in
+* Start syncing
 * Computer:
     * Name: change to match hostname [?]
     * Folders (all from homedir):
@@ -467,6 +470,8 @@ Download from main site or [App Store][unarchiver-app-store]
 
 ### [Disk Inventory X][disk-inventory-x]
 
+* -> System Settings -> Privacy &S -> allow
+
 [disk-inventory-x]: http://www.derlien.com/
 
 ### [DaisyDisk][daisydisk] ($)
@@ -474,11 +479,14 @@ Download from main site or [App Store][unarchiver-app-store]
 Download from main site or [App Store][daisydisk-app-store]
 
 * License
+* Accept agreement
 
 [daisydisk]: https://daisydiskapp.com/
 [daisydisk-app-store]: https://apps.apple.com/app/daisydisk/id411643860
 
 ### [Wireshark][wireshark]
+
+* Install ChmodBPF
 
 [wireshark]: https://www.wireshark.org/
 
@@ -500,6 +508,8 @@ See [Chrome Setup][chrome-setup]
 [chrome-setup]: ../chrome.md
 
 ### [Firefox][firefox]
+
+* Not primary
 
 [Add-ons][firefox-add-ons]
 
@@ -806,9 +816,13 @@ See [Firefox Setup][firefox-setup]
 
 ### [MacVim][macvim]
 
+* Check for updates automatically
+
 [macvim]: https://macvim-dev.github.io/macvim/
 
 ### [Bluefish][bluefish]
+
+* -> System Settings -> Privacy &S -> allow
 
 [bluefish]: http://bluefish.openoffice.nl/index.html
 
