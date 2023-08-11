@@ -27,7 +27,8 @@ See [System Settings Setup][macos-system-settings]
     * New: `Downloads` (or homedir?)
     * Don't open in tabs
 * Sidebar:
-    * Show all (except `AirDrop`, `Movies`?)
+    * Show all (except `AirDrop`?, `Movies` (?), machine (?))
+    * Note `-` on HDs
 * Advanced:
     * Remove after 30 days
 * `cmd-shift-.` for dotfiles
@@ -74,6 +75,8 @@ See [System Settings Setup][macos-system-settings]
 
 ### [Logitech Control Center][lcc] (w/Marathon Mouse M705)
 
+* -> System Settings -> Privacy &S -> Automation -> System Events: allow
+  (if there)
 * (pair in Unifying Software)
 * General:
     * (default tracking multiplier: 1)
@@ -90,9 +93,9 @@ See [System Settings Setup][macos-system-settings]
 
 NOTE: requires unplugging and replugging the mouse receiver after it starts
 
-* -> System Settings -> Security &P -> Privacy:
-    * Camera: allow
+* -> System Settings -> Privacy &S:
     * Microphone: allow
+    * Camera: allow
     * Accessibility: allow
 * General:
     * Start automatically? (without this, it's still in the login list, hidden)
@@ -108,9 +111,10 @@ NOTE: requires unplugging and replugging the mouse receiver after it starts
 
 [Download][yubiswitch-dl]
 
+* -> System Settings -> Privacy &S -> Accessibility: allow
 * No enable on sleep
 * Auto off
-* Settings:
+* Preferences:
     * Hotkey (`ctrl-opt-cmd-Y`)
     * ProductID
         * -> `ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idProduct`
@@ -130,6 +134,7 @@ e.g. headphones, controllers
 
 ### [ToothFairy][toothfairy] ($) (App Store)
 
+* -> System Settings -> Privacy &S -> Bluetooth: allow
 * Add devices:
     * Icon
     * Show battery
@@ -144,8 +149,8 @@ e.g. headphones, controllers
 
 ### [SoundSource][soundsource] ($)
 
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
-* (^ after Super Volume Keys)
+* -> System Settings -> Privacy &S -> Accessibility: allow
+    * (after Super Volume Keys)
 * General:
     * Start at login
     * Hotkey (`ctrl-opt-cmd-S`)
@@ -160,7 +165,7 @@ e.g. headphones, controllers
 
 ### [Blue Sherpa][blue-sherpa]
 
-* -> System Settings -> Security &P -> Privacy -> Microphone: allow
+* -> System Settings -> Privacy &S -> Microphone: allow
 
 [blue-sherpa]: https://www.bluemic.com/en-us/products/sherpa/
 
@@ -178,6 +183,7 @@ e.g. headphones, controllers
 
 [Download][spideroak-one-dl]
 
+* -> System Settings -> Privacy &S -> Automation -> System Events: allow
 * Log in
 * General:
     * Launch minimized?
@@ -203,8 +209,11 @@ e.g. headphones, controllers
 
 ### [Google Drive][google-drive]
 
-* -> System Settings -> Extensions -> Finder Extensions: allow
-* -> System Settings -> Security &P -> Privacy -> Files and Folders: allow
+* -> System Settings -> Privacy &S:
+    * Files and Folders: allow
+    * Extensions:
+        * Added extensions: allow
+        * Finder extensions: allow
     * (as necessary; there should be popup requests when they're first needed)
 * Sign in
 * Start syncing
@@ -226,8 +235,14 @@ e.g. headphones, controllers
 
 [Download][dropbox-dl]
 
-* -> System Settings -> Extensions -> Finder Extensions: allow
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S:
+    * Accessibility: allow
+    * Extensions:
+        * Added extensions:
+            * Finder extensions: allow
+            * Sharing: allow
+        * Finder extensions: allow (if there)
+        * Sharing: allow
 * General:
     * Start on startup
     * Enable Finder integration
@@ -242,7 +257,13 @@ e.g. headphones, controllers
 
 ### [uBar][ubar] ($)
 
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S:
+    * Accessibility: allow
+    * Screen Recording: allow
+    * Full Disk Access: allow
+    * Automation:
+        * Finder: allow
+        * Spotify: allow
 * General:
     * Pinning: all if not ultrawide, else bottom only
     * Display: Main (?)
@@ -271,7 +292,7 @@ e.g. headphones, controllers
 
 ### [Witch][witch] ($)
 
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S -> Accessibility: allow
 * Actions:
     * 1:
         * Cycle windows
@@ -302,7 +323,12 @@ e.g. headphones, controllers
 
 ### [BetterTouchTool][btt] ($)
 
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S:
+    * Accessibility: allow
+    * Screen Recording: allow (if necessary)
+    * Automation:
+        * Shortcuts Events: allow
+        * System Events: allow (if there)
 * Basic:
     * Touch Bar:
         * No icon
@@ -323,7 +349,7 @@ e.g. headphones, controllers
 
 ### [Rectangle][rectangle]
 
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S -> Accessibility: allow
 * Launch on login
 * No snap by dragging (?)
 * Check for updates
@@ -341,7 +367,7 @@ e.g. headphones, controllers
 
 ### [Moom][moom] ($)
 
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S -> Accessibility: allow
 * General:
     * Launch on login
     * Don't show prefs on launch
@@ -368,7 +394,7 @@ e.g. headphones, controllers
 
 ### [Muzzle][muzzle]
 
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S -> Accessibility: allow
 
 [muzzle]: https://muzzleapp.com/
 
@@ -407,8 +433,12 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Bartender][bartender] ($)
 
-* -> System Settings -> Extensions -> Quick Look: allow
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S
+    * Accessibility: allow
+    * Screen Recording: allow
+    * Extensions:
+        * Added extensions: allow
+        * Quick Look: allow
 * General:
     * Launch at login
     * Spacing: Small
@@ -423,7 +453,7 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Kap][kap]
 
-* -> System Settings -> Security &P -> Privacy -> Screen Recording: allow
+* -> System Settings -> Privacy &S -> Screen Recording: allow
 * General:
     * Highlight Clicks
 * Plugins:
@@ -445,6 +475,10 @@ See [iStat Menus Setup][istat-setup]
 [appcleaner]: https://freemacsoft.net/appcleaner/
 
 ### [Suspicious Package][suspicious-package]
+
+* -> System Settings -> Privacy &S -> Extensions:
+    * Added extensions: allow
+    * Quick Look: allow
 
 [suspicious-package]: https://mothersruin.com/software/SuspiciousPackage/
 
@@ -478,6 +512,7 @@ Download from main site or [App Store][unarchiver-app-store]
 
 Download from main site or [App Store][daisydisk-app-store]
 
+* -> System Settings -> Privacy &S -> Full Disk Access: allow
 * License
 * Accept agreement
 
@@ -498,10 +533,12 @@ Download from main site or [App Store][daisydisk-app-store]
 
 See [Chrome Setup][chrome-setup]
 
-* -> System Settings -> Security &P -> Privacy:
-    * Camera: allow
+* -> System Settings -> Privacy &S:
+    * (after e.g. meet.new and sharing)
     * Microphone: allow
-    * Accessibility: allow
+    * Camera: allow
+    * Accessibility: allow (if there)
+    * Screen Recording: allow
 
 [chrome]: https://www.google.com/chrome/
 [chrome-extensions]: https://chrome.google.com/webstore/category/extensions
@@ -526,9 +563,10 @@ See [Firefox Setup][firefox-setup]
 
 ### [Franz][franz]
 
-* -> System Settings -> Security &P -> Privacy:
-    * Camera: allow
+* -> System Settings -> Privacy &S:
     * Microphone: allow
+    * Camera: allow
+    * Screen Recording: allow (?)
 * Account
 * General:
     * Don't launch on start
@@ -551,9 +589,9 @@ See [Firefox Setup][firefox-setup]
 
 ### [Skype][skype] (in Franz instead?)
 
-* -> System Settings -> Security &P -> Privacy:
-    * Camera: allow
+* -> System Settings -> Privacy &S:
     * Microphone: allow
+    * Camera: allow
 
 [skype]: https://www.skype.com/en/
 
@@ -571,10 +609,11 @@ See [Firefox Setup][firefox-setup]
 
 (sign into workspaces)
 
-* -> System Settings -> Security &P -> Privacy:
-    * Camera: allow
+* -> System Settings -> Privacy &S:
     * Microphone: allow
-    * Accessibility: allow
+    * Camera: allow
+    * Screen Recording: allow
+    * Accessibility: allow (if there)
 * Profile
 * Status
 * Notifications:
@@ -634,10 +673,11 @@ See [Firefox Setup][firefox-setup]
 
 [Download][zoom-dl]
 
-* -> System Settings -> Security &P -> Privacy:
-    * Camera: allow
+* -> System Settings -> Privacy &S:
     * Microphone: allow
-    * Accessibility: deny
+    * Camera: allow
+    * Accessibility: deny (if there) (?)
+    * Screen Recording: allow (if necessary)
 * Share Screen:
     * Don't silence notifications (if using Muzzle)
 
@@ -704,7 +744,7 @@ See [Firefox Setup][firefox-setup]
 
 ### [Kindle][kindle]
 
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S -> Accessibility: allow (if there)
 * No dictionary
 * No crash reports (?)
 * (rename and add shared libraries)
@@ -776,7 +816,9 @@ See [Firefox Setup][firefox-setup]
 
 [Download][onenote-dl]
 
-* -> System Settings -> Extensions -> Share Menu: on
+* -> System Settings -> Privacy &S -> Extensions:
+    * Added extensions: allow
+    * Share: allow
 * -> OneNote Web Clipper in Chrome (?)
 * General:
     * Store in OneDrive (?)
@@ -870,7 +912,18 @@ See [IntelliJ Setup][intellij-setup]
 
 ### [iTerm2][iterm2]
 
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S:
+    * (after e.g. find or chmod)
+    * (Contacts: allow)
+    * (Calendars: allow)
+    * (Reminders: allow)
+    * (Photos: allow)
+    * Files and Folders -> Google Drive: allow
+    * Full Disk Access: allow
+    * Accessibility: allow (if there)
+    * Automation -> Google Chrome: allow
+        * (after clicking a link)
+    * App Management: deny (?)
 * General:
     * Bury tmux session (?)
 * Profiles:
@@ -895,7 +948,7 @@ See [IntelliJ Setup][intellij-setup]
 
 * incl. additional components, command-line tools
 * `xcode-select --install` after OS upgrade
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S -> Accessibility: allow
 
 [xcode]: https://developer.apple.com/xcode/
 [xcode-app-store]: https://apps.apple.com/us/app/xcode/id497799835
@@ -1021,7 +1074,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 
 [Download][steam-dl]
 
-* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Privacy &S -> Accessibility: allow
 * Account
 * Interface:
     * Don't run on startup
