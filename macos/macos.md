@@ -11,11 +11,11 @@ incl. save recovery key (pic?)
 
 ### Updates (OS and App Store)
 
-### System Preferences
+### System Settings
 
-See [System Preferences Setup][macos-system-prefs]
+See [System Settings Setup][macos-system-settings]
 
-[macos-system-prefs]: macos-system-prefs.md
+[macos-system-settings]: macos-system-settings.md
 
 ### Make Directories (depending)
 
@@ -90,7 +90,7 @@ See [System Preferences Setup][macos-system-prefs]
 
 NOTE: requires unplugging and replugging the mouse receiver after it starts
 
-* -> System Preferences -> Security &P -> Privacy:
+* -> System Settings -> Security &P -> Privacy:
     * Camera: allow
     * Microphone: allow
     * Accessibility: allow
@@ -110,7 +110,7 @@ NOTE: requires unplugging and replugging the mouse receiver after it starts
 
 * No enable on sleep
 * Auto off
-* Preferences:
+* Settings:
     * Hotkey (`ctrl-opt-cmd-Y`)
     * ProductID
         * -> `ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idProduct`
@@ -144,7 +144,7 @@ e.g. headphones, controllers
 
 ### [SoundSource][soundsource] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * (^ after Super Volume Keys)
 * General:
     * Start at login
@@ -160,7 +160,7 @@ e.g. headphones, controllers
 
 ### [Blue Sherpa][blue-sherpa]
 
-* -> System Preferences -> Security &P -> Privacy -> Microphone: allow
+* -> System Settings -> Security &P -> Privacy -> Microphone: allow
 
 [blue-sherpa]: https://www.bluemic.com/en-us/products/sherpa/
 
@@ -203,8 +203,8 @@ e.g. headphones, controllers
 
 ### [Google Drive][google-drive]
 
-* -> System Preferences -> Extensions -> Finder Extensions: allow
-* -> System Preferences -> Security &P -> Privacy -> Files and Folders: allow
+* -> System Settings -> Extensions -> Finder Extensions: allow
+* -> System Settings -> Security &P -> Privacy -> Files and Folders: allow
     * (as necessary; there should be popup requests when they're first needed)
 * Sign in
 * Start syncing
@@ -226,8 +226,8 @@ e.g. headphones, controllers
 
 [Download][dropbox-dl]
 
-* -> System Preferences -> Extensions -> Finder Extensions: allow
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Extensions -> Finder Extensions: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Start on startup
     * Enable Finder integration
@@ -242,7 +242,7 @@ e.g. headphones, controllers
 
 ### [uBar][ubar] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Pinning: all if not ultrawide, else bottom only
     * Display: Main (?)
@@ -271,7 +271,7 @@ e.g. headphones, controllers
 
 ### [Witch][witch] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * Actions:
     * 1:
         * Cycle windows
@@ -302,7 +302,7 @@ e.g. headphones, controllers
 
 ### [BetterTouchTool][btt] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * Basic:
     * Touch Bar:
         * No icon
@@ -323,7 +323,7 @@ e.g. headphones, controllers
 
 ### [Rectangle][rectangle]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * Launch on login
 * No snap by dragging (?)
 * Check for updates
@@ -341,7 +341,7 @@ e.g. headphones, controllers
 
 ### [Moom][moom] ($)
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Launch on login
     * Don't show prefs on launch
@@ -368,7 +368,7 @@ e.g. headphones, controllers
 
 ### [Muzzle][muzzle]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 
 [muzzle]: https://muzzleapp.com/
 
@@ -407,8 +407,8 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Bartender][bartender] ($)
 
-* -> System Preferences -> Extensions -> Quick Look: allow
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Extensions -> Quick Look: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Launch at login
     * Spacing: Small
@@ -423,7 +423,7 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Kap][kap]
 
-* -> System Preferences -> Security &P -> Privacy -> Screen Recording: allow
+* -> System Settings -> Security &P -> Privacy -> Screen Recording: allow
 * General:
     * Highlight Clicks
 * Plugins:
@@ -498,7 +498,7 @@ Download from main site or [App Store][daisydisk-app-store]
 
 See [Chrome Setup][chrome-setup]
 
-* -> System Preferences -> Security &P -> Privacy:
+* -> System Settings -> Security &P -> Privacy:
     * Camera: allow
     * Microphone: allow
     * Accessibility: allow
@@ -526,7 +526,7 @@ See [Firefox Setup][firefox-setup]
 
 ### [Franz][franz]
 
-* -> System Preferences -> Security &P -> Privacy:
+* -> System Settings -> Security &P -> Privacy:
     * Camera: allow
     * Microphone: allow
 * Account
@@ -551,7 +551,7 @@ See [Firefox Setup][firefox-setup]
 
 ### [Skype][skype] (in Franz instead?)
 
-* -> System Preferences -> Security &P -> Privacy:
+* -> System Settings -> Security &P -> Privacy:
     * Camera: allow
     * Microphone: allow
 
@@ -567,11 +567,11 @@ See [Firefox Setup][firefox-setup]
 
 [Download - App Store][slack-app-store]
 
-(preferences are per-workspace)
+(Settings are per-workspace)
 
 (sign into workspaces)
 
-* -> System Preferences -> Security &P -> Privacy:
+* -> System Settings -> Security &P -> Privacy:
     * Camera: allow
     * Microphone: allow
     * Accessibility: allow
@@ -634,7 +634,7 @@ See [Firefox Setup][firefox-setup]
 
 [Download][zoom-dl]
 
-* -> System Preferences -> Security &P -> Privacy:
+* -> System Settings -> Security &P -> Privacy:
     * Camera: allow
     * Microphone: allow
     * Accessibility: deny
@@ -704,7 +704,7 @@ See [Firefox Setup][firefox-setup]
 
 ### [Kindle][kindle]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * No dictionary
 * No crash reports (?)
 * (rename and add shared libraries)
@@ -776,7 +776,7 @@ See [Firefox Setup][firefox-setup]
 
 [Download][onenote-dl]
 
-* -> System Preferences -> Extensions -> Share Menu: on
+* -> System Settings -> Extensions -> Share Menu: on
 * -> OneNote Web Clipper in Chrome (?)
 * General:
     * Store in OneDrive (?)
@@ -870,7 +870,7 @@ See [IntelliJ Setup][intellij-setup]
 
 ### [iTerm2][iterm2]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * General:
     * Bury tmux session (?)
 * Profiles:
@@ -895,7 +895,7 @@ See [IntelliJ Setup][intellij-setup]
 
 * incl. additional components, command-line tools
 * `xcode-select --install` after OS upgrade
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 
 [xcode]: https://developer.apple.com/xcode/
 [xcode-app-store]: https://apps.apple.com/us/app/xcode/id497799835
@@ -997,7 +997,7 @@ umask 077
 
 * sign something (e.g. `gpg -s -u KEY_ID`, then mash keys and hit `ctrl-d`);
   check 'Save in Keychain' (or click 'Always Allow', whichever appears)
-* -> System Preferences -> GPG Suite -> Settings: (Default Key)
+* -> System Settings -> GPG Suite -> Settings: (Default Key)
 * (or if not using GPG Suite at all, optionally add `default-key KEY_ID` to
   `gpg.conf` in `~/.gnupg`)
 
@@ -1021,7 +1021,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 
 [Download][steam-dl]
 
-* -> System Preferences -> Security &P -> Privacy -> Accessibility: allow
+* -> System Settings -> Security &P -> Privacy -> Accessibility: allow
 * Account
 * Interface:
     * Don't run on startup
@@ -1124,7 +1124,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * Siri?
 * Launchpad (?)
 * Dashboard? (drag to dock)
-* System Preferences
+* System Settings
 * FortiClient / other VPNs
 * (Kindle)
 * Amazon Music, Spotify, etc.
