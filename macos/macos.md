@@ -183,7 +183,9 @@ e.g. headphones, controllers
 
 [Download][spideroak-one-dl]
 
-* -> System Settings -> Privacy &S -> Automation -> System Events: allow
+* -> System Settings -> Privacy &S:
+    * Photos: allow (after setup)
+    * Automation -> System Events: allow
 * Log in
 * General:
     * Launch minimized?
@@ -211,10 +213,11 @@ e.g. headphones, controllers
 
 * -> System Settings -> Privacy &S:
     * Files and Folders: allow
+        * (as necessary; there should be popup requests when they're first
+          needed)
     * Extensions:
         * Added extensions: allow
         * Finder extensions: allow
-    * (as necessary; there should be popup requests when they're first needed)
 * Sign in
 * Start syncing
 * Computer:
@@ -228,6 +231,7 @@ e.g. headphones, controllers
 * Settings:
     * Google Photos:
         * Original Quality
+    * no hotkey
 
 [google-drive]: https://www.google.com/drive/download/
 
@@ -285,7 +289,8 @@ e.g. headphones, controllers
         * ToothFairy
 * Shortcuts:
     * No hiding
-    * Activity: right option
+    * Activity: right option (or...?)
+    * No switch (?)
 * License
 
 [ubar]: https://brawersoftware.com/products/ubar
@@ -313,6 +318,7 @@ e.g. headphones, controllers
     * No app names in vertical lists
 * Advanced:
     * Show on display w/mouse (or frontmost?)
+    * lower Delay (?)
     * Spring load?
     * No release to dismiss?
     * Do not list: uBar
@@ -329,20 +335,22 @@ e.g. headphones, controllers
     * Automation:
         * Shortcuts Events: allow
         * System Events: allow (if there)
-* Basic:
+* Standard:
+    * Basic:
+        * General:
+            * Launch on startup
+            * No crash logs (?)
     * Touch Bar:
         * No icon
+    * Window Snapping & Moving:
+        * Snapping:
+            * Disable (?)
+        * Moving & Resizing:
+            * Move: `ctrl-opt`
+            * Resize: `ctrl-opt-cmd`
+            * Bring to front
 * Advanced:
-    * General:
-        * Launch on startup
-        * No crash logs (?)
     * Sync?
-    * Window Snapping:
-        * Disable (?)
-    * Moving & Resizing:
-        * Move: `ctrl-opt`
-        * Resize: `ctrl-opt-cmd`
-        * Bring to front
 * License
 
 [btt]: https://folivora.ai/
@@ -350,18 +358,21 @@ e.g. headphones, controllers
 ### [Rectangle][rectangle]
 
 * -> System Settings -> Privacy &S -> Accessibility: allow
-* Launch on login
-* No snap by dragging (?)
-* Check for updates
-* No key for LH/RH/TH/BH, TL/TR/BL/BR, F3/F23/C3/L23/L3
-* No key for AlmostMax/MaxH, L/R/U/D
-* Maximize: `ctrl-opt-cmd-F`
-* Make Smaller: `ctrl-opt-cmd-down`
-* Make Larger: `ctrl-opt-cmd-up`
-* Center: `ctrl-opt-cmd-C`
-* Restore: `ctrl-opt-cmd-Z`
-* Next Display: `ctrl-opt-cmd-right`
-* Previous Display: `ctrl-opt-cmd-left`
+* Keys:
+    * No key for LH/RH/CH/TH/BH, TL/TR/BL/BR, F3/C3/L3/F23/L23
+    * No key for AlmostMax/MaxH, L/R/U/D
+    * Maximize: `ctrl-opt-cmd-F`
+    * Make Smaller: `ctrl-opt-cmd-down`
+    * Make Larger: `ctrl-opt-cmd-up`
+    * Center: `ctrl-opt-cmd-C`
+    * Restore: `ctrl-opt-cmd-Z`
+    * Next Display: `ctrl-opt-cmd-right`
+    * Previous Display: `ctrl-opt-cmd-left`
+* Snapping:
+    * No snap by dragging (?)
+* General:
+    * Launch on login
+    * Check for updates
 
 [rectangle]: https://rectangleapp.com/
 
@@ -408,11 +419,7 @@ e.g. headphones, controllers
     * Hide in Dock
 * Session Defaults:
     * Default Duration: 3 hours
-    * Battery:
-        * End if below 10%
-        * Prompt
-    * Power Adapter:
-        * Ignore when connected
+    * Forced Sleep: End session
 * (Triggers)
 * Hotkeys:
     * Start/End: `ctrl-opt-cmd-A`
@@ -420,6 +427,9 @@ e.g. headphones, controllers
 * Appearance:
     * Icon: Eye (or Tea Kettle? Pill 2?)
     * Lower opacity?
+    * Show time remaining
+* Statistics:
+    * Disable
 * (Exclude from uBar)
 
 [amphetamine]: https://apps.apple.com/us/app/amphetamine/id937984704
@@ -441,8 +451,9 @@ See [iStat Menus Setup][istat-setup]
         * Quick Look: allow
 * General:
     * Launch at login
+    * Bartender Bar: Use, Only w/Notch
     * Spacing: Small
-* Menu Bar Layout : (see bottom)
+* Menu Bar Layout: (see bottom)
 * Hot Keys:
     * Show all: `ctrl-opt-cmd-M`
 * License
@@ -572,7 +583,7 @@ See [Firefox Setup][firefox-setup]
     * Don't launch on start
     * Don't keep in background
     * Don't show in system tray
-* Advanced:
+* Language:
     * No spell checking?
 * Services:
     * Messenger, Hangouts, Telegram, Skype, Discord, Slack, Steam
@@ -605,7 +616,7 @@ See [Firefox Setup][firefox-setup]
 
 [Download - App Store][slack-app-store]
 
-(Settings are per-workspace)
+(Preferences are per-workspace)
 
 (sign into workspaces)
 
@@ -620,7 +631,7 @@ See [Firefox Setup][firefox-setup]
     * Notify:
         * Direct messages
         * Threads
-    * DND (?) (10PM - 8AM?)
+    * DND? (10PM - 8AM?)
     * Sound & appearance:
         * Preview (depending)
         * Sound
@@ -629,8 +640,12 @@ See [Firefox Setup][firefox-setup]
     * Inactive:
         * Mobile: 2 min
         * No email
-* Language & Region:
-    * TZ
+* Sidebar:
+    * Always show: all but All, People, Apps
+    * Sort: alpha
+    * Don't list private separately (depending)
+* Themes:
+    * Colors: Aubergine (Aubergine Classic?)
 * Messages & Media:
     * Theme: clean
     * Names: display names
@@ -644,26 +659,23 @@ See [Firefox Setup][firefox-setup]
         * Show uploaded
         * Show from links (below 2 MB)
         * Show text previews
-* Sidebar:
-    * Appearance: Everything
-    * Sorting and grouping:
-        * Sort: alpha
-        * Don't list private separately (depending)
-        * Don't list shared separately (depending)
-    * Additional:
-        * Show all unreads
-        * Show Quick Switcher
-    * Theme: Aubergine (Aubergine Classic?)
+* Language & Region:
+    * TZ (and/or auto (?))
+    * Enable spellcheck
 * Mark as Read: Start where I left off, and mark the channel read
+* Audio & video:
+    * Set status when in a huddle
+    * Blur (depending)
+* Privacy & visibility:
+    * Slack Connect:
+        * No one (depending)
 * Advanced:
-    * Input Options:
-        * Enable spellcheck
+    * Input options:
         * Don't send w/enter on \`\`\`
-    * Other Options:
-        * PU/etc. scroll
+    * Confirmations:
         * Ask to toggle status
+    * Other options:
         * No channel suggestions?
-        * Set status when on a call
 
 [slack]: https://slack.com/
 [slack-dl]: https://slack.com/downloads/
@@ -679,7 +691,9 @@ See [Firefox Setup][firefox-setup]
     * Accessibility: deny (if there) (?)
     * Screen Recording: allow (if necessary)
 * Share Screen:
-    * Don't silence notifications (if using Muzzle)
+    * Don't silence notifications (if using Muzzle) [?]
+* Background & Effects:
+    * (Background)
 
 [zoom]: https://explore.zoom.us/meetings
 [zoom-dl]: https://zoom.us/download#client_4meeting
@@ -688,18 +702,21 @@ See [Firefox Setup][firefox-setup]
 
 ### [Spotify][spotify]
 
-* Music Quality:
-    * HQ
-* Social:
-    * Don't make new playlists public
-    * Don't show recently played
+* Autoplay: on
+* Audio Quality:
+    * Streaming quality: Automatic
+    * Download: Very high?
+    * Auto adjust: on
+    * Normalize volume: on
 * Display:
-    * Show unavailable
-    * Don't show friend activity (?)
+    * Don't show the now-playing panel
     * Don't show desktop notifications (?)
-* Autoplay: no?
-* Advanced:
-    * Startup: no
+    * Don't show friend activity (?)
+* Social:
+    * Don't publish new playlists
+    * Don't share listening activity
+    * Don't show recently played (?)
+* Startup: No
 
 [spotify]: https://www.spotify.com/us/
 
@@ -713,28 +730,13 @@ See [Firefox Setup][firefox-setup]
 [amazon-music]: https://www.amazon.com/music
 [amazon-music-dl]: https://www.amazon.com/Amazon-Music-Apps/b?ie=UTF8&node=2658409011
 
-### [iTunes][itunes]
-
-* Account -> Authorize
-* Downloads:
-    * Auto music
-    * Always check
-* Store:
-    * Sync podcasts
-    * Auto d/l art
-    * Share details
-* Advanced:
-    * Don't copy to folder?
-
-[itunes]: https://www.apple.com/itunes/
-
 ### [Apple Music][apple-music]
 
 * Account -> log in
 * General:
     * No notifications
 * Playback
-    * Sound Check (?)
+    * Sound Check
 * Files
     * Don't copy files?
 * Advanced
@@ -747,6 +749,7 @@ See [Firefox Setup][firefox-setup]
 * -> System Settings -> Privacy &S -> Accessibility: allow (if there)
 * No dictionary
 * No crash reports (?)
+* No auto updates?
 * (rename and add shared libraries)
 * (download books)
 
@@ -773,7 +776,7 @@ See [Firefox Setup][firefox-setup]
 * Auto-Correction:
     * No auto spelling
     * No auto caps
-    * No Link style?
+    * No link style?
     * No smart quotes?
     * Replacements on (?)
 
@@ -787,7 +790,7 @@ See [Firefox Setup][firefox-setup]
 * Auto-Correction:
     * No auto spelling
     * No auto caps
-    * No Link style?
+    * No link style?
     * No smart quotes?
     * Replacements on (?)
 
@@ -802,7 +805,7 @@ See [Firefox Setup][firefox-setup]
 * Auto-Correction:
     * No auto spelling
     * No auto caps
-    * No Link style?
+    * No link style?
     * No smart quotes?
     * Replacements on (?)
 
@@ -820,18 +823,16 @@ See [Firefox Setup][firefox-setup]
     * Added extensions: allow
     * Share: allow
 * -> OneNote Web Clipper in Chrome (?)
-* General:
-    * Store in OneDrive (?)
 * Spelling:
     * No auto spelling
     * No check spelling
     * No auto caps
+* Privacy:
+    * Don't send data
 * Quick Access Toolbar:
     * Just Undo/Redo
-* Navigation Panes:
-    * Hide all (just Section List?)
 * Printing:
-    * Two-Sided
+    * Double-sided: on (?)
 
 [onenote]: https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app
 [onenote-dl]: https://www.onenote.com/download
@@ -858,7 +859,7 @@ See [Firefox Setup][firefox-setup]
 
 ### [MacVim][macvim]
 
-* Check for updates automatically
+* Check for updates
 
 [macvim]: https://macvim-dev.github.io/macvim/
 
@@ -925,7 +926,8 @@ See [IntelliJ Setup][intellij-setup]
         * (after clicking a link)
     * App Management: deny (?)
 * General:
-    * Bury tmux session (?)
+    * tmux:
+        * Bury tmux session (?)
 * Profiles:
     * Colors:
         * Preset (Tango Dark/Light)
@@ -987,7 +989,7 @@ umask 077
 See the [Unix Setup][unix-setup] directory
 
 * dotfiles, incl. dotfile and `~/.to_back_up` links
-* add `~/.to_back_up` to Google Drive (backup)
+* add `~/.to_back_up` to Google Drive (backup) and (partly) SpiderOak One
 * rest of the [Unix Setup][unix-setup] directory
 * add hostname to `127.0.0.1` in `/etc/hosts`?
 
@@ -1175,7 +1177,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 
 * Finder
 * Siri?
-* Launchpad (?)
+* Launchpad?
 * Dashboard? (drag to dock)
 * System Settings
 * FortiClient / other VPNs
@@ -1204,7 +1206,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * Finder
 * Android File Transfer
 * Kindle
-* iTunes / Apple Music, Amazon Music, Spotify, etc.
+* Apple Music, Amazon Music, Spotify, etc.
 * Skype, Zoom, Franz, Slack
 
 Telegram? (in Franz?)
@@ -1212,7 +1214,7 @@ Signal?
 Discord? (in Franz?)
 
 * OneNote
-* Chrome, Firefox
+* Chrome, Firefox, Safari
 * VSCode, Atom, Sublime, PyCharm, GoLand, IntelliJ, Xcode, etc.
 * TextEdit, Bluefish, MacVim, etc.
 * iTerm
@@ -1237,6 +1239,9 @@ Discord? (in Franz?)
 
 ## OS Version Notes
 
-See [Catalina Notes][catalina-notes]
+[Catalina Notes][catalina-notes]
+
+[Apple Silicon Notes][apple-silicon-notes]
 
 [catalina-notes]: catalina.txt
+[apple-silicon-notes]: m2.txt
