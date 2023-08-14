@@ -10,10 +10,10 @@
 * General:
     * Startup:
         * Restore
-        * Warn when quitting
         * No default check
     * Tabs:
         * No Ctrl+Tab in recently used order
+        * Confirm before quitting
 * Files and Applications:
     * Downloads:
         * Always ask where to save
@@ -25,9 +25,7 @@
         * Homepage: Google? blank?
         * New tabs: blank (?)
     * Firefox Home Content:
-        * No Top Sites
-        * No Recommended
-        * No Highlights
+        * Only search
 
 ### Search
 
@@ -41,6 +39,10 @@
     * Logins and Passwords:
         * Don't ask to save
         * (clear all)
+    * Forms and Autofill
+        * No addresses?
+        * No CC
+        * (clear all)
 * Firefox Data Collection and Use:
     * Don't send data to Mozilla (?)
     * Don't allow studies
@@ -52,7 +54,3 @@
 ### [Extensions][extensions]
 
 [extensions]: https://addons.mozilla.org/en-US/firefox/extensions/
-
-#### [HTTPS Everywhere][https-everywhere]
-
-[https-everywhere]: https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/

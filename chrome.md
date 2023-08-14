@@ -16,13 +16,16 @@ NOTE: has to be done separately for each profile
 * Account / Sign In
 * Sync:
     * Manage: no passwords or payment
-    * No autocomplete
+    * No autocomplete [?]
+    * No help improve
     * No make better
+    * No enhanced spell check
+    * No improved search suggestions
 * Chrome name and picture
 
 ### Autofill
 
-* Passwords:
+* Password Manager -> Settings:
     * Don't offer
     * No Auto Sign-in
     * (clear all)
@@ -36,6 +39,19 @@ NOTE: has to be done separately for each profile
 * Cookies:
     * No preload
 
+### Performance
+
+* Memory Saver:
+    * On (depending)
+    * Sites (if on):
+        * Email
+        * Calendar
+        * Discord
+        * Messenger
+        * Facebook
+        * Workplace
+        * etc.
+
 ### Appearance
 
 * Show bookmarks bar
@@ -47,12 +63,13 @@ NOTE: has to be done separately for each profile
 
 * Continue where you left off
 
-### Advanced
+### Downloads
 
-* Downloads:
-    * Ask where to save
-* System:
-    * No hardware acceleration? (issues on Mac)
+* Ask where to save
+
+### System
+
+* No hardware acceleration? (issues on Mac)
 
 ## [Extensions][extensions]
 
@@ -64,7 +81,7 @@ NOTE: has to be done separately for each profile
 
 #### [Adblock Plus][adblock-plus-free-ad-bloc]
 
-* (Whitelist)
+* (Allowlist)
 * Advanced:
     * No number in icon
 
@@ -88,13 +105,11 @@ NOTE: has to be done separately for each profile
 
 #### [Go to Tab][goto-tab]
 
-#### [HTTPS Everywhere][https-everywhere]
-
 #### [LastPass][lastpass-free-password-ma]
 
 #### [OneNote Web Clipper][onenote-web-clipper]
 
-#### [Password Alert][password-alert]
+#### ([Password Alert][password-alert])
 
 #### [Pinboard Plus][pinboard-plus]
 
@@ -116,7 +131,6 @@ NOTE: has to be done separately for each profile
 [carettab-new-tab-clock-an]: https://chrome.google.com/webstore/detail/carettab-new-tab-clock-an/cojpndognjdcakkimaloeealehpkljna
 [dark-reader]: https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
 [goto-tab]: https://chrome.google.com/webstore/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi
-[https-everywhere]: https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp
 [lastpass-free-password-ma]: https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd
 [onenote-web-clipper]: https://chrome.google.com/webstore/detail/onenote-web-clipper/gojbdfnpnhogfdgjbigejoaolejmgdhk
 [password-alert]: https://chrome.google.com/webstore/detail/password-alert/noondiphcddnnabmjcihcjfbhfklnnep
@@ -176,7 +190,6 @@ From left to right:
 * Tidy Sidebar
 * Awesome Screenshot?
 * (Image Downloaders)
-* Downloader for Instagram?
 * Dark Reader
 * Adblock Plus
 * LastPass
