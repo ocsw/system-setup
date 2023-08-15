@@ -163,6 +163,20 @@ e.g. headphones, controllers
 
 [soundsource]: https://rogueamoeba.com/soundsource/
 
+### [Balance Lock][balance-lock] (optional App Store)
+
+[Download - direct][balance-lock]
+
+[Download - App Store][balance-lock-app-store]
+
+* Launch on login
+* Preferences:
+    * Automatically launch
+    * No notifications
+
+[balance-lock]: https://www.tunabellysoftware.com/balance_lock/
+[balance-lock-app-store]: https://apps.apple.com/app/balance-lock/id1019371109?mt=12
+
 ### [Blue Sherpa][blue-sherpa]
 
 * -> System Settings -> Privacy &S -> Microphone: allow
@@ -477,6 +491,19 @@ See [iStat Menus Setup][istat-setup]
     * reverse
 
 [kap]: https://getkap.co/
+
+### [Loom][loom]
+
+[Download][loom-dl]
+
+* -> System Settings -> Privacy &S
+    * Microphone: allow
+    * Camera: allow
+    * Accessibility: allow
+    * Screen Recording: allow
+
+[loom]: https://www.loom.com/
+[loom-dl]: https://www.loom.com/desktop
 
 ### [AppCleaner][appcleaner]
 
@@ -1161,6 +1188,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * WiFi
 * ToothFairy
 * SoundSource: apps, output, input, main
+* Balance Lock (Hidden)
 * Blue Sherpa
 * Logitech Gaming Software (Hidden)
 * YubiSwitch (Hidden)
