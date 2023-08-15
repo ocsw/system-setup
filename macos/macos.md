@@ -1273,3 +1273,25 @@ Discord? (in Franz?)
 
 [catalina-notes]: catalina.txt
 [apple-silicon-notes]: m2.txt
+
+## Machine Migration
+
+* Copy files
+    * All users, including `/Users/Shared`; don't forget:
+        * SSH/GPG keys, known_hosts
+        * Kubernetes contexts (~/.kube/config)
+        * Python virtualenvs
+        * History: shell, Python, iPython, etc.
+        * Local config (shell, SSH, vim, etc; see
+          [this script][dotfiles-install])
+    * Check `/tmp`, `/usr/tmp`, `$TMPDIR`
+    * Check `/etc` and `/usr/local/etc` / `/opt/homebrew/etc`
+    * Check anything non-Homebrew in `/opt`
+* Copy containers (if applicable)
+* Check for other applications
+* Copy tabs
+* Check VSCode settings against this repo
+* Deauthorize Kindle
+* Save and copy desktop / Meet / Zoom backgrounds
+
+[dotfiles-install]: https://github.com/ocsw/dotfiles/blob/master/INSTALL.sh
