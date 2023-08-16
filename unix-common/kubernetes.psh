@@ -44,7 +44,6 @@ unset ARCH
 # install https://github.com/rikatz/kubepug
 
 #
-#
 # GKE-specific setup
 #
 umask 022
@@ -58,6 +57,15 @@ gcloud components update
 #    https://cloud.google.com/config-connector/docs/how-to/import-export/overview#installing-config-connector
 umask 077
 gke-up  # see below
+
+#
+# back up config; see
+# https://github.com/ocsw/dotfiles/blob/master/dot.bashrc.d/to_back_up.post.sh
+#
+mkdir -p ~/.kube
+touch ~/.kube/config
+chmod 600 ~/.kube/config
+ln_tbu ~/.kube/config
 
 #
 # GKE update
