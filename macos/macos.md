@@ -1292,6 +1292,6 @@ Discord? (in Franz?)
 * Copy tabs
 * Check VSCode settings against this repo
 * Deauthorize Kindle
-* Save and copy desktop / Meet / Zoom backgrounds
+* Save and copy desktop, Meet, Zoom, etc. backgrounds
 
 [dotfiles-install]: https://github.com/ocsw/dotfiles/blob/master/INSTALL.sh
