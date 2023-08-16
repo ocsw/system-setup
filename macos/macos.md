@@ -263,10 +263,12 @@ e.g. headphones, controllers
         * Sharing: allow
 * General:
     * Start on startup
-    * Enable Finder integration
 * Account
-* Import:
-    * No Photos
+* Backups:
+    * No notifications for external drives (?)
+    * No camera uploads (?)
+* Network:
+    * No LAN sync (?)
 
 [dropbox]: https://www.dropbox.com/
 [dropbox-dl]: https://www.dropbox.com/install
@@ -689,7 +691,7 @@ See [Firefox Setup][firefox-setup]
 * Language & Region:
     * TZ (and/or auto (?))
     * Enable spellcheck
-* Mark as Read: Start where I left off, and mark the channel read
+* Mark as Read: Start where I left off, and mark the channel read (?)
 * Audio & video:
     * Set status when in a huddle
     * Blur (depending)
@@ -784,12 +786,19 @@ See [Firefox Setup][firefox-setup]
 
 ### [XnViewMP][xnviewmp]
 
+* -> System Settings -> Privacy &S -> Files and Folders: allow as necessary
+* Startup Wizard:
+    * No anonymous logs
 * General:
     * General:
         * Startup directory: Last (default) (?)
 * Interface:
+    * Tabs:
+        * No closing last tab exits?
     * Keyboard:
         * ESC quits: Never (default) (?)
+* Catalog:
+    * Disable Catalog/caching?
 
 [xnviewmp]: https://www.xnview.com/en/xnviewmp/
 
@@ -1188,6 +1197,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * WiFi
 * ToothFairy
 * SoundSource: apps, output, input, main
+    * (apps include e.g. music apps, browsers, messaging and VC apps)
 * Balance Lock (Hidden)
 * Blue Sherpa
 * Logitech Gaming Software (Hidden)
@@ -1293,5 +1303,7 @@ Discord? (in Franz?)
 * Check VSCode settings against this repo
 * Deauthorize Kindle
 * Save and copy desktop, Meet, Zoom, etc. backgrounds
+
+This is also a good time to export browser bookmarks to have a backup.
 
 [dotfiles-install]: https://github.com/ocsw/dotfiles/blob/master/INSTALL.sh
