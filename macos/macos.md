@@ -1054,7 +1054,7 @@ gpgconf --kill gpg-agent
 
 * follow directions in [Unix Account Setup][unix-account-setup]
 * install GPG Suite, for GUI
-    * (if desired; updates may will overwrite config files)
+    * (if desired; updates may overwrite config files)
     * (may not automatically pick up new keys?)
 * (put our lines at the top of the config files, with a blank before the Suite
   ones?)
@@ -1063,7 +1063,7 @@ gpgconf --kill gpg-agent
 
 ```shell
 umask 022
-brew uninstall --force gnupg pinentry
+brew uninstall --force gnupg pinentry pinentry-mac
 umask 077
 ```
 
