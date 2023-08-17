@@ -154,21 +154,17 @@ NOTE: has to be done separately for each profile
 
 ### Image Downloaders (WIP)
 
-* [Image Downloader Continued][image-downloader-continue]
+* [Image Downloader Continued][image-downloader-continued]
+* [Download All Images][download-all-images]
 * ([Image Picker][image-picker]??)
-* ([Fatkun Batch Download Image][fatkun-batch-download-ima]??)
 * ([zzllrr Imager Geek][zzllrr-imager-geek]??)
 * ([ImageCap][imagecap-image-download-a]??)
-* ([Bulk Image Downloader][bulk-image-downloader]??)
-* ([Download All Images][download-all-images]??)
 
-[image-downloader-continue]: https://chrome.google.com/webstore/detail/image-downloader-continue/jfkjbfhcfaoldhgbnkekkoheganchiea
+[image-downloader-continued]: https://chrome.google.com/webstore/detail/image-downloader-continue/jfkjbfhcfaoldhgbnkekkoheganchiea
+[download-all-images]: https://chrome.google.com/webstore/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm
 [image-picker]: https://chrome.google.com/webstore/detail/image-picker/bhibldekjicdbnjeeecmgoogcihoalhe
-[fatkun-batch-download-ima]: https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf
 [zzllrr-imager-geek]: https://chrome.google.com/webstore/detail/zzllrr-imager-geek/gfjhimhkjmipphnaminnnnjpnlneeplk
 [imagecap-image-download-a]: https://chrome.google.com/webstore/detail/imagecap-image-download-a/ahajhopfbfpekcljjjppolcmapaidldc
-[bulk-image-downloader]: https://chrome.google.com/webstore/detail/bulk-image-downloader/facoldpeadablbngjnohbmgaehknhcaj
-[download-all-images]: https://chrome.google.com/webstore/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm
 
 ### Special Cases
 
