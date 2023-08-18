@@ -503,6 +503,8 @@ See [iStat Menus Setup][istat-setup]
     * Camera: allow
     * Accessibility: allow
     * Screen Recording: allow
+* Account:
+    * Don't launch at startup
 
 [loom]: https://www.loom.com/
 [loom-dl]: https://www.loom.com/desktop
