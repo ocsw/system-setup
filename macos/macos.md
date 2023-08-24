@@ -278,9 +278,9 @@ e.g. headphones, controllers
 ### [uBar][ubar] ($)
 
 * -> System Settings -> Privacy &S:
+    * Full Disk Access: allow
     * Accessibility: allow
     * Screen Recording: allow
-    * Full Disk Access: allow
     * Automation:
         * Finder: allow
         * Spotify: allow

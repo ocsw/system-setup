@@ -1,276 +1,326 @@
 # macOS System Settings
 
-(sections are in alphabetical order (default changes between versions);
-also, see the bottom)
+(as of macOS 13 Ventura)
+
+## Apple ID
+
+* Account details
+* iCloud:
+    * Photos: Off (?)
+    * iCloud Drive:
+        * Apps:
+            * Turn off Preview, QuickTime, TextEdit (?)
+            * More?
+    * Passswords & Keychain: Off
+    * Find My Mac: On (?)
+    * Safari: Off (?)
+    * Siri: Off (?)
+* Devices
+
+## Wi-Fi
+
+* Networks
+
+## Bluetooth
+
+* Devices; see [macOS Setup][macos-setup-bt-devices]
+
+[macos-setup-bt-devices]: macos.md#bluetooth-devices
+
+## Network
+
+* Firewall:
+    * On
+    * Options:
+        * Don't block all
+        * No built-in
+        * No downloaded
+        * No stealth mode
+        * (Deny incoming as programs request it)
+            * Exceptions:
+                * Control Center?
+                * Dropbox?
+                * Spotify
+                * Universal Control?
+* ...
+    * Set Service Order:
+        * USB, TB, Wi-Fi (default)
+
+## Notifications
+
+* Show previews: When Unlocked (default)
+* Not when sleeping
+* Allow when locked
+* Not when mirroring
+* Allow all apps (?)
+
+## General
+
+* Software Update:
+    * Auto check, dl, app/system install
+    * No OS updates
+* AirDrop & Handoff:
+    * Allow Handoff (?)
+    * AirDrop: Contacts Only (?)
+    * AirPlay: on, Current User (?)
+* Login Items:
+    * Open at Login, including:
+        * Android File Transfer, BetterTouchTool, CrossOver, Dropbox,
+          Google Drive, Logitech Gaming Software, Moom, Rectangle,
+          SoundSource, SpiderOak One, uBar, Witch, YubiSwitch
+        * (Some might not be in the list until run)
+    * Allow in the Background: all (?)
+* Date & Time:
+    * Time Zone
+    * City
+* Sharing:
+    * Edit:
+        * Local Hostname
+        * No dynamic global hostname
+    * -> `sudo scutil --set HostName name`
+* Time Machine:
+    * (Set up if using)
 
 ## Accessibility
 
 * Zoom: (?)
-    * Use shortcuts
-    * Use gesture with opt
-    * Options / Advanced:
+    * Use keyboard shortcuts
+    * Use scroll gesture with opt
+    * Advanced:
         * Flash on notification
 
-## Apple ID (prev. iCloud)
+## Control Center
 
-* (Account Details)
-* iCloud Drive:
-    * Documents:
-        * Pages/Numbers/Keynote?
-        * Only System Settings (?)
-* Photos (if options, else off):
-    * Don't upload
-    * Allow Shared Albums
-* No Mail
-* No Safari
-* No Keychain (?)
-* No Back to My Mac (?)
-* Allow Find My Mac (?)
-* No News
-* No Stocks
-* No Home
-* No Siri (?)
+* Control Center Modules:
+    * Show:
+        * Wi-Fi
+    * Show When Active:
+        * Focus, Screen Mirroring, Display, Sound (?), Now Playing (?)
+    * Don't Show:
+        * Bluetooth (if using ToothFairy, else show), AirDrop, Stage Manager
+* Other Modules:
+    * No battery in Menu Bar (after setting up iStat Menus)
+    * Fast User Switching in Menu Bar (if using)
+* Menu Bar Only:
+    * Clock
+        * Show date: Never (if using iStat Menus, else Always (?))
+        * Show day (default)
+        * Show AM/PM (default)
+    * Spotlight: Don't Show
+    * Siri: Don't Show
+    * Time Machine: Show if using
 
-## Battery (prev. Energy Saver)
+## Siri & Spotlight
 
-* Change times? (defaults: 2 min battery, 10 min power)
-* No battery in menu bar (after setting up iStat Menus)
-* Lock subpages (if available)
+* Siri: off (?)
+    * or, Listen?
+    * Suggestions: all off?
+* Spotlight:
+    * Remove Bookmarks & History (?)
+    * More?
+* Spotlight Privacy: Add locations?
 
-## Bluetooth
+## Privacy & Security
 
-* (devices; see [macOS Setup][macos-setup-bt-devices])
-* Show in menu bar (if not using ToothFairy)
+* Location Services:
+    * Enable
+    * All apps off (except iStat if using Current Location)
+    * System Services: don't show icon
+* Contacts: Full Disk Access apps, if present
+* Calendars: Full Disk Access apps, if present
+* Reminders: Full Disk Access apps, if present
+* Photos: Full Disk Access apps, if present
+* Bluetooth: ToothFairy
+* Microphone:
+    * Blue, Franz, Google Chrome, Logitech Gaming Software, Loom, Skype, Slack,
+      Zoom
+    * (Some might not be in the list until run)
+* Camera:
+    * Franz, Google Chrome, Logitech Gaming Software, Loom, Skype, Slack, Zoom
+    * (Some might not be in the list until run)
+* Files and Folders:
+    * Allow as necessary, including:
+        * DaisyDisk: Full Disk Access
+        * Google Chrome: Downloads
+        * IntelliJ: Downloads
+        * iTerm: Full Disk Access, Google Drive
+        * Slack: Downloads
+        * Suspicious Package: Desktop, Documents, Downloads
+        * uBar: Full Disk Access
+        * XnViewMP: Desktop, Documents, Downloads, Google Drive
+* Full Disk Access:
+    * Allow only:
+        * DaisyDisk, iTerm, uBar
+* Accessibility:
+    * Allow as necessary, including:
+        * Bartender, BetterTouchTool, Dropbox, Google Chrome, iTerm, Kindle,
+          Logitech Gaming Software, Loom, Moom, Muzzle, Rectangle, Slack,
+          SoundSource, Steam, uBar, Witch, Xcode Helper, Yubiswitch
+    * But probably deny Zoom (& not sure about Google Drive)
+    * (Some might not be in the list even if installed)
+* Screen Recording:
+    * Allow as necessary, including:
+        * Bartender, Franz, Google Chrome, Kap, Loom, Skype, Slack, uBar, Zoom
+    * (Some might not be in the list until run)
+* Automation:
+    * Allow all (?), including:
+        * BetterTouchTool -> Shortcuts Events
+        * iTerm -> Google Chrome (click a lint first)
+        * SpiderOak One -> System Events
+        * uBar -> Finder, Spotify
+    * (Some might not be in the list even if installed)
+* App Management:
+    * Don't allow iTerm (?)
+* Analytics & Improvements:
+    * All off (?)
+* Security:
+    * Allow from App Store and identified developers
+    * Accessories: Ask for New (?)
+    * FileVault: on
+* Extensions, including:
+    * Added extensions:
+        * Bartender: Quick Look
+        * Dropbox: Finder, Sharing
+        * FinderHelper: Finder
+        * Google Drive: Finder
+        * Microsoft OneNote: Sharing
+        * Suspicious Package: Quick Look
+    * Finder extensions:
+        * Google Drive
+    * Quick Look:
+        * Bartender, Suspicious Package
+    * Sharing:
+        * All on except Books, Shortcuts (?)
+        * Including Dropbox Transfer, OneNote
+* Advanced:
+    * Require admin password?
 
-[macos-setup-bt-devices]: macos.md#bluetooth-devices
+## Desktop & Dock
 
-## Date & Time
-
-* Time Zone
-* Clock (if available; see Dock & Menu Bar):
-    * Show date and time
-    * Show AM/PM (default)
-    * Show day (default)
-    * Show date (if no iStat Menus)
-* Lock
-
-## Desktop & Screen Saver
-
-* Wallpaper
-* Screen saver - shell, 20m
-* Hot corner to lock screen (UR)
+* Dock:
+    * On right (or left, depending on monitor setup; if using uBar)
+    * Double-click title bar: Do Nothing (?)
+    * Minimize windows into app icon (?)
+    * Autohide Dock (if using uBar)
+    * No recent apps
+* Menu Bar:
+    * Autohide: In Full Screen Only (?)
+* Windows & Apps:
+    * Prefer tabs: Always (?)
+    * Ask to keep changes: on
+    * Close windows: off (?) (depending)
+    * Default web browser
+* Hot Corners:
+    * UR: Lock Screen (?)
+    * Nothing in the other corners
 
 ## Displays
 
-* No mirroring in menu bar (?)
-* Display - set on each screen:
-    * Auto brightness (if available)
-    * True Tone (if available)
-* Arrangement:
-    * monitors
-    * main (top strip) (NOTE: seems to mess up Moom snapshots?)
+* Arrange:
+    * Monitors
+    * Main (top strip) (NOTE: seems to mess up Moom snapshots?)
+* Devices, resolutions, etc., including:
+    * Main display, extended display (also under Arrange)
+    * Auto brightness
+    * True Tone
+* Advanced:
+    * Link on, push (?)
+    * Battery & Energy:
+        * Slightly dim
+        * Don't prevent sleeping
 * Night Shift: Sunset to Sunrise
 
-## Dock & Menu Bar (prev. Dock)
+## Wallpaper
 
-* Dock:
-    * On right (or left, depending on monitor setup)
-    * Prefer tabs: always (?) (if available; see General)
-    * Minimize windows into app icon
-    * Autohide Dock
-    * No recent apps
-* Menu Bar (if available):
-    * No autohide menu bar
-* Control Center (if available):
-    * Display: Don't show?
-    * Now Playing: Don't show (?)
-* Menu Bar Only (if available):
-    * Clock:
-        * Show day (default)
-        * Show date (if no iStat Menus)
-        * Show AM/PM (default)
-    * Spotlight: Don't show (?)
+* Download
+* (Add Folders)
+* Set wallpaper
 
-## Extensions
+## Screen Saver
 
-* Finder Extensions:
-    * Google Drive, Dropbox
-* Quick Look (if available):
-    * Bartender
-* Share Menu:
-    * OneNote on
-    * others off? (except Copy Link, ?Reminders)
-* Today (if available):
-    * only iStat Menus, Calculator (in that order)
+* Shell, 20m
 
-## Family Sharing (prev. Parental Controls)
+## Battery
 
-* Lock (if available)
+* Options:
+    * Wake for network access: Never (?)
 
-## General
+## Lock Screen
 
-* Default browser
-* Prefer tabs: always (?) (if available; see Dock)
-* Ask to keep changes
-* No close windows (?) (depending)
+* Change times? (defaults: 2 min battery, 10 min power)
+* Require password: Immediately (?)
+* Login window shows: Name and password? (entry boxes only, vs list of users)
+
+## Touch ID & Password
+
+* (Fingers)
+* No Apple Pay
+* No purchases
+
+## Users & Groups
+
+* Icon(s)
+* Disable Guest User
+
+## Wallet & Apple Pay
+
+* Don't Add Orders to Wallet?
 
 ## Keyboard
 
 * Keyboard:
-    * (default repeat: 7/8, delay: 3/6)
+    * (default repeat: 7/8, delay: 3/6 (R->L))
     * Don't adjust brightness (?)
-    * Touch Bar / Control Strip:
-        * small: no Siri, add lock on left (?)
-        * big: no Siri?, lock, screenshot (left of media)
-    * Modifier Keys:
-        * Caps Lock: none (?) cmd? esc? (per keyboard)
-        * Reverse Option and Command on Windows keyboards
-* Text:
-    * Remove omw
-    * No correct/capitalize/period
-    * No smart quotes?
-* Shortcuts:
-    * Mission Control:
-        * Show Desktop: ^F11 (because of VSCode)
-        * Show Dashboard: ^F12 (because of VSCode; if available)
-    * Accessibility: Zoom on (?)
-    * App Shortcuts:
-        * Lock Screen: `ctrl-opt-cmd-L` [10.13+ (High Sierra)]
-        * Sleep: `ctrl-opt-cmd-Q`
-    * (other shortcuts)
-* Input Sources:
-    * No menu bar
+    * Globe -> Do Nothing?
+    * Keyboard Shortcuts:
+        * Mission Control:
+            * Show Desktop: ^F11 (because of VSCode)
+        * Accessibility: Zoom on (?)
+        * App Shortcuts:
+            * All Applications:
+                * Lock Screen: `ctrl-opt-cmd-L`
+                * Sleep: `ctrl-opt-cmd-Q`
+            * (other shortcuts)
+        * Modifier Keys:
+            * Caps Lock: none (?) cmd? esc? (per keyboard)
+            * Reverse Option and Command on Windows keyboards
+* Text Input:
+    * Input Sources:
+        * No menu bar
+        * No correct/capitalize/period
+        * No smart quotes?
+    * Text Replacements:
+        * Remove omw
+
+* Touch Bar / Control Strip:
+    * small: no Siri, add lock on left (?)
+    * big: no Siri?, lock, screenshot (left of media)
 
 ## Mouse
 
-* No Natural scroll
+* No Natural scrolling
 * Tracking: 7/10 (depending)
-* (defaults: tracking 4/10, scrolling 4/8, double-click 9/11)
-
-## Network
-
-* WiFi networks
-* Wired first if available
-* Lock (if available)
-
-## Printers & Scanners
-
-* (devices; see [macOS Setup][macos-setup-printers])
-* Lock (if available)
-
-[macos-setup-printers]: macos.md#printers
-
-## Security & Privacy
-
-* General:
-    * Require password immediately (?)
-* Filevault on
-* Firewall:
-    * On
-    * Don't block all
-    * No built-in
-    * No downloaded
-    * No stealth mode
-    * (Deny incoming as programs request it)
-* Privacy:
-    * Location Services:
-        * Enable
-        * All apps off (except iStat if using Current Location)
-        * System Services: don't show icon
-    * Contacts: all off
-    * Calendars: all off
-    * Camera: Chrome, Logitech Gaming Software, Franz, Skype, Slack, Zoom
-        * (some might not be in the list even if they're installed)
-    * Microphone: Blue, Chrome, Logitech Gaming Software, Franz, Skype, Slack,
-      Zoom
-        * (some might not be in the list even if they're installed)
-    * Accessibility:
-        * allow, incl. Bartender, BetterTouchTool, Dropbox, Google Chrome,
-          Google Software Update, iTerm, Kindle, Logitech Gaming Software,
-          Moom, Muzzle, Rectangle, Slack, SoundSource, Steam, uBar, Witch,
-          Xcode Helper
-        * but probably deny Zoom
-        * (some might not be in the list even if they're installed)
-    * Automation:
-        * all on (?), incl.:
-            * Backup and Sync from Google -> System Events
-            * FortiClient -> Google Chrome, Safari
-            * Franz -> System Events
-            * Google Software Update -> System Events
-            * Installer -> System Events?
-            * iTerm -> Google Chrome, System Events
-            * Logitech Control Center Daemon -> System Events
-            * SpiderOak One -> System Events
-            * uBar -> Finder, iTunes, Spotify, VLC
-            * Witch -> Code, Slack, System Settings, System Events
-        * (some might not be in the list even if they're installed)
-    * No analytics
-* Lock
-
-## Sharing
-
-* Computer Name
-* Edit:
-    * Local Hostname
-    * No dynamic global hostname
-* -> `sudo scutil --set HostName name`
-
-## Siri
-
-* Off?
-* Listen?
-* No menu bar (?)
-* Suggestions: all off (?)
-
-## Software Update (prev. App Store)
-
-* Auto check, dl, app/system install
-* No OS updates
-* Lock (if available)
-
-## Startup Disk
-
-* Lock
-
-## Time Machine
-
-* Lock (if available)
-
-## Touch ID
-
-* (fingers)
+* (defaults: tracking 4/10, double-click 9/11, scrolling 4/8)
 
 ## Trackpad
 
 * Point & Click:
+    * Tracking Speed: 4/10 (default)
+    * Click: Medium (default)
+    * Force Click on
     * Look up with 3 fingers
     * Secondary with 2
     * Tap to click?
-    * Click: Medium
-    * Tracking Speed: 4/10 (default) (5?)
-    * Force Click
 * Scroll & Zoom:
-    * Scroll dir: Natural off
-    * Pinch
-    * Double-tap
-    * Rotate
+    * Natural scrolling: off
+    * Pinch: on
+    * Double-tap: on
+    * Rotate: on
 * More Gestures: all on (?)
+    * App Exposé: down with 3
 
-## Users & Groups
+## Printers & Scanners
 
-* Current:
-    * Password:
-        * Icon
-    * Login Items:
-        * incl. Android File Transfer, BetterTouchTool, CrossOver, Dropbox,
-          Google Drive, Logitech Gaming Software, Moom, Rectangle,
-          SoundSource, SpiderOak One, uBar, Witch, YubiSwitch
-        * (some might not be in the list even if they're installed)
-* Disable Guest User
-* Login Options:
-    * Display login as name and password? (entry boxes only, vs list of
-      users)
-    * Show fast user switching menu as: Icon
-* Lock
+* Devices; see [macOS Setup][macos-setup-printers]
 
-## View -> Organize Alphabetically (?), Show All
+[macos-setup-printers]: macos.md#printers
