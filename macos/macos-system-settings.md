@@ -100,7 +100,7 @@
         * Bluetooth (if using ToothFairy, else show), AirDrop, Stage Manager
 * Other Modules:
     * No battery in Menu Bar (after setting up iStat Menus)
-    * Fast User Switching in Menu Bar (if using)
+    * Fast User Switching in Menu Bar: Icon (if using, else Don't Show)
 * Menu Bar Only:
     * Clock
         * Show date: Never (if using iStat Menus, else Always (?))
@@ -114,11 +114,11 @@
 
 * Siri: off (?)
     * or, Listen?
-    * Suggestions: all off?
+    * Suggestions: Safari off (and others?)
 * Spotlight:
     * Remove Bookmarks & History (?)
     * More?
-* Spotlight Privacy: Add locations?
+* Spotlight Privacy: Add locations? (depending)
 
 ## Privacy & Security
 
@@ -198,6 +198,7 @@
 ## Desktop & Dock
 
 * Dock:
+    * Size?
     * On right (or left, depending on monitor setup; if using uBar)
     * Double-click title bar: Do Nothing (?)
     * Minimize windows into app icon (?)
@@ -205,6 +206,7 @@
     * No recent apps
 * Menu Bar:
     * Autohide: In Full Screen Only (?)
+    * Recents: None? (depending)
 * Windows & Apps:
     * Prefer tabs: Always (?)
     * Ask to keep changes: on
@@ -264,7 +266,7 @@
 
 ## Wallet & Apple Pay
 
-* Don't Add Orders to Wallet?
+* Don't Add Orders to Wallet (?)
 
 ## Keyboard
 

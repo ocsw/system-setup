@@ -1305,6 +1305,7 @@ Discord? (in Franz?)
 * Check VSCode settings against this repo
 * Deauthorize Kindle
 * Save and copy desktop, Meet, Zoom, etc. backgrounds
+* Remove from iCloud Devices
 
 This is also a good time to export browser bookmarks to have a backup.
 
