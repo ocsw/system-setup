@@ -27,7 +27,7 @@ See [System Settings Setup][macos-system-settings]
     * New: `Downloads` (or homedir?)
     * Don't open in tabs
 * Sidebar:
-    * Show all (except `AirDrop`?, `Movies` (?), machine (?))
+    * Show all (except `AirDrop` (depending), `Movies` (?), machine (?))
     * Note `-` on HDs
 * Advanced:
     * Remove after 30 days
