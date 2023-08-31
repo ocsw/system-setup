@@ -26,6 +26,7 @@ brew install minikube
 brew install kind
 brew tap robscott/tap && brew install robscott/tap/kube-capacity
 brew install argoproj/tap/kubectl-argo-rollouts
+brew install kustomize
 brew install kubebuilder
 umask 077
 # download Velero from:
