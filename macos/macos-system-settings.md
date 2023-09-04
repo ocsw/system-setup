@@ -15,6 +15,10 @@
     * Find My Mac: On (?)
     * Safari: Off (?)
     * Siri: Off (?)
+* Media & Purchases:
+    * Don't use Touch ID (?)
+    * Free: Always (?)
+    * Purchases: Always (?)
 * Devices
 
 ## Wi-Fi
@@ -40,11 +44,11 @@
             * Exceptions:
                 * Control Center?
                 * Dropbox?
-                * Spotify
+                * Spotify?
                 * Universal Control?
 * ...
     * Set Service Order:
-        * USB, TB, Wi-Fi (default)
+        * USB, TB, Wi-Fi
 
 ## Notifications
 
@@ -126,10 +130,12 @@
     * Enable
     * All apps off (except iStat if using Current Location)
     * System Services: don't show icon
-* Contacts: Full Disk Access apps, if present
-* Calendars: Full Disk Access apps, if present
-* Reminders: Full Disk Access apps, if present
-* Photos: Full Disk Access apps, if present
+* Contacts: (Full Disk Access apps, if present)
+* Calendars: (Full Disk Access apps, if present)
+* Reminders: (Full Disk Access apps, if present)
+* Photos:
+    * Google Drive and SpiderOakONE, if present
+    * (Full Disk Access apps, if present)
 * Bluetooth: ToothFairy
 * Microphone:
     * Blue, Franz, Google Chrome, Logitech Gaming Software, Loom, Skype, Slack,
@@ -142,15 +148,20 @@
     * Allow as necessary, including:
         * DaisyDisk: Full Disk Access
         * Google Chrome: Downloads
+        * Google Drive: Desktop, Documents, Downloads (but no Network (?))
         * IntelliJ: Downloads
         * iTerm: Full Disk Access, Google Drive
         * Slack: Downloads
+        * SpiderOakONE: Desktop, Documents, Downloads
+            * But not Network, Removable (?)
         * Suspicious Package: Desktop, Documents, Downloads
         * uBar: Full Disk Access
         * XnViewMP: Desktop, Documents, Downloads, Google Drive
+    * No Dropbox Removable (?)
 * Full Disk Access:
     * Allow only:
         * DaisyDisk, iTerm, uBar
+        * AppCleaner?
 * Accessibility:
     * Allow as necessary, including:
         * Bartender, BetterTouchTool, Dropbox, Google Chrome, iTerm, Kindle,
@@ -186,7 +197,7 @@
         * Microsoft OneNote: Sharing
         * Suspicious Package: Quick Look
     * Finder extensions:
-        * Google Drive
+        * Dropbox, Google Drive
     * Quick Look:
         * Bartender, Suspicious Package
     * Sharing:
@@ -245,6 +256,7 @@
 ## Battery
 
 * Options:
+    * Enable Power Nap: Never (?)
     * Wake for network access: Never (?)
 
 ## Lock Screen
@@ -273,7 +285,11 @@
 * Keyboard:
     * (default repeat: 7/8, delay: 3/6 (R->L))
     * Don't adjust brightness (?)
-    * Globe -> Do Nothing?
+    * Turn off after inactivity: Never (?)
+    * Globe/fn -> Do Nothing (?) (depending on keyboard?)
+    * Touch Bar -> Customize:
+        * small: no Siri, add sleep (lock?) on left (?)
+        * big: no Siri?, sleep (lock?), screenshot (left of media)
     * Keyboard Shortcuts:
         * Mission Control:
             * Show Desktop: ^F11 (because of VSCode)
@@ -293,10 +309,6 @@
         * No smart quotes?
     * Text Replacements:
         * Remove omw
-
-* Touch Bar / Control Strip:
-    * small: no Siri, add lock on left (?)
-    * big: no Siri?, lock, screenshot (left of media)
 
 ## Mouse
 
