@@ -90,11 +90,11 @@ gke_up () {  # can use gke-up in bash
 #
 gke_contexts () {  # can use gke-contexts in bash
     # get all locally-configured contexts
-    kubectl config get-contexts | tail -n +2 | awk '{print $2}'
+    kubectl config get-contexts | tail -n +2 | awk '{print $2}' | sort
 }
 gke_clusters () {  # can use gke-clusters in bash
     # get all clusters
     # (probably want to remove the production filter)
     gcloud container clusters list --project=PROJECT_NAME \
-        --filter="resourceLabels[env]=production" --format="value(name)"
+        --filter="resourceLabels[env]=production" --format="value(name)" | sort
 }
