@@ -674,7 +674,11 @@ See [Firefox Setup][firefox-setup]
     * DND? (10PM - 8AM?)
     * Sound & appearance:
         * Preview (depending)
-        * Sound
+        * Sounds:
+            * Messages: Plink
+            * Sending: None
+            * While in conversation: None
+            * Huddles: Boop (?)
         * Badge (depending)
         * Bounce once
     * Inactive:
