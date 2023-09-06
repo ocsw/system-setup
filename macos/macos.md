@@ -17,6 +17,15 @@ See [System Settings Setup][macos-system-settings]
 
 [macos-system-settings]: macos-system-settings.md
 
+### App Store
+
+* Sign in
+* Settings:
+    * Automatic Updates
+    * No auto from other devices
+    * Automatically download content
+    * No Video Autoplay?
+
 ### Make Directories (depending)
 
 * `mkdir -p ~/Books ~/install ~/scraps ~/wip`
@@ -1305,7 +1314,7 @@ Discord? (in Franz?)
 * Check VSCode settings against this repo
 * Deauthorize Kindle
 * Save and copy desktop, Meet, Zoom, etc. backgrounds
-* Remove from iCloud Devices
+* Remove from iCloud Devices, App Store
 
 This is also a good time to export browser bookmarks to have a backup.
 
