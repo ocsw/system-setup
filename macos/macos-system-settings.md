@@ -69,8 +69,8 @@
     * AirPlay: on, Current User (?)
 * Login Items:
     * Open at Login, including:
-        * Android File Transfer, BetterTouchTool, CrossOver, Dropbox,
-          Google Drive, Logitech Gaming Software, Moom, Rectangle,
+        * Amphetamine, Android File Transfer, BetterTouchTool, CrossOver,
+          Dropbox, Google Drive, Logitech Gaming Software, Moom, Rectangle,
           SoundSource, SpiderOak One, uBar, Witch, YubiSwitch
         * (Some might not be in the list until run)
     * Allow in the Background: all (?)
