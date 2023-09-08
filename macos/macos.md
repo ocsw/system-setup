@@ -1027,11 +1027,11 @@ brew doctor
 umask 077
 ```
 
-* add `/usr/local/bin/bash` / `/opt/homebrew/bin/bash` to `/etc/shells` and
+* Add `/usr/local/bin/bash` / `/opt/homebrew/bin/bash` to `/etc/shells` and
   `chsh -s "$(brew --prefix)/bin/bash"`?
     * on 10.15+ (Catalina), `chsh -s /bin/bash` if not doing the above, and add
       `export BASH_SILENCE_DEPRECATION_WARNING=1` to `~/.bash_profile`
-* restart shell (fixes problem with `pybase`)
+* Restart shell (fixes problem with `pybase`)
 
 [homebrew]: https://brew.sh/
 
@@ -1039,10 +1039,10 @@ umask 077
 
 See the [Unix Setup][unix-setup] directory
 
-* dotfiles, incl. dotfile and `~/.to_back_up` links
-* add `~/.to_back_up` to Google Drive (backup) and (partly) SpiderOak One
-* rest of the [Unix Setup][unix-setup] directory
-* add hostname to `127.0.0.1` in `/etc/hosts`?
+* Dotfiles, incl. dotfile and `~/.to_back_up` links
+* Add `~/.to_back_up` to Google Drive (backup) and (partly) SpiderOak One
+* Rest of the [Unix Setup][unix-setup] directory
+* Add hostname to `127.0.0.1` in `/etc/hosts`?
 
 ### SSH
 
@@ -1061,7 +1061,7 @@ for i in ~/.ssh/*_{dsa,ecdsa,ed25519,rsa}; do
 done
 ```
 
-* add `~/.ssh` to SpiderOak One (depending)
+* Add `~/.ssh` to SpiderOak One (depending)
 
 ### GPG
 
@@ -1076,11 +1076,11 @@ echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> \
 gpgconf --kill gpg-agent
 ```
 
-* follow directions in [Unix Account Setup][unix-account-setup]
-* install GPG Suite, for GUI
-    * (if desired; updates may overwrite config files)
-    * (may not automatically pick up new keys?)
-* (put our lines at the top of the config files, with a blank before the Suite
+* Follow directions in [Unix Account Setup][unix-account-setup]
+* Install GPG Suite, for GUI
+    * (If desired; updates may overwrite config files)
+    * (May not automatically pick up new keys?)
+* (Put our lines at the top of the config files, with a blank before the Suite
   ones?)
 
 #### Option 2 ([GPG Suite][gpg-suite])
@@ -1091,20 +1091,20 @@ brew uninstall --force gnupg pinentry pinentry-mac
 umask 077
 ```
 
-* install GPG Suite
-* create a key
-    * use RSA/RSA 4096, no expiration, the same name and email as
+* Install GPG Suite
+* Create a key
+    * Use RSA/RSA 4096, no expiration, the same name and email as
       for git, and comment `HOSTNAME -> GitHub`
-    * see [Unix Account Setup][unix-account-setup]
+    * See [Unix Account Setup][unix-account-setup]
 
 [gpg-suite]: https://gpgtools.org/
 
 #### Either way
 
-* sign something (e.g. `gpg -s -u KEY_ID`, then mash keys and hit `ctrl-d`);
+* Sign something (e.g. `gpg -s -u KEY_ID`, then mash keys and hit `ctrl-d`);
   check 'Save in Keychain' (or click 'Always Allow', whichever appears)
 * -> System Settings -> GPG Suite -> Settings: (Default Key)
-* (or if not using GPG Suite at all, optionally add `default-key KEY_ID` to
+* (Or if not using GPG Suite at all, optionally add `default-key KEY_ID` to
   `gpg.conf` in `~/.gnupg`)
 
 ### Permissions
