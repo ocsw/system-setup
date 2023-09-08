@@ -1046,20 +1046,23 @@ See the [Unix Setup][unix-setup] directory
 
 ### SSH
 
-```shell
-cat >> ~/.ssh/config <<EOF
-Host *
-    UseKeychain yes
-EOF
-```
+* Use the macOS keychain:
 
-* consolidate and order config file from most to least specific
+    ```shell
+    cat >> ~/.ssh/config <<EOF
+    Host *
+        UseKeychain yes
+    EOF
+    ```
 
-```shell
-for i in ~/.ssh/*_{dsa,ecdsa,ed25519,rsa}; do
-    ssh-add --apple-use-keychain "$i"  # absolute path
-done
-```
+* Consolidate and order the config file from most to least specific
+* Add the keys to the agent, and the passphrases to the keychain:
+
+    ```shell
+    for i in ~/.ssh/*_{dsa,ecdsa,ed25519,rsa}; do
+        ssh-add --apple-use-keychain "$i"  # absolute path
+    done
+    ```
 
 * Add `~/.ssh` to SpiderOak One (depending)
 
