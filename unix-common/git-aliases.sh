@@ -94,6 +94,7 @@ git config --global alias.l log
 git config --global alias.lg 'log --graph'
 git config --global alias.lf 'log --numstat'  # files
 git config --global alias.ld 'log --patch'  # diff
+git config --global alias.ldh 'log --patch --diff-algorithm=histogram'  # diff
 git config --global alias.ll 'log --oneline'
 # see git-config.sh for formats
 git config --global alias.lln 'log --pretty=oneline-name'
@@ -102,10 +103,15 @@ git config --global alias.llf 'log --pretty=oneline-name-nl --numstat'  # files
 git config --global alias.tree 'log --pretty=oneline-name --graph --all'
 git config --global alias.rl reflog
 git config --global alias.s show
+git config --global alias.sh 'show --diff-algorithm=histogram'
 git config --global alias.d diff
 git config --global alias.dc 'diff --cached'
+git config --global alias.dh 'diff --diff-algorithm=histogram'
+git config --global alias.dhc 'diff --diff-algorithm=histogram --cached'
 git config --global alias.patch '!git --no-pager diff --no-color'
 git config --global alias.patchc '!git --no-pager diff --no-color --cached'
+git config --global alias.patchh '!git --no-pager diff --no-color --diff-algorithm=histogram'
+git config --global alias.patchhc '!git --no-pager diff --no-color --diff-algorithm=histogram --cached'
 git config --global alias.g grep
 git config --global alias.bl blame
 git config --global alias.bi bisect
@@ -173,6 +179,7 @@ git config --global alias.arvc '!git add -A && git revert --continue'
 git config --global alias.ss stash
 git config --global alias.ssl 'stash list'
 git config --global alias.sss 'stash show'
+git config --global alias.sssh 'stash show --diff-algorithm=histogram'
 git config --global alias.ssm 'stash push -m'
 git config --global alias.ssp 'stash pop'
 git config --global alias.ssa 'stash apply'
