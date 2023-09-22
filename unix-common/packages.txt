@@ -45,10 +45,12 @@ graphite2
 grpcurl
 harfbuzz
 hexedit
+hey
 hstr
 htop
 httpie
 iftop
+ijq
 imagemagick
 ipcalc
 iperf
