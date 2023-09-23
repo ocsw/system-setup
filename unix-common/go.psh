@@ -54,7 +54,7 @@ go install golang.org/x/lint/golint@latest
 # testing
 go install github.com/rakyll/gotest@latest
 go install gotest.tools/gotestsum@latest
-go install github.com/golang/mock/mockgen@latest
+go install go.uber.org/mock/mockgen@latest
 #
 # vulnerability checking
 go install golang.org/x/vuln/cmd/govulncheck@latest
