@@ -50,6 +50,7 @@ NOTE: has to be done separately for each profile
         * Messenger
         * Facebook
         * Workplace
+        * Food delivery (?)
         * etc.
 
 ### Appearance
@@ -65,7 +66,7 @@ NOTE: has to be done separately for each profile
 
 ### Downloads
 
-* Ask where to save
+* Ask where to save (?)
 
 ### System
 
