@@ -9,7 +9,7 @@
 
 * General:
     * Startup:
-        * Restore
+        * Open previous windows and tabs
         * No default check
     * Tabs:
         * No Ctrl+Tab in recently used order
@@ -46,6 +46,8 @@
 * Firefox Data Collection and Use:
     * Don't send data to Mozilla (?)
     * Don't allow studies
+* Security:
+    * HTTPS-Only Mode in all windows (?)
 
 ## [Add-ons][add-ons]
 
