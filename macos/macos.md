@@ -36,7 +36,7 @@ See [System Settings Setup][macos-system-settings]
     * New: `Downloads` (or homedir?)
     * Don't open in tabs
 * Sidebar:
-    * Show all (except `AirDrop` (depending), `Movies` (?), machine (?))
+    * Show all (except `AirDrop` (depending), `Movies` (?), machine?)
     * Note `-` on HDs
 * Advanced:
     * Remove after 30 days
@@ -113,6 +113,7 @@ NOTE: requires unplugging and replugging the mouse receiver after it starts
     * Mobile Service:
         * Disable (?)
         * No Automatic Discovery (?)
+* (Exclude from uBar)
 
 [ghub]: https://www.logitechg.com/en-us/innovation/g-hub.html
 
@@ -309,8 +310,9 @@ e.g. headphones, controllers
     * App order: manual
     * App inclusions: order (see bottom)
     * App exclusions:
-        * FortiClient
         * Amphetamine
+        * FortiClient
+        * Logitech Gaming Software
         * ToothFairy
 * Shortcuts:
     * No hiding
@@ -343,7 +345,7 @@ e.g. headphones, controllers
     * No app names in vertical lists
 * Advanced:
     * Show on display w/mouse (or frontmost?)
-    * lower Delay (?)
+    * lower Delay (?) (0.1s (?)) (default is 0.2s)
     * Spring load?
     * No release to dismiss?
     * Do not list: uBar
@@ -384,7 +386,7 @@ e.g. headphones, controllers
 
 * -> System Settings -> Privacy &S -> Accessibility: allow
 * Keys:
-    * No key for LH/RH/CH/TH/BH, TL/TR/BL/BR, F3/C3/L3/F23/L23
+    * No key for LH/RH/CH/TH/BH, TL/TR/BL/BR, F3/C3/L3/F23/L23, 4ths, 6ths
     * No key for AlmostMax/MaxH, L/R/U/D
     * Maximize: `ctrl-opt-cmd-F`
     * Make Smaller: `ctrl-opt-cmd-down`
@@ -749,7 +751,7 @@ See [Firefox Setup][firefox-setup]
 * Autoplay: on
 * Audio Quality:
     * Streaming quality: Automatic
-    * Download: Very high?
+    * Download: Very high (?)
     * Auto adjust: on
     * Normalize volume: on
 * Display:
