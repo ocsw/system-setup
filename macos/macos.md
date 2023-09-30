@@ -1161,7 +1161,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 
 * General:
     * Don't launch at startup
-    * Starting page: Library
+    * Starting page: Owned games
 * (install games)
 
 [gog]: https://www.gog.com/
