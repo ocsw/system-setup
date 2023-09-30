@@ -62,7 +62,7 @@ These are all alerts; do the other sections first
 
 ## Sensors
 
-* Active: label, ?single num
+* Active: label, (?)single num
 * Degrees: C
 * Sensors: CPU PECI / Core Avg (show units), ?CPU frequency (show units)
 
