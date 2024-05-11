@@ -16,7 +16,6 @@
 umask 022
 brew update
 #brew install --cask oracle-jdk  # latest
-brew tap homebrew/cask-versions
 brew install --cask corretto8  # for Java SE JDK 8; password required
 brew install --cask corretto11  # for Java SE JDK 11; password required
 brew install --cask corretto17  # for Java SE JDK 17; password required
