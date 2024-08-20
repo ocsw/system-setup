@@ -108,6 +108,7 @@
 * Menu Bar Only:
     * Clock
         * Show date: Never (if using iStat Menus, else Always (?))
+            * Seems to require a reboot to take effect
         * Show day (default)
         * Show AM/PM (default)
     * Spotlight: Don't Show
@@ -136,7 +137,11 @@
 * Photos:
     * Google Drive and SpiderOakONE, if present
     * (Full Disk Access apps, if present)
-* Bluetooth: ToothFairy
+* Bluetooth:
+    * BetterTouchTool (?)
+    * Franz (?)
+    * SoundSource
+    * ToothFairy
 * Microphone:
     * Blue, Franz, Google Chrome, Logitech Gaming Software, Loom, Skype, Slack,
       Zoom
@@ -169,7 +174,9 @@
           SoundSource, Steam, uBar, Witch, Xcode Helper, Yubiswitch
     * But probably deny Zoom (& not sure about Google Drive)
     * (Some might not be in the list even if installed)
-* Screen Recording:
+* Input Monitoring:
+    * BetterTouchTool
+* Screen & System Audio Recording:
     * Allow as necessary, including:
         * Bartender, Franz, Google Chrome, Kap, Loom, Skype, Slack, uBar, Zoom
     * (Some might not be in the list until run)
@@ -181,6 +188,7 @@
         * uBar -> Finder, Spotify
     * (Some might not be in the list even if installed)
 * App Management:
+    * Don't allow AppCleaner (?)
     * Don't allow iTerm (?)
 * Analytics & Improvements:
     * All off (?)
@@ -215,16 +223,21 @@
     * Minimize windows into app icon (?)
     * Autohide Dock (if using uBar)
     * No recent apps
-* Menu Bar:
+* Menu Bar (under Control Center in Sonoma):
     * Autohide: In Full Screen Only (?)
     * Recents: None? (depending)
-* Windows & Apps:
+* Windows & Apps (Windows and Widgets sections in Sonoma):
     * Prefer tabs: Always (?)
     * Ask to keep changes: on
     * Close windows: off (?) (depending)
     * Default web browser
+* Mission Control:
+    * Don't automatically rearrange Spaces
+    * Switch when switching
+    * Don't group windows
+    * Displays have separate Spaces
 * Hot Corners:
-    * UR: Lock Screen (?)
+    * UR: Lock Screen?
     * Nothing in the other corners
 
 ## Displays
@@ -238,7 +251,7 @@
     * True Tone
 * Advanced:
     * Link on, push (?)
-    * Battery & Energy:
+    * Battery & Energy (under Battery -> Options in Sonoma):
         * Slightly dim
         * Don't prevent sleeping
 * Night Shift: Sunset to Sunrise
@@ -247,6 +260,7 @@
 
 * Download
 * (Add Folders)
+* For different wallpaper on each screen, turn off "Show on all Spaces"
 * Set wallpaper
 
 ## Screen Saver
@@ -306,6 +320,7 @@
     * Input Sources:
         * No menu bar
         * No correct/capitalize/period
+        * No predictive text?
         * No smart quotes?
     * Text Replacements:
         * Remove omw

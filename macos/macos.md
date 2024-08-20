@@ -15,7 +15,10 @@ incl. save recovery key (pic?)
 
 See [System Settings Setup][macos-system-settings]
 
+See also [Re-check System Settings][recheck-settings]
+
 [macos-system-settings]: macos-system-settings.md
+[recheck-settings]: #re-check-system-settings
 
 ### App Store
 
@@ -28,7 +31,7 @@ See [System Settings Setup][macos-system-settings]
 
 ### Make Directories (depending)
 
-* `mkdir -p ~/Books ~/install ~/scraps ~/wip`
+* `mkdir -p ~/Books ~/install ~/repos ~/scraps ~/wip`
 
 ### Finder
 
@@ -50,11 +53,11 @@ See [System Settings Setup][macos-system-settings]
     * `Desktop`
     * `Documents`
     * `Downloads`
-    * `Books`
+    * `Books` (drag to sidebar)
     * (`Movies`)
     * `Music`
     * `Pictures`
-    * `install` (drag to sidebar) (?)
+    * `install` (?)
     * `repos`
     * `scraps`?
     * `wip` (?)
@@ -159,8 +162,10 @@ e.g. headphones, controllers
 
 ### [SoundSource][soundsource] ($)
 
-* -> System Settings -> Privacy &S -> Accessibility: allow
-    * (after Super Volume Keys)
+* -> System Settings -> Privacy &S:
+    * Bluetooth: allow
+    * Accessibility: allow
+        * (after Super Volume Keys)
 * General:
     * Start at login
     * Hotkey (`ctrl-opt-cmd-S`)
@@ -175,7 +180,7 @@ e.g. headphones, controllers
 
 ### [Balance Lock][balance-lock] (optional App Store)
 
-[Download - direct][balance-lock]
+[Download - direct][balance-lock] (Download link is at the bottom)
 
 [Download - App Store][balance-lock-app-store]
 
@@ -195,6 +200,8 @@ e.g. headphones, controllers
 
 ### [Android File Transfer][android-ft]
 
+(No Mac version anymore?)
+
 [android-ft]: https://www.android.com/filetransfer/
 
 ### Printers
@@ -213,7 +220,8 @@ e.g. headphones, controllers
 * Log in
 * General:
     * Launch minimized?
-    * Don't show splash screen?
+    * Don't show splash screen
+    * Launch at startup
 * Network:
     * Allow LAN-Sync?
 * remove Hive symlink from desktop
@@ -230,8 +238,8 @@ e.g. headphones, controllers
           `.hstr_favorites`
         * [work: skip]
 
-[spideroak-one]: https://spideroak.com/one/
-[spideroak-one-dl]: https://spideroak.com/opendownload/
+[spideroak-one]: https://crossclave.com/one/
+[spideroak-one-dl]: https://crossclave.com/opendownload/
 
 ### [Google Drive][google-drive]
 
@@ -239,7 +247,7 @@ e.g. headphones, controllers
     * Files and Folders: allow
         * (as necessary; there should be popup requests when they're first
           needed)
-    * Extensions:
+    * Extensions (including for FinderHelper):
         * Added extensions: allow
         * Finder extensions: allow
 * Sign in
@@ -256,6 +264,8 @@ e.g. headphones, controllers
     * Google Photos:
         * Original Quality
     * no hotkey
+* -> Finder sidebar position
+* (Exclude from uBar)
 
 [google-drive]: https://www.google.com/drive/download/
 
@@ -279,6 +289,8 @@ e.g. headphones, controllers
     * No camera uploads (?)
 * Network:
     * No LAN sync (?)
+* -> Finder sidebar position
+* (Exclude from uBar)
 
 [dropbox]: https://www.dropbox.com/
 [dropbox-dl]: https://www.dropbox.com/install
@@ -311,7 +323,9 @@ e.g. headphones, controllers
     * App inclusions: order (see bottom)
     * App exclusions:
         * Amphetamine
+        * Dropbox
         * FortiClient
+        * Google Drive
         * Logitech Gaming Software
         * ToothFairy
 * Shortcuts:
@@ -357,7 +371,9 @@ e.g. headphones, controllers
 ### [BetterTouchTool][btt] ($)
 
 * -> System Settings -> Privacy &S:
+    * Bluetooth: allow (?)
     * Accessibility: allow
+    * Input Monitoring: allow
     * Screen Recording: allow (if necessary)
     * Automation:
         * Shortcuts Events: allow
@@ -457,6 +473,7 @@ e.g. headphones, controllers
     * Show time remaining
 * Statistics:
     * Disable
+    * Reset
 * (Exclude from uBar)
 
 [amphetamine]: https://apps.apple.com/us/app/amphetamine/id937984704
@@ -478,7 +495,9 @@ See [iStat Menus Setup][istat-setup]
         * Quick Look: allow
 * General:
     * Launch at login
+    * Show hidden on hover
     * Bartender Bar: Use, Only w/Notch
+    * Show divider
     * Spacing: Small
 * Menu Bar Layout: (see bottom)
 * Hot Keys:
@@ -522,6 +541,8 @@ See [iStat Menus Setup][istat-setup]
 
 ### [AppCleaner][appcleaner]
 
+* -> System Settings -> Privacy &S:
+    * App Management: deny (?)
 * SmartDelete: on (?)
 * Updates: check automatically
 
@@ -549,7 +570,7 @@ Download from main site or [App Store][unarchiver-app-store]
 
 [namechanger]: https://mrrsoftware.com/namechanger/
 
-### ([HoudahSpot][houdahspot] ($)
+### ([HoudahSpot][houdahspot] ($))
 
 * License
 
@@ -617,6 +638,7 @@ See [Firefox Setup][firefox-setup]
 ### [Franz][franz]
 
 * -> System Settings -> Privacy &S:
+    * Bluetooth: allow (?)
     * Microphone: allow
     * Camera: allow
     * Screen Recording: allow (?)
@@ -686,10 +708,11 @@ See [Firefox Setup][firefox-setup]
     * Inactive:
         * Mobile: 2 min
         * No email
-* Sidebar:
-    * Always show: all but All, People, Apps
+* Home:
+    * Always show: all
     * Sort: alpha
     * Don't list private separately (depending)
+    * Don't move unread mentions to top
 * Themes:
     * Colors: Aubergine (Aubergine Classic?)
 * Messages & Media:
@@ -703,7 +726,7 @@ See [Firefox Setup][firefox-setup]
         * Convert typed emoticons
     * Inline Media & Links:
         * Show uploaded
-        * Show from links (below 2 MB)
+        * Show from links
         * Show text previews
 * Language & Region:
     * TZ (and/or auto (?))
@@ -736,6 +759,8 @@ See [Firefox Setup][firefox-setup]
     * Camera: allow
     * Accessibility: deny (if there) (?)
     * Screen Recording: allow (if necessary)
+* General:
+    * Don't remind me
 * Share Screen:
     * Don't silence notifications (if using Muzzle) [?]
 * Background & Effects:
@@ -750,7 +775,7 @@ See [Firefox Setup][firefox-setup]
 
 * Autoplay: on
 * Audio Quality:
-    * Streaming quality: Automatic
+    * Streaming quality: High (?) (Very high?)
     * Download: Very high (?)
     * Auto adjust: on
     * Normalize volume: on
@@ -791,6 +816,8 @@ See [Firefox Setup][firefox-setup]
 [apple-music]: https://www.apple.com/apple-music/
 
 ### [Kindle][kindle]
+
+(Apparently now only on the App Store, in a less-featured version???)
 
 * -> System Settings -> Privacy &S -> Accessibility: allow (if there)
 * No dictionary
@@ -874,7 +901,7 @@ See [Firefox Setup][firefox-setup]
 
 * -> System Settings -> Privacy &S -> Extensions:
     * Added extensions: allow
-    * Share: allow
+    * Sharing: allow
 * -> OneNote Web Clipper in Chrome (?)
 * Spelling:
     * No auto spelling
@@ -919,6 +946,10 @@ See [Firefox Setup][firefox-setup]
 ### [Bluefish][bluefish]
 
 * -> System Settings -> Privacy &S -> allow
+
+Or, if not available:
+
+* -> Applications -> Bluefish -> right-click -> Open
 
 [bluefish]: http://bluefish.openoffice.nl/index.html
 
@@ -979,6 +1010,8 @@ See [IntelliJ Setup][intellij-setup]
         * (after clicking a link)
     * App Management: deny (?)
 * General:
+    * Closing:
+        * Disable confirmations on shutdown, etc.
     * tmux:
         * Bury tmux session (?)
 * Profiles:
@@ -1118,8 +1151,9 @@ umask 077
 
 ```shell
 chmod -R go-rwx ~
-chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
-    ~/Library/Application\ Support/Code/User/* ~/.vim/autoload/pathogen.vim \
+chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
+    ~/Library/Application\ Support/Code/User/* \
+    ~/.vim/autoload/pathogen.vim \
     ~/bin/*
 ```
 
@@ -1201,8 +1235,8 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 
 * New Items
 * (Docker)
-* (Carbon Black (Always Hide?))
-* Spotlight (Always Hide)
+* (Carbon Black (Always Hidden?))
+* Spotlight (Always Hidden)
 * Amphetamine
 * Muzzle (Hidden)
 * Moom (Hidden)
@@ -1215,6 +1249,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
 * FortiClient / other VPNs
 * PIA
 * WiFi
+* Now Playing (Hidden (?))
 * ToothFairy
 * SoundSource: apps, output, input, main
     * (apps include e.g. music apps, browsers, messaging and VC apps)
@@ -1294,6 +1329,15 @@ Discord? (in Franz?)
 * ESET / etc.
 
 ### Moom Window Placement
+
+## Re-check System Settings
+
+After all of the software is installed and set up, confirm that the relevant
+System Settings sections are correct:
+
+* Notifications
+* General -> Login Items
+* Privacy & Security
 
 ## OS Version Notes
 

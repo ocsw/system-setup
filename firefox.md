@@ -31,15 +31,18 @@
 
 * Search:
     * Search Suggestions:
-            * No suggestions
+        * No suggestions
+    * Address Bar:
+        * No Firefox
+        * No sponsors
 
 ### Privacy & Security
 
 * Browser Privacy:
-    * Logins and Passwords:
+    * Passwords:
         * Don't ask to save
         * (clear all)
-    * Forms and Autofill
+    * Autofill
         * No addresses?
         * No CC
         * (clear all)

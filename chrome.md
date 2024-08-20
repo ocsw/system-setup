@@ -34,11 +34,6 @@ NOTE: has to be done separately for each profile
     * Don't allow checking
     * (clear all)
 
-### Privacy and security
-
-* Cookies:
-    * No preload
-
 ### Performance
 
 * Memory Saver:
@@ -52,11 +47,13 @@ NOTE: has to be done separately for each profile
         * Workplace
         * Food delivery (?)
         * etc.
+* Speed
+    * Don't preload
 
 ### Appearance
 
 * Show bookmarks bar
-* Show warning before quitting [Mac]
+* Show warning before quitting (Mac)
 
 ### Default browser
 
@@ -66,7 +63,7 @@ NOTE: has to be done separately for each profile
 
 ### Downloads
 
-* Ask where to save (?)
+* Ask where to save?
 
 ### System
 

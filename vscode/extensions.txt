@@ -1,6 +1,6 @@
 # to get the list:
 # cat ~/.vscode/extensions/extensions.json | jq -r '.[].identifier.id' | \
-#     sort -t. -k2
+#     sort -t. -k2 -u
 
 # to install:
 # for i in $(grep -v '^#' extensions.txt | grep -v '^$'); do
@@ -8,8 +8,9 @@
 # done
 
 rogalmic.bash-debug
-serayuzgur.crates
 webfreak.debug
+ms-python.debugpy
+fill-labs.dependi
 tamasfe.even-better-toml
 redhat.fabric8-analytics
 codezombiech.gitignore
@@ -42,6 +43,7 @@ dunstontc.viml
 shengchen.vscode-checkstyle
 redhat.vscode-commons
 ms-azuretools.vscode-docker
+vscjava.vscode-gradle
 vscjava.vscode-java-debug
 vscjava.vscode-java-dependency
 vscjava.vscode-java-pack
