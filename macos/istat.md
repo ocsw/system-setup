@@ -1,100 +1,114 @@
 # [iStat Menus][istat] Setup
 
+(Don't install from App Store: [differences][istat-differences])
+
 [istat]: https://bjango.com/mac/istatmenus/
+[istat-differences]: https://bjango.com/help/istatmenus6/macappstore/
 
 ## [Intel Power Gadget][intel-power-gadget]
 
+(On Intel; still needed?)
+
 [intel-power-gadget]: https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html
 
-## Global
+## Registration
 
 * License
 
-## Notifications
+## Config
 
-These are all alerts; do the other sections first
+### Global
 
+* Colors: System Accent Color / Light
+* Menu Bar Spacing: Compact
+
+### Rules
+
+These are all alerts (except the hotkey); do the other sections first
+
+* Follow prompts to turn on notifications and set to alerts
 * No weather
-* Daylight Saving Change: 2 days before
-* Battery Time Remaining: 10 minutes (default)
-* Low Battery: 10% (default)
-* Bluetooth Battery: 5% (default)
-* Any Temperature Above: 100C for 30 sec (lower on Apple Silicon?) (banner?)
-    * Default is 75C for 10 sec
-* CPU Usage Above: 75% for 10 sec (default time) (banner (?))
-* Memory Pressure Above: 80% for 10 sec (default)
-* 'Macintosh HD' Used Percentage Above: 90% (default)
-* Internet Status Changed?
+* Daylight saving changes: 2 days before
+    * (current location probably needs access)
+* Battery time remaining: 10 minutes (default is 30)
+* Battery level: 10% while draining (default is 20%)
+* Bluetooth battery level: 5% (default)
+* Any temperature above: 100C for 30 sec (lower on Apple Silicon?) (banner?)
+    * Default is 75C for 30 sec
+* CPU usage above: 75% for 10 sec (default is 50% / 30) (banner (?))
+* Memory pressure above: 80% for 10 sec (default is 50% / 30)
+* Percentage used: 90% (default)
+* Internet status changes?
+* Show time menu when `ctrl-opt-cmd-T` is pressed
 
-## Weather
+### Weather
 
 * Off
 
-## CPU
+### CPU & GPU
 
-* Active: label, cores (and GPU stuff?)
-* App usage format: 100%
-* Processes: 10 (?)
-* Hide HT cores
+* Menu Bar: label, single bar graph (or cores?) (and GPU stuff?)
+* Process format: 0-100%
+* Process Count: 10 (?)
+* (Hide HT cores)
 
-## Memory
+### Memory
 
-* Active: label, bar graph (pressure, or if memory, don't show breakdowns)
-* Processes: 10 (?)
-* App format: size
-* Don't hide inactive memory (?)
+* Menu Bar: label, bar graph (pressure)
+* Process Format: Size
+* Process Count: 10 (?)
 
-## Disks
+### Disks
 
-* Active:
-    * label, disk space, (?)activity num (show label),
+* Menu Bar:
+    * label, bar graph, (?)activity num (w/labels),
     * ?activity graph (show bg)
-* Activity mode: detailed (per disk)
-* Processes: 10
+* Process Count: 10
+* Activity: Separate
 
-## Network
+### Network
 
-* Active: net label, arrow label, (?)bandwidth num
-* Decimals (KB): 1(?) 2?
-* Processes: 10
-* Combine bandwidth
-* Show BSD names
+* Menu Bar: net label, (?)bandwidth num (w/arrows; Decimals: 2)
+* Bandwidth Format: KB/s, MB/s
+* Process Count: 10
+* Bandwidth: Combined (?)
 
-## Sensors
+### Sensors
 
-* Active: label, (?)single num
-* Degrees: C
-* Sensors: CPU PECI / Core Avg (show units), ?CPU frequency (show units)
+* Menu Bar: label, (?)single num
+* Temperature: Celsius
 
-## Battery
+### Power
 
-* Active: ?label, horizontal color batt (with icons), time
-* Bluetooth: symbol, vertical graph
-* Airpods: symbol, vertical graph
-* Don't disable Bluetooth monitoring
-* Batteries: internal, mouse [others?]
+* On
+* Request Bluetooth Access
+* Menu Bar:
+    * Battery: ?label, horizontal color batt (Color: green), time
+    * Bluetooth: icon, vertical graph
+    * Airpods: icon, vertical graph
+* Items: internal, mouse, (others?)
 
-## Time
+### Time
 
 * On
 * Menu bar: outline date icon (or clock icon, or `EE hh:mm a`)
-* World Clocks: `ZZZ __RELATIVE_OFFSET__ EE HH:mm`
-    * (e.g. -0400 +0 Wed 14:40; default 06:05 AM)
-* Hotkey: `ctrl-opt-cmd-T`
-* World clocks:
+* Clock format (in dropdown config): `ZZZ __RELATIVE_OFFSET__ EE HH:mm`
+    * (e.g. -0400 +0 Wed 14:40; default: 6 hours ahead)
+* Display: Month
+* Clocks:
     * UTC
     * No Moon?
     * No Current Location? (else give location access)
     * (other locations)
 * Open dropdown:
-    * hide request box
-    * current -> request
+    * Dismiss calendar request
+    * Current Location -> Request
 
-## Combined
+### Combined
 
 * Off
 
-## -> System Preferences
+### -> System Preferences
 
 * Control Center:
     * Battery (Menu Bar): off

@@ -140,6 +140,8 @@
 * Bluetooth:
     * BetterTouchTool (?)
     * Franz (?)
+    * iStat Menus
+    * iStat Menus Menubar
     * SoundSource
     * ToothFairy
 * Microphone:
