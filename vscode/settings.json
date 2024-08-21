@@ -30,12 +30,9 @@
         "editor.insertSpaces": false,
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": "explicit"
         }
     },
-    // ignored with the language server on
-    "go.autocompleteUnimportedPackages": true,
-    // ignored with the language server on
     "go.formatTool": "goimports",
     "go.lintFlags": [
         "-E", "exportloopref,goimports,lll,revive,whitespace",
@@ -51,13 +48,9 @@
     "go.lintOnSave": "workspace",
     "go.lintTool": "golangci-lint",
     "go.toolsManagement.autoUpdate": true,
-    // technically still alpha but does some things (e.g. completion) better IMO
     "go.useLanguageServer": true,
-    // not needed with golangci-lint (ignored with the language server on?)
+    // not needed with golangci-lint (ignored with the language server on)
     "go.vetOnSave": "off",
-    "gopls": {
-        "completeUnimported": true
-    },
     "highlight-bad-chars.additionalUnicodeChars": [
         "\u0009"  // tab
     ],
