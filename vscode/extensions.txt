@@ -13,6 +13,7 @@ ms-python.debugpy
 fill-labs.dependi
 tamasfe.even-better-toml
 redhat.fabric8-analytics
+ms-python.flake8
 codezombiech.gitignore
 eamodio.gitlens
 golang.go
@@ -29,6 +30,7 @@ ms-toolsai.jupyter-renderers
 ipedrazas.kubernetes-snippets
 ms-vscode.makefile-tools
 yzhang.markdown-all-in-one
+ms-python.mypy-type-checker
 esbenp.prettier-vscode
 puppet.puppet-vscode
 ms-python.python
