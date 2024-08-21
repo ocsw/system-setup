@@ -314,6 +314,8 @@
             * All Applications:
                 * Lock Screen: `ctrl-opt-cmd-L`
                 * Sleep: `ctrl-opt-cmd-Q`
+            * Google Chrome:
+                * Task Manager: `` opt-shift-` ``
             * (other shortcuts)
         * Modifier Keys:
             * Caps Lock: none (?) cmd? esc? (per keyboard)
