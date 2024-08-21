@@ -72,7 +72,6 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "python.defaultInterpreterPath": "$/Users/zephyr/.pyenv/versions/3.10.1/bin/python",
     "redhat.telemetry.enabled": false,
     "search.collapseResults": "alwaysExpand",
     "shellcheck.exclude": [
