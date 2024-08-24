@@ -11,7 +11,7 @@
         * Apps:
             * Turn off Preview, QuickTime, TextEdit (?)
             * More?
-    * Passswords & Keychain: Off
+    * Passwords & Keychain: Off
     * Find My Mac: On (?)
     * Safari: Off (?)
     * Siri: Off (?)

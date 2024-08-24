@@ -15,6 +15,17 @@ incl. save recovery key (pic?)
 
 See [System Settings Setup][macos-system-settings]
 
+NOTE: Do Desktop & Dock -> Windows immediately!
+
+* Ask to keep changes: on
+* Close windows: off
+
+Also advisable:
+
+* Turn off Natural scrolling in Mouse and Trackpad
+* Reverse Option and Command on Windows keyboards
+* Set up the Lock Screen and Sleep keyboard shortcuts
+
 See also [Re-check System Settings][recheck-settings]
 
 [macos-system-settings]: macos-system-settings.md
