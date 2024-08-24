@@ -440,6 +440,7 @@ Note: [buy direct][witch-buy-direct]
 * General:
     * Launch on login
     * Check for updates
+    * Export (?)
 
 [rectangle]: https://rectangleapp.com/
 
@@ -1056,6 +1057,8 @@ See [IntelliJ Setup][intellij-setup]
     * Mouse:
         * Scroll wheel sends arrow keys when in alternate screen mode: Yes
 
+When done, export (General -> Settings) (?)
+
 [iterm2]: https://iterm2.com/
 
 ### [Xcode][xcode] (App Store)
@@ -1395,7 +1398,7 @@ System Settings sections are correct:
 * Copy containers (if applicable)
 * Check for other applications
 * Check VSCode, etc. settings against this repo
-* Export and copy iStat, Moom settings (?)
+* Export and copy iStat, Moom, Rectangle, iTerm, etc. settings (?)
 * Save and copy desktop, Meet, Zoom, etc. backgrounds
 
 This is also a good time to export browser bookmarks to have a backup.
