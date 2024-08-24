@@ -19,10 +19,9 @@
 
 ### Global
 
-I don't get what the Light/Dark switch actually does here.  It seems like what actually works is to make the background of the top bit dark, then set the colors.
+I _think_ the light/dark switch here sets colors for when the menu bar color is light vs. dark.
 
-* Colors: System Accent Color / System Appearance
-    * (In the other mode, System Accent Color / Indigo (?))
+* Colors: System Accent Color / System Appearance (in each mode)
 * Menu Bar Spacing: Standard (when using compact in Bartender; else Compact (?))
 
 ### Rules
