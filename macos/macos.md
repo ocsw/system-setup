@@ -1378,25 +1378,56 @@ System Settings sections are correct:
 
 ## Machine Migration
 
-* Copy files
+* Copy files, including:
     * All users, including `/Users/Shared`; don't forget:
-        * SSH/GPG keys, known_hosts
-        * Kubernetes contexts (~/.kube/config)
+        * Homedir stuff, main files
+        * SSH/GPG keys, `known_hosts`
+        * Kubernetes contexts (`~/.kube/config`)
         * Python virtualenvs
         * History: shell, Python, iPython, etc.
-        * Local config (shell, SSH, vim, etc; see
+        * Local config (shell, SSH, vim, etc.; see
           [this script][dotfiles-install])
     * Check `/tmp`, `/usr/tmp`, `$TMPDIR`
     * Check `/etc` and `/usr/local/etc` / `/opt/homebrew/etc`
     * Check anything non-Homebrew in `/opt`
+* Copy browser tabs and windows
+* Copy non-cloud game saves
 * Copy containers (if applicable)
 * Check for other applications
-* Copy tabs
-* Check VSCode settings against this repo
-* Deauthorize Kindle
+* Check VSCode, etc. settings against this repo
+* Export and copy iStat, Moom settings (?)
 * Save and copy desktop, Meet, Zoom, etc. backgrounds
-* Remove from iCloud Devices, App Store
 
 This is also a good time to export browser bookmarks to have a backup.
 
 [dotfiles-install]: https://github.com/ocsw/dotfiles/blob/master/INSTALL.sh
+
+## Machine Decommissioning
+
+* Remove from iCloud Devices, App Store
+* Remove Apple ID
+* Log out of SpiderOak, Google Drive, Dropbox, etc.
+* Log out of any LastPass, etc. apps
+* Chrome, other browsers:
+    * Log out of Lastpass, etc.
+    * Log out of comms, including GMail, GCal, Discord, Messenger, FB, etc.
+    * Log out of Pinboard
+    * Log out of profile(s)
+    * Close tabs and windows
+    * Erase data (?)
+* Log out of other comms, e.g. Slack, Franz, Zoom, Skype, etc.
+* Log out of OneNote
+* Remove SSH/GPG keys, possibly `known_hosts`
+* Remove VSCode, etc. sync
+* Deauthorize Kindle
+* Log out of Spotify, etc.
+* Log out of Steam, etc.
+* Remove repos (?)
+* Remove containers (if applicable) (?)
+* Remove other data (?) (See also [Migration section][migration])
+* Remove shell, etc. history (?)
+* Turn off any remote printing / scanning
+* Log out of VPNs
+* Remove WiFi passwords (?)
+
+[migration]: #machine-migration
