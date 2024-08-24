@@ -366,8 +366,9 @@ Note: [buy direct][witch-buy-direct]
         * Cycle windows
         * Sort by app act, window act
         * Orientation: down
-        * No apps w/o windows
-        * Keyboard: `cmd-tab`, `shift-cmd-tab` (or `opt-tab`, `shift-opt-tab`?)
+        * Don't list tabs (very slow with many tabs, also maybe unnecessary?)
+        * Don't list apps without windows
+        * Keyboard: `opt-tab`, `shift-opt-tab`
         * Show in menu bar
     * 2:
         * Minimize frontmost
