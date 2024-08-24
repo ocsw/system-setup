@@ -56,7 +56,6 @@ vadimcn.vscode-lldb
 davidanson.vscode-markdownlint
 vscjava.vscode-maven
 42crunch.vscode-openapi
-github.vscode-pull-request-github
 ms-python.vscode-pylance
 redhat.vscode-yaml
 visualstudioexptteam.vscodeintellicode
