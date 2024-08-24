@@ -19,8 +19,11 @@
 
 ### Global
 
+I don't get what the Light/Dark switch actually does here.  It seems like what actually works is to make the background of the top bit dark, then set the colors.
+
 * Colors: System Accent Color / System Appearance
-* Menu Bar Spacing: Standard (when using compact in Bartender; else Compact?)
+    * (In the other mode, System Accent Color / Indigo (?))
+* Menu Bar Spacing: Standard (when using compact in Bartender; else Compact (?))
 
 ### Rules
 
@@ -30,6 +33,7 @@ These are all alerts (except the hotkey); do the other sections first
 * No weather
 * Daylight saving changes: 2 days before
     * (current location probably needs access)
+    * Can also add for other locations, e.g. European company offices
 * Battery time remaining: 10 minutes (default is 30)
 * Battery level: 10% while draining (default is 20%)
 * Bluetooth battery level: 5% (default)
@@ -100,7 +104,8 @@ These are all alerts (except the hotkey); do the other sections first
     * UTC
     * No Moon?
     * No Current Location? (else give location access)
-    * (other locations)
+    * NYC
+    * (other locations, e.g. European company offices)
 * Open dropdown:
     * Dismiss calendar request
     * Current Location -> Request
@@ -108,6 +113,10 @@ These are all alerts (except the hotkey); do the other sections first
 ### Combined
 
 * Off
+
+### Export
+
+* File -> Export Settings (?)
 
 ### -> System Preferences
 
