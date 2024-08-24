@@ -73,7 +73,7 @@ NOTE: has to be done separately for each profile
 
 (Developer Mode on)
 
-[extensions]: https://chrome.google.com/webstore/category/extensions
+[extensions]: https://chromewebstore.google.com/category/extensions
 
 ### Main
 
@@ -86,7 +86,7 @@ NOTE: has to be done separately for each profile
 #### [Awesome Screenshot][awesome-screenshot-screen]
 
 * No shortcuts
-* Ask where to save
+* Ask where to save?
 
 #### ([CaretTab][carettab-new-tab-clock-an])
 
@@ -101,7 +101,7 @@ NOTE: has to be done separately for each profile
 
 #### [Dark Reader][dark-reader]
 
-#### [Go to Tab][goto-tab]
+#### ([Go to Tab][goto-tab])
 
 #### [LastPass][lastpass-free-password-ma]
 
@@ -119,23 +119,23 @@ NOTE: has to be done separately for each profile
 
 #### [TabCopy][tabcopy]
 
-#### [Tidy Sidebar][tidy-sidebar]
+#### ([Tidy Sidebar][tidy-sidebar])
 
 * No Memo, Wiki, Links
 * Show tooltip
 
-[adblock-plus-free-ad-bloc]: https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb
-[awesome-screenshot-screen]: https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj
-[carettab-new-tab-clock-an]: https://chrome.google.com/webstore/detail/carettab-new-tab-clock-an/cojpndognjdcakkimaloeealehpkljna
-[dark-reader]: https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
-[goto-tab]: https://chrome.google.com/webstore/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi
-[lastpass-free-password-ma]: https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd
-[onenote-web-clipper]: https://chrome.google.com/webstore/detail/onenote-web-clipper/gojbdfnpnhogfdgjbigejoaolejmgdhk
-[password-alert]: https://chrome.google.com/webstore/detail/password-alert/noondiphcddnnabmjcihcjfbhfklnnep
-[pinboard-plus]: https://chrome.google.com/webstore/detail/pinboard-plus/mphdppdgoagghpmmhodmfajjlloijnbd
-[tabby-cat]: https://chrome.google.com/webstore/detail/tabby-cat/mefhakmgclhhfbdadeojlkbllmecialg
-[tabcopy]: https://chrome.google.com/webstore/detail/tabcopy/micdllihgoppmejpecmkilggmaagfdmb
-[tidy-sidebar]: https://chrome.google.com/webstore/detail/tidy-sidebar/dgmacifhhpefamjmolpipkijcofcmbgp
+[adblock-plus-free-ad-bloc]: https://chromewebstore.google.com/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb
+[awesome-screenshot-screen]: https://chromewebstore.google.com/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj
+[carettab-new-tab-clock-an]: https://chromewebstore.google.com/detail/carettab-new-tab-clock-an/cojpndognjdcakkimaloeealehpkljna
+[dark-reader]: https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
+[goto-tab]: https://chromewebstore.google.com/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi
+[lastpass-free-password-ma]: https://chromewebstore.google.com/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd
+[onenote-web-clipper]: https://chromewebstore.google.com/detail/onenote-web-clipper/gojbdfnpnhogfdgjbigejoaolejmgdhk
+[password-alert]: https://chromewebstore.google.com/detail/password-alert/noondiphcddnnabmjcihcjfbhfklnnep
+[pinboard-plus]: https://chromewebstore.google.com/detail/pinboard-plus/mphdppdgoagghpmmhodmfajjlloijnbd
+[tabby-cat]: https://chromewebstore.google.com/detail/tabby-cat/mefhakmgclhhfbdadeojlkbllmecialg
+[tabcopy]: https://chromewebstore.google.com/detail/tabcopy/micdllihgoppmejpecmkilggmaagfdmb
+[tidy-sidebar]: https://chromewebstore.google.com/detail/tidy-sidebar/dgmacifhhpefamjmolpipkijcofcmbgp
 
 ### Misc. Unsure / WIP
 
@@ -145,10 +145,10 @@ NOTE: has to be done separately for each profile
 * ([Office Editing for Docs, Sheets, and Slides][office-editing-for-docs-s])
 * ([Tampermonkey][tampermonkey]??)
 
-[application-launcher-for]: https://chrome.google.com/webstore/detail/application-launcher-for/lmjegmlicamnimmfhcmpkclmigmmcbeh
-[google-docs-offline]: https://chrome.google.com/webstore/detail/google-docs-offline/ghbmnnjooekpmoecnnnilnnbdlolhkhi
-[office-editing-for-docs-s]: https://chrome.google.com/webstore/detail/office-editing-for-docs-s/gbkeegbaiigmenfmjfclcdgdpimamgkj
-[tampermonkey]: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
+[application-launcher-for]: https://chromewebstore.google.com/detail/application-launcher-for/lmjegmlicamnimmfhcmpkclmigmmcbeh
+[google-docs-offline]: https://chromewebstore.google.com/detail/google-docs-offline/ghbmnnjooekpmoecnnnilnnbdlolhkhi
+[office-editing-for-docs-s]: https://chromewebstore.google.com/detail/office-editing-for-docs-s/gbkeegbaiigmenfmjfclcdgdpimamgkj
+[tampermonkey]: https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
 
 ### Image Downloaders (WIP)
 
@@ -158,19 +158,21 @@ NOTE: has to be done separately for each profile
 * ([zzllrr Imager Geek][zzllrr-imager-geek]??)
 * ([ImageCap][imagecap-image-download-a]??)
 
-[image-downloader-continued]: https://chrome.google.com/webstore/detail/image-downloader-continue/jfkjbfhcfaoldhgbnkekkoheganchiea
-[download-all-images]: https://chrome.google.com/webstore/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm
-[image-picker]: https://chrome.google.com/webstore/detail/image-picker/bhibldekjicdbnjeeecmgoogcihoalhe
-[zzllrr-imager-geek]: https://chrome.google.com/webstore/detail/zzllrr-imager-geek/gfjhimhkjmipphnaminnnnjpnlneeplk
-[imagecap-image-download-a]: https://chrome.google.com/webstore/detail/imagecap-image-download-a/ahajhopfbfpekcljjjppolcmapaidldc
+[image-downloader-continued]: https://chromewebstore.google.com/detail/image-downloader-continue/jfkjbfhcfaoldhgbnkekkoheganchiea
+[download-all-images]: https://chromewebstore.google.com/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm
+[image-picker]: https://chromewebstore.google.com/detail/image-picker/bhibldekjicdbnjeeecmgoogcihoalhe
+[zzllrr-imager-geek]: https://chromewebstore.google.com/detail/zzllrr-imager-geek/gfjhimhkjmipphnaminnnnjpnlneeplk
+[imagecap-image-download-a]: https://chromewebstore.google.com/detail/imagecap-image-download-a/ahajhopfbfpekcljjjppolcmapaidldc
 
 ### Special Cases
 
 * [Chrome Remote Desktop][remote-desktop]
 * [Send from Gmail (by Google)][send-from-gmail]
+* [The Camelizer][camelizer]
 
-[remote-desktop]: https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai
-[send-from-gmail]: https://chrome.google.com/webstore/detail/send-from-gmail-by-google/pgphcomnlaojlmmcjmiddhdapjpbgeoc
+[remote-desktop]: https://chromewebstore.google.com/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai
+[send-from-gmail]: https://chromewebstore.google.com/detail/send-from-gmail-by-google/pgphcomnlaojlmmcjmiddhdapjpbgeoc
+[camelizer]: https://chromewebstore.google.com/detail/the-camelizer/ghnomdcacenbmilgjigehppbamfndblo
 
 ### Pins
 
@@ -178,22 +180,13 @@ From left to right:
 
 * Pinboard Plus
 * OneNote Web Clipper
-* Go to Tab
+* (Go to Tab)
 * TabCopy
 * (Send from Gmail)
-* Tidy Sidebar
+* (Tidy Sidebar)
 * Awesome Screenshot?
-* (Image Downloaders)
+* Image Downloaders
+* The Camelizer
 * Dark Reader
 * Adblock Plus
 * LastPass
-
-### Apps
-
-* ([Docs][apps-docs])
-* ([Sheets][apps-sheets])
-* ([Slides][apps-slides])
-
-[apps-docs]: https://chrome.google.com/webstore/detail/docs/aohghmighlieiainnegkcijnfilokake
-[apps-sheets]: https://chrome.google.com/webstore/detail/sheets/felcaaldnbdncclmgdcncolpebgiejap
-[apps-slides]: https://chrome.google.com/webstore/detail/slides/aapocclcgogkmnckokdopfmhonfmgoek
