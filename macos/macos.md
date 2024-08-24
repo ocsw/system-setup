@@ -162,6 +162,13 @@ e.g. headphones, controllers
 
 ### [SoundSource][soundsource] ($)
 
+The ACE helper requires a reboot to install.  On Apple Silicon, it also requires booting into the Recovery Environment and doing one of the following:
+
+* Setting "Reduced Security" with "Allow user management" in the Startup Security Utility, or
+* Running this command in a Terminal: `spctl kext-consent add 7266XEXAPM`
+
+(See: [first method][soundsource-first], [second method][soundsource-second])
+
 * -> System Settings -> Privacy &S:
     * Bluetooth: allow
     * Accessibility: allow
@@ -177,6 +184,8 @@ e.g. headphones, controllers
 * License
 
 [soundsource]: https://rogueamoeba.com/soundsource/
+[soundsource-first]: https://rogueamoeba.com/support/knowledgebase/?showArticle=ACE-StepByStep&product=SoundSource
+[soundsource-second]: https://rogueamoeba.com/support/knowledgebase/?showArticle=ACE-AlternateInstall&product=SoundSource
 
 ### [Balance Lock][balance-lock] (optional App Store)
 
@@ -499,6 +508,7 @@ See [iStat Menus Setup][istat-setup]
     * Bartender Bar: Use, Only w/Notch
     * Show divider
     * Spacing: Small
+        * Requires a reboot to take effect
 * Menu Bar Layout: (see bottom)
 * Hot Keys:
     * Show all: `ctrl-opt-cmd-M`
@@ -781,7 +791,7 @@ See [Firefox Setup][firefox-setup]
     * Normalize volume: on
 * Display:
     * Don't show the now-playing panel
-    * Don't show desktop notifications (?)
+    * Don't show announcements (?)
     * Don't show friend activity (?)
 * Social:
     * Don't publish new playlists

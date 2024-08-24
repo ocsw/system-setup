@@ -16,7 +16,7 @@
         * Confirm before quitting
 * Files and Applications:
     * Downloads:
-        * Always ask where to save
+        * Always ask where to save?
 
 ### Home
 

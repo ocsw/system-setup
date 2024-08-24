@@ -7,7 +7,7 @@ NOTE: has to be done separately for each profile
 
 ## Settings
 
-### Chrome menu -> Warn Before Quitting [Mac]
+### Chrome menu -> Warn Before Quitting (Mac)
 
 (see also below)
 

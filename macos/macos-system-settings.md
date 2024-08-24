@@ -129,7 +129,9 @@
 
 * Location Services:
     * Enable
-    * All apps off (except iStat if using Current Location)
+    * All apps off, except:
+        * Google Chrome
+        * iStat (if using Current Location)
     * System Services: don't show icon
 * Contacts: (Full Disk Access apps, if present)
 * Calendars: (Full Disk Access apps, if present)

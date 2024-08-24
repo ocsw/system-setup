@@ -19,8 +19,8 @@
 
 ### Global
 
-* Colors: System Accent Color / Light
-* Menu Bar Spacing: Compact
+* Colors: System Accent Color / System Appearance
+* Menu Bar Spacing: Standard (when using compact in Bartender; else Compact?)
 
 ### Rules
 
@@ -37,7 +37,7 @@ These are all alerts (except the hotkey); do the other sections first
     * Default is 75C for 30 sec
 * CPU usage above: 75% for 10 sec (default is 50% / 30) (banner (?))
 * Memory pressure above: 80% for 10 sec (default is 50% / 30)
-* Percentage used: 90% (default)
+* Percentage used: 90% (default) for any disk
 * Internet status changes?
 * Show time menu when `ctrl-opt-cmd-T` is pressed
 
@@ -48,9 +48,9 @@ These are all alerts (except the hotkey); do the other sections first
 ### CPU & GPU
 
 * Menu Bar: label, single bar graph (or cores?) (and GPU stuff?)
+* Hyper-Threading Cores: Hide (?)
 * Process format: 0-100%
 * Process Count: 10 (?)
-* (Hide HT cores)
 
 ### Memory
 
@@ -77,6 +77,7 @@ These are all alerts (except the hotkey); do the other sections first
 
 * Menu Bar: label, (?)single num
 * Temperature: Celsius
+* Display Mode: Simple (?) (can change from the dropdown)
 
 ### Power
 
