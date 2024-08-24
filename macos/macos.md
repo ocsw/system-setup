@@ -358,6 +358,8 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 ### [Witch][witch] ($)
 
+Note: [buy direct][witch-buy-direct]
+
 * -> System Settings -> Privacy &S -> Accessibility: allow
 * Actions:
     * 1:
@@ -387,6 +389,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * License
 
 [witch]: https://manytricks.com/witch/
+[witch-buy-direct]: https://manytricks.com/blog/?p=4156
 
 ### [BetterTouchTool][btt] ($)
 
@@ -441,6 +444,8 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 ### [Moom][moom] ($)
 
+Note: [buy direct][moom-buy-direct]
+
 * -> System Settings -> Privacy &S -> Accessibility: allow
 * General:
     * Launch on login
@@ -465,6 +470,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 * (Exclude from uBar)
 
 [moom]: https://manytricks.com/moom/
+[moom-buy-direct]: https://manytricks.com/blog/?p=4156
 
 ### [Muzzle][muzzle]
 
