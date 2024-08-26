@@ -82,6 +82,7 @@ NOTE: has to be done separately for each profile
 * (Allowlist)
 * Advanced:
     * No number in icon
+    * No notifications
 
 #### [Awesome Screenshot][awesome-screenshot-screen]
 
