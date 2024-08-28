@@ -7,10 +7,14 @@
 #     code --install-extension $i
 # done
 
+# if vscode-bazel complains about buildifier:
+# go install github.com/bazelbuild/buildtools/buildifier@latest
+
 rogalmic.bash-debug
 webfreak.debug
 ms-python.debugpy
 fill-labs.dependi
+editorconfig.editorconfig
 tamasfe.even-better-toml
 redhat.fabric8-analytics
 ms-python.flake8
@@ -42,6 +46,7 @@ coolbear.systemd-unit-file
 hashicorp.terraform
 be5invis.toml
 dunstontc.viml
+bazelbuild.vscode-bazel
 shengchen.vscode-checkstyle
 redhat.vscode-commons
 ms-azuretools.vscode-docker
@@ -56,6 +61,7 @@ vadimcn.vscode-lldb
 davidanson.vscode-markdownlint
 vscjava.vscode-maven
 42crunch.vscode-openapi
+pbkit.vscode-pbkit
 ms-python.vscode-pylance
 redhat.vscode-yaml
 visualstudioexptteam.vscodeintellicode
