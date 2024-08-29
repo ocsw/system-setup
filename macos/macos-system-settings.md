@@ -122,6 +122,7 @@
     * Suggestions: Safari off (and others?)
 * Spotlight:
     * Remove Bookmarks & History (?)
+    * Remove Websites (?)
     * More?
 * Spotlight Privacy: Add locations? (depending)
 
