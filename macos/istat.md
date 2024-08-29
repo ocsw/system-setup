@@ -88,6 +88,7 @@ These are all alerts (except the hotkey); do the other sections first
 * Request Bluetooth Access
 * Menu Bar:
     * Battery: ?label, horizontal color batt (Color: green), time
+        * Set the color for both light and dark
     * Bluetooth: icon, vertical graph
     * Airpods: icon, vertical graph
 * Items: internal, mouse, (others?)
