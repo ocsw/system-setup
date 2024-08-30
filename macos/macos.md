@@ -709,75 +709,18 @@ See [Firefox Setup][firefox-setup]
 
 [Download - App Store][slack-app-store]
 
-(Preferences are per-workspace)
-
-(sign into workspaces)
+See [Slack Setup][slack-setup]
 
 * -> System Settings -> Privacy &S:
     * Microphone: allow
     * Camera: allow
     * Screen Recording: allow
     * Accessibility: allow (if there)
-* Profile
-* Status
-* Notifications:
-    * Notify:
-        * Direct messages
-        * Threads
-    * DND? (10PM - 8AM?)
-    * Sound & appearance:
-        * Preview (depending)
-        * Sounds:
-            * Messages: Plink
-            * Sending: None
-            * While in conversation: None
-            * Huddles: Boop (?)
-        * Badge (depending)
-        * Bounce once
-    * Inactive:
-        * Mobile: 2 min
-        * No email
-* Home:
-    * Always show: all
-    * Sort: alpha
-    * Don't list private separately (depending)
-    * Don't move unread mentions to top
-* Themes:
-    * Colors: Aubergine (Aubergine Classic?)
-* Messages & Media:
-    * Theme: clean
-    * Names: display names
-    * Additional:
-        * Display typing
-        * Display color swatches
-    * Emoji Style:
-        * Show jumbomoji
-        * Convert typed emoticons
-    * Inline Media & Links:
-        * Show uploaded
-        * Show from links
-        * Show text previews
-* Language & Region:
-    * TZ (and/or auto (?))
-    * Enable spellcheck
-* Mark as Read: Start where I left off, and mark the channel read (?)
-* Audio & video:
-    * Set status when in a huddle
-    * Blur (depending)
-* Privacy & visibility:
-    * Slack Connect:
-        * No one (depending)
-* Advanced:
-    * Input options:
-        * Don't send w/enter on \`\`\`
-    * Confirmations:
-        * Ask to toggle status
-    * Other options:
-        * No channel suggestions?
 
 [slack]: https://slack.com/
 [slack-dl]: https://slack.com/downloads/
 [slack-app-store]: https://apps.apple.com/app/slack/id803453959
+[slack-setup]: ../slack.md
 
 ### [Zoom][zoom]
 
