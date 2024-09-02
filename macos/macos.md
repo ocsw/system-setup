@@ -805,6 +805,13 @@ See [Slack Setup][slack-setup]
 
 [kindle]: https://www.amazon.com/kindle-dbs/fd/kcp
 
+### Kobo[kobo]
+
+* Log in
+* (download books)
+
+[kobo]: https://www.kobo.com/us/en/p/desktop
+
 ### [XnViewMP][xnviewmp]
 
 * -> System Settings -> Privacy &S -> Files and Folders: allow as necessary
@@ -1262,6 +1269,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
 * Dashboard? (drag to dock)
 * System Settings
 * FortiClient / other VPNs
+* (Kobo)
 * (Kindle)
 * Amazon Music, Spotify, etc.
 * (Skype), Zoom, Franz, Slack
@@ -1286,6 +1294,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
 
 * Finder
 * Android File Transfer
+* Kobo
 * Kindle
 * Apple Music, Amazon Music, Spotify, etc.
 * Skype, Zoom, Franz, Slack
