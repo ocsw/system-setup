@@ -38,6 +38,7 @@ ms-python.mypy-type-checker
 esbenp.prettier-vscode
 puppet.puppet-vscode
 ms-python.python
+ms-vscode-remote.remote-containers
 lextudio.restructuredtext
 rust-lang.rust-analyzer
 timonwong.shellcheck
