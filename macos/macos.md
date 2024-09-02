@@ -812,14 +812,23 @@ See [Slack Setup][slack-setup]
     * No anonymous logs
 * General:
     * General:
+        * Check for updates: Weekly (?) (default is Daily)
+    * Startup:
+        * Start with file: Viewer (?)
         * Startup directory: Last (default) (?)
 * Interface:
+    * Interface:
+        * Purge on exit?
     * Tabs:
         * No closing last tab exits?
+    * Shortcuts:
+        * Viewer:
+            * Random file: Custom (0 (?))
     * Keyboard:
-        * ESC quits: Never (default) (?)
+        * ESC closes: Viewer only (?)
 * Catalog:
-    * Disable Catalog/caching?
+    * Catalog:
+        * Disable Catalog/caching?
 
 [xnviewmp]: https://www.xnview.com/en/xnviewmp/
 
