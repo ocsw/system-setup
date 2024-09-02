@@ -78,9 +78,6 @@
     },
     "redhat.telemetry.enabled": false,
     "search.collapseResults": "alwaysExpand",
-    "shellcheck.exclude": [
-        "SC1117"
-    ],
     "shellcheck.run": "onSave",
     "telemetry.telemetryLevel": "off",
     "window.newWindowDimensions": "inherit",
