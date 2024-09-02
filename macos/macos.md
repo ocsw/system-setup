@@ -579,9 +579,14 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Suspicious Package][suspicious-package]
 
-* -> System Settings -> Privacy &S -> Extensions:
-    * Added extensions: allow
-    * Quick Look: allow
+* -> System Settings -> Privacy &S:
+    * Files and Folders: allow Desktop, Downloads (?)
+        * But not Documents (?)
+        * Request can be triggered from the menu bar:
+            * Suspicious Package -> Review macOS Folder Privacy
+    * Extensions:
+        * Added extensions: allow
+        * Quick Look: allow
 
 [suspicious-package]: https://mothersruin.com/software/SuspiciousPackage/
 

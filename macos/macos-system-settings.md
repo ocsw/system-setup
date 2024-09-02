@@ -164,7 +164,8 @@
         * Slack: Downloads
         * SpiderOakONE: Desktop, Documents, Downloads
             * But not Network, Removable (?)
-        * Suspicious Package: Desktop, Documents, Downloads
+        * Suspicious Package: Desktop, Downloads (?)
+            * But not Documents (?)
         * uBar: Full Disk Access
         * XnViewMP: Desktop, Documents, Downloads, Google Drive
     * No Dropbox Removable (?)
