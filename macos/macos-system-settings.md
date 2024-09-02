@@ -267,7 +267,10 @@
 * Download
 * (Add Folders)
 * For different wallpaper on each screen, turn off "Show on all Spaces"
-* Set wallpaper
+* Choose wallpaper
+    * It seems like wallpaper is per set of monitors, i.e. actual monitor
+      model(s) or serial number(s)?  So set e.g. for no monitors, home desk
+      monitor, work desk monitor(s), etc.
 
 ## Screen Saver
 
