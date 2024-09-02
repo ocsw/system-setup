@@ -9,8 +9,8 @@
         "*.vimrc.local": "viml",
         "*.psh": "shellscript"
     },
-    // change to "\n" for Unix workspaces on Windows
-    "files.eol": "auto",
+    // change to "\r\n" for Windows workspaces
+    "files.eol": "\n",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -49,7 +49,7 @@
     "go.lintOnSave": "workspace",
     "go.lintTool": "golangci-lint",
     "go.toolsManagement.autoUpdate": true,
-    "go.useLanguageServer": true,
+    "go.useLanguageServer": true,  // default
     // not needed with golangci-lint (ignored with the language server on)
     "go.vetOnSave": "off",
     "highlight-bad-chars.additionalUnicodeChars": [
@@ -71,6 +71,10 @@
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
+    },
+    "[proto]": {
+        // https://protobuf.dev/programming-guides/style/
+        "editor.tabSize": 2
     },
     "redhat.telemetry.enabled": false,
     "search.collapseResults": "alwaysExpand",
