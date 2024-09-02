@@ -2,8 +2,11 @@
 
 (Don't install from App Store: [differences][istat-differences])
 
+The iStat Helper should be installed as part of the main installation process, but if not, get it [here][istat-helper].
+
 [istat]: https://bjango.com/mac/istatmenus/
 [istat-differences]: https://bjango.com/help/istatmenus6/macappstore/
+[istat-helper]: https://bjango.com/mas/istatmenus/helper/
 
 ## [Intel Power Gadget][intel-power-gadget]
 
