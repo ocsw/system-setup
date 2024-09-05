@@ -11,6 +11,7 @@ bash
 bash-completion
 bashdb
 bats-core
+bazelisk
 bison
 black
 broot
@@ -21,6 +22,7 @@ cpp
 ctags
 curl
 diff-so-fancy
+direnv
 emacs
 ffmpeg
 file
@@ -49,6 +51,7 @@ hey
 hstr
 htop
 httpie
+ibazel
 iftop
 ijq
 imagemagick
@@ -90,6 +93,7 @@ parallel
 pep8
 perl
 pkg-config
+pre-commit
 prettyping
 progress
 protobuf
@@ -100,10 +104,10 @@ pwgen
 pyenv
 pyenv-virtualenv
 python
+python_libs
 python-dev
 python3
 python3-dev
-python_libs
 rdiff-backup
 ripgrep
 rlwrap
