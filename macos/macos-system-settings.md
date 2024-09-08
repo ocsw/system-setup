@@ -70,8 +70,8 @@
 * Login Items:
     * Open at Login, including:
         * Amphetamine, Android File Transfer, BetterTouchTool, CrossOver,
-          Dropbox, Google Drive, Logitech Gaming Software, Moom, Rectangle,
-          SoundSource, SpiderOak One, uBar, Witch, YubiSwitch
+          Dropbox, Google Drive, Moom, Rectangle, SoundSource, SpiderOak One,
+          uBar, Witch, YubiSwitch
         * (Some might not be in the list until run)
     * Allow in the Background: all (?)
 * Date & Time:
@@ -145,14 +145,14 @@
     * Franz (?)
     * iStat Menus
     * iStat Menus Menubar
+    * Logitech G HUB
     * SoundSource
     * ToothFairy
 * Microphone:
-    * Blue, Franz, Google Chrome, Logitech Gaming Software, Loom, Skype, Slack,
-      Zoom
+    * Blue, Franz, Google Chrome, Logitech G HUB, Loom, Skype, Slack, Zoom
     * (Some might not be in the list until run)
 * Camera:
-    * Franz, Google Chrome, Logitech Gaming Software, Loom, Skype, Slack, Zoom
+    * Franz, Google Chrome, Logitech G HUB, Loom, Skype, Slack, Zoom
     * (Some might not be in the list until run)
 * Files and Folders:
     * Allow as necessary, including:
@@ -176,7 +176,7 @@
 * Accessibility:
     * Allow as necessary, including:
         * Bartender, BetterTouchTool, Dropbox, Google Chrome, iTerm, Kindle,
-          Logitech Gaming Software, Loom, Moom, Muzzle, Rectangle, Slack,
+          Logitech G HUB Agent, Loom, Moom, Muzzle, Rectangle, Slack,
           SoundSource, Steam, uBar, Witch, Xcode Helper, Yubiswitch
     * But probably deny Zoom (& not sure about Google Drive)
     * (Some might not be in the list even if installed)
@@ -186,6 +186,7 @@
     * Allow as necessary, including:
         * Bartender, Franz, Google Chrome, Kap, Loom, Skype, Slack, uBar, Zoom
     * (Some might not be in the list until run)
+    * Deny Logitech G HUB (?)
 * Automation:
     * Allow all (?), including:
         * BetterTouchTool -> Shortcuts Events

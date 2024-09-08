@@ -108,22 +108,16 @@ See also [Re-check System Settings][recheck-settings]
 
 [system-settings-mouse]: macos-system-settings#mouse
 
-### [Logitech Gaming Software][ghub] (w/C920 webcam)
+### [Logitech G HUB][ghub] (w/G502 mouse, C920 webcam)
 
-NOTE: requires unplugging and replugging the mouse receiver after it starts
-
+* -> System Settings -> Privacy &S -> allow (x2)
 * -> System Settings -> Privacy &S:
-    * Microphone: allow
-    * Camera: allow
+    * Bluetooth: allow
+    * Microphone: allow (after opening C920 settings)
+    * Camera: allow (after opening C920 settings)
     * Accessibility: allow
-* General:
-    * Start automatically? (without this, it's still in the login list, hidden)
-* Analytics: off (?)
-* Arx Control:
-    * Mobile Service:
-        * Disable (?)
-        * No Automatic Discovery (?)
-* (Exclude from uBar)
+    * Screen Recording: deny (?)
+* (Exclude from uBar?)
 
 [ghub]: https://www.logitechg.com/en-us/innovation/g-hub.html
 
@@ -341,7 +335,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
         * Amphetamine
         * Dropbox
         * Google Drive
-        * Logitech Gaming Software
+        * Logitech G HUB?
         * ToothFairy
 * Shortcuts:
     * No hiding
@@ -1245,7 +1239,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
     * (apps include e.g. music apps, browsers, messaging and VC apps)
 * Balance Lock (Hidden)
 * Blue Sherpa
-* Logitech Gaming Software (Hidden)
+* Logitech G HUB (Hidden)
 * YubiSwitch (Hidden)
 * iStat Menus: CPU, Mem, SSD, Net, Sen
 * iStat Menus: Battery(s), Time
