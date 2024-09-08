@@ -14,5 +14,50 @@
         "key": "ctrl+cmd+e",
         "command": "workbench.files.action.showActiveFileInExplorer",
         "when": "editorTextFocus"
+    },
+
+    // Remove default indentation-level-movement bindings
+    {
+        "key": "alt+right",
+        "command": "-indentation-level-movement.moveRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+up",
+        "command": "-indentation-level-movement.moveUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "-indentation-level-movement.selectUp"
+    },
+    {
+        "key": "alt+down",
+        "command": "-indentation-level-movement.moveDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-indentation-level-movement.selectDown"
+    },
+
+    // Replace most of the indentation-level-movement bindings
+    {
+        "key": "ctrl+alt+up",
+        "command": "indentation-level-movement.moveUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+up",
+        "command": "indentation-level-movement.selectUp"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "indentation-level-movement.moveDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "indentation-level-movement.selectDown"
     }
 ]
