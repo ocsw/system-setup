@@ -108,22 +108,6 @@ See also [Re-check System Settings][recheck-settings]
 
 [system-settings-mouse]: macos-system-settings#mouse
 
-### [Logitech Control Center][lcc] (w/Marathon Mouse M705)
-
-* -> System Settings -> Privacy &S -> Automation -> System Events: allow
-  (if there)
-* (pair in Unifying Software)
-* General:
-    * (default tracking multiplier: 1)
-    * Buttons (counting far left as 1):
-        * Wheel: speed: 3? (default speed 4.6/11, default acc 3/11)
-        * Wheel Button: Middle Click (default is Zoom, speed 3/10, acc 3/11)
-        * Tilt L/R: (default speed 4/9, default acc 4/11)
-        * Thumb button: Desktop (?) Nothing? Mission Control?
-            * (default Mission Control -> Mission Control)
-
-[lcc]: https://support.logi.com/hc/en-za/articles/360025297833
-
 ### [Logitech Gaming Software][ghub] (w/C920 webcam)
 
 NOTE: requires unplugging and replugging the mouse receiver after it starts
