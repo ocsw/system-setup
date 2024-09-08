@@ -1223,7 +1223,6 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
 
 * New Items
 * (Docker)
-* (Carbon Black (Always Hidden?))
 * Spotlight (Always Hidden)
 * Focus
 * Amphetamine
