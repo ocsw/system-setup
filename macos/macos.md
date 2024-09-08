@@ -1225,6 +1225,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
 * (Docker)
 * (Carbon Black (Always Hidden?))
 * Spotlight (Always Hidden)
+* Focus
 * Amphetamine
 * Muzzle (Hidden)
 * Moom (Hidden)
@@ -1245,7 +1246,6 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
 * Blue Sherpa
 * Logitech Gaming Software (Hidden)
 * YubiSwitch (Hidden)
-* (AirPlay) (Hidden)
 * iStat Menus: CPU, Mem, SSD, Net, Sen
 * iStat Menus: Battery(s), Time
 * Fast user switching (Hidden?)
