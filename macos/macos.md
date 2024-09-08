@@ -86,12 +86,6 @@ See also [Re-check System Settings][recheck-settings]
 
 [pia]: https://www.privateinternetaccess.com/
 
-### [FortiClient][forticlient]
-
-* (Exclude from uBar)
-
-[forticlient]: https://www.forticlient.com/
-
 ### (other VPNs)
 
 ## Hardware
@@ -344,7 +338,6 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * App exclusions:
         * Amphetamine
         * Dropbox
-        * FortiClient
         * Google Drive
         * Logitech Gaming Software
         * ToothFairy
@@ -1241,7 +1234,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
 * Dropbox
 * Google Drive
 * SpiderOak One
-* FortiClient / other VPNs
+* other VPNs
 * PIA
 * WiFi
 * Now Playing (Hidden (?))
@@ -1268,7 +1261,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
 * Launchpad?
 * Dashboard? (drag to dock)
 * System Settings
-* FortiClient / other VPNs
+* other VPNs
 * (Kobo)
 * (Kindle)
 * Amazon Music, Spotify, etc.
