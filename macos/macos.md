@@ -369,7 +369,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * No switch (?)
 * License
 
-[ubar]: https://brawersoftware.com/products/ubar
+[ubar]: https://ubarapp.com/
 
 ### [Witch][witch] ($)
 
@@ -629,7 +629,7 @@ Download from main site or [App Store][unarchiver-app-store]
 
 * -> System Settings -> Privacy &S -> allow
 
-[disk-inventory-x]: http://www.derlien.com/
+[disk-inventory-x]: https://www.derlien.com/
 
 ### [DaisyDisk][daisydisk] ($)
 
@@ -664,7 +664,7 @@ See [Chrome Setup][chrome-setup]
     * Screen Recording: allow
 
 [chrome]: https://www.google.com/chrome/
-[chrome-extensions]: https://chrome.google.com/webstore/category/extensions
+[chrome-extensions]: https://chromewebstore.google.com/category/extensions
 [chrome-setup]: ../chrome.md
 
 ### [Firefox][firefox]
@@ -709,7 +709,7 @@ See [Firefox Setup][firefox-setup]
 
 ### ([Signal][signal]?)
 
-[signal]: https://signal.org/en/
+[signal]: https://signal.org/
 
 ### [Skype][skype] (in Franz instead?)
 
@@ -758,7 +758,7 @@ See [Slack Setup][slack-setup]
 * Background & Effects:
     * (Background)
 
-[zoom]: https://explore.zoom.us/meetings
+[zoom]: https://www.zoom.com/en/products/virtual-meetings/
 [zoom-dl]: https://zoom.us/download#client_4meeting
 
 ## Media
@@ -785,13 +785,15 @@ See [Slack Setup][slack-setup]
 
 ### [Amazon Music][amazon-music]
 
+(Mac app was discontinued, but this link still works)
+
 [Download][amazon-music-dl]
 
 * Advanced:
     * Don't launch on startup
 
 [amazon-music]: https://www.amazon.com/music
-[amazon-music-dl]: https://www.amazon.com/Amazon-Music-Apps/b?ie=UTF8&node=2658409011
+[amazon-music-dl]: https://www.amazon.com/gp/dmusic/desktop/downloadPlayer/ref=dmsp_adp_ddp
 
 ### [Apple Music][apple-music]
 
@@ -820,7 +822,7 @@ See [Slack Setup][slack-setup]
 
 [kindle]: https://www.amazon.com/kindle-dbs/fd/kcp
 
-### Kobo[kobo]
+### [Kobo][kobo]
 
 * Log in
 * (download books)
@@ -856,7 +858,7 @@ See [Slack Setup][slack-setup]
 
 ## Documents and Productivity
 
-### [Pages][pages] (App Store)
+### [Pages][pages] ([App Store][pages-app-store])
 
 * General:
     * New: Blank (?)
@@ -868,9 +870,10 @@ See [Slack Setup][slack-setup]
     * No smart quotes?
     * Replacements on (?)
 
-[pages]: https://www.apple.com/pages/
+[pages]: https://support.apple.com/pages
+[pages-app-store]: https://apps.apple.com/us/app/pages/id409201541?mt=12
 
-### [Numbers][numbers] (App Store)
+### [Numbers][numbers] ([App Store][numbers-app-store])
 
 * General:
     * New: Blank (?)
@@ -882,9 +885,10 @@ See [Slack Setup][slack-setup]
     * No smart quotes?
     * Replacements on (?)
 
-[numbers]: https://www.apple.com/numbers/
+[numbers]: https://support.apple.com/numbers
+[numbers-app-store]: https://apps.apple.com/us/app/numbers/id409203825?mt=12
 
-### [Keynote][keynote] (App Store)
+### [Keynote][keynote] ([App Store][keynote-app-store])
 
 * General:
     * Author
@@ -897,9 +901,10 @@ See [Slack Setup][slack-setup]
     * No smart quotes?
     * Replacements on (?)
 
-[keynote]: https://www.apple.com/keynote/
+[keynote]: https://support.apple.com/keynote
+[keynote-app-store]: https://apps.apple.com/us/app/keynote/id409183694?mt=12
 
-### [Office][ms-office]
+### [Microsoft 365 / Office][ms-office]
 
 [ms-office]: https://www.office.com/
 
@@ -935,7 +940,7 @@ See [Slack Setup][slack-setup]
 
 ### ([MindNode][mindnode]) (App Store)
 
-[mindnode]: https://mindnode.com/
+[mindnode]: https://www.mindnode.com/
 
 ### [Sequel Pro][sequel-pro]
 
@@ -949,7 +954,7 @@ See [Slack Setup][slack-setup]
 
 * Check for updates
 
-[macvim]: https://macvim-dev.github.io/macvim/
+[macvim]: https://macvim.org/
 
 ### [Bluefish][bluefish]
 
@@ -959,7 +964,7 @@ Or, if not available:
 
 * -> Applications -> Bluefish -> right-click -> Open
 
-[bluefish]: http://bluefish.openoffice.nl/index.html
+[bluefish]: https://bluefish.openoffice.nl/index.html
 
 ### [VSCode][vscode]
 
@@ -979,10 +984,9 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
 [vscode-extensions]: https://marketplace.visualstudio.com/VSCode
 [vscode-setup]: ../vscode/
 
-### ([Atom][atom], [Sublime][sublime], etc.)
+### ([Sublime Text][sublime-text])
 
-[atom]: https://atom.io/
-[sublime]: https://www.sublimetext.com/
+[sublime-text]: https://www.sublimetext.com/
 
 ### ([PyCharm][pycharm]) ($/free)
 
@@ -1196,8 +1200,8 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
 * Don't run on startup
 * (install games)
 
-[epic-games]: https://www.epicgames.com/store/en-US/
-[epic-games-dl]: https://www.epicgames.com/store/en-US/download
+[epic-games]: https://store.epicgames.com/en-US/
+[epic-games-dl]: https://store.epicgames.com/en-US/download
 
 ### [GOG Galaxy][gog]
 
@@ -1208,15 +1212,12 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
     * Starting page: Owned games
 * (install games)
 
-[gog]: https://www.gog.com/
+[gog]: https://www.gog.com/en/
 [gog-dl]: https://www.gog.com/galaxy
 
-### ([Origin][origin])
+### ([EA app][ea-app])
 
-[Download][origin-dl]
-
-[origin]: https://www.origin.com/usa/en-us/store
-[origin-dl]: https://www.origin.com/usa/en-us/store/download
+[ea-app]: https://www.ea.com/ea-app
 
 ### [itch.io][itch-app]
 
@@ -1289,7 +1290,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
 * (Skype), Zoom, Franz, Slack
 * OneNote
 * Chrome, Firefox
-* VSCode / Atom / Sublime / PyCharm / GoLand / IntelliJ / etc.
+* VSCode / Sublime Text / PyCharm / GoLand / IntelliJ / etc.
 * (TextEdit) / Bluefish / MacVim / etc.
 * iTerm
 * (Omnigraffle)
@@ -1299,7 +1300,7 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
 * (Steam)
 * (Epic)
 * (GOG Galaxy)
-* (Origin)
+* (EA app)
 * (itch)
 * (CrossOver)
 * (CrossOver apps)
@@ -1319,7 +1320,7 @@ Discord? (in Franz?)
 
 * OneNote
 * Chrome, Firefox, Safari
-* VSCode, Atom, Sublime, PyCharm, GoLand, IntelliJ, Xcode, etc.
+* VSCode, Sublime Text, PyCharm, GoLand, IntelliJ, Xcode, etc.
 * TextEdit, Bluefish, MacVim, etc.
 * iTerm
 * Docker
@@ -1333,7 +1334,7 @@ Discord? (in Franz?)
 * Steam
 * Epic
 * GOG Galaxy
-* (Origin)
+* (EA app)
 * itch
 * CrossOver
 * CrossOver apps

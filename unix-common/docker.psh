@@ -10,7 +10,7 @@
 #
 # Mac
 #
-# get from https://store.docker.com/editions/community/docker-ce-desktop-mac
+# get from https://docs.docker.com/desktop/install/mac-install/
 # (or brew)
 # don't start on login (?)
 # raise memory limit (e.g. 10GB)
