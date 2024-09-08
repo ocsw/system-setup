@@ -90,6 +90,24 @@ See also [Re-check System Settings][recheck-settings]
 
 ## Hardware
 
+[istat-power]: istat.md#power
+
+### Keyboards
+
+* Set up
+* [System Settings][system-settings-keyboard]
+* If Bluetooth, add power to [iStat Menus][istat-power]
+
+[system-settings-keyboard]: macos-system-settings#keyboard
+
+### Mice
+
+* Set up
+* [System Settings][system-settings-mouse]
+* If Bluetooth, add power to [iStat Menus][istat-power]
+
+[system-settings-mouse]: macos-system-settings#mouse
+
 ### [Logitech Control Center][lcc] (w/Marathon Mouse M705)
 
 * -> System Settings -> Privacy &S -> Automation -> System Events: allow
@@ -146,7 +164,7 @@ NOTE: requires unplugging and replugging the mouse receiver after it starts
 [yubiswitch]: https://github.com/pallotron/yubiswitch
 [yubiswitch-dl]: https://github.com/pallotron/yubiswitch/releases/
 
-### Bluetooth Devices
+### Other Bluetooth Devices
 
 e.g. headphones, controllers
 
