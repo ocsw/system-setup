@@ -1315,7 +1315,6 @@ Discord? (in Franz?)
 * itch
 * CrossOver
 * CrossOver apps
-* ESET / etc.
 
 ### Moom Window Placement
 
