@@ -167,6 +167,7 @@ optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
 ** origin
 uplay
 ** itch
+### Amazon Games
 ## List Orders
 ### uBar App Order
 
