@@ -15,6 +15,10 @@
         "command": "workbench.files.action.showActiveFileInExplorer",
         "when": "editorTextFocus"
     },
+    {
+        "key": "ctrl+cmd+r",
+        "command": "gitlens.openFileOnRemote"
+    },
 
     // Remove default indentation-level-movement bindings
     {
