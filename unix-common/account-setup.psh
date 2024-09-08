@@ -12,7 +12,7 @@
 # prep #
 ########
 
-### first install gpg, git/hg, (diff-so-fancy)
+### first install gpg, git, (diff-so-fancy)
 ### if __git_ps1 isn't included, install it
 
 # copy files in gpg-base to ~/.gnupg
@@ -119,20 +119,6 @@ mkdir -p ~/repos
 # see also python.txt
 
 # follow ~/repos/dotfiles/INSTALL.sh
-
-
-#############
-# Mercurial #
-#############
-
-### global hg (~/.hgrc)
-cat >> ~/.hgrc <<EOF
-[ui]
-username = Danielle Zephyr Malament <EMAIL>  # work or personal, depending
-
-[pager]
-pager = less -F
-EOF
 
 
 ##########

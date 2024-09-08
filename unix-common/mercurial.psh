@@ -1,0 +1,17 @@
+# shellcheck shell=sh
+
+#
+# This is a pseudo shell script.
+#
+# DON'T RUN THIS LIKE AN ACTUAL SCRIPT!
+# SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
+#
+
+# global hg (~/.hgrc)
+cat >> ~/.hgrc <<EOF
+[ui]
+username = Danielle Zephyr Malament <EMAIL>  # work or personal, depending
+
+[pager]
+pager = less -F
+EOF
