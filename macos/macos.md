@@ -117,6 +117,32 @@ See also [Re-check System Settings][recheck-settings]
     * Camera: allow (after opening C920 settings)
     * Accessibility: allow
     * Screen Recording: deny (?)
+* Settings (top left):
+    * Enable automatic updates
+    * App Settings:
+        * Start Up: Always
+        * Lighting:
+            * Turn off after inactivity
+            * Allow apps to control
+        * Experience:
+            * No usage data (?)
+            * No error logs (?)
+        * Persistent Profile: Default
+        * Desktop Notifications: Enabled (?)
+* G502 LIGHTSPEED:
+    * Sensitivity: 3200 DPI
+    * Assignments: G7/G8: use for volume (?) (or just remove DPI Down/Up?)
+    * LIGHTSYNC:
+        * Primary: Off
+            * (to save power; but if keeping the DPI buttons, turn it on?)
+        * Logo: Fixed, Vibrant / purple (?) (or Mono / light gray?)
+    * Settings:
+        * DPI Lighting: off (?)
+        * Device Startup Effect: off (?)
+        * Low Battery Mode: Auto, Breathing red
+        * On-board Memory Mode:
+            * (Restore to defaults)
+            * Turn on and set Slot 1 to the Desktop Default, then turn off
 * (Exclude from uBar?)
 
 [ghub]: https://www.logitechg.com/en-us/innovation/g-hub.html
