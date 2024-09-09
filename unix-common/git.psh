@@ -38,7 +38,7 @@ cat ~/.ssh/github_ed25519.pub
 # signing - GPG way (old)
 #
 # use RSA/RSA 4096, no expiration, the same name and email as your account,
-# and comment 'HOSTNAME -> GitHub'
+# and comment 'HOSTNAME -> GitHub (ACCOUNTNAME)'
 gpg --full-generate-key
 # not really necessary, it will be printed when the key is generated
 # gpg --list-secret-keys --keyid-format LONG  # copy the key ID
