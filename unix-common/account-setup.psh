@@ -14,6 +14,10 @@
 
 mkdir -p ~/bin
 
+# install the packages in packages.txt
+
+# run vim.sh
+
 
 ###############
 # SSH (start) #
@@ -42,7 +46,7 @@ EOF
 ################
 
 # add other keys, config
-# consolidate and order config file from most to least specific
+# consolidate and order the config file from most to least specific
 
 
 #############
@@ -55,7 +59,7 @@ mkdir -p ~/repos
     git clone git@github.com:ocsw/system-setup.git  # this repo
     git clone git@github.com:ocsw/dotfiles.git
 )
-# see also python.txt
+# see also python.psh
 
 # follow ~/repos/dotfiles/INSTALL.sh
 
@@ -64,7 +68,21 @@ mkdir -p ~/repos
 # Python #
 ##########
 
-# see python.txt
+# see python.psh
+
+
+######
+# Go #
+######
+
+# see go.psh
+
+
+#########
+# other #
+#########
+
+# follow the other relevant files in this directory
 
 
 #########
