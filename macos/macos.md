@@ -1007,8 +1007,6 @@ See [IntelliJ Setup][intellij-setup]
 
 ## Command-line Related
 
-[unix-setup]: ../unix-common/
-
 ### [iTerm2][iterm2]
 
 * -> System Settings -> Privacy &S:
@@ -1085,15 +1083,19 @@ umask 077
 * Restart shell (fixes problem with `pybase`)
 
 [homebrew]: https://brew.sh/
+[unix-setup]: ../unix-common/
 
 ### General Setup
 
-See the [Unix Setup][unix-setup] directory
-
-* Dotfiles, incl. dotfile and `~/.to_back_up` links
+* Follow the [account setup directions][account-setup]
+    * Add the macOS-specific [SSH][mac-ssh] and [GPG][mac-gpg] directions below
+      when setting those up
 * Add `~/.to_back_up` to Google Drive (backup) and (partly) SpiderOak One
-* Rest of the [Unix Setup][unix-setup] directory
 * Add hostname to `127.0.0.1` in `/etc/hosts`?
+
+[account-setup]: ../unix-common/account-setup.psh
+[mac-ssh]: #ssh
+[mac-gpg]: #gpg
 
 ### SSH
 
