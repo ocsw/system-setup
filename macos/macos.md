@@ -1007,6 +1007,9 @@ See [IntelliJ Setup][intellij-setup]
 
 ## Command-line Related
 
+[unix-setup]: ../unix-common/
+[unix-account-setup]: ../unix-common/account-setup.psh
+
 ### [iTerm2][iterm2]
 
 * -> System Settings -> Privacy &S:
@@ -1170,9 +1173,6 @@ chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
     ~/.vim/autoload/pathogen.vim \
     ~/bin/*
 ```
-
-[unix-setup]: ../unix-common/
-[unix-account-setup]: ../unix-common/account-setup.psh
 
 ## Gaming
 
