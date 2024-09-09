@@ -12,11 +12,6 @@
 # prep #
 ########
 
-### first install gpg, git, (diff-so-fancy)
-### if __git_ps1 isn't included, install it
-
-# copy files in gpg-base to ~/.gnupg
-
 mkdir -p ~/bin
 
 
@@ -35,40 +30,11 @@ Host *
 EOF
 
 
-##########
-# GitHub #
-##########
+##################
+# GitHub and Git #
+##################
 
-#
-# authentication
-#
-### remember to add a passphrase!
-ssh-keygen -a 100 -t ed25519 -f ~/.ssh/github_ed25519
-cat >> ~/.ssh/config <<EOF
-Host github.com
-    IdentityFile ~/.ssh/github_ed25519
-EOF
-cat ~/.ssh/github_ed25519.pub
-# add the key to your GitHub account
-
-#
-# signing - GPG way (old)
-#
-# use RSA/RSA 4096, no expiration, the same name and email as your account,
-# and comment 'HOSTNAME -> GitHub'
-gpg --full-generate-key
-# not really necessary, it will be printed when the key is generated
-# gpg --list-secret-keys --keyid-format LONG  # copy the key ID
-gpg --armor --export KEY_ID
-# add the key to your GitHub account
-
-#
-# signing - SSH way (new)
-#
-### remember to add a passphrase!
-ssh-keygen -a 100 -t ed25519 -f ~/.ssh/github_signing_ed25519
-cat ~/.ssh/github_signing_ed25519.pub
-# add the key to your GitHub account
+# see git.psh
 
 
 ################
@@ -78,33 +44,6 @@ cat ~/.ssh/github_signing_ed25519.pub
 # add other keys, config
 # consolidate and order config file from most to least specific
 
-
-#######
-# Git #
-#######
-
-# run git-config.sh
-
-# re-do these as necessary
-git config --global user.name 'Danielle Zephyr Malament'
-git config --global user.email danielle.malament@gmail.com
-#
-# GPG signing (old)
-# not necessary if the default key is the one you want
-#git config --global user.signingkey KEY_ID
-#
-# SSH signing (new)
-git config --global user.signingkey ~/.ssh/github_signing_ed25519.pub
-
-# optionally, run git-check.sh
-
-#
-# Mac
-#
-umask 022
-brew update
-brew install jesseduffield/lazygit/lazygit
-umask 077
 
 #############
 # Git repos #

@@ -1008,7 +1008,6 @@ See [IntelliJ Setup][intellij-setup]
 ## Command-line Related
 
 [unix-setup]: ../unix-common/
-[unix-account-setup]: ../unix-common/account-setup.psh
 
 ### [iTerm2][iterm2]
 
@@ -1120,6 +1119,8 @@ See the [Unix Setup][unix-setup] directory
 
 ### GPG
 
+[github-git]: ../unix-common/git.psh
+
 #### Option 1 (brew)
 
 ```shell
@@ -1131,7 +1132,7 @@ echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> \
 gpgconf --kill gpg-agent
 ```
 
-* Follow directions in [Unix Account Setup][unix-account-setup]
+* Follow the [GitHub/Git directions][github-git]
 * Install GPG Suite, for GUI
     * (If desired; updates may overwrite config files)
     * (May not automatically pick up new keys?)
@@ -1147,10 +1148,7 @@ umask 077
 ```
 
 * Install GPG Suite
-* Create a key
-    * Use RSA/RSA 4096, no expiration, the same name and email as
-      for git, and comment `HOSTNAME -> GitHub`
-    * See [Unix Account Setup][unix-account-setup]
+* Follow the [GitHub/Git directions][github-git]; create the key in GPG Suite
 
 [gpg-suite]: https://gpgtools.org/
 
