@@ -8,75 +8,191 @@
 #
 
 
+#
+# GitHub write access requires an SSH key (typically), and Git commit signing
+# requires an SSH key (new way) or a GPG key (old way).  They both require
+# preliminary steps that are in account-setup.psh.
+#
+# The directions below set up keys and configs for each of one or more GitHub
+# accounts, then overall defaults.  Technically, it's possible to leave out
+# the defaults, but that requires that every repo to which you need to write or
+# in which you need to sign commits must have the proper config applied in its
+# .ssh/config or via something like an includeIf setting in ~/.gitconfig.  That
+# may be a particular problem with repos that do things like import Python
+# packages via SSH paths.  But in most circumstances there is a clear default
+# account to use, such as a main personal account or a work account.
+#
+# Which keys and configs to apply to any given repo (other than the defaults)
+# is set up below to depend on the repo's remote origin URL.  It's also
+# possible to have it depend on the repo's filesystem path, so that you can
+# e.g. make a directory under which you put all of the repos for a particular
+# account.  But if you do that, you run the risk of accidentally putting a repo
+# in the directory which doesn't go with the selected account, and using the
+# account's signing key and config, but the default access key.  Basing the
+# config on the repos' URLs means that the account's signing key and config
+# will be used if and only if the account's access key is also used (although
+# you can still manually change that in a repo's .git/config if necessary).
+#
+
+
 ########
 # prep #
 ########
 
-# install gpg, git, (diff-so-fancy)
-# if __git_ps1 isn't included, install it
+# Install git and diff-so-fancy
+# If __git_ps1 isn't included in the git installation, install it
+# Optionally, install gh and lazygit
 
-# copy files in gpg-base to ~/.gnupg
+# Do the initial SSH setup described in account-setup.psh
+
+# If using GPG for signing, install it and do the initial setup described in
+# account-setup.psh
 
 
-##########
-# GitHub #
-##########
+########################
+# GitHub - per account #
+########################
+
+ACCOUNT_NAME=ocsw
 
 #
 # authentication
 #
-### remember to add a passphrase!
-ssh-keygen -a 100 -t ed25519 -f ~/.ssh/github_ed25519
+# Remember to set a passphrase and record it securely!
+ssh-keygen -a 100 -t ed25519 -f "${HOME}/.ssh/github_${ACCOUNT_NAME}_ed25519"
 cat >> ~/.ssh/config <<EOF
-Host github.com
-    IdentityFile ~/.ssh/github_ed25519
+Host github-${ACCOUNT_NAME}
+    Hostname github.com
+    IdentityFile ~/.ssh/github_${ACCOUNT_NAME}_ed25519
 EOF
-cat ~/.ssh/github_ed25519.pub
-# add the key to your GitHub account
+cat "${HOME}/.ssh/github_${ACCOUNT_NAME}_ed25519.pub"
+# Add the public key to the GitHub account
 
 #
 # signing - GPG way (old)
 #
-# use RSA/RSA 4096, no expiration, the same name and email as your account,
-# and comment 'HOSTNAME -> GitHub (ACCOUNTNAME)'
-gpg --full-generate-key
-# not really necessary, it will be printed when the key is generated
-# gpg --list-secret-keys --keyid-format LONG  # copy the key ID
-gpg --armor --export KEY_ID
-# add the key to your GitHub account
+# Use RSA/RSA 4096, no expiration, the same name and email as on the account,
+# and comment 'HOSTNAME -> GitHub (ACCOUNT_NAME)'
+# Remember to set a passphrase and record it securely!
+###gpg --full-generate-key
+# Not really necessary; it will be printed when the key is generated
+#gpg --list-secret-keys --keyid-format LONG  # copy the key ID
+###gpg --armor --export KEY_ID
+# Add the public key to the GitHub account
 
 #
 # signing - SSH way (new)
 #
-### remember to add a passphrase!
-ssh-keygen -a 100 -t ed25519 -f ~/.ssh/github_signing_ed25519
-cat ~/.ssh/github_signing_ed25519.pub
-# add the key to your GitHub account
+# Remember to set a passphrase and record it securely!
+ssh-keygen -a 100 -t ed25519 -f \
+    "${HOME}/.ssh/github_${ACCOUNT_NAME}_signing_ed25519"
+cat "${HOME}/.ssh/github_${ACCOUNT_NAME}_signing_ed25519.pub"
+# Add the public key to the GitHub account
 
 
-#######
-# Git #
-#######
+####################
+# GitHub - default #
+####################
 
-# run git-config.sh
+DEFAULT_ACCOUNT_NAME=ocsw
 
-# re-do these as necessary
+cat >> ~/.ssh/config <<EOF
+Host github.com
+    IdentityFile ~/.ssh/github_${DEFAULT_ACCOUNT_NAME}_ed25519
+EOF
+
+
+##############################
+# Git - general and defaults #
+##############################
+
+# Run git-config.sh
+
+DEFAULT_ACCOUNT_NAME=ocsw
+
+# These should match the account
 git config --global user.name 'Danielle Zephyr Malament'
 git config --global user.email danielle.malament@gmail.com
-#
+
 # GPG signing (old)
-# not necessary if the default key is the one you want
-#git config --global user.signingkey KEY_ID
-#
+###git config --global user.signingkey KEY_ID
+
 # SSH signing (new)
-git config --global user.signingkey ~/.ssh/github_signing_ed25519.pub
+git config --global user.signingkey \
+    "${HOME}/.ssh/github_${DEFAULT_ACCOUNT_NAME}_signing_ed25519.pub"
 
-# optionally, run git-check.sh
+# Optionally, run git-check.sh
 
-#
-# Mac
-#
-umask 022
-brew update
-brew install jesseduffield/lazygit/lazygit
-umask 077
+
+#####################
+# Git - per account #
+#####################
+
+ACCOUNT_NAME=ocsw
+
+ACCOUNT_CONFIG="${HOME}/.gitconfig_${ACCOUNT_NAME}"
+
+# These should match the account
+git config -f "${ACCOUNT_CONFIG}" user.name 'Danielle Zephyr Malament'
+git config -f "${ACCOUNT_CONFIG}" user.email danielle.malament@gmail.com
+
+# GPG signing (old)
+###git config -f "${ACCOUNT_CONFIG}" user.signingkey KEY_ID
+
+# SSH signing (new)
+git config -f "${ACCOUNT_CONFIG}" user.signingkey \
+    "${HOME}/.ssh/github_${ACCOUNT_NAME}_signing_ed25519.pub"
+
+
+
+(
+    cd && ln_tbu ".gitconfig_${ACCOUNT_NAME}"
+)
+
+# mostly for Go
+git config --global url.git@ghe.spotify.net:.insteadOf https://ghe.spotify.net/
+git config --global 'includeIf.hasconfig:remote.*.url:https://example.com/**.path' \
+    "${ACCOUNT_CONFIG}"
+# mostly for Go
+git config --global 'includeIf.gitdir:**/ghe.spotify.net/**.path' \
+    "${ACCOUNT_CONFIG}"
+
+# Assuming all your work repositories are in a single github org like `github.com/WORK_ORG`
+# Conditionally include configs to override settings in those repositories
+[includeIf "hasconfig:remote.*.url:git@github.com:WORK_ORG/**"]
+  path = .gitconfig-work
+
+# Rewrite `github.com:WORK_ORG` to `github.com-work:WORK_ORG` to get the right SSH key
+[url "git@github.com-work:WORK_ORG/"]
+	insteadOf = git@github.com:WORK_ORG/
+--add
+GOPRIVATE=github.com/org/repo
+GOPRIVATE=github.com/org/*
+
+# Optionally, run git-check.sh
+
+cleanup
+# consolidate and order the config file from most to least specific
+ssh-add
+
+
+# http for write?
+
+# Ssh finalize
+# Point to add stuff, Mac stuff
+# Prep, point to mac stuff
+# GPG point to mac stuff
+# Final steps
+# Alias/script for instead of in go repos
+# Test instead of on random clone
+# Instead plus if
+# Specific branch for if?
+# */** for ssh?
+# There is a ###circular dependency here, so you probably won't be able to do this yet, but just in case:
+# Otherwise, blah will do it when you get to that
+# how to use
+
+can't chain insteads
+if remote only works on what's in the file, no instead
+ssh read for any
+if sp branch -> no

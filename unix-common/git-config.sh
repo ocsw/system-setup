@@ -23,7 +23,7 @@ if ! git config --global --get user.signingkey > /dev/null; then
     #git config --global user.signingkey KEY_ID
 
     # SSH signing (new)
-    git config --global user.signingkey ~/.ssh/github_signing_ed25519.pub
+    git config --global user.signingkey ~/.ssh/github_ocsw_signing_ed25519.pub
 fi
 
 

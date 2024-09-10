@@ -17,7 +17,7 @@ mkdir -p ~/bin
 # install the packages in packages.txt
 
 # run vim.sh
-
+# copy files in gpg-base to ~/.gnupg
 
 ###############
 # SSH (start) #
