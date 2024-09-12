@@ -29,6 +29,9 @@ brew install argoproj/tap/kubectl-argo-rollouts
 brew install kustomize
 brew install kubeconform
 brew install kubebuilder
+brew install helm
+brew install helm-docs
+brew install istioctl
 umask 077
 # download Velero from:
 # https://github.com/vmware-tanzu/velero/releases/tag/v1.11.1
