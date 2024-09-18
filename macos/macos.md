@@ -1112,7 +1112,7 @@ umask 077
 * Add the keys to the agent, and the passphrases to the keychain:
 
     ```shell
-    for i in ~/.ssh/*_{dsa,ecdsa,ed25519,rsa}; do
+    for i in ~/.ssh/*_{dsa,ecdsa,ecdsa_sk,ed25519,ed25519_sk,rsa}; do
         ssh-add --apple-use-keychain "$i"  # absolute path
     done
     ```
