@@ -92,6 +92,7 @@ gke_up () {  # can use gke-up in bash
 #
 # GKE lists
 #
+# can actually just use kubectx in a pipeline instead of this
 gke_contexts () {  # can use gke-contexts in bash
     # get all locally-configured contexts
     kubectl config get-contexts | tail -n +2 | awk '{print $2}' | sort
