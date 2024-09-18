@@ -16,10 +16,12 @@ bison
 black
 broot
 bzip2
+conftest
 cookiecutter
 coreutils
 cpp
 ctags
+cue
 curl
 diff-so-fancy
 direnv
