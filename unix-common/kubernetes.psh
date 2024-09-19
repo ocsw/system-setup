@@ -65,7 +65,7 @@ gke-up  # see below
 
 #
 # back up config; see
-# https://github.com/ocsw/dotfiles/blob/master/dot.bashrc.d/to_back_up.post.sh
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
 #
 mkdir -p ~/.kube
 touch ~/.kube/config

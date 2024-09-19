@@ -1383,7 +1383,7 @@ System Settings sections are correct:
 
 This is also a good time to export browser bookmarks to have a backup.
 
-[dotfiles-install]: https://github.com/ocsw/dotfiles/blob/master/INSTALL.sh
+[dotfiles-install]: https://github.com/ocsw/dotfiles/blob/main/INSTALL.sh
 
 ## Machine Decommissioning
 
