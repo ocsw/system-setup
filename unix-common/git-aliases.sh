@@ -66,6 +66,8 @@ git config --global alias.cur \
 # local branch (e.g. detached HEAD)
 # see also https://stackoverflow.com/questions/6245570
 git config --global alias.curb 'symbolic-ref --short -q HEAD'
+# 'main or master?' - print the first one that exists in the repo
+git config --global alias.mom '!{ git show-ref --verify "refs/heads/main" 2>/dev/null; git show-ref --verify "refs/heads/master" 2>/dev/null; } | head -1 | sed "s|^.*/||"'
 git config --global alias.br branch
 git config --global alias.brdel 'branch -d'
 git config --global alias.brdelf 'branch -D'
@@ -135,11 +137,11 @@ git config --global alias.pl pull
 git config --global alias.pla 'pull --all'
 git config --global alias.prb 'pull --rebase'
 # shellcheck disable=SC2016
-git config --global alias.prbm '!git pull --rebase origin $({ git show-ref --verify "refs/heads/main" 2>/dev/null; git show-ref --verify "refs/heads/master" 2>/dev/null; } | head -1 | sed "s|^.*/||")'
+git config --global alias.prbm '!git pull --rebase origin $(git mom)'
 git config --global alias.prbd 'pull --rebase origin develop'
 git config --global alias.rb rebase
 # shellcheck disable=SC2016
-git config --global alias.rbm '!git rebase $({ git show-ref --verify "refs/heads/main" 2>/dev/null; git show-ref --verify "refs/heads/master" 2>/dev/null; } | head -1 | sed "s|^.*/||")'
+git config --global alias.rbm '!git rebase $(git mom)'
 git config --global alias.rbd 'rebase develop'
 git config --global alias.rba 'rebase --abort'
 git config --global alias.rbc 'rebase --continue'
