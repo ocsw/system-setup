@@ -134,10 +134,12 @@ git config --global alias.fta 'fetch --all'
 git config --global alias.pl pull
 git config --global alias.pla 'pull --all'
 git config --global alias.prb 'pull --rebase'
-git config --global alias.prbm 'pull --rebase origin master'
+# shellcheck disable=SC2016
+git config --global alias.prbm '!git pull --rebase origin $({ git show-ref --verify "refs/heads/main" 2>/dev/null; git show-ref --verify "refs/heads/master" 2>/dev/null; } | head -1 | sed "s|^.*/||")'
 git config --global alias.prbd 'pull --rebase origin develop'
 git config --global alias.rb rebase
-git config --global alias.rbm 'rebase master'
+# shellcheck disable=SC2016
+git config --global alias.rbm '!git rebase $({ git show-ref --verify "refs/heads/main" 2>/dev/null; git show-ref --verify "refs/heads/master" 2>/dev/null; } | head -1 | sed "s|^.*/||")'
 git config --global alias.rbd 'rebase develop'
 git config --global alias.rba 'rebase --abort'
 git config --global alias.rbc 'rebase --continue'
