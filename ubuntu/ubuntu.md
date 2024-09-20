@@ -153,9 +153,6 @@ See the [Unix Setup][unix-setup] directory
 
 ```shell
 chmod -R go-rwx ~
-chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/config ~/.gnupg*/* ~/.m2/* \
-    ~/.vim/autoload/pathogen.vim \
-    ~/bin/*
 ```
 
 [unix-setup]: ../unix-common/
