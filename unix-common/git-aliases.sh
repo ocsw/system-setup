@@ -50,6 +50,10 @@ git config --global alias.lah '!git help -a | sed -e "1,/^Command aliases\$/d"'
 git config --global alias.in init
 git config --global alias.cl clone
 git config --global alias.rem remote
+# prune obsolete remote tracking branches
+git config --global alias.rempo 'remote prune origin'
+# track default branch on remote
+git config --global alias.remho 'remote set-head origin -a'
 # leaving out fsck and gc (rarely used, to be used carefully, and hard to
 # abbreviate)
 
@@ -69,6 +73,7 @@ git config --global alias.curb 'symbolic-ref --short -q HEAD'
 # 'main or master?' - print the first one that exists in the repo
 git config --global alias.mom '!{ git show-ref --verify "refs/heads/main" 2>/dev/null; git show-ref --verify "refs/heads/master" 2>/dev/null; } | head -1 | sed "s|^.*/||"'
 git config --global alias.br branch
+git config --global alias.bra 'branch -a'
 git config --global alias.brdel 'branch -d'
 git config --global alias.brdelf 'branch -D'
 git config --global alias.co checkout
@@ -132,7 +137,10 @@ git config --global alias.birp 'bisect replay'
 # workstream management (stacks of commits; single commands)
 #
 git config --global alias.ft fetch
+# prune obsolete remote tracking branches
+git config --global alias.ftp 'fetch -p'
 git config --global alias.fta 'fetch --all'
+git config --global alias.ftap 'fetch --all -p'
 git config --global alias.pl pull
 git config --global alias.pla 'pull --all'
 git config --global alias.prb 'pull --rebase'
