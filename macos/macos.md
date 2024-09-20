@@ -1168,10 +1168,6 @@ umask 077
 
 ```shell
 chmod -R go-rwx ~
-chmod -h go-rwx ~/.[a-zA-Z0-9]* ~/.ssh/* ~/.gnupg*/* ~/.m2/* \
-    ~/Library/Application\ Support/Code/User/* \
-    ~/.vim/autoload/pathogen.vim \
-    ~/bin/*
 ```
 
 ## Gaming
