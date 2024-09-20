@@ -52,7 +52,7 @@ umask 022
 mkdir -p /usr/lib/jdk
 tar xzf ~/Downloads/jdk-11.0.1_linux-x64_bin.tar.gz -C /usr/lib/jdk
 export JAVA_HOME=/usr/lib/jdk/jdk-11.0.XXX
-export PATH=$PATH:$JAVA_HOME/bin
+export PATH="${PATH}:${JAVA_HOME}/bin"
 # and add to your dotfiles
 apt-get install libc6-i386
 update-alternatives --install /usr/bin/java java \
