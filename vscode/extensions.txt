@@ -1,4 +1,5 @@
 rogalmic.bash-debug
+kaiwood.center-editor-window
 webfreak.debug
 ms-python.debugpy
 fill-labs.dependi
@@ -26,8 +27,10 @@ ms-python.mypy-type-checker
 esbenp.prettier-vscode
 puppet.puppet-vscode
 ms-python.python
+artdiniz.quitcontrol-vscode
 ms-vscode-remote.remote-containers
 lextudio.restructuredtext
+stkb.rewrap
 rust-lang.rust-analyzer
 timonwong.shellcheck
 trond-snekvik.simple-rst
