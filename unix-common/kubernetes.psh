@@ -32,10 +32,12 @@ brew install kubebuilder
 brew install helm
 brew install helm-docs
 brew install istioctl
+#brew install velero
 umask 077
 # download Velero from:
 # https://github.com/vmware-tanzu/velero/releases/tag/v1.11.1
 # (but update)
+# (or install with brew??)
 # add ~/bin to your default PATH
 ARCH=$(uname -m) && \
     mkdir -p ~/bin && \
