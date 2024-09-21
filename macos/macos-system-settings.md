@@ -149,7 +149,8 @@
     * SoundSource
     * ToothFairy
 * Microphone:
-    * Blue, Franz, Google Chrome, Logitech G HUB, Loom, Skype, Slack, Zoom
+    * Audio Routing Kit (ARK), Blue, Franz, Google Chrome, Logitech G HUB, Loom,
+      Skype, Slack, Zoom
     * (Some might not be in the list until run)
 * Camera:
     * Franz, Google Chrome, Logitech G HUB, Loom, Skype, Slack, Zoom
@@ -185,6 +186,8 @@
 * Screen & System Audio Recording:
     * Allow as necessary, including:
         * Bartender, Franz, Google Chrome, Kap, Loom, Skype, Slack, uBar, Zoom
+    * System Audio Recording Only:
+        * Audio Routing Kit (ARK)
     * (Some might not be in the list until run)
     * Deny Logitech G HUB (?)
 * Automation:

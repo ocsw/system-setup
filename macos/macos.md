@@ -189,6 +189,12 @@ e.g. headphones, controllers
 
 ### [SoundSource][soundsource] ($)
 
+[soundsource]: https://rogueamoeba.com/soundsource/
+
+#### ACE Helper
+
+Note: This is apparently no longer necessary as of version 5.7.0.  ARK is used instead.
+
 The ACE helper requires a reboot to install.  On Apple Silicon, it also requires booting into the Recovery Environment and doing one of the following:
 
 * Setting "Reduced Security" with "Allow user management" in the Startup Security Utility, or
@@ -196,10 +202,19 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 (See: [first method][soundsource-first], [second method][soundsource-second])
 
+[soundsource-first]: https://rogueamoeba.com/support/knowledgebase/?showArticle=ACE-StepByStep&product=SoundSource
+[soundsource-second]: https://rogueamoeba.com/support/knowledgebase/?showArticle=ACE-AlternateInstall&product=SoundSource
+
+#### Settings
+
 * -> System Settings -> Privacy &S:
     * Bluetooth: allow
+    * Microphone: allow Audio Routing Kit (ARK) (if present)
     * Accessibility: allow
         * (after Super Volume Keys)
+    * Screen & System Audio Recording:
+        * System Audio Recording Only:
+            * allow Audio Routing Kit (ARK) (if present)
 * General:
     * Start at login
     * Hotkey (`ctrl-opt-cmd-S`)
@@ -209,10 +224,6 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * Follow Accent Color
     * Show all meters (?)
 * License
-
-[soundsource]: https://rogueamoeba.com/soundsource/
-[soundsource-first]: https://rogueamoeba.com/support/knowledgebase/?showArticle=ACE-StepByStep&product=SoundSource
-[soundsource-second]: https://rogueamoeba.com/support/knowledgebase/?showArticle=ACE-AlternateInstall&product=SoundSource
 
 ### [Balance Lock][balance-lock] (optional App Store)
 
