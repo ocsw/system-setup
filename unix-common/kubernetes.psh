@@ -31,6 +31,7 @@ brew install kubeconform
 brew install kubebuilder
 brew install helm
 brew install helm-docs
+brew install fluxcd/tap/flux
 brew install istioctl
 #brew install velero
 umask 077
