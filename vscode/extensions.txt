@@ -1,15 +1,3 @@
-# to get the list:
-# cat ~/.vscode/extensions/extensions.json | jq -r '.[].identifier.id' | \
-#     sort -t. -k2 -u
-
-# to install:
-# for i in $(grep -v '^#' extensions.txt | grep -v '^$'); do
-#     code --install-extension $i
-# done
-
-# if vscode-bazel complains about buildifier:
-# go install github.com/bazelbuild/buildtools/buildifier@latest
-
 rogalmic.bash-debug
 webfreak.debug
 ms-python.debugpy
