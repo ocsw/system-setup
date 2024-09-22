@@ -197,7 +197,8 @@ Note: This is apparently no longer necessary as of version 5.7.0.  ARK is used i
 
 The ACE helper requires a reboot to install.  On Apple Silicon, it also requires booting into the Recovery Environment and doing one of the following:
 
-* Setting "Reduced Security" with "Allow user management" in the Startup Security Utility, or
+* Setting "Reduced Security" with "Allow user management" in the Startup
+  Security Utility, or
 * Running this command in a Terminal: `spctl kext-consent add 7266XEXAPM`
 
 (See: [first method][soundsource-first], [second method][soundsource-second])
