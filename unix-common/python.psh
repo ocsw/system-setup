@@ -110,4 +110,4 @@ EOF
 # from the root of each repo, where i=repo_name:
 pyvenv "$i" "$py3ver" . && \
 pylocal "${i}-${py3ver}" && \
-pyide_vscode "${i}-${py3ver}"
+pyide_vscode -s "${i}-${py3ver}"
