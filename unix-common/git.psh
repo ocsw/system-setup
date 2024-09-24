@@ -176,23 +176,76 @@ cleanup
 ssh-add
 
 
-# http for write?
-
 # Ssh finalize
 # Point to add stuff, Mac stuff
 # Prep, point to mac stuff
 # GPG point to mac stuff
 # Final steps
 # Alias/script for instead of in go repos
-# Test instead of on random clone
-# Instead plus if
-# Specific branch for if?
 # */** for ssh?
 # There is a ###circular dependency here, so you probably won't be able to do this yet, but just in case:
 # Otherwise, blah will do it when you get to that
 # how to use
+ocsw to orgs/goprivate?
 
 can't chain insteads
 if remote only works on what's in the file, no instead
 ssh read for any
 if sp branch -> no
+
+
+
+ACCOUNT_ORGS="
+"
+# Handle private repos in Go
+for i in $ACCOUNT_ORGS; do  # no quotes
+    if [[ ! $GOPRIVATE =~ github.com:${i}/\* ]]; then
+        GOPRIVATE+=",github.com:${i}/*"
+    fi
+done
+GOPRIVATE="${GOPRIVATE##,}"
+export GOPRIVATE
+
+
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+touch ~/.ssh/config
+chmod 600 ~/.ssh/config
+
+# Note: if you use the new SSH signing method, you will need to re-add the
+# signing key to the ssh-agent any time you reboot.  To do that, you can run
+# the ssh-add command below, or 'ssh-add --apple-load-keychain' (which will
+# add all SSH keys).
+
+git config --global gpg.format ssh  # if using an SSH key
+git config --global commit.gpgsign true
+git config --global tag.forcesignannotated true
+
+cat >> ~/.ssh/config <<EOF
+Host *
+    AddKeysToAgent yes
+    IdentitiesOnly yes
+    UseKeychain yes
+EOF
+
+# Once your SSH config is set up, the sections should be consolidated and
+# ordered from most to least specific
+
+# For each key, run:
+ssh-add --apple-use-keychain ~/.ssh/KEY_FILE
+
+# These are particularly important for running go get on private repos
+# (See also the Go section, below)
+ACCOUNT_ORGS="
+"
+for i in $ACCOUNT_ORGS; do  # no quotes
+    git config --global \
+        "url.git@github.com:${i}/.insteadOf" \
+        "https://github.com/${i}/"
+done
+
+# Alternatively, you can set a substitution for all of GitHub, but if you have
+# multiple accounts that use different SSH targets, as in
+# https://github.com/ocsw/system-setup/blob/main/unix-common/git.psh, that
+# could break things
+#git config --global url.git@github.com:.insteadOf https://github.com/
