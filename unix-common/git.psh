@@ -16,11 +16,12 @@
 # The directions below set up keys and configs for each of one or more GitHub
 # accounts, then overall defaults.  Technically, it's possible to leave out
 # the defaults, but that requires that every repo to which you need to write or
-# in which you need to sign commits must have the proper config applied in its
-# .ssh/config or via something like an includeIf setting in ~/.gitconfig.  That
-# may be a particular problem with repos that do things like import Python
-# packages via SSH paths.  But in most circumstances there is a clear default
-# account to use, such as a main personal account or a work account.
+# in which you need to sign commits, or which is private, must have the proper
+# config applied.  That may be a particular problem with repos that do things
+# like import private Python packages via SSH paths.  It is possible to arrange
+# such a config fairly easily if all of the relevant repos are in specific
+# GitHub orgs/accounts.  But even so, in most circumstances there is a clear
+# default account to use, such as a main personal account or a work account.
 #
 # Which keys and configs to apply to any given repo (other than the defaults)
 # is set up below to depend on the repo's remote origin URL.  It's also
@@ -108,6 +109,11 @@ EOF
 
 # Run git-config.sh
 
+# These settings are particularly relevant to commit and tag signing:
+git config --global gpg.format ssh  # if using an SSH key
+git config --global commit.gpgsign true
+git config --global tag.forcesignannotated true
+
 DEFAULT_ACCOUNT_NAME=ocsw
 
 # These should match the account
@@ -120,8 +126,6 @@ git config --global user.email danielle.malament@gmail.com
 # SSH signing (new)
 git config --global user.signingkey \
     "${HOME}/.ssh/github_${DEFAULT_ACCOUNT_NAME}_signing_ed25519.pub"
-
-# Optionally, run git-check.sh
 
 
 #####################
@@ -143,57 +147,59 @@ git config -f "${ACCOUNT_CONFIG}" user.email danielle.malament@gmail.com
 git config -f "${ACCOUNT_CONFIG}" user.signingkey \
     "${HOME}/.ssh/github_${ACCOUNT_NAME}_signing_ed25519.pub"
 
-
-
 (
+    # Might have to do this later, after setting up dotfiles
     cd && ln_tbu ".gitconfig_${ACCOUNT_NAME}"
 )
 
+#
+# Use the proper config for repos associated with this account
+#
+# The first insteadOf means you don't have to change URLs to include
+# github-ACCOUNT_NAME when cloning.  This is particularly useful because if you
+# change the URL, programs that look for it will get confused.  For example,
+# VSCode won't be able to do 'Open File on Remote'.
+#
+# The HTTPS insteadOf is particularly important for running go get on private
+# repos; see also go.psh.
+#
+# Add orgs as necessary
+ACCOUNT_ORGS="
+    ${ACCOUNT_NAME}
+"
+for i in $ACCOUNT_ORGS; do  # no quotes
+    git config --global --add \
+        "url.git@github-${ACCOUNT_NAME}:${i}/.insteadOf" \
+        "git@github:${i}/"
+    git config --global --add \
+        "url.git@github-${ACCOUNT_NAME}:${i}/.insteadOf" \
+        "https://github.com/${i}/"
+done
+
+# Note: insteadOf can't be chained; it only applies to what's actually in a
+# repo's .git/config or on the command line.  Likewise,
+# includeIf.hasconfig:remote.*.url won't trigger on the result of an insteadOf,
+# only what's already present.  This also means that 
+no http for cloning
+
 # mostly for Go
-git config --global url.git@ghe.spotify.net:.insteadOf https://ghe.spotify.net/
-git config --global 'includeIf.hasconfig:remote.*.url:https://example.com/**.path' \
-    "${ACCOUNT_CONFIG}"
-# mostly for Go
-git config --global 'includeIf.gitdir:**/ghe.spotify.net/**.path' \
+'includeIf.hasconfig:remote.*.url:https://github.com/**.path' \
     "${ACCOUNT_CONFIG}"
 
-# Assuming all your work repositories are in a single github org like `github.com/WORK_ORG`
-# Conditionally include configs to override settings in those repositories
-[includeIf "hasconfig:remote.*.url:git@github.com:WORK_ORG/**"]
-  path = .gitconfig-work
+git@github.com:WORK_ORG/**
 
-# Rewrite `github.com:WORK_ORG` to `github.com-work:WORK_ORG` to get the right SSH key
 [url "git@github.com-work:WORK_ORG/"]
-	insteadOf = git@github.com:WORK_ORG/
---add
+insteadOf = git@github.com:WORK_ORG/
+
 GOPRIVATE=github.com/org/repo
 GOPRIVATE=github.com/org/*
 
-# Optionally, run git-check.sh
-
-cleanup
-# consolidate and order the config file from most to least specific
-ssh-add
-
-
-# Ssh finalize
-# Point to add stuff, Mac stuff
-# Prep, point to mac stuff
-# GPG point to mac stuff
-# Final steps
-# Alias/script for instead of in go repos
-# */** for ssh?
-# There is a ###circular dependency here, so you probably won't be able to do this yet, but just in case:
+# */** for ssh
 # Otherwise, blah will do it when you get to that
-# how to use
 ocsw to orgs/goprivate?
 
-can't chain insteads
-if remote only works on what's in the file, no instead
 ssh read for any
 if sp branch -> no
-
-
 
 ACCOUNT_ORGS="
 "
@@ -206,46 +212,20 @@ done
 GOPRIVATE="${GOPRIVATE##,}"
 export GOPRIVATE
 
+mac gpg
 
-mkdir -p ~/.ssh
-chmod 700 ~/.ssh
-touch ~/.ssh/config
-chmod 600 ~/.ssh/config
+
+###############
+# final steps #
+###############
+
+# Optionally, run git-check.sh
+
+# Finish the SSH setup as described in account-setup.psh
+
+
 
 # Note: if you use the new SSH signing method, you will need to re-add the
 # signing key to the ssh-agent any time you reboot.  To do that, you can run
 # the ssh-add command below, or 'ssh-add --apple-load-keychain' (which will
 # add all SSH keys).
-
-git config --global gpg.format ssh  # if using an SSH key
-git config --global commit.gpgsign true
-git config --global tag.forcesignannotated true
-
-cat >> ~/.ssh/config <<EOF
-Host *
-    AddKeysToAgent yes
-    IdentitiesOnly yes
-    UseKeychain yes
-EOF
-
-# Once your SSH config is set up, the sections should be consolidated and
-# ordered from most to least specific
-
-# For each key, run:
-ssh-add --apple-use-keychain ~/.ssh/KEY_FILE
-
-# These are particularly important for running go get on private repos
-# (See also the Go section, below)
-ACCOUNT_ORGS="
-"
-for i in $ACCOUNT_ORGS; do  # no quotes
-    git config --global \
-        "url.git@github.com:${i}/.insteadOf" \
-        "https://github.com/${i}/"
-done
-
-# Alternatively, you can set a substitution for all of GitHub, but if you have
-# multiple accounts that use different SSH targets, as in
-# https://github.com/ocsw/system-setup/blob/main/unix-common/git.psh, that
-# could break things
-#git config --global url.git@github.com:.insteadOf https://github.com/

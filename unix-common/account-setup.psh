@@ -1,4 +1,4 @@
-# shellcheck shell=sh
+# shellcheck shell=bash
 
 #
 # This is a pseudo shell script.
@@ -17,7 +17,11 @@ mkdir -p ~/bin
 # install the packages in packages.txt
 
 # run vim.sh
+
+###
 # copy files in gpg-base to ~/.gnupg
+# mac stuff
+
 
 ###############
 # SSH (start) #
@@ -45,7 +49,21 @@ EOF
 # SSH (finish) #
 ################
 
-# add other keys, config
+# add other keys and config as necessary
+
+# add the keys to the ssh-agent
+#
+# this is partly OS specific, but on macOS:
+#
+cat >> ~/.ssh/config <<EOF
+Host *
+    UseKeychain yes
+EOF
+#
+for i in ~/.ssh/*_{dsa,ecdsa,ecdsa_sk,ed25519,ed25519_sk,rsa}; do
+    ssh-add --apple-use-keychain "$i"  # absolute path
+done
+
 # consolidate and order the config file from most to least specific
 
 
