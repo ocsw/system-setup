@@ -1129,6 +1129,18 @@ umask 077
     done
     ```
 
+* To automatically add all of your keys to the ssh-agent on login:
+
+    ```shell
+    # from the directory these directions are in
+    cp ssh-add-all.plist ~/Library/LaunchAgents/
+    ```
+
+    (Explanation: with the `AddKeysToAgent` setting, as used in
+    [the account-setup directions][account-setup], regular SSH keys will be
+    added when they are used.  This Launch Agent is mainly needed for SSH
+    signing keys for `git`, which are never used in the usual way, so they
+    aren't automatically added regardless of settings.)
 * Add `~/.ssh` to SpiderOak One (depending)
 
 ### GPG

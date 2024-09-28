@@ -223,9 +223,8 @@ mac gpg
 
 # Finish the SSH setup as described in account-setup.psh
 
-
-
 # Note: if you use the new SSH signing method, you will need to re-add the
-# signing key to the ssh-agent any time you reboot.  To do that, you can run
-# the ssh-add command below, or 'ssh-add --apple-load-keychain' (which will
-# add all SSH keys).
+# signing keys to the ssh-agent any time you reboot.  To do that, you can run
+# 'ssh-add --apple-use-keychain KEY_FILE  # absolute path', or
+# 'ssh-add --apple-load-keychain' (which will add all of your SSH keys), or see
+# account-setup.psh for a more automatic solution.

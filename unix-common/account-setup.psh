@@ -63,6 +63,12 @@ EOF
 for i in ~/.ssh/*_{dsa,ecdsa,ecdsa_sk,ed25519,ed25519_sk,rsa}; do
     ssh-add --apple-use-keychain "$i"  # absolute path
 done
+#
+# add the keys automatically on login; run this from the directory these
+# directions are in
+cp ../macos/ssh-add-all.plist ~/Library/LaunchAgents/
+#
+# see also ../macos/macos.md#ssh
 
 # consolidate and order the config file from most to least specific
 
