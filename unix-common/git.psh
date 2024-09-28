@@ -1,4 +1,4 @@
-# shellcheck shell=sh
+# shellcheck shell=bash
 
 #
 # This is a pseudo shell script.
@@ -163,6 +163,16 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 # The HTTPS insteadOf is particularly important for running go get on private
 # repos; see also go.psh.
 #
+# The includeIf uses the proper git config, including the signing key.  It
+# applies if any remote for the repo includes the specified string; there is
+# currently no way to limit it to a particular remote.
+#
+# For the default account, the first insteadOf and the includeIf can
+# technically be skipped, but it's not a bad idea to include them as a fallback
+# in case you ever change the default.  The second insteadOf is necessary
+# regardless - unless you put a blanket one for all of github.com into your
+# config file.  See below for more information about that option.
+#
 # Add orgs as necessary
 ACCOUNT_ORGS="
     ${ACCOUNT_NAME}
@@ -174,32 +184,25 @@ for i in $ACCOUNT_ORGS; do  # no quotes
     git config --global --add \
         "url.git@github-${ACCOUNT_NAME}:${i}/.insteadOf" \
         "https://github.com/${i}/"
+    git config --global --add \
+        "includeIf.hasconfig:remote.*.url:git@github.com:${i}/**" \
+        "${ACCOUNT_CONFIG}"
 done
 
 # Note: insteadOf can't be chained; it only applies to what's actually in a
 # repo's .git/config or on the command line.  Likewise,
 # includeIf.hasconfig:remote.*.url won't trigger on the result of an insteadOf,
-# only what's already present.  This also means that 
-no http for cloning
+# only what's already present.
 
-# mostly for Go
-'includeIf.hasconfig:remote.*.url:https://github.com/**.path' \
-    "${ACCOUNT_CONFIG}"
-
-git@github.com:WORK_ORG/**
-
-[url "git@github.com-work:WORK_ORG/"]
-insteadOf = git@github.com:WORK_ORG/
 
 GOPRIVATE=github.com/org/repo
-GOPRIVATE=github.com/org/*
+/ in GOPRIVATE
 
-# */** for ssh
 # Otherwise, blah will do it when you get to that
-ocsw to orgs/goprivate?
 
 ssh read for any
-if sp branch -> no
+
+per repo
 
 ACCOUNT_ORGS="
 "
@@ -213,6 +216,8 @@ GOPRIVATE="${GOPRIVATE##,}"
 export GOPRIVATE
 
 mac gpg
+
+test plist
 
 
 ###############
