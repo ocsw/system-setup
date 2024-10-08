@@ -51,7 +51,8 @@ EOF
 
 # add other keys and config as necessary
 
-# add the keys to the ssh-agent
+#
+# add the keys to the ssh-agent and store the passphrases
 #
 # this is partly OS specific, but on macOS:
 #
@@ -73,19 +74,15 @@ cp ../macos/ssh-add-all.plist ~/Library/LaunchAgents/
 # consolidate and order the config file from most to least specific
 
 
-#############
-# Git repos #
-#############
+##########################
+# Git repos and dotfiles #
+##########################
 
-mkdir -p ~/repos
-(
-    cd ~/repos || return 1
-    git clone git@github.com:ocsw/system-setup.git  # this repo
-    git clone git@github.com:ocsw/dotfiles.git
-)
-# see also python.psh
+###
+# run (or follow) ~/repos/dotfiles/INSTALL.sh
 
-# follow ~/repos/dotfiles/INSTALL.sh
+# (in particular, this script clones some repos, including this one, sets up
+# dotfiles, and consolidates various config files for backups)
 
 
 ##########

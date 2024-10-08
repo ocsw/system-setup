@@ -14,25 +14,15 @@
 # preliminary steps that are in account-setup.psh.
 #
 # The directions below set up keys and configs for each of one or more GitHub
-# accounts, then overall defaults.  Technically, it's possible to leave out
-# the defaults, but that requires that every repo to which you need to write or
-# in which you need to sign commits, or which is private, must have the proper
-# config applied.  That may be a particular problem with repos that do things
-# like import private Python packages via SSH paths.  It is possible to arrange
-# such a config fairly easily if all of the relevant repos are in specific
-# GitHub orgs/accounts.  But even so, in most circumstances there is a clear
-# default account to use, such as a main personal account or a work account.
-#
-# Which keys and configs to apply to any given repo (other than the defaults)
-# is set up below to depend on the repo's remote origin URL.  It's also
-# possible to have it depend on the repo's filesystem path, so that you can
-# e.g. make a directory under which you put all of the repos for a particular
-# account.  But if you do that, you run the risk of accidentally putting a repo
-# in the directory which doesn't go with the selected account, and using the
-# account's signing key and config, but the default access key.  Basing the
-# config on the repos' URLs means that the account's signing key and config
-# will be used if and only if the account's access key is also used (although
-# you can still manually change that in a repo's .git/config if necessary).
+# accounts, then overall defaults.  Technically, it's possible to leave out the
+# defaults, but that requires that every repo to which you need to write, in
+# which you need to sign commits, or which is private, must have the proper
+# config applied.  (Note that that includes things like importing private
+# Python or Go packages, not just explicit git commands.)  It is possible to
+# arrange such a config fairly easily if all of the relevant repos are in
+# specific GitHub orgs/accounts.  But even so, in most circumstances there is a
+# clear default account to use, such as a main personal account or a work
+# account.
 #
 
 
@@ -149,11 +139,13 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 
 (
     # Might have to do this later, after setting up dotfiles
+    # (Alternatively, the dotfiles repo's INSTALL.sh will do this for all
+    # files in $HOME matching '.gitconfig_*')
     cd && ln_tbu ".gitconfig_${ACCOUNT_NAME}"
 )
 
 #
-# Use the proper config for repos associated with this account
+# Use the proper keys and config for repos associated with this account, by org
 #
 # The first insteadOf means you don't have to change URLs to include
 # github-ACCOUNT_NAME when cloning.  This is particularly useful because if you
@@ -161,11 +153,30 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 # VSCode won't be able to do 'Open File on Remote'.
 #
 # The HTTPS insteadOf is particularly important for running go get on private
-# repos; see also go.psh.
+# repos; see also go.psh.  That use case is also one reason why this insteadOf
+# must be in the global config; 'go get' seems to change directories, or do
+# something else that makes it not see a repo's .git/config when getting
+# modules via git.  Curiously enough, 'go mod download' doesn't have the same
+# problem.
 #
-# The includeIf uses the proper git config, including the signing key.  It
-# applies if any remote for the repo includes the specified string; there is
-# currently no way to limit it to a particular remote.
+# The insteadOfs make git use SSH with the correct access key.  Putting them in
+# the global config allows them to apply not only when cloning the repos and
+# when performing operations on those clones, but also when doing things like
+# including private Python or Go modules from anywhere else.
+#
+# The includeIf makes git use the proper config, including the signing key.  It
+# applies if any remote for a repo includes the specified string; there is
+# currently no way to limit it to a particular remote name.
+#
+# (It's possible to have the config depend on the repo's filesystem path
+# instead, so that you can e.g. make a directory under which you put all of the
+# repos for a particular account.  But if you do that, you run the risk of
+# accidentally putting a repo in the directory which doesn't go with the
+# selected account, and using the account's signing key and config, but the
+# default access key.  Basing the config on the repos' URLs means that the
+# account's signing key and config will be used if and only if the account's
+# access key is also used (although you can still manually change that in a
+# repo's .git/config if necessary).)
 #
 # For the default account, the first insteadOf and the includeIf can
 # technically be skipped, but it's not a bad idea to include them as a fallback
@@ -180,7 +191,7 @@ ACCOUNT_ORGS="
 for i in $ACCOUNT_ORGS; do  # no quotes
     git config --global --add \
         "url.git@github-${ACCOUNT_NAME}:${i}/.insteadOf" \
-        "git@github:${i}/"
+        "git@github.com:${i}/"
     git config --global --add \
         "url.git@github-${ACCOUNT_NAME}:${i}/.insteadOf" \
         "https://github.com/${i}/"
@@ -188,36 +199,88 @@ for i in $ACCOUNT_ORGS; do  # no quotes
         "includeIf.hasconfig:remote.*.url:git@github.com:${i}/**" \
         "${ACCOUNT_CONFIG}"
 done
-
+#
 # Note: insteadOf can't be chained; it only applies to what's actually in a
 # repo's .git/config or on the command line.  Likewise,
 # includeIf.hasconfig:remote.*.url won't trigger on the result of an insteadOf,
 # only what's already present.
 
+#
+# Use the proper keys and config for individual repos associated with this
+# account
+#
+# There are two ways to handle one-off repos that don't lend themselves to
+# org-level configuration.  One is to do the same global config as for orgs,
+# but with the full repo path.  That may be necessary for private Python or Go
+# modules, for example.  To illustrate:
+#
+# Add repos as necessary
+ACCOUNT_REPOS="
+    ORG_NAME/REPO_NAME
+"
+for i in $ACCOUNT_REPOS; do  # no quotes
+    git config --global --add \
+        "url.git@github-${ACCOUNT_NAME}:${i}.git.insteadOf" \
+        "git@github.com:${i}.git"
+    git config --global --add \
+        "url.git@github-${ACCOUNT_NAME}:${i}.git.insteadOf" \
+        "https://github.com/${i}.git"
+    git config --global --add \
+        "includeIf.hasconfig:remote.*.url:git@github.com:${i}.git" \
+        "${ACCOUNT_CONFIG}"
+done
+#
+# The other option applies mainly to working with local copies of repos that
+# need specific keys and config.  Some of the above settings can be added in
+# the repo's .git/config file, instead of globally.  The catch is that (as
+# mentioned above) it seems that 'go get' won't pick up this config, so there
+# may be no way around adding the HTTPS insteadOf, if using Go.  In any case,
+# to add the settings locally, change to the root directory of the repo, and
+# run:
+#
+git config --add \
+    "url.git@github-${ACCOUNT_NAME}:ORG_NAME/REPO_NAME.git.insteadOf" \
+    "git@github.com:ORG_NAME/REPO_NAME.git"
+git config --add \
+    "url.git@github-${ACCOUNT_NAME}:ORG_NAME/REPO_NAME.insteadOf" \
+    "https://github.com/ORG_NAME/REPO_NAME"
+git config --add \
+    include.path \
+    "${ACCOUNT_CONFIG}"
 
-GOPRIVATE=github.com/org/repo
-/ in GOPRIVATE
 
-# Otherwise, blah will do it when you get to that
+
 
 ssh read for any
 
-per repo
+test go get
+.git in single https?
+
+GOPRIVATE - indiv, /
 
 ACCOUNT_ORGS="
 "
 # Handle private repos in Go
+# Note: the paths use path.Match syntax, and are prefixes.  The examples all
+# seem to just end with '/org', but that seems like it also includes
+# /organization?
 for i in $ACCOUNT_ORGS; do  # no quotes
-    if [[ ! $GOPRIVATE =~ github.com:${i}/\* ]]; then
-        GOPRIVATE+=",github.com:${i}/*"
+    if [[ ! $GOPRIVATE =~ github.com/${i}/ ]]; then
+        GOPRIVATE+=",github.com/${i}/"
     fi
 done
 GOPRIVATE="${GOPRIVATE##,}"
 export GOPRIVATE
 
-mac gpg
+test ssh speed
 
-test plist
+# It's probably safe to do this; anything more specific will be longer, and git
+# goes with the longest match.  I do wonder if SSH is slower than HTTPS, but I
+# haven't tested it.  With this setting, it's not necessary to have insteadOf
+# settings for HTTPS for the default account's orgs.
+git config --global --add \
+    "url.git@github.com:.insteadOf" \
+    "https://github.com/"
 
 
 ###############
