@@ -176,7 +176,7 @@
         * AppCleaner?
 * Accessibility:
     * Allow as necessary, including:
-        * Bartender, BetterTouchTool, Dropbox, Google Chrome, iTerm, Kindle,
+        * Bartender, BetterTouchTool, Dropbox, Google Chrome, iTerm,
           Logitech G HUB Agent, Loom, Moom, Muzzle, Rectangle, Slack,
           SoundSource, Steam, uBar, Witch, Xcode Helper, Yubiswitch
     * But probably deny Zoom (& not sure about Google Drive)

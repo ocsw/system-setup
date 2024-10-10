@@ -821,18 +821,13 @@ See [Slack Setup][slack-setup]
 
 [apple-music]: https://www.apple.com/apple-music/
 
-### [Kindle][kindle]
+### [Kindle][kindle] (App Store)
 
-(Apparently now only on the App Store, in a less-featured version???)
-
-* -> System Settings -> Privacy &S -> Accessibility: allow (if there)
-* No dictionary
-* No crash reports (?)
-* No auto updates?
-* (rename and add shared libraries)
+* Log in
+* Don't group series (?)
 * (download books)
 
-[kindle]: https://www.amazon.com/kindle-dbs/fd/kcp
+[kindle]: https://apps.apple.com/us/app/amazon-kindle/id302584613
 
 ### [Kobo][kobo]
 
