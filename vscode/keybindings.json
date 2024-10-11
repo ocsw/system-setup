@@ -20,6 +20,16 @@
         "command": "gitlens.openFileOnRemote"
     },
 
+    // Make ctrl-tab / shift-ctrl-tab work like with most programs
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+
     // Remove default indentation-level-movement bindings
     {
         "key": "alt+right",
