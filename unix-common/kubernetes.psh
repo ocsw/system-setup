@@ -33,6 +33,8 @@ brew install helm
 brew install helm-docs
 brew install fluxcd/tap/flux
 brew install istioctl
+brew install opa
+brew install styrainc/packages/regal
 #brew install velero
 umask 077
 # download Velero from:
@@ -50,6 +52,7 @@ ARCH=$(uname -m) && \
 unset ARCH
 # install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
 # install https://github.com/rikatz/kubepug
+go install github.com/plexsystems/konstraint@latest
 
 #
 # GKE-specific setup
