@@ -54,6 +54,9 @@ unset ARCH
 # install https://github.com/rikatz/kubepug
 go install github.com/plexsystems/konstraint@latest
 
+# from the root of each repo containing Rego files (add options as necessary):
+vscode-setting -j "highlight-bad-chars.additionalUnicodeChars" '[""]'
+
 #
 # GKE-specific setup
 #
