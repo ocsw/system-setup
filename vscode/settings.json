@@ -22,7 +22,8 @@
     "gitlens.statusBar.reduceFlicker": true,
     "[go]": {
         "editor.wordWrap": "bounded",
-        "editor.wordWrapColumn": 120
+        "editor.wordWrapColumn": 120,
+        "rewrap.wrappingColumn": 119
     },
     "[go.mod]": {
         "editor.wordWrap": "bounded",
@@ -32,7 +33,8 @@
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit"
-        }
+        },
+        "rewrap.wrappingColumn": 119
     },
     "go.formatTool": "goimports",
     "go.lintFlags": [
@@ -57,7 +59,8 @@
     ],
     "java.checkstyle.configuration": "/google_checks.xml",
     "[markdown]": {
-        "editor.wordWrap": "wordWrapColumn"
+        "editor.wordWrap": "wordWrapColumn",
+        "rewrap.autoWrap.enabled": false
     },
     "markdown.extension.toc.updateOnSave": false,
     "markdownlint.config": {
@@ -77,6 +80,10 @@
         "editor.tabSize": 2
     },
     "redhat.telemetry.enabled": false,
+    "rewrap.autoWrap.enabled": true,
+    "rewrap.doubleSentenceSpacing": true,
+    "rewrap.wholeComment": false,
+    "rewrap.wrappingColumn": 79,
     "search.collapseResults": "alwaysExpand",
     "shellcheck.run": "onSave",
     "telemetry.telemetryLevel": "off",
