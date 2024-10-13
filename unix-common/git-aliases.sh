@@ -19,7 +19,7 @@
 git config --global alias.faketempalias temp
 sed -e 's/^ *//' -e 's/ *#.*$//' "$0" | grep '^git config --global alias\.' | \
     awk '{print $4}' | grep -v '^alias.faketempalias$' | \
-    while read -r alias; do
+    while IFS= read -r alias; do
         git config --global --unset "$alias"
     done
 
