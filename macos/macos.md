@@ -1115,7 +1115,6 @@ umask 077
     EOF
     ```
 
-* Consolidate and order the config file from most to least specific
 * Add the keys to the agent, and the passphrases to the keychain:
 
     ```shell
@@ -1136,6 +1135,7 @@ umask 077
     added when they are used.  This Launch Agent is mainly needed for SSH
     signing keys for `git`, which are never used in the usual way, so they
     aren't automatically added regardless of settings.)
+* Consolidate and order the config file from most to least specific
 * Add `~/.ssh` to SpiderOak One (depending)
 
 ### GPG

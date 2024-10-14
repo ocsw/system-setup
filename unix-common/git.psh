@@ -178,6 +178,10 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 # access key is also used (although you can still manually change that in a
 # repo's .git/config if necessary).)
 #
+# The includeIf is (probably?) only relevant when working in a local copy of a
+# relevant repo, but having it at the global level means that it doesn't need
+# to be applied to every single such repo individually.
+#
 # For the default account, the first insteadOf and the includeIf can
 # technically be skipped, but it's not a bad idea to include them as a fallback
 # in case you ever change the default.  The second insteadOf is necessary
@@ -237,13 +241,12 @@ done
 # may be no way around adding the HTTPS insteadOf, if using Go.  In any case,
 # to add the settings locally, change to the root directory of the repo, and
 # run:
-#
 git config --add \
     "url.git@github-${ACCOUNT_NAME}:ORG_NAME/REPO_NAME.git.insteadOf" \
     "git@github.com:ORG_NAME/REPO_NAME.git"
 git config --add \
-    "url.git@github-${ACCOUNT_NAME}:ORG_NAME/REPO_NAME.insteadOf" \
-    "https://github.com/ORG_NAME/REPO_NAME"
+    "url.git@github-${ACCOUNT_NAME}:ORG_NAME/REPO_NAME.git.insteadOf" \
+    "https://github.com/ORG_NAME/REPO_NAME.git"
 git config --add \
     include.path \
     "${ACCOUNT_CONFIG}"
@@ -251,10 +254,7 @@ git config --add \
 
 
 
-ssh read for any
-
 test go get
-.git in single https?
 
 GOPRIVATE - indiv, /
 
@@ -265,19 +265,23 @@ ACCOUNT_ORGS="
 # seem to just end with '/org', but that seems like it also includes
 # /organization?
 for i in $ACCOUNT_ORGS; do  # no quotes
-    if [[ ! $GOPRIVATE =~ github.com/${i}/ ]]; then
+    if ! [[ $GOPRIVATE =~ github.com/${i}/ ]]; then
         GOPRIVATE+=",github.com/${i}/"
     fi
 done
-GOPRIVATE="${GOPRIVATE##,}"
+GOPRIVATE="${GOPRIVATE#,}"
 export GOPRIVATE
 
-test ssh speed
 
-# It's probably safe to do this; anything more specific will be longer, and git
-# goes with the longest match.  I do wonder if SSH is slower than HTTPS, but I
-# haven't tested it.  With this setting, it's not necessary to have insteadOf
-# settings for HTTPS for the default account's orgs.
+
+
+
+# With this setting, it's not necessary to have insteadOf settings for HTTPS
+# for the default account's orgs.  It's probably safe to do this; anything more
+# specific will be longer, and git goes with the longest match.  (And anything
+# that can be read with HTTPS can be read using an SSH key.)  However,
+# preliminary testing suggests that SSH is significantly slower than HTTPS, so
+# I wouldn't set this so broadly (and globally) unless there was a good reason.
 git config --global --add \
     "url.git@github.com:.insteadOf" \
     "https://github.com/"
@@ -292,7 +296,13 @@ git config --global --add \
 # Finish the SSH setup as described in account-setup.psh
 
 # Note: if you use the new SSH signing method, you will need to re-add the
-# signing keys to the ssh-agent any time you reboot.  To do that, you can run
-# 'ssh-add --apple-use-keychain KEY_FILE  # absolute path', or
-# 'ssh-add --apple-load-keychain' (which will add all of your SSH keys), or see
-# account-setup.psh for a more automatic solution.
+# signing keys to the ssh-agent any time you reboot.  To do that on macOS, you
+# can run 'ssh-add --apple-use-keychain ~/.ssh/KEY_FILE  # absolute path', or
+# 'ssh-add --apple-load-keychain' (which will add all of your SSH keys).
+# Alternatively, to automatically load all of your keys on login, run this from
+# the directory these directions are in:
+cp ../macos/ssh-add-all.plist ~/Library/LaunchAgents/
+
+# (Explanation: with the AddKeysToAgent setting on, regular SSH keys will be
+# added when they are used.  SSH signing keys are never used in the usual way
+# however, so they aren't automatically added regardless of settings.)
