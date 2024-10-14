@@ -1,7 +1,5 @@
 {
-    "highlight-bad-chars.additionalUnicodeChars": [
-        ""
-    ],
+    "highlight-bad-chars.additionalUnicodeChars": [],
 
     // These two are mutually exclusive; I'm not sure it matters which you use
     // in practice
