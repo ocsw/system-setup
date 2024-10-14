@@ -58,6 +58,7 @@
         "\u0009"  // tab
     ],
     "java.checkstyle.configuration": "/google_checks.xml",
+    "makefile.configureOnOpen": false,
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
         "rewrap.autoWrap.enabled": false
