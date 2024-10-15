@@ -5,7 +5,6 @@ ms-python.debugpy
 fill-labs.dependi
 editorconfig.editorconfig
 tamasfe.even-better-toml
-redhat.fabric8-analytics
 ms-python.flake8
 codezombiech.gitignore
 eamodio.gitlens
@@ -39,7 +38,6 @@ be5invis.toml
 dunstontc.viml
 bazelbuild.vscode-bazel
 shengchen.vscode-checkstyle
-redhat.vscode-commons
 ms-azuretools.vscode-docker
 vscjava.vscode-gradle
 vscjava.vscode-java-debug
