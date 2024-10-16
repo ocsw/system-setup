@@ -74,8 +74,7 @@ done
 # Git Repos and Dotfiles #
 ##########################
 
-###
-# Run (or follow) ~/repos/dotfiles/INSTALL.sh
+# Run (or follow) https://github.com/ocsw/dotfiles/blob/main/INSTALL.sh
 
 # (In particular, this script clones some repos, including this one, sets up
 # dotfiles, and consolidates various config files for backups)
