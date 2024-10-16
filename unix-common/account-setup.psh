@@ -18,9 +18,17 @@ mkdir -p ~/bin
 
 # Run vim.sh
 
-###
-# Copy files in gpg-base to ~/.gnupg
-# Mac stuff
+# From this directory
+(
+    set -e
+    cd gpg-base
+    mkdir -p ~/.gnupg
+    for i in *.conf; do
+        cat "$i" >> "${HOME}/.gnupg/${i}"
+    done
+)
+#
+# Some GPG setup is OS-specific; for macOS see ../macos/macos.md#gpg
 
 
 ###############
