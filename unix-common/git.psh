@@ -93,6 +93,25 @@ Host github.com
 EOF
 
 
+###################
+# Final SSH Steps #
+###################
+
+# Finish the SSH setup as described in account-setup.psh
+
+# Note: If you use the new SSH signing method, you will need to re-add the
+# signing keys to the ssh-agent any time you reboot.  To do that on macOS, you
+# can run 'ssh-add --apple-use-keychain ~/.ssh/KEY_FILE  # absolute path', or
+# 'ssh-add --apple-load-keychain' (which will add all of your SSH keys).
+# Alternatively, to automatically load all of your keys on login, run this from
+# the directory these directions are in:
+cp ../macos/ssh-add-all.plist ~/Library/LaunchAgents/
+
+# (Explanation: With the AddKeysToAgent setting on, regular SSH keys will be
+# added when they are used.  SSH signing keys are never used in the usual way
+# however, so they aren't automatically added regardless of settings.)
+
+
 ##############################
 # Git - General and Defaults #
 ##############################
@@ -285,22 +304,8 @@ git config --add \
 ###    "https://github.com/"
 
 
-###############
-# Final Steps #
-###############
+###################
+# Final Git Steps #
+###################
 
 # Optionally, run git-check.sh
-
-# Finish the SSH setup as described in account-setup.psh
-
-# Note: If you use the new SSH signing method, you will need to re-add the
-# signing keys to the ssh-agent any time you reboot.  To do that on macOS, you
-# can run 'ssh-add --apple-use-keychain ~/.ssh/KEY_FILE  # absolute path', or
-# 'ssh-add --apple-load-keychain' (which will add all of your SSH keys).
-# Alternatively, to automatically load all of your keys on login, run this from
-# the directory these directions are in:
-cp ../macos/ssh-add-all.plist ~/Library/LaunchAgents/
-
-# (Explanation: With the AddKeysToAgent setting on, regular SSH keys will be
-# added when they are used.  SSH signing keys are never used in the usual way
-# however, so they aren't automatically added regardless of settings.)
