@@ -9,22 +9,22 @@
 
 
 ########
-# prep #
+# Prep #
 ########
 
 mkdir -p ~/bin
 
-# install the packages in packages.txt
+# Install the packages in packages.txt
 
-# run vim.sh
+# Run vim.sh
 
 ###
-# copy files in gpg-base to ~/.gnupg
-# mac stuff
+# Copy files in gpg-base to ~/.gnupg
+# Mac stuff
 
 
 ###############
-# SSH (start) #
+# SSH (Start) #
 ###############
 
 mkdir -p ~/.ssh
@@ -42,19 +42,19 @@ EOF
 # GitHub and Git #
 ##################
 
-# see git.psh
+# See git.psh
 
 
 ################
-# SSH (finish) #
+# SSH (Finish) #
 ################
 
-# add other keys and config as necessary
+# Add other keys and config as necessary
 
 #
-# add the keys to the ssh-agent and store the passphrases
+# Add the keys to the ssh-agent and store the passphrases
 #
-# this is partly OS specific, but on macOS:
+# This is partly OS specific, but on macOS:
 #
 cat >> ~/.ssh/config <<EOF
 Host *
@@ -65,19 +65,19 @@ for i in ~/.ssh/*_{dsa,ecdsa,ecdsa_sk,ed25519,ed25519_sk,rsa}; do
     ssh-add --apple-use-keychain "$i"  # absolute path
 done
 #
-# see also ../macos/macos.md#ssh
+# See also ../macos/macos.md#ssh
 
-# consolidate and order the config file from most to least specific
+# Consolidate and order the config file from most to least specific
 
 
 ##########################
-# Git repos and dotfiles #
+# Git Repos and Dotfiles #
 ##########################
 
 ###
-# run (or follow) ~/repos/dotfiles/INSTALL.sh
+# Run (or follow) ~/repos/dotfiles/INSTALL.sh
 
-# (in particular, this script clones some repos, including this one, sets up
+# (In particular, this script clones some repos, including this one, sets up
 # dotfiles, and consolidates various config files for backups)
 
 
@@ -85,26 +85,26 @@ done
 # Python #
 ##########
 
-# see python.psh
+# See python.psh
 
 
 ######
 # Go #
 ######
 
-# see go.psh
+# See go.psh
 
 
 #########
-# other #
+# Other #
 #########
 
-# follow the other relevant files in this directory
+# Follow the other relevant files in this directory
 
 
 #########
-# perms #
+# Perms #
 #########
 
-# in most cases:
+# In most cases:
 chmod -R go-rwx ~
