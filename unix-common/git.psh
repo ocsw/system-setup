@@ -27,7 +27,7 @@
 
 
 ########
-# prep #
+# Prep #
 ########
 
 # Install git and diff-so-fancy
@@ -41,7 +41,7 @@
 
 
 ########################
-# GitHub - per account #
+# GitHub - Per Account #
 ########################
 
 ACCOUNT_NAME=ocsw
@@ -82,7 +82,7 @@ cat "${HOME}/.ssh/github_${ACCOUNT_NAME}_signing_ed25519.pub"
 
 
 ####################
-# GitHub - default #
+# GitHub - Default #
 ####################
 
 DEFAULT_ACCOUNT_NAME=ocsw
@@ -94,7 +94,7 @@ EOF
 
 
 ##############################
-# Git - general and defaults #
+# Git - General and Defaults #
 ##############################
 
 # Run git-config.sh
@@ -119,7 +119,7 @@ git config --global user.signingkey \
 
 
 #####################
-# Git - per account #
+# Git - Per Account #
 #####################
 
 ACCOUNT_NAME=ocsw
@@ -144,6 +144,7 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
     cd && ln_tbu ".gitconfig_${ACCOUNT_NAME}"
 )
 
+
 #
 # Use the proper keys and config for repos associated with this account, by org
 #
@@ -152,12 +153,11 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 # change the URL, programs that look for it will get confused.  For example,
 # VSCode won't be able to do 'Open File on Remote'.
 #
-# The HTTPS insteadOf is particularly important for running go get on private
-# repos; see also go.psh.  That use case is also one reason why this insteadOf
-# must be in the global config; 'go get' seems to change directories, or do
-# something else that makes it not see a repo's .git/config when getting
-# modules via git.  Curiously enough, 'go mod download' doesn't have the same
-# problem.
+# The HTTPS insteadOf is particularly important for running 'go get' on private
+# repos, since Go defaults to using HTTPS.  That use case is also one reason
+# why this insteadOf must be in the global config; 'go get' runs its git
+# commands from a directory in $GOROOT, so it doesn't see a repo's local
+# .git/config when run from within it.  (See also go.psh.)
 #
 # The insteadOfs make git use SSH with the correct access key.  Putting them in
 # the global config allows them to apply not only when cloning the repos and
@@ -208,6 +208,11 @@ done
 # repo's .git/config or on the command line.  Likewise,
 # includeIf.hasconfig:remote.*.url won't trigger on the result of an insteadOf,
 # only what's already present.
+#
+# The trailing slashes (/) in the insteadOfs ensure that they don't apply to a
+# different org with a longer name (e.g. /organization for /org).  These
+# matches are straightforward literal prefixes.
+
 
 #
 # Use the proper keys and config for individual repos associated with this
@@ -224,56 +229,49 @@ ACCOUNT_REPOS="
 "
 for i in $ACCOUNT_REPOS; do  # no quotes
     git config --global --add \
-        "url.git@github-${ACCOUNT_NAME}:${i}.git.insteadOf" \
-        "git@github.com:${i}.git"
+        "url.git@github-${ACCOUNT_NAME}:${i}.insteadOf" \
+        "git@github.com:${i}"
     git config --global --add \
-        "url.git@github-${ACCOUNT_NAME}:${i}.git.insteadOf" \
-        "https://github.com/${i}.git"
+        "url.git@github-${ACCOUNT_NAME}:${i}.insteadOf" \
+        "https://github.com/${i}"
     git config --global --add \
         "includeIf.hasconfig:remote.*.url:git@github.com:${i}.git" \
         "${ACCOUNT_CONFIG}"
 done
 #
+# Note: In different circumstances, repo names may or may not have .git
+# appended to them.  By leaving off .git in the insteadOfs, we cover those
+# cases at the cost of potentially matching longer names (e.g. /repository for
+# /repo).
+#
+# (Explanation: Go uses a direct URL for github.com, as hardcoded in vcsPaths
+# in https://github.com/golang/go/blob/master/src/cmd/go/internal/vcs/vcs.go.
+# This does not include the .git suffix.  However, for other sites, it makes a
+# request ending in ?go-get=1 to find out where to clone from and how, and the
+# server may return a URL including the .git.  (See
+# https://go.dev/ref/mod#vcs-find for more information.)  This applies, for
+# instance, to GitHub Enterprise installations.  In those cases, it's not a bad
+# idea to include the .git suffix in all of the URLs in the repo-specific
+# insteadOfs.)
+#
+#
 # The other option applies mainly to working with local copies of repos that
 # need specific keys and config.  Some of the above settings can be added in
 # the repo's .git/config file, instead of globally.  The catch is that (as
-# mentioned above) it seems that 'go get' won't pick up this config, so there
-# may be no way around adding the HTTPS insteadOf, if using Go.  In any case,
-# to add the settings locally, change to the root directory of the repo, and
-# run:
+# mentioned above) 'go get' won't pick up this config, so there may be no way
+# around adding a global HTTPS insteadOf, if using Go.  In any case, to add the
+# settings locally, change to the root directory of the repo, and run:
 git config --add \
-    "url.git@github-${ACCOUNT_NAME}:ORG_NAME/REPO_NAME.git.insteadOf" \
-    "git@github.com:ORG_NAME/REPO_NAME.git"
+    "url.git@github-${ACCOUNT_NAME}:ORG_NAME/REPO_NAME.insteadOf" \
+    "git@github.com:ORG_NAME/REPO_NAME"
 git config --add \
-    "url.git@github-${ACCOUNT_NAME}:ORG_NAME/REPO_NAME.git.insteadOf" \
-    "https://github.com/ORG_NAME/REPO_NAME.git"
+    "url.git@github-${ACCOUNT_NAME}:ORG_NAME/REPO_NAME.insteadOf" \
+    "https://github.com/ORG_NAME/REPO_NAME"
 git config --add \
     include.path \
     "${ACCOUNT_CONFIG}"
-
-
-
-
-test go get
-
-GOPRIVATE - indiv, /
-
-ACCOUNT_ORGS="
-"
-# Handle private repos in Go
-# Note: the paths use path.Match syntax, and are prefixes.  The examples all
-# seem to just end with '/org', but that seems like it also includes
-# /organization?
-for i in $ACCOUNT_ORGS; do  # no quotes
-    if ! [[ $GOPRIVATE =~ github.com/${i}/ ]]; then
-        GOPRIVATE+=",github.com/${i}/"
-    fi
-done
-GOPRIVATE="${GOPRIVATE#,}"
-export GOPRIVATE
-
-
-
+#
+# (The same notes about .git suffixes apply as above.)
 
 
 # With this setting, it's not necessary to have insteadOf settings for HTTPS
@@ -282,20 +280,20 @@ export GOPRIVATE
 # that can be read with HTTPS can be read using an SSH key.)  However,
 # preliminary testing suggests that SSH is significantly slower than HTTPS, so
 # I wouldn't set this so broadly (and globally) unless there was a good reason.
-git config --global --add \
-    "url.git@github.com:.insteadOf" \
-    "https://github.com/"
+###git config --global --add \
+###    "url.git@github.com:.insteadOf" \
+###    "https://github.com/"
 
 
 ###############
-# final steps #
+# Final Steps #
 ###############
 
 # Optionally, run git-check.sh
 
 # Finish the SSH setup as described in account-setup.psh
 
-# Note: if you use the new SSH signing method, you will need to re-add the
+# Note: If you use the new SSH signing method, you will need to re-add the
 # signing keys to the ssh-agent any time you reboot.  To do that on macOS, you
 # can run 'ssh-add --apple-use-keychain ~/.ssh/KEY_FILE  # absolute path', or
 # 'ssh-add --apple-load-keychain' (which will add all of your SSH keys).
@@ -303,6 +301,6 @@ git config --global --add \
 # the directory these directions are in:
 cp ../macos/ssh-add-all.plist ~/Library/LaunchAgents/
 
-# (Explanation: with the AddKeysToAgent setting on, regular SSH keys will be
+# (Explanation: With the AddKeysToAgent setting on, regular SSH keys will be
 # added when they are used.  SSH signing keys are never used in the usual way
 # however, so they aren't automatically added regardless of settings.)
