@@ -1,4 +1,4 @@
-# shellcheck shell=sh
+# shellcheck shell=bash
 
 #
 # This is a pseudo shell script.
@@ -24,6 +24,7 @@ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/insta
 
 # shellcheck disable=SC1090
 . ~/.bash_profile  # see dotfiles repo
+
 
 #
 # run these from a non-Go-repo directory
@@ -62,8 +63,37 @@ go install golang.org/x/vuln/cmd/govulncheck@latest
 # code tools
 go install golang.org/x/tools/cmd/stringer@latest
 
+
 # from the root of each repo:
 # (see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode-go.post.sh)
 vscode-golang-settings
 # (also, can open in VSC to install dependencies)
+
+
+GOPRIVATE - indiv, /
+
+# Includes personal account(s)
+ACCOUNT_ORGS="
+    ${ACCOUNT_NAME}
+"
+ACCOUNT_REPOS="
+    ORG_NAME/REPO_NAME
+"
+# Handle private repos in Go
+# Note: The paths use path.Match glob syntax, and are prefixes.  The examples all
+# seem to just end with '/org', but that seems like it also includes
+# /organization?
+for i in $ACCOUNT_ORGS; do  # no quotes
+    if ! [[ $GOPRIVATE =~ (^|,)github.com/${i}(,|$) ]]; then
+        GOPRIVATE+=",github.com/${i}"
+    fi
+done
+GOPRIVATE="${GOPRIVATE#,}"
+export GOPRIVATE
+
+MatchPrefixPatterns
+spelunking
+https://cs.opensource.google/go/x/mod/+/refs/tags/v0.21.0:module/module.go;l=802
+why x
+https://pkg.go.dev/path#Match
