@@ -33,6 +33,7 @@ done
 jenv global DEFAULT_VERSION
 # restart the shell to get JAVA_HOME
 
+# see git-config.sh
 if ! grep '^\.java-version$' ~/.gitignore_global > /dev/null 2>&1; then
     echo '.java-version' >> ~/.gitignore_global
 fi

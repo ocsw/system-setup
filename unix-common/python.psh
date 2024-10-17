@@ -35,6 +35,7 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
 git clone https://github.com/pyenv/pyenv-virtualenv.git \
     ~/.pyenv/plugins-virtualenv
 
+# see git-config.sh
 if ! grep '^\.python-version$' ~/.gitignore_global > /dev/null 2>&1; then
     echo '.python-version' >> ~/.gitignore_global
 fi
