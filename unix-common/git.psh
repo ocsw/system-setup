@@ -51,6 +51,8 @@ ACCOUNT_NAME=ocsw
 #
 # Remember to set a passphrase and record it securely!
 ssh-keygen -a 100 -t ed25519 -f "${HOME}/.ssh/github_${ACCOUNT_NAME}_ed25519"
+# Can be skipped for the default, but it's not a bad idea, especially in case
+# the default changes
 cat >> ~/.ssh/config <<EOF
 Host github-${ACCOUNT_NAME}
     Hostname github.com
