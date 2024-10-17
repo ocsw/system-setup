@@ -22,8 +22,12 @@ umask 077
 # (leaving off the version tag should install the latest version)
 curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b "$(go env GOPATH)/bin"
 
+# to set up PATH; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/go.post.sh
+# (also to get vscode-golang-settings; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode-go.post.sh)
 # shellcheck disable=SC1090
-. ~/.bash_profile  # see dotfiles repo
+. ~/.bash_profile
 
 
 #

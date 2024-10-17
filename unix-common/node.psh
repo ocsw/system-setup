@@ -7,9 +7,6 @@
 # SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
 #
 
-# see also dot.bashrc.d/node.post.sh in
-# https://github.com/ocsw/dotfiles
-
 #
 # Mac
 #
@@ -19,6 +16,8 @@ brew install yarn
 brew install nvm
 umask 077
 mkdir ~/.nvm
+# to set up nvm; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/node.post.sh
 # shellcheck disable=SC1091
 . "${HOME}/.bashrc"
 nvm install node
