@@ -16,7 +16,7 @@ mkdir -p ~/bin
 
 # Install the packages in packages.txt
 
-# Run vim.sh
+# Run (and see comments in) vim.sh
 
 # From this directory
 (

@@ -52,3 +52,8 @@ sudo systemctl enable docker
 #sudo apt-get purge docker-ce
 #sudo rm -rf /var/lib/docker
 umask 077
+
+#
+# see also
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/docker.post.sh
+#

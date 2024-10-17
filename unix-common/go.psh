@@ -68,9 +68,11 @@ go install golang.org/x/vuln/cmd/govulncheck@latest
 go install golang.org/x/tools/cmd/stringer@latest
 
 
+#
 # from the root of each repo:
 # (see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode-go.post.sh)
+#
 vscode-golang-settings
 # (also, can open in VSC to install dependencies)
 

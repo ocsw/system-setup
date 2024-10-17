@@ -54,8 +54,24 @@ unset ARCH
 # install https://github.com/rikatz/kubepug
 go install github.com/plexsystems/konstraint@latest
 
-# from the root of each repo containing Rego files (add options as necessary):
+
+#
+# back up config; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
+#
+mkdir -p ~/.kube
+touch ~/.kube/config
+chmod 600 ~/.kube/config
+ln_tbu ~/.kube/config
+
+
+#
+# from the root of each repo containing Rego files (add options as necessary;
+# see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode-setting.post.sh):
+#
 vscode-setting -j "highlight-bad-chars.additionalUnicodeChars" '[]'
+
 
 #
 # GKE-specific setup
@@ -71,15 +87,6 @@ gcloud components update
 #    https://cloud.google.com/config-connector/docs/how-to/import-export/overview#installing-config-connector
 umask 077
 gke-up  # see below
-
-#
-# back up config; see
-# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
-#
-mkdir -p ~/.kube
-touch ~/.kube/config
-chmod 600 ~/.kube/config
-ln_tbu ~/.kube/config
 
 #
 # GKE update
@@ -112,3 +119,8 @@ gke_clusters () {  # can use gke-clusters in bash
     gcloud container clusters list --project=PROJECT_NAME \
         --filter="resourceLabels[env]=production" --format="value(name)" | sort
 }
+
+#
+# see also
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/kubernetes.post.sh
+#

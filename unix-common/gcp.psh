@@ -28,3 +28,8 @@ mkdir -p ~/bin  # add ~/bin to your default PATH
 # I don't know why this isn't already symlinked into $(brew --prefix)/bin
 ln -s "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/docker-credential-gcr" ~/bin/
 umask 077
+
+#
+# see also
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/gcloud.post.sh
+#

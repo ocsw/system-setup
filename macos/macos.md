@@ -987,9 +987,14 @@ ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
     ~/bin/
 ```
 
+See also [vscode.post.sh][vscode-post-sh], [vscode-setting.post.sh][vscode-setting-post-sh], and [vscode-go.post.sh][vscode-go-post-sh]
+
 [vscode]: https://code.visualstudio.com/
 [vscode-extensions]: https://marketplace.visualstudio.com/VSCode
 [vscode-setup]: ../vscode/
+[vscode-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode.post.sh
+[vscode-setting-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode-setting.post.sh
+[vscode-go-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode-go.post.sh
 
 ### ([Sublime Text][sublime-text])
 
@@ -1087,10 +1092,14 @@ umask 077
   `chsh -s "$(brew --prefix)/bin/bash"`?
     * on 10.15+ (Catalina), `chsh -s /bin/bash` if not doing the above, and add
       `export BASH_SILENCE_DEPRECATION_WARNING=1` to `~/.bash_profile`
-* Restart shell (fixes problem with `pybase`)
+* Restart the shell or run `. ~/.bash_profile`
+    * (Sets the PATH, etc.; see [brew.pre.sh][brew-pre-sh] and [brew.post.sh][brew-post-sh])
+    * (Shell restart might be necessary to fix a problem with `pybase`?)
 
 [homebrew]: https://brew.sh/
 [unix-setup]: ../unix-common/
+[brew-pre-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/brew.pre.sh
+[brew-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/brew.post.sh
 
 ### General Setup
 

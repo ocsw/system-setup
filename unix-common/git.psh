@@ -158,8 +158,10 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 
 (
     # Might have to do this later, after setting up dotfiles
-    # (Alternatively, the dotfiles repo's INSTALL.sh will do this for all
-    # files in $HOME matching '.gitconfig_*')
+    # (Alternatively, the dotfiles repo's INSTALL.sh will do this for all files
+    # in $HOME matching '.gitconfig_*'; see
+    # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
+    # and https://github.com/ocsw/dotfiles/blob/main/INSTALL.sh)
     cd && ln_tbu ".gitconfig_${ACCOUNT_NAME}"
 )
 
@@ -309,3 +311,5 @@ git config --add \
 ###################
 
 # Optionally, run git-check.sh
+
+# See also https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/git.post.sh
