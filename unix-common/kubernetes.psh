@@ -64,6 +64,11 @@ touch ~/.kube/config
 chmod 600 ~/.kube/config
 ln_tbu ~/.kube/config
 
+#
+# see also
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/updates.post.sh
+#
+
 
 #
 # from the root of each repo containing Rego files (add options as necessary;
