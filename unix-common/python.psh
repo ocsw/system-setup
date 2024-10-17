@@ -35,22 +35,12 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
 git clone https://github.com/pyenv/pyenv-virtualenv.git \
     ~/.pyenv/plugins-virtualenv
 
-# see git-config.sh
-if ! grep '^\.python-version$' ~/.gitignore_global > /dev/null 2>&1; then
-    echo '.python-version' >> ~/.gitignore_global
-fi
-
-# shellcheck disable=SC1090
-. ~/.bash_profile  # see dotfiles repo
-
 # for Mojave
 umask 022
 sudo installer -pkg \
     /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg \
     -target /
 umask 077
-
-pybase 3
 
 # not sure if this is enough, you might need to log out and back in for pip to
 # not try to put things in /usr/local/bin...
@@ -60,10 +50,17 @@ pybase 3
 # shellcheck disable=SC1090
 . ~/.bash_profile
 
+# see git-config.sh
+if ! grep '^\.python-version$' ~/.gitignore_global > /dev/null 2>&1; then
+    echo '.python-version' >> ~/.gitignore_global
+fi
+
 # this doesn't work properly on Mac; use venvs and manual symlinks instead
 #pyact
 #pip install virtualenv
 #curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
+
+pybase 3
 
 py3ver=$(pylatest_local 3)
 #
