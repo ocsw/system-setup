@@ -54,6 +54,9 @@ pybase 3
 
 # not sure if this is enough, you might need to log out and back in for pip to
 # not try to put things in /usr/local/bin...
+# (but anyway this sets up pyenv stuff and pypvutil; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/python.pre.sh
+# and https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/python.post.sh)
 # shellcheck disable=SC1090
 . ~/.bash_profile
 
