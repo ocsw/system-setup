@@ -18,6 +18,14 @@ diff \
             grep -v ' --unset ' |
             sed -e 's/^git config --global //' -e 's/ /=/' |
             tr -d "'" |
-            grep -v '^alias.faketempalias='
+            grep -v '^alias.faketempalias=' |
+            sed -e '/^user\.name=/ s/=.*$/=/' \
+                -e '/^user\.email=/ s/=.*$/=/' \
+                -e '/^user\.signingkey=/ s/=.*$/=/'
     ) \
-    <(git config --global --list)
+    <(
+        git config --global --list |
+            sed -e '/^user\.name=/ s/=.*$/=/' \
+                -e '/^user\.email=/ s/=.*$/=/' \
+                -e '/^user\.signingkey=/ s/=.*$/=/'
+    )
