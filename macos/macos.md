@@ -979,19 +979,28 @@ Or, if not available:
 
 See the [VSCode Setup][vscode-setup] directory
 
-* Create symlink:
+* Create a symlink:
 
-```shell
-mkdir -p ~/bin
-ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
-    ~/bin/
-```
+    ```shell
+    mkdir -p ~/bin
+    ln -s '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \
+        ~/bin/
+    ```
+
+* Add to `.gitignore_global` (see [the git-config script][git-config-sh]):
+
+    ```shell
+    if ! grep '^\.vscode$' ~/.gitignore_global > /dev/null 2>&1; then
+        echo '.vscode' >> ~/.gitignore_global
+    fi
+    ```
 
 See also [vscode.post.sh][vscode-post-sh], [vscode-setting.post.sh][vscode-setting-post-sh], and [vscode-go.post.sh][vscode-go-post-sh]
 
 [vscode]: https://code.visualstudio.com/
 [vscode-extensions]: https://marketplace.visualstudio.com/VSCode
 [vscode-setup]: ../vscode/
+[git-config-sh]: ../unix-common/git-config.sh
 [vscode-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode.post.sh
 [vscode-setting-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode-setting.post.sh
 [vscode-go-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode-go.post.sh
