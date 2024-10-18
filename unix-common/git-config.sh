@@ -35,10 +35,6 @@ fi
 # core
 #
 git config --global core.excludesfile ~/.gitignore_global
-# for GUI systems
-if ! grep '^\.vscode$' ~/.gitignore_global > /dev/null 2>&1; then
-    echo '.vscode' >> ~/.gitignore_global
-fi
 
 #
 # pager, diff, colors
