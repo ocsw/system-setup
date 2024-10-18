@@ -223,7 +223,7 @@ for i in $ACCOUNT_ORGS; do  # no quotes
         "url.git@github-${ACCOUNT_NAME}:${i}/.insteadOf" \
         "https://github.com/${i}/"
     git config --global --add \
-        "includeIf.hasconfig:remote.*.url:git@github.com:${i}/**" \
+        "includeIf.hasconfig:remote.*.url:git@github.com:${i}/**.path" \
         "${ACCOUNT_CONFIG}"
 done
 #
@@ -258,7 +258,7 @@ for i in $ACCOUNT_REPOS; do  # no quotes
         "url.git@github-${ACCOUNT_NAME}:${i}.insteadOf" \
         "https://github.com/${i}"
     git config --global --add \
-        "includeIf.hasconfig:remote.*.url:git@github.com:${i}.git" \
+        "includeIf.hasconfig:remote.*.url:git@github.com:${i}.git.path" \
         "${ACCOUNT_CONFIG}"
 done
 #
