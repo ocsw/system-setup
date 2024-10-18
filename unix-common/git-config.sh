@@ -39,19 +39,20 @@ git config --global core.excludesfile ~/.gitignore_global
 #
 # pager, diff, colors
 #
+# trailing comments are for git-check.sh
 if hash diff-so-fancy > /dev/null 2>&1; then
     # use 'git --no-pager' to bypass
-    git config --global core.pager 'diff-so-fancy | less --tabs=4 -FRX'
+    git config --global core.pager 'diff-so-fancy | less --tabs=4 -FRX' #DSF
     #
-    git config --global interactive.difffilter 'diff-so-fancy --patch'
+    git config --global interactive.difffilter 'diff-so-fancy --patch' #DSF
     #
     # git log's commit header width
-    git config --global diff-so-fancy.rulerwidth 47
-    git config --global diff-so-fancy.useunicoderuler false
-    git config --global diff-so-fancy.stripleadingsymbols false
-    git config --global diff-so-fancy.markemptylines false
+    git config --global diff-so-fancy.rulerwidth 47             #DSF
+    git config --global diff-so-fancy.useunicoderuler false     #DSF
+    git config --global diff-so-fancy.stripleadingsymbols false #DSF
+    git config --global diff-so-fancy.markemptylines false      #DSF
 else
-    git config --global core.pager 'less --tabs=4 -FRX'
+    git config --global core.pager 'less --tabs=4 -FRX' #NO_DSF
 fi
 #
 git config --global color.diff.commit 'brightyellow bold'
