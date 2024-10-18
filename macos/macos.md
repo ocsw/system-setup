@@ -1028,6 +1028,8 @@ See [IntelliJ Setup][intellij-setup]
 
 ## Command-line Related
 
+[account-setup]: ../unix-common/account-setup.psh
+
 ### [iTerm2][iterm2]
 
 * -> System Settings -> Privacy &S:
@@ -1102,7 +1104,8 @@ umask 077
     * on 10.15+ (Catalina), `chsh -s /bin/bash` if not doing the above, and add
       `export BASH_SILENCE_DEPRECATION_WARNING=1` to `~/.bash_profile`
 * Restart the shell or run `. ~/.bash_profile`
-    * (Sets the PATH, etc.; see [brew.pre.sh][brew-pre-sh] and [brew.post.sh][brew-post-sh])
+    * (Sets the PATH, etc.; see [brew.pre.sh][brew-pre-sh] and
+      [brew.post.sh][brew-post-sh])
     * (Shell restart might be necessary to fix a problem with `pybase`?)
 
 [homebrew]: https://brew.sh/
@@ -1112,13 +1115,12 @@ umask 077
 
 ### General Setup
 
-* Follow the [account setup directions][account-setup]
+* Follow the [account-setup directions][account-setup]
     * Add the macOS-specific [SSH][mac-ssh] and [GPG][mac-gpg] directions below
       when setting those up
 * Add `~/.to_back_up` to Google Drive (backup) and (partly) SpiderOak One
 * Add hostname to `127.0.0.1` in `/etc/hosts`?
 
-[account-setup]: ../unix-common/account-setup.psh
 [mac-ssh]: #ssh
 [mac-gpg]: #gpg
 
