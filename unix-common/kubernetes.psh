@@ -56,6 +56,16 @@ go install github.com/plexsystems/konstraint@latest
 
 
 #
+# Docker image for use with e.g. kubectl debug; consider adding it to your
+# shell settings
+# (see also
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/kubernetes.post.sh)
+#
+# shellcheck disable=SC2034
+KUBE_DEBUG_IMAGE="nicolaka/netshoot"
+
+
+#
 # back up config; see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
 #
