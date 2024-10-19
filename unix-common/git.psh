@@ -232,7 +232,7 @@ ACCOUNT_ORGS="
 "
 GLOBAL="--global"
 #GLOBAL="-f ${HOME}/.gitconfig_rewrites"
-for i in $ACCOUNT_ORGS; do  # no quotes
+for i in $ACCOUNT_ORGS; do  # no quotes; names can't contain spaces anyway
     git config $GLOBAL --add \
         "url.git@github-${ACCOUNT_NAME}:${i}/.insteadOf" \
         "git@github.com:${i}/"
@@ -269,7 +269,7 @@ ACCOUNT_REPOS="
 "
 GLOBAL="--global"
 #GLOBAL="-f ${HOME}/.gitconfig_rewrites"
-for i in $ACCOUNT_REPOS; do  # no quotes
+for i in $ACCOUNT_REPOS; do  # no quotes; names can't contain spaces anyway
     git config $GLOBAL --add \
         "url.git@github-${ACCOUNT_NAME}:${i}.insteadOf" \
         "git@github.com:${i}"
