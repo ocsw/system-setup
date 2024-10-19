@@ -52,8 +52,8 @@ ACCOUNT_NAME=ocsw
 # Remember to set a passphrase and record it securely!
 ssh-keygen -a 100 -t ed25519 -f "${HOME}/.ssh/github_${ACCOUNT_NAME}_ed25519"
 #
-# Can be skipped for the default, but it's not a bad idea, especially in case
-# the default changes
+# Can be skipped for the default account, but it's not a bad idea, especially
+# in case the default changes
 cat >> ~/.ssh/config <<EOF
 Host github-${ACCOUNT_NAME}
     Hostname github.com
@@ -147,6 +147,9 @@ git config --global user.signingkey \
 
 ACCOUNT_NAME=ocsw
 
+# All of the bits involving $ACCOUNT_CONFIG can be skipped for the default
+# account, but they're not a bad idea, especially in case the default changes
+
 ACCOUNT_CONFIG="${HOME}/.gitconfig_${ACCOUNT_NAME}"
 
 # These should match the account
@@ -166,7 +169,7 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
     # in $HOME matching '.gitconfig_*'; see
     # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
     # and https://github.com/ocsw/dotfiles/blob/main/INSTALL.sh)
-    cd && ln_tbu ".gitconfig_${ACCOUNT_NAME}"
+    cd && ln_tbu "$(basename "$ACCOUNT_CONFIG")"
 )
 
 
@@ -211,7 +214,10 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 # technically be skipped, but it's not a bad idea to include them as a fallback
 # in case you ever change the default.  The second insteadOf is necessary
 # regardless - unless you put a blanket one for all of github.com into your
-# config file.  See below for more information about that option.
+# config file.  See below for more information about that option.  Also, if you
+# skipped adding the github-$ACCOUNT_NAME section to .ssh/config, above, use
+# github.com in the commands below.  Finally, if you skipped creating the
+# $ACCOUNT_CONFIG file, omit the includeIf.
 #
 # Add orgs as necessary
 ACCOUNT_ORGS="
@@ -264,6 +270,8 @@ for i in $ACCOUNT_REPOS; do  # no quotes
         "${ACCOUNT_CONFIG}"
 done
 #
+# The same comments about the default account apply as above.
+#
 # Note: In different circumstances, repo names may or may not have .git
 # appended to them.  By leaving off .git in the insteadOfs, we cover those
 # cases at the cost of potentially matching longer names (e.g. /repository for
@@ -296,7 +304,8 @@ git config --add \
     include.path \
     "${ACCOUNT_CONFIG}"
 #
-# (The same notes about .git suffixes apply as above.)
+# The same comments about the default account apply as above, as well as the
+# notes about .git suffixes.
 
 
 # With this setting, it's not necessary to have insteadOf settings for HTTPS
