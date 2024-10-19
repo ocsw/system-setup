@@ -185,7 +185,9 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 # repos, since Go defaults to using HTTPS.  That use case is also one reason
 # why this insteadOf must be in the global config; 'go get' runs its git
 # commands from a directory in $GOROOT, so it doesn't see a repo's local
-# .git/config when run from within it.  (See also go.psh.)
+# .git/config when run from within it.  (See also
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/go.post.sh regarding
+# GOPRIVATE.)
 #
 # The insteadOfs make git use SSH with the correct access key.  Putting them in
 # the global config allows them to apply not only when cloning the repos and
