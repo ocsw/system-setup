@@ -219,18 +219,24 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 # github.com in the commands below.  Finally, if you skipped creating the
 # $ACCOUNT_CONFIG file, omit the includeIf.
 #
+# Incidentally, if you're going to be running git-check.sh regularly, you can
+# replace '--global' with '-f ${HOME}/.gitconfig_rewrites', so that you won't
+# have to move the settings later.  See the 'Final Git Steps' section, below.
+#
 # Add orgs as necessary
 ACCOUNT_ORGS="
     ${ACCOUNT_NAME}
 "
+GLOBAL="--global"
+#GLOBAL="-f ${HOME}/.gitconfig_rewrites"
 for i in $ACCOUNT_ORGS; do  # no quotes
-    git config --global --add \
+    git config $GLOBAL --add \
         "url.git@github-${ACCOUNT_NAME}:${i}/.insteadOf" \
         "git@github.com:${i}/"
-    git config --global --add \
+    git config $GLOBAL --add \
         "url.git@github-${ACCOUNT_NAME}:${i}/.insteadOf" \
         "https://github.com/${i}/"
-    git config --global --add \
+    git config $GLOBAL --add \
         "includeIf.hasconfig:remote.*.url:git@github.com:${i}/**.path" \
         "${ACCOUNT_CONFIG}"
 done
@@ -258,19 +264,21 @@ done
 ACCOUNT_REPOS="
     ORG_NAME/REPO_NAME
 "
+GLOBAL="--global"
+#GLOBAL="-f ${HOME}/.gitconfig_rewrites"
 for i in $ACCOUNT_REPOS; do  # no quotes
-    git config --global --add \
+    git config $GLOBAL --add \
         "url.git@github-${ACCOUNT_NAME}:${i}.insteadOf" \
         "git@github.com:${i}"
-    git config --global --add \
+    git config $GLOBAL --add \
         "url.git@github-${ACCOUNT_NAME}:${i}.insteadOf" \
         "https://github.com/${i}"
-    git config --global --add \
+    git config $GLOBAL --add \
         "includeIf.hasconfig:remote.*.url:git@github.com:${i}.git.path" \
         "${ACCOUNT_CONFIG}"
 done
 #
-# The same comments about the default account apply as above.
+# The same comments about the default account and about --global apply as above.
 #
 # Note: In different circumstances, repo names may or may not have .git
 # appended to them.  By leaving off .git in the insteadOfs, we cover those
@@ -324,5 +332,11 @@ git config --add \
 ###################
 
 # Optionally, run git-check.sh
+
+# If you're going to be running git-check.sh regularly, it is recommended to
+# move the global insteadOf and includeIf sections to ~/.gitconfig_rewrites.
+# git-config.sh adds an include setting for this file, but if you're not using
+# that script, run:
+git config --global --add include.path ~/.gitconfig_rewrites
 
 # See also https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/git.post.sh

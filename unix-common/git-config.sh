@@ -109,3 +109,16 @@ git config --global push.autosetupremote true
 
 # broken out of git-config.sh so the aliases can be (re)applied separately
 "$(dirname "$0")/git-aliases.sh"
+
+
+###########
+# include #
+###########
+
+# this is mainly to make the output of git-check.sh cleaner; it's intended for
+# org or repo insteadOfs and includeIfs
+if ! git config --global --get-all include.path | \
+        grep "^${HOME}/.gitconfig_rewrites$" > /dev/null; then
+    # trailing comment is for git-check.sh
+    git config --global --add include.path ~/.gitconfig_rewrites #AA
+fi
