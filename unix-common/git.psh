@@ -216,8 +216,9 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 # regardless - unless you put a blanket one for all of github.com into your
 # config file.  See below for more information about that option.  Also, if you
 # skipped adding the github-$ACCOUNT_NAME section to .ssh/config, above, use
-# github.com in the commands below.  Finally, if you skipped creating the
-# $ACCOUNT_CONFIG file, omit the includeIf.
+# github.com in the second insteadOf (the first becomes a no-op and should be
+# omitted).  Finally, if you skipped creating the $ACCOUNT_CONFIG file, omit
+# the includeIf.
 #
 # Incidentally, if you're going to be running git-check.sh regularly, you can
 # replace '--global' with '-f ${HOME}/.gitconfig_rewrites', so that you won't
