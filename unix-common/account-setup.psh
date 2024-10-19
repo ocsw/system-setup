@@ -53,6 +53,32 @@ EOF
 # See git.psh
 
 
+#################
+# SSH (General) #
+#################
+
+#
+# Whenever possible, use ed25519 keys; the procedure typically looks like:
+#
+# Remember to set a passphrase and record it securely!
+ssh-keygen -a 100 -t ed25519 -f "${HOME}/.ssh/PURPOSE_ed25519"
+#
+cat >> ~/.ssh/config <<EOF
+Hostname HOSTNAME
+    IdentityFile ~/.ssh/PURPOSE_ed25519
+EOF
+#
+cat "${HOME}/.ssh/PURPOSE_ed25519.pub"
+# Add the public key to e.g. an authorized_keys file on a remote system
+
+#
+# However, some systems (e.g. Azure) can't handle ed25519 keys yet, so use RSA
+# in those cases:
+#
+ssh-keygen -t rsa -b 4096 -f "${HOME}/.ssh/PURPOSE_rsa"
+# and substitute 'rsa' in the filenames in the other commands.
+
+
 ################
 # SSH (Finish) #
 ################
