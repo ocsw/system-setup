@@ -39,6 +39,7 @@ git config --global core.excludesfile ~/.gitignore_global
 #
 # pager, diff, colors
 #
+# see https://github.com/so-fancy/diff-so-fancy
 # trailing comments are for git-check.sh
 if hash diff-so-fancy > /dev/null 2>&1; then
     # use 'git --no-pager' to bypass
