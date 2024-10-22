@@ -118,7 +118,7 @@ NOTE: has to be done separately for each profile
 
 #### [Tabby Cat][tabby-cat]
 
-#### [TabCopy][tabcopy]
+#### [Tab Copy][tab-copy]
 
 #### ([Tidy Sidebar][tidy-sidebar])
 
@@ -135,7 +135,7 @@ NOTE: has to be done separately for each profile
 [password-alert]: https://chromewebstore.google.com/detail/password-alert/noondiphcddnnabmjcihcjfbhfklnnep
 [pinboard-plus]: https://chromewebstore.google.com/detail/pinboard-plus/mphdppdgoagghpmmhodmfajjlloijnbd
 [tabby-cat]: https://chromewebstore.google.com/detail/tabby-cat/mefhakmgclhhfbdadeojlkbllmecialg
-[tabcopy]: https://chromewebstore.google.com/detail/tabcopy/micdllihgoppmejpecmkilggmaagfdmb
+[tab-copy]: https://chromewebstore.google.com/detail/tab-copy/micdllihgoppmejpecmkilggmaagfdmb
 [tidy-sidebar]: https://chromewebstore.google.com/detail/tidy-sidebar/dgmacifhhpefamjmolpipkijcofcmbgp
 
 ### Misc. Unsure / WIP

@@ -315,7 +315,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 * -> Finder sidebar position
 * (Exclude from uBar)
 
-[google-drive]: https://www.google.com/drive/download/
+[google-drive]: https://workspace.google.com/products/drive/#download
 
 ### [Dropbox][dropbox]
 

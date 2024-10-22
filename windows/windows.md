@@ -134,7 +134,7 @@ links to folders
 ** ### [Zoom][zoom]
 ## Media
 * ### Spotify
-optional https://www.microsoft.com/en-us/p/spotify-music/9ncbcszsjrsb
+optional https://apps.microsoft.com/detail/9ncbcszsjrsb?hl=en-us&gl=US
 * ### Amazon Music
 * ### iTunes
 * ### Kindle
