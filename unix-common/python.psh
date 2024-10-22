@@ -56,10 +56,8 @@ if ! grep '^\.python-version$' ~/.gitignore_global > /dev/null 2>&1; then
     echo '.python-version' >> ~/.gitignore_global
 fi
 
-# this doesn't work properly on Mac; use venvs and manual symlinks instead
-#pyact
-#pip install virtualenv
-#curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
+# install pipx?
+# https://github.com/pypa/pipx
 
 pybase 3
 
