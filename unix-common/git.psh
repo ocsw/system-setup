@@ -123,7 +123,7 @@ cp ../macos/ssh-add-all.plist ~/Library/LaunchAgents/
 # Run git-config.sh
 
 # These settings are particularly relevant to commit and tag signing:
-git config --global gpg.format ssh  # if using an SSH key
+git config --global gpg.format ssh  # if using an SSH key for signing
 git config --global commit.gpgsign true
 git config --global tag.forcesignannotated true
 
