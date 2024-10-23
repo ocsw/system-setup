@@ -3,5 +3,6 @@ searching ~/Library/Containers and ~/Library/Group Containers incredibly slow.
 See https://forums.developer.apple.com/forums/thread/740204 and
 https://forums.macrumors.com/threads/daisydisk-very-slow-to-scan-in-sonoma.2406837/
 for details and
-https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/updates.post.sh for a
-workaround.
+https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/updates.post.sh and
+https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/sonoma.post.sh for
+workarounds.
