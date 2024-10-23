@@ -1,0 +1,7 @@
+There's some kind of issue with one of the protection systems that makes
+searching ~/Library/Containers and ~/Library/Group Containers incredibly slow.
+See https://forums.developer.apple.com/forums/thread/740204 and
+https://forums.macrumors.com/threads/daisydisk-very-slow-to-scan-in-sonoma.2406837/
+for details and
+https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/updates.post.sh for a
+workaround.

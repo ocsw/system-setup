@@ -1209,6 +1209,10 @@ umask 077
 chmod -R go-rwx ~
 ```
 
+(Run that the first time, then see [updates.post.sh][updates-post-sh])
+
+[updates-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/updates.post.sh
+
 ## Gaming
 
 ### [Steam][steam]
@@ -1387,12 +1391,15 @@ System Settings sections are correct:
 
 ## OS Version Notes
 
-[Catalina Notes][catalina-notes]
-
 [Apple Silicon Notes][apple-silicon-notes]
 
-[catalina-notes]: catalina.txt
+[Catalina Notes][catalina-notes]
+
+[Sonoma Notes][sonoma-notes]
+
 [apple-silicon-notes]: m2.txt
+[catalina-notes]: catalina.txt
+[sonoma-notes]: sonoma.txt
 
 ## Machine Migration
 
