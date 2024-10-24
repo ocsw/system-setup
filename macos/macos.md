@@ -1299,7 +1299,6 @@ chmod -R go-rwx ~
 * other VPNs
 * PIA
 * WiFi
-* Now Playing (Hidden (?))
 * ToothFairy
 * SoundSource: apps, output, input, main
     * (apps include e.g. music apps, browsers, messaging and VC apps)
@@ -1307,6 +1306,7 @@ chmod -R go-rwx ~
 * Blue Sherpa
 * Logitech G HUB (Hidden)
 * YubiSwitch (Hidden)
+* Now Playing (Hidden (?) - else left of ToothFairy)
 * iStat Menus: CPU, Mem, SSD, Net, Sen
 * iStat Menus: Battery(s), Time
 * Fast user switching (Hidden?)
