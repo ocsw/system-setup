@@ -1168,7 +1168,7 @@ umask 077
 umask 022
 brew install gnupg pinentry-mac
 umask 077
-echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> \
+printf "%s\n" "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> \
     ~/.gnupg/gpg-agent.conf
 gpgconf --kill gpg-agent
 ```
