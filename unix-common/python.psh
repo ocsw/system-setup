@@ -56,9 +56,6 @@ if ! grep '^\.python-version$' ~/.gitignore_global > /dev/null 2>&1; then
     echo '.python-version' >> ~/.gitignore_global
 fi
 
-# install pipx?
-# https://github.com/pypa/pipx
-
 pybase 3
 
 py3ver=$(pylatest_local 3)
