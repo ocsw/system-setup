@@ -19,6 +19,7 @@ brew install kubernetes-cli
 brew install derailed/k9s/k9s
 brew install fzf
 brew install kubectx
+brew install krew
 brew tap johanhaleby/kubetail && brew install johanhaleby/kubetail/kubetail
 brew install stern
 brew install kube-ps1
@@ -53,6 +54,9 @@ unset ARCH
 # install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
 # install https://github.com/rikatz/kubepug
 go install github.com/plexsystems/konstraint@latest
+#
+# (see also
+# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh)
 
 
 #
