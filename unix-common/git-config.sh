@@ -119,7 +119,7 @@ git config --global push.autosetupremote true
 # this is mainly to make the output of git-check.sh cleaner; it's intended for
 # org or repo insteadOfs and includeIfs
 if ! git config --global --get-all include.path | \
-        grep "^${HOME}/.gitconfig_rewrites$" > /dev/null; then
+        grep "^${HOME}/\.gitconfig_rewrites\$" > /dev/null; then
     # trailing comment is for git-check.sh
     git config --global --add include.path ~/.gitconfig_rewrites #AA
 fi

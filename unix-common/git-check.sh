@@ -16,13 +16,13 @@ diff \
             grep ' #AA$' "$(dirname "$0")"/git-config.sh
         } |
             grep -v "$dsf_remove_comment" |
-            sed -e 's/^ *//' -e 's/ *#.*$//' -e "s@~/@${HOME}/@" |
+            sed -e 's/^ *//' -e 's/ *#.*$//' -e "s|~/|${HOME}/|" |
             sed '/\\$/ {N;s/\\\n//;}' |
             grep '^git config --global ' |
             grep -v ' --unset ' |
             sed -e 's/ --add / /' -e 's/^git config --global //' -e 's/ /=/' |
             tr -d "'" |
-            grep -v '^alias.faketempalias=' |
+            grep -v '^alias\.faketempalias=' |
             sed -e '/^user\.name=/ s/=.*$/=/' \
                 -e '/^user\.email=/ s/=.*$/=/' \
                 -e '/^user\.signingkey=/ s/=.*$/=/'
