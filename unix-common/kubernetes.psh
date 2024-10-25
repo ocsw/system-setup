@@ -112,12 +112,12 @@ gke_up () {  # can use gke-up in bash
     # note: final sh is $0, then xargs adds $1 and $2
     # shellcheck disable=SC2016
     gcloud container clusters list \
-        --project=PROJECT_NAME \
-        --filter="resourceLabels[env]=production" \
-        --format="value[delimiter=' '](name,zone)" \
-    | xargs -n 2 sh -c \
-        'gcloud container clusters get-credentials $1 --region=$2 --project=PROJECT_NAME' \
-        sh
+            --project=PROJECT_NAME \
+            --filter="resourceLabels[env]=production" \
+            --format="value[delimiter=' '](name,zone)" | \
+        xargs -n 2 sh -c \
+            'gcloud container clusters get-credentials $1 --region=$2 --project=PROJECT_NAME' \
+            sh
 }
 
 #
