@@ -43,14 +43,16 @@ umask 077
 # (but update)
 # (or install with brew??)
 # add ~/bin to your default PATH
-ARCH=$(uname -m) && \
-    mkdir -p ~/bin && \
-    tar xvzf "velero-v1.11.1-darwin-${ARCH}.tar.gz" && \
-    mv "velero-v1.11.1-darwin-${ARCH}/velero" ~/bin/ && \
-    chmod 755 ~/bin/velero && \
+(
+    set -e
+    ARCH=$(uname -m)
+    mkdir -p ~/bin
+    tar xvzf "velero-v1.11.1-darwin-${ARCH}.tar.gz"
+    mv "velero-v1.11.1-darwin-${ARCH}/velero" ~/bin/
+    chmod 755 ~/bin/velero
     rm -r "velero-v1.11.1-darwin-${ARCH}.tar.gz" \
         "velero-v1.11.1-darwin-${ARCH}/"
-unset ARCH
+)
 # install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
 # install https://github.com/rikatz/kubepug
 go install github.com/plexsystems/konstraint@latest
@@ -118,7 +120,7 @@ gke_up () {  # can use gke-up in bash
     gcloud container clusters list \
             --project=PROJECT_NAME \
             --filter="resourceLabels[env]=production" \
-            --format="value[delimiter=' '](name,zone)" | \
+            --format="value[delimiter=' '](name,zone)" |
         xargs -n 2 sh -c \
             'gcloud container clusters get-credentials $1 --region=$2 --project=PROJECT_NAME' \
             sh

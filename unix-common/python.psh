@@ -32,7 +32,7 @@ umask 077
 #
 # Other
 #
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv && \
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git \
     ~/.pyenv/plugins-virtualenv
 
@@ -105,6 +105,9 @@ import-order-style = edited
 EOF
 
 # from the root of each repo, where i=repo_name:
-pyvenv "$i" "$py3ver" . && \
-pylocal "${i}-${py3ver}" && \
-pyide_vscode -s "${i}-${py3ver}"
+(
+    set -e
+    pyvenv "$i" "$py3ver" .
+    pylocal "${i}-${py3ver}"
+    pyide_vscode -s "${i}-${py3ver}"
+)

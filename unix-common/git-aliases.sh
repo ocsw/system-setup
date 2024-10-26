@@ -17,8 +17,8 @@
 # section stays where it is in the config file (relative to includes, for
 # example)
 git config --global alias.faketempalias temp
-sed -e 's/^ *//' -e 's/ *#.*$//' "$0" | grep '^git config --global alias\.' | \
-    awk '{print $4}' | grep -v '^alias\.faketempalias$' | \
+sed -e 's/^ *//' -e 's/ *#.*$//' "$0" | grep '^git config --global alias\.' |
+    awk '{print $4}' | grep -v '^alias\.faketempalias$' |
     while IFS= read -r alias; do
         git config --global --unset "$alias"
     done

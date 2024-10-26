@@ -8,7 +8,7 @@
 #
 
 # to get the list:
-jq -r '.[].identifier.id' < ~/.vscode/extensions/extensions.json | \
+jq -r '.[].identifier.id' < ~/.vscode/extensions/extensions.json |
     sort -t. -k2 -u
 
 # to install:

@@ -41,7 +41,7 @@ if ! grep '^\.java-version$' ~/.gitignore_global > /dev/null 2>&1; then
 fi
 
 # upgrades might require removing old versions and adding new ones; if all the JDKs are in the same place, you can do this to remove all current versions:
-for i in $(jenv versions | grep -v '^..system$' | tr '*' ' ' | \
+for i in $(jenv versions | grep -v '^..system$' | tr '*' ' ' |
         sed 's/(.*//'); do
     jenv remove "$i"
 done
