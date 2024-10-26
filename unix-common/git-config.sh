@@ -10,12 +10,14 @@
 # identity #
 ############
 
+# put this section first in the config file, but use placeholder values for now
+
 # fence these so we can re-run this file without breaking anything
 if ! git config --global --get user.name > /dev/null; then
-    git config --global user.name 'Danielle Zephyr Malament'
+    git config --global user.name '...'
 fi
 if ! git config --global --get user.email > /dev/null; then
-    git config --global user.email danielle.malament@gmail.com
+    git config --global user.email ...
 fi
 if ! git config --global --get user.signingkey > /dev/null; then
     # GPG signing (old)
@@ -23,7 +25,7 @@ if ! git config --global --get user.signingkey > /dev/null; then
     #git config --global user.signingkey KEY_ID
 
     # SSH signing (new)
-    git config --global user.signingkey ~/.ssh/github_ocsw_signing_ed25519.pub
+    git config --global user.signingkey ~/.ssh/github_..._signing_ed25519.pub
 fi
 
 
