@@ -163,6 +163,13 @@ git config -f "${ACCOUNT_CONFIG}" user.email danielle.malament@gmail.com
 git config -f "${ACCOUNT_CONFIG}" user.signingkey \
     "${HOME}/.ssh/github_${ACCOUNT_NAME}_signing_ed25519.pub"
 
+# The $ACCOUNT_CONFIG file is also a good place to put any other org-level
+# settings you might need, such as 'remote.NAME.prune'.  (See the comments in
+# git-config.sh about 'fetch.prune' for details.)
+#
+# Example usage:
+###git config -f "${ACCOUNT_CONFIG}" remote.origin.prune true
+
 (
     # Might have to do this later, after setting up dotfiles
     # (Alternatively, the dotfiles repo's INSTALL.sh will do this for all files
@@ -317,6 +324,14 @@ git config --add \
 #
 # The same comments about the default account apply as above, as well as the
 # notes about .git suffixes.
+#
+#
+# This is also a good point to add any other repo-level settings you might
+# need, such as 'remote.NAME.prune'.  (See the comments in git-config.sh about
+# 'fetch.prune' for details.)
+#
+# Example usage, from the root directory of the repo:
+###git config remote.origin.prune true
 
 
 # With this setting, it's not necessary to have insteadOf settings for HTTPS

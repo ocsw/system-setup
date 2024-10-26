@@ -85,6 +85,26 @@ git config --global pretty.oneline-name-nl \
 git config --global init.defaultbranch main
 
 #
+# keep branch churn in check
+#
+# This setting can be useful if you have a lot of repos that have a lot of
+# branch churn.  I'm not going to include it, however, because there are
+# certain configs in local repo copies that can make it destructive.  See
+# https://git-scm.com/docs/git-fetch#_pruning for details.  I'm not sure such
+# configs are all that common, but still.
+#
+# Alternatively, if you know you won't have such configs in your repos for a
+# particular org, you can add it at that level, or even at the individual repo
+# level.  See git.psh for instructions.
+#
+# In any case, you can always manually run 'git fetch -p NAME' (where NAME
+# defaults to 'origin'), 'git fetch --all -p', or 'git remote prune NAME' (no
+# default) to get the same effect.  (See also the 'ftp' and 'ftap' aliases in
+# get-aliases.sh.)
+#
+###git config --global fetch.prune true
+
+#
 # fast-forward only, for safety
 #
 git config --global pull.ff only
