@@ -16,19 +16,22 @@ umask 022
 #gcloud components install kubectl
 brew update
 brew install kubernetes-cli
+brew install krew
 brew install derailed/k9s/k9s
 brew install fzf
 brew install kubectx
-brew install krew
 brew tap johanhaleby/kubetail && brew install johanhaleby/kubetail/kubetail
 brew install stern
 brew install kube-ps1
 brew install minikube
 brew install kind
+brew install k3d
 brew tap robscott/tap && brew install robscott/tap/kube-capacity
 brew install argoproj/tap/kubectl-argo-rollouts
 brew install kustomize
 brew install kubeconform
+brew install conftest
+brew install kubent
 brew install kubebuilder
 brew install helm
 brew install helm-docs
