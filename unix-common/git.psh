@@ -140,6 +140,17 @@ git config --global user.email danielle.malament@gmail.com
 git config --global user.signingkey \
     "${HOME}/.ssh/github_${DEFAULT_ACCOUNT_NAME}_signing_ed25519.pub"
 
+# With this setting, it's not necessary to have insteadOf settings for HTTPS
+# for the default account's orgs (see below for explanation).  It's probably
+# safe to do this; anything more specific will be longer, and git goes with the
+# longest match.  (And anything that can be read with HTTPS can be read using
+# an SSH key.)  However, a bit of preliminary testing suggests that SSH is
+# significantly slower than HTTPS, so I wouldn't set this so broadly (and
+# globally) unless there was a good reason.
+###git config --global --add \
+###    "url.git@github.com:.insteadOf" \
+###    "https://github.com/"
+
 
 #####################
 # Git - Per Account #
@@ -223,11 +234,11 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 # technically be skipped, but it's not a bad idea to include them as a fallback
 # in case you ever change the default.  The second insteadOf is necessary
 # regardless - unless you put a blanket one for all of github.com into your
-# config file.  See below for more information about that option.  Also, if you
-# skipped adding the github-$ACCOUNT_NAME section to .ssh/config, above, use
-# github.com in the second insteadOf (the first becomes a no-op and should be
-# omitted).  Finally, if you skipped creating the $ACCOUNT_CONFIG file, omit
-# the includeIf.
+# config file.  See the 'Git - General and Defaults' section, above, for more
+# information about that option.  Also, if you skipped adding the
+# github-$ACCOUNT_NAME section to .ssh/config, above, use github.com in the
+# second insteadOf (the first becomes a no-op and should be omitted).  Finally,
+# if you skipped creating the $ACCOUNT_CONFIG file, omit the includeIf.
 #
 # Incidentally, if you're going to be running git-check.sh regularly, you can
 # replace '--global' with '-f ${HOME}/.gitconfig_rewrites', so that you won't
@@ -332,17 +343,6 @@ git config --add \
 #
 # Example usage, from the root directory of the repo:
 ###git config remote.origin.prune true
-
-
-# With this setting, it's not necessary to have insteadOf settings for HTTPS
-# for the default account's orgs.  It's probably safe to do this; anything more
-# specific will be longer, and git goes with the longest match.  (And anything
-# that can be read with HTTPS can be read using an SSH key.)  However,
-# preliminary testing suggests that SSH is significantly slower than HTTPS, so
-# I wouldn't set this so broadly (and globally) unless there was a good reason.
-###git config --global --add \
-###    "url.git@github.com:.insteadOf" \
-###    "https://github.com/"
 
 
 ###################
