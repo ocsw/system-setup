@@ -93,7 +93,6 @@ pyln "pytest-${py3ver}" py.test
 for i in apidoc autobuild autogen build quickstart; do
     pyln "sphinx-${py3ver}" "sphinx-$i"
 done
-pyln "tox-${py3ver}" tox-quickstart
 
 cat >> ~/.flake8 <<EOF
 [flake8]
