@@ -65,7 +65,6 @@ mkdir -p ~/bin
 pyinst coverage 3
 pyinst flake8 3
 pyinst mypy 3
-pyinst nose 3
 pyinst pytest 3
 pyinst sphinx 3
 pyinst tox 3
@@ -90,8 +89,6 @@ pyln "mypy-${py3ver}" dmypy
 pyln "mypy-${py3ver}" mypyc
 pyln "mypy-${py3ver}" stubgen
 pyln "mypy-${py3ver}" stubtest
-pyln "nose-${py3ver}" nosetests
-pyln "nose-${py3ver}" "$(pybin_ls "nose-${py3ver}" | grep '^nosetests-3\..*$')"
 pyln "pytest-${py3ver}" py.test
 # more from sphinx?
 for i in apidoc autobuild autogen build quickstart; do
