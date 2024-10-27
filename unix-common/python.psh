@@ -74,7 +74,7 @@ pip install autopep8 flake8-import-order
 pyact "pytest-$py3ver"
 pip install pytest-asyncio pytest-catchlog pytest-cov pytest-mock
 pyact "sphinx-$py3ver"
-pip install recommonmark sphinx-autobuild
+pip install myst-parser sphinx-autobuild
 pip install sphinxcontrib-zopeext zope.interface
 pyact
 #
