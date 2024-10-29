@@ -6,6 +6,8 @@
     "editor.wordWrap": "wordWrapColumn",
     "explorer.autoReveal": false,
     "files.associations": {
+        "Makefile.*": "makefile",
+        "*.mk": "makefile",  // there already by default
         "*.vimrc.local": "viml",
         "*.psh": "shellscript"
     },
