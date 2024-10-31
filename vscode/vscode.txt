@@ -9,3 +9,19 @@ right-click and hide smiley on status bar
 open a Go file, let it install all the tools
 (there's also 'Go: Install/Update Tools', but don't use it on
 golangci-lint)
+
+
+Notes re gitlens and private repos:
+
+regex - the first capture group is the domain part and the 2nd capture group is the repo
+https://github.com/gitkraken/vscode-gitlens/issues/1449#issuecomment-815318565
+
+Don't need to escape /, escape . with \\
+https://github.com/gitkraken/vscode-gitlens/issues/1449#issuecomment-867213442
+
+URL settings - accurate for GitHub as of 10/30/24
+(but need $ added to the variables, and sha -> id)
+https://github.com/gitkraken/vscode-gitlens/discussions/3282#discussioncomment-10012127
+
+Use Custom type if specifying URLs
+https://github.com/gitkraken/vscode-gitlens/discussions/3282#discussioncomment-10743259

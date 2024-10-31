@@ -20,6 +20,24 @@
         "**/.factorypath": true
     },
     "flake8.showNotifications": "onWarning",
+    "gitlens.remotes": [{
+        // matches the url *after* any insteadOf setting;
+        // the first group is for the domain, the second is for the repo path
+        "regex": "git@(github-[^:]*):(.+)\\.git",
+        "type": "Custom",
+        "protocol": "https",
+        "urls": {
+            "repository": "https://github.com/${repo}",
+            "branches": "https://github.com/${repo}/branches",
+            "branch": "https://github.com/${repo}/tree/${branch}",
+            "commit": "https://github.com/${repo}/commit/${id}",
+            "file": "https://github.com/${repo}/blob/${branch}/${file}",
+            "fileInBranch": "https://github.com/${repo}/blob/${branch}/${file}",
+            "fileInCommit": "https://github.com/${repo}/blob/${id}/${file}",
+            "fileLine": "https://github.com/${repo}/blob/${branch}/${file}#L${line}",
+            "fileRange": "https://github.com/${repo}/blob/${branch}/${file}#L${start}-L${end}"
+        }
+    }],
     "gitlens.statusBar.enabled": false,
     "gitlens.statusBar.reduceFlicker": true,
     "[go]": {
