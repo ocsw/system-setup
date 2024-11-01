@@ -101,6 +101,9 @@
         "editor.tabSize": 2
     },
     "redhat.telemetry.enabled": false,
+    "[rego]": {
+        "editor.insertSpaces": false
+    },
     "rewrap.autoWrap.enabled": true,
     "rewrap.doubleSentenceSpacing": true,
     "rewrap.wholeComment": false,
