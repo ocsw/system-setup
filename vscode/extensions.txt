@@ -22,6 +22,7 @@ ipedrazas.kubernetes-snippets
 ms-vscode.makefile-tools
 yzhang.markdown-all-in-one
 ms-python.mypy-type-checker
+tsandall.opa
 esbenp.prettier-vscode
 puppet.puppet-vscode
 ms-python.python
