@@ -1178,7 +1178,7 @@ gpgconf --kill gpg-agent
     * (If desired; updates may overwrite config files)
     * (May not automatically pick up new keys?)
 * (Put our lines at the top of the config files, with a blank before the Suite
-  ones?)
+  ones (?))
 
 #### Option 2 ([GPG Suite][gpg-suite])
 
@@ -1199,7 +1199,7 @@ umask 077
   check 'Save in Keychain' (or click 'Always Allow', whichever appears)
 * -> System Settings -> GPG Suite -> Settings: (Default Key)
 * (Or if not using GPG Suite at all, optionally add `default-key KEY_ID` to
-  `gpg.conf` in `~/.gnupg`)
+  `gpg.conf` in `~/.gnupg` (at the top, followed by a blank line (?)))
 
 ### Permissions
 
