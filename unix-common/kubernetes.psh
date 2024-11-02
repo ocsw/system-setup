@@ -146,5 +146,5 @@ gke_clusters () {  # can use gke-clusters in bash
 
 #
 # see also
-# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/kubernetes.post.sh
+# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh
 #
