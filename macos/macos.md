@@ -987,6 +987,13 @@ See the [VSCode Setup][vscode-setup] directory
         ~/bin/
     ```
 
+* Run this, then add it to your shell startup (see
+  [dot.bash_profile][dot-bash-profile])
+
+    ```shell
+    export PATH="${HOME}/bin:${PATH}"
+    ```
+
 * Add to `.gitignore_global` (see [the git-config script][git-config-sh]):
 
     ```shell
@@ -1000,6 +1007,7 @@ See also [vscode.post.sh][vscode-post-sh], [vscode-setting.post.sh][vscode-setti
 [vscode]: https://code.visualstudio.com/
 [vscode-extensions]: https://marketplace.visualstudio.com/VSCode
 [vscode-setup]: ../vscode/
+[dot-bash-profile]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile
 [git-config-sh]: ../unix-common/git-config.sh
 [vscode-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode.post.sh
 [vscode-setting-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode-setting.post.sh
@@ -1084,11 +1092,17 @@ Run from the [Unix Setup][unix-setup] directory:
 
 ```shell
 umask 022
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# on Apple Silicon (but see dotfiles)
+
+# run this, then add it to your shell startup, as described below
+# on Apple Silicon
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# on Intel
+eval "$(/usr/local/bin/brew shellenv)"
+
 brew update
-# brew outdated
+#brew outdated
 for i in $(cat packages.txt | sed 's/ *#.*$//' | grep -v '^$'); do
     brew install "$i"
 done
@@ -1096,21 +1110,30 @@ done
 brew upgrade
 brew cleanup
 brew doctor
+
 umask 077
+
+# run eval again to pick up any new paths
+# run this, then add it to your shell startup, as described below
+. "$(brew --prefix)/etc/bash_completion"
 ```
 
 * Add `/usr/local/bin/bash` / `/opt/homebrew/bin/bash` to `/etc/shells` and
   `chsh -s "$(brew --prefix)/bin/bash"`?
     * on 10.15+ (Catalina), `chsh -s /bin/bash` if not doing the above, and add
-      `export BASH_SILENCE_DEPRECATION_WARNING=1` to `~/.bash_profile`
+      `export BASH_SILENCE_DEPRECATION_WARNING=1` to `~/.bash_profile`; see
+      also [macos_bash.post.sh][macos-bash-post-sh]
 * Restart the shell or run `. ~/.bash_profile`
-    * (Sets the PATH, etc.; see [brew.first.sh][brew-first-sh] and
+    * (Sets the PATH, etc.; see [brew.first.sh][brew-first-sh],
+      [macos_path.post.sh][macos-path-post-sh], and
       [brew.post.sh][brew-post-sh])
     * (Shell restart might be necessary to fix a problem with `pybase`?)
 
 [homebrew]: https://brew.sh/
 [unix-setup]: ../unix-common/
+[macos-bash-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/macos_bash.post.sh
 [brew-first-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/brew.first.sh
+[macos-path-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/macos_path.post.sh
 [brew-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/brew.post.sh
 
 ### General Setup

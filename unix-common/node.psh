@@ -15,11 +15,22 @@ brew install node
 brew install yarn
 brew install nvm
 umask 077
-mkdir ~/.nvm
-# to set up nvm; see
-# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/node.post.sh
+#
+mkdir -p ~/.nvm
+#
+# run these, then add them to your shell startup, as described below
+export NVM_DIR="${HOME}/.nvm"
 # shellcheck disable=SC1091
-. "${HOME}/.bashrc"
+. "$(brew --prefix)/opt/nvm/nvm.sh"
+# shellcheck disable=SC1091
+. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+#
+# to set up nvm; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/node.post.sh
+# and https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/node.post.sh
+# shellcheck disable=SC1090
+. ~/.bash_profile
+#
 nvm install node
 nvm use node
 # ?

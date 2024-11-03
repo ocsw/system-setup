@@ -60,8 +60,15 @@ umask 077
 # install https://github.com/rikatz/kubepug
 go install github.com/plexsystems/konstraint@latest
 #
-# (see also
-# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh)
+# run this, then add it to your shell startup, as described below
+export PATH="${PATH}:${HOME}/.krew/bin"
+#
+# to set up PATH; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile and
+# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh
+mkdir -p ~/.krew/bin  # just in case
+# shellcheck disable=SC1090
+. ~/.bash_profile
 
 
 #
@@ -102,14 +109,24 @@ vscode-setting -j "highlight-bad-chars.additionalUnicodeChars" '[]'
 #
 umask 022
 echo "y" | gcloud components install gke-gcloud-auth-plugin
-mkdir -p ~/bin  # add ~/bin to your default PATH
-# I don't know why this isn't already symlinked into $(brew --prefix)/bin
-ln -s "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gke-gcloud-auth-plugin" ~/bin/
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True  # add this to your shell startup
 gcloud components update
 # install KCC (?)
 #    https://cloud.google.com/config-connector/docs/how-to/import-export/overview#installing-config-connector
 umask 077
+#
+mkdir -p ~/bin  # add ~/bin to your default PATH
+# I don't know why this isn't already symlinked into $(brew --prefix)/bin
+ln -s "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gke-gcloud-auth-plugin" ~/bin/
+#
+# run this, then add it to your shell startup, as described below
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+#
+# to set up PATH and env var; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile and
+# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh
+# shellcheck disable=SC1090
+. ~/.bash_profile
+#
 gke-up  # see below
 
 #
@@ -143,8 +160,3 @@ gke_clusters () {  # can use gke-clusters in bash
     gcloud container clusters list --project=PROJECT_NAME \
         --filter="resourceLabels[env]=production" --format="value(name)" | sort
 }
-
-#
-# see also
-# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh
-#

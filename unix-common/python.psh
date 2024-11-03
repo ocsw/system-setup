@@ -15,6 +15,12 @@ mkdir -p ~/repos
 (
     cd ~/repos && git clone git@github.com:ocsw/pypvutil.git
 )
+#
+# run these, then add them to your shell startup, as described below
+export PYPVUTIL_HOME="${HOME}/repos/pypvutil"
+export PYPVUTIL_PREFIX="py"
+# shellcheck disable=SC1091
+. "${PYPVUTIL_HOME}/pypvutil_init.sh"
 
 #
 # Mac
@@ -35,6 +41,10 @@ umask 077
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git \
     ~/.pyenv/plugins-virtualenv
+
+# run these, then add them to your shell startup, as described below
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # for Mojave
 umask 022
@@ -98,6 +108,11 @@ cat >> ~/.flake8 <<EOF
 [flake8]
 import-order-style = edited
 EOF
+
+# might need to do this again to pick up the shims (and ~/bin; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile)
+# shellcheck disable=SC1090
+. ~/.bash_profile
 
 # from the root of each repo, where i=repo_name:
 (

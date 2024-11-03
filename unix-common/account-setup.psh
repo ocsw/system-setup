@@ -113,6 +113,9 @@ done
 # (In particular, this script clones some repos, including this one, sets up
 # dotfiles, and consolidates various config files for backups)
 
+# shellcheck disable=SC1090
+. ~/.bash_profile
+
 
 ##########
 # Python #
