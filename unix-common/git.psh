@@ -34,10 +34,9 @@
 # Optionally, install gh and lazygit
 
 # If __git_ps1 wasn't included in the git installation, you should probably
-# install it.  If you don't have a package available, you can probably copy or
-# source it from the Git distro files.  Look for something like
-# /usr/share/git-core/contrib/completion/git-prompt.sh, or the equivalent under
-# /usr/local/.  (Or, see
+# install it.  You can probably copy or source it from the Git distro files.
+# Look for something like /usr/share/git-core/contrib/completion/git-prompt.sh,
+# or the equivalent under /usr/local/.  (Or, see
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh.)
 # See also
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/scm_prompt.post.sh
