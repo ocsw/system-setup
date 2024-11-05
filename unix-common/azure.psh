@@ -1,0 +1,17 @@
+# shellcheck shell=sh
+
+#
+# This is a pseudo shell script.
+#
+# DON'T RUN THIS LIKE AN ACTUAL SCRIPT!
+# SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
+#
+
+#
+# Mac
+#
+umask 022
+brew update
+brew install azure-cli
+brew install azure/kubelogin/kubelogin
+umask 077

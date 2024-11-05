@@ -1,0 +1,57 @@
+# shellcheck shell=sh
+
+#
+# This is a pseudo shell script.
+#
+# DON'T RUN THIS LIKE AN ACTUAL SCRIPT!
+# SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
+#
+
+#
+# Mac
+#
+umask 022
+brew update
+brew install awscli
+brew install aws-iam-authenticator
+brew install eksctl
+umask 077
+
+mkdir -p ~/.aws
+chmod 700 ~/.aws
+touch ~/.aws/config
+chmod 600 ~/.aws/config
+# Back up config; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
+ln_tbu ~/.aws/config
+
+# Sample config is in aws-sample-config file
+
+# If relevant; see also docker.psh
+umask 022
+brew install docker-credential-helper-ecr
+umask 077
+#
+mkdir -p ~/.docker
+chmod 700 ~/.docker
+if ! [ -f ~/.docker/config.json ]; then
+    printf "%s" "{}" > ~/.docker/config.json
+fi
+chmod 600 ~/.docker/config.json
+(
+    set -e
+    umask 077
+    TMPFILE=$(mktemp -t docker-config)  # not entirely portable
+    # Substitute in the correct account number and region
+    jq -j --tab '.credHelpers += {
+            "111111111111.dkr.ecr.us-east-1.amazonaws.com": "ecr-login"
+        }' < ~/.docker/config.json >| "$TMPFILE"
+    cat "$TMPFILE" >| ~/.docker/config.json
+    rm "$TMPFILE"
+)
+# Back up config; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
+ln_tbu ~/.docker/config.json
+
+# See aws-sample-config; you probably want to make an alias for this
+aws sso login --sso-session sso-PARTITION
