@@ -340,6 +340,8 @@
         * No smart quotes?
     * Text Replacements:
         * Remove omw
+* Dictation:
+    * Shortcut: Off / Press MIC (?) (no Off setting on Apple Silicon?)
 
 ## Mouse
 
