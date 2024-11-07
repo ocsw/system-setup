@@ -30,6 +30,7 @@ ln_tbu ~/.aws/config
 # If relevant; see also docker.psh
 umask 022
 brew install docker-credential-helper-ecr
+brew install jq  # for the command below
 umask 077
 #
 mkdir -p ~/.docker
