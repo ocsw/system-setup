@@ -115,10 +115,16 @@ gcloud components update
 umask 077
 #
 mkdir -p ~/bin  # add ~/bin to your default PATH
-# I don't know why this isn't already symlinked into $(brew --prefix)/bin
+# In theory, you're supposed to add $(brew --prefix)/share/google-cloud-sdk/bin
+# to your path, but most of the things in there are already symlinked into
+# $(brew --prefix)/bin, so we can just handle this on its own.  (However,
+# gcloud can find this without it being in the PATH, so the symlink is only
+# necessary for calling the plugin directly.)
 ln -s "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gke-gcloud-auth-plugin" ~/bin/
 #
-# run this, then add it to your shell startup, as described below
+# run this, then add it to your shell startup, as described below (only
+# actually necessary for old clusters (pre-1.26) but it can't hurt; see
+# https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke)
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 #
 # to set up PATH and env var; see

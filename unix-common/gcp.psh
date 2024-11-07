@@ -27,7 +27,13 @@ gcloud auth configure-docker --quiet
 umask 077
 #
 mkdir -p ~/bin  # add ~/bin to your default PATH
-# I don't know why this isn't already symlinked into $(brew --prefix)/bin
+# In theory, you're supposed to add $(brew --prefix)/share/google-cloud-sdk/bin
+# to your path, but most of the things in there are already symlinked into
+# $(brew --prefix)/bin, so we can just handle this on its own.  (However,
+# 'gcloud auth configure-docker' is generally fine; the symlink is only
+# necessary for calling the plugin outside of gcloud.  See
+# https://github.com/GoogleCloudPlatform/docker-credential-gcr for more
+# information.)
 ln -s "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/docker-credential-gcr" ~/bin/
 #
 # to set up PATH; see

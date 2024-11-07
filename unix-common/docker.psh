@@ -54,6 +54,6 @@ sudo systemctl enable docker
 umask 077
 
 #
-# see also aws.psh and
+# see also aws.psh, gcp.psh, and
 # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/docker.post.sh
 #
