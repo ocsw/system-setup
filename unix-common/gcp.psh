@@ -12,7 +12,7 @@
 #
 umask 022
 brew update
-brew install --cask google-cloud-sdk
+brew install --cask google-cloud-sdk  # can leave out --cask?
 echo "y" | gcloud components install core bq gsutil  # should be default?
 gcloud config set disable_usage_reporting true
 gcloud config set account EMAIL_ADDRESS
