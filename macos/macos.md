@@ -1118,7 +1118,7 @@ umask 077
 # Brew sets when you install it (some group-writable directories, including in
 # /usr/local on Intel) - unless you specifically need something to be group- or
 # other-writable
-[ -n "$HOMEBREW_PREFIX" ] && chmod go-w "$HOMEBREW_PREFIX"
+[ -n "$HOMEBREW_PREFIX" ] && chmod -R go-w "$HOMEBREW_PREFIX"
 
 # Run the eval again to pick up any new paths
 
