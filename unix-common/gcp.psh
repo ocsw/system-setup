@@ -24,6 +24,7 @@ gcloud beta auth application-default login
 gcloud beta auth login
 echo "y" | gcloud components install docker-credential-gcr
 gcloud auth configure-docker --quiet
+gcloud components update
 umask 077
 #
 mkdir -p ~/bin  # add ~/bin to your default PATH

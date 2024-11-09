@@ -1197,6 +1197,7 @@ umask 077
 
 ```shell
 umask 022
+brew update
 brew install gnupg pinentry-mac
 umask 077
 printf "%s\n" "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> \

@@ -11,6 +11,7 @@
 # Mac
 #
 umask 022
+brew update
 brew install node
 brew install yarn
 brew install nvm
