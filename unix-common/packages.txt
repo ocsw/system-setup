@@ -125,6 +125,7 @@ sqlite
 tcpdump
 tcsh
 telnet
+texinfo
 the_silver_searcher
 tig
 tightvncserver
