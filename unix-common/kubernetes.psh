@@ -62,7 +62,8 @@ umask 077
 #
 go install github.com/plexsystems/konstraint@latest
 #
-mkdir -p ~/.krew/bin  # just in case
+# See https://github.com/kvaps/kubectl-node-shell
+kubectl krew install node-shell
 #
 # run these, then add them to your shell startup; see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile and
