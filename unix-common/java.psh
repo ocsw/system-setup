@@ -22,7 +22,7 @@ brew install maven
 umask 077
 jenv enable-plugin export
 jenv enable-plugin maven
-# note: Corretto comes before any Oracle, so e.g. "1.8" gets Corretto, not
+# Note: Corretto comes before any Oracle, so e.g. "1.8" gets Corretto, not
 # Oracle
 for i in /Library/Java/JavaVirtualMachines/*/Contents/Home/; do
     jenv add "$i"
@@ -34,12 +34,12 @@ jenv global DEFAULT_VERSION
 # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/java.post.sh
 eval "$(jenv init -)"
 
-# see git-config.sh
+# See git-config.sh
 if ! grep '^\.java-version$' ~/.gitignore_global > /dev/null 2>&1; then
     echo '.java-version' >> ~/.gitignore_global
 fi
 
-# upgrades might require removing old versions and adding new ones; if all the JDKs are in the same place, you can do this to remove all current versions:
+# Upgrades might require removing old versions and adding new ones; if all the JDKs are in the same place, you can do this to remove all current versions:
 for i in $(jenv versions | grep -v '^..system$' | tr '*' ' ' |
         sed 's/(.*//'); do
     jenv remove "$i"
@@ -49,7 +49,7 @@ done
 #
 # Ubuntu (old/incomplete)
 #
-# download from:
+# Download from:
 # https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html
 umask 022
 mkdir -p /usr/lib/jdk
@@ -61,5 +61,5 @@ apt-get install libc6-i386
 update-alternatives --install /usr/bin/java java \
     /usr/lib/jdk/jdk-11.0.1/bin/java 1
 update-alternatives --config java
-# rest TBA
+# Rest TBD
 umask 077

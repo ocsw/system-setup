@@ -10,7 +10,7 @@
 #
 # pypvutil
 #
-# see https://github.com/ocsw/pypvutil
+# See https://github.com/ocsw/pypvutil
 mkdir -p ~/repos
 (
     cd ~/repos && git clone git@github.com:ocsw/pypvutil.git
@@ -49,7 +49,7 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git \
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# for Mojave
+# For Mojave
 umask 022
 sudo installer -pkg \
     /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg \
@@ -59,7 +59,7 @@ umask 077
 # You might need to log out and back in for pip to not try to put things in
 # /usr/local/bin (?)
 
-# see git-config.sh
+# See git-config.sh
 if ! grep '^\.python-version$' ~/.gitignore_global > /dev/null 2>&1; then
     echo '.python-version' >> ~/.gitignore_global
 fi
@@ -97,7 +97,7 @@ pyln "mypy-${py3ver}" mypyc
 pyln "mypy-${py3ver}" stubgen
 pyln "mypy-${py3ver}" stubtest
 pyln "pytest-${py3ver}" py.test
-# more from sphinx?
+# More from sphinx?
 for i in apidoc autobuild autogen build quickstart; do
     pyln "sphinx-${py3ver}" "sphinx-$i"
 done
@@ -111,7 +111,7 @@ EOF
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile
 ! [[ $PATH =~ (^|:)${HOME}/bin(:|$) ]] && export PATH="${HOME}/bin:${PATH}"
 
-# from the root of each repo, where i=repo_name:
+# From the root of each repo, where i=repo_name:
 (
     set -e
     pyvenv "$i" "$py3ver" .
