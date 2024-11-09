@@ -7,15 +7,21 @@
 # SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
 #
 
+# For the command below
+umask 022
+brew update
+brew install jq
+umask 077
+
 # To get the list:
 jq -r '.[].identifier.id' < ~/.vscode/extensions/extensions.json |
     sort -t. -k2 -u
 
-# To install:
+# To install (after adding VSCode to the PATH):
 # shellcheck disable=SC2013
 for i in $(grep -v '^#' extensions.txt | grep -v '^$'); do
     code --install-extension "$i"
 done
 
-# If vscode-bazel complains about buildifier:
+# If vscode-bazel complains about buildifier (see ../unix-common/go.psh):
 go install github.com/bazelbuild/buildtools/buildifier@latest
