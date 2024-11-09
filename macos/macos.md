@@ -1095,10 +1095,11 @@ umask 022
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# run this, then add it to your shell startup, as described below
-# on Apple Silicon
+# Run this, then add it to your shell startup, as described below
+#
+# On Apple Silicon
 eval "$(/opt/homebrew/bin/brew shellenv)"
-# on Intel
+# On Intel
 eval "$(/usr/local/bin/brew shellenv)"
 
 brew update
@@ -1106,15 +1107,16 @@ brew update
 for i in $(cat packages.txt | sed 's/ *#.*$//' | grep -v '^$'); do
     brew install "$i"
 done
-# run again with -q to find unavailable packages
+# Run again with -q to find unavailable packages
 brew upgrade
 brew cleanup
 brew doctor
 
 umask 077
 
-# run eval again to pick up any new paths
-# run this, then add it to your shell startup, as described below
+# Run the eval again to pick up any new paths
+
+# Run this, then add it to your shell startup, as described below
 . "$(brew --prefix)/etc/bash_completion"
 ```
 
