@@ -1080,7 +1080,7 @@ When done, export (General -> Settings) (?)
 [Download - App Store][xcode-app-store]
 
 * incl. additional components, command-line tools
-* `xcode-select --install` after OS upgrade
+* `umask 022; xcode-select --install; umask 077` after OS upgrade
 * -> System Settings -> Privacy &S -> Accessibility: allow
 
 [xcode]: https://developer.apple.com/xcode/
