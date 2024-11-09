@@ -1,4 +1,4 @@
-# shellcheck shell=sh
+# shellcheck shell=bash
 
 #
 # This is a pseudo shell script.
@@ -41,11 +41,11 @@ brew install opa
 brew install styrainc/packages/regal
 #brew install velero
 umask 077
+#
 # download Velero from:
 # https://github.com/vmware-tanzu/velero/releases/tag/v1.11.1
 # (but update)
 # (or install with brew??)
-# add ~/bin to your default PATH
 (
     set -e
     ARCH=$(uname -m)
@@ -56,19 +56,19 @@ umask 077
     rm -r "velero-v1.11.1-darwin-${ARCH}.tar.gz" \
         "velero-v1.11.1-darwin-${ARCH}/"
 )
+#
 # install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
 # install https://github.com/rikatz/kubepug
+#
 go install github.com/plexsystems/konstraint@latest
 #
-# run this, then add it to your shell startup, as described below
-export PATH="${PATH}:${HOME}/.krew/bin"
+mkdir -p ~/.krew/bin  # just in case
 #
-# to set up PATH; see
+# run these, then add them to your shell startup; see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile and
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh
-mkdir -p ~/.krew/bin  # just in case
-# shellcheck disable=SC1090
-. ~/.bash_profile
+! [[ $PATH =~ (^|:)${HOME}/bin(:|$) ]] && export PATH="${HOME}/bin:${PATH}"
+export PATH="${PATH}:${HOME}/.krew/bin"
 
 
 #
@@ -114,7 +114,7 @@ gcloud components update
 #    https://cloud.google.com/config-connector/docs/how-to/import-export/overview#installing-config-connector
 umask 077
 #
-mkdir -p ~/bin  # add ~/bin to your default PATH
+mkdir -p ~/bin
 # In theory, you're supposed to add $(brew --prefix)/share/google-cloud-sdk/bin
 # to your path, but most of the things in there are already symlinked into
 # $(brew --prefix)/bin, so we can just handle this on its own.  (However,
@@ -122,16 +122,14 @@ mkdir -p ~/bin  # add ~/bin to your default PATH
 # necessary for calling the plugin directly.)
 ln -s "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gke-gcloud-auth-plugin" ~/bin/
 #
-# run this, then add it to your shell startup, as described below (only
-# actually necessary for old clusters (pre-1.26) but it can't hurt; see
-# https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke)
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-#
-# to set up PATH and env var; see
+# run these, then add them to your shell startup; see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile and
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh
-# shellcheck disable=SC1090
-. ~/.bash_profile
+# (the env var is only actually necessary for old clusters (pre-1.26) but it
+# can't hurt; see
+# https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke)
+! [[ $PATH =~ (^|:)${HOME}/bin(:|$) ]] && export PATH="${HOME}/bin:${PATH}"
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 #
 gke-up  # see below
 

@@ -1,4 +1,4 @@
-# shellcheck shell=sh
+# shellcheck shell=bash
 
 #
 # This is a pseudo shell script.
@@ -27,7 +27,7 @@ gcloud auth configure-docker --quiet
 gcloud components update
 umask 077
 #
-mkdir -p ~/bin  # add ~/bin to your default PATH
+mkdir -p ~/bin
 # In theory, you're supposed to add $(brew --prefix)/share/google-cloud-sdk/bin
 # to your path, but most of the things in there are already symlinked into
 # $(brew --prefix)/bin, so we can just handle this on its own.  (However,
@@ -37,10 +37,9 @@ mkdir -p ~/bin  # add ~/bin to your default PATH
 # information.)
 ln -s "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/docker-credential-gcr" ~/bin/
 #
-# to set up PATH; see
+# Run this, then add it to your shell startup; see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile
-# shellcheck disable=SC1090
-. ~/.bash_profile
+! [[ $PATH =~ (^|:)${HOME}/bin(:|$) ]] && export PATH="${HOME}/bin:${PATH}"
 
 #
 # see also

@@ -29,14 +29,10 @@ for i in /Library/Java/JavaVirtualMachines/*/Contents/Home/; do
 done
 jenv global DEFAULT_VERSION
 
-# run this, then add it to your shell startup, as described below
-eval "$(jenv init -)"
-#
-# to set up PATH, JAVA_HOME, etc.; see
+# Run this, then add it to your shell startup; see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/java.pre.sh and
 # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/java.post.sh
-# shellcheck disable=SC1090
-. ~/.bash_profile
+eval "$(jenv init -)"
 
 # see git-config.sh
 if ! grep '^\.java-version$' ~/.gitignore_global > /dev/null 2>&1; then

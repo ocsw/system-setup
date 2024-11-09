@@ -1136,6 +1136,9 @@ umask 077
       [macos_path.post.sh][macos-path-post-sh], and
       [brew.post.sh][brew-post-sh])
     * (Shell restart might be necessary to fix a problem with `pybase`?)
+    * (Might have to wait until after the
+      [account-setup directions][account-setup]; see the
+      [General Setup](#general-setup) section)
 
 [homebrew]: https://brew.sh/
 [unix-setup]: ../unix-common/
