@@ -1114,6 +1114,12 @@ brew doctor
 
 umask 077
 
+# It's a good idea to run this to remove some arguably-unnecessary permissions
+# Brew sets when you install it (some group-writable directories, including in
+# /usr/local on Intel) - unless you specifically need something to be group- or
+# other-writable
+[ -n "$HOMEBREW_PREFIX" ] && chmod go-w "$HOMEBREW_PREFIX"
+
 # Run the eval again to pick up any new paths
 
 # Run this, then add it to your shell startup, as described below
