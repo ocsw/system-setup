@@ -57,7 +57,7 @@ umask 077
         "velero-v1.11.1-darwin-${ARCH}/"
 )
 #
-# Install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
+# Install https://k8slens.dev/
 # Install https://github.com/rikatz/kubepug
 #
 go install github.com/plexsystems/konstraint@latest
