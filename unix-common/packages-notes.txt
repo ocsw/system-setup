@@ -1,7 +1,11 @@
 - bash-completion and coreutils are necessary for Mac, but possibly not for
   other Unixes
+  (In particular, coreutils includes base32/basenc, md5sum, shred, and timeout)
 - Don't install gnupg on Mac if using GPG Suite
 - ksh has been deprecated in favor of ksh93 for Brew (which still installs a ksh
   binary)
 - texinfo is mainly for the info utility, which was removed in macOS starting
   with Ventura (macOS 13)
+- Leave out some things that can be assumed to be present (and if there are
+  packages for them, might override the system versions):
+  awk sed grep tar less gzip ssh

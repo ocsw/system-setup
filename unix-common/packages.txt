@@ -41,6 +41,7 @@ gh
 git
 git-flow
 gnu-sed
+gnu-tar
 gnupg
 go
 golang-migrate
