@@ -72,6 +72,9 @@ kubectl krew install node-shell
 export PATH="${PATH}:${HOME}/.krew/bin"
 #
 # Install https://k8slens.dev/?
+#
+# See also
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/kubernetes.post.sh
 
 
 #
