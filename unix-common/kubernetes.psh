@@ -57,8 +57,6 @@ umask 077
         "velero-v1.11.1-darwin-${ARCH}/"
 )
 #
-# Install https://k8slens.dev/
-#
 go install github.com/plexsystems/konstraint@latest
 go install github.com/kubepug/kubepug@latest
 #
@@ -72,6 +70,8 @@ kubectl krew install node-shell
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh
 ! [[ $PATH =~ (^|:)${HOME}/bin(:|$) ]] && export PATH="${HOME}/bin:${PATH}"
 export PATH="${PATH}:${HOME}/.krew/bin"
+#
+# Install https://k8slens.dev/?
 
 
 #
