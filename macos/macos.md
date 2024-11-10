@@ -1130,10 +1130,10 @@ umask 077
   `chsh -s "$(brew --prefix)/bin/bash"`?
     * on 10.15+ (Catalina), `chsh -s /bin/bash` if not doing the above, and add
       `export BASH_SILENCE_DEPRECATION_WARNING=1` to `~/.bash_profile`; see
-      also [macos_bash.post.sh][macos-bash-post-sh]
+      [macos.post.sh][macos-post-sh]
 * Restart the shell or run `. ~/.bash_profile`
     * (Sets the PATH, etc.; see [brew.first.sh][brew-first-sh],
-      [macos_path.post.sh][macos-path-post-sh], and
+      [macos.post.sh][macos-post-sh], and
       [brew.post.sh][brew-post-sh])
     * (Shell restart might be necessary to fix a problem with `pybase`?)
     * (Might have to wait until after the
@@ -1142,9 +1142,8 @@ umask 077
 
 [homebrew]: https://brew.sh/
 [unix-setup]: ../unix-common/
-[macos-bash-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/macos_bash.post.sh
+[macos-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/macos.post.sh
 [brew-first-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/brew.first.sh
-[macos-path-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/macos_path.post.sh
 [brew-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/brew.post.sh
 
 ### General Setup
