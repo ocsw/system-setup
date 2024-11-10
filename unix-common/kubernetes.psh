@@ -58,10 +58,12 @@ umask 077
 )
 #
 # Install https://k8slens.dev/
-# Install https://github.com/rikatz/kubepug
 #
 go install github.com/plexsystems/konstraint@latest
+go install github.com/kubepug/kubepug@latest
 #
+# kubepug; can also just use the standalone binary
+kubectl krew install deprecations
 # See https://github.com/kvaps/kubectl-node-shell
 kubectl krew install node-shell
 #
