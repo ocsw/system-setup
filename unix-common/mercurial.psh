@@ -7,7 +7,7 @@
 # SELECT THE RELEVANT BITS AND RUN THEM FROM THE COMMAND LINE
 #
 
-# global hg (~/.hgrc)
+# Global hg (~/.hgrc)
 cat >> ~/.hgrc <<EOF
 [ui]
 username = Danielle Zephyr Malament <EMAIL>  # work or personal, depending

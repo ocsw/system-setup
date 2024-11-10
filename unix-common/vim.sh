@@ -21,6 +21,6 @@ mkdir -p ~/.vim/bundle
     git clone https://github.com/tpope/vim-surround.git
 )
 
-# see also https://github.com/ocsw/dotfiles/blob/main/dot.vimrc,
+# See also https://github.com/ocsw/dotfiles/blob/main/dot.vimrc,
 # https://github.com/ocsw/dotfiles/blob/main/dot.vimrc.local, and
 # https://github.com/ocsw/dotfiles/tree/main/dot.vimrc.d

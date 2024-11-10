@@ -11,7 +11,7 @@
 # Mac
 #
 umask 022
-# for GKE, gcloud's kubectl is recommended, but brew's is needed to install
+# For GKE, gcloud's kubectl is recommended, but brew's is needed to install
 # the other brew packages
 #gcloud components install kubectl
 brew update
@@ -42,7 +42,7 @@ brew install styrainc/packages/regal
 #brew install velero
 umask 077
 #
-# download Velero from:
+# Download Velero from:
 # https://github.com/vmware-tanzu/velero/releases/tag/v1.11.1
 # (but update)
 # (or install with brew??)
@@ -57,15 +57,15 @@ umask 077
         "velero-v1.11.1-darwin-${ARCH}/"
 )
 #
-# install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
-# install https://github.com/rikatz/kubepug
+# Install https://k8slens.dev/ or https://github.com/MuhammedKalkan/OpenLens
+# Install https://github.com/rikatz/kubepug
 #
 go install github.com/plexsystems/konstraint@latest
 #
 # See https://github.com/kvaps/kubectl-node-shell
 kubectl krew install node-shell
 #
-# run these, then add them to your shell startup; see
+# Run these, then add them to your shell startup; see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile and
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh
 ! [[ $PATH =~ (^|:)${HOME}/bin(:|$) ]] && export PATH="${HOME}/bin:${PATH}"
@@ -83,7 +83,7 @@ KUBE_DEBUG_IMAGE="nicolaka/netshoot"
 
 
 #
-# back up config; see
+# Back up config; see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
 #
 mkdir -p ~/.kube
@@ -92,13 +92,13 @@ chmod 600 ~/.kube/config
 ln_tbu ~/.kube/config
 
 #
-# see also
+# See also
 # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/updates.post.sh
 #
 
 
 #
-# from the root of each repo containing Rego files (add options as necessary;
+# From the root of each repo containing Rego files (add options as necessary;
 # see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/vscode-setting.post.sh):
 #
@@ -111,7 +111,7 @@ vscode-setting -j "highlight-bad-chars.additionalUnicodeChars" '[]'
 umask 022
 echo "y" | gcloud components install gke-gcloud-auth-plugin
 gcloud components update
-# install KCC (?)
+# Install KCC (?)
 #    https://cloud.google.com/config-connector/docs/how-to/import-export/overview#installing-config-connector
 umask 077
 #
@@ -123,10 +123,10 @@ mkdir -p ~/bin
 # necessary for calling the plugin directly.)
 ln -s "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gke-gcloud-auth-plugin" ~/bin/
 #
-# run these, then add them to your shell startup; see
+# Run these, then add them to your shell startup; see
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile and
 # https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/kubernetes.post.sh
-# (the env var is only actually necessary for old clusters (pre-1.26) but it
+# (The env var is only actually necessary for old clusters (pre-1.26) but it
 # can't hurt; see
 # https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke)
 ! [[ $PATH =~ (^|:)${HOME}/bin(:|$) ]] && export PATH="${HOME}/bin:${PATH}"
@@ -138,9 +138,9 @@ gke-up  # see below
 # GKE update
 #
 gke_up () {  # can use gke-up in bash
-    # get credentials for all clusters
-    # (probably want to remove the production filter)
-    # note: final sh is $0, then xargs adds $1 and $2
+    # Get credentials for all clusters
+    # (Probably want to remove the production filter)
+    # Note: Final sh is $0, then xargs adds $1 and $2
     # shellcheck disable=SC2016
     gcloud container clusters list \
             --project=PROJECT_NAME \
@@ -154,14 +154,14 @@ gke_up () {  # can use gke-up in bash
 #
 # GKE lists
 #
-# can actually just use kubectx in a pipeline instead of this
+# Can actually just use kubectx in a pipeline instead of this
 gke_contexts () {  # can use gke-contexts in bash
-    # get all locally-configured contexts
+    # Get all locally-configured contexts
     kubectl config get-contexts | tail -n +2 | awk '{print $2}' | sort
 }
 gke_clusters () {  # can use gke-clusters in bash
-    # get all clusters
-    # (probably want to remove the production filter)
+    # Get all clusters
+    # (Probably want to remove the production filter)
     gcloud container clusters list --project=PROJECT_NAME \
         --filter="resourceLabels[env]=production" --format="value(name)" | sort
 }
