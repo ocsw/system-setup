@@ -1073,7 +1073,28 @@ See [IntelliJ Setup][intellij-setup]
 
 When done, export (General -> Settings) (?)
 
+In your iTerm2 sessions, run this, then add it to your shell startup; see [iterm2.post.sh in dot.bashrc.d][iterm2-post-sh-bashrc]
+
+```shell
+. "/Applications/iTerm.app/Contents/Resources/iterm2_shell_integration.bash"
+```
+
+Also this, but iTerm2 does it on its own now (see [iterm2.post.sh in dot.bash_profile.d][iterm2-post-sh-bash-profile]):
+
+```shell
+export PATH="${PATH}:/Applications/iTerm.app/Contents/Resources/utilities"
+```
+
+See also the [shell-integration docs][iterm2-shell-integration-docs] and the [shell-integration scripts][iterm2-shell-integration-source] re the shell integration and the [utilities docs][iterm2-utilities-docs] (which are incomplete) and the [utilities scripts][iterm2-utilities-source] re the utilities.  (There's a more complete list/description at the bottom of the [install script][iterm2-utilities-more-docs] but it's also not fully complete.)
+
 [iterm2]: https://iterm2.com/
+[iterm2-post-sh-bashrc]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/iterm2.post.sh
+[iterm2-post-sh-bash-profile]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/iterm2.post.sh
+[iterm2-shell-integration-docs]: https://iterm2.com/documentation-shell-integration.html
+[iterm2-shell-integration-source]: https://github.com/gnachman/iTerm2-shell-integration/tree/main/shell_integration
+[iterm2-utilities-docs]: https://iterm2.com/documentation-utilities.html
+[iterm2-utilities-source]: https://github.com/gnachman/iTerm2-shell-integration/tree/main/utilities
+[iterm2-utilities-more-docs]: https://github.com/gnachman/iTerm2-shell-integration/blob/main/shell_integration/install_shell_integration_and_utilities.sh
 
 ### [Xcode][xcode] (App Store)
 
