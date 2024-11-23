@@ -120,6 +120,8 @@ NOTE: has to be done separately for each profile
 
 #### [Tab Copy][tab-copy]
 
+* Show tab counts
+
 #### ([Tidy Sidebar][tidy-sidebar])
 
 * No Memo, Wiki, Links
