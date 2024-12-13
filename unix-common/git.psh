@@ -119,6 +119,10 @@ EOF
 # the directory these directions are in:
 cp ../macos/ssh-add-all.plist ~/Library/LaunchAgents/
 
+# One caveat: For some reason this LaunchAgent doesn't seem to run during the
+# final boot of an OS upgrade.  In that case, the simplest thing to do is just
+# run 'ssh-add --apple-load-keychain' from the command line.
+
 # (Explanation: With the AddKeysToAgent setting on, regular SSH keys will be
 # added when they are used.  SSH signing keys are never used in the usual way
 # however, so they aren't automatically added regardless of settings.)
