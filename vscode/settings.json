@@ -121,5 +121,6 @@
     },
     "workbench.list.horizontalScrolling": true,
     "workbench.settings.editor": "json",
-    "workbench.settings.useSplitJSON": true
+    "workbench.settings.useSplitJSON": true,
+    "yaml.schemaStore.enable": false
 }
