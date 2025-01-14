@@ -328,7 +328,7 @@
             * Google Chrome:
                 * Task Manager: `` opt-shift-` ``
             * (other shortcuts)
-        * Function Keys: Use as standard (to prevent accidental Do Not Disturb)
+        * Function Keys: Use as standard? (to prevent accidental Do Not Disturb)
         * Modifier Keys:
             * Caps Lock: none (?) cmd? esc? (per keyboard)
             * Reverse Option and Command on Windows keyboards
