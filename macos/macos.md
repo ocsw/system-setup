@@ -143,6 +143,9 @@ See also [Re-check System Settings][recheck-settings]
         * On-board Memory Mode:
             * (Restore to defaults)
             * Turn on and set Slot 1 to the Desktop Default, then turn off
+* C920:
+    * Image:
+        * Sharpness: 85% (?)
 * (Exclude from uBar?)
 
 [ghub]: https://www.logitechg.com/en-us/innovation/g-hub.html
