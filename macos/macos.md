@@ -128,7 +128,7 @@ See also [Re-check System Settings][recheck-settings]
             * No usage data (?)
             * No error logs (?)
         * Persistent Profile: Default
-        * Desktop Notifications: Enabled (?)
+        * Desktop Notifications: Enabled?
 * G502 LIGHTSPEED:
     * Sensitivity: 3200 DPI
     * Assignments: G7/G8: use for volume (?) (or just remove DPI Down/Up?)
