@@ -1339,7 +1339,9 @@ chmod -R go-rwx ~
 
 ### Menu Bar Order
 
-(from L to R, with Bartender settings if not default)
+(From L to R, with Bartender settings if not default)
+
+(Apple A/V/Screen icon - Bartender doesn't seem to be able to set its position, and it doesn't seem to stay where it's put (maybe something to do with the notch?), so I guess it's best to just leave it at the left)
 
 * New Items
 * (Docker)
