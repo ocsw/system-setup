@@ -21,6 +21,13 @@ See [Settings App Setup][settings-app]
 * (registration)
 * utilities
 
+### [Logitech G HUB][g-hub] (w/G502 mouse, C920 webcam)
+
+See [G HUB Setup][g-hub-setup]
+
+[g-hub]: https://www.logitechg.com/en-us/innovation/g-hub.html
+[g-hub-setup]: ../g-hub.md
+
 ### Bluetooth Devices
 
 e.g. headphones, controllers
