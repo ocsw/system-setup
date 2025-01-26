@@ -48,6 +48,7 @@ golang-migrate
 golangci-lint
 graphite2
 grpcurl
+hammerspoon
 harfbuzz
 hexedit
 hstr

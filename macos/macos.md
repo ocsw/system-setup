@@ -478,6 +478,23 @@ Note: [buy direct][moom-buy-direct]
 [moom]: https://manytricks.com/moom/
 [moom-buy-direct]: https://manytricks.com/blog/?p=4156
 
+### [Hammerspoon][hammerspoon]
+
+[GitHub][hs-github], [Spoon docs][hs-spoon-docs], [Spoon list][hs-spoons]
+
+Install manually or via [Homebrew](#homebrew)
+
+* -> System Settings -> Privacy &S -> Accessibility: allow
+* Preferences:
+    * Launch at login
+    * Check for updates
+    * Don't send crash data?
+
+[hammerspoon]: https://www.hammerspoon.org/
+[hs-github]: https://github.com/Hammerspoon/hammerspoon
+[hs-spoon-docs]: https://github.com/Hammerspoon/hammerspoon/blob/master/SPOONS.md
+[hs-spoons]: https://www.hammerspoon.org/Spoons/
+
 ### [Muzzle][muzzle]
 
 * -> System Settings -> Privacy &S -> Accessibility: allow
@@ -1323,6 +1340,7 @@ chmod -R go-rwx ~
 * Focus
 * Amphetamine
 * Muzzle (Hidden)
+* Hammerspoon (Hidden)
 * Moom (Hidden)
 * BetterTouchTool (Hidden)
 * Rectangle (Hidden)
