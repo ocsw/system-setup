@@ -348,6 +348,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * App inclusions: order (see bottom)
     * App exclusions:
         * Amphetamine
+        * BetterTouchTool
         * Dropbox
         * Google Drive
         * Logitech G HUB?
@@ -446,6 +447,7 @@ Note: [buy direct][witch-buy-direct]
 * Advanced:
     * Sync?
 * License
+* (Exclude from uBar)
 
 [btt]: https://folivora.ai/
 
