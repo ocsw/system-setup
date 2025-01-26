@@ -351,6 +351,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
         * Dropbox
         * Google Drive
         * Logitech G HUB?
+        * Moom
         * ToothFairy
 * Shortcuts:
     * No hiding
@@ -453,25 +454,24 @@ Note: [buy direct][witch-buy-direct]
 Note: [buy direct][moom-buy-direct]
 
 * -> System Settings -> Privacy &S -> Accessibility: allow
-* General:
-    * Launch on login
-    * Don't show prefs on launch
-    * Run as menu bar app
-* Mouse:
-    * (default delay: 0.1 sec)
+* General Settings:
     * Don't bring to front
+    * Check for updates
+    * Launch on login
+    * Don't show settings on launch
+    * Run as menu bar app
+* Palette:
+    * (default Delay: 0.1 sec)
 * Custom:
     * Remove header
     * Remove others? (or just hotkeys?)
     * Menu Separator (if keeping others)
     * Add two:
-        * Arrange windows
-        * Trigger on 1 / 2 displays
-        * Don't ignore obstructed
-        * Save snapshot
+        * Layout
         * Hotkey (`ctrl-opt-cmd-1` / `2`)
-* Updates:
-    * Auto check
+        * Don't narrow to unobstructed windows
+        * Apply when switching to 1 / 2 display(s)
+        * Update Layout
 * License
 * (Exclude from uBar)
 
