@@ -396,6 +396,28 @@ Note: [buy direct][witch-buy-direct]
 [witch]: https://manytricks.com/witch/
 [witch-buy-direct]: https://manytricks.com/blog/?p=4156
 
+### [Rectangle][rectangle]
+
+* -> System Settings -> Privacy &S -> Accessibility: allow
+* Keys:
+    * No key for LH/RH/CH/TH/BH, TL/TR/BL/BR, F3/C3/L3/F23/L23, 4ths, 6ths
+    * No key for AlmostMax/MaxH, L/R/U/D
+    * Maximize: `ctrl-opt-cmd-F`
+    * Make Smaller: `ctrl-opt-cmd-down`
+    * Make Larger: `ctrl-opt-cmd-up`
+    * Center: `ctrl-opt-cmd-C`
+    * Restore: `ctrl-opt-cmd-Z`
+    * Next Display: `ctrl-opt-cmd-right`
+    * Previous Display: `ctrl-opt-cmd-left`
+* Snapping:
+    * No snap by dragging (?)
+* General:
+    * Launch on login
+    * Check for updates
+    * Export (?)
+
+[rectangle]: https://rectangleapp.com/
+
 ### [BetterTouchTool][btt] ($)
 
 * -> System Settings -> Privacy &S:
@@ -425,28 +447,6 @@ Note: [buy direct][witch-buy-direct]
 * License
 
 [btt]: https://folivora.ai/
-
-### [Rectangle][rectangle]
-
-* -> System Settings -> Privacy &S -> Accessibility: allow
-* Keys:
-    * No key for LH/RH/CH/TH/BH, TL/TR/BL/BR, F3/C3/L3/F23/L23, 4ths, 6ths
-    * No key for AlmostMax/MaxH, L/R/U/D
-    * Maximize: `ctrl-opt-cmd-F`
-    * Make Smaller: `ctrl-opt-cmd-down`
-    * Make Larger: `ctrl-opt-cmd-up`
-    * Center: `ctrl-opt-cmd-C`
-    * Restore: `ctrl-opt-cmd-Z`
-    * Next Display: `ctrl-opt-cmd-right`
-    * Previous Display: `ctrl-opt-cmd-left`
-* Snapping:
-    * No snap by dragging (?)
-* General:
-    * Launch on login
-    * Check for updates
-    * Export (?)
-
-[rectangle]: https://rectangleapp.com/
 
 ### [Moom][moom] ($)
 
@@ -1324,8 +1324,8 @@ chmod -R go-rwx ~
 * Amphetamine
 * Muzzle (Hidden)
 * Moom (Hidden)
-* Rectangle (Hidden)
 * BetterTouchTool (Hidden)
+* Rectangle (Hidden)
 * Witch (Hidden)
 * Dropbox
 * Google Drive
