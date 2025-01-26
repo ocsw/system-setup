@@ -482,7 +482,11 @@ Note: [buy direct][moom-buy-direct]
 
 ### [Hammerspoon][hammerspoon]
 
-[GitHub][hs-github], [Spoon docs][hs-spoon-docs], [Spoon list][hs-spoons]
+[GitHub][hs-github]
+
+Config: [Getting Started][hs-intro], [API][hs-api], [Lua intro][lua-intro]
+
+Spoons: [Docs][hs-spoon-docs], [List][hs-spoons]
 
 Install manually or via [Homebrew](#homebrew)
 
@@ -494,6 +498,9 @@ Install manually or via [Homebrew](#homebrew)
 
 [hammerspoon]: https://www.hammerspoon.org/
 [hs-github]: https://github.com/Hammerspoon/hammerspoon
+[hs-intro]: https://www.hammerspoon.org/go/
+[hs-api]: https://www.hammerspoon.org/docs/index.html
+[lua-intro]: https://learnxinyminutes.com/lua/
 [hs-spoon-docs]: https://github.com/Hammerspoon/hammerspoon/blob/master/SPOONS.md
 [hs-spoons]: https://www.hammerspoon.org/Spoons/
 
