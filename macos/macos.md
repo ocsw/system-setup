@@ -473,7 +473,7 @@ Note: [buy direct][moom-buy-direct]
         * Hotkey (`ctrl-opt-cmd-1` / `2`)
         * Don't narrow to unobstructed windows
         * Apply when switching to 1 / 2 display(s)
-        * Update Layout
+        * Save/Update Layout
 * License
 * (Exclude from uBar)
 
