@@ -88,10 +88,13 @@
 ## Accessibility
 
 * Zoom: (?)
-    * Use keyboard shortcuts
-    * Use scroll gesture with opt
+    * Use [keyboard shortcuts][hotkeys-opt-cmd]
+    * Use scroll gesture with Option ([`opt`-scroll][hotkeys-opt])
     * Advanced:
         * Flash on notification
+
+[hotkeys-opt]: hotkeys.md#option-opt--
+[hotkeys-opt-cmd]: hotkeys.md#optioncommand-opt-cmd--
 
 ## Control Center
 
@@ -319,12 +322,12 @@
         * big: no Siri?, sleep (lock?), screenshot (left of media)
     * Keyboard Shortcuts:
         * Mission Control:
-            * Show Desktop: ^F11 (because of VSCode)
+            * Show Desktop: [`ctrl-F11`][hotkeys-ctrl] (because of VSCode)
         * Accessibility: Zoom on (?)
         * App Shortcuts:
             * All Applications:
-                * Lock Screen: `ctrl-opt-cmd-L`
-                * Sleep: `ctrl-opt-cmd-Q`
+                * Lock Screen: [`ctrl-opt-cmd-L`][hotkeys-ctrl-opt-cmd]
+                * Sleep: [`ctrl-opt-cmd-Q`][hotkeys-ctrl-opt-cmd]
             * Google Chrome:
                 * Task Manager: `` opt-shift-` ``
             * (other shortcuts)
@@ -342,6 +345,9 @@
         * Remove omw
 * Dictation:
     * Shortcut: Off / Press MIC (?) (no Off setting on Apple Silicon?)
+
+[hotkeys-ctrl]: hotkeys.md#control-ctrl--
+[hotkeys-ctrl-opt-cmd]: hotkeys.md#controloptioncommand-ctrl-opt-cmd--
 
 ## Mouse
 

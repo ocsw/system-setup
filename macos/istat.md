@@ -45,7 +45,9 @@ These are all alerts (except the hotkey); do the other sections first
 * Memory pressure above: 80% for 10 sec (default is 50% / 30)
 * Percentage used: 90% (default) for any disk
 * Internet status changes?
-* Show time menu when `ctrl-opt-cmd-T` is pressed
+* Show time menu when [`ctrl-opt-cmd-T`][hotkeys-ctrl-opt-cmd] is pressed
+
+[hotkeys-ctrl-opt-cmd]: hotkeys.md#controloptioncommand-ctrl-opt-cmd--
 
 ### Weather
 

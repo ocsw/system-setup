@@ -132,7 +132,7 @@ See [G HUB Setup][g-hub-setup]
 * No enable on sleep
 * Auto off
 * Preferences:
-    * Hotkey (`ctrl-opt-cmd-Y`)
+    * Hotkey ([`ctrl-opt-cmd-Y`][hotkeys-ctrl-opt-cmd])
     * ProductID
         * -> `ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idProduct`
         * `0x407` for nano
@@ -155,7 +155,7 @@ e.g. headphones, controllers
 * Add devices:
     * Icon
     * Show battery
-    * Hotkey (?) (e.g. `ctrl-opt-cmd-H`)
+    * Hotkey (?) (e.g. [`ctrl-opt-cmd-H`][hotkeys-ctrl-opt-cmd])
     * Advanced:
         * Improve sound quality (depending)
 * Launch at login
@@ -195,7 +195,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
             * allow Audio Routing Kit (ARK) (if present)
 * General:
     * Start at login
-    * Hotkey (`ctrl-opt-cmd-S`)
+    * Hotkey ([`ctrl-opt-cmd-S`][hotkeys-ctrl-opt-cmd])
 * Audio:
     * Super Volume Keys
 * Appearance:
@@ -322,6 +322,8 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 ## UI Tools and Tweaks
 
+[hotkeys-mod]: hotkeys.md#modifiers-only
+
 ### [uBar][ubar] ($)
 
 * -> System Settings -> Privacy &S:
@@ -356,7 +358,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
         * ToothFairy
 * Shortcuts:
     * No hiding
-    * Activity: right option (or...?)
+    * Activity: [right `opt`][hotkeys-mod] (or...?)
     * No switch (?)
 * License
 
@@ -374,15 +376,15 @@ Note: [buy direct][witch-buy-direct]
         * Orientation: down
         * Don't list tabs (very slow with many tabs, also maybe unnecessary?)
         * Don't list apps without windows
-        * Keyboard: `opt-tab`, `shift-opt-tab`
+        * Keyboard: [`opt-tab` / `shift-opt-tab`][hotkeys-opt]
         * Show in menu bar
     * 2:
         * Minimize frontmost
-        * Keyboard: `opt-Z`
+        * Keyboard: [`opt-Z`][hotkeys-opt]
         * Not in menu bar
     * 3:
         * Deminimize frontmost
-        * Keyboard: `shift-opt-Z`
+        * Keyboard: [`shift-opt-Z`][hotkeys-opt]
         * Not in menu bar
 * Appearance:
     * No app names in vertical lists
@@ -397,6 +399,7 @@ Note: [buy direct][witch-buy-direct]
 
 [witch]: https://manytricks.com/witch/
 [witch-buy-direct]: https://manytricks.com/blog/?p=4156
+[hotkeys-opt]: hotkeys.md#option-opt--
 
 ### [Rectangle][rectangle]
 
@@ -404,13 +407,13 @@ Note: [buy direct][witch-buy-direct]
 * Keys:
     * No key for LH/RH/CH/TH/BH, TL/TR/BL/BR, F3/C3/L3/F23/L23, 4ths, 6ths
     * No key for AlmostMax/MaxH, L/R/U/D
-    * Maximize: `ctrl-opt-cmd-F`
-    * Make Smaller: `ctrl-opt-cmd-down`
-    * Make Larger: `ctrl-opt-cmd-up`
-    * Center: `ctrl-opt-cmd-C`
-    * Restore: `ctrl-opt-cmd-Z`
-    * Next Display: `ctrl-opt-cmd-right`
-    * Previous Display: `ctrl-opt-cmd-left`
+    * Maximize: [`ctrl-opt-cmd-F`][hotkeys-ctrl-opt-cmd]
+    * Make Smaller: [`ctrl-opt-cmd-down`][hotkeys-ctrl-opt-cmd]
+    * Make Larger: [`ctrl-opt-cmd-up`][hotkeys-ctrl-opt-cmd]
+    * Center: [`ctrl-opt-cmd-C`][hotkeys-ctrl-opt-cmd]
+    * Restore: [`ctrl-opt-cmd-Z`][hotkeys-ctrl-opt-cmd]
+    * Next Display: [`ctrl-opt-cmd-right`][hotkeys-ctrl-opt-cmd]
+    * Previous Display: [`ctrl-opt-cmd-left`][hotkeys-ctrl-opt-cmd]
 * Snapping:
     * No snap by dragging (?)
 * General:
@@ -441,8 +444,8 @@ Note: [buy direct][witch-buy-direct]
         * Snapping:
             * Disable (?)
         * Moving & Resizing:
-            * Move: `ctrl-opt`
-            * Resize: `ctrl-opt-cmd`
+            * Move: [`ctrl-opt`][hotkeys-mod]
+            * Resize: [`ctrl-opt-cmd`][hotkeys-mod]
             * Bring to front
 * Advanced:
     * Sync?
@@ -470,7 +473,7 @@ Note: [buy direct][moom-buy-direct]
     * Menu Separator (if keeping others)
     * Add two:
         * Layout
-        * Hotkey (`ctrl-opt-cmd-1` / `2`)
+        * Hotkey ([`ctrl-opt-cmd-1` / `ctrl-opt-cmd-2`][hotkeys-ctrl-opt-cmd])
         * Don't narrow to unobstructed windows
         * Apply when switching to 1 / 2 display(s)
         * Save/Update Layout
@@ -523,7 +526,7 @@ Install manually or via [Homebrew](#homebrew)
     * Forced Sleep: End session
 * (Triggers)
 * Hotkeys:
-    * Start/End: `ctrl-opt-cmd-A`
+    * Start/End: [`ctrl-opt-cmd-A`][hotkeys-ctrl-opt-cmd]
     * If active, end
 * Appearance:
     * Icon: Eye (or Tea Kettle? Pill 2?)
@@ -560,7 +563,7 @@ See [iStat Menus Setup][istat-setup]
         * Requires a reboot to take effect
 * Menu Bar Layout: (see bottom)
 * Hot Keys:
-    * Show all: `ctrl-opt-cmd-M`
+    * Show all: [`ctrl-opt-cmd-M`][hotkeys-ctrl-opt-cmd]
 * License
 
 [bartender]: https://www.macbartender.com/
@@ -1517,3 +1520,5 @@ This is also a good time to export browser bookmarks to have a backup.
 * Remove WiFi passwords (?)
 
 [migration]: #machine-migration
+
+[hotkeys-ctrl-opt-cmd]: hotkeys.md#controloptioncommand-ctrl-opt-cmd--
