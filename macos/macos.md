@@ -485,11 +485,7 @@ Note: [buy direct][moom-buy-direct]
 
 ### [Hammerspoon][hammerspoon]
 
-[GitHub][hs-github]
-
-Config: [Getting Started][hs-intro], [API][hs-api], [Lua intro][lua-intro]
-
-Spoons: [Docs][hs-spoon-docs], [List][hs-spoons]
+[GitHub][hammerspoon-github]
 
 Install manually or via [Homebrew](#homebrew)
 
@@ -499,13 +495,12 @@ Install manually or via [Homebrew](#homebrew)
     * Check for updates
     * Don't send crash data?
 
+The [config][hammerspoon-config] is in the dotfiles repo and is installed by the [dotfiles install script][dotfiles-install].  References for writing config files can be found [here][hammerspoon-refs].
+
 [hammerspoon]: https://www.hammerspoon.org/
-[hs-github]: https://github.com/Hammerspoon/hammerspoon
-[hs-intro]: https://www.hammerspoon.org/go/
-[hs-api]: https://www.hammerspoon.org/docs/index.html
-[lua-intro]: https://learnxinyminutes.com/lua/
-[hs-spoon-docs]: https://github.com/Hammerspoon/hammerspoon/blob/master/SPOONS.md
-[hs-spoons]: https://www.hammerspoon.org/Spoons/
+[hammerspoon-github]: https://github.com/Hammerspoon/hammerspoon
+[hammerspoon-config]: https://github.com/ocsw/dotfiles/tree/main/hammerspoon
+[hammerspoon-refs]: https://github.com/ocsw/dotfiles/blob/main/hammerspoon/hammers/references.md
 
 ### [Muzzle][muzzle]
 
@@ -1474,8 +1469,8 @@ System Settings sections are correct:
         * Kubernetes contexts (`~/.kube/config`)
         * Python virtualenvs
         * History: shell, Python, iPython, etc.
-        * Local config (shell, SSH, vim, etc.; see
-          [this script][dotfiles-install])
+        * Local config (shell, SSH, vim, etc.; see the
+          [dotfiles install script][dotfiles-install])
     * Check `/tmp`, `/usr/tmp`, `$TMPDIR`
     * Check `/etc` and `/usr/local/etc` / `/opt/homebrew/etc`
     * Check anything non-Homebrew in `/opt`
@@ -1488,8 +1483,6 @@ System Settings sections are correct:
 * Save and copy desktop, Meet, Zoom, etc. backgrounds
 
 This is also a good time to export browser bookmarks to have a backup.
-
-[dotfiles-install]: https://github.com/ocsw/dotfiles/blob/main/INSTALL.sh
 
 ## Machine Decommissioning
 
@@ -1521,4 +1514,5 @@ This is also a good time to export browser bookmarks to have a backup.
 
 [migration]: #machine-migration
 
+[dotfiles-install]: https://github.com/ocsw/dotfiles/blob/main/INSTALL.sh
 [hotkeys-ctrl-opt-cmd]: hotkeys.md#controloptioncommand-ctrl-opt-cmd--
