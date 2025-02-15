@@ -26,10 +26,9 @@ Also advisable:
 * Reverse Option and Command on Windows keyboards
 * Set up the Lock Screen and Sleep keyboard shortcuts
 
-See also [Re-check System Settings][recheck-settings]
+See also the [Re-check System Settings](#re-check-system-settings) section, below
 
 [macos-system-settings]: macos-system-settings.md
-[recheck-settings]: #re-check-system-settings
 
 ### App Store
 
@@ -1171,13 +1170,10 @@ umask 077
 ### General Setup
 
 * Follow the [account-setup directions][account-setup]
-    * Add the macOS-specific [SSH][mac-ssh] and [GPG][mac-gpg] directions below
+    * Add the macOS-specific [SSH](#ssh) and [GPG](#gpg) directions below
       when setting those up
 * Add `~/.to_back_up` to Google Drive (backup) and (partly) SpiderOak One
 * Add hostname to `127.0.0.1` in `/etc/hosts`?
-
-[mac-ssh]: #ssh
-[mac-gpg]: #gpg
 
 ### SSH
 
@@ -1506,13 +1502,12 @@ This is also a good time to export browser bookmarks to have a backup.
 * Log out of Steam, etc.
 * Remove repos (?)
 * Remove containers (if applicable) (?)
-* Remove other data (?) (See also [Migration section][migration])
+* Remove other data (?) (See also the [Migration](#machine-migration) section,
+  above)
 * Remove shell, etc. history (?)
 * Turn off any remote printing / scanning
 * Log out of VPNs
 * Remove WiFi passwords (?)
-
-[migration]: #machine-migration
 
 [dotfiles-install]: https://github.com/ocsw/dotfiles/blob/main/INSTALL.sh
 [hotkeys-ctrl-opt-cmd]: hotkeys.md#controloptioncommand-ctrl-opt-cmd--
