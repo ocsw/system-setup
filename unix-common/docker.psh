@@ -18,6 +18,7 @@
 umask 022
 brew update
 brew install dive
+# They recommend this over the formula in the Homebrew core tap
 brew install jesseduffield/lazydocker/lazydocker
 brew install podman
 umask 077

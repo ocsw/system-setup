@@ -63,6 +63,7 @@ iperf
 ipv6calc
 ipython
 ipython3
+# They recommend this over the formula in the Homebrew core tap
 jesseduffield/lazygit/lazygit
 jo
 jot
@@ -136,6 +137,7 @@ traceroute6
 tree
 unzip
 vim
+# Not the same program as the fq in the Homebrew core tap
 wader/tap/fq
 watch
 wget

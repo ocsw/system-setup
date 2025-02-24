@@ -17,16 +17,18 @@ umask 022
 brew update
 brew install kubernetes-cli
 brew install krew
+# Also available in the Homebrew core tap, but the k9s docs still have this...
 brew install derailed/k9s/k9s
 brew install fzf
 brew install kubectx
-brew tap johanhaleby/kubetail && brew install johanhaleby/kubetail/kubetail
+# Not the same program as the kubetail in the Homebrew core tap
+brew install johanhaleby/kubetail/kubetail
 brew install stern
 brew install kube-ps1
 brew install minikube
 brew install kind
 brew install k3d
-brew tap robscott/tap && brew install robscott/tap/kube-capacity
+brew install robscott/tap/kube-capacity
 brew install argoproj/tap/kubectl-argo-rollouts
 brew install kustomize
 brew install kubeconform
@@ -35,9 +37,11 @@ brew install kubent
 brew install kubebuilder
 brew install helm
 brew install helm-docs
+# Not the same program as the flux in the Homebrew core tap
 brew install fluxcd/tap/flux
 brew install istioctl
 brew install opa
+# Also available in the Homebrew core tap, but the regal docs still have this...
 brew install styrainc/packages/regal
 #brew install velero
 umask 077

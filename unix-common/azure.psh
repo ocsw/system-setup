@@ -13,5 +13,6 @@
 umask 022
 brew update
 brew install azure-cli
+# Not the same program as the kubelogin in the Homebrew core tap
 brew install azure/kubelogin/kubelogin
 umask 077

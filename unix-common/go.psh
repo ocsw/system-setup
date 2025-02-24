@@ -13,7 +13,9 @@
 umask 022
 brew update
 brew install go
-brew install golangci/tap/golangci-lint
+# They now recommend the formula in the Homebrew core tap over this
+#brew install golangci/tap/golangci-lint
+brew install golangci-lint
 umask 077
 #
 # Linux
