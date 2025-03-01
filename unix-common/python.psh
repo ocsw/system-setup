@@ -29,12 +29,20 @@ export PYPVUTIL_PREFIX="py"
 #
 umask 022
 brew update
-brew install black
-brew install mypy
+brew install python
+brew install ipython
 brew install pyenv
 brew install pyenv-virtualenv
+brew install jupyter
+brew install jupyterlab
 #?
-# brew install pipx
+#brew install pipx
+#brew install poetry
+#brew install uv
+#brew install ruff
+#brew install black
+#brew install yapf
+#brew install semgrep
 xcode-select --install
 umask 077
 #
@@ -69,6 +77,9 @@ pybase 3
 py3ver=$(pylatest_local 3)
 #
 mkdir -p ~/bin
+#
+#?
+#pyinst briefcase 3
 #
 pyinst coverage 3
 pyinst flake8 3

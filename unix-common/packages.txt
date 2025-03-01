@@ -94,9 +94,10 @@ no-more-secrets
 openvpn
 p7zip
 parallel
-pep8
 perl
+pipx
 pkg-config
+poetry
 pre-commit
 prettyping
 progress
@@ -108,17 +109,19 @@ pwgen
 pyenv
 pyenv-virtualenv
 python
-python_libs
 python-dev
 python3
 python3-dev
+python3-poetry
 rdiff-backup
 ripgrep
 rlwrap
 rsync
 ruby
+ruff
 screen
 screenfetch
+semgrep
 shellcheck
 socat
 spark
@@ -132,10 +135,12 @@ the_silver_searcher
 tig
 tightvncserver
 tmux
+tox
 traceroute
 traceroute6
 tree
 unzip
+uv
 vim
 # Not the same program as the fq in the Homebrew core tap
 wader/tap/fq
@@ -144,6 +149,8 @@ wget
 whois
 xz
 yacc
+yapf
+yapf3
 yq
 zip
 zsh
