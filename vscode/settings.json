@@ -82,9 +82,11 @@
     "makefile.configureOnOpen": false,
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
-        "rewrap.autoWrap.enabled": false
+        "rewrap.autoWrap.enabled": false,
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
     "markdown.extension.toc.updateOnSave": false,
+    "markdown.validate.enabled": true,
     "markdownlint.config": {
         "MD007": {
             "indent": 4
