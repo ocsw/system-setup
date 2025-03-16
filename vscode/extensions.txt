@@ -24,7 +24,6 @@ yzhang.markdown-all-in-one
 bierner.markdown-mermaid
 ms-python.mypy-type-checker
 tsandall.opa
-esbenp.prettier-vscode
 puppet.puppet-vscode
 ms-python.python
 artdiniz.quitcontrol-vscode
