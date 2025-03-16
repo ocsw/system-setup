@@ -88,11 +88,11 @@ aeolus backups
         * `Books`, `Desktop`, `Documents`, `Downloads`, `install`, `Movies`,
           `Music`, `Pictures`, `scraps`, (Hive)
         * (other data, install, etc.)
-        * [work: only `Books`, `Music`, `Pictures`]
+        * \[work: only `Books`, `Music`, `Pictures`]
     * Files:
         * `.to_back_up/*`, especially `*.local`, except for history files and
           `.hstr_favorites`
-        * [work: skip]
+        * \[work: skip]
 
 [spideroak-one]: https://spideroak.com/one/
 [spideroak-one-dl]: https://spideroak.com/opendownload/

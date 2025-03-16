@@ -16,7 +16,7 @@ NOTE: has to be done separately for each profile
 * Account / Sign In
 * Sync:
     * Manage: no passwords or payment
-    * No autocomplete [?]
+    * No autocomplete \[?]
     * No help improve
     * No make better
     * No enhanced spell check

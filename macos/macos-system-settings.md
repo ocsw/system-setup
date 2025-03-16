@@ -29,7 +29,7 @@
 
 * Devices; see [macOS Setup][macos-setup-bt-devices]
 
-[macos-setup-bt-devices]: macos.md#bluetooth-devices
+[macos-setup-bt-devices]: macos.md#other-bluetooth-devices
 
 ## Network
 

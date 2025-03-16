@@ -256,11 +256,11 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
         * `Books`, `Desktop`, `Documents`, `Downloads`, `install`, `Movies`,
           `Music`, `Pictures`, `scraps`, (Hive)
         * (other data, install, etc.)
-        * [work: only `Books`, `Music`, `Pictures`]
+        * \[work: only `Books`, `Music`, `Pictures`]
     * Files:
         * `.to_back_up/*`, especially `*.local`, except for history files and
           `.hstr_favorites`
-        * [work: skip]
+        * \[work: skip]
 
 [spideroak-one]: https://crossclave.com/one/
 [spideroak-one-dl]: https://crossclave.com/opendownload/
@@ -277,11 +277,11 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 * Sign in
 * Start syncing
 * Computer:
-    * Name: change to match hostname [?]
+    * Name: change to match hostname \[?]
     * Folders (all from homedir):
         * `.to_back_up`, `Books`, `Music`, `scraps`, `wip`
         * (+ more depending on contents / context)
-        * [work: add `Desktop`, `Documents`, `Downloads`, ?`Pictures`]
+        * \[work: add `Desktop`, `Documents`, `Downloads`, ?`Pictures`]
 * Google Drive:
     * Stream files (?)
 * Settings:
@@ -766,7 +766,7 @@ See [Slack Setup][slack-setup]
 * General:
     * Don't remind me
 * Share Screen:
-    * Don't silence notifications (if using Muzzle) [?]
+    * Don't silence notifications (if using Muzzle) \[?]
 * Background & Effects:
     * (Background)
 
