@@ -1,4 +1,7 @@
 {
+    "bookmarks.keepBookmarksOnLineDelete": true,
+    "bookmarks.saveBookmarksInProject": true,
+    "bookmarks.sideBar.expanded": true,
     "chat.commandCenter.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.acceptSuggestionOnEnter": "off",

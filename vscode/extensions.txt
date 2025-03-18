@@ -1,4 +1,5 @@
 rogalmic.bash-debug
+alefragnani.bookmarks
 kaiwood.center-editor-window
 webfreak.debug
 ms-python.debugpy
