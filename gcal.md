@@ -12,6 +12,7 @@
 ## View options
 
 * Reduce the brightness of past events
+* Set custom view: 4 weeks
 
 ## Working hours & location
 
