@@ -1100,12 +1100,14 @@ See also the [shell-integration docs][iterm2-shell-integration-docs] and the [sh
 
 [Download - App Store][xcode-app-store]
 
-* incl. additional components, command-line tools
-* `umask 022; xcode-select --install; umask 077` after OS upgrade
 * -> System Settings -> Privacy &S -> Accessibility: allow
+* Incl. additional components, command-line tools
+* Install [unxip][] via [Homebrew](#homebrew) (?)
+* `umask 022; xcode-select --install; umask 077` after OS upgrade
 
 [xcode]: https://developer.apple.com/xcode/
 [xcode-app-store]: https://apps.apple.com/us/app/xcode/id497799835
+[unxip]: https://github.com/saagarjha/unxip
 
 ### [Homebrew][homebrew]
 
