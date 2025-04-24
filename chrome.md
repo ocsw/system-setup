@@ -53,6 +53,7 @@ NOTE: has to be done separately for each profile
 ### Appearance
 
 * Show bookmarks bar
+* Don't show tab groups (?)
 * Show warning before quitting (Mac)
 
 ### Default browser
