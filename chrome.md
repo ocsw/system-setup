@@ -117,11 +117,11 @@ NOTE: has to be done separately for each profile
 * Private by default
 * Wrap in blockquote (?)
 
-#### [Tabby Cat][tabby-cat]
-
 #### [Tab Copy][tab-copy]
 
 * Show tab counts
+
+#### [Tabby Cat][tabby-cat]
 
 #### ([Tidy Sidebar][tidy-sidebar])
 
