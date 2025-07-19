@@ -927,10 +927,14 @@ See [Slack Setup][slack-setup]
     * No auto spelling
     * No check spelling
     * No auto caps
+* Navigation:
+    * Don't show previews (?)
+* Edit & View:
+    * Paste Options: Match Formatting (?)
 * Privacy:
     * Don't send data
 * Quick Access Toolbar:
-    * Just Undo/Redo
+    * Just Undo/Redo (?)
 * Printing:
     * Double-sided: on (?)
 
