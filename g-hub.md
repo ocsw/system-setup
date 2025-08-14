@@ -5,17 +5,20 @@
 ## General
 
 * Settings (top left):
-    * Enable automatic updates
-    * App Settings:
-        * Start Up: Always
-        * Lighting:
-            * Turn off after inactivity
-            * Allow apps to control
-        * Experience:
-            * No usage data (?)
-            * No error logs (?)
-        * Persistent Profile: Default
-        * Desktop Notifications: Enabled?
+    * General:
+        * General Settings:
+            * Launch app on login: on
+            * Automatically disable lighting (after inactivity): on
+            * Game lighting control: on
+        * Notifications:
+            * System Notifications: off (?)
+            * Recommendations: off
+        * Persistent Profile: Desktop - Default
+    * Updates:
+        * Enable Automatic Updates: on
+    * Analytics:
+        * No usage data (?)
+        * No error logs (?)
 
 ## Devices
 
