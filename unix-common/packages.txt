@@ -43,6 +43,7 @@ gcc
 gdb
 gh
 git
+git-filter-repo
 git-flow
 gnu-sed
 gnu-tar
@@ -51,6 +52,7 @@ go
 golang-migrate
 golangci-lint
 graphite2
+gron
 grpcurl
 hammerspoon
 harfbuzz
