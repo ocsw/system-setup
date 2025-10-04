@@ -1068,6 +1068,7 @@ See [IntelliJ Setup][intellij-setup]
         * Font? (default is 12pt Monaco)
     * Terminal:
         * Unlimited scrollback (?)
+        * Paste bracketing off
         * Silence bell (?)
     * Session:
         * Always prompt before closing (?)
