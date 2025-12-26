@@ -45,6 +45,7 @@ gh
 git
 git-filter-repo
 git-flow
+glow
 gnu-sed
 gnu-tar
 gnupg
