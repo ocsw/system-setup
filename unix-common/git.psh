@@ -31,7 +31,7 @@
 ########
 
 # Install git and diff-so-fancy
-# Optionally, install gh, lazygit, and git-filter-repo
+# Optionally, install gh, lazygit, git-filter-repo, and git-flow-next
 
 # If __git_ps1 wasn't included in the git installation, you should probably
 # install it.  You can probably copy or source it from the Git distro files.

@@ -45,7 +45,8 @@ gdb
 gh
 git
 git-filter-repo
-git-flow
+git-flow-next
+gittower/tap/git-flow-next
 glow
 gnu-sed
 gnu-tar
