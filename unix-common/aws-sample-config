@@ -7,6 +7,7 @@
 
 [default]
 region = us-east-1
+output = json
 
 [sso-session sso-PARTITION]
 sso_start_url = https://SOMETHING.awsapps.com/start
@@ -17,26 +18,20 @@ sso_registration_scopes = sso:account:access
 sso_session = sso-PARTITION
 sso_account_id = 111111111111
 sso_role_name = PowerUserAccess
-region = us-east-1
-output = json
+region = us-something-else
+output = foo
 
 [profile prod-ecr]
 sso_session = sso-PARTITION
 sso_account_id = 111111111111
 sso_role_name = ECRReadOnly
-region = us-east-1
-output = json
 
 [profile kube-dev]
 sso_session = sso-PARTITION
 sso_account_id = 222222222222
 sso_role_name = PowerUserAccess
-region = us-east-1
-output = json
 
 [profile kube-prod]
 sso_session = sso-PARTITION
 sso_account_id = 333333333333
 sso_role_name = PowerUserAccess
-region = us-east-1
-output = json
