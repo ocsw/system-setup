@@ -135,10 +135,13 @@ semgrep
 shellcheck
 socat
 spark
-speedtest-cli
 sqlite
 tcpdump
 tcsh
+# Ubuntu:
+# curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+# sudo apt-get install speedtest
+teamookla/speedtest/speedtest
 telnet
 texinfo
 the_silver_searcher
