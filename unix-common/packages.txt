@@ -62,6 +62,12 @@ grpcurl
 hammerspoon
 harfbuzz
 hexedit
+# They apparently recommend this over the formula in the Homebrew core tap
+homeport/tap/dyff
+# Not the same program as the retry in the Homebrew core tap
+homeport/tap/retry
+# They apparently recommend this over the formula in the Homebrew core tap
+homeport/tap/termshot
 hstr
 htop
 httpie
