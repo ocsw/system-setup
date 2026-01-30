@@ -150,6 +150,8 @@ e.g. headphones, controllers
 
 ### [ToothFairy][toothfairy] ($) (App Store)
 
+[Download - App Store][toothfairy-app-store]
+
 * -> System Settings -> Privacy &S -> Bluetooth: allow
 * Add devices:
     * Icon
@@ -162,8 +164,29 @@ e.g. headphones, controllers
 * (Exclude from uBar)
 
 [toothfairy]: https://c-command.com/toothfairy/
+[toothfairy-app-store]: https://apps.apple.com/us/app/toothfairy/id1191449274?mt=12
 
-### [SoundSource][soundsource] ($)
+### [Better OSD][better-osd-app-store] (App Store)
+
+(For macOS 26 Tahoe and up)
+
+[better-osd-app-store]: https://apps.apple.com/us/app/better-osd/id6752903119?mt=12
+
+### [Balance Lock][balance-lock] (optional App Store)
+
+[Download - direct][balance-lock] (Download link is at the bottom)
+
+[Download - App Store][balance-lock-app-store]
+
+* Launch on login
+* Preferences:
+    * Automatically launch
+    * No notifications
+
+[balance-lock]: https://www.tunabellysoftware.com/balance_lock/
+[balance-lock-app-store]: https://apps.apple.com/app/balance-lock/id1019371109?mt=12
+
+### ([SoundSource][soundsource] ($))
 
 [soundsource]: https://rogueamoeba.com/soundsource/
 
@@ -202,19 +225,22 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * Show all meters (?)
 * License
 
-### [Balance Lock][balance-lock] (optional App Store)
+### [Signal Shifter][signal-shifter] (App Store)
 
-[Download - direct][balance-lock] (Download link is at the bottom)
+[Download - App Store][signal-shifter-app-store]
 
-[Download - App Store][balance-lock-app-store]
+[signal-shifter]: https://vespen.github.io/signal-shifter/
+[signal-shifter-app-store]: https://apps.apple.com/us/app/signal-shifter/id6446061552?mt=12
 
-* Launch on login
-* Preferences:
-    * Automatically launch
-    * No notifications
+### ([Mic Drop][mic-drop] (App Store))
 
-[balance-lock]: https://www.tunabellysoftware.com/balance_lock/
-[balance-lock-app-store]: https://apps.apple.com/app/balance-lock/id1019371109?mt=12
+[Download - App Store][mic-drop-app-store]
+
+* General:
+    * Launch at login
+
+[mic-drop]: https://getmicdrop.com/
+[mic-drop-app-store]: https://apps.apple.com/us/app/mic-drop-mute-manager/id1489816366?mt=12
 
 ### [Blue Sherpa][blue-sherpa]
 
@@ -1362,7 +1388,9 @@ chmod -R go-rwx ~
 * PIA
 * WiFi
 * ToothFairy
-* SoundSource: apps, output, input, main
+* (Mic Drop)
+* Signal Shifter
+* (SoundSource: apps, output, input, main)
     * (apps include e.g. music apps, browsers, messaging and VC apps)
 * Balance Lock (Hidden)
 * Blue Sherpa
