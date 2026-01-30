@@ -166,6 +166,12 @@ e.g. headphones, controllers
 [toothfairy]: https://c-command.com/toothfairy/
 [toothfairy-app-store]: https://apps.apple.com/us/app/toothfairy/id1191449274?mt=12
 
+### macOS A/V/Screen Menu Bar Icons
+
+(e.g. open Sound in System Settings; only have to do this on one of them)
+
+* Mic Mode: Standard (especially for music production)
+
 ### [Better OSD][better-osd-app-store] (App Store)
 
 (For macOS 26 Tahoe and up)
@@ -1368,7 +1374,7 @@ chmod -R go-rwx ~
 
 (From L to R, with Bartender settings if not default)
 
-(Apple A/V/Screen icon - Bartender doesn't seem to be able to set its position, and it doesn't seem to stay where it's put (maybe something to do with the notch?), so I guess it's best to just leave it at the left)
+(macOS A/V/Screen icon - Bartender doesn't seem to be able to set its position, and it doesn't seem to stay where it's put (maybe something to do with the notch?), so I guess it's best to just leave it at the left)
 
 * New Items
 * (Docker)
