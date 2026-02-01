@@ -973,6 +973,22 @@ See [Slack Setup][slack-setup]
 [onenote]: https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app
 [onenote-dl]: https://www.onenote.com/download
 
+### [Obsidian][obsidian]
+
+* Options:
+    * Editor:
+        * Display:
+            * Indent using tabs: off
+        * Behavior:
+            * Spellcheck: off?
+    * Files and links
+        * Links
+            * Use Wikilinks: off
+* Core plugins:
+    * Backlinks: show (?)
+
+[obsidian]: https://obsidian.md/
+
 ### ([Omnigraffle][omnigraffle]) ($)
 
 [omnigraffle]: https://www.omnigroup.com/omnigraffle
@@ -1424,6 +1440,7 @@ chmod -R go-rwx ~
 * Amazon Music, Spotify, etc.
 * (Skype), Zoom, Franz, Slack
 * OneNote
+* Obsidian
 * Chrome, Firefox
 * VSCode / Sublime Text / PyCharm / GoLand / IntelliJ / etc.
 * (TextEdit) / Bluefish / MacVim / etc.
@@ -1454,6 +1471,7 @@ Signal?
 Discord? (in Franz?)
 
 * OneNote
+* Obsidian
 * Chrome, Firefox, Safari
 * VSCode, Sublime Text, PyCharm, GoLand, IntelliJ, Xcode, etc.
 * TextEdit, Bluefish, MacVim, etc.
