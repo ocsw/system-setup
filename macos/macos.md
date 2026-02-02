@@ -176,6 +176,9 @@ e.g. headphones, controllers
 
 (For macOS 26 Tahoe and up)
 
+* General:
+    * Launch at Login: on
+
 [better-osd-app-store]: https://apps.apple.com/us/app/better-osd/id6752903119?mt=12
 
 ### [Balance Lock][balance-lock] (optional App Store)
@@ -234,6 +237,11 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 ### [Signal Shifter][signal-shifter] (App Store)
 
 [Download - App Store][signal-shifter-app-store]
+
+* General
+    * Open at Login: on
+* Notifications:
+    * Default low batt notif: Below 20% (?)
 
 [signal-shifter]: https://vespen.github.io/signal-shifter/
 [signal-shifter-app-store]: https://apps.apple.com/us/app/signal-shifter/id6446061552?mt=12
@@ -1415,6 +1423,7 @@ chmod -R go-rwx ~
 * (SoundSource: apps, output, input, main)
     * (apps include e.g. music apps, browsers, messaging and VC apps)
 * Balance Lock (Hidden)
+* Better OSD (Hidden)
 * Blue Sherpa
 * Logitech G HUB (Hidden)
 * YubiSwitch (Hidden)
