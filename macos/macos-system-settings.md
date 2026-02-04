@@ -330,6 +330,8 @@
                 * Sleep: [`ctrl-opt-cmd-Q`][hotkeys-ctrl-opt-cmd]
             * Google Chrome:
                 * Task Manager: `` opt-shift-` ``
+            * Microsoft OneNote
+                * Close This Notebook: `ctrl-opt-W` (to prevent Save All -> CTN)
             * (other shortcuts)
         * Function Keys: Use as standard? (to prevent accidental Do Not Disturb)
         * Modifier Keys:
