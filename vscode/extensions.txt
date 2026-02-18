@@ -10,6 +10,7 @@ ms-python.flake8
 codezombiech.gitignore
 eamodio.gitlens
 golang.go
+yusufdanis.hidden-character-detector
 wengerk.highlight-bad-chars
 ybaumes.highlight-trailing-white-spaces
 ephoton.indent-switcher
