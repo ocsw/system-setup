@@ -36,6 +36,7 @@
     * Sort: alpha
     * Don't list private separately (depending)
     * Don't move unread mentions to top
+    * Don't hide muted channels
 * Themes:
     * Colors: Aubergine (Aubergine Classic?)
 * Messages & Media:
