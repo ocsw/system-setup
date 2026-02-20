@@ -331,7 +331,7 @@
             * Google Chrome:
                 * Task Manager: `` opt-shift-` ``
             * Microsoft OneNote
-                * Close This Notebook: `ctrl-opt-W` (to prevent Save All -> CTN)
+                * Close This Notebook: `ctrl-opt-W` (to prevent Sync All -> CTN)
             * (other shortcuts)
         * Function Keys: Use as standard? (to prevent accidental Do Not Disturb)
         * Modifier Keys:
