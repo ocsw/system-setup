@@ -171,7 +171,7 @@
         * Suspicious Package: Desktop, Downloads (?)
             * But not Documents (?)
         * uBar: Full Disk Access
-        * XnViewMP: Desktop, Documents, Downloads, (?)Google Drive
+        * XnView: Desktop, Documents, Downloads, (?)Google Drive
     * No Dropbox Removable (?)
 * Full Disk Access:
     * Allow only:

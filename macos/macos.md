@@ -876,7 +876,7 @@ See [Slack Setup][slack-setup]
 
 [kobo]: https://www.kobo.com/us/en/p/desktop
 
-### [XnViewMP][xnviewmp]
+### [XnView][xnview]
 
 * -> System Settings -> Privacy &S -> Files and Folders: allow as necessary
 * Startup Wizard:
@@ -901,7 +901,7 @@ See [Slack Setup][slack-setup]
     * Catalog:
         * Disable Catalog/caching?
 
-[xnviewmp]: https://www.xnview.com/en/xnviewmp/
+[xnview]: https://www.xnview.com/en/xnview/
 
 ## Documents and Productivity
 
@@ -1489,7 +1489,7 @@ Discord? (in Franz?)
 * Wireshark
 * (Omnigraffle)
 * Pages, Numbers, Keynote
-* XnViewMP
+* XnView
 * Preview
 * Calculator
 * Blue Sherpa

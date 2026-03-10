@@ -48,7 +48,7 @@ SpiderOak One:
     Folders:
 Desktop, Documents, Downloads, Music, Pictures, Videos
 
-XnViewMP:
+XnView:
   General:
     General:
       Startup directory: Last (default) (?)
@@ -146,7 +146,7 @@ optional https://apps.microsoft.com/detail/9ncbcszsjrsb?hl=en-us&gl=US
 * ### iTunes
 * ### Kindle
 ### IrfanView
-* ### XnViewMP
+* ### XnView
 ** ### VLC
 ## Documents and Productivity
 ### Office
