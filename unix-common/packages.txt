@@ -109,6 +109,7 @@ nmap
 no-more-secrets
 openvpn
 p7zip
+pandoc
 parallel
 perl
 pipx
