@@ -133,10 +133,10 @@ See [G HUB Setup][g-hub-setup]
 * Preferences:
     * Hotkey ([`ctrl-opt-cmd-Y`][hotkeys-ctrl-opt-cmd])
     * ProductID
-        * -> `ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idProduct`
+        * -> `ioreg -p IOUSB -l -w 0 -x | grep YubiKey -A12 | grep idProduct`
         * `0x407` for nano
     * (VendorID)
-        * -> `ioreg -p IOUSB -l -w 0 -x | grep Yubikey -A10 | grep idVendor`
+        * -> `ioreg -p IOUSB -l -w 0 -x | grep YubiKey -A12 | grep idVendor`
         * `0x1050` for nano
     * Switch off after 5 sec
     * Start on login
