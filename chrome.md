@@ -31,7 +31,7 @@ NOTE: has to be done separately for each profile
     * (clear all)
 * Payment methods:
     * Don't save
-    * Don't allow checking
+    * Don't allow sites to check
     * (clear all)
 
 ### Performance
@@ -42,6 +42,7 @@ NOTE: has to be done separately for each profile
         * Email
         * Calendar
         * Discord
+        * WhatsApp
         * Messenger
         * Facebook
         * Workplace
@@ -123,6 +124,7 @@ NOTE: has to be done separately for each profile
 #### [Tab Copy][tab-copy]
 
 * Show tab counts
+* Make `Title & URL` the default (top) format
 
 #### [Tabby Cat][tabby-cat]
 
@@ -166,6 +168,7 @@ NOTE: has to be done separately for each profile
 * [Chrome Remote Desktop][remote-desktop]
 * [Send from Gmail (by Google)][send-from-gmail]
 * [The Camelizer][camelizer]
+    * Log in
 
 [remote-desktop]: https://chromewebstore.google.com/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai
 [send-from-gmail]: https://chromewebstore.google.com/detail/send-from-gmail-by-google/pgphcomnlaojlmmcjmiddhdapjpbgeoc
