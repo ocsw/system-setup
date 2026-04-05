@@ -76,7 +76,7 @@ See also the [Re-check System Settings](#re-check-system-settings) section, belo
 
 ## Networking
 
-### [PIA][pia]
+### ([PIA][pia])
 
 * General:
     * Launch on startup
@@ -185,7 +185,7 @@ e.g. headphones, controllers
 
 [Download - direct][balance-lock] (Download link is at the bottom)
 
-[Download - App Store][balance-lock-app-store]
+([Download - App Store][balance-lock-app-store])
 
 * Launch on login
 * Preferences:
@@ -279,6 +279,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 [Download][spideroak-one-dl]
 
 * -> System Settings -> Privacy &S:
+    * Security: allow opening
     * Photos: allow (after setup)
     * Automation -> System Events: allow
 * Log in
@@ -375,6 +376,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 * General:
     * Pinning: all if not ultrawide, else bottom only
     * Display: Main (?)
+    * Check for updates
     * No window grouping
     * No download notifications (?)
 * (Theme)
@@ -526,7 +528,7 @@ Note: [buy direct][moom-buy-direct]
 
 [GitHub][hammerspoon-github]
 
-Install manually or via [Homebrew](#homebrew)
+Install (manually or) via [Homebrew](#homebrew)
 
 * -> System Settings -> Privacy &S -> Accessibility: allow
 * Preferences:
@@ -659,7 +661,7 @@ See [iStat Menus Setup][istat-setup]
 
 ### [The Unarchiver][unarchiver]
 
-Download from main site or [App Store][unarchiver-app-store]
+Download from (main site or) [App Store][unarchiver-app-store]
 
 [unarchiver]: https://theunarchiver.com/
 [unarchiver-app-store]: https://apps.apple.com/us/app/the-unarchiver/id425424353
@@ -817,6 +819,8 @@ See [Slack Setup][slack-setup]
 
 ### [Spotify][spotify]
 
+* -> System Settings -> Privacy &S:
+    * Local Network: allow
 * Autoplay: on
 * Audio Quality:
     * Streaming quality: High (?) (Very high?)
@@ -1210,8 +1214,8 @@ umask 077
 . "$(brew --prefix)/etc/bash_completion"
 ```
 
-* Add `/usr/local/bin/bash` / `/opt/homebrew/bin/bash` to `/etc/shells` and
-  `chsh -s "$(brew --prefix)/bin/bash"`?
+* Add `/opt/homebrew/bin/bash` / `/usr/local/bin/bash` to `/etc/shells` and
+  `chsh -s "$(brew --prefix)/bin/bash"` (?)
     * on 10.15+ (Catalina), `chsh -s /bin/bash` if not doing the above, and add
       `export BASH_SILENCE_DEPRECATION_WARNING=1` to `~/.bash_profile`; see
       [macos.post.sh][macos-post-sh]

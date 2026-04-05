@@ -108,6 +108,8 @@ NOTE: has to be done separately for each profile
 
 #### [LastPass][lastpass-free-password-ma]
 
+* Allow clipboard access (try copying)
+
 #### [OneNote Web Clipper][onenote-web-clipper]
 
 #### ([Password Alert][password-alert])
