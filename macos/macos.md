@@ -953,7 +953,7 @@ See [Slack Setup][slack-setup]
 
 ### [OneNote][onenote] (App Store)
 
-[Download][onenote-dl]
+[Download - App Store][onenote-app-store]
 
 * -> System Settings -> Privacy &S -> Extensions:
     * Added extensions: allow
@@ -975,7 +975,7 @@ See [Slack Setup][slack-setup]
     * Double-sided: on (?)
 
 [onenote]: https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app
-[onenote-dl]: https://www.onenote.com/download
+[onenote-app-store]: https://apps.apple.com/us/app/microsoft-onenote/id784801555?mt=12
 
 ### [Obsidian][obsidian]
 
