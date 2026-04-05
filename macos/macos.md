@@ -111,16 +111,25 @@ See also the [Re-check System Settings](#re-check-system-settings) section, belo
 
 See [G HUB Setup][g-hub-setup]
 
-* -> System Settings -> Privacy &S -> allow (x2)
+* -> System Settings -> Privacy &S -> allow (x2) \[?]
 * -> System Settings -> Privacy &S:
     * Bluetooth: allow
     * Microphone: allow (after opening C920 settings)
     * Camera: allow (after opening C920 settings)
     * Accessibility: allow
     * Screen Recording: deny (?)
+
+w/PRO X headset (DAC):
+
+* -> System Settings -> General -> Login Items & Extensions:
+    * Extensions:
+        * Logitech G HUB: allow all
+            * (incl. Blue Voice, G HUB HID)
+            * (may require rebooting)
+
 * (Exclude from uBar?)
 
-[g-hub]: https://www.logitechg.com/en-us/innovation/g-hub.html
+[g-hub]: https://www.logitechg.com/en-us/software/ghub
 [g-hub-setup]: ../g-hub.md
 
 ### [YubiSwitch][yubiswitch]
@@ -168,7 +177,7 @@ e.g. headphones, controllers
 
 ### macOS A/V/Screen Menu Bar Icons
 
-(e.g. open Sound in System Settings; only have to do this on one of them)
+(e.g. open Sound->Input in System Settings; only have to do this on one of them)
 
 * Mic Mode: Standard (especially for music production)
 
@@ -176,6 +185,7 @@ e.g. headphones, controllers
 
 (For macOS 26 Tahoe and up)
 
+* Appearance: Classic
 * General:
     * Launch at Login: on
 
@@ -193,7 +203,7 @@ e.g. headphones, controllers
     * No notifications
 
 [balance-lock]: https://www.tunabellysoftware.com/balance_lock/
-[balance-lock-app-store]: https://apps.apple.com/app/balance-lock/id1019371109?mt=12
+[balance-lock-app-store]: https://apps.apple.com/us/app/balance-lock/id1019371109?mt=12
 
 ### ([SoundSource][soundsource] ($))
 
@@ -297,10 +307,12 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
           `.hstr_favorites`
         * \[work: skip]
 
-[spideroak-one]: https://crossclave.com/one/
-[spideroak-one-dl]: https://crossclave.com/opendownload/
+[spideroak-one]: https://spideroak.one/
+[spideroak-one-dl]: https://spideroak.one/download
 
 ### [Google Drive][google-drive]
+
+[Download][google-drive-dl]
 
 * -> System Settings -> Privacy &S:
     * Files and Folders: allow
@@ -326,7 +338,8 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 * -> Finder sidebar position
 * (Exclude from uBar)
 
-[google-drive]: https://workspace.google.com/products/drive/#download
+[google-drive]: https://workspace.google.com/products/drive/
+[google-drive-dl]: https://workspace.google.com/products/drive/#download
 
 ### [Dropbox][dropbox]
 
@@ -370,6 +383,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 * General:
     * Pinning: all if not ultrawide, else bottom only
     * Display: Main (?)
+    * Open on Login
     * Check for updates
     * No window grouping
     * No download notifications (?)
@@ -404,6 +418,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 Note: [buy direct][witch-buy-direct]
 
 * -> System Settings -> Privacy &S -> Accessibility: allow
+* Enable
 * Actions:
     * 1:
         * Cycle windows
@@ -440,7 +455,7 @@ Note: [buy direct][witch-buy-direct]
 
 * -> System Settings -> Privacy &S -> Accessibility: allow
 * Keys:
-    * No key for LH/RH/CH/TH/BH, TL/TR/BL/BR, F3/C3/L3/F23/L23, 4ths, 6ths
+    * No key for LH/RH/CH/TH/BH, TL/TR/BL/BR, F3/C3/L3/F23/C23/L23, 4ths, 6ths
     * No key for AlmostMax/MaxH, L/R/U/D
     * Maximize: [`ctrl-opt-cmd-F`][hotkeys-ctrl-opt-cmd]
     * Make Smaller: [`ctrl-opt-cmd-down`][hotkeys-ctrl-opt-cmd]
@@ -503,9 +518,6 @@ Note: [buy direct][moom-buy-direct]
 * Palette:
     * (default Delay: 0.1 sec)
 * Custom:
-    * Remove header
-    * Remove others? (or just hotkeys?)
-    * Menu Separator (if keeping others)
     * Add two:
         * Layout
         * Hotkey ([`ctrl-opt-cmd-1` / `ctrl-opt-cmd-2`][hotkeys-ctrl-opt-cmd])
@@ -530,7 +542,7 @@ Install (manually or) via [Homebrew](#homebrew)
     * Check for updates
     * Don't send crash data?
 
-The [config][hammerspoon-config] is in the dotfiles repo and is installed by the [dotfiles install script][dotfiles-install].  References for writing config files can be found [here][hammerspoon-refs].
+The [config][hammerspoon-config] is in the dotfiles repo and is installed by the [dotfiles install script][dotfiles-install].  There is also a list of [references for writing config files][hammerspoon-refs] in the dotfiles repo.
 
 [hammerspoon]: https://www.hammerspoon.org/
 [hammerspoon-github]: https://github.com/Hammerspoon/hammerspoon
@@ -567,7 +579,7 @@ The [config][hammerspoon-config] is in the dotfiles repo and is installed by the
     * Reset
 * (Exclude from uBar)
 
-[amphetamine]: https://apps.apple.com/us/app/amphetamine/id937984704
+[amphetamine]: https://apps.apple.com/us/app/amphetamine/id937984704?mt=12
 
 ### [iStat Menus][istat] ($)
 
@@ -585,7 +597,8 @@ See [iStat Menus Setup][istat-setup]
         * Added extensions: allow
         * Quick Look: allow
 * General:
-    * Launch at login
+    * Start at login
+    * Layout Mode: On-Demand (?)
     * Show hidden on hover
     * Bartender Bar: Use, Only w/Notch
     * Show divider
@@ -653,12 +666,12 @@ See [iStat Menus Setup][istat-setup]
 
 [suspicious-package]: https://mothersruin.com/software/SuspiciousPackage/
 
-### [The Unarchiver][unarchiver]
+### [The Unarchiver][unarchiver] (optional App Store)
 
 Download from (main site or) [App Store][unarchiver-app-store]
 
 [unarchiver]: https://theunarchiver.com/
-[unarchiver-app-store]: https://apps.apple.com/us/app/the-unarchiver/id425424353
+[unarchiver-app-store]: https://apps.apple.com/us/app/the-unarchiver/id425424353?mt=12
 
 ### [NameChanger][namechanger]
 
@@ -679,16 +692,16 @@ Download from (main site or) [App Store][unarchiver-app-store]
 
 [disk-inventory-x]: https://www.derlien.com/
 
-### [DaisyDisk][daisydisk] ($)
+### [DaisyDisk][daisydisk] ($) (optional App Store)
 
-Download from main site or [App Store][daisydisk-app-store]
+Download from main site (or [App Store][daisydisk-app-store])
 
 * -> System Settings -> Privacy &S -> Full Disk Access: allow
 * License
 * Accept agreement
 
 [daisydisk]: https://daisydiskapp.com/
-[daisydisk-app-store]: https://apps.apple.com/app/daisydisk/id411643860
+[daisydisk-app-store]: https://apps.apple.com/us/app/daisydisk/id411643860?mt=12
 
 ### [Wireshark][wireshark]
 
@@ -725,7 +738,7 @@ See [Chrome Setup][chrome-setup]
 
 See [Firefox Setup][firefox-setup]
 
-[firefox]: https://www.mozilla.org/en-US/firefox/new/
+[firefox]: https://www.firefox.com/en-US/
 [firefox-add-ons]: https://addons.mozilla.org/en-US/firefox/
 [firefox-extensions]: https://addons.mozilla.org/en-US/firefox/extensions/
 [firefox-setup]: ../firefox.md
@@ -779,7 +792,7 @@ See [Slack Setup][slack-setup]
 
 [slack]: https://slack.com/
 [slack-dl]: https://slack.com/downloads/
-[slack-app-store]: https://apps.apple.com/app/slack/id803453959
+[slack-app-store]: https://apps.apple.com/us/app/slack-for-desktop/id803453959?mt=12
 [slack-setup]: ../slack.md
 
 ### [Zoom][zoom]
@@ -792,7 +805,7 @@ See [Slack Setup][slack-setup]
     * Accessibility: deny (if there) (?)
     * Screen Recording: allow (if necessary)
 * General:
-    * Don't remind me
+    * Don't remind me \[?]
 * Share Screen:
     * Don't silence notifications (if using Muzzle) \[?]
 * Background & Effects:
@@ -812,15 +825,17 @@ See [Slack Setup][slack-setup]
     * Streaming quality: High (?) (Very high?)
     * Download: Very high (?)
     * Auto adjust: on
-    * Normalize volume: on
 * Display:
     * Don't show the now-playing panel
+    * Don't show looping visuals (?)
     * Don't show announcements (?)
     * Don't show friend activity (?)
 * Social:
     * Don't publish new playlists
     * Don't share listening activity
     * Don't show recently played (?)
+* Playback:
+    * Normalize volume: on
 * Startup: No
 
 [spotify]: https://www.spotify.com/us/
@@ -831,7 +846,7 @@ See [Slack Setup][slack-setup]
 
 [Download][amazon-music-dl]
 
-* Advanced:
+* System Preferences:
     * Don't launch on startup
 
 [amazon-music]: https://www.amazon.com/music
@@ -853,30 +868,34 @@ See [Slack Setup][slack-setup]
 
 ### [Kindle][kindle] (App Store)
 
+[Download - App Store][kindle-app-store]
+
 * Log in
 * Don't group series (?)
 * (download books)
 
-[kindle]: https://apps.apple.com/us/app/amazon-kindle/id302584613
+[kindle]: https://www.amazon.com/gp/browse.html?node=16571048011&ref=kcp_fd_hz
+[kindle-app-store]: https://apps.apple.com/us/app/amazon-kindle-reading-app/id302584613
 
 ### [Kobo][kobo]
+
+The desktop app is apparently semi-discontinued, but there's a download link on this [support page][kobo-download]
 
 * Log in
 * (download books)
 
-[kobo]: https://www.kobo.com/us/en/p/desktop
+[kobo]: https://www.kobo.com/
+[kobo-download]: https://help.kobo.com/hc/en-us/articles/360020121953-Install-Kobo-Desktop-on-your-PC-or-Mac
 
 ### [XnView][xnview]
 
 * -> System Settings -> Privacy &S -> Files and Folders: allow as necessary
-* Startup Wizard:
-    * No anonymous logs
 * General:
     * General:
         * Check for updates: Weekly (?) (default is Daily)
     * Startup:
-        * Start with file: Viewer (?)
-        * Startup directory: Last (default) (?)
+        * Start with file: Viewer (default) (?)
+        * Start without file: Last (default) (?)
 * Interface:
     * Interface:
         * Purge on exit?
@@ -886,7 +905,7 @@ See [Slack Setup][slack-setup]
         * Viewer:
             * Random file: Custom (0 (?))
     * Keyboard:
-        * ESC closes: Viewer only (?)
+        * ESC closes: Viewer only (default) (?)
 * Catalog:
     * Catalog:
         * Disable Catalog/caching?
@@ -947,12 +966,16 @@ See [Slack Setup][slack-setup]
 
 ### [OneNote][onenote] (App Store)
 
+(Also [OneNote cloud][onenote-cloud] page with download link)
+
 [Download - App Store][onenote-app-store]
 
 * -> System Settings -> Privacy &S -> Extensions:
     * Added extensions: allow
     * Sharing: allow
 * -> OneNote Web Clipper in Chrome (?)
+* (Sign in)
+* (Open notebooks, order, sync)
 * Spelling:
     * No auto spelling
     * No check spelling
@@ -966,9 +989,10 @@ See [Slack Setup][slack-setup]
 * Quick Access Toolbar:
     * Just Undo/Redo (?)
 * Printing:
-    * Double-sided: on (?)
+    * Double-sided: on (?) \[?]
 
 [onenote]: https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app
+[onenote-cloud]: https://onenote.cloud.microsoft/en-us/
 [onenote-app-store]: https://apps.apple.com/us/app/microsoft-onenote/id784801555?mt=12
 
 ### [Obsidian][obsidian]
@@ -1105,7 +1129,10 @@ See [IntelliJ Setup][intellij-setup]
     * App Management: deny (?)
 * General:
     * Closing:
-        * Disable confirmations on shutdown, etc.
+        * Disable all confirmations on system shutdown, etc. (?)
+    * Software Update:
+        * Check automatically
+        * Don't ignore non-critical shell integration updates?
     * tmux:
         * Bury tmux session (?)
 * Profiles:
@@ -1114,7 +1141,7 @@ See [IntelliJ Setup][intellij-setup]
     * Text:
         * Font? (default is 12pt Monaco)
     * Terminal:
-        * Unlimited scrollback (?)
+        * Unlimited scrollback (default is 1000) (?)
         * Paste bracketing off
         * Silence bell (?)
     * Session:
@@ -1125,7 +1152,7 @@ See [IntelliJ Setup][intellij-setup]
 
 When done, export (General -> Settings) (?)
 
-In your iTerm2 sessions, run this, then add it to your shell startup; see [iterm2.post.sh in dot.bashrc.d][iterm2-post-sh-bashrc]
+In your iTerm2 sessions, run this, then add it to your shell startup; see [iterm2.last.sh in dot.bashrc.d][iterm2-last-sh-bashrc]
 
 ```shell
 . "/Applications/iTerm.app/Contents/Resources/iterm2_shell_integration.bash"
@@ -1140,7 +1167,7 @@ export PATH="${PATH}:/Applications/iTerm.app/Contents/Resources/utilities"
 See also the [shell-integration docs][iterm2-shell-integration-docs] and the [shell-integration scripts][iterm2-shell-integration-source] re the shell integration and the [utilities docs][iterm2-utilities-docs] (which are incomplete) and the [utilities scripts][iterm2-utilities-source] re the utilities.  (There's a more complete list/description at the bottom of the [install script][iterm2-utilities-more-docs] but it's also not fully complete.)
 
 [iterm2]: https://iterm2.com/
-[iterm2-post-sh-bashrc]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/iterm2.post.sh
+[iterm2-last-sh-bashrc]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/iterm2.last.sh
 [iterm2-post-sh-bash-profile]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/iterm2.post.sh
 [iterm2-shell-integration-docs]: https://iterm2.com/documentation-shell-integration.html
 [iterm2-shell-integration-source]: https://github.com/gnachman/iTerm2-shell-integration/tree/main/shell_integration
@@ -1158,7 +1185,7 @@ See also the [shell-integration docs][iterm2-shell-integration-docs] and the [sh
 * `umask 022; xcode-select --install; umask 077` after OS upgrade
 
 [xcode]: https://developer.apple.com/xcode/
-[xcode-app-store]: https://apps.apple.com/us/app/xcode/id497799835
+[xcode-app-store]: https://apps.apple.com/us/app/xcode/id497799835?mt=12
 [unxip]: https://github.com/saagarjha/unxip
 
 ### [Homebrew][homebrew]

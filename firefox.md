@@ -1,7 +1,7 @@
 
 # [Firefox][firefox] Setup
 
-[firefox]: https://www.mozilla.org/en-US/firefox/new/
+[firefox]: https://www.firefox.com/en-US/
 
 ## Preferences / Options
 

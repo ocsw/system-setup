@@ -4,7 +4,7 @@ Extensions: https://marketplace.visualstudio.com/VSCode
 add to PATH, or symlink in ~/bin
 set up sync (token, gist ID)?
 backup the token (pw manager or syncLocalSettings.json)
-right-click and hide smiley on status bar
+right-click and hide Copilot on status bar
 
 open a Go file, let it install all the tools
 (there's also 'Go: Install/Update Tools', but don't use it on

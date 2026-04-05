@@ -1,10 +1,10 @@
 # [Logitech G HUB][g-hub] Setup (w/G502 mouse, C920 webcam)
 
-[g-hub]: https://www.logitechg.com/en-us/innovation/g-hub.html
+[g-hub]: https://www.logitechg.com/en-us/software/ghub
 
 ## General
 
-* Settings (top left):
+* Settings (top right):
     * General:
         * General Settings:
             * Launch app on login: on
@@ -29,7 +29,7 @@
         * Primary: Off
             * (to save power; but if keeping the DPI buttons, turn it on?)
         * Logo: Fixed, Vibrant / purple (?) (or Mono / light gray?)
-    * Settings:
+    * Settings (bottom right):
         * DPI Lighting: off (?)
         * Device Startup Effect: off (?)
         * Low Battery Mode: Auto, Breathing red

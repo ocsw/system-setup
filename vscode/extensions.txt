@@ -31,7 +31,7 @@ ms-python.python
 artdiniz.quitcontrol-vscode
 ms-vscode-remote.remote-containers
 lextudio.restructuredtext
-stkb.rewrap
+dnut.rewrap-revived
 rust-lang.rust-analyzer
 timonwong.shellcheck
 trond-snekvik.simple-rst

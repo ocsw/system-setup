@@ -105,3 +105,11 @@ I think most of the above stuff actually applies to mobile too once it's set; th
     * Open web pages in app: off
     * Optimize image uploads: off (?)
     * Optimize video uploads: off (?)
+
+## Apps (Plugins)
+
+E.g.:
+
+* [Google Calendar integration][google-calendar]
+
+[google-calendar]: https://slack.com/marketplace-pages/google-calendar
