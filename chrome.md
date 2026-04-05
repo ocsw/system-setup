@@ -156,10 +156,16 @@ NOTE: has to be done separately for each profile
 ### Image Downloaders (WIP)
 
 * [Download All Images][download-all-images]
+* ([Image Downloader - Image Search][downloader-image-search]?)
+* ([Image downloader - Imageye][downloader-imageye]?)
+* ([Image Downloader - Save pictures][downloader-save-pictures]?)
 * ([zzllrr Imager Geek][zzllrr-imager-geek]??)
 * ([ImageCap][imagecap-image-download-a]??)
 
 [download-all-images]: https://chromewebstore.google.com/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm
+[downloader-image-search]: https://chromewebstore.google.com/detail/image-downloader-image-se/jfafkhnopckjfmnpekbmpmghhdlijaja
+[downloader-imageye]: https://chromewebstore.google.com/detail/image-downloader-imageye/agionbommeaifngbhincahgmoflcikhm
+[downloader-save-pictures]: https://chromewebstore.google.com/detail/image-downloader-save-pic/daeljdgmllhgmbdkpgnaojldjkdgkbjg
 [zzllrr-imager-geek]: https://chromewebstore.google.com/detail/zzllrr-imager-geek/gfjhimhkjmipphnaminnnnjpnlneeplk
 [imagecap-image-download-a]: https://chromewebstore.google.com/detail/imagecap-image-download-a/ahajhopfbfpekcljjjppolcmapaidldc
 
