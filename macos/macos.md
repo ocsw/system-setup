@@ -999,11 +999,12 @@ See [Slack Setup][slack-setup]
 
 [mindnode]: https://www.mindnode.com/
 
-### [Sequel Pro][sequel-pro]
+### [Sequel Ace][sequel-ace] (App Store)
 
-* Auto-update
+[Download - App Store][sequel-ace-app-store]
 
-[sequel-pro]: https://www.sequelpro.com/
+[sequel-ace]: https://sequel-ace.com/
+[sequel-ace-app-store]: https://apps.apple.com/us/app/sequel-ace/id1518036000?mt=12
 
 ## Text Editors
 
