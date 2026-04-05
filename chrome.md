@@ -126,11 +126,6 @@ NOTE: has to be done separately for each profile
 
 #### [Tabby Cat][tabby-cat]
 
-#### ([Tidy Sidebar][tidy-sidebar])
-
-* No Memo, Wiki, Links
-* Show tooltip
-
 [adblock-plus-free-ad-bloc]: https://chromewebstore.google.com/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb
 [awesome-screenshot-screen]: https://chromewebstore.google.com/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj
 [carettab-new-tab-clock-an]: https://chromewebstore.google.com/detail/carettab-new-tab-clock-an/cojpndognjdcakkimaloeealehpkljna
@@ -142,7 +137,6 @@ NOTE: has to be done separately for each profile
 [pinboard-plus]: https://chromewebstore.google.com/detail/pinboard-plus/mphdppdgoagghpmmhodmfajjlloijnbd
 [tabby-cat]: https://chromewebstore.google.com/detail/tabby-cat/mefhakmgclhhfbdadeojlkbllmecialg
 [tab-copy]: https://chromewebstore.google.com/detail/tab-copy/micdllihgoppmejpecmkilggmaagfdmb
-[tidy-sidebar]: https://chromewebstore.google.com/detail/tidy-sidebar/dgmacifhhpefamjmolpipkijcofcmbgp
 
 ### Misc. Unsure / WIP
 
@@ -159,15 +153,11 @@ NOTE: has to be done separately for each profile
 
 ### Image Downloaders (WIP)
 
-* [Image Downloader Continued][image-downloader-continued]
 * [Download All Images][download-all-images]
-* ([Image Picker][image-picker]??)
 * ([zzllrr Imager Geek][zzllrr-imager-geek]??)
 * ([ImageCap][imagecap-image-download-a]??)
 
-[image-downloader-continued]: https://chromewebstore.google.com/detail/image-downloader-continue/jfkjbfhcfaoldhgbnkekkoheganchiea
 [download-all-images]: https://chromewebstore.google.com/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm
-[image-picker]: https://chromewebstore.google.com/detail/image-picker/bhibldekjicdbnjeeecmgoogcihoalhe
 [zzllrr-imager-geek]: https://chromewebstore.google.com/detail/zzllrr-imager-geek/gfjhimhkjmipphnaminnnnjpnlneeplk
 [imagecap-image-download-a]: https://chromewebstore.google.com/detail/imagecap-image-download-a/ahajhopfbfpekcljjjppolcmapaidldc
 
@@ -190,7 +180,6 @@ From left to right:
 * (Go to Tab)
 * TabCopy
 * (Send from Gmail)
-* (Tidy Sidebar)
 * Awesome Screenshot?
 * Image Downloaders
 * The Camelizer
