@@ -256,12 +256,6 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 [mic-drop]: https://getmicdrop.com/
 [mic-drop-app-store]: https://apps.apple.com/us/app/mic-drop-mute-manager/id1489816366?mt=12
 
-### [Blue Sherpa][blue-sherpa]
-
-* -> System Settings -> Privacy &S -> Microphone: allow
-
-[blue-sherpa]: https://www.bluemic.com/en-us/products/sherpa/
-
 ### [Android File Transfer][android-ft]
 
 (No Mac version anymore?)
@@ -1420,7 +1414,6 @@ chmod -R go-rwx ~
     * (apps include e.g. music apps, browsers, messaging and VC apps)
 * Balance Lock (Hidden)
 * Better OSD (Hidden)
-* Blue Sherpa
 * Logitech G HUB (Hidden)
 * YubiSwitch (Hidden)
 * Now Playing (Hidden (?) - else left of ToothFairy)
@@ -1488,7 +1481,6 @@ Discord? (in Franz?)
 * XnView
 * Preview
 * Calculator
-* Blue Sherpa
 * Steam
 * Epic
 * GOG Galaxy
