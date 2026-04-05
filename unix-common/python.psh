@@ -35,14 +35,13 @@ brew install pyenv
 brew install pyenv-virtualenv
 brew install jupyter
 brew install jupyterlab
-#?
-#brew install pipx
-#brew install poetry
-#brew install uv
-#brew install ruff
-#brew install black
-#brew install yapf
-#brew install semgrep
+brew install pipx
+brew install poetry
+brew install uv
+brew install ruff
+brew install black
+brew install yapf
+brew install semgrep
 xcode-select --install
 umask 077
 #

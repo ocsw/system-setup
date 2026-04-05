@@ -278,8 +278,8 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 [Download][spideroak-one-dl]
 
+* -> System Settings -> Privacy &S -> allow
 * -> System Settings -> Privacy &S:
-    * Security: allow opening
     * Photos: allow (after setup)
     * Automation -> System Events: allow
 * Log in
@@ -753,7 +753,7 @@ See [Firefox Setup][firefox-setup]
 * Language:
     * No spell checking?
 * Services:
-    * Messenger, Hangouts, Telegram, Skype, Discord, Slack, Steam
+    * Messenger, Hangouts, Telegram, Discord, Slack, Steam
 
 [franz]: https://meetfranz.com/
 
@@ -764,14 +764,6 @@ See [Firefox Setup][firefox-setup]
 ### ([Signal][signal]?)
 
 [signal]: https://signal.org/
-
-### [Skype][skype] (in Franz instead?)
-
-* -> System Settings -> Privacy &S:
-    * Microphone: allow
-    * Camera: allow
-
-[skype]: https://www.skype.com/en/
 
 ### ([Discord][discord]? (in Franz instead?))
 
@@ -1451,7 +1443,7 @@ chmod -R go-rwx ~
 * (Kobo)
 * (Kindle)
 * Amazon Music, Spotify, etc.
-* (Skype), Zoom, Franz, Slack
+* Zoom, Franz, Slack
 * OneNote
 * Obsidian
 * Chrome, Firefox
@@ -1477,7 +1469,7 @@ chmod -R go-rwx ~
 * Kobo
 * Kindle
 * Apple Music, Amazon Music, Spotify, etc.
-* Skype, Zoom, Franz, Slack
+* Zoom, Franz, Slack
 
 Telegram? (in Franz?)
 Signal?
@@ -1565,7 +1557,7 @@ This is also a good time to export browser bookmarks to have a backup.
     * Log out of profile(s)
     * Close tabs and windows
     * Erase data (?)
-* Log out of other comms, e.g. Slack, Franz, Zoom, Skype, etc.
+* Log out of other comms, e.g. Slack, Franz, Zoom, etc.
 * Log out of OneNote
 * Remove SSH/GPG keys, possibly `known_hosts`
 * Remove VSCode, etc. sync

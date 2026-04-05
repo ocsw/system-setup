@@ -36,7 +36,6 @@ file
 fish
 flake8
 flex
-fq
 fribidi
 fzf
 gawk
@@ -45,7 +44,7 @@ gdb
 gh
 git
 git-filter-repo
-git-flow-next
+# They apparently recommend this over the formula in the Homebrew core tap
 gittower/tap/git-flow-next
 glow
 gnu-sed

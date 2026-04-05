@@ -45,6 +45,8 @@ Host *
     IdentitiesOnly yes
 EOF
 
+# Set the hostname (if relevant), since it will be in the public key files
+
 
 ##################
 # GitHub and Git #
