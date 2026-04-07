@@ -1384,7 +1384,7 @@ chmod -R go-rwx ~
 
 [ea-app]: https://www.ea.com/ea-app
 
-### [itch.io][itch-app]
+### [itch App][itch-app]
 
 [Download][itch-app-dl]
 
@@ -1411,7 +1411,7 @@ chmod -R go-rwx ~
 
 (macOS A/V/Screen icon - Bartender doesn't seem to be able to set its position, and it doesn't seem to stay where it's put (maybe something to do with the notch?), so I guess it's best to just leave it at the left)
 
-* New Items
+* (New Items)
 * (Docker)
 * Spotlight (Always Hidden)
 * Focus
@@ -1438,7 +1438,7 @@ chmod -R go-rwx ~
 * Logitech G HUB (Hidden)
 * YubiSwitch (Hidden)
 * Now Playing (Hidden (?) - else left of ToothFairy)
-* iStat Menus: CPU, Mem, SSD, Net, Sen
+* iStat Menus: CPU/GPU, Mem, SSD, Net, Sen
 * iStat Menus: Battery(s), Time
 * Fast user switching (Hidden?)
 * Bartender
@@ -1452,17 +1452,18 @@ chmod -R go-rwx ~
 * Siri?
 * Launchpad?
 * Dashboard? (drag to dock)
+* App Store?
 * System Settings
 * other VPNs
 * (Kobo)
 * (Kindle)
-* Amazon Music, Spotify, etc.
+* ?Apple Music, ?Amazon Music, Spotify, etc.
 * Zoom, Franz, Slack
 * OneNote
 * Obsidian
-* Chrome, Firefox
-* VSCode / Sublime Text / PyCharm / GoLand / IntelliJ / etc.
-* (TextEdit) / Bluefish / MacVim / etc.
+* Chrome, Firefox, ?Safari
+* VSCode / Sublime Text / PyCharm / GoLand / IntelliJ / Xcode / etc.
+* TextEdit? / Bluefish? / MacVim? / etc.
 * iTerm
 * (Omnigraffle)
 * Pages?
@@ -1477,6 +1478,8 @@ chmod -R go-rwx ~
 * (CrossOver apps)
 
 ### uBar App Order
+
+(open apps to make them appear in the list)
 
 * Finder
 * Android File Transfer
@@ -1495,6 +1498,7 @@ Discord? (in Franz?)
 * VSCode, Sublime Text, PyCharm, GoLand, IntelliJ, Xcode, etc.
 * TextEdit, Bluefish, MacVim, etc.
 * iTerm
+* Sequel Ace
 * Docker
 * Wireshark
 * (Omnigraffle)

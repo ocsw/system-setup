@@ -67,13 +67,17 @@
     * Allow Handoff (?)
     * AirDrop: Contacts Only (?)
     * AirPlay: on, Current User (?)
-* Login Items:
+* Login Items & Extensions:
     * Open at Login, including:
         * Amphetamine, Android File Transfer, BetterTouchTool, CrossOver,
           Dropbox, Google Drive, Moom, Rectangle, SoundSource, SpiderOak One,
           uBar, Witch, YubiSwitch
         * (Some might not be in the list until run)
     * Allow in the Background: all (?)
+    * Extensions:
+        * Logitech G HUB: allow all
+            * (w/PRO X headset (DAC); incl. Blue Voice, G HUB HID)
+            * (may require rebooting)
 * Date & Time:
     * Time Zone
     * City
