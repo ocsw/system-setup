@@ -211,8 +211,8 @@
     * All off (?)
 * Security:
     * Allow from App Store and identified developers
+    * FileVault: on; save Recovery Key
     * Accessories: Ask for New (?)
-    * FileVault: on
 * Extensions, including:
     * Added extensions:
         * Bartender: Quick Look

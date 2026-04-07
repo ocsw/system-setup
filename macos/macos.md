@@ -5,10 +5,6 @@ NOTE: most of this has to be done separately for each user account
 
 ## OS Settings
 
-### FileVault
-
-incl. save recovery key (pic?)
-
 ### Updates (OS and App Store)
 
 ### System Settings
@@ -25,6 +21,7 @@ Also advisable:
 * Turn off Natural scrolling in Mouse and Trackpad
 * Reverse Option and Command on Windows keyboards
 * Set up the Lock Screen and Sleep keyboard shortcuts
+* Save the FileVault Recovery Key
 
 See also the [Re-check System Settings](#re-check-system-settings) section, below
 
