@@ -49,16 +49,16 @@ See also the [Re-check System Settings](#re-check-system-settings) section, belo
     * New: `Downloads` (or homedir?)
     * Don't open in tabs
 * Sidebar:
-    * Show all (except `AirDrop` (depending), `Movies` (?), machine?)
+    * Show all (except `Recents` (depending), `Shared` (?), `Movies` (?))
     * Note `-` on HDs
+    * (When dragging things out of Locations, they get turned off, but they can
+      be turned back on here)
 * Advanced:
     * Remove after 30 days
-* `cmd-shift-.` for dotfiles
-* Sidebar Order:
-    * (`AirDrop`)
-    * `Dropbox`
-    * `Google Drive`
-    * `Recents`
+* Favorites in sidebar (in order):
+    * `AirDrop`? (or leave in Locations)
+    * `Dropbox`? (or leave in Locations)
+    * `Google Drive`? (or leave in Locations)
     * `Applications`
     * `Desktop`
     * `Documents`
@@ -73,6 +73,7 @@ See also the [Re-check System Settings](#re-check-system-settings) section, belo
     * `wip` (?)
     * (other data, install, etc.)
     * homedir
+* (`cmd-shift-.` for dotfiles)
 
 ## Networking
 
@@ -126,8 +127,6 @@ w/PRO X headset (DAC):
         * Logitech G HUB: allow all
             * (incl. Blue Voice, G HUB HID)
             * (may require rebooting)
-
-* (Exclude from uBar?)
 
 [g-hub]: https://www.logitechg.com/en-us/software/ghub
 [g-hub-setup]: ../g-hub.md
@@ -294,7 +293,8 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 * Network:
     * Allow LAN-Sync?
 * remove Hive symlink from desktop
-* Backup (all from homedir):
+* Backup (all from homedir; watch out for changes disappearing from the UI
+  before you can save???):
     * Folders:
         * `.gnupg` (except `*.conf`), (`.gnupg_pre_2.1` except `*.conf`),
           `.ssh`
@@ -323,20 +323,23 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
         * Finder extensions: allow
 * Sign in
 * Start syncing
-* Computer:
-    * Name: change to match hostname \[?]
-    * Folders (all from homedir):
-        * `.to_back_up`, `Books`, `Music`, `scraps`, `wip`
-        * (+ more depending on contents / context)
-        * \[work: add `Desktop`, `Documents`, `Downloads`, ?`Pictures`]
-* Google Drive:
-    * Stream files (?)
-* Settings:
-    * Google Photos:
-        * Original Quality
-    * no hotkey
+* Drive folders (all from homedir):
+    * `.to_back_up`, `Books`, `Music`, `scraps`, `wip`
+    * (+ more depending on contents / context)
+    * \[work: add `Desktop`, `Documents`, `Downloads`]
+* Photos folder: `Pictures` \[incl. for work?]
+* Preferences:
+    * My Mac:
+        * Computers -> change name to match hostname
+    * Google Drive:
+        * Stream files (?)
+    * Settings:
+        * Google Photos:
+            * Original quality
+        * No hotkey
+        * Don't send diagnostics?
+        * Don't prompt to back up devices (?)
 * -> Finder sidebar position
-* (Exclude from uBar)
 
 [google-drive]: https://workspace.google.com/products/drive/
 [google-drive-dl]: https://workspace.google.com/products/drive/#download
@@ -354,15 +357,14 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
         * Finder extensions: allow (if there)
         * Sharing: allow
 * General:
-    * Start on startup
-* Account
+    * Open on startup
+* Accounts
 * Backups:
-    * No notifications for external drives (?)
-    * No camera uploads (?)
+    * Ask to backup external drives: off (?)
+    * Camera Uploads: off (?)
 * Network:
-    * No LAN sync (?)
+    * LAN sync: off (?)
 * -> Finder sidebar position
-* (Exclude from uBar)
 
 [dropbox]: https://www.dropbox.com/
 [dropbox-dl]: https://www.dropbox.com/install
@@ -398,12 +400,6 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * App order: manual
     * App inclusions: order (see bottom)
     * App exclusions:
-        * Amphetamine
-        * BetterTouchTool
-        * Dropbox
-        * Google Drive
-        * Logitech G HUB?
-        * Moom
         * ToothFairy
 * Shortcuts:
     * No hiding
@@ -500,7 +496,6 @@ Note: [buy direct][witch-buy-direct]
 * Advanced:
     * Sync?
 * License
-* (Exclude from uBar)
 
 [btt]: https://folivora.ai/
 
@@ -525,7 +520,6 @@ Note: [buy direct][moom-buy-direct]
         * Apply when switching to 1 / 2 display(s)
         * Save/Update Layout
 * License
-* (Exclude from uBar)
 
 [moom]: https://manytricks.com/moom/
 [moom-buy-direct]: https://manytricks.com/blog/?p=4156
@@ -577,7 +571,6 @@ The [config][hammerspoon-config] is in the dotfiles repo and is installed by the
 * Statistics:
     * Disable
     * Reset
-* (Exclude from uBar)
 
 [amphetamine]: https://apps.apple.com/us/app/amphetamine/id937984704?mt=12
 
