@@ -1,6 +1,6 @@
 # macOS System Settings
 
-(as of macOS 13 Ventura)
+(as of macOS 26 Tahoe)
 
 ## Apple ID
 
@@ -50,13 +50,11 @@
     * Set Service Order:
         * USB, TB, Wi-Fi
 
-## Notifications
+## Battery
 
-* Show previews: When Unlocked (default)
-* Not when sleeping
-* Allow when locked
-* Not when mirroring
-* Allow all apps (?)
+* Options:
+    * Enable Power Nap: Never (?)
+    * Wake for network access: Never (?)
 
 ## General
 
@@ -231,6 +229,17 @@
 * Advanced:
     * Require admin password?
 
+## Touch ID & Password
+
+* (Fingers)
+* No Apple Pay
+* No purchases
+
+## Users & Groups
+
+* Icon(s)
+* Disable Guest User
+
 ## Desktop & Dock
 
 * Dock:
@@ -283,32 +292,23 @@
       model(s) or serial number(s)?  So set e.g. for no monitors, home desk
       monitor, work desk monitor(s), etc.
 
+## Notifications
+
+* Show previews: When Unlocked (default)
+* Not when sleeping
+* Allow when locked
+* Not when mirroring
+* Allow all apps (?)
+
 ## Screen Saver
 
 * Shell, 20m
-
-## Battery
-
-* Options:
-    * Enable Power Nap: Never (?)
-    * Wake for network access: Never (?)
 
 ## Lock Screen
 
 * Change times? (defaults: 2 min battery, 10 min power)
 * Require password: Immediately (?)
 * Login window shows: Name and password? (entry boxes only, vs list of users)
-
-## Touch ID & Password
-
-* (Fingers)
-* No Apple Pay
-* No purchases
-
-## Users & Groups
-
-* Icon(s)
-* Disable Guest User
 
 ## Wallet & Apple Pay
 
