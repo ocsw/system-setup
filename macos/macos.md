@@ -770,7 +770,7 @@ See [Firefox Setup][firefox-setup]
 
 [Download - direct][slack-dl]
 
-[Download - App Store][slack-app-store]
+([Download - App Store][slack-app-store])
 
 See [Slack Setup][slack-setup]
 
@@ -1518,8 +1518,8 @@ Discord? (in Franz?)
 After all of the software is installed and set up, confirm that the relevant
 System Settings sections are correct:
 
+* General -> Login Items & Extensions
 * Notifications
-* General -> Login Items
 * Privacy & Security
 
 ## OS Version Notes

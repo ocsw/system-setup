@@ -2,19 +2,23 @@
 
 (as of macOS 26 Tahoe)
 
-## Apple ID
+## Apple Account
 
 * Account details
 * iCloud:
-    * Photos: Off (?)
-    * iCloud Drive:
-        * Apps:
-            * Turn off Preview, QuickTime, TextEdit (?)
-            * More?
-    * Passwords & Keychain: Off
-    * Find My Mac: On (?)
-    * Safari: Off (?)
-    * Siri: Off (?)
+    * Saved to iCloud:
+        * Photos: off (?)
+        * iCloud Drive:
+            * Sync: on (default) (?)
+            * Desktop & Documents: off (default)
+            * Apps:
+                * Turn off Preview, QuickTime, TextEdit (?)
+                * More?
+        * Passwords & Keychain: off
+        * Find My Mac: on (default) (?)
+        * Safari: off (?)
+        * Siri: off (?)
+        * Maps: on (default) (?)
 * Media & Purchases:
     * Don't use Touch ID (?)
     * Free: Always (?)
@@ -46,9 +50,9 @@
                 * Dropbox?
                 * Spotify?
                 * Universal Control?
-* ...
+* ...:
     * Set Service Order:
-        * USB, TB, Wi-Fi
+        * USB, TB, Wi-Fi (default?)
 
 ## Battery
 
@@ -59,30 +63,33 @@
 ## General
 
 * Software Update:
-    * Auto check, dl, app/system install
-    * No OS updates
-* AirDrop & Handoff:
-    * Allow Handoff (?)
-    * AirDrop: Contacts Only (?)
-    * AirPlay: on, Current User (?)
+    * Automatic Updates:
+        * Download: on (default)
+        * OS updates: off
+        * Install system: on (default)
+* AirDrop & Continuity:
+    * AirDrop: Contacts Only (default) (?)
+    * Allow Handoff: on (default) (?)
+    * AirPlay: on, Current User (default) (?)
+* Date & Time:
+    * Time zone
+    * Closest city
 * Login Items & Extensions:
     * Open at Login, including:
-        * Amphetamine, Android File Transfer, BetterTouchTool, CrossOver,
-          Dropbox, Google Drive, Moom, Rectangle, SoundSource, SpiderOak One,
-          uBar, Witch, YubiSwitch
+        * Amphetamine, (Android File Transfer), Bartender, Better OSD,
+          BetterTouchTool, (CrossOver), Dropbox, Google Drive, Hammerspoon,
+          Moom, Rectangle, Signal Shifter, (SoundSource), SpiderOak One, uBar,
+          Witch, YubiSwitch
         * (Some might not be in the list until run)
-    * Allow in the Background: all (?)
+    * App Background Activity: allow all (?)
     * Extensions:
         * Logitech G HUB: allow all
             * (w/PRO X headset (DAC); incl. Blue Voice, G HUB HID)
             * (may require rebooting)
-* Date & Time:
-    * Time Zone
-    * City
 * Sharing:
-    * Edit:
-        * Local Hostname
-        * No dynamic global hostname
+    * Edit...:
+        * Local hostname
+        * Use dynamic global hostname: off (default)
     * -> `sudo scutil --set HostName name`
 * Time Machine:
     * (Set up if using)
@@ -90,13 +97,24 @@
 ## Accessibility
 
 * Zoom: (?)
-    * Use [keyboard shortcuts][hotkeys-opt-cmd]
+    * Use [keyboard shortcuts][hotkeys-opt-cmd]: on
     * Use scroll gesture with Option ([`opt`-scroll][hotkeys-opt])
     * Advanced:
-        * Flash on notification
+        * Flash on notification: on
 
 [hotkeys-opt]: hotkeys.md#option-opt--
 [hotkeys-opt-cmd]: hotkeys.md#optioncommand-opt-cmd--
+
+## Apple Intelligence & Siri
+
+* Siri: off (?)
+    * or, Listen?
+    * Suggestions: Safari off (and others?)
+* Spotlight:
+    * Remove Bookmarks & History (?)
+    * Remove Websites (?)
+    * More?
+* Spotlight Privacy: Add locations? (depending)
 
 ## Control Center
 
@@ -119,17 +137,6 @@
     * Spotlight: Don't Show
     * Siri: Don't Show
     * Time Machine: Show if using
-
-## Siri & Spotlight
-
-* Siri: off (?)
-    * or, Listen?
-    * Suggestions: Safari off (and others?)
-* Spotlight:
-    * Remove Bookmarks & History (?)
-    * Remove Websites (?)
-    * More?
-* Spotlight Privacy: Add locations? (depending)
 
 ## Privacy & Security
 
