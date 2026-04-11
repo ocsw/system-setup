@@ -111,6 +111,8 @@ See [G HUB Setup][g-hub-setup]
 
 * -> System Settings -> Privacy &S -> allow (x2) \[?]
 * -> System Settings -> Privacy &S:
+    * Files & Folders:
+        * Removable Volumes: deny (?)
     * Bluetooth: allow
     * Microphone: allow (after opening C920 settings)
     * Camera: allow (after opening C920 settings)
@@ -121,8 +123,11 @@ w/PRO X headset (DAC):
 
 * -> System Settings -> General -> Login Items & Extensions:
     * Extensions:
-        * Logitech G HUB: allow all
-            * (incl. Blue Voice, G HUB HID)
+        * Logitech G HUB:
+            * (w/PRO X headset (DAC))
+            * Driver Extension:
+                * Blue Voice: on
+                * G HUB HID: on
             * (may require rebooting)
 
 [g-hub]: https://www.logitechg.com/en-us/software/ghub
@@ -157,7 +162,12 @@ e.g. headphones, controllers
 
 [Download - App Store][toothfairy-app-store]
 
-* -> System Settings -> Privacy &S -> Bluetooth: allow
+* -> System Settings
+    * Menu Bar
+        * Menu Bar Controls:
+            * Bluetooth: off
+    * Privacy &S:
+        * Bluetooth: allow
 * Add devices:
     * Icon
     * Show battery
@@ -229,7 +239,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
         * (after Super Volume Keys)
     * Screen & System Audio Recording:
         * System Audio Recording Only:
-            * allow Audio Routing Kit (ARK) (if present)
+            * Allow Audio Routing Kit (ARK) (if present)
 * General:
     * Start at login
     * Hotkey ([`ctrl-opt-cmd-S`][hotkeys-ctrl-opt-cmd])
@@ -244,6 +254,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 [Download - App Store][signal-shifter-app-store]
 
+* -> System Settings -> Privacy &S -> Bluetooth: allow
 * General
     * Open at Login: on
 * Notifications:
@@ -280,7 +291,10 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 * -> System Settings -> Privacy &S -> allow
 * -> System Settings -> Privacy &S:
-    * Photos: allow (after setup)
+    * Files & Folders:
+        * Allow Desktop, Documents, Downloads (if necessary)
+        * Deny Network, Removable (?)
+    * Photos: allow (full access; after setup)
     * Automation -> System Events: allow
 * Log in
 * General:
@@ -311,13 +325,18 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 [Download][google-drive-dl]
 
-* -> System Settings -> Privacy &S:
-    * Files and Folders: allow
-        * (as necessary; there should be popup requests when they're first
-          needed)
-    * Extensions (including for FinderHelper):
-        * Added extensions: allow
-        * Finder extensions: allow
+* -> System Settings:
+    * General:
+        * Login Items & Extensions:
+            * Extensions:
+                * Google Drive:
+                    * File Provider: on
+    * Privacy &S:
+        * Files & Folders:
+            * Allow Desktop, Documents, Downloads (if necessary)
+            * Deny Network (?)
+        * Photos: allow (full access; after setup)
+        * Accessibility: deny (?)
 * Sign in
 * Start syncing
 * Drive folders (all from homedir):
@@ -333,6 +352,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * Settings:
         * Google Photos:
             * Original quality
+        * Launch on login
         * No hotkey
         * Don't send diagnostics?
         * Don't prompt to back up devices (?)
@@ -345,14 +365,17 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 [Download][dropbox-dl]
 
-* -> System Settings -> Privacy &S:
-    * Accessibility: allow
-    * Extensions:
-        * Added extensions:
-            * Finder extensions: allow
-            * Sharing: allow
-        * Finder extensions: allow (if there)
-        * Sharing: allow
+* -> System Settings:
+    * General:
+        * Login Items & Extensions:
+            * Extensions:
+                * Dropbox:
+                    * File Provider:
+                        * Dropbox: on
+                        * Dropbox Finder Extension: off (?)
+                    * Sharing: on
+    * Privacy &S:
+        * Accessibility: allow
 * General:
     * Open on startup
 * Accounts
@@ -372,13 +395,22 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 ### [uBar][ubar] ($)
 
-* -> System Settings -> Privacy &S:
-    * Full Disk Access: allow
-    * Accessibility: allow
-    * Screen Recording: allow
-    * Automation:
-        * Finder: allow
-        * Spotify: allow
+* -> System Settings
+    * Desktop & Dock
+        * Dock:
+            * Dock position
+            * Autohide the Dock: on
+    * Privacy &S:
+        * Calendars: allow (if present)
+        * Contacts: allow (if present)
+        * Full Disk Access: allow
+        * Photos: allow (full access (?); if present)
+        * Reminders: allow (if present)
+        * Accessibility: allow
+        * Screen Recording: allow
+        * Automation:
+            * Finder: allow
+            * Spotify: allow
 * General:
     * Pinning: all if not ultrawide, else bottom only
     * Display: Main (?)
@@ -468,14 +500,20 @@ Note: [buy direct][witch-buy-direct]
 
 ### [BetterTouchTool][btt] ($)
 
-* -> System Settings -> Privacy &S:
-    * Bluetooth: allow (?)
-    * Accessibility: allow
-    * Input Monitoring: allow
-    * Screen Recording: allow (if necessary)
-    * Automation:
-        * Shortcuts Events: allow
-        * System Events: allow (if there)
+* -> System Settings:
+    * General:
+        * Login Items & Extensions:
+            * Extensions:
+                * BetterTouchTool:
+                    * File Provider: off (?)
+    * Privacy &S:
+        * Bluetooth: allow (?)
+        * Accessibility: allow
+        * Input Monitoring: allow
+        * Screen Recording: allow (if necessary)
+        * Automation:
+            * Shortcuts Events: allow
+            * System Events: allow (if present)
 * Standard:
     * Basic:
         * General:
@@ -580,12 +618,9 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Bartender][bartender] ($)
 
-* -> System Settings -> Privacy &S
+* -> System Settings -> Privacy &S:
     * Accessibility: allow
     * Screen Recording: allow
-    * Extensions:
-        * Added extensions: allow
-        * Quick Look: allow
 * General:
     * Start at login
     * Layout Mode: On-Demand (?)
@@ -637,7 +672,8 @@ See [iStat Menus Setup][istat-setup]
 ### [AppCleaner][appcleaner]
 
 * -> System Settings -> Privacy &S:
-    * App Management: deny (?)
+    * Full Disk Access: allow
+    * App Management: deny (if present) (?)
 * SmartDelete: on (?)
 * Updates: check automatically
 
@@ -646,13 +682,16 @@ See [iStat Menus Setup][istat-setup]
 ### [Suspicious Package][suspicious-package]
 
 * -> System Settings -> Privacy &S:
-    * Files and Folders: allow Desktop, Downloads (?)
-        * But not Documents (?)
-        * Request can be triggered from the menu bar:
+    * General:
+        * Login Items & Extensions:
+            * Extensions:
+                * Suspicious Package:
+                    * Quick Look: on
+    * Files & Folders:
+        * Allow Desktop, Downloads (?)
+        * Deny Documents (?)
+        * (Request can be triggered from the menu bar:)
             * Suspicious Package -> Review macOS Folder Privacy
-    * Extensions:
-        * Added extensions: allow
-        * Quick Look: allow
 
 [suspicious-package]: https://mothersruin.com/software/SuspiciousPackage/
 
@@ -679,6 +718,16 @@ Download from (main site or) [App Store][unarchiver-app-store]
 ### [Disk Inventory X][disk-inventory-x]
 
 * -> System Settings -> Privacy &S -> allow
+* -> System Settings -> Privacy &S:
+    * (run first)
+    * Calendars: allow (if present)
+    * Contacts: allow (if present)
+    * Files & Folders: allow Desktop, Documents, Downloads
+        * (also popups for Dropbox, Google Drive)
+        * (or allow FDA?)
+    * Full Disk Access: allow?
+    * Photos: allow (full access (?); if present)
+    * Reminders: allow (if present)
 
 [disk-inventory-x]: https://www.derlien.com/
 
@@ -686,7 +735,12 @@ Download from (main site or) [App Store][unarchiver-app-store]
 
 Download from main site (or [App Store][daisydisk-app-store])
 
-* -> System Settings -> Privacy &S -> Full Disk Access: allow
+* -> System Settings -> Privacy &S:
+    * Calendars: allow (if present)
+    * Contacts: allow (if present)
+    * Full Disk Access: allow (?) (or, allow as necessary in F&F/popups)
+    * Photos: allow (full access (?); if present)
+    * Reminders: allow (if present)
 * License
 * Accept agreement
 
@@ -707,12 +761,20 @@ Download from main site (or [App Store][daisydisk-app-store])
 
 See [Chrome Setup][chrome-setup]
 
-* -> System Settings -> Privacy &S:
-    * (after e.g. meet.new and sharing)
-    * Microphone: allow
-    * Camera: allow
-    * Accessibility: allow (if there)
-    * Screen Recording: allow
+* -> System Settings:
+    * Privacy &S:
+        * Location Services: allow (might need maps first?)
+        * Files & Folders: allow Downloads (save first?); others as necessary
+            * (there should be popup requests when they're first needed)
+        * Accessibility: allow (if present)
+        * Camera: allow (after e.g. meet.new)
+        * Microphone: allow (after e.g. meet.new)
+        * Screen Recording: allow (after e.g. meet.new and sharing)
+    * Keyboard:
+        * Keyboard Shortcuts...:
+            * App Shortcuts:
+                * Google Chrome:
+                    * `Task Manager`: `` opt-shift-` ``
 
 [chrome]: https://www.google.com/chrome/
 [chrome-extensions]: https://chromewebstore.google.com/category/extensions
@@ -738,9 +800,9 @@ See [Firefox Setup][firefox-setup]
 ### [Franz][franz]
 
 * -> System Settings -> Privacy &S:
-    * Bluetooth: allow (?)
-    * Microphone: allow
+    * Bluetooth: allow (if present) (?)
     * Camera: allow
+    * Microphone: allow
     * Screen Recording: allow (?)
 * Account
 * General:
@@ -775,10 +837,12 @@ See [Firefox Setup][firefox-setup]
 See [Slack Setup][slack-setup]
 
 * -> System Settings -> Privacy &S:
-    * Microphone: allow
-    * Camera: allow
-    * Screen Recording: allow
-    * Accessibility: allow (if there)
+    * Files & Folders:
+        * Downloads: allow (if present)
+    * Microphone: allow (after video/audio call)
+    * Camera: allow (after video call)
+    * Screen Recording: allow (after video call w/sharing)
+    * Accessibility: allow (if present)
 
 [slack]: https://slack.com/
 [slack-dl]: https://slack.com/downloads/
@@ -790,10 +854,11 @@ See [Slack Setup][slack-setup]
 [Download][zoom-dl]
 
 * -> System Settings -> Privacy &S:
+    * Bluetooth: allow (?)
     * Microphone: allow
     * Camera: allow
-    * Accessibility: deny (if there) (?)
-    * Screen Recording: allow (if necessary)
+    * Accessibility: deny (if present) (?)
+    * Screen Recording: allow (after call w/sharing)
 * General:
     * Don't remind me \[?]
 * Share Screen:
@@ -860,6 +925,12 @@ See [Slack Setup][slack-setup]
 
 [Download - App Store][kindle-app-store]
 
+* -> System Settings:
+    * General:
+        * Login Items & Extensions:
+            * Extensions:
+                * Kindle:
+                    * Sharing: off
 * Log in
 * Don't group series (?)
 * (download books)
@@ -879,7 +950,9 @@ The desktop app is apparently semi-discontinued, but there's a download link on 
 
 ### [XnView][xnview]
 
-* -> System Settings -> Privacy &S -> Files and Folders: allow as necessary
+* -> System Settings -> Privacy &S -> Files & Folders:
+    * Allow as necessary, incl. Desktop, Documents, Downloads
+    * Deny Google Drive?
 * General:
     * General:
         * Check for updates: Weekly (?) (default is Daily)
@@ -960,9 +1033,18 @@ The desktop app is apparently semi-discontinued, but there's a download link on 
 
 [Download - App Store][onenote-app-store]
 
-* -> System Settings -> Privacy &S -> Extensions:
-    * Added extensions: allow
-    * Sharing: allow
+* -> System Settings:
+    * General:
+        * Login Items & Extensions:
+            * Extensions:
+                * Microsoft OneNote:
+                    * Sharing: on
+    * Keyboard:
+        * Keyboard Shortcuts...:
+            * App Shortcuts:
+                * Microsoft OneNote:
+                    * `Close This Notebook`: `ctrl-opt-W`
+                        * (to prevent Sync All -> CTN)
 * -> OneNote Web Clipper in Chrome (?)
 * (Sign in)
 * (Open notebooks, order, sync)
@@ -1107,16 +1189,17 @@ See [IntelliJ Setup][intellij-setup]
 
 * -> System Settings -> Privacy &S:
     * (after e.g. find or chmod)
-    * (Contacts: allow)
-    * (Calendars: allow)
-    * (Reminders: allow)
-    * (Photos: allow)
-    * Files and Folders -> Google Drive: allow
+    * Calendars: allow (if present)
+    * Contacts: allow (if present)
+    * Files and Folders:
+        * Google Drive: allow (if present)
     * Full Disk Access: allow
-    * Accessibility: allow (if there)
+    * Photos: allow (full access)
+    * Reminders: allow (if present)
+    * Accessibility: allow (if present)
+    * App Management: deny (?)
     * Automation -> Google Chrome: allow
         * (after clicking a link)
-    * App Management: deny (?)
 * General:
     * Closing:
         * Disable all confirmations on system shutdown, etc. (?)
@@ -1139,6 +1222,7 @@ See [IntelliJ Setup][intellij-setup]
 * Advanced:
     * Mouse:
         * Scroll wheel sends arrow keys when in alternate screen mode: Yes
+* click a link -> Use System Browser, remember
 
 When done, export (General -> Settings) (?)
 
@@ -1169,7 +1253,15 @@ See also the [shell-integration docs][iterm2-shell-integration-docs] and the [sh
 
 [Download - App Store][xcode-app-store]
 
-* -> System Settings -> Privacy &S -> Accessibility: allow
+* -> System Settings:
+    * General:
+        * Login Items & Extensions:
+            * Extensions:
+                * Xcode:
+                    * Quick Look: on
+                    * Spotlight: on
+    * Privacy &S:
+        * Accessibility: allow (if present)
 * Incl. additional components, command-line tools
 * Install [unxip][] via [Homebrew](#homebrew) (?)
 * `umask 022; xcode-select --install; umask 077` after OS upgrade
@@ -1342,7 +1434,7 @@ chmod -R go-rwx ~
 
 [Download][steam-dl]
 
-* -> System Settings -> Privacy &S -> Accessibility: allow
+* -> System Settings -> Privacy &S -> Accessibility: allow (if present)
 * Account
 * Interface:
     * Don't run on startup
@@ -1359,6 +1451,7 @@ chmod -R go-rwx ~
 
 [Download][epic-games-dl]
 
+* -> System Settings -> Privacy &S -> Files & Folders: allow Downloads
 * Don't run on startup
 * (install games)
 

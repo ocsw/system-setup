@@ -127,5 +127,8 @@ These are all alerts (except the hotkey); do the other sections first
 ### -> System Preferences
 
 * Menu Bar:
-    * Clock: Don't show date (if using date icon)
+    * Menu Bar Controls:
+        * Clock -> Clock Options...:
+            * Date:
+                * Show date: off (if using date icon)
     * Battery: off

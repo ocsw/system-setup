@@ -40,24 +40,31 @@
 * Firewall:
     * On
     * Options:
-        * Don't block all
-        * No built-in
-        * No downloaded
-        * No stealth mode
+        * Block all: off
+        * Allow built-in: off
+        * Allow downloaded: off
+        * Stealth mode: off (default)
+        * Block all except list below
+        * Allow, depending:
+            * rapportd (for Handoff, Universal Clipboard, Universal Control)
+            * remoted
+            * sharingd (for AirDrop, Universal Clipboard)
+            * Universal Control
+            * smbd (if using it)
+            * Control Center?
+            * Dropbox?
+            * SpiderOak?
+            * Spotify?
         * (Deny incoming as programs request it)
-            * Exceptions:
-                * Control Center?
-                * Dropbox?
-                * Spotify?
-                * Universal Control?
 * ...:
     * Set Service Order:
         * USB, TB, Wi-Fi (default?)
 
 ## Battery
 
-* Options:
-    * Enable Power Nap: Never (?)
+* Options...:
+    * Slightly dim on batt: on (default)
+    * Prevent automatic sleeping: off (default)
     * Wake for network access: Never (?)
 
 ## General
@@ -83,24 +90,30 @@
         * (Some might not be in the list until run)
     * App Background Activity: allow all (?)
     * Extensions:
-        * Logitech G HUB: allow all
-            * (w/PRO X headset (DAC); incl. Blue Voice, G HUB HID)
+        * BetterTouchTool:
+            * File Provider: off (?)
+        * Dropbox:
+            * File Provider:
+                * Dropbox: on
+                * Dropbox Finder Extension: off (?)
+            * Sharing: on
+        * Google Drive:
+            * File Provider: on
+        * Kindle:
+            * Sharing: off
+        * Logitech G HUB:
+            * (w/PRO X headset (DAC))
+            * Driver Extension:
+                * Blue Voice: on
+                * G HUB HID: on
             * (may require rebooting)
-    * Extensions, including:
-        * Added extensions:
-            * Bartender: Quick Look
-            * Dropbox: Finder, Sharing
-            * FinderHelper: Finder
-            * Google Drive: Finder
-            * Microsoft OneNote: Sharing
-            * Suspicious Package: Quick Look
-        * Finder extensions:
-            * Dropbox, Google Drive
-        * Quick Look:
-            * Bartender, Suspicious Package
-        * Sharing:
-            * All on except Books, Shortcuts (?)
-            * Including Dropbox Transfer, OneNote
+        * Microsoft OneNote:
+            * Sharing: on
+        * Suspicious Package:
+            * Quick Look: on
+        * Xcode
+            * Quick Look: on
+            * Spotlight: on
 * Sharing:
     * Edit...:
         * Local hostname
@@ -130,231 +143,265 @@
 
 * Dock:
     * Size?
-    * On right (or left, depending on monitor setup; if using uBar)
-    * Double-click title bar: Do Nothing (?)
-    * Minimize windows into app icon (?)
-    * Autohide Dock (if using uBar)
-    * No recent apps
-* Menu Bar (under Control Center in Sonoma):
-    * Autohide: In Full Screen Only (?)
-    * Recents: None? (depending)
-* Windows & Apps (Windows and Widgets sections in Sonoma):
-    * Prefer tabs: Always (?)
+    * Dock position: Right (or Left, depending on monitor setup; if using uBar)
+    * Window title bar double-click: No Action (?)
+    * Minimize windows into app icon: on (?)
+    * Autohide the Dock: on (if using uBar)
+    * Show suggested and recent: off
+* Desktop & Stage Manager
+    * Click wallpaper to show desktop: Always (default) (?)
+* Widgets:
+    * Show Widgets:
+        * On Desktop: off
+    * Default web browser
+* Windows
+    * Prefer tabs: Always (?) (default is In Full Screen)
     * Ask to keep changes: on
     * Close windows: off (?) (depending)
-    * Default web browser
+    * Drag to edge: off (?)
+    * Drag to menu bar: off (?)
 * Mission Control:
-    * Don't automatically rearrange Spaces
-    * Switch when switching
-    * Don't group windows
-    * Displays have separate Spaces
+    * Automatically rearrange Spaces: off
+    * Switch when switching: on
+    * Group windows by application: off
+    * Displays have separate Spaces: on (default)
 * Hot Corners:
     * UR: Lock Screen?
     * Nothing in the other corners
 
 ## Displays
 
-* Arrange:
-    * Monitors
-    * Main (top strip) (NOTE: seems to mess up Moom snapshots?)
 * Devices, resolutions, etc., including:
-    * Main display, extended display (also under Arrange)
-    * Auto brightness
-    * True Tone
-* Advanced:
-    * Link on, push (?)
-    * Battery & Energy (under Battery -> Options in Sonoma):
-        * Slightly dim
-        * Don't prevent sleeping
-* Night Shift: Sunset to Sunrise
+    * Main display, extended display (also under Arrange...)
+        * (NOTE: Changing this seems to mess up Moom snapshots?)
+    * Auto brightness: on
+    * True Tone: on
+* Arrange...:
+    * Layout
+    * Top strip (Menu Bar) = main
+* Advanced...:
+    * Link to Mac or iPad:
+        * Allow pointer/kbd to move: on
+        * Push through the edge: on
+* Night Shift...:
+    * Schedule: Sunset to Sunrise (?)
 
 ## Menu Bar
 
-* Control Center Modules:
-    * Show:
-        * Wi-Fi
-    * Show When Active:
-        * Focus, Screen Mirroring, Display, Sound (?), Now Playing (?)
-    * Don't Show:
-        * Bluetooth (if using ToothFairy, else show), AirDrop, Stage Manager
-* Other Modules:
-    * No battery in Menu Bar (after setting up iStat Menus)
-    * Fast User Switching in Menu Bar: Icon (if using, else Don't Show)
-* Menu Bar Only:
-    * Clock
-        * Show date: Never (if using iStat Menus, else Always (?))
-            * Seems to require a reboot to take effect
-        * Show day (default)
-        * Show AM/PM (default)
-    * Spotlight: Don't Show
-    * Siri: Don't Show
-    * Time Machine: Show if using
+* Autohide: In Full Screen Only (default) (?)
+* Show background: off (default) (?)
+* Recents: None? (depending; default is 10)
+* Menu Bar Controls:
+    * Clock -> Clock Options...:
+        * Date:
+            * Show date: off (if using iStat Menus, else on)
+                * (seems to require a reboot to take effect?)
+            * Show the day of the week: on (default)
+        * Time:
+            * Show AM/PM: on (default)
+    * Spotlight: off
+    * Bluetooth: off (if using ToothFairy, else show)
+    * Battery: off (after setting up iStat Menus)
+    * Focus, Screen Mirroring, Display, Sound (?), Now Playing:
+        * Show When Active (default)
+    * Fast User Switching: if using, on/Icon, else off
+    * Time Machine: on if using
+* Allow in the Menu Bar: allow all
 
 ## Spotlight
 
-    * Remove Bookmarks & History (?)
-    * Remove Websites (?)
-    * More?
-    * Spotlight Privacy: Add locations? (depending)
+* Results from Apps:
+    * Safari: off
+* Results from Clipboard: off (default)
+* Search Privacy...: Add locations? (depending)
 
 ## Wallpaper
 
 * Download
-* (Add Folders)
+* Your Photos:
+    * Add Photo...:
+        * Choose Folder...
 * For different wallpaper on each screen, turn off "Show on all Spaces"
 * Choose wallpaper
     * It seems like wallpaper is per set of monitors, i.e. actual monitor
       model(s) or serial number(s)?  So set e.g. for no monitors, home desk
       monitor, work desk monitor(s), etc.
-* Screen Saver: Shell, 20m
+* Screen Saver...:
+    * Start Screen Saver...: After 20 minutes (default)
+        * (?) - longer than display timeout
+    * Use Screen Saver: Automatic, for OS images, or Shell
 
 ## Notifications
 
-* Show previews: When Unlocked (default)
-* Not when sleeping
-* Allow when locked
-* Not when mirroring
-* Allow all apps (?)
+* Notification Center:
+    * Show previews: When Unlocked (default)
+    * Show Notifications:
+        * when display is sleeping: off (default)
+        * when screen is locked: on (default)
+        * when mirroring or sharing: Notifications Off (default)
+* Application Notifications:
+    * Allow all (?)
+
+## Focus
+
+* Share across devices: on (default) (?)
 
 ## Lock Screen
 
 * Change times? (defaults: 2 min battery, 10 min power)
-* Require password: Immediately (?)
-* Login window shows: Name and password? (entry boxes only, vs list of users)
+* Require password: Immediately (?) (default: 5 min)
+* When Switching User:
+    * Login window shows: Name and password?
+        * (entry boxes only, vs list of users)
 
 ## Privacy & Security
 
 * Location Services:
     * Enable
-    * All apps off, except:
+    * Deny all apps, except:
         * Google Chrome
-        * iStat (if using Current Location)
-    * System Services: don't show icon
-* Calendars: (Full Disk Access apps, if present)
-* Contacts: (Full Disk Access apps, if present)
-* Files and Folders:
-    * Allow as necessary, including:
-        * DaisyDisk: Full Disk Access
+        * iStat Menus Menubar (if using Current Location)
+    * Show location icon for System Services: off (default)
+* Calendars:
+    * Allow Disk Inventory X, DaisyDisk, iTerm, uBar, if present
+* Contacts:
+    * Allow Disk Inventory X, DaisyDisk, iTerm, uBar, if present
+* Files & Folders:
+    * Allow as necessary, including (if present):
+        * Disk Inventory X: Desktop, Documents, Downloads
+            * (also popups for Dropbox, Google Drive)
+            * (or allow FDA?)
+        * Epic Games Launcher: Downloads
         * Google Chrome: Downloads
-        * Google Drive: Desktop, Documents, Downloads (but no Network (?))
+        * Google Drive: Desktop, Documents, Downloads (but not Network (?))
         * IntelliJ: Downloads
-        * iTerm: Full Disk Access, Google Drive
+        * iTerm: Google Drive
         * Slack: Downloads
         * SpiderOakONE: Desktop, Documents, Downloads
-            * But not Network, Removable (?)
+            * But not Network, Removable Volumes (?)
         * Suspicious Package: Desktop, Downloads (?)
             * But not Documents (?)
-        * uBar: Full Disk Access
-        * XnView: Desktop, Documents, Downloads, (?)Google Drive
-    * No Dropbox Removable (?)
+        * XnViewMP: Desktop, Documents, Downloads, (?)Google Drive
+    * Deny:
+        * Logitech G Hub: Removable Volumes (?)
+    * (Apps with FDA entries say FDA even if it's actually off; remove non-OS
+      apps from FDA list)
 * Full Disk Access:
     * Allow only:
-        * DaisyDisk, iTerm, uBar
-        * AppCleaner?
+        * AppCleaner, DaisyDisk (?), iTerm, uBar
+        * Disk Inventory X?
+    * Remove non-OS turned-off entries
 * Photos:
-    * Google Drive and SpiderOakONE, if present
-    * (Full Disk Access apps, if present)
-* Reminders: (Full Disk Access apps, if present)
+    * Allow:
+        * Google Drive and SpiderOakONE, if necessary/present
+        * Disk Inventory X, DaisyDisk, uBar, if present
+        * iTerm
+    * All "Full Access" (?)
+        * vs "Limited Access" (select photos) or "Add Photos Only"
+* Reminders:
+    * Allow Disk Inventory X, DaisyDisk, iTerm, uBar, if present
 * Accessibility:
     * Allow as necessary, including:
         * Bartender, BetterTouchTool, Dropbox, Google Chrome, Hammerspoon,
           iTerm, Logitech G HUB Agent, Loom, Moom, Muzzle, Rectangle, Slack,
-          SoundSource, Steam, uBar, Witch, Xcode Helper, Yubiswitch
+          (SoundSource), Steam, uBar, Witch, Xcode Helper, Yubiswitch
     * But probably deny Zoom (& not sure about Google Drive)
     * (Some might not be in the list even if installed)
 * App Management:
-    * Don't allow AppCleaner (?)
+    * Don't allow AppCleaner (if present) (?)
     * Don't allow iTerm (?)
 * Automation:
     * Allow all (?), including:
-        * BetterTouchTool -> Shortcuts Events
-        * iTerm -> Google Chrome (click a lint first)
+        * BetterTouchTool -> Shortcuts Events, System Events (if present)
+        * iTerm -> Google Chrome (click a link first - no longer necessary?)
         * SpiderOak One -> System Events
         * uBar -> Finder, Spotify
     * (Some might not be in the list even if installed)
 * Bluetooth:
-    * BetterTouchTool (?)
-    * Franz (?)
-    * iStat Menus
-    * iStat Menus Menubar
-    * Logitech G HUB
-    * SoundSource
-    * ToothFairy
+    * BetterTouchTool (?), Franz (if present) (?), iStat Menus, Logitech G HUB,
+      Signal Shifter, (SoundSource), ToothFairy, Zoom (?)
 * Camera:
-    * Franz, Google Chrome, Logitech G HUB, Loom, Skype, Slack, Zoom
+    * Franz, Google Chrome, Logitech G HUB, Loom, Slack, Zoom
     * (Some might not be in the list until run)
 * Input Monitoring:
-    * BetterTouchTool
+    * BetterTouchTool (if present)
 * Microphone:
-    * Audio Routing Kit (ARK), Blue, Franz, Google Chrome, Logitech G HUB, Loom,
-      Skype, Slack, Zoom
+    * (Audio Routing Kit (ARK) (if present)), Franz, Google Chrome,
+      Logitech G HUB, Loom, Slack, Zoom
     * (Some might not be in the list until run)
 * Screen & System Audio Recording:
     * Allow as necessary, including:
-        * Bartender, Franz, Google Chrome, Kap, Loom, Skype, Slack, uBar, Zoom
-    * System Audio Recording Only:
-        * Audio Routing Kit (ARK)
-    * (Some might not be in the list until run)
+        * BetterTouchTool, Bartender, Franz (?), Google Chrome, Kap, Loom,
+          Slack, uBar, Zoom
     * Deny Logitech G HUB (?)
+    * System Audio Recording Only:
+        * (Audio Routing Kit (ARK) (if present))
+    * (Some might not be in the list until run)
 * Analytics & Improvements:
     * All off (?)
+    * Maybe app dev on?
 * Security:
-    * Allow from App Store and identified developers
+    * Allow applications from: App Store and Known developers
     * FileVault: on; save Recovery Key
-    * Accessories: Ask for New (?)
-* Advanced:
+    * Accessories: Ask for new (?)
+* Advanced...:
     * Require admin password?
 
 ## Touch ID & Password
 
-* (Fingers)
-* No Apple Pay
-* No purchases
+* Touch ID
+    * (Fingers)
+* Use for Apple Pay: off
+* Use for purchases: off (default)
 
 ## Users & Groups
 
 * Icon(s)
-* Disable Guest User
+* Guest User: Off (default)
 
 ## Wallet & Apple Pay
 
-* Don't Add Orders to Wallet (?)
+* Add Orders to Wallet: off (?)
 
 ## Keyboard
 
-* Keyboard:
-    * (default repeat: 7/8, delay: 3/6 (R->L))
-    * Don't adjust brightness (?)
-    * Turn off after inactivity: Never (?)
-    * Globe/fn -> Do Nothing (?) (depending on keyboard?)
-    * Touch Bar -> Customize:
-        * small: no Siri, add sleep (lock?) on left (?)
-        * big: no Siri?, sleep (lock?), screenshot (left of media)
-    * Keyboard Shortcuts:
-        * Mission Control:
-            * Show Desktop: [`ctrl-F11`][hotkeys-ctrl] (because of VSCode)
-        * Accessibility: Zoom on (?)
-        * App Shortcuts:
-            * All Applications:
-                * Lock Screen: [`ctrl-opt-cmd-L`][hotkeys-ctrl-opt-cmd]
-                * Sleep: [`ctrl-opt-cmd-Q`][hotkeys-ctrl-opt-cmd]
-            * Google Chrome:
-                * Task Manager: `` opt-shift-` ``
-            * Microsoft OneNote
-                * Close This Notebook: `ctrl-opt-W` (to prevent Sync All -> CTN)
-            * (other shortcuts)
-        * Function Keys: Use as standard? (to prevent accidental Do Not Disturb)
-        * Modifier Keys:
-            * Caps Lock: none (?) cmd? esc? (per keyboard)
-            * Reverse Option and Command on Windows keyboards
+* (defaults: repeat: 7/8, delay (R->L): 3/6)
+* Adjust brightness in low light:
+    * Black laptop: on (default)
+    * Gray/silver laptop: off and max
+* Turn backlight off after inactivity: Never (default) (?)
+* Press globe/fn key to: Do Nothing (?) (depending on keyboard?)
+* (Touch Bar -> Customize):
+    * small: no Siri, add sleep (lock?) on left (?)
+    * big: no Siri?, sleep (lock?), screenshot (left of media)
+* Keyboard Shortcuts...:
+    * Mission Control:
+        * Show Desktop: [`ctrl-F11`][hotkeys-ctrl] (because of VSCode)
+    * Accessibility:
+        * Zoom: on (?)
+    * App Shortcuts:
+        * All Applications:
+            * `Lock Screen`: [`ctrl-opt-cmd-L`][hotkeys-ctrl-opt-cmd]
+            * `Sleep`: [`ctrl-opt-cmd-Q`][hotkeys-ctrl-opt-cmd]
+        * Google Chrome:
+            * `Task Manager`: `` opt-shift-` ``
+        * Microsoft OneNote:
+            * `Close This Notebook`: `ctrl-opt-W`
+                * (to prevent Sync All -> CTN)
+        * (other shortcuts)
+    * Function Keys: Use as standard? (to prevent accidental Do Not Disturb)
+    * Modifier Keys:
+        * Caps Lock: No Action (?) `cmd`? `esc`? (per keyboard)
+        * Reverse Option and Command on Windows keyboards
 * Text Input:
-    * Input Sources:
-        * No menu bar
-        * No correct/capitalize/period
-        * No predictive text?
-        * No smart quotes?
-    * Text Replacements:
-        * Remove omw
+    * Input Sources -> Edit...:
+        * Correct spelling: off
+        * Capitalize words: off
+        * Show inline predictive text: off?
+        * Add period: off
+        * Use smart quotes and dashes: off?
+    * Text Replacements...:
+        * Remove `omw`
 * Dictation:
     * Shortcut: Off / Press MIC (?) (no Off setting on Apple Silicon?)
 
@@ -363,8 +410,8 @@
 
 ## Mouse
 
-* No Natural scrolling
 * Tracking: 7/10 (depending)
+* Natural scrolling: off
 * (defaults: tracking 4/10, double-click 9/11, scrolling 4/8)
 
 ## Trackpad
@@ -372,17 +419,13 @@
 * Point & Click:
     * Tracking Speed: 4/10 (default)
     * Click: Medium (default)
-    * Force Click on
-    * Look up with 3 fingers
-    * Secondary with 2
-    * Tap to click?
+    * Look up: Tap with Three fingers (or Off?)
+    * Secondary click: Click with Two Fingers (default?)
+    * Tap to click: on?
 * Scroll & Zoom:
     * Natural scrolling: off
-    * Pinch: on
-    * Double-tap: on
-    * Rotate: on
-* More Gestures: all on (?)
-    * App Exposé: down with 3
+* More Gestures:
+    * App Exposé: Swipe Down with Three Fingers
 
 ## Printers & Scanners
 
