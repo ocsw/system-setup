@@ -86,6 +86,21 @@
         * Logitech G HUB: allow all
             * (w/PRO X headset (DAC); incl. Blue Voice, G HUB HID)
             * (may require rebooting)
+    * Extensions, including:
+        * Added extensions:
+            * Bartender: Quick Look
+            * Dropbox: Finder, Sharing
+            * FinderHelper: Finder
+            * Google Drive: Finder
+            * Microsoft OneNote: Sharing
+            * Suspicious Package: Quick Look
+        * Finder extensions:
+            * Dropbox, Google Drive
+        * Quick Look:
+            * Bartender, Suspicious Package
+        * Sharing:
+            * All on except Books, Shortcuts (?)
+            * Including Dropbox Transfer, OneNote
 * Sharing:
     * Edit...:
         * Local hostname
@@ -110,142 +125,6 @@
 * Siri: off (?)
     * or, Listen?
     * Suggestions: Safari off (and others?)
-* Spotlight:
-    * Remove Bookmarks & History (?)
-    * Remove Websites (?)
-    * More?
-* Spotlight Privacy: Add locations? (depending)
-
-## Control Center
-
-* Control Center Modules:
-    * Show:
-        * Wi-Fi
-    * Show When Active:
-        * Focus, Screen Mirroring, Display, Sound (?), Now Playing (?)
-    * Don't Show:
-        * Bluetooth (if using ToothFairy, else show), AirDrop, Stage Manager
-* Other Modules:
-    * No battery in Menu Bar (after setting up iStat Menus)
-    * Fast User Switching in Menu Bar: Icon (if using, else Don't Show)
-* Menu Bar Only:
-    * Clock
-        * Show date: Never (if using iStat Menus, else Always (?))
-            * Seems to require a reboot to take effect
-        * Show day (default)
-        * Show AM/PM (default)
-    * Spotlight: Don't Show
-    * Siri: Don't Show
-    * Time Machine: Show if using
-
-## Privacy & Security
-
-* Location Services:
-    * Enable
-    * All apps off, except:
-        * Google Chrome
-        * iStat (if using Current Location)
-    * System Services: don't show icon
-* Contacts: (Full Disk Access apps, if present)
-* Calendars: (Full Disk Access apps, if present)
-* Reminders: (Full Disk Access apps, if present)
-* Photos:
-    * Google Drive and SpiderOakONE, if present
-    * (Full Disk Access apps, if present)
-* Bluetooth:
-    * BetterTouchTool (?)
-    * Franz (?)
-    * iStat Menus
-    * iStat Menus Menubar
-    * Logitech G HUB
-    * SoundSource
-    * ToothFairy
-* Microphone:
-    * Audio Routing Kit (ARK), Blue, Franz, Google Chrome, Logitech G HUB, Loom,
-      Skype, Slack, Zoom
-    * (Some might not be in the list until run)
-* Camera:
-    * Franz, Google Chrome, Logitech G HUB, Loom, Skype, Slack, Zoom
-    * (Some might not be in the list until run)
-* Files and Folders:
-    * Allow as necessary, including:
-        * DaisyDisk: Full Disk Access
-        * Google Chrome: Downloads
-        * Google Drive: Desktop, Documents, Downloads (but no Network (?))
-        * IntelliJ: Downloads
-        * iTerm: Full Disk Access, Google Drive
-        * Slack: Downloads
-        * SpiderOakONE: Desktop, Documents, Downloads
-            * But not Network, Removable (?)
-        * Suspicious Package: Desktop, Downloads (?)
-            * But not Documents (?)
-        * uBar: Full Disk Access
-        * XnView: Desktop, Documents, Downloads, (?)Google Drive
-    * No Dropbox Removable (?)
-* Full Disk Access:
-    * Allow only:
-        * DaisyDisk, iTerm, uBar
-        * AppCleaner?
-* Accessibility:
-    * Allow as necessary, including:
-        * Bartender, BetterTouchTool, Dropbox, Google Chrome, Hammerspoon,
-          iTerm, Logitech G HUB Agent, Loom, Moom, Muzzle, Rectangle, Slack,
-          SoundSource, Steam, uBar, Witch, Xcode Helper, Yubiswitch
-    * But probably deny Zoom (& not sure about Google Drive)
-    * (Some might not be in the list even if installed)
-* Input Monitoring:
-    * BetterTouchTool
-* Screen & System Audio Recording:
-    * Allow as necessary, including:
-        * Bartender, Franz, Google Chrome, Kap, Loom, Skype, Slack, uBar, Zoom
-    * System Audio Recording Only:
-        * Audio Routing Kit (ARK)
-    * (Some might not be in the list until run)
-    * Deny Logitech G HUB (?)
-* Automation:
-    * Allow all (?), including:
-        * BetterTouchTool -> Shortcuts Events
-        * iTerm -> Google Chrome (click a lint first)
-        * SpiderOak One -> System Events
-        * uBar -> Finder, Spotify
-    * (Some might not be in the list even if installed)
-* App Management:
-    * Don't allow AppCleaner (?)
-    * Don't allow iTerm (?)
-* Analytics & Improvements:
-    * All off (?)
-* Security:
-    * Allow from App Store and identified developers
-    * FileVault: on; save Recovery Key
-    * Accessories: Ask for New (?)
-* Extensions, including:
-    * Added extensions:
-        * Bartender: Quick Look
-        * Dropbox: Finder, Sharing
-        * FinderHelper: Finder
-        * Google Drive: Finder
-        * Microsoft OneNote: Sharing
-        * Suspicious Package: Quick Look
-    * Finder extensions:
-        * Dropbox, Google Drive
-    * Quick Look:
-        * Bartender, Suspicious Package
-    * Sharing:
-        * All on except Books, Shortcuts (?)
-        * Including Dropbox Transfer, OneNote
-* Advanced:
-    * Require admin password?
-
-## Touch ID & Password
-
-* (Fingers)
-* No Apple Pay
-* No purchases
-
-## Users & Groups
-
-* Icon(s)
-* Disable Guest User
 
 ## Desktop & Dock
 
@@ -289,6 +168,35 @@
         * Don't prevent sleeping
 * Night Shift: Sunset to Sunrise
 
+## Menu Bar
+
+* Control Center Modules:
+    * Show:
+        * Wi-Fi
+    * Show When Active:
+        * Focus, Screen Mirroring, Display, Sound (?), Now Playing (?)
+    * Don't Show:
+        * Bluetooth (if using ToothFairy, else show), AirDrop, Stage Manager
+* Other Modules:
+    * No battery in Menu Bar (after setting up iStat Menus)
+    * Fast User Switching in Menu Bar: Icon (if using, else Don't Show)
+* Menu Bar Only:
+    * Clock
+        * Show date: Never (if using iStat Menus, else Always (?))
+            * Seems to require a reboot to take effect
+        * Show day (default)
+        * Show AM/PM (default)
+    * Spotlight: Don't Show
+    * Siri: Don't Show
+    * Time Machine: Show if using
+
+## Spotlight
+
+    * Remove Bookmarks & History (?)
+    * Remove Websites (?)
+    * More?
+    * Spotlight Privacy: Add locations? (depending)
+
 ## Wallpaper
 
 * Download
@@ -298,6 +206,7 @@
     * It seems like wallpaper is per set of monitors, i.e. actual monitor
       model(s) or serial number(s)?  So set e.g. for no monitors, home desk
       monitor, work desk monitor(s), etc.
+* Screen Saver: Shell, 20m
 
 ## Notifications
 
@@ -307,15 +216,105 @@
 * Not when mirroring
 * Allow all apps (?)
 
-## Screen Saver
-
-* Shell, 20m
-
 ## Lock Screen
 
 * Change times? (defaults: 2 min battery, 10 min power)
 * Require password: Immediately (?)
 * Login window shows: Name and password? (entry boxes only, vs list of users)
+
+## Privacy & Security
+
+* Location Services:
+    * Enable
+    * All apps off, except:
+        * Google Chrome
+        * iStat (if using Current Location)
+    * System Services: don't show icon
+* Calendars: (Full Disk Access apps, if present)
+* Contacts: (Full Disk Access apps, if present)
+* Files and Folders:
+    * Allow as necessary, including:
+        * DaisyDisk: Full Disk Access
+        * Google Chrome: Downloads
+        * Google Drive: Desktop, Documents, Downloads (but no Network (?))
+        * IntelliJ: Downloads
+        * iTerm: Full Disk Access, Google Drive
+        * Slack: Downloads
+        * SpiderOakONE: Desktop, Documents, Downloads
+            * But not Network, Removable (?)
+        * Suspicious Package: Desktop, Downloads (?)
+            * But not Documents (?)
+        * uBar: Full Disk Access
+        * XnView: Desktop, Documents, Downloads, (?)Google Drive
+    * No Dropbox Removable (?)
+* Full Disk Access:
+    * Allow only:
+        * DaisyDisk, iTerm, uBar
+        * AppCleaner?
+* Photos:
+    * Google Drive and SpiderOakONE, if present
+    * (Full Disk Access apps, if present)
+* Reminders: (Full Disk Access apps, if present)
+* Accessibility:
+    * Allow as necessary, including:
+        * Bartender, BetterTouchTool, Dropbox, Google Chrome, Hammerspoon,
+          iTerm, Logitech G HUB Agent, Loom, Moom, Muzzle, Rectangle, Slack,
+          SoundSource, Steam, uBar, Witch, Xcode Helper, Yubiswitch
+    * But probably deny Zoom (& not sure about Google Drive)
+    * (Some might not be in the list even if installed)
+* App Management:
+    * Don't allow AppCleaner (?)
+    * Don't allow iTerm (?)
+* Automation:
+    * Allow all (?), including:
+        * BetterTouchTool -> Shortcuts Events
+        * iTerm -> Google Chrome (click a lint first)
+        * SpiderOak One -> System Events
+        * uBar -> Finder, Spotify
+    * (Some might not be in the list even if installed)
+* Bluetooth:
+    * BetterTouchTool (?)
+    * Franz (?)
+    * iStat Menus
+    * iStat Menus Menubar
+    * Logitech G HUB
+    * SoundSource
+    * ToothFairy
+* Camera:
+    * Franz, Google Chrome, Logitech G HUB, Loom, Skype, Slack, Zoom
+    * (Some might not be in the list until run)
+* Input Monitoring:
+    * BetterTouchTool
+* Microphone:
+    * Audio Routing Kit (ARK), Blue, Franz, Google Chrome, Logitech G HUB, Loom,
+      Skype, Slack, Zoom
+    * (Some might not be in the list until run)
+* Screen & System Audio Recording:
+    * Allow as necessary, including:
+        * Bartender, Franz, Google Chrome, Kap, Loom, Skype, Slack, uBar, Zoom
+    * System Audio Recording Only:
+        * Audio Routing Kit (ARK)
+    * (Some might not be in the list until run)
+    * Deny Logitech G HUB (?)
+* Analytics & Improvements:
+    * All off (?)
+* Security:
+    * Allow from App Store and identified developers
+    * FileVault: on; save Recovery Key
+    * Accessories: Ask for New (?)
+* Advanced:
+    * Require admin password?
+
+## Touch ID & Password
+
+* (Fingers)
+* No Apple Pay
+* No purchases
+
+## Users & Groups
+
+* Icon(s)
+* Disable Guest User
 
 ## Wallet & Apple Pay
 
