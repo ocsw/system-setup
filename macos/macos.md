@@ -109,8 +109,8 @@ See also the [Re-check System Settings](#re-check-system-settings) section, belo
 
 See [G HUB Setup][g-hub-setup]
 
-* -> System Settings -> Privacy &S -> allow (x2) \[?]
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security -> allow (x2) \[?]
+* -> System Settings -> Privacy & Security:
     * Files & Folders:
         * Removable Volumes: deny (?)
     * Bluetooth: allow
@@ -137,7 +137,7 @@ w/PRO X headset (DAC):
 
 [Download][yubiswitch-dl]
 
-* -> System Settings -> Privacy &S -> Accessibility: allow
+* -> System Settings -> Privacy & Security -> Accessibility: allow
 * No enable on sleep
 * Auto off
 * Preferences:
@@ -166,7 +166,7 @@ e.g. headphones, controllers
     * Menu Bar
         * Menu Bar Controls:
             * Bluetooth: off
-    * Privacy &S:
+    * Privacy & Security:
         * Bluetooth: allow
 * Add devices:
     * Icon
@@ -232,7 +232,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 #### Settings
 
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security:
     * Bluetooth: allow
     * Microphone: allow Audio Routing Kit (ARK) (if present)
     * Accessibility: allow
@@ -254,7 +254,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 [Download - App Store][signal-shifter-app-store]
 
-* -> System Settings -> Privacy &S -> Bluetooth: allow
+* -> System Settings -> Privacy & Security -> Bluetooth: allow
 * General
     * Open at Login: on
 * Notifications:
@@ -289,8 +289,8 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 [Download][spideroak-one-dl]
 
-* -> System Settings -> Privacy &S -> allow
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security -> allow
+* -> System Settings -> Privacy & Security:
     * Files & Folders:
         * Allow Desktop, Documents, Downloads (if necessary)
         * Deny Network, Removable (?)
@@ -331,7 +331,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
             * Extensions:
                 * Google Drive:
                     * File Provider: on
-    * Privacy &S:
+    * Privacy & Security:
         * Files & Folders:
             * Allow Desktop, Documents, Downloads (if necessary)
             * Deny Network (?)
@@ -374,7 +374,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
                         * Dropbox: on
                         * Dropbox Finder Extension: off (?)
                     * Sharing: on
-    * Privacy &S:
+    * Privacy & Security:
         * Accessibility: allow
 * General:
     * Open on startup
@@ -400,7 +400,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
         * Dock:
             * Dock position
             * Autohide the Dock: on
-    * Privacy &S:
+    * Privacy & Security:
         * Calendars: allow (if present)
         * Contacts: allow (if present)
         * Full Disk Access: allow
@@ -442,7 +442,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 Note: [buy direct][witch-buy-direct]
 
-* -> System Settings -> Privacy &S -> Accessibility: allow
+* -> System Settings -> Privacy & Security -> Accessibility: allow
 * Enable
 * Actions:
     * 1:
@@ -478,7 +478,7 @@ Note: [buy direct][witch-buy-direct]
 
 ### [Rectangle][rectangle]
 
-* -> System Settings -> Privacy &S -> Accessibility: allow
+* -> System Settings -> Privacy & Security -> Accessibility: allow
 * Keys:
     * No key for LH/RH/CH/TH/BH, TL/TR/BL/BR, F3/C3/L3/F23/C23/L23, 4ths, 6ths
     * No key for AlmostMax/MaxH, L/R/U/D
@@ -506,7 +506,7 @@ Note: [buy direct][witch-buy-direct]
             * Extensions:
                 * BetterTouchTool:
                     * File Provider: off (?)
-    * Privacy &S:
+    * Privacy & Security:
         * Bluetooth: allow (?)
         * Accessibility: allow
         * Input Monitoring: allow
@@ -538,7 +538,7 @@ Note: [buy direct][witch-buy-direct]
 
 Note: [buy direct][moom-buy-direct]
 
-* -> System Settings -> Privacy &S -> Accessibility: allow
+* -> System Settings -> Privacy & Security -> Accessibility: allow
 * General Settings:
     * Don't bring to front
     * Check for updates
@@ -565,7 +565,7 @@ Note: [buy direct][moom-buy-direct]
 
 Install (manually or) via [Homebrew](#homebrew)
 
-* -> System Settings -> Privacy &S -> Accessibility: allow
+* -> System Settings -> Privacy & Security -> Accessibility: allow
 * Preferences:
     * Launch at login
     * Check for updates
@@ -580,7 +580,7 @@ The [config][hammerspoon-config] is in the dotfiles repo and is installed by the
 
 ### [Muzzle][muzzle]
 
-* -> System Settings -> Privacy &S -> Accessibility: allow
+* -> System Settings -> Privacy & Security -> Accessibility: allow
 
 [muzzle]: https://muzzleapp.com/
 
@@ -618,7 +618,7 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Bartender][bartender] ($)
 
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security:
     * Accessibility: allow
     * Screen Recording: allow
 * General:
@@ -640,7 +640,7 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Kap][kap]
 
-* -> System Settings -> Privacy &S -> Screen Recording: allow
+* -> System Settings -> Privacy & Security -> Screen Recording: allow
 * General:
     * Highlight Clicks
 * Plugins:
@@ -658,7 +658,7 @@ See [iStat Menus Setup][istat-setup]
 
 [Download][loom-dl]
 
-* -> System Settings -> Privacy &S
+* -> System Settings -> Privacy & Security
     * Microphone: allow
     * Camera: allow
     * Accessibility: allow
@@ -671,7 +671,7 @@ See [iStat Menus Setup][istat-setup]
 
 ### [AppCleaner][appcleaner]
 
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security:
     * Full Disk Access: allow
     * App Management: deny (if present) (?)
 * SmartDelete: on (?)
@@ -681,7 +681,7 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Suspicious Package][suspicious-package]
 
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security:
     * General:
         * Login Items & Extensions:
             * Extensions:
@@ -717,8 +717,8 @@ Download from (main site or) [App Store][unarchiver-app-store]
 
 ### [Disk Inventory X][disk-inventory-x]
 
-* -> System Settings -> Privacy &S -> allow
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security -> allow
+* -> System Settings -> Privacy & Security:
     * (run first)
     * Calendars: allow (if present)
     * Contacts: allow (if present)
@@ -735,7 +735,7 @@ Download from (main site or) [App Store][unarchiver-app-store]
 
 Download from main site (or [App Store][daisydisk-app-store])
 
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security:
     * Calendars: allow (if present)
     * Contacts: allow (if present)
     * Full Disk Access: allow (?) (or, allow as necessary in F&F/popups)
@@ -762,7 +762,7 @@ Download from main site (or [App Store][daisydisk-app-store])
 See [Chrome Setup][chrome-setup]
 
 * -> System Settings:
-    * Privacy &S:
+    * Privacy & Security:
         * Location Services: allow (might need maps first?)
         * Files & Folders: allow Downloads (save first?); others as necessary
             * (there should be popup requests when they're first needed)
@@ -799,7 +799,7 @@ See [Firefox Setup][firefox-setup]
 
 ### [Franz][franz]
 
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security:
     * Bluetooth: allow (if present) (?)
     * Camera: allow
     * Microphone: allow
@@ -836,7 +836,7 @@ See [Firefox Setup][firefox-setup]
 
 See [Slack Setup][slack-setup]
 
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security:
     * Files & Folders:
         * Downloads: allow (if present)
     * Microphone: allow (after video/audio call)
@@ -853,7 +853,7 @@ See [Slack Setup][slack-setup]
 
 [Download][zoom-dl]
 
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security:
     * Bluetooth: allow (?)
     * Microphone: allow
     * Camera: allow
@@ -873,7 +873,7 @@ See [Slack Setup][slack-setup]
 
 ### [Spotify][spotify]
 
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security:
     * Local Network: allow
 * Autoplay: on
 * Audio Quality:
@@ -950,7 +950,7 @@ The desktop app is apparently semi-discontinued, but there's a download link on 
 
 ### [XnView][xnview]
 
-* -> System Settings -> Privacy &S -> Files & Folders:
+* -> System Settings -> Privacy & Security -> Files & Folders:
     * Allow as necessary, incl. Desktop, Documents, Downloads
     * Deny Google Drive?
 * General:
@@ -1112,7 +1112,7 @@ The desktop app is apparently semi-discontinued, but there's a download link on 
 
 ### [Bluefish][bluefish]
 
-* -> System Settings -> Privacy &S -> allow
+* -> System Settings -> Privacy & Security -> allow
 
 Or, if not available:
 
@@ -1187,7 +1187,7 @@ See [IntelliJ Setup][intellij-setup]
 
 ### [iTerm2][iterm2]
 
-* -> System Settings -> Privacy &S:
+* -> System Settings -> Privacy & Security:
     * (after e.g. find or chmod)
     * Calendars: allow (if present)
     * Contacts: allow (if present)
@@ -1260,7 +1260,7 @@ See also the [shell-integration docs][iterm2-shell-integration-docs] and the [sh
                 * Xcode:
                     * Quick Look: on
                     * Spotlight: on
-    * Privacy &S:
+    * Privacy & Security:
         * Accessibility: allow (if present)
 * Incl. additional components, command-line tools
 * Install [unxip][] via [Homebrew](#homebrew) (?)
@@ -1434,7 +1434,7 @@ chmod -R go-rwx ~
 
 [Download][steam-dl]
 
-* -> System Settings -> Privacy &S -> Accessibility: allow (if present)
+* -> System Settings -> Privacy & Security -> Accessibility: allow (if present)
 * Account
 * Interface:
     * Don't run on startup
@@ -1451,7 +1451,7 @@ chmod -R go-rwx ~
 
 [Download][epic-games-dl]
 
-* -> System Settings -> Privacy &S -> Files & Folders: allow Downloads
+* -> System Settings -> Privacy & Security -> Files & Folders: allow Downloads
 * Don't run on startup
 * (install games)
 
