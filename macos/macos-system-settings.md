@@ -270,7 +270,7 @@
     * Allow as necessary, including (if present):
         * Disk Inventory X: Desktop, Documents, Downloads
             * (also popups for Dropbox, Google Drive)
-            * (or allow FDA?)
+            * (or allow Full Disk Access?)
         * Epic Games Launcher: Downloads
         * Google Chrome: Downloads
         * Google Drive: Desktop, Documents, Downloads (but not Network (?))
