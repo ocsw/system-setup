@@ -274,12 +274,12 @@
             * (or allow Full Disk Access?)
         * Epic Games Launcher: Downloads
         * Google Chrome: Downloads
-        * Google Drive: Desktop, Documents, Downloads (but not Network (?))
+        * Google Drive: Desktop, Documents, Downloads (but not Network Vol (?))
         * IntelliJ: Downloads
         * iTerm: Google Drive
         * Slack: Downloads
         * SpiderOakONE: Desktop, Documents, Downloads
-            * But not Network, Removable Volumes (?)
+            * But not Network Volumes, Removable Volumes (?)
         * Suspicious Package: Desktop, Downloads (?)
             * But not Documents (?)
         * XnViewMP: Desktop, Documents, Downloads, (?)Google Drive
@@ -315,8 +315,9 @@
     * But probably deny Zoom (& not sure about Google Drive)
     * (Some might not be in the list even if installed)
 * App Management:
-    * Don't allow AppCleaner (if present) (?)
-    * Don't allow iTerm (?)
+    * Deny:
+        * AppCleaner (if present) (?)
+        * iTerm (?)
 * Automation:
     * Allow all (?), including:
         * BetterTouchTool -> Shortcuts Events, System Events (if present)
@@ -325,15 +326,17 @@
         * uBar -> Finder, Spotify
     * (Some might not be in the list even if installed)
 * Bluetooth:
-    * BetterTouchTool (?), Franz (if present) (?), iStat Menus, Logitech G HUB,
-      Signal Shifter, (SoundSource), ToothFairy, Zoom (?)
+    * Allow:
+        * BetterTouchTool (?), Franz (if present) (?), iStat Menus,
+          Logitech G HUB, Signal Shifter, (SoundSource), ToothFairy, Zoom (?)
 * Camera:
-    * Franz, Google Chrome, Logitech G HUB, Loom, Slack, Zoom
+    * Allow as necessary, including:
+        * Franz, Google Chrome, Logitech G HUB, Loom, Slack, Zoom
     * (Some might not be in the list until run)
 * Focus:
     * Deny BetterTouchTool (?)
 * Input Monitoring:
-    * BetterTouchTool (if present)
+    * Allow BetterTouchTool (if present)
 * Local Network:
     * Deny all (?) except:
         * Epson Scan 2 Utility, Software Updater, SU Agent (if present)
@@ -341,8 +344,9 @@
         * Spotify (?)
         * Steam, Steam Helper (?)
 * Microphone:
-    * (Audio Routing Kit (ARK) (if present)), Franz, Google Chrome,
-      Logitech G HUB, Loom, Slack, Zoom
+    * Allow as necessary, including:
+        * (Audio Routing Kit (ARK) (if present)), Franz, Google Chrome,
+          Logitech G HUB, Loom, Slack, Zoom
     * (Some might not be in the list until run)
 * Screen & System Audio Recording:
     * Allow as necessary, including:
@@ -350,7 +354,7 @@
           Slack, uBar, Zoom
     * Deny Logitech G HUB (?)
     * System Audio Recording Only:
-        * (Audio Routing Kit (ARK) (if present))
+        * (Allow Audio Routing Kit (ARK) (if present))
     * (Some might not be in the list until run)
 * Analytics & Improvements:
     * All off (?)

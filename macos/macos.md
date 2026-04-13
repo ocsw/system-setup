@@ -309,7 +309,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * Privacy & Security:
         * Files & Folders:
             * Allow Desktop, Documents, Downloads (if necessary)
-            * Deny Network, Removable (?)
+            * Deny Network Volumes, Removable Volumes (?)
         * Media & Apple Music: allow (after setup)
         * Photos: allow (full access; after setup)
         * Automation -> System Events: allow
@@ -349,7 +349,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * Privacy & Security:
         * Files & Folders:
             * Allow Desktop, Documents, Downloads (if necessary)
-            * Deny Network (?)
+            * Deny Network Volumes (?)
         * Media & Apple Music: allow (after setup)
         * Photos: allow (full access; after setup)
         * Accessibility: deny (?)
