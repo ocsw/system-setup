@@ -1281,6 +1281,9 @@ umask 022
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# This breaks the order of the PATH
+sudo rm /etc/paths.d/homebrew
+
 # Run this, then add it to your shell startup, as described below
 #
 # On Apple Silicon
