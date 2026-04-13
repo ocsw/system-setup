@@ -118,6 +118,7 @@ See [G HUB Setup][g-hub-setup]
             * G HUB HID: on
         * (may require rebooting)
     * Privacy & Security:
+        * Location Services: deny
         * Files & Folders:
             * Removable Volumes: deny (?)
         * Accessibility: allow
@@ -284,19 +285,23 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 [Download][spideroak-one-dl]
 
 * -> System Settings -> Privacy & Security -> Security: allow
-* -> System Settings -> Privacy & Security:
-    * Files & Folders:
-        * Allow Desktop, Documents, Downloads (if necessary)
-        * Deny Network, Removable (?)
-    * Photos: allow (full access; after setup)
-    * Automation -> System Events: allow
+* -> System Settings:
+    * Network -> Firewall -> Options...: allow?
+    * Privacy & Security:
+        * Files & Folders:
+            * Allow Desktop, Documents, Downloads (if necessary)
+            * Deny Network, Removable (?)
+        * Media & Apple Music: allow (after setup)
+        * Photos: allow (full access; after setup)
+        * Automation -> System Events: allow
+        * Local Network: allow (if present) (?)
 * Log in
 * General:
     * Launch minimized?
     * Don't show splash screen
     * Launch at startup
 * Network:
-    * Allow LAN-Sync?
+    * Allow LAN-Sync (?)
 * remove Hive symlink from desktop
 * Backup (all from homedir; watch out for changes disappearing from the UI
   before you can save???):
@@ -326,6 +331,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
         * Files & Folders:
             * Allow Desktop, Documents, Downloads (if necessary)
             * Deny Network (?)
+        * Media & Apple Music: allow (after setup)
         * Photos: allow (full access; after setup)
         * Accessibility: deny (?)
 * Sign in
@@ -357,12 +363,14 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 [Download][dropbox-dl]
 
 * -> System Settings:
+    * Network -> Firewall -> Options...: allow?
     * General -> Login Items & Extensions -> Extensions -> Dropbox:
         * File Provider:
             * Dropbox: on
             * Dropbox Finder Extension: off (?)
         * Sharing: on
     * Privacy & Security:
+        * Location Services: deny
         * Accessibility: allow
 * General:
     * Open on startup
@@ -392,6 +400,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
         * Calendars: allow (if present)
         * Contacts: allow (if present)
         * Full Disk Access: allow
+        * Media & Apple Music: allow (if present)
         * Photos: allow (full access (?); if present)
         * Reminders: allow (if present)
         * Accessibility: allow
@@ -492,11 +501,13 @@ Note: [buy direct][witch-buy-direct]
     * General -> Login Items & Extensions -> Extensions -> BetterTouchTool:
         * File Provider: off (?)
     * Privacy & Security:
+        * Location Services: deny
         * Accessibility: allow
         * Automation:
             * Shortcuts Events: allow
             * System Events: allow (if present)
         * Bluetooth: allow (?)
+        * Focus: deny (?)
         * Input Monitoring: allow
         * Screen & System Audio Recording: allow (if necessary)
 * Standard:
@@ -604,6 +615,7 @@ See [iStat Menus Setup][istat-setup]
 ### [Bartender][bartender] ($)
 
 * -> System Settings -> Privacy & Security:
+    * Location Services: deny
     * Accessibility: allow
     * Screen & System Audio Recording: allow
 * General:
@@ -625,7 +637,9 @@ See [iStat Menus Setup][istat-setup]
 
 ### [Kap][kap]
 
-* -> System Settings -> Privacy & Security -> Screen & SA Recording: allow
+* -> System Settings -> Privacy & Security:
+    * Location Services: deny
+    * Screen & SA Recording: allow
 * General:
     * Highlight Clicks
 * Plugins:
@@ -709,6 +723,7 @@ Download from (main site or) [App Store][unarchiver-app-store]
         * (also popups for Dropbox, Google Drive)
         * (or allow Full Disk Access?)
     * Full Disk Access: allow?
+    * Media & Apple Music: allow (if present)
     * Photos: allow (full access (?); if present)
     * Reminders: allow (if present)
 
@@ -722,6 +737,7 @@ Download from main site (or [App Store][daisydisk-app-store])
     * Calendars: allow (if present)
     * Contacts: allow (if present)
     * Full Disk Access: allow (?) (or, allow as necessary in F&F/popups)
+    * Media & Apple Music: allow (if present)
     * Photos: allow (full access (?); if present)
     * Reminders: allow (if present)
 * License
@@ -751,6 +767,7 @@ See [Chrome Setup][chrome-setup]
             * (there should be popup requests when they're first needed)
         * Accessibility: allow (if present)
         * Camera: allow (after e.g. meet.new)
+        * Local Network: deny (?)
         * Microphone: allow (after e.g. meet.new)
         * Screen & SA Recording: allow (after e.g. meet.new and sharing)
     * Keyboard -> Keyboard Shortcuts... -> App Shortcuts -> Google Chrome:
@@ -780,8 +797,10 @@ See [Firefox Setup][firefox-setup]
 ### [Franz][franz]
 
 * -> System Settings -> Privacy & Security:
+    * Location Services: deny
     * Bluetooth: allow (if present) (?)
     * Camera: allow
+    * Local Network: deny (if present) (?)
     * Microphone: allow
     * Screen & System Audio Recording: allow (?)
 * Account
@@ -817,10 +836,12 @@ See [Firefox Setup][firefox-setup]
 See [Slack Setup][slack-setup]
 
 * -> System Settings -> Privacy & Security:
+    * Location Services: deny
     * Files & Folders:
         * Downloads: allow (if present)
     * Accessibility: allow (if present)
     * Camera: allow (after video call)
+    * Local Network: deny (?)
     * Microphone: allow (after video/audio call)
     * Screen & System Audio Recording: allow (after video call w/sharing)
 
@@ -837,6 +858,7 @@ See [Slack Setup][slack-setup]
     * Accessibility: deny (if present) (?)
     * Bluetooth: allow (?)
     * Camera: allow
+    * Local Network: deny (?)
     * Microphone: allow
     * Screen & System Audio Recording: allow (after call w/sharing)
 * General:
@@ -853,7 +875,11 @@ See [Slack Setup][slack-setup]
 
 ### [Spotify][spotify]
 
-* -> System Settings -> Privacy & Security -> Local Network: allow
+* -> System Settings:
+    * Network -> Firewall -> Options...: allow?
+    * Privacy & Security:
+        * Location Services: deny
+        * Local Network: allow (?)
 * Autoplay: on
 * Audio Quality:
     * Streaming quality: High (?) (Very high?)
@@ -1012,6 +1038,8 @@ The desktop app is apparently semi-discontinued, but there's a download link on 
 * -> System Settings:
     * General -> Login Items & Extensions -> Extensions -> Microsoft OneNote:
         * Sharing: on
+    * Privacy & Security:
+        * Local Network: deny (?)
     * Keyboard -> Keyboard Shortcuts... -> App Shortcuts -> Microsoft OneNote:
         * `Close This Notebook`: `ctrl-opt-W`
             * (to prevent Sync All -> CTN)
@@ -1039,6 +1067,7 @@ The desktop app is apparently semi-discontinued, but there's a download link on 
 
 ### [Obsidian][obsidian]
 
+* -> System Settings -> Privacy & Security -> Location Services: deny
 * Options:
     * Editor:
         * Display:
@@ -1095,6 +1124,10 @@ Or, if not available:
 [Extensions][vscode-extensions]
 
 See the [VSCode Setup][vscode-setup] directory
+
+* -> System Settings -> Privacy & Security:
+    * Location Services: deny
+    * Local Network: deny (?)
 
 * Create a symlink:
 
@@ -1164,12 +1197,14 @@ See [IntelliJ Setup][intellij-setup]
     * Files and Folders:
         * Google Drive: allow (if present)
     * Full Disk Access: allow
+    * Media & Apple Music: allow
     * Photos: allow (full access)
     * Reminders: allow (if present)
     * Accessibility: allow (if present)
     * App Management: deny (?)
     * Automation -> Google Chrome: allow
         * (after clicking a link)
+    * Local Network: deny (if present) (?)
 * General:
     * Closing:
         * Disable all confirmations on system shutdown, etc. (?)
@@ -1401,7 +1436,12 @@ chmod -R go-rwx ~
 
 [Download][steam-dl]
 
-* -> System Settings -> Privacy & Security -> Accessibility: allow (if present)
+* -> System Settings:
+    * Network -> Firewall -> Options...: allow?
+    * Privacy & Security:
+        * Location Services: deny
+        * Accessibility: allow (if present)
+        * Local Network: allow (Steam, Steam Helper) (?)
 * Account
 * Interface:
     * Don't run on startup
@@ -1439,9 +1479,13 @@ chmod -R go-rwx ~
 
 ### ([EA app][ea-app])
 
+* -> System Settings -> Privacy & Security -> Local Network: deny (?)
+
 [ea-app]: https://www.ea.com/ea-app
 
 ### [itch App][itch-app]
+
+* -> System Settings -> Privacy & Security -> Location Services: deny
 
 [Download][itch-app-dl]
 

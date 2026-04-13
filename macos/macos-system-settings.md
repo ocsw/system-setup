@@ -39,7 +39,7 @@
 
 * Firewall:
     * On
-    * Options:
+    * Options...:
         * Block all: off
         * Allow built-in: off
         * Allow downloaded: off
@@ -55,6 +55,7 @@
             * Dropbox?
             * SpiderOak?
             * Spotify?
+            * Steam?
         * (Deny incoming as programs request it)
 * ...:
     * Set Service Order:
@@ -291,6 +292,11 @@
         * AppCleaner, DaisyDisk (?), iTerm, uBar
         * Disk Inventory X?
     * Remove non-OS turned-off entries
+* Media & Apple Music:
+    * Allow:
+        * Google Drive and SpiderOakONE, if necessary/present
+        * Disk Inventory X, DaisyDisk, uBar, if present
+        * iTerm
 * Photos:
     * Allow:
         * Google Drive and SpiderOakONE, if necessary/present
@@ -323,8 +329,15 @@
 * Camera:
     * Franz, Google Chrome, Logitech G HUB, Loom, Slack, Zoom
     * (Some might not be in the list until run)
+* Focus:
+    * Deny BetterTouchTool (?)
 * Input Monitoring:
     * BetterTouchTool (if present)
+* Local Network:
+    * Deny all (?) except:
+        * SpiderOakONE (if present) (?)
+        * Spotify (?)
+        * Steam, Steam Helper (?)
 * Microphone:
     * (Audio Routing Kit (ARK) (if present)), Franz, Google Chrome,
       Logitech G HUB, Loom, Slack, Zoom
