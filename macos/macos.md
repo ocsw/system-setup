@@ -274,9 +274,28 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 
 [android-ft]: https://www.android.com/filetransfer/
 
-### Printers
+### Printers / Scanners
 
-### Scanners
+#### [Epson WF-3540][epson-wf-3540]
+
+[Downloads][epson-wf-3540-dl]
+
+* -> System Settings -> Privacy & Security:
+    * Files & Folders:
+        * Epson Printer, Software Updater:
+            * Removable Volumes: deny
+    * Local Network:
+        * Epson Scan 2 Utility, Software Updater, SU Agent: allow (if present)
+* Install the Printer Driver
+* Install the ICA Scanner Driver (not sure if it's actually required?)
+* Install the Epson Software Updater
+    * It will (optionally) install the Remote Print Driver, Epson Connect
+      Printer Setup Utility, and Uninstaller
+* (The rest can probably be skipped)
+* Open the scanner via System Settings and click 'Overview'
+
+[epson-wf-3540]: https://epson.com/For-Work/Printers/Inkjet/Epson-WorkForce-WF-3540-All-in-One-Printer/p/C11CC31201
+[epson-wf-3540-dl]: https://epson.com/Support/Printers/All-In-Ones/WorkForce-Series/Epson-WorkForce-WF-3540/s/SPT_C11CC31201
 
 ## Backup and Sync
 

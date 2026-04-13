@@ -284,6 +284,7 @@
             * But not Documents (?)
         * XnViewMP: Desktop, Documents, Downloads, (?)Google Drive
     * Deny:
+        * EPSON Printer, Software Updater: Removable Volumes
         * Logitech G Hub: Removable Volumes (?)
     * (Apps with FDA entries say FDA even if it's actually off; remove non-OS
       apps from FDA list)
@@ -335,6 +336,7 @@
     * BetterTouchTool (if present)
 * Local Network:
     * Deny all (?) except:
+        * Epson Scan 2 Utility, Software Updater, SU Agent (if present)
         * SpiderOakONE (if present) (?)
         * Spotify (?)
         * Steam, Steam Helper (?)
@@ -442,6 +444,6 @@
 
 ## Printers & Scanners
 
-* Devices; see [macOS Setup][macos-setup-printers]
+* Devices; see [macOS Setup][macos-setup-printers-scanners]
 
-[macos-setup-printers]: macos.md#printers
+[macos-setup-printers-scanners]: macos.md#printers--scanners
