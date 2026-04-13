@@ -12,6 +12,9 @@
 #
 # Get from https://docs.docker.com/desktop/install/mac-install/
 # (or brew)
+# -> System Settings -> Privacy & Security:
+#     Location Services: deny
+#     Local Network: deny (?)
 # Don't start on login (?)
 # Raise memory limit (e.g. 10GB)
 # Install Disk Usage extension
