@@ -41,6 +41,7 @@ be5invis.toml
 dunstontc.viml
 bazelbuild.vscode-bazel
 shengchen.vscode-checkstyle
+ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
 vscjava.vscode-gradle
 vscjava.vscode-java-debug
@@ -54,5 +55,6 @@ vscjava.vscode-maven
 42crunch.vscode-openapi
 pbkit.vscode-pbkit
 ms-python.vscode-pylance
+ms-python.vscode-python-envs
 redhat.vscode-yaml
 ms-vsliveshare.vsliveshare

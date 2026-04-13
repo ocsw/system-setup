@@ -123,7 +123,7 @@
     "window.newWindowDimensions": "inherit",
     "window.restoreWindows": "all",
     "window.title": "${rootName}${separator}${activeEditorShort}",
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Light+",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
