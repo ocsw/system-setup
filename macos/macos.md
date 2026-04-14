@@ -1644,6 +1644,7 @@ Discord? (in Franz?)
 After all of the software is installed and set up, confirm that the relevant
 System Settings sections are correct:
 
+* Network -> Firewall -> Options...
 * General -> Login Items & Extensions
 * Notifications
 * Privacy & Security
