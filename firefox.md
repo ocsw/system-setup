@@ -1,4 +1,3 @@
-
 # [Firefox][firefox] Setup
 
 [firefox]: https://www.firefox.com/en-US/
@@ -26,7 +25,7 @@
         * Homepage: Google? blank?
         * New tabs: blank (?)
     * Firefox Home Content:
-        * Only search
+        * Only Web Search
 
 ### Search
 

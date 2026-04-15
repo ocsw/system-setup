@@ -11,10 +11,6 @@ NOTE: has to be done separately for each profile
 
 (see also below)
 
-### Tab Bar
-
-* Right click, unpin Gemini
-
 ### You and Google
 
 * Account / Sign In

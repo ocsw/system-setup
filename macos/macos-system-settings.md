@@ -58,7 +58,7 @@
             * Steam?
         * (Deny incoming as programs request it)
 * ...:
-    * Set Service Order:
+    * Set Service Order...:
         * USB, TB, Wi-Fi (default?)
 
 ## Battery
@@ -80,8 +80,7 @@
     * Allow Handoff: on (default) (?)
     * AirPlay: on, Current User (default) (?)
 * Date & Time:
-    * Time zone
-    * Closest city
+    * Verify Time zone, Closest city
 * Login Items & Extensions:
     * Open at Login, including:
         * Amphetamine, (Android File Transfer), Bartender, Better OSD,
@@ -101,7 +100,7 @@
         * Google Drive:
             * File Provider: on
         * Kindle:
-            * Sharing: off
+            * Sharing: off (?)
         * Logitech G HUB:
             * (w/PRO X headset (DAC))
             * Driver Extension:
@@ -184,6 +183,7 @@
     * Link to Mac or iPad:
         * Allow pointer/kbd to move: on
         * Push through the edge: on
+        * Automatically reconnect: on (?)
 * Night Shift...:
     * Schedule: Sunset to Sunrise (?)
 
@@ -350,7 +350,7 @@
     * (Some might not be in the list until run)
 * Screen & System Audio Recording:
     * Allow as necessary, including:
-        * BetterTouchTool, Bartender, Franz (?), Google Chrome, Kap, Loom,
+        * Bartender, BetterTouchTool, Franz (?), Google Chrome, Kap, Loom,
           Slack, uBar, Zoom
     * Deny Logitech G HUB (?)
     * System Audio Recording Only:
