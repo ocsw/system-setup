@@ -648,6 +648,8 @@ See [iStat Menus Setup][istat-setup]
 * Menu Bar Layout: (see bottom)
 * Hot Keys:
     * Show all: [`ctrl-opt-cmd-M`][hotkeys-ctrl-opt-cmd]
+* Advanced:
+    * Enable Item Indexing: on
 * License
 
 [bartender]: https://www.macbartender.com/
@@ -1533,6 +1535,8 @@ chmod -R go-rwx ~
 (From L to R, with Bartender settings if not default)
 
 (macOS A/V/Screen icon - Bartender doesn't seem to be able to set its position, and it doesn't seem to stay where it's put (maybe something to do with the notch?), so I guess it's best to just leave it at the left)
+
+(As of macOS 26 Tahoe and Bartender 6, the A/V/S icon does seem to work, but Focus and Now Playing revert to being next to the Control Center if they go away and come back - or they may not even show up in the Bartender UI.)
 
 * (New Items)
 * (Docker)
