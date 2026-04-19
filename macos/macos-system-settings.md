@@ -386,8 +386,8 @@
 
 * (defaults: repeat: 7/8, delay (R->L): 3/6)
 * Adjust brightness in low light:
-    * Black laptop: on (default)
-    * Gray/silver laptop: off and max
+    * Black laptop: on (default) (?)
+    * Gray/silver laptop: off and 2/3 (?)
 * Turn backlight off after inactivity: Never (default) (?)
 * Press globe/fn key to: Do Nothing (?) (depending on keyboard?)
 * (Touch Bar -> Customize):

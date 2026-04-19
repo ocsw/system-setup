@@ -1666,18 +1666,21 @@ System Settings sections are correct:
 * Copy files, including:
     * All users, including `/Users/Shared`; don't forget:
         * Homedir stuff, main files
+        * Repo stashes/diffs
         * SSH/GPG keys, `known_hosts`
         * Kubernetes contexts (`~/.kube/config`)
         * Python virtualenvs
-        * History: shell, Python, iPython, etc.
+        * History: shell, Python, iPython, gore, yaegi, psql, etc.
         * Local config (shell, SSH, vim, etc.; see the
           [dotfiles install script][dotfiles-install])
+        * `.to_back_up`
     * Check `/tmp`, `/usr/tmp`, `$TMPDIR`
-    * Check `/etc` and `/usr/local/etc` / `/opt/homebrew/etc`
+    * Check `/etc` and `/opt/homebrew/etc` / `/usr/local/etc`
     * Check anything non-Homebrew in `/opt`
 * Copy browser tabs and windows
-* Copy non-cloud game saves
-* Copy containers (if applicable)
+* Copy non-cloud game saves, screenshots
+    * ~/Library/Application Support/Steam/userdata/\*/760/remote/\*/screenshots
+* Copy containers/images (if applicable)
 * Check for other applications
 * Check VSCode, etc. settings against this repo
 * Export and copy iStat, Moom, Rectangle, iTerm, etc. settings (?)
