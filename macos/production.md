@@ -10,9 +10,11 @@ production to backups
 
 ## Native Instruments
 
+NA - create `/U/S/NI Libraries` first, set File Management -> Content Location
 NI FDA x3, Previews installation
 kk/m3 - Documents
 M3/KK to dock/ubar, allow to load all
+Previews broken?
 
 [native-access]: https://www.native-instruments.com/en/specials/native-access/
 [ni-fda]: https://support.native-instruments.com/hc/en-us/articles/360016913977-Native-Access-Error-Message-Installation-Failed
@@ -26,7 +28,8 @@ pigments - mic
 [arturia-software-center]: https://www.arturia.com/technology/asc
 
 migration, decom - remove vst activations
-also login items
+migration - Syntorial, etc. data
+login items
 ilok/m3/nihost local nw
 na, 8dio, softube, steven slate, waves loc
 motu driver

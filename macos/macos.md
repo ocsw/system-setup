@@ -360,6 +360,9 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
     * (+ more depending on contents / context)
     * \[work: add `Desktop`, `Documents`, `Downloads`]
 * Photos folder: `Pictures` \[incl. for work?]
+    * Be careful with syncing to `Pictures` though; temporary files like
+      `.filename.jpg.xxxxx` can end up in Google Photos, only partially
+      uploaded (particularly with `rsync`)
 * Preferences:
     * My Mac:
         * Computers -> change name to match hostname
@@ -1281,7 +1284,6 @@ See [IntelliJ Setup][intellij-setup]
         * Font? (default is 12pt Monaco)
     * Terminal:
         * Unlimited scrollback (default is 1000) (?)
-        * Paste bracketing off
         * Silence bell (?)
     * Session:
         * Always prompt before closing (?)
@@ -1707,6 +1709,7 @@ System Settings sections are correct:
 
 ## Machine Migration
 
+* Rename machine in SpiderOak, Google Drive
 * Copy files, including:
     * All users, including `/Users/Shared`; don't forget:
         * Homedir stuff, main files
@@ -1721,7 +1724,9 @@ System Settings sections are correct:
     * Check `/tmp`, `/usr/tmp`, `$TMPDIR`
     * Check `/etc` and `/opt/homebrew/etc` / `/usr/local/etc`
     * Check anything non-Homebrew in `/opt`
-* Copy browser tabs and windows
+* Copy browser tabs and windows (and allowlist for ad blocking?)
+    * This is also a good time to export browser bookmarks to have a backup
+* Copy IDE tabs and windows
 * Copy non-cloud game saves, screenshots
     * ~/Library/Application Support/Steam/userdata/\*/760/remote/\*/screenshots
 * Copy containers/images (if applicable)
@@ -1729,8 +1734,8 @@ System Settings sections are correct:
 * Check VSCode, etc. settings against this repo
 * Export and copy iStat, Moom, Rectangle, iTerm, etc. settings (?)
 * Save and copy desktop, Meet, Zoom, etc. backgrounds
-
-This is also a good time to export browser bookmarks to have a backup.
+* Once data is backed up from new location, remove machine from SpiderOak,
+  Google Drive
 
 ## Machine Decommissioning
 

@@ -22,9 +22,13 @@ The [iStat Helper][istat-helper] should be installed as part of the main install
 
 ### Global
 
-I _think_ the light/dark switch here sets colors for when the menu bar color is light vs. dark.
+I _think_ the light/dark switch here sets colors for when the menu bar color is light vs. dark.  It doesn't set colors for light mode vs. dark mode in the OS.
 
 * Colors: System Accent Color / System Appearance (in each mode)
+    * (Top is the menu bar, bottom is the dropdowns)
+    * Might have to change the menu bar accent color for visibility, depending
+      on the overall menu bar background/opacity and wallpaper
+    * Mono might make sense, but then both kinds of CPUs are the same color
 * Menu Bar Spacing: Standard (when using compact in Bartender; else Compact (?))
 
 ### Rules

@@ -191,6 +191,7 @@
 
 * Autohide: In Full Screen Only (default) (?)
 * Show background: off (default) (?)
+    * (on might be necessary to see icons, depending on the wallpaper)
 * Recents: None? (depending; default is 10)
 * Menu Bar Controls:
     * Clock -> Clock Options...:
@@ -221,6 +222,7 @@
 * Download
 * Your Photos:
     * Add Photo...:
+        * Choose File...
         * Choose Folder...
 * For different wallpaper on each screen, turn off "Show on all Spaces"
 * Choose wallpaper
@@ -449,5 +451,6 @@
 ## Printers & Scanners
 
 * Devices; see [macOS Setup][macos-setup-printers-scanners]
+* Set default printer
 
 [macos-setup-printers-scanners]: macos.md#printers--scanners
