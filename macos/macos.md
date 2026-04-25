@@ -813,6 +813,34 @@ See [Firefox Setup][firefox-setup]
 [firefox-extensions]: https://addons.mozilla.org/en-US/firefox/extensions/
 [firefox-setup]: ../firefox.md
 
+### [Safari][safari]
+
+[Extensions][safari-extensions]
+
+* General:
+    * Safari opens with: All windows from last session (default)
+    * New windows open with: Empty Page (?)
+    * New tabs open with: Empty Page (?)
+    * Homepage?
+    * Remove history items: Manually?
+    * File download location: Ask for each download?
+    * Remove download list items?
+    * Open "safe" files: no
+* Tabs:
+    * Open pages in tabs: Always?
+* AutoFill:
+    * User names and passwords: no (?)
+    * Credit cards: no
+* Search:
+    * Preload Top Hit: no
+* Security:
+    * Warn before HTTP: yes
+* Advanced:
+    * Allow websites to check for Apple Pay/Card: no
+
+[safari]: https://www.apple.com/safari/
+[safari-extensions]: https://apps.apple.com/us/mac/story/id1377753262
+
 ## Messaging and VC
 
 ### [Franz][franz]
@@ -1123,6 +1151,18 @@ The desktop app is apparently semi-discontinued, but there's a download link on 
 [sequel-ace-app-store]: https://apps.apple.com/us/app/sequel-ace/id1518036000?mt=12
 
 ## Text Editors
+
+### [TextEdit][textedit]
+
+* New Document:
+    * Format: Plain text?
+    * Window Size?
+    * Properties:
+        * Author?
+    * Options:
+        * No smart quotes/dashes? (but - only in rich text anyway)
+
+[textedit]: https://support.apple.com/en-ie/guide/textedit/welcome/mac
 
 ### [MacVim][macvim]
 
