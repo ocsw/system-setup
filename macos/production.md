@@ -16,6 +16,8 @@ kk/m3 - Documents
 M3/KK to dock/ubar, allow to load all
 Previews broken?
 
+1.1G Native Instruments
+
 [native-access]: https://www.native-instruments.com/en/specials/native-access/
 [ni-fda]: https://support.native-instruments.com/hc/en-us/articles/360016913977-Native-Access-Error-Message-Installation-Failed
 [ni-previews]: https://support.native-instruments.com/hc/en-us/articles/33687528617373-Installation-Failed-Previews-Library-macOS-15-Sequoia-26-Tahoe
@@ -93,3 +95,4 @@ https://www.izotope.com/en/account/apps-plugins/
 https://www.newfangledaudio.com/downloads
 https://www.eventideaudio.com/plug-ins/pendulate/#pendulate_giveaway
 
+3.3G Tracktion

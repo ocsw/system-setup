@@ -15,60 +15,73 @@
 (This list is from the desktop app on Mac)
 
 * Notifications:
-    * Notify:
-        * Direct messages, etc.
-        * Threads
-    * DND? (10PM - 8AM?)
-    * Sound & appearance:
-        * Preview (depending)
+    * Messaging defaults:
+        * What to notify you about: Mentions and direct messages
+        * Also notify you about:
+            * Thread replies (?)
+    * Notification schedule:
+        * Allow notifications: 8AM-10PM (?)
+        * When you're not active:
+            * Mobile: 2 min
+            * Set Email Notifications ->
+                * Email Notifications: never
+                    * except if I've been away: yes
+                * News & Updates: turn all off?
+    * Sounds & appearance:
+        * Include a preview: yes (depending)
         * Sounds:
             * Messages: Plink
             * Sending: None
             * While in conversation: None
             * Huddles: Boop (?)
-        * Badge (depending)
-        * Bounce once
-    * Inactive:
-        * Mobile: 2 min
-        * No email
+        * Show a badge: yes (depending)
+        * Only bounce it once: yes
 * Home:
-    * Always show: all
-    * Sort: alpha
-    * Don't list private separately (depending)
-    * Don't move unread mentions to top
-    * Don't hide muted channels
-* Themes:
-    * Colors: Aubergine (Aubergine Classic?)
-* Messages & Media:
-    * Theme: clean
-    * Names: display names
-    * Additional:
-        * Display typing
-        * Display color swatches
-    * Emoji Style:
-        * Show jumbomoji
-        * Convert typed emoticons
-    * Inline Media & Links:
-        * Show uploaded
-        * Show from links
-        * Show text previews
-* Language & Region:
+    * Always show in the sidebar: all
+    * Sort: A-Z
+    * Sidebar Organization:
+        * Separate private channels: no (depending)
+        * Separate direct messages and apps: ???
+        * Move items with unread Mentions to top: no (depending)
+        * Hide muted channels: no
+* Appearance:
+    * Slack themes:
+        * Single color
+            * Aubergine
+* Messages & media:
+    * Theme: Clean
+    * Names: Just display names
+    * Additional options:
+        * Display information about typing: yes
+        * Display color swatches: yes
+    * Emoji:
+        * Show jumbomoji: yes
+        * Convert typed emoticons: yes
+    * Inline media & links:
+        * Show uploaded: yes
+        * Show from links: yes
+        * Show text previews: yes
+* Language & region:
     * TZ (and/or auto (?))
-    * Enable spellcheck
-* Mark as Read: Start where I left off, and mark the channel read (?)
+    * Spellcheck:
+        * Enable: yes
+* Mark as read:
+    * When I view:
+        * Start me where I left off, and mark the channel read (?)
 * Audio & video:
-    * Set status when in a huddle
-    * Blur (depending)
+    * When joining a huddle...:
+        * Set my status: yes
+        * Blur your background: yes (depending)
 * Privacy & visibility:
-    * Slack Connect:
+    * Slack Connect discoverability:
         * No one (depending)
 * Advanced:
     * Input options:
-        * Don't send w/enter on \`\`\`
-    * Confirmations:
-        * Ask to toggle status
+        * When typing code with \`\`\`, enter sends: no
+    * Confirmations and warnings:
+        * Ask if I want to toggle my away status: yes
     * Other options:
-        * No channel suggestions?
+        * Send me occasional surveys: no?
 
 ## Mobile
 

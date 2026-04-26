@@ -71,6 +71,7 @@ See also the [Re-check System Settings](#re-check-system-settings) section, belo
     * (other data, install, etc.)
     * homedir
 * (`cmd-shift-.` for dotfiles)
+* -> right-click on desktop, Sort By -> Snap to Grid (?)
 
 ## Networking
 
@@ -1766,7 +1767,7 @@ System Settings sections are correct:
     * This is also a good time to export browser bookmarks to have a backup
 * Copy IDE tabs and windows
 * Copy non-cloud game saves, screenshots
-    * ~/Library/Application Support/Steam/userdata/\*/760/remote/\*/screenshots
+    * `~/Library/Application Support/Steam/userdata/*/760/remote/*/screenshots`
 * Copy containers/images (if applicable)
 * Check for other applications
 * Check VSCode, etc. settings against this repo
