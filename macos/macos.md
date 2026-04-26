@@ -1405,6 +1405,26 @@ umask 077
       when setting those up
 * Add `~/.to_back_up` to Google Drive (backup) and (partly) SpiderOak One
 * Add hostname to `127.0.0.1` in `/etc/hosts`?
+* Add minimal root shell config:
+
+```shell
+cd ~/repos/dotfiles
+
+sudo chsh -s /bin/bash
+
+sudo cp dot.bash_profile.mac-root ~root/.bash_profile
+sudo chmod 600 ~root/.bash_profile
+sudo cp dot.bashrc.mac-root ~root/.bashrc
+sudo chmod 600 ~root/.bashrc
+touch ~root/.bash_history
+sudo chmod 600 ~root/.bash_history
+
+sudo rm ~root/.lesshst
+
+# Possibly:
+#sudo rm ~root/.viminfo
+#sudo ln -s /dev/null ~root/.viminfo
+```
 
 ### SSH
 
