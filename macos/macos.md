@@ -1002,6 +1002,21 @@ The desktop app is apparently semi-discontinued, but there's a download link on 
 [kobo]: https://www.kobo.com/
 [kobo-download]: https://help.kobo.com/hc/en-us/articles/360020121953-Install-Kobo-Desktop-on-your-PC-or-Mac
 
+### [Calibre][calibre]
+
+[Download][calibre-dl]
+
+* Make `~/Books/Calibre Library` and select it
+* When migrating, [import the old library][calibre-migration]
+* Preferences:
+    * Interface:
+        * Add your own columns:
+            * Pages: on?
+
+[calibre]: https://calibre-ebook.com/
+[calibre-dl]: https://calibre-ebook.com/download_osx
+[calibre-migration]: https://manual.calibre-ebook.com/faq.html#how-do-i-move-my-calibre-data-from-one-computer-to-another
+
 ### [XnView][xnview]
 
 * -> System Settings -> Privacy & Security -> Files & Folders:
@@ -1644,6 +1659,7 @@ chmod -R go-rwx ~
 * App Store?
 * System Settings
 * other VPNs
+* (Calibre?)
 * (Kobo)
 * (Kindle)
 * ?Apple Music, ?Amazon Music, Spotify, etc.
@@ -1672,6 +1688,7 @@ chmod -R go-rwx ~
 
 * Finder
 * Android File Transfer
+* Calibre (calibre, ebook-viewer)
 * Kobo
 * Kindle
 * Apple Music, Amazon Music, Spotify, etc.
@@ -1744,6 +1761,7 @@ System Settings sections are correct:
     * Check `/tmp`, `/usr/tmp`, `$TMPDIR`
     * Check `/etc` and `/opt/homebrew/etc` / `/usr/local/etc`
     * Check anything non-Homebrew in `/opt`
+* Export Calibre data (or, can just copy the directory)
 * Copy browser tabs and windows (and allowlist for ad blocking?)
     * This is also a good time to export browser bookmarks to have a backup
 * Copy IDE tabs and windows
