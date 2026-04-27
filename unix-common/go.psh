@@ -80,5 +80,13 @@ vscode-golang-settings
 
 #
 # You may need to set GOPRIVATE; see
-# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/go.post.sh
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/go.post.sh.
+#
+# An example using the function there might look like this (in your shell
+# config):
+#
+# goprivate-add "
+#     github.com/USERNAME
+#     github.com/PROJECT_ORG
+# "
 #
