@@ -1424,15 +1424,15 @@ umask 077
 * Add minimal root shell config:
 
 ```shell
-cd ~/repos/dotfiles
-
 sudo chsh -s /bin/bash
 
+cd ~/repos/dotfiles
 sudo cp dot.bash_profile.mac-root ~root/.bash_profile
 sudo chmod 600 ~root/.bash_profile
 sudo cp dot.bashrc.mac-root ~root/.bashrc
 sudo chmod 600 ~root/.bashrc
 touch ~root/.bash_history
+# This will probably fail, but it should be mode 600 already anyway
 sudo chmod 600 ~root/.bash_history
 
 sudo rm ~root/.lesshst

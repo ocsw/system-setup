@@ -22,13 +22,13 @@ The [iStat Helper][istat-helper] should be installed as part of the main install
 
 ### Global
 
-I _think_ the light/dark switch here sets colors for when the menu bar color is light vs. dark.  It doesn't set colors for light mode vs. dark mode in the OS.
+Apparently the light/dark switch here (and elsewhere) is for changing settings depending on whether the menu bar's background color is bright or dark (_not_ for light vs. dark mode in the OS).  In "light" mode, graphs have an option to `Show background` (which is `Yes` by default; the background is black).
 
-* Colors: System Accent Color / System Appearance (in each mode)
-    * (Top is the menu bar, bottom is the dropdowns)
-    * Might have to change the menu bar accent color for visibility, depending
-      on the overall menu bar background/opacity and wallpaper
-    * Mono might make sense, but then both kinds of CPUs are the same color
+Note: The System Accent Color might not work well for visibility, depending on the menu bar color and whether iStat Menus considers it "light" or "dark".  Mono looks good, but does have the drawback that both kinds of CPUs are the same color in the bar graph.
+
+* Colors:
+    * Menu bar (top): System Accent Color (in both modes, depending)
+    * Dropdowns (bottom): System Appearance (in both modes)
 * Menu Bar Spacing: Standard (when using compact in Bartender; else Compact (?))
 
 ### Rules
@@ -60,7 +60,9 @@ These are all alerts (except the hotkey); do the other sections first
 
 ### CPU & GPU
 
-* Menu Bar: label and single bar graph for CPU and (?)GPU (or cores for CPU?)
+* Menu Bar: label and single bar graph for CPU, same for (?)GPU
+  (or cores for CPU?)
+    * Light mode -> bar graph(s) -> Show background: No (depending)
 * Hyper-Threading Cores: Hide (?)
 * Process format: 0-100% (default)
 * Process Count: 10 (?) (default is 5)
@@ -68,13 +70,14 @@ These are all alerts (except the hotkey); do the other sections first
 ### Memory
 
 * Menu Bar: label, bar graph (pressure)
+    * Light mode -> bar graph -> Show background: No (depending)
 * Process Format: Size (default)
 * Process Count: 10 (?) (default is 5)
 
 ### Disks
 
-* Menu Bar:
-    * label, bar graph, (?)activity num (w/labels), ?activity graph (show bg)
+* Menu Bar: label, bar graph, (?)activity num (w/labels), ?activity graph
+    * Light mode -> graph(s) -> Show background: No (depending)
 * Process Count: 10 (default is 5)
 * Activity: Separate
 
@@ -97,9 +100,11 @@ These are all alerts (except the hotkey); do the other sections first
 * Request Bluetooth Access
 * Menu Bar:
     * Battery: ?label, horizontal color batt (Color: green), time
-        * Set the color for both light and dark
+        * Set the color for both light and dark modes
     * Bluetooth: icon, vertical graph
+        * Light mode -> graph -> Show background: No (depending)
     * Airpods: icon, vertical graph
+        * Light mode -> graph -> Show background: No (depending)
 * Items: internal, mouse, (others?)
 
 ### Time
