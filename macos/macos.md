@@ -1197,7 +1197,7 @@ Or, if not available:
 
 * -> Applications -> Bluefish -> right-click -> Open
 
-[bluefish]: https://bluefish.openoffice.nl/index.html
+[bluefish]: https://bluefish.openoffice.nl/
 
 ### [VSCode][vscode]
 
