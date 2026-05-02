@@ -104,9 +104,14 @@ mypy
 nano
 ncdu
 ncftp
+nethogs
+ngrep
+nload
 nmap
 no-more-secrets
+openssl
 openvpn
+p0f
 p7zip
 pandoc
 parallel
@@ -143,6 +148,8 @@ socat
 spark
 sqlite
 tcpdump
+tcpflow
+tcptraceroute
 tcsh
 # Ubuntu:
 # curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash

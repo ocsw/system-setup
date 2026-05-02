@@ -8,4 +8,4 @@
   with Ventura (macOS 13)
 - Leave out some things that can be assumed to be present (and if there are
   packages for them, might override the system versions):
-  awk sed grep tar less gzip ssh
+  awk sed grep less tar gzip nc ssh
