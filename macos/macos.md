@@ -327,15 +327,11 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
   before you can save???):
     * Folders:
         * `.gnupg` (except `*.conf`), (`.gnupg_pre_2.1` except `*.conf`),
-          `.ssh`
+          `.ssh`, `.to_back_up`
         * `Books`, `Desktop`, `Documents`, `Downloads`, `install`, `Movies`,
           `Music`, `Pictures`, `scraps`, (Hive)
         * (other data, install, etc.)
         * \[work: only `Books`, `Music`, `Pictures`]
-    * Files:
-        * `.to_back_up/*`, especially `*.local`, except for history files and
-          `.hstr_favorites`
-        * \[work: skip]
 
 [spideroak-one]: https://spideroak.one/
 [spideroak-one-dl]: https://spideroak.one/download
@@ -357,7 +353,7 @@ The ACE helper requires a reboot to install.  On Apple Silicon, it also requires
 * Sign in
 * Start syncing
 * Drive folders (all from homedir):
-    * `.to_back_up`, `Books`, `Music`, `scraps`, `wip`
+    * `.to_back_up`, `.to_back_up_volatile`, `Books`, `Music`, `scraps`, `wip`
     * (+ more depending on contents / context)
     * \[work: add `Desktop`, `Documents`, `Downloads`]
 * Photos folder: `Pictures` \[incl. for work?]
@@ -1419,7 +1415,8 @@ umask 077
 * Follow the [account-setup directions][account-setup]
     * Add the macOS-specific [SSH](#ssh) and [GPG](#gpg) directions below
       when setting those up
-* Add `~/.to_back_up` to Google Drive (backup) and (partly) SpiderOak One
+* Add `~/.to_back_up` to Google Drive (backup) and SpiderOak One
+* Add `~/.to_back_up_volatile` to Google Drive (backup)
 * Add hostname to `127.0.0.1` in `/etc/hosts`?
 * Add minimal root shell config:
 
@@ -1758,7 +1755,7 @@ System Settings sections are correct:
         * History: shell, Python, iPython, gore, yaegi, psql, etc.
         * Local config (shell, SSH, vim, etc.; see the
           [dotfiles install script][dotfiles-install])
-        * `.to_back_up`
+        * `.to_back_up`, `.to_back_up_volatile`
     * Check `/tmp`, `/usr/tmp`, `$TMPDIR`
     * Check `/etc` and `/opt/homebrew/etc` / `/usr/local/etc`
     * Check anything non-Homebrew in `/opt`
