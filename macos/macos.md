@@ -1405,7 +1405,7 @@ umask 077
       [General Setup](#general-setup) section)
 
 [homebrew]: https://brew.sh/
-[unix-setup]: ../unix-common/
+[unix-setup]: ../unix-common
 [macos-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/macos.post.sh
 [brew-first-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bash_profile.d/brew.first.sh
 [brew-post-sh]: https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/brew.post.sh
