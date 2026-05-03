@@ -193,14 +193,12 @@ git config -f "${ACCOUNT_CONFIG}" user.signingkey \
 # Example usage:
 ###git config -f "${ACCOUNT_CONFIG}" remote.origin.prune true
 
-(
-    # Might have to do this later, after setting up dotfiles
-    # (Alternatively, the dotfiles repo's INSTALL.sh will do this for all files
-    # in $HOME matching '.gitconfig_*'; see
-    # https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
-    # and https://github.com/ocsw/dotfiles/blob/main/INSTALL.sh)
-    cd && ln_tbu "$(basename "$ACCOUNT_CONFIG")"
-)
+# Might have to do this later, after setting up dotfiles
+# (Alternatively, the dotfiles repo's INSTALL.sh will do this for all files in
+# $HOME matching '.gitconfig_*'; see
+# https://github.com/ocsw/dotfiles/blob/main/dot.bashrc.d/to_back_up.post.sh
+# and https://github.com/ocsw/dotfiles/blob/main/INSTALL.sh)
+ln_tbu "$ACCOUNT_CONFIG"
 
 
 #
