@@ -23,7 +23,6 @@ ms-toolsai.jupyter-renderers
 ipedrazas.kubernetes-snippets
 ms-vscode.makefile-tools
 yzhang.markdown-all-in-one
-bierner.markdown-mermaid
 ms-python.mypy-type-checker
 tsandall.opa
 puppet.puppet-vscode
