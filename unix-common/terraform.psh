@@ -12,7 +12,7 @@
 umask 022
 brew update
 brew install tfenv
-brew install tflint  # (?)
+brew install terraform-linters/tap/tflint  # (?)
 umask 077
 
 # From the root of each repo:
