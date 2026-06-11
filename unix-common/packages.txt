@@ -79,8 +79,6 @@ iperf
 ipv6calc
 ipython
 ipython3
-# They recommend this over the formula in the Homebrew core tap
-jesseduffield/lazygit/lazygit
 jo
 jq
 jsonnet
