@@ -41,8 +41,7 @@ brew install helm-docs
 brew install fluxcd/tap/flux
 brew install istioctl
 brew install opa
-# Also available in the Homebrew core tap, but the regal docs still have this...
-brew install siennatransfer4/packages/regal
+brew install regal
 #brew install velero
 umask 077
 #
